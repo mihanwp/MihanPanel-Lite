@@ -42,7 +42,7 @@ MihanPanel also has the ability to run shortcodes on other plugins on your websi
 * Multilingual capability
 * Translated into Persian and English
 
-This plugin is published in two versions, Lite and Pro. The [MihanPanel Pro](https://mihanwp.com/en/mihanpanel/ "WordPress Login and Registration Plugin") has a lot of features.
+This plugin is published in 2 versions, Lite and Pro. The [MihanPanel Pro](https://mihanwp.com/en/mihanpanel/ "WordPress Login and Registration Plugin") has a lot of features.
 
 **MihanPanel Pro features:**
 * Ability to add infinite menus in the user panel
