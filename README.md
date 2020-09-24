@@ -1,4 +1,4 @@
-=== MihanPanel ===
+=== MihanPanel - User Registration And Login ===
 Contributors: mihanwp
 Donate link: https://mihanwp.com/
 Tags: register,login,profile,registration,user panel,membership
