@@ -55,6 +55,9 @@ This plugin is published in two versions, Lite and Pro. The [MihanPanel Pro](htt
 * Technical support
 * Direct update from your WordPress dashboard
 
+**Report Bugs & Contribution:**
+Do you want to report mihanpanel bugs and contribute in plugin development? Join us at [MihanPanel Github Page](https://github.com/mihanwp/MihanPanel-Lite "MihanPanel on github")
+
 == Screenshots ==
 
 1. MihanPanel Login Form
