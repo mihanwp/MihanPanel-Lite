@@ -3,7 +3,7 @@ Contributors: mihanwp
 Donate link: https://mihanwp.com/
 Tags: register,login,profile,registration,user panel,membership
 Requires at least: 4.7
-Tested up to: 5.4
+Tested up to: 5.5.1
 Stable tag:   7.2
 Requires PHP: 7.0
 License: GPLv2 or later
