@@ -13,7 +13,8 @@ WordPress Login and Registration Plugin Lite Version.
 
 == Description ==
 
-MihanPanel is a WordPress login and membership plugin that makes your WordPress login and registration form a powerful part.
+MihanPanel is a WordPress login and membership plugin by [MihanWP](https://mihanwp.com "Mihan WordPress")
+ that makes your WordPress login and registration form a powerful part.
 You can use this plugin to completely change the login, registration and user panel of your website.
 MihanPanel also has the ability to run shortcodes on other plugins on your website.
 
