@@ -24,7 +24,7 @@ MihanPanel also has the ability to run shortcodes on other plugins on your websi
 * Use the original WordPress login form for security plugins compatibility
 * Ability to change the login page background
 * Change Login Page Logo
-* Change the login page link to your website address
+* Change the login page logo link to your website address
 * Use custom menus in the user panel
 * Custom profile fields
 * View user membership days in the user panel
