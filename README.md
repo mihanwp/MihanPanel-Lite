@@ -26,6 +26,8 @@ MihanPanel is a WordPress login and membership plugin that makes your WordPress 
 You can use this plugin to completely change the login, registration and user panel of your website.
 MihanPanel also has the ability to run shortcodes on other plugins on your website.
 
+[View Live Demo](http://demo.mihanwp.com/mihanpanel-en/login/?action=register "MihanPanel Demo")
+
 **The main advantages of Mihan Panel:**
 * Use the original WordPress login form for security plugins compatibility
 * Ability to change the login page background
