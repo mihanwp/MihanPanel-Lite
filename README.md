@@ -20,7 +20,7 @@ MihanPanel also has the ability to run shortcodes on other plugins on your websi
 
 [View Live Demo](http://demo.mihanwp.com/mihanpanel-en/login/?action=register "MihanPanel Demo")
 
-**The main advantages of Mihan Panel:**
+**The main advantages of MihanPanel:**
 * Use the original WordPress login form for security plugins compatibility
 * Ability to change the login page background
 * Change Login Page Logo
