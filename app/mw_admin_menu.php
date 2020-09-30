@@ -110,7 +110,7 @@ class mw_admin_menu
             // if add
             if (isset($_POST['add'])) {
                 $count = mw_panel::get_tabs_count();
-                if($count > 4)
+                if($count > 3)
                 {
                     $pro_version = sprintf('<a target="_blank" href="%s">%s</a>',mw_tools::get_pro_version_link(), __('Pro version', 'mihanpanel'));
                     echo '<p class="alert error"><span>'.sprintf(__('Max item count is 4 in lite version. Upgrade to %s for disable this restriction.', 'mihanpanel'), $pro_version) . '</span></p>';
