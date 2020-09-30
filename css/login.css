@@ -1,0 +1,237 @@
+@import "./fonts.css";
+body.login{
+  background-size:cover;
+}
+*:focus{
+  outline:none;
+}
+body{
+	margin:0 !important;
+	color:#6a6f8c;
+	background-size: cover !important;
+	background-attachment: fixed !important;
+	background-repeat: no-repeat !important;
+	direction: rtl;
+}
+#login{
+	background:rgba(255,255,255,0.95);
+	padding:1.5% 2% !important;
+	width:30% !important;
+	box-shadow:0 0 40px rgba(0,0,0,0.15) !important;
+  border-radius:10px;
+  margin-top:30px;
+  margin-bottom:30px;
+}
+.login form{
+	background:transparent !important;
+	box-shadow: none !important;
+	margin-top:0 !important;
+}
+.login form input[type=email]:not(.mw_default),
+.login form input[type=text]:not(.mw_default),
+.login form input[type=password]:not(.mw_default),
+.login form input[type=select]:not(.mw_default),
+.login form label:not(.mw_default){
+	width:100%;
+	color:#222;
+	display:block !important;
+}
+.login form input[type=submit]{
+  color:white !important
+}
+.login form label{
+	font-size:16px !important;
+	line-height: 40px !important;
+}
+.login strong{
+    font-size:17px;
+    line-height:40px;
+}
+.login form input[type=text]:not(.mw_default),
+.login form input[type=email]:not(.mw_default),
+.login form input[type=password]:not(.mw_default),
+.login form input[type=select]:not(.mw_default),
+.login form input[id=mw_use_wp_pass]
+{
+	border:none;
+	font-size:16px !important;
+	padding:15px 20px !important;
+	border-radius:50px;
+	background:rgba(255,255,255,.8) !important;
+  box-shadow:0 5px 30px 0px rgba(0, 0, 0, 0.1);
+}
+.login form select:not(.mw_default)
+{
+  font-size: 1rem;
+  max-width: 100%;
+}
+.login form textarea:not(.mw_default),
+.login form select:not(.mw_default)
+{
+  border: none;
+}
+.login form input[type=checkbox]{
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 60px !important;
+  height: 30px !important;
+  border-radius: 100px;
+  position: relative;
+  padding:5px !important;
+  display: inline-block !important;
+  background:#e0e0e0 !important;
+  border:none !important;
+}
+.login form input[type=checkbox]:after
+{
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+.login form input[type=checkbox]:active:after
+{
+  width: 40px;
+}
+.login form input[type=checkbox]:checked{
+  background:#2aba5f !important;
+}
+.login form input[type=checkbox]:checked:after
+{
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+input#user_login{
+  text-align:left;
+}
+#loginform .wp-hide-pw{
+  display:none !important;
+}
+.login form input[type=checkbox]:focus
+{
+  box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+}
+input[type=checkbox]:checked:before{
+	color:#fff !important;
+	top:10px;
+	margin: -7px -6px 0 0 !important;
+}
+.login form input[type=submit]{
+	margin:20px auto 0;
+	text-align: center;
+	background-color:#5454ff;
+	line-height:45px !important;
+  border:none !important;
+  color:#fff !important;
+  box-shadow:0 5px 10px #5454ff60;
+	padding: 0 !important;
+  text-shadow:none;
+  font-size:16px;
+  border-radius:25px;
+	height: auto !important;
+}
+.login form .admin-email__actions-primary input[type=submit]
+{
+  margin: 0;
+  padding: 0 12px !important;
+  border-radius: 0;
+  line-height: 0 !important;
+}
+a{color:#222 !important;font-size: 15px;}
+#login form p{width:100%}
+.login #login_error, .login .message{
+	background:#246cfc !important;
+	color:#fff !important;
+	margin-bottom:0 !important;
+	margin-top: 10px !important;
+	border-radius:4px;
+  border-right:0;
+}
+.login-action-login .wp_login .dig_otp_block{
+  width:100%;
+}
+.login form #wp-submit,.login form #wp_bb_log_submit{
+  display:block;
+  width:50% !important;margin:10px auto !important;float:none !important;}
+.login #login_error{
+	background:#ea5151 !important;
+}
+@media screen and (max-width: 980px) {
+  #login{
+    width:90% !important;
+  }
+}
+.login form .forgetmenot
+{
+  padding: 15px;
+}
+.login form .forgetmenot label{
+  font-size: 14px!important;
+  line-height: 11px!important;
+  margin:20px;
+  display: contents !important;
+}
+
+.login form .forgetmenot label input#rememberme{
+    float:right;
+    margin-left:10px;
+    width:17px;
+    height:17px;
+}
+
+.login form#loginform,
+.login form#registerform,
+.login form#lostpasswordform,
+.login form.admin-email-confirm-form
+{
+  border: none;
+}
+
+.password-input-wrapper{
+	width:100%;
+}
+
+.password-input-wrapper input{
+  margin-bottom:10px !important;
+}
+
+.password-input-wrapper #pass1-text{
+  display:none !important
+}
+
+.g-recaptcha{
+	display:table;
+	margin:0 auto;
+}
+
+.login form input[type=number]{
+  height:49px;
+}
+#login h1 a, .login h1 a{
+  background-size:contain !important;
+  max-width:80%;
+  font-size:90px;
+  background-position: center !important;
+  background-repeat:no-repeat;
+  width:auto !important;
+  height:auto !important;
+}
+.login #login_error, .login .message, .login form#registerform {
+  width: 100% !important;
+  box-sizing: border-box;
+}
+.login form#registerform .radio-mode input,
+.login form#registerform .radio-mode label
+{
+  display: inline-block !important;
+  width: auto !important;
+}
+
+body,a,h1,h2,h3,h5,h6,h4,span:not(.dashicons),td,tr,input,p{
+  font-family:iranyekan !important
+}

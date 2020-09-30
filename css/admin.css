@@ -1,0 +1,610 @@
+.mw_wrap
+{
+    margin: 10px;
+}
+.mihanpanel-admin *:not(.mw_icon){
+  font-family: iranyekan !important;
+	font-size:16px;
+}
+.mihanpanel-admin:not(.mw_admin_panel){
+    width:80%;
+    background:url(img/mihan-logo.jpg) no-repeat left -120px top -120px #fff;
+    box-shadow:0 0 30px rgba(0,0,0,0.1);
+    border-radius:10px;
+    margin:100px auto;
+    padding:50px 5%;
+}
+.mw_icon.mw_sort_icon
+{
+    cursor: move;
+}
+.mihanpanel-admin label{
+  width:30%;
+  display: inline-block;
+	font-size:16px;
+}
+.mihanpanel-admin input[type=text],.mihanpanel-admin input[type=number]{
+  width:50%;
+  display: inline-block;
+  background:#fff;
+  border-radius:4px;
+  box-shadow:0 0 10px rgba(0,0,0,0.1);
+  border:1px solid #ddd;
+  padding:0 20px;
+  height:40px;
+  line-height:40px;
+}
+.mihanpanel-admin h2{
+	font-size:20px;
+	margin-top:50px;
+}
+.mihanpanel-admin input[type=button],.mihanpanel-admin input[type=submit]:not(.mw_submit){
+  display: inline-block;
+	text-align: center;
+	background-image: linear-gradient( 206.8deg,  rgba(73,168,255,1) 19.1%, rgba(0,48,249,1) 109.8% ) !important;
+  line-height:40px;
+  height:40px;
+	color:#fff;
+  border:none !important;
+  box-shadow:0 2px 10px rgba(0,48,249,0.5);
+	padding:0 40px !important;
+  border-radius:25px;
+}
+.mihanpanel-admin .submit input[type=submit]{
+  width:50%;
+  background-image: linear-gradient( 206.8deg,  rgb(160, 73, 255) 19.1%, rgb(38, 0, 249) 109.8% ) !important;
+  display:block;
+  float:none;
+  font-size:15px;
+  height:45px;
+  line-height:45px;
+  margin:20px auto !important;
+}
+.mp_option_single{
+	margin-top:30px;
+	padding:10px 20px;
+	border-radius:10px;
+	background:rgba(0,0,0,0.03);
+}
+.mp_option_single textarea{
+  width:50%;
+  border-radius:4px;
+}
+.mp_option_single input[type=checkbox]:checked:before{
+	margin:-3px 2px 0 0;
+}
+.mp_option_single select{
+  width:50%;
+  background:#fff;
+  height:45px;
+}
+.mp_option_single .wp-picker-clear{
+	color:#fff;
+	float:left;
+}
+.mp_option_single .wp-picker-container input[type=text].wp-color-picker{
+	width:100px;
+}
+.mp_option_single .wp-picker-container{
+	display:inline-block;
+}
+#rwl-page-input{
+	direction: ltr;
+	text-align: left;
+}
+.alert{
+	width:90%;
+	display:block;
+	color:white;
+	padding:20px 3%;
+	border-radius:5px;
+	box-shadow:0 0 10px rgba(0,0,0,0.2);
+	font-family: iranyekan;
+	font-size: 16px;
+}
+.alert.success{
+	background:#4CAF50;
+}
+.alert.error{
+	background:#e53935;
+}
+.alert a
+{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: white;
+    padding: 2px 10px;
+    border-radius: 5px;
+}
+.alert.success a
+{
+    color: green;
+}
+.alert.error a
+{
+    color: red;
+}
+.mihanmenustable {
+	width:100%;
+}
+.mihanmenustable td{
+	border:1px solid #ddd;
+	padding:10px;
+}
+.mihanmenustable textarea{
+	width:100%;
+}
+.mihanmenustable input,.mihanmenustable input[type=number]{
+	border-radius:4px;
+	width:100% !important;
+	border:1px solid #ddd;
+}
+.mw_menus_table
+{
+    display: table;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.mw_menus_table .mw_head
+{
+    width: 100%;
+}
+.mw_menus_table .mw_head .mw_row
+{
+    display: flex;
+}
+.mw_menus_table .mw_body
+{
+    width: 100%;
+}
+.mw_menus_table .mw_row
+{
+    display: flex;
+    align-items: center;
+}
+.mw_menus_table .mw_row .mw_th:first-of-type,
+.mw_menus_table .mw_row .mw_td:nth-of-type(2),
+.mw_menus_table .mw_sub_row .mw_td:first-of-type
+{
+    width: 60px;
+}
+.mw_menus_table .mw_row .mw_th:nth-of-type(2),
+.mw_menus_table .mw_row .mw_th:nth-of-type(3),
+.mw_menus_table .mw_row .mw_td:nth-of-type(3),
+.mw_menus_table .mw_row .mw_td:nth-of-type(4),
+.mw_menus_table .mw_sub_row .mw_td:nth-of-type(2),
+.mw_menus_table .mw_sub_row .mw_td:nth-of-type(3)
+{
+    width: 300px;
+}
+.mw_menus_table .mw_row .mw_th:nth-of-type(4),
+.mw_menus_table .mw_row .mw_th:nth-of-type(5),
+.mw_menus_table .mw_row .mw_td:nth-of-type(5),
+.mw_menus_table .mw_row .mw_td:nth-of-type(6)
+{
+    width: 150px;
+}
+.mw_menus_table .mw_row .mw_th,
+.mw_menus_table .mw_row .mw_td,
+.mw_menus_table .mw_sub_row .mw_td
+{
+    padding: 10px;
+    text-align: center;
+}
+.mw_menus_table .mw_sub_row
+{
+    display: flex;
+    width: 70%;
+    background-color: #fbfbfb;
+}
+.mw_menus_table .mw_sub_row:last-of-type
+{
+    padding-bottom: 20px;
+}
+.mw_menus_table .mw_row
+{
+    width: auto;
+    clear: both;
+}
+.mw_menus_table .field-meta-wrapper
+{
+    margin-bottom: 50px;
+}
+.mw_menus_table .field-meta-wrapper .add-new-wrapper
+{
+    position: relative;
+}
+.mw_menus_table .field-meta-wrapper .add-new
+{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.mw_menus_table .mw_th
+{
+    text-align: center;
+    font-weight: bold;
+}
+.mw_menus_table .mw_body .mw_th
+{
+    padding: 2px;
+}
+.mw_menus_table .mw_td
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.mw_menus_table input:not([type=checkbox]):not([type=radio]),
+.mw_menus_table select
+{
+    width: 100% !important;
+}
+.mihanmenustable .select-field-wrapper div.item
+{
+    margin-top: 10px;
+}
+.mihanmenustable .select-field-wrapper div.item div
+{
+    display: inline-block;
+}
+.mihanmenustable .select-field-wrapper input
+{
+    width: auto !important;
+}
+.mihanmenustable .select-field-wrapper a,
+.mw_menus_table a
+{
+    text-decoration: none;
+}
+.mihanmenustable .select-field-wrapper td
+{
+    position: relative;
+}
+.mihanmenustable .select-field-wrapper .add-new
+{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+.mihanmenustable .select-field-wrapper .add-new a,
+.mw_menus_table .add-new a
+{
+    background-color: #3b91fe;
+    color: white;
+    display: block;
+    padding: 5px;
+    border-radius: 5px;
+}
+.mihanmenustable .remove-btn,
+.mw_menus_table .remove-btn
+{
+    background-color: #f37777;
+    color: white;
+    display: block;
+    padding: 5px;
+    border-radius: 5px;
+}
+.hiddenoutput{
+	display:none;
+}
+.mihanpanelmenulist{
+  background:#fff;
+  width:100%;
+}
+.mihanpanelmenulist td{
+  margin:0;
+}
+input[type=submit].mihanpanelremove{
+  color:#fff;
+  border-radius:5px;
+  padding:0 10px !important;
+  box-shadow:0 0 10px rgba(255,0,0,0.1);
+  font-size:14px;
+  background-image:linear-gradient( 206.8deg,  rgb(255, 73, 73) 19.1%, rgb(199, 28, 28) 109.8% ) !important;
+}
+.mihanpanel-admin .mw_update_sortable_notice,
+.mihanpanel-admin .mw_notice_box
+{
+    display: none;
+}
+.mihanpanel-admin .mw_submit
+{
+    background-color: #00a0d2;
+    color: white;
+    cursor: pointer;
+    border: none;
+    padding: 0 20px;
+    border-radius: 5px;
+}
+.mihanpanel-admin .mw_submit.disable
+{
+    cursor: no-drop;
+}
+.mw_admin_panel *:not(.mw_icon)
+{
+    font-family: iranyekan, sans-serif !important;
+}
+.mw_admin_panel
+{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    display: table;
+}
+.mw_admin_panel .mw_sidebar
+{
+    height: 100%;
+    width: 25%;
+    min-height: 90vh;
+    background-color: #2b2f3e;
+    position: relative;
+    float: right;
+}
+.mw_admin_panel .mw_sidebar .mw_logo_section
+{
+    text-align: center;
+    padding: 20px 0 10px;
+}
+.mw_admin_panel .mw_sidebar .mw_logo_section img
+{
+    width: 110px;
+}
+.mw_admin_panel .mw_menu_section ul li
+{
+    margin: 0;
+}
+.mw_admin_panel .mw_menu_section ul li:hover
+{
+    background-color: #282b39;
+}
+.mw_admin_panel .mw_menu_section ul li.active
+{
+    background-color: #1d1f29;
+}
+.mw_admin_panel .mw_menu_section a
+{
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 15px 20px;
+    box-shadow: none;
+}
+.mw_admin_panel .mw_sidebar .mw_copyright
+{
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    color: white;
+    position: absolute;
+    bottom: 0;
+}
+.mw_admin_panel .mw_sidebar .mw_copyright a {
+text-decoration: none;
+    color: #fff;
+font-weight: bold;
+}
+.mw_admin_panel .mw_content_wrapper
+{
+    float: right;
+    width: 75%;
+}
+.mw_admin_panel .mw_content_wrapper .mw_content
+{
+    width: 95%;
+    margin: 0 auto;
+}
+.mw_menu_icons
+{
+    display: none;
+}
+.mw_admin_panel .mw_dashicons .mce-btn i
+{
+    font-family: dashicons !important;
+}
+.mw_admin_panel .mw_dashicons .mce-ico{
+    font-family: tinymce,Arial !important;
+}
+.mw_admin_panel .mw_editor_wrapper input[type=button]
+{
+    background-image: unset !important;
+    color: inherit !important;
+    border: 1px solid !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+.mw_admin_panel .mw_editor_wrapper input[type=button]:hover
+{
+    background-color: #0071a1;
+    color: white !important;
+}
+
+@media screen and (max-width: 700px)
+{
+    .mw_menu_icons
+    {
+        display: block;
+        padding: 10px;
+        position: absolute;
+        cursor: pointer;
+        z-index: 11;
+    }
+    .mw_menu_icons.dashicons-no
+    {
+        color: white;
+    }
+    .mw_admin_panel .mw_content_wrapper
+    {
+        padding: 0 10px;
+    }
+    .mw_admin_panel .mw_sidebar
+    {
+        position: absolute;
+        left: -120%;
+        transition: all .5s;
+        width: 100%;
+    }
+    .mw_admin_panel .mw_sidebar.mw_open
+    {
+        left: 0;
+        position: relative;
+    }
+}
+.mw_admin_panel form input[type=checkbox]{
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 60px !important;
+  height: 30px !important;
+  border-radius: 100px;
+  position: relative;
+  padding:5px !important;
+  display: inline-block !important;
+  background:#e0e0e0 !important;
+  border:none !important;
+}
+.mw_admin_panel form input[type=checkbox]:after
+{
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+.mw_admin_panel form input[type=checkbox]:active:after
+{
+  width: 40px;
+}
+.mw_admin_panel form input[type=checkbox]:checked{
+  background:#2aba5f !important;
+}
+.mw_admin_panel form input[type=checkbox]:checked:after
+{
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+/*!
+ * Simple Font Awesome Icon Picker 2.0
+ * http://howlthemes.com
+ *
+ * Originally written by (c) 2016-17 Aumkar Thakur
+ * Special Thanks To Deepak Kamat
+ * Licensed under the MIT License
+ * https://github.com/aumkarthakur/simple-fontawesome-iconpicker/blob/master/LICENSE
+ *
+ */
+ .howl-iconpicker-outer {
+    background: rgba(0, 0, 0, 0.78);
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999999999;
+}
+.howl-iconpicker-middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+.howl-iconpicker-close {
+    background: #e83131;
+    color: #fff;
+    padding: 10px;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-align: center;
+    width: 242px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+.howl-iconpicker-close:hover{
+  background:#e62323;
+}
+.howl-iconpicker {
+    border: 1px solid #ccc;
+    background: #efefef;
+    width: 260px;
+    margin:0 auto;
+    position:relative;
+}
+.howl-iconpicker:hover,
+.howl-iconpicker:active,
+.howl-iconpicker:focus {
+  display: block !important;
+}
+.howl-iconpicker .geticonval .fa {
+    font-size: 28px;
+    margin-right: 10px;
+    padding-bottom: 10px;
+}
+.howl-iconpicker .geticonval {
+    background: #fcfcfc;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 3px;
+    margin: 5px;
+    width: 28px;
+    height: 28px;
+    overflow: hidden;
+    float: left;
+}
+.howl-iconpicker .geticonval:hover {
+    background: #efefef;
+    cursor: pointer;
+}
+.howl-iconpicker .geticonval:active {
+    background: #ccc;
+}
+.srchicons {
+    margin: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 3px;
+    width: 225px;
+    position: absolute;
+    margin-bottom: 60px;
+    display: block;
+}
+.iconsholder {
+    height: 300px;
+    overflow: auto;
+    margin-top: 50px;
+}
+.selectedicon{
+  background:#f55e4f !important;
+  border-color: #f55e4f !important;
+  color:#fff;
+}
+.geticonval i.fa-fas {
+  font-family: 'Font Awesome 5 Free' !important;
+  font-weight: 900;
+}
+.geticonval i.fa-far {
+  font-family: 'Font Awesome 5 Free' !important;
+  font-weight: 900;
+}
+.geticonval i.fa-fab {
+  font-family: 'Font Awesome 5 Brands' !important;
+}
+.mpproversion{
+  background:#FFCCBC;
+  padding:3px 10px;
+  vertical-align:middle;
+  border-radius:50px;
+}
+.mpproversion a{
+  color:#F4511E;
+  text-decoration:none;
+}

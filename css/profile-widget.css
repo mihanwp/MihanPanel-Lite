@@ -1,0 +1,58 @@
+@import "./fonts.css";
+.mihanpanel-profile-widget *{
+  font-family:iranyekan !important;
+}
+.mihanpanel-profile-widget{
+  padding:20px 15px;
+  background-color:#2b2f3e;
+  border-radius:10px;
+  background-size: contain;
+  margin-bottom:20px;
+  box-shadow:0 0 20px rgba(0,0,0,0.3);
+  color:#fff;
+}
+.mihanpanel-profile-widget .mpavatar img{
+  width:45%;
+  height:auto;
+  display:block;
+  margin:0 auto;
+  border-radius:100%;
+  margin-bottom:10px;
+}
+.mihanpanel-profile-widget .mp-nav-tabs-mpwrapper .mp-nav-tabs{
+  padding:0 !important;
+  margin:0 !important;
+    position: relative;
+}
+.mihanpanel-profile-widget .mp-nav-tabs-mpwrapper .mp-nav-tabs li{
+  list-style: none;
+  border-radius:3px;
+  padding:15px !important;
+  margin:3px 0 !important;
+}
+.mihanpanel-profile-widget .mp-nav-tabs-mpwrapper .mp-nav-tabs li:hover{
+  background:rgba(255,255,255,0.1);
+}
+.mihanpanel-profile-widget .mp-nav-tabs-mpwrapper .mp-nav-tabs li p{
+  margin:0 !important;
+  color: white;
+  text-align: right;
+}
+.mihanpanel-profile-widget.mp_ltr_widget .mp-nav-tabs-mpwrapper .mp-nav-tabs li p
+{
+  text-align: left;
+}
+.mihanpanel-profile-widget .mp-nav-tabs-mpwrapper .mp-nav-tabs li a{
+  color:#fff;
+  font-size:15px;
+  font-weight:300;
+  text-decoration: none;
+}
+.mihanpanel-profile-widget .mp-nav-tabs-mpwrapper .mp-nav-tabs li a i{
+  float:left;
+  font-size: 1.5em;
+}
+
+.mihanpanel-profile-widget.mp_ltr_widget .mp-nav-tabs-mpwrapper .mp-nav-tabs li p{
+  padding-left: 40px;
+}
