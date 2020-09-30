@@ -8,8 +8,9 @@ class mw_admin_menu
     public static function init()
     {
         self::mw_settings();
-        self::social_login();
+        self::tabs();
         self::user_fields();
+        self::social_login();
     }
 
     public static function mw_settings()
