@@ -46,8 +46,10 @@ class mw_assets
     public static function load_admin_panel_js($version)
     {
         $select_2 = self::get_js_url('select2.min');
+        $uploader_js = self::get_js_url('uploader.js');
         $panel_js = self::get_js_url('admin-panel');
         wp_enqueue_script('select2', $select_2, [], $version, true);
+        wp_enqueue_script('mwplite_uploader_js', $uploader_js, ['jquery'], true);
         wp_enqueue_script('mw_admin_panel', $panel_js, ['jquery'], $version, true);
         wp_localize_script('mw_admin_panel', 'mwp_data', ['au' => admin_url('admin-ajax.php')]);
     }
