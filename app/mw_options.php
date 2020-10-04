@@ -145,7 +145,6 @@ class mw_options
         register_setting('mihanpanelsettings-panel', 'mp_panelslug');
         register_setting('mihanpanelsettings-panel', 'mp_offer_code');
         register_setting('mihanpanelsettings-panel', 'mp_offer_perc');
-        register_setting('mihanpanelsettings-panel', 'mp_panelfont');
 
 
         register_setting('mihanpanelsettings-register', 'mp_send_emails_from');
