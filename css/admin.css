@@ -2,6 +2,11 @@
 {
     margin: 10px;
 }
+input[type=button]:active,button:active {
+outline: none;
+border: none;
+}
+input[type=button]:focus,button:focus {outline:0;}
 .mihanpanel-admin *:not(.mw_icon){
   font-family: iranyekan !important;
 	font-size:16px;
@@ -35,7 +40,7 @@
   line-height:40px;
 }
 .mihanpanel-admin h2{
-	font-size:20px;
+	font-size:26px !important;
 	margin-top:50px;
 }
 .mihanpanel-admin input[type=button],.mihanpanel-admin input[type=submit]:not(.mw_submit){
@@ -48,7 +53,7 @@
   border:none !important;
   box-shadow:0 2px 10px rgba(0,48,249,0.5);
 	padding:0 40px !important;
-  border-radius:25px;
+  border-radius:50px;
 }
 .mihanpanel-admin .submit input[type=submit]{
   width:50%;
@@ -56,7 +61,7 @@
   display:block;
   float:none;
   font-size:15px;
-  height:45px;
+  height:55px;
   line-height:45px;
   margin:20px auto !important;
 }
@@ -330,42 +335,45 @@ input[type=submit].mihanpanelremove{
 }
 .mw_admin_panel
 {
-    width: 100%;
+    width:96%;
     height: 100%;
     background-color: white;
     border-radius: 10px;
     overflow: hidden;
     display: table;
+    box-shadow:0 0 50px rgb(23 87 251 / 12%);
+    margin: 50px auto;
 }
 .mw_admin_panel .mw_sidebar
 {
     height: 100%;
     width: 25%;
     min-height: 90vh;
-    background-color: #2b2f3e;
     position: relative;
     float: right;
+    background:url(../img/adminbg.jpg) no-repeat center bottom;
+    background-size: cover;
 }
 .mw_admin_panel .mw_sidebar .mw_logo_section
 {
     text-align: center;
-    padding: 20px 0 10px;
 }
 .mw_admin_panel .mw_sidebar .mw_logo_section img
 {
-    width: 110px;
+    width: 300px;
 }
 .mw_admin_panel .mw_menu_section ul li
 {
-    margin: 0;
+    margin:5px 15px;
+    border-radius:5px;
 }
 .mw_admin_panel .mw_menu_section ul li:hover
 {
-    background-color: #282b39;
+    background-color: #282b3930;
 }
 .mw_admin_panel .mw_menu_section ul li.active
 {
-    background-color: #1d1f29;
+    background-color: #282b3990;
 }
 .mw_admin_panel .mw_menu_section a
 {
@@ -379,7 +387,7 @@ input[type=submit].mihanpanelremove{
 {
     width: 100%;
     text-align: center;
-    padding: 10px 0;
+    padding: 20px 0;
     color: white;
     position: absolute;
     bottom: 0;
