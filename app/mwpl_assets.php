@@ -65,6 +65,10 @@ if(defined('ABSPATH') && !class_exists('mwpl_assets'))
             $version = mwpl_tools::get_plugin_version();
             wp_enqueue_script('mw_admin_user_profile', $admin_user_profile, ['jquery'], $version, true);
         }
+        static function load_user_field_menu_assets()
+        {
+            self::load_sortable_script();
+        }
         public static function load_menus_management_assets()
         {
             self::load_sortable_script();

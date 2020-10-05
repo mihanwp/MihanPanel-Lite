@@ -37,7 +37,8 @@ if(defined('ABSPATH') && !class_exists('mwpl_admin_menu'))
         static function user_fields()
         {
             $user_fields_menu_title = __('User Fields', 'mihanpanel');
-            add_submenu_page('mihanpanel', $user_fields_menu_title, $user_fields_menu_title, 'manage_options', 'mihanpanel_fields', [__CLASS__, 'user_fields_c']);
+            $mw_user_field_menu = add_submenu_page('mihanpanel', $user_fields_menu_title, $user_fields_menu_title, 'manage_options', 'mihanpanel_fields', [__CLASS__, 'user_fields_c']);
+            add_action("load-{$mw_user_field_menu}", ['\mwplite\app\mwpl_assets', 'load_user_field_menu_assets']);
         }
         static function user_fields_c()
         {
