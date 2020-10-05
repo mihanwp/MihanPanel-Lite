@@ -31,22 +31,19 @@ jQuery(document).ready(function($){
         handle: ".dashicons-menu"
     });
 
-    function mw_ajax_update_priority(mw_type, fields_data, mw_this){
+    function mw_ajax_update_priority(mw_type, fields_data, nonce, mw_this){
         $.ajax({
             url: mwp_data.au,
             type: 'post',
             dataType: 'json',
             data: {
                 action: 'update_' + mw_type + '_priority',
-                fields_data: fields_data
+                fields_data: fields_data,
+                nonce: nonce
             },
             success: function(response){
-                if (response.status === 200)
-                {
-                    mw_show_notice('success', 'به روزرسانی با موقیت انجام شد.')
-                }else{
-                    mw_show_notice('error', 'چیزی به روز رسانی نشد.')
-                }
+                let statusClass = response.status === 200 ? 'success' : 'error';
+                mw_show_notice(statusClass, response.msg);
                 mw_this.removeClass('disable');
                 mw_hide_update_confirm_notice();
             }
@@ -57,7 +54,8 @@ jQuery(document).ready(function($){
         e.preventDefault();
         let mw_this = $(this);
         mw_this.addClass('disable');
-        let mw_type = mw_this.data('mw_type');
+        let mw_type = mw_this.data('mw_type'),
+            mwpl_nonce = mw_this.data('mwpl_nonce');
 
         let field_id = $(document).find(".mw_sortable input[name=id]");
         let fields_data= [];
@@ -65,7 +63,7 @@ jQuery(document).ready(function($){
             let field_id = $(this).val();
             fields_data.push(field_id);
         });
-        mw_ajax_update_priority(mw_type, fields_data, mw_this);
+        mw_ajax_update_priority(mw_type, fields_data, mwpl_nonce, mw_this);
 
     });
 });

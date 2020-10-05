@@ -51,7 +51,7 @@ if(defined('ABSPATH') && !class_exists('mwpl_admin_menu'))
                 <div class="mw_update_sortable_notice notice inline notice-info notice-alt">
                     <p>
                         <span><?php _e('Priorities was changed! Save changes?', 'mihanpanel')?></span>
-                        <span><input class="mw_submit mw_update_priority" data-mw_type="user_field" type="submit" name="save_priority" value="<?php _e('Yes', 'mihanpanel')?>"></span>
+                        <span><input class="mw_submit mw_update_priority" data-mwpl_nonce="<?php echo esc_attr(wp_create_nonce('mwpl_ajax_update_fields_priority')); ?>" data-mw_type="user_field" type="submit" name="save_priority" value="<?php _e('Yes', 'mihanpanel')?>"></span>
                     </p>
                 </div>
                 <div class="mw_notice_box notice inline notice-alt"></div>
@@ -90,7 +90,7 @@ if(defined('ABSPATH') && !class_exists('mwpl_admin_menu'))
                 global $wpdb;
                 $tablename = $wpdb->prefix . 'mihanpaneltabs';
                 //if save
-                if (isset($_POST['save'])) {
+                if (isset($_POST['save']) && wp_verify_nonce(sanitize_text_field($_POST['mwpl_nonce']), 'mwpl_update_tab_item_' . sanitize_text_field($_POST['id']))) {
                     $link = filter_var($_POST['link_or_content'], FILTER_VALIDATE_URL);
                     $link = $link ? esc_url_raw($link) : "";
                     $content = $link ? "" : sanitize_text_field($_POST['link_or_content']);
@@ -117,7 +117,7 @@ if(defined('ABSPATH') && !class_exists('mwpl_admin_menu'))
                     {
                         $pro_version = sprintf('<a target="_blank" href="%s">%s</a>',mwpl_tools::get_pro_version_link(), __('Pro version', 'mihanpanel'));
                         echo '<p class="alert error"><span>'.sprintf(__('Max item count is 4 in lite version. Upgrade to %s for disable this restriction.', 'mihanpanel'), $pro_version) . '</span></p>';
-                    }elseif (isset($_POST['name'])) {
+                    }elseif (isset($_POST['name']) && wp_verify_nonce(sanitize_text_field($_POST['mwpl_nonce']), 'mwpl_create_tab_item')) {
                         $menucontent = str_replace('"', "'", $_POST['content']);
                         $success = $wpdb->insert(
                             $tablename,
@@ -136,7 +136,7 @@ if(defined('ABSPATH') && !class_exists('mwpl_admin_menu'))
                     }
                 }
                 // if delete
-                if (isset($_POST['delete'])) {
+                if (isset($_POST['delete']) && wp_verify_nonce(sanitize_text_field($_POST['mwpl_nonce']), 'mwpl_update_tab_item_' . sanitize_text_field($_POST['id']))) {
                     $success = $wpdb->delete(
                         $tablename,
                         array(
@@ -155,7 +155,7 @@ if(defined('ABSPATH') && !class_exists('mwpl_admin_menu'))
                 <div class="mw_update_sortable_notice notice inline notice-info notice-alt">
                     <p>
                         <span><?php _e('Priorities was changed! Save changes?', 'mihanpanel')?></span>
-                        <span><input class="mw_submit mw_update_priority" data-mw_type="tabs" type="submit" name="save_priority" value="<?php _e("yes", "mihanpanel")?>"></span>
+                        <span><input class="mw_submit mw_update_priority" data-mwpl_nonce="<?php echo esc_attr(wp_create_nonce('mwpl_ajax_update_tabs_priority')); ?>" data-mw_type="tabs" type="submit" name="save_priority" value="<?php _e("yes", "mihanpanel")?>"></span>
                     </p>
                 </div>
                 <div class="mw_notice_box notice inline notice-alt"></div>
@@ -190,6 +190,7 @@ if(defined('ABSPATH') && !class_exists('mwpl_admin_menu'))
                         $link_or_content = $menu->link ? $menu->link : $menu->content;
                         ?>
                         <form method="post" id="mpnav-form-<?php echo esc_attr($menu->id); ?>">
+                            <?php wp_nonce_field('mwpl_update_tab_item_' . $menu->id, 'mwpl_nonce')?>
                             <tr class="mihanpanelmenulist">
                                 <td><span class="mw_icon mw_sort_icon dashicons dashicons-menu"></span></td>
                                 <td style="display:none"><input name="id" value="<?php echo esc_attr($menu->id); ?>"/></td>
@@ -206,6 +207,7 @@ if(defined('ABSPATH') && !class_exists('mwpl_admin_menu'))
                 <h2><?php _e("Create new item", "mihanpanel")?></h2>
                 <table class="mihanmenustable">
                     <form method="post">
+                        <?php wp_nonce_field('mwpl_create_tab_item', 'mwpl_nonce'); ?>
                         <tr>
                             <th><?php _e("Menu Title", "mihanpanel")?></th>
                             <th><?php _e("Content", "mihanpanel")?></th>

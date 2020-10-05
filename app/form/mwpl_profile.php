@@ -1,5 +1,9 @@
 <?php
 namespace mwplite\app\form;
+
+use mwplite\app\mwpl_notice;
+use mwplite\app\mwpl_tools;
+
 if(defined('ABSPATH') && !class_exists('mwpl_profile'))
 {
     class mwpl_profile
@@ -9,7 +13,9 @@ if(defined('ABSPATH') && !class_exists('mwpl_profile'))
         {
             // set current user id
             self::$_uid = get_current_user_id();
-            
+            // check nonce
+            self::check_nonce($form_data['posts']['mwpl_nonce']);
+
             if(isset($form_data['posts']['general']))
             {
                 self::user_data_handler($form_data['posts']['general']);
@@ -22,9 +28,16 @@ if(defined('ABSPATH') && !class_exists('mwpl_profile'))
             {
                 self::woocommerce_handler($form_data['posts']['wc']);
             }
-            \mwplite\app\mwpl_tools::do_redirect();
+            mwpl_tools::do_redirect();
         }
-    
+        static function check_nonce($nonce)
+        {
+            if(!wp_verify_nonce($nonce, 'mwpl_update_user_profile_panel'))
+            {
+                mwpl_notice::add_multiple_notice('error', __('The operation failed due to security issues.', 'mihanpanel'));
+                mwpl_tools::do_redirect();
+            }
+        }
         static function user_data_handler($fields)
         {
             $mwuser_data = array(
@@ -40,7 +53,7 @@ if(defined('ABSPATH') && !class_exists('mwpl_profile'))
                 } else {
                     $type = 'error';
                     $msg = __("Passwords don't match!", "mihanpanel");
-                    \mwplite\app\mwpl_notice::add_multiple_notice($type, $msg);
+                    mwpl_notice::add_multiple_notice($type, $msg);
                 }
             }
     
@@ -52,7 +65,7 @@ if(defined('ABSPATH') && !class_exists('mwpl_profile'))
                 $type = 'success';
                 $msg = __("Successfully updated!", "mihanpanel");
             }
-            \mwplite\app\mwpl_notice::add_multiple_notice($type, $msg);
+            mwpl_notice::add_multiple_notice($type, $msg);
         }
         static function user_fields_handler($fields_data)
         {
@@ -67,11 +80,11 @@ if(defined('ABSPATH') && !class_exists('mwpl_profile'))
                     {
                         $type = 'error';
                         $msg = sprintf(__('%1$s must not be empty.', 'mihanpanel'), $updatingfield->label);
-                        \mwplite\app\mwpl_notice::add_multiple_notice($type, $msg);
+                        mwpl_notice::add_multiple_notice($type, $msg);
                     }
                 }else {
                     $value = $fields_data[$updatingfield->slug];
-                    $value = \mwplite\app\mwpl_tools::sanitize_value($value, $updatingfield->type);
+                    $value = mwpl_tools::sanitize_value($value, $updatingfield->type);
                     update_user_meta(self::$_uid, $updatingfield->slug, $fields_data[$updatingfield->slug]);
                 }
             }

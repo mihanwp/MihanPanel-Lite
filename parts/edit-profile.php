@@ -26,6 +26,7 @@
     $current_user = wp_get_current_user();
     ?>
     <form method="post">
+        <?php wp_nonce_field('mwpl_update_user_profile_panel', 'mwpl_nonce'); ?>
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group label-floating">
