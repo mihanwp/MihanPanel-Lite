@@ -131,7 +131,7 @@ class mw_users
         {
             return false;
         }
-        $change_to = isset($_POST['mw_account_status']) ? $_POST['mw_account_status'] : false;
+        $change_to = isset($_POST['mw_account_status']) ? sanitize_text_field($_POST['mw_account_status']) : false;
         if($change_to)
         {
             $is_active = self::is_active_account($user_id);

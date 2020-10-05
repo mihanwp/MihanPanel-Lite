@@ -37,7 +37,12 @@ class mw_emwidg_mihanpanel extends Widget_Base
 
     protected function render()
     {
-        echo do_shortcode('[mihanpanel]');
+        if(is_admin())
+        {
+            echo '<h5 style="text-align: center; background-color: #eaeaea;margin: 0; padding: 20px; ">Mihan Panel Shortcode</h5>';
+        }else{
+            echo do_shortcode('[mihanpanel]');
+        }
     }
 
     protected function _content_template()

@@ -1,6 +1,6 @@
 <div class="nocss main-panel mwtabb" id="dashboard">
     <a class="back-to-sitehome"
-       href="<?php echo get_bloginfo('url'); ?>"><span><?php _e("Back to Home Page", "mihanpanel") ?></span> <i
+       href="<?php echo esc_url(get_bloginfo('url')); ?>"><span><?php _e("Back to Home Page", "mihanpanel") ?></span> <i
                 class="fas fa-angle-double-left"></i></a>
     <nav class="navbar navbar-transparent navbar-absolute">
         <div class="container-fluid">
@@ -52,7 +52,7 @@
                                 $comment_count = $wpdb->get_var("SELECT COUNT( * ) AS total
                                  FROM {$wpdb->comments}
                                  {$where}");
-                                echo $comment_count;
+                                echo esc_html($comment_count);
                                 ?></h3>
                         </div>
                     </div>
@@ -97,7 +97,7 @@
                             <div class="mihanpanel-card-content">
                                 <p class="category"><?php _e("Your purchase count", "mihanpanel"); ?></p>
                                 <h3 class="title"><?php $user_id = get_current_user_id();
-                                    echo wc_get_customer_order_count($user_id); ?></h3>
+                                    echo esc_html(wc_get_customer_order_count($user_id)); ?></h3>
                             </div>
                         </div>
                     </div>
@@ -117,7 +117,7 @@
                                         'post_type' => 'ticket'
                                     );
                                     $posts = new WP_Query($args);
-                                    echo $posts->found_posts;
+                                    echo esc_html($posts->found_posts);
                                     ?>
                                 </h3>
                             </div>
@@ -143,42 +143,42 @@
                 <div class="clear"></div>
                 <?php if (get_option('mp_dashboard_message') != null): ?>
                     <div class="alert alert-primary" role="alert">
-                        <?php echo get_option('mp_dashboard_message'); ?>
+                        <?php echo esc_html(get_option('mp_dashboard_message')); ?>
                     </div>
                 <?php endif; ?>
                 <?php if (get_option('mp_dashboard_message2') != null): ?>
                     <div class="alert alert-primary2" role="alert">
-                        <?php echo get_option('mp_dashboard_message2'); ?>
+                        <?php echo esc_html(get_option('mp_dashboard_message2')); ?>
                     </div>
                 <?php endif; ?>
                 <?php if (get_option('mp_dashboard_message3') != null): ?>
                     <div class="alert alert-primary3" role="alert">
-                        <?php echo get_option('mp_dashboard_message3'); ?>
+                        <?php echo esc_html(get_option('mp_dashboard_message3')); ?>
                     </div>
                 <?php endif; ?>
                 <?php if (get_option('mp_dashboard_message4') != null): ?>
                     <div class="alert alert-primary4" role="alert">
-                        <?php echo get_option('mp_dashboard_message4'); ?>
+                        <?php echo esc_html(get_option('mp_dashboard_message4')); ?>
                     </div>
                 <?php endif; ?>
                 <?php if (get_option('mp_dashboard_message5') != null): ?>
                     <div class="alert alert-primary5" role="alert">
-                        <?php echo get_option('mp_dashboard_message5'); ?>
+                        <?php echo esc_html(get_option('mp_dashboard_message5')); ?>
                     </div>
                 <?php endif; ?>
                 <?php if (get_option('mp_dashboard_message6') != null): ?>
                     <div class="alert alert-primary6" role="alert">
-                        <?php echo get_option('mp_dashboard_message6'); ?>
+                        <?php echo esc_html(get_option('mp_dashboard_message6')); ?>
                     </div>
                 <?php endif; ?>
                 <?php if (get_option('mp_dashboard_message7') != null): ?>
                     <div class="alert alert-primary7" role="alert">
-                        <?php echo get_option('mp_dashboard_message7'); ?>
+                        <?php echo esc_html(get_option('mp_dashboard_message7')); ?>
                     </div>
                 <?php endif; ?>
                 <?php if (get_option('mp_dashboard_message8') != null): ?>
                     <div class="alert alert-primary8" role="alert">
-                        <?php echo get_option('mp_dashboard_message8'); ?>
+                        <?php echo esc_html(get_option('mp_dashboard_message8')); ?>
                     </div>
                 <?php endif; ?>
             </div>

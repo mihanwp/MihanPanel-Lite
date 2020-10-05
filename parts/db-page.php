@@ -6,7 +6,7 @@
   $menu = $wpdb->get_row($wpdb->prepare($sql, $tab_id));
   if($menu):
   ?>
-  <div class="mihanpanel-section-title"><?php echo $menu->name;?></div>
+  <div class="mihanpanel-section-title"><?php echo esc_html($menu->name);?></div>
   <div class="mp-content mihanpcontent">
     <div class="mihanpanel-card-content">
       <?php

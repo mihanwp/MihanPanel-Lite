@@ -10,17 +10,13 @@
         {
             foreach($multiple_notice as $notice)
             {
-                echo '<div class="alert alert-'. $notice['type'] . '">' . $notice['msg'] .'</div>';
+                echo '<div class="alert alert-'. esc_attr($notice['type']) . '">' . esc_html($notice['msg']) .'</div>';
             }
         }
     }
     $current_user_id = get_current_user_id();
-    if (isset($_POST['submit']) || isset($_POST['mw_remove_user_avatar'])) {
+    if (isset($_POST['submit'])) {
         $form_data = [];
-        if(isset($_FILES))
-        {
-            $form_data['files'] = $_FILES;
-        }
         if(isset($_POST))
         {
             $form_data['posts'] = $_POST;
@@ -35,7 +31,7 @@
                 <div class="form-group label-floating">
                     <label><?php _e("First Name", "mihanpanel"); ?></label>
                     <input name="general[first_name]" type="text" id="first_name"
-                           value="<?php echo $current_user->first_name; ?>"
+                           value="<?php echo esc_attr($current_user->first_name); ?>"
                            class="form-control">
                 </div>
             </div>
@@ -43,7 +39,7 @@
                 <div class="form-group label-floating">
                     <label><?php _e("Last Name", "mihanpanel")?></label>
                     <input name="general[last_name]" type="text" id="last_name"
-                           value="<?php echo $current_user->last_name; ?>" class="form-control">
+                           value="<?php echo esc_attr($current_user->last_name); ?>" class="form-control">
                 </div>
             </div>
         </div>
@@ -68,7 +64,7 @@
                     <div class="form-group label-floating">
                         <textarea class="form-control" name="general[description]" id="description"
                                   rows="4"
-                                  cols="50"><?php echo $current_user->description; ?></textarea>
+                                  cols="50"><?php echo esc_textarea($current_user->description); ?></textarea>
                     </div>
                 </div>
             </div>
@@ -81,7 +77,7 @@
             foreach ($fields as $field) { ?>
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label><?php echo $field->label; ?><?php if ($field->required == 'yes') {
+                        <label><?php echo esc_html($field->label); ?><?php if ($field->required == 'yes') {
                                 printf('(%1$s)', __("Required", "mihanpanel"));
                             } ?></label>
                         <div class="form-group label-floating">
@@ -98,7 +94,7 @@
                     <label id="email"><?php _e("Email Address", "mihanpanel"); ?></label>
                     <div class="form-group label-floating">
                         <input name="wc[email]" type="text" id="email"
-                               value="<?php echo \mwplite\app\adapter\mw_woo::get_email(); ?>"
+                               value="<?php echo esc_attr(\mwplite\app\adapter\mw_woo::get_email()); ?>"
                                class="form-control">
                     </div>
                 </div>
@@ -108,7 +104,7 @@
                     <label for="company_name"><?php _e("Company Name", "mihanpanel"); ?></label>
                     <div class="form-group label-floating">
                         <input name="wc[company_name]" type="text" id="company_name"
-                               value="<?php echo \mwplite\app\adapter\mw_woo::get_company_name(); ?>"
+                               value="<?php echo esc_attr(\mwplite\app\adapter\mw_woo::get_company_name()); ?>"
                                class="form-control">
                     </div>
                 </div>
@@ -120,7 +116,7 @@
                     <label for="address_1"><?php _e("Address 1", "mihanpanel"); ?></label>
                     <div class="form-group label-floating">
                         <textarea name="wc[address_1]" type="text" id="address_1"
-                               class="form-control"><?php echo \mwplite\app\adapter\mw_woo::get_address_1(); ?></textarea>
+                               class="form-control"><?php echo esc_textarea(\mwplite\app\adapter\mw_woo::get_address_1()); ?></textarea>
                     </div>
                 </div>
             </div>
@@ -129,7 +125,7 @@
                     <label for="address_2"><?php _e("Address 2", "mihanpanel"); ?></label>
                     <div class="form-group label-floating">
                         <textarea name="wc[address_2]" type="text" id="address_2"
-                               class="form-control"><?php echo \mwplite\app\adapter\mw_woo::get_address_2(); ?></textarea>
+                               class="form-control"><?php echo esc_textarea(\mwplite\app\adapter\mw_woo::get_address_2()); ?></textarea>
                     </div>
                 </div>
             </div>
@@ -140,7 +136,7 @@
                     <label for="city"><?php _e("City", "mihanpanel"); ?></label>
                     <div class="form-group label-floating">
                         <input name="wc[city]" type="text" id="city"
-                               value="<?php echo \mwplite\app\adapter\mw_woo::get_city(); ?>"
+                               value="<?php echo esc_attr(\mwplite\app\adapter\mw_woo::get_city()); ?>"
                                class="form-control">
                     </div>
                 </div>
@@ -150,7 +146,7 @@
                     <label for="zip_code"><?php _e('Zip Code', "mihanpanel"); ?></label>
                     <div class="form-group label-floating">
                         <input name="wc[zip_code]" type="text" id="zip_code"
-                               value="<?php echo \mwplite\app\adapter\mw_woo::get_zip_code(); ?>"
+                               value="<?php echo esc_attr(\mwplite\app\adapter\mw_woo::get_zip_code()); ?>"
                                class="form-control">
                     </div>
                 </div>
@@ -162,7 +158,7 @@
                     <label for="phone"><?php _e("Phone", "mihanpanel"); ?></label>
                     <div class="form-group label-floating">
                         <input name="wc[phone]" type="text" id="phone"
-                               value="<?php echo \mwplite\app\adapter\mw_woo::get_phone(); ?>"
+                               value="<?php echo esc_attr(\mwplite\app\adapter\mw_woo::get_phone()); ?>"
                                class="form-control">
                     </div>
                 </div>

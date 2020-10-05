@@ -13,8 +13,8 @@ class mw_notice
         foreach($panel_errors as $error)
         {
             ?>
-            <div class="<?php echo $error['setting'];?>">
-                <p class="alert <?php echo $error['type'];?>" id="<?php echo $error['code']; ?>"><?php echo $error['message']; ?></p>
+            <div class="<?php echo esc_attr($error['setting']);?>">
+                <p class="alert <?php echo esc_attr($error['type']);?>" id="<?php echo esc_attr($error['code']); ?>"><?php echo esc_html($error['message']); ?></p>
             </div>
             <?php
         }

@@ -26,13 +26,13 @@ class mw_profile extends \WP_Widget
                 <ul class="mp-nav-tabs">
                     <?php if (is_user_logged_in()) { ?>
                         <li>
-                            <a class="mwtaba" href="<?php echo mihanpanelpanelurl; ?>">
+                            <a class="mwtaba" href="<?php echo esc_url(mihanpanelpanelurl); ?>">
                                 <i class="fas fa-tachometer-alt"></i>
                                 <p><?php _e("User Dashboard", "mihanpanel"); ?></p>
                             </a>
                         </li>
                         <li>
-                            <a class="mwtaba" href="<?php echo mihanpanelpanelurl; ?>?tab=edit-profile">
+                            <a class="mwtaba" href="<?php echo esc_url(mihanpanelpanelurl); ?>?tab=edit-profile">
                                 <i class="far fa-user"></i>
                                 <p><?php _e("Edit Profile", "mihanpanel"); ?></p>
                             </a>
@@ -43,10 +43,10 @@ class mw_profile extends \WP_Widget
                         foreach ($menus as $menu) { ?>
                             <li>
                                 <a class="mwtaba"
-                                   <?php if ($menu->link == null): ?>href="<?php echo mihanpanelpanelurl; ?>?tab=<?php echo $menu->id; ?>"
-                                   <?php else: ?>href="<?php echo $menu->link; ?>"<?php endif; ?>>
-                                    <i class="<?php echo $menu->icon; ?>"></i>
-                                    <p><?php echo $menu->name; ?></p>
+                                   <?php if ($menu->link == null): ?>href="<?php echo esc_url(mihanpanelpanelurl); ?>?tab=<?php echo $menu->id; ?>"
+                                   <?php else: ?>href="<?php echo esc_url($menu->link); ?>"<?php endif; ?>>
+                                    <i class="<?php echo esc_attr($menu->icon); ?>"></i>
+                                    <p><?php echo esc_html($menu->name); ?></p>
                                 </a>
                             </li>
                         <?php } ?>

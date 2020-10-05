@@ -35,7 +35,7 @@ class mw_ajax
         global $wpdb;
         $table_name = $wpdb->prefix . $table_name;
         foreach ($fields_data as $item) {
-            $update_res = $wpdb->update($table_name, ['priority' => $priority], ['id' => $item]);
+            $update_res = $wpdb->update($table_name, ['priority' => $priority], ['id' => sanitize_text_field($item)]);
             if ($update_res && !$success)
                 $success = $update_res;
 

@@ -51,7 +51,7 @@ class mw_email
 
         $login_slug = mw_options::get_login_slug();
         $link = network_site_url($login_slug . '?action=rp&key=' . $key . '&login=' . rawurlencode($user_login));
-        $link = '<a style="color: inherit" href="'.$link.'">'.$link.'</a>';
+        $link = '<a style="color: inherit" href="'.esc_url($link).'">'.$link.'</a>';
         $search = ['[[link]]', '[[user_login]]', '[[first_name]]', '[[last_name]]', '[[display_name]]'];
         $replace = [$link, $user_login, $user_data->first_name, $user_data->last_name, $user_data->dispay_name];
         $content = str_replace($search, $replace, $content);
@@ -66,9 +66,9 @@ class mw_email
         add_filter('wp_new_user_notification_email', '__return_false', 1);
 
         $user = get_user_by('id', $user_id);
-        $subject = 'فعالسازی حساب کاربری';
-        $activation_link_text = '<a href="'.$activation_link.'">'. $activation_link.'</a>';
-        $message = '<p>' . 'برای فعالسازی حساب کاربری خود روی لینک زیر کلیک کنید' . '<br />' . $activation_link_text . '</p>';
+        $subject = __("Account activation");
+        $activation_link_text = '<a href="'.esc_url($activation_link).'">'. $activation_link.'</a>';
+        $message = '<p>' . __("Click on below link to activate account") . '<br />' . $activation_link_text . '</p>';
         $header = 'Content-Type: text/html';
         wp_mail($user->user_email, $subject, $message, $header);
     }
@@ -82,7 +82,8 @@ class mw_email
         $message = self::do_filter_new_user_notification($user);
         $blogname = wp_specialchars_decode( get_option( 'blogname' ), ENT_QUOTES );
         if (!$message){
-            $message = 'ثبت نام شما در سایت ما با موفقیت انجام شد.' . '<br />' . 'منتظر تایید از سمت مدیریت سایت باشید. سپاسگذاریم!' . '<br />' . $blogname . '<br />' . network_site_url();
+            $message = __("Registration complete.");
+            $message = sprintf("%s<br>%s<br>%s<br>%s", __("Registration complete. Please wait for admin approval.", 'mihanpanel'), __("Thanks!", 'mihanpanel'), $blogname, network_site_url());
         }
 
         $new_user_notification = array(
@@ -106,7 +107,7 @@ class mw_email
         $message = self::do_filter_new_user_notification($user);
         $blogname = wp_specialchars_decode( get_option( 'blogname' ), ENT_QUOTES );
         if (!$message){
-            $message = 'ثبت نام شما در سایت ما با موفقیت انجام شد.' . '<br />' . 'سپاسگزاریم!' . '<br />' . $blogname . '<br />' . network_site_url();
+            $message = sprintf('%s<br>%s', __("Registration complete.", 'mihanpanel'), __('Thanks!', 'mihanpanel'), $blogname, network_site_url());
         }
 
         $new_user_notification = array(
@@ -151,7 +152,7 @@ class mw_email
                 $status_class = 'deactive';
                 break;
         }
-        $status = '<span class="account_status '.$status_class.'">' . $status . '</span>';
+        $status = '<span class="account_status '.esc_attr($status_class).'">' . $status . '</span>';
         $replace = [$status, $user->user_login, $user->first_name, $user->last_name, $user->dispay_name];
         $content = str_replace($search, $replace, $message);
         $style = '.account_status{padding: 5px 10px; border-radius: 5px; font-weight: bold}.account_status.active{background-color: #5ed85e; color: #165616}.account_status.deactive{background-color: #d86363; color: #710b0b}';

@@ -28,14 +28,14 @@ class mw_profile
     {
         $mwuser_data = array(
             'ID' => wp_get_current_user()->ID,
-            'description' => $fields['description'],
-            'first_name' => $fields['first_name'],
-            'last_name' => $fields['last_name']
+            'description' => sanitize_textarea_field($fields['description']),
+            'first_name' => sanitize_text_field($fields['first_name']),
+            'last_name' => sanitize_text_field($fields['last_name'])
         );
 
         if ($fields['pass1']) {
             if ($fields['pass1'] == $fields['pass2']) {
-                $mwuser_data['user_pass'] = $fields['pass1'];
+                $mwuser_data['user_pass'] = sanitize_text_field($fields['pass1']);
             } else {
                 $type = 'error';
                 $msg = __("Passwords don't match!", "mihanpanel");
@@ -58,7 +58,7 @@ class mw_profile
         global $wpdb;
         $tablename = $wpdb->prefix . 'mihanpanelfields';
         
-        $updatingfields = $wpdb->get_results("SELECT * FROM $tablename where type!='file_uploader'");
+        $updatingfields = $wpdb->get_results("SELECT * FROM $tablename");
         foreach ($updatingfields as $updatingfield) {
             if(!isset($fields_data[$updatingfield->slug]) || empty($fields_data[$updatingfield->slug]))
             {
@@ -69,6 +69,8 @@ class mw_profile
                     \mwplite\app\mw_notice::add_multiple_notice($type, $msg);
                 }
             }else {
+                $value = $fields_data[$updatingfield->slug];
+                $value = \mwplite\app\mw_tools::sanitize_value($value, $updatingfield->type);
                 update_user_meta(self::$_uid, $updatingfield->slug, $fields_data[$updatingfield->slug]);
             }
         }

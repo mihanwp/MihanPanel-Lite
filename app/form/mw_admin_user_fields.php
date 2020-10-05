@@ -29,10 +29,10 @@ class mw_admin_user_fields
     {
         if (isset($form_data['slug'])) {
             $data = [
-                'slug' => $form_data['slug'],
-                'label' => $form_data['label'],
-                'required' => $form_data['required'],
-                'type' => $form_data['type'],
+                'slug' => sanitize_text_field($form_data['slug']),
+                'label' => sanitize_text_field($form_data['label']),
+                'required' => sanitize_text_field($form_data['required']),
+                'type' => sanitize_text_field($form_data['type']),
                 'meta' => '',
                 'priority' => 0
             ];
@@ -58,7 +58,7 @@ class mw_admin_user_fields
     }
     static function update_mode($wpdb, $tabel_name, $form_data)
     {
-        $field_id = isset($form_data['id']) && $form_data['id'] ? intval($form_data['id']) : false;
+        $field_id = isset($form_data['id']) && $form_data['id'] ? sanitize_text_field(intval($form_data['id'])) : false;
             if ($field_id) {
                 $slug = isset($form_data['slug']) && $form_data['slug'] ? sanitize_text_field($form_data['slug']) : false;
                 $label = isset($form_data['label']) && $form_data['label'] ? sanitize_text_field($form_data['label']) : false;
@@ -87,7 +87,7 @@ class mw_admin_user_fields
         $success = $wpdb->delete(
             $tabel_name,
             array(
-                'id' => $form_data['id'],
+                'id' => sanitize_text_field(intval($form_data['id'])),
             )
         );
 
@@ -119,16 +119,16 @@ class mw_admin_user_fields
                     <form method="post" class="mw_rows">
                         <div class="mw_row">
                             <div style="display: none;" class="mw_td">
-                                <input type="hidden" name="id" value="<?php echo $field->id; ?>">
+                                <input type="hidden" name="id" value="<?php echo esc_attr($field->id); ?>">
                             </div>
                             <div class="mw_td">
                                 <span class="mw_drag_handle mw_icon mw_sort_icon dashicons dashicons-menu"></span>
                             </div>
                             <div class="mw_td">
-                                <input type="text" name="slug" value="<?php echo $field->slug; ?>">
+                                <input type="text" name="slug" value="<?php echo esc_attr($field->slug); ?>">
                             </div>
                             <div class="mw_td">
-                                <input type="text" name="label" value="<?php echo $field->label;?>">
+                                <input type="text" name="label" value="<?php echo esc_attr($field->label);?>">
                             </div>
                             <div class="mw_td">
                                 <select name="required_field">
@@ -142,7 +142,7 @@ class mw_admin_user_fields
                                         $pro_item = in_array($type, $pro_items);
                                         $name = $pro_item ? sprintf('%s (%s)', $name, __("Pro", 'mihanpanel')) : $name;        
                                         ?>
-                                        <option <?php echo $pro_item ? 'disabled' : ''; selected($type, $field->type);?> value="<?php echo $type?>"><?php echo $name?></option>
+                                        <option <?php echo $pro_item ? 'disabled' : ''; selected($type, $field->type);?> value="<?php echo esc_attr($type); ?>"><?php echo esc_html($name); ?></option>
                                     <?php endforeach; ?>
                                 </select>
                             </div>
@@ -198,7 +198,7 @@ class mw_admin_user_fields
                                 $pro_item = in_array($type, $pro_items);
                                 $name = $pro_item ? sprintf('%s (%s)', $name, __("Pro", 'mihanpanel')) : $name;
                                 ?>
-                                <option <?php echo $pro_item ? 'disabled' : ''; ?> value="<?php echo $type?>"><?php echo $name?></option>
+                                <option <?php echo $pro_item ? 'disabled' : ''; ?> value="<?php echo esc_attr($type); ?>"><?php echo esc_html($name); ?></option>
                             <?php endforeach; ?>
                         </select>
                     </div>

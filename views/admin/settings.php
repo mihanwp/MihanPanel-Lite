@@ -3,7 +3,7 @@
         <div class="mw_menu_icons mw_icon dashicons dashicons-menu"></div>
         <div class="mw_sidebar">
             <div class="mw_logo_section">
-                <img src="<?php echo MW_MIHANPANEL_LITE_URL . 'img/logo.svg'; ?>" alt="Mihan Panel Logo">
+                <img src="<?php echo esc_url(MW_MIHANPANEL_LITE_URL . 'img/logo.svg'); ?>" alt="Mihan Panel Logo">
             </div>
             <div class="mw_menu_section">
                 <ul>
@@ -12,7 +12,7 @@
                         $active_tab = isset($_GET['tab']) && in_array($_GET['tab'], $white_list) ? $_GET['tab'] : $white_list[0];
                         ?>
                     <?php foreach ($menu_items as $item => $name): ?>
-                        <li <?php echo $item == $active_tab ? 'class="active"' : ''; ?>><a href="<?php echo esc_url(add_query_arg(['tab' => $item])); ?>"><?php echo $name; ?></a></li>
+                        <li <?php echo $item == $active_tab ? 'class="active"' : ''; ?>><a href="<?php echo esc_url(add_query_arg(['tab' => $item])); ?>"><?php echo esc_html($name); ?></a></li>
                     <?php endforeach; ?>
                     <?php endif; ?>
                 </ul>

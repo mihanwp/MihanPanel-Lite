@@ -8,7 +8,7 @@ class mw_sundry
     static function add_go_pro_link_in_plugins_list($links)
     {
         $pro_version_link = mw_tools::get_pro_version_link();
-        $links['go_pro'] = sprintf('<a target="_blank" style="color: #673ab6;font-weight: bold; font-size: 15px;" href="%s">%s</a>', $pro_version_link, __("Pro Version", 'mihanpanel'));
+        $links['go_pro'] = sprintf('<a target="_blank" style="color: #673ab6;font-weight: bold; font-size: 15px;" href="%s">%s</a>', esc_url($pro_version_link), __("Pro Version", 'mihanpanel'));
         return $links;
     }
     static function change_login_title($origtitle)
@@ -52,15 +52,16 @@ class mw_sundry
     }
     static function handle_pass_field_error_in_register_form($errors, $sanitized_user_login, $user_email)
     {
-        if (empty($_POST['user_password'])) {
+        if (empty(sanitize_text_field($_POST['user_password']))) {
             $errors->add('pass_error', __("Password must not empty", "mihanpanel"));
         }
         return $errors;
     }
     static function save_pass_field_value_in_register_form($user_id)
     {
-        if (isset($_POST['user_password']))
-            wp_set_password($_POST['user_password'], $user_id);
+        $pass = isset($_POST['user_password']) ? sanitize_text_field($_POST['user_password']) : false;
+        if ($pass)
+            wp_set_password($pass, $user_id);
     }
 
     static function add_extra_fields_to_profile($user)
@@ -73,7 +74,7 @@ class mw_sundry
             $fields = $wpdb->get_results("SELECT * FROM $tablename");
             foreach ($fields as $field):?>
                 <tr>
-                    <th><label for="<?php echo $field->slug; ?>"><?php echo $field->label; ?></label></th>
+                    <th><label for="<?php echo esc_attr($field->slug); ?>"><?php echo esc_html($field->label); ?></label></th>
                     <td>
                     <?php user_fields::render_field('wp-edit-profile', $field, $user, ['classes' => 'regular-text'])?>
                     </td>
@@ -95,7 +96,8 @@ class mw_sundry
         
         foreach ($fields as $field) {
             if (!empty($form_data[$field->slug])) {
-                update_user_meta($user_id, $field->slug, $form_data[$field->slug]);
+                $value = mw_tools::sanitize_value($form_data[$field->slug], $field->type);
+                update_user_meta($user_id, $field->slug, $value);
             }
         }
     }
@@ -107,7 +109,7 @@ class mw_sundry
         }
         foreach($notices as $notice)
         {
-            echo '<div class="notice notice-'.$notice['type'].'"><p>'. $notice['msg'] .'</p></div>';
+            echo '<div class="notice notice-'.esc_attr($notice['type']).'"><p>'. esc_html($notice['msg']) .'</p></div>';
         }
     }
     static function add_extra_fields_to_register_form()
@@ -117,7 +119,7 @@ class mw_sundry
         $fields = $wpdb->get_results("SELECT * From $tablename order by priority");
         foreach ($fields as $field):?>
             <p>
-                <label for="<?php echo $field->slug?>"><?php echo $field->label; ?></label>
+                <label for="<?php echo esc_attr($field->slug)?>"><?php echo esc_html($field->label); ?></label>
                 <?php user_fields::render_field('register-form', $field, null, ['classes' => 'input']); ?>
             </p>
     
@@ -145,7 +147,8 @@ class mw_sundry
         $fields = $wpdb->get_results("SELECT * FROM $tablename");
         foreach ($fields as $field) {
             if (!empty($_POST['mw_fields'][$field->slug])) {
-                update_user_meta($user_id, $field->slug, $_POST['mw_fields'][$field->slug]);
+                $value = mw_tools::sanitize_value($_POST['mw_fields'][$field->slug], $field->type);
+                update_user_meta($user_id, $field->slug, $value);
             }
         }
     }

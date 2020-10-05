@@ -9,18 +9,6 @@ class mw_tools
         var_dump($data);
         echo "</pre>";
     }
-    static function is_empty_array($data)
-    {
-        if(is_array($data))
-        {
-            // check array
-            foreach($data as $value)
-            {
-                return self::is_empty_array($value);
-            }
-        }
-        return empty($data);
-    }
     static function get_date($format, $timestamp='')
     {
         $gmt = get_option('gmt_offset');
@@ -50,16 +38,6 @@ class mw_tools
         wp_safe_redirect(home_url($query));
         exit;
     }
-    static function clear_phone_number($phone)
-    {
-        if(!is_numeric($phone))
-        {
-            return false;
-        }
-        $phone = intval($phone);
-        $phone = intval(preg_replace("/^98|\+98/", '', $phone));
-        return $phone;
-    }
     static function get_current_page_url()
     {
         $uri = $_SERVER['REQUEST_URI'];
@@ -69,5 +47,23 @@ class mw_tools
     {
         $locale = get_locale();
         return $locale == 'fa_IR' ? 'https://mihanwp.com/mihanpanel' : 'https://mihanwp.com/en/mihanpanel';
+    }
+    static function sanitize_value($value, $type='text_field')
+    {
+        switch($type)
+        {
+            case 'email':
+                return sanitize_email($value);
+            break;
+            case 'number':
+                return intval($value);
+            break;
+            case 'textarea':
+                return sanitize_textarea_field($value);
+            break;
+            case 'text_field':
+            default:
+                return sanitize_text_field($value);
+        }
     }
 }

@@ -68,10 +68,11 @@ class mw_admin_menu
     }
     static function social_login_c()
     {
+        $url = admin_url('plugin-install.php?tab=plugin-information&plugin=nextend-facebook-connect&TB_iframe=true&width=772&height=642');
         ?>
         <div class="mihanpanel-admin">
             <p><?php _e('For using Social login just use "Nextend Social Login" plugin with Mihan Panel plugin.', 'mihanpanel')?></p>
-          <a href="../wp-admin/plugin-install.php?tab=plugin-information&plugin=nextend-facebook-connect&TB_iframe=true&width=772&height=642"><?php _e('Click for installing', 'mihanpanel')?></a>
+          <a href="<?php echo esc_url($url); ?>"><?php _e('Click for installing', 'mihanpanel')?></a>
         </div>
         <?php
     }
@@ -89,17 +90,17 @@ class mw_admin_menu
             //if save
             if (isset($_POST['save'])) {
                 $link = filter_var($_POST['link_or_content'], FILTER_VALIDATE_URL);
-                $link = $link ? $link : "";
+                $link = $link ? esc_url_raw($link) : "";
                 $content = $link ? "" : sanitize_text_field($_POST['link_or_content']);
                 $success = $wpdb->update(
                     $tablename,
                     [
-                        'name' => $_POST['name'],
+                        'name' => sanitize_text_field($_POST['name']),
                         'link' => $link,
                         'content' => $content,
-                        'icon' => $_POST['icon']
+                        'icon' => sanitize_text_field($_POST['icon'])
                     ],
-                    array('ID' => $_POST['id'])
+                    array('ID' => sanitize_text_field($_POST['id']))
                 );
                 if ($success) {
                     echo '<p class="alert success">'.__("Successfully updated!", "mihanpanel").'</p>';
@@ -119,10 +120,10 @@ class mw_admin_menu
                     $success = $wpdb->insert(
                         $tablename,
                         array(
-                            'name' => $_POST['name'],
-                            'link' => $_POST['link'],
-                            'content' => $menucontent,
-                            'icon' => $_POST['icon'],
+                            'name' => sanitize_text_field($_POST['name']),
+                            'link' => sanitize_text_field($_POST['link']),
+                            'content' => sanitize_text_field($menucontent),
+                            'icon' => sanitize_text_field($_POST['icon']),
                         )
                     );
                     if ($success) {
@@ -137,7 +138,7 @@ class mw_admin_menu
                 $success = $wpdb->delete(
                     $tablename,
                     array(
-                        'id' => $_POST['id'],
+                        'id' => sanitize_text_field($_POST['id']),
                     )
                 );
                 if ($success) {
@@ -186,13 +187,13 @@ class mw_admin_menu
                 foreach ($menus as $menu) {
                     $link_or_content = $menu->link ? $menu->link : $menu->content;
                     ?>
-                    <form method="post" id="mpnav-form-<?php echo $menu->id; ?>">
+                    <form method="post" id="mpnav-form-<?php echo esc_attr($menu->id); ?>">
                         <tr class="mihanpanelmenulist">
                             <td><span class="mw_icon mw_sort_icon dashicons dashicons-menu"></span></td>
-                            <td style="display:none"><input name="id" value="<?php echo $menu->id; ?>"/></td>
-                            <td><input name="name" value="<?php echo $menu->name; ?>"/></td>
-                            <td><input type="text" name="link_or_content" value="<?php echo $link_or_content; ?>"></td>
-                            <td><input class="fontawesomepicker-<?php echo $menu->id; ?>" name="icon" value="<?php echo $menu->icon; ?>"/></td>
+                            <td style="display:none"><input name="id" value="<?php echo esc_attr($menu->id); ?>"/></td>
+                            <td><input name="name" value="<?php echo esc_attr($menu->name); ?>"/></td>
+                            <td><input type="text" name="link_or_content" value="<?php echo esc_attr($link_or_content); ?>"></td>
+                            <td><input class="fontawesomepicker-<?php echo esc_attr($menu->id); ?>" name="icon" value="<?php echo esc_attr($menu->icon); ?>"/></td>
                             <th><input type="submit" name="save" value="<?php _e("Save", "mihanpanel")?>"/></th>
                             <th><input class="mihanpanelremove" type="submit" name="delete" value="x"/></th>
                         </tr>
@@ -226,7 +227,7 @@ class mw_admin_menu
                             ksort( $shortcodes );
                             ?>
                               <?php foreach( $shortcodes as $code => $function ) { ?>
-                                <option value="[<?php echo $code; ?>]"><?php echo $code; ?></option>
+                                <option value="[<?php echo esc_attr($code); ?>]"><?php echo esc_html($code); ?></option>
                             <?php } ?>
                             </select>
                             <script>

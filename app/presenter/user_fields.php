@@ -17,10 +17,10 @@ class user_fields
     {
         $user_field_slug = $field->slug;
         $classes = isset($args['classes']) ? $args['classes'] : '';
-        $value_arg = $current_user ? 'value="'. $current_user->{$user_field_slug} .'"' : '';
+        $value_arg = $current_user ? 'value="'. esc_attr($current_user->{$user_field_slug}) .'"' : '';
         ?>
-        <input class="<?php echo $classes; ?>" type="<?php echo $field->type; ?>"
-            name="mw_fields[<?php echo $field->slug; ?>]"
+        <input class="<?php echo esc_attr($classes); ?>" type="<?php echo esc_attr($field->type); ?>"
+            name="mw_fields[<?php echo esc_attr($field->slug); ?>]"
             <?php echo $value_arg;?>/>
         <?php
     }
@@ -29,7 +29,7 @@ class user_fields
         $value = $current_user ? $current_user->{$field->slug} : '';
         $classes = isset($args['classes']) ? $args['classes'] : '';
         ?>
-        <textarea class="<?php echo $classes; ?>" name="mw_fields[<?php echo $field->slug; ?>]" id="<?php echo $field->slug; ?>" cols="30" rows="10"><?php echo $value; ?></textarea>
+        <textarea class="<?php echo esc_attr($classes); ?>" name="mw_fields[<?php echo esc_attr($field->slug); ?>]" id="<?php echo esc_attr($field->slug); ?>" cols="30" rows="10"><?php echo esc_textarea($value); ?></textarea>
         <?php
     }
 }
