@@ -60,7 +60,7 @@ if(defined('ABSPATH') && !class_exists('mwpl_ajax'))
             }
             $res = [];
             $res['status'] = $success ? 200 : 500;
-            $res['msg'] = $success ? __('Successfully updated', 'mihanpanel') : __("Nothing updated", 'mihanpanel');
+            $res['msg'] = $success ? __('Successfully updated!', 'mihanpanel') : __("Nothing updated.", 'mihanpanel');
             return $res;
         }
     }
