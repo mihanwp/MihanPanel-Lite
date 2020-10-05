@@ -22,212 +22,212 @@ msgstr ""
 "X-Poedit-SearchPath-1: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
-#: app/emwidg/mw_emwidg_mihanpanel.php:26 app/mw_hooks.php:67
+#: app/emwidg/mwpl_emwidg_mihanpanel.php:26 app/mwpl_hooks.php:67
 msgid "Mihan Panel"
 msgstr "میهن پنل"
 
-#: app/form/mw_admin_user_fields.php:45
+#: app/form/mwpl_admin_user_fields.php:45
 msgid "Settings successfully updated!"
 msgstr "تنظیمات با موفقیت به روز شد!"
 
-#: app/form/mw_admin_user_fields.php:49 app/form/mw_admin_user_fields.php:81
-#: app/form/mw_admin_user_fields.php:97 app/form/mw_profile.php:49
+#: app/form/mwpl_admin_user_fields.php:49 app/form/mwpl_admin_user_fields.php:81
+#: app/form/mwpl_admin_user_fields.php:97 app/form/mwpl_profile.php:49
 #: inc/tabs.php:58 inc/tabs.php:73
 msgid "An error occurred!"
 msgstr "یک خطا رخ داده است!"
 
-#: app/form/mw_admin_user_fields.php:55
+#: app/form/mwpl_admin_user_fields.php:55
 msgid "Please fill all the fields"
 msgstr "لطفا تمام زمینه ها را پر کنید"
 
-#: app/form/mw_admin_user_fields.php:79
+#: app/form/mwpl_admin_user_fields.php:79
 msgid "Successfully edited!"
 msgstr "با موفقیت ویرایش شد!"
 
-#: app/form/mw_admin_user_fields.php:95 inc/tabs.php:71
+#: app/form/mwpl_admin_user_fields.php:95 inc/tabs.php:71
 msgid "Successfully deleted!"
 msgstr "با موفقیت حذف شد!"
 
-#: app/form/mw_admin_user_fields.php:110 app/form/mw_admin_user_fields.php:172
+#: app/form/mwpl_admin_user_fields.php:110 app/form/mwpl_admin_user_fields.php:172
 msgid "Field Id"
 msgstr "شناسه فیلد"
 
-#: app/form/mw_admin_user_fields.php:111 app/form/mw_admin_user_fields.php:173
+#: app/form/mwpl_admin_user_fields.php:111 app/form/mwpl_admin_user_fields.php:173
 msgid "Title"
 msgstr "عنوان"
 
-#: app/form/mw_admin_user_fields.php:112 app/form/mw_admin_user_fields.php:135
-#: app/form/mw_admin_user_fields.php:174 app/form/mw_admin_user_fields.php:191
+#: app/form/mwpl_admin_user_fields.php:112 app/form/mwpl_admin_user_fields.php:135
+#: app/form/mwpl_admin_user_fields.php:174 app/form/mwpl_admin_user_fields.php:191
 #: parts/edit-profile.php:85
 msgid "Required"
 msgstr "الزامی"
 
-#: app/form/mw_admin_user_fields.php:113 app/form/mw_admin_user_fields.php:175
+#: app/form/mwpl_admin_user_fields.php:113 app/form/mwpl_admin_user_fields.php:175
 msgid "Type"
 msgstr "نوع"
 
-#: app/form/mw_admin_user_fields.php:136 app/form/mw_admin_user_fields.php:192
+#: app/form/mwpl_admin_user_fields.php:136 app/form/mwpl_admin_user_fields.php:192
 msgid "Optional"
 msgstr "اختیاری"
 
-#: app/form/mw_admin_user_fields.php:143 app/form/mw_admin_user_fields.php:199
+#: app/form/mwpl_admin_user_fields.php:143 app/form/mwpl_admin_user_fields.php:199
 msgid "Pro"
 msgstr "حرفه ای"
 
-#: app/form/mw_admin_user_fields.php:150 app/form/mw_admin_user_fields.php:206
+#: app/form/mwpl_admin_user_fields.php:150 app/form/mwpl_admin_user_fields.php:206
 #: inc/tabs.php:123
 msgid "Save"
 msgstr "ذخیره"
 
-#: app/form/mw_admin_user_fields.php:153
+#: app/form/mwpl_admin_user_fields.php:153
 msgid "Remove"
 msgstr "حذف"
 
-#: app/form/mw_profile.php:41
+#: app/form/mwpl_profile.php:41
 msgid "Passwords don't match!"
 msgstr "رمزهای عبور یکسان نیست!"
 
-#: app/form/mw_profile.php:52 inc/tabs.php:33
+#: app/form/mwpl_profile.php:52 inc/tabs.php:33
 msgid "Successfully updated!"
 msgstr "با موفقیت به روز شد!"
 
-#: app/form/mw_profile.php:68
+#: app/form/mwpl_profile.php:68
 #, php-format
 msgid "%1$s must not be empty."
 msgstr "%1$s نباید خالی باشد."
 
-#: app/mw_admin_menu.php:12
+#: app/mwpl_admin_menu.php:12
 msgid "MihanPanel"
 msgstr "میهن پنل"
 
-#: app/mw_admin_menu.php:20 views/admin/panel-section/general.php:22
+#: app/mwpl_admin_menu.php:20 views/admin/panel-section/general.php:22
 msgid "Login & Register"
 msgstr "ورود و عضویت"
 
-#: app/mw_admin_menu.php:21 mihanpanel.php:150
+#: app/mwpl_admin_menu.php:21 mihanpanel.php:150
 msgid "User Panel"
 msgstr "پنل کاربری"
 
-#: app/mw_admin_menu.php:22
+#: app/mwpl_admin_menu.php:22
 msgid "Registeration Form"
 msgstr "فرم ثبت نام"
 
-#: app/mw_admin_menu.php:23 views/admin/panel-section/notification.php:2
+#: app/mwpl_admin_menu.php:23 views/admin/panel-section/notification.php:2
 msgid "Notifications"
 msgstr "اطلاعیه ها"
 
-#: app/mw_admin_menu.php:24
+#: app/mwpl_admin_menu.php:24
 msgid "Login with SMS"
 msgstr "ورود با SMS"
 
-#: app/mw_admin_menu.php:25
+#: app/mwpl_admin_menu.php:25
 msgid "Emails"
 msgstr "ایمیل‌های ارسالی"
 
-#: app/mw_config.php:57
+#: app/mwpl_config.php:57
 msgid "Registration complete. Your account has been activated automatically."
 msgstr "نام نویسی انجام شد. اکانت شما به صورت خودکار فعال شده است."
 
-#: app/mw_config.php:60
+#: app/mwpl_config.php:60
 msgid "Registration complete. Please wait for admin approval."
 msgstr "اکانت شما غیرفعال است. لطفا منتظر تایید مدیریت سایت باشید."
 
-#: app/mw_config.php:64
+#: app/mwpl_config.php:64
 msgid "Login Page"
 msgstr "برگه ورود"
 
-#: app/mw_config.php:90
+#: app/mwpl_config.php:90
 msgid "Your account is disable! Please wait for admin approval."
 msgstr "اکانت شما غیرفعال است. لطفا منتظر تایید مدیریت سایت باشید."
 
-#: app/mw_config.php:92
+#: app/mwpl_config.php:92
 msgid "Your account is disable!"
 msgstr "اکانت شما غیرفعال است!"
 
-#: app/mw_config.php:100
+#: app/mwpl_config.php:100
 msgid "Your Account successfully activated!"
 msgstr "اکانت شما با موفقیت فعال شد!"
 
-#: app/mw_config.php:103
+#: app/mwpl_config.php:103
 msgid "Request is invalid!"
 msgstr "درخواست شما نامعتبر است!"
 
 #. translators: Login details notification email subject. %s: Site title
-#: app/mw_email.php:91 app/mw_email.php:115
+#: app/mwpl_email.php:91 app/mwpl_email.php:115
 #, php-format
 msgid "[%s] Login Details"
 msgstr "[%s] اطلاعات ورود"
 
-#: app/mw_email.php:137
+#: app/mwpl_email.php:137
 #, php-format
 msgid "[%s] Change Account Status"
 msgstr "[%s] تغییر وضعیت اکانت"
 
-#: app/mw_email.php:141
+#: app/mwpl_email.php:141
 msgid "Unknown"
 msgstr "ناشناخته"
 
-#: app/mw_email.php:146 app/mw_users.php:104 app/mw_users.php:121
+#: app/mwpl_email.php:146 app/mwpl_users.php:104 app/mwpl_users.php:121
 msgid "Active"
 msgstr "فعال"
 
-#: app/mw_email.php:150 app/mw_users.php:104 app/mw_users.php:121
+#: app/mwpl_email.php:150 app/mwpl_users.php:104 app/mwpl_users.php:121
 msgid "Inactive"
 msgstr "غیرفعال"
 
-#: app/mw_options.php:12
+#: app/mwpl_options.php:12
 msgid "Automatic activation"
 msgstr "فعالسازی اتوماتیک"
 
-#: app/mw_options.php:13
+#: app/mwpl_options.php:13
 msgid "Send Activation Link"
 msgstr "ارسال لینک فعالسازی"
 
-#: app/mw_options.php:14
+#: app/mwpl_options.php:14
 msgid "Manual Activation"
 msgstr "فعالسازی دستی"
 
-#: app/mw_panel.php:25
+#: app/mwpl_panel.php:25
 msgid "Order Details"
 msgstr "اطلاعات سفارش"
 
-#: app/mw_user_fields.php:9
+#: app/mwpl_user_fields.php:9
 msgid "Text input"
 msgstr "متن ساده"
 
-#: app/mw_user_fields.php:10
+#: app/mwpl_user_fields.php:10
 msgid "Textarea"
 msgstr "باکس متنی"
 
-#: app/mw_user_fields.php:11
+#: app/mwpl_user_fields.php:11
 msgid "Email"
 msgstr "ایمیل"
 
-#: app/mw_user_fields.php:12
+#: app/mwpl_user_fields.php:12
 msgid "Numeral"
 msgstr "عددی"
 
-#: app/mw_user_fields.php:13
+#: app/mwpl_user_fields.php:13
 msgid "Checkbox"
 msgstr "چک باکس"
 
-#: app/mw_user_fields.php:14
+#: app/mwpl_user_fields.php:14
 msgid "Selectbox"
 msgstr "باکس انتخاب"
 
-#: app/mw_user_fields.php:15
+#: app/mwpl_user_fields.php:15
 msgid "Radio Button"
 msgstr "دکمه رادیویی"
 
-#: app/mw_user_fields.php:16
+#: app/mwpl_user_fields.php:16
 msgid "Date Picker"
 msgstr "گیرنده‌ی تاریخ"
 
-#: app/mw_user_fields.php:17
+#: app/mwpl_user_fields.php:17
 msgid "File Uploader"
 msgstr "آپلود کننده‌ی فایل"
 
-#: app/mw_users.php:88
+#: app/mwpl_users.php:88
 msgid "Status"
 msgstr "وضعیت"
 

@@ -8,8 +8,8 @@
             <h2><?php _e("User activation process", "mihanpanel"); ?></h2>
             <div class="mp_option_single">
                 <?php
-                $activation_types = \mwplite\app\mw_options::get_activation_types();
-                $current_activation_type = \mwplite\app\mw_options::get_account_activation_type();
+                $activation_types = \mwplite\app\mwpl_options::get_activation_types();
+                $current_activation_type = \mwplite\app\mwpl_options::get_account_activation_type();
                 foreach ($activation_types as $type_key => $type_name): ?>
                 <p>
                     <label for="mp_activation_type_<?php echo esc_attr($type_key); ?>"><?php echo esc_html($type_name); ?></label>

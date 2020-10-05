@@ -18,8 +18,8 @@ final class mwp_lite
         $this->includes();
         $this->requires();
 
-        register_activation_hook(MWP_LITE_MAIN_APP, ['\mwplite\app\mw_hooks', 'activation_hook']);
-        register_deactivation_hook(MWP_LITE_MAIN_APP, ['\mwplite\app\mw_hooks', 'deactivation_hook']);
+        register_activation_hook(MWP_LITE_MAIN_APP, ['\mwplite\app\mwpl_hooks', 'activation_hook']);
+        register_deactivation_hook(MWP_LITE_MAIN_APP, ['\mwplite\app\mwpl_hooks', 'deactivation_hook']);
     }
     function autoload()
     {
@@ -46,9 +46,9 @@ final class mwp_lite
     function includes()
     {
         // include classes
-        \mwplite\app\mw_ajax::init();
-        \mwplite\app\mw_hooks::init();
-        include MW_MIHANPANEL_LITE_DIR . 'app' . DIRECTORY_SEPARATOR . 'mw_elementor.php';
+        \mwplite\app\mwpl_ajax::init();
+        \mwplite\app\mwpl_hooks::init();
+        include MW_MIHANPANEL_LITE_DIR . 'app' . DIRECTORY_SEPARATOR . 'mwpl_elementor.php';
     }
     function requires()
     {

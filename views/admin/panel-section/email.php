@@ -9,7 +9,7 @@
             <div class="mp_option_single">
                 <label><?php _e("Email Content", "mihanpanel"); ?></label>
                 <div class="mw_dashicons mw_editor_wrapper"><?php
-                wp_editor(\mwplite\app\mw_options::get_email_notify_content(),
+                wp_editor(\mwplite\app\mwpl_options::get_email_notify_content(),
                     'mp_new_user_email_notify',
                     [
                         'textarea_rows' => 10,
@@ -27,12 +27,12 @@
             <span><?php _e("Subject and Text of reset password email", "mihanpanel"); ?></span>
             <div class="mp_option_single">
                 <label><?php _e("Reset password email subject", "mihanpanel"); ?></label>
-                <input type="text" name="mp_reset_password_email_subject" id="mp_reset_password_email_subject" value="<?php echo esc_attr(\mwplite\app\mw_options::get_reset_password_email_subject()); ?>">
+                <input type="text" name="mp_reset_password_email_subject" id="mp_reset_password_email_subject" value="<?php echo esc_attr(\mwplite\app\mwpl_options::get_reset_password_email_subject()); ?>">
             </div>
             <div class="mp_option_single">
                 <label><?php _e("Email Content", "mihanpanel"); ?></label>
                 <div class="mw_dashicons mw_editor_wrapper">
-                    <?php wp_editor(\mwplite\app\mw_options::get_reset_password_email_content(), 'mp_reset_password_email_content', ['textarea_rows' => 10]); ?>
+                    <?php wp_editor(\mwplite\app\mwpl_options::get_reset_password_email_content(), 'mp_reset_password_email_content', ['textarea_rows' => 10]); ?>
                 </div>
                 <p><?php _e("You can use this:", "mihanpanel"); ?></p>
                 <p>
@@ -51,7 +51,7 @@
 
                 <label><?php _e("Change account status email subject", "mihanpanel"); ?></label>
 
-                <input type="text" name="mp_change_account_status_email_subject" id="mp_change_account_status_email_subject" value="<?php echo esc_attr(\mwplite\app\mw_options::get_change_account_status_email_subject()); ?>">
+                <input type="text" name="mp_change_account_status_email_subject" id="mp_change_account_status_email_subject" value="<?php echo esc_attr(\mwplite\app\mwpl_options::get_change_account_status_email_subject()); ?>">
             </div>
 
             <div class="mp_option_single">
@@ -59,7 +59,7 @@
                 <label><?php _e("Email Content", "mihanpanel"); ?></label>
 
                 <div class="mw_dashicons mw_editor_wrapper">
-                    <?php wp_editor(\mwplite\app\mw_options::get_change_account_status_email_content(), 'mp_change_account_status_email_content', ['textarea_rows' => 10]); ?>
+                    <?php wp_editor(\mwplite\app\mwpl_options::get_change_account_status_email_content(), 'mp_change_account_status_email_content', ['textarea_rows' => 10]); ?>
                 </div>
                 <p><?php _e("You can use this:", "mihanpanel"); ?></p>
                 <p>

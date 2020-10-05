@@ -17,7 +17,7 @@
         <div class="mp_option_single">
             <label><?php _e("User panel page", "mihanpanel"); ?></label>
             <?php
-            $current_slug_value = \mwplite\app\mw_options::get_panel_slug();
+            $current_slug_value = \mwplite\app\mwpl_options::get_panel_slug();
             $all_pages_args = [
                 'post_type' => 'page',
                 'posts_per_page' => '-1',

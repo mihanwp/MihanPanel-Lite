@@ -1,6 +1,6 @@
 <?php
-if ( defined( 'ABSPATH' ) && ! class_exists( 'Rename_WP_Login' ) ) {
-	class Rename_WP_Login {
+if ( defined( 'ABSPATH' ) && ! class_exists( 'MWPL_Rename_WP_Login' ) ) {
+	class MWPL_Rename_WP_Login {
 		private $wp_login_php;
 		private function basename() {
 			return plugin_basename( __FILE__ );
@@ -54,7 +54,7 @@ if ( defined( 'ABSPATH' ) && ! class_exists( 'Rename_WP_Login' ) ) {
 				return;
 			}
 			register_activation_hook( $this->basename(), array( $this, 'activate' ) );
-			register_uninstall_hook( $this->basename(), array( 'Rename_WP_Login', 'uninstall' ) );
+			register_uninstall_hook( $this->basename(), array( 'MWPL_Rename_WP_Login', 'uninstall' ) );
 			add_action( 'admin_init', array( $this, 'admin_init' ) );
 			add_action( 'admin_notices', array( $this, 'admin_notices' ) );
 			add_action( 'network_admin_notices', array( $this, 'admin_notices' ) );
@@ -295,5 +295,5 @@ if ( defined( 'ABSPATH' ) && ! class_exists( 'Rename_WP_Login' ) ) {
 			return array_merge( $wp->public_query_vars, $wp->private_query_vars );
 		}
 	}
-	new Rename_WP_Login;
+	new MWPL_Rename_WP_Login;
 }

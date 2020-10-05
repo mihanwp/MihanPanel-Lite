@@ -30,8 +30,8 @@
         <div class="mw_content_wrapper">
             <div class="mw_content">
                 <?php
-                $pro_version_link = \mwplite\app\mw_tools::get_pro_version_link();
-                $view = \mwplite\app\mw_views::get('admin.panel-section.' . $active_tab);
+                $pro_version_link = \mwplite\app\mwpl_tools::get_pro_version_link();
+                $view = \mwplite\app\mwpl_views::get('admin.panel-section.' . $active_tab);
                 include $view;
                 ?>
             </div>
