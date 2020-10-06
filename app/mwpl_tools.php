@@ -55,7 +55,7 @@ if(defined('ABSPATH') && !class_exists('mwpl_tools'))
             switch($type)
             {
                 case 'email':
-                    return sanitize_email($value);
+                    return is_email($value) ? sanitize_email($value) : false;
                 break;
                 case 'number':
                     return intval($value);

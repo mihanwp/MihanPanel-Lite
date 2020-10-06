@@ -91,7 +91,7 @@ if(defined('ABSPATH') && !class_exists('mwpl_profile'))
         }
         static function woocommerce_handler($wc_data)
         {
-            $email = isset($wc_data['email']) && $wc_data['email'] ? sanitize_email($wc_data['email']) : false;
+            $email = isset($wc_data['email']) && $wc_data['email'] && is_email($wc_data['email']) ? sanitize_email($wc_data['email']) : false;
             $company_name = isset($wc_data['company_name']) && $wc_data['company_name'] ? sanitize_text_field($wc_data['company_name']) : false;
             $address_1 = isset($wc_data['address_1']) && $wc_data['address_1'] ? sanitize_textarea_field($wc_data['address_1']) : false;
             $address_2 = isset($wc_data['address_2']) && $wc_data['address_2'] ? sanitize_textarea_field($wc_data['address_2']) : false;
