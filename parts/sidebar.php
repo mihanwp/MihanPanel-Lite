@@ -1,7 +1,7 @@
 <?php
 if (isset($_GET['tab']))
 {
-    $tab_id = $_GET['tab'];
+    $tab_id = sanitize_text_field($_GET['tab']);
 }
 else
 {
