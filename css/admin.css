@@ -328,6 +328,7 @@ input[type=submit].mihanpanelremove{
 .mihanpanel-admin .mw_submit.disable
 {
     cursor: no-drop;
+    pointer-events: none;
 }
 .mw_admin_panel *:not(.mw_icon)
 {

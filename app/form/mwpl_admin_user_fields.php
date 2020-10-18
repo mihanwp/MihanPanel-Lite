@@ -15,16 +15,6 @@ if(defined('ABSPATH') && !class_exists('mwpl_admin_user_fields'))
                 // new mode
                 self::new_mode($wpdb, $tabel_name, $form_data);
             }
-            if(isset($form_data['update']))
-            {
-                // update mode
-                self::update_mode($wpdb, $tabel_name, $form_data);
-            }
-            if(isset($form_data['delete']))
-            {
-                // delete mode
-                self::delete_mode($wpdb, $tabel_name, $form_data);
-            }
         }
         static function new_mode($wpdb, $tabel_name, $form_data)
         {
@@ -62,69 +52,13 @@ if(defined('ABSPATH') && !class_exists('mwpl_admin_user_fields'))
     
             }
         }
-        static function update_mode($wpdb, $tabel_name, $form_data)
-        {
-            $field_id = isset($form_data['id']) && $form_data['id'] ? sanitize_text_field(intval($form_data['id'])) : false;
-            if ($field_id) {
-                if(!wp_verify_nonce(sanitize_text_field($form_data['mwpl_nonce']), 'mwpl_update_field_item_' . $field_id))
-                {
-                    printf('<p class="alert error">%s</p>', __('The operation failed due to security issues.', 'mihanpanel'));
-                    return false;
-                }
-                $slug = isset($form_data['slug']) && $form_data['slug'] ? sanitize_text_field($form_data['slug']) : false;
-                $label = isset($form_data['label']) && $form_data['label'] ? sanitize_text_field($form_data['label']) : false;
-                $required_field = isset($form_data['required_field']) && $form_data['required_field'] ? sanitize_text_field($form_data['required_field']) : false;
-                $type = isset($form_data['type']) && $form_data['type'] ? sanitize_text_field($form_data['type']) : false;
-
-                $data = [];
-                $slug ? $data['slug'] = $slug : false;
-                $label ? $data['label'] = $label : false;
-                $required_field ? $data['required'] = $required_field : false;
-                $type ? $data['type'] = $type : false;
-                $update_res = $wpdb->update(
-                    $tabel_name,
-                    $data,
-                    ['id' => $field_id]
-                );
-                if ($update_res) {
-                    echo '<p class="alert success">'.__('Successfully edited!', 'mihanpanel').'</p>';
-                } else {
-                    echo '<p class="alert error">'.__('An error occurred!', 'mihanpanel').'</p>';
-                }
-            }
-        }
-        static function delete_mode($wpdb, $tabel_name, $form_data)
-        {
-            $field_id = isset($form_data['id']) && $form_data['id'] ? sanitize_text_field(intval($form_data['id'])) : false;
-            if(!$field_id)
-            {
-                return false;
-            }
-            if(!wp_verify_nonce(sanitize_text_field($form_data['mwpl_nonce']), 'smwpl_update_field_item_' . $field_id))
-            {
-                printf('<p class="alert error">%s</p>', __('The operation failed due to security issues.', 'mihanpanel'));
-                return false;
-            }
-            $success = $wpdb->delete(
-                $tabel_name,
-                array(
-                    'id' => $field_id,
-                )
-            );
-    
-            if ($success) {
-                echo '<p class="alert success">'.__('Successfully deleted!', 'mihanpanel').'</p>';
-            } else {
-                echo '<p class="alert error">'.__('An error occurred!', 'mihanpanel').'</p>';
-            }
-        }
         static function render_user_fields()
         {
             $fields = mwpl_user_fields::get_fields();
             $field_types = mwpl_user_fields::get_types();
             $pro_items = mwpl_user_fields::get_pro_items();
             ?>
-            <div class="mw_menus_table">
+            <div class="mw_menus_table mw_fields_wrapper" data-mwpl_nonce="<?php echo esc_attr(wp_create_nonce('mwpl_ajax_modify_user_field_record'))?>" data-mw_type="user_field">
                 <div class="mw_head">
                     <div class="mw_row">
                         <div class="mw_th"></div>
@@ -137,8 +71,7 @@ if(defined('ABSPATH') && !class_exists('mwpl_admin_user_fields'))
                 </div>
                 <div class="mw_body mw_sortable">
                     <?php foreach($fields as $field): ?>
-                        <form method="post" class="mw_rows">
-                            <?php wp_nonce_field('mwpl_update_field_item_' . $field->id, 'mwpl_nonce'); ?>
+                        <form method="post" class="mw_rows mw_field_item">
                             <div class="mw_row">
                                 <div style="display: none;" class="mw_td">
                                     <input type="hidden" name="id" value="<?php echo esc_attr($field->id); ?>">
@@ -167,9 +100,6 @@ if(defined('ABSPATH') && !class_exists('mwpl_admin_user_fields'))
                                             <option <?php echo $pro_item ? 'disabled' : ''; selected($type, $field->type);?> value="<?php echo esc_attr($type); ?>"><?php echo esc_html($name); ?></option>
                                         <?php endforeach; ?>
                                     </select>
-                                </div>
-                                <div class="mw_th">
-                                    <input type="submit" name="update" value="<?php _e('Save', 'mihanpanel')?>">
                                 </div>
                                 <div class="mw_th">
                                     <input type="submit" name="delete" value="<?php _e('Remove', 'mihanpanel')?>">

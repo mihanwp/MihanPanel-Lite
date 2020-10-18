@@ -49,10 +49,10 @@ if(defined('ABSPATH') && !class_exists('mwpl_admin_menu'))
             ?>
             <div class="mihanpanel-admin">
                 <div class="mw_update_sortable_notice notice inline notice-info notice-alt">
-                    <p>
-                        <span><?php _e('Priorities was changed! Save changes?', 'mihanpanel')?></span>
-                        <span><input class="mw_submit mw_update_priority" data-mwpl_nonce="<?php echo esc_attr(wp_create_nonce('mwpl_ajax_update_fields_priority')); ?>" data-mw_type="user_field" type="submit" name="save_priority" value="<?php _e('Yes', 'mihanpanel')?>"></span>
-                    </p>
+                <p>
+                    <span><?php _e('Do you want to save changes?', 'mihanpanel')?></span>
+                    <span><input class="mw_submit mw_ajax_update_fields_data" data-mwpl_nonce="<?php echo esc_attr(wp_create_nonce('mwpl_ajax_update_user_field_fields_data')); ?>" data-mw_type="user_field" type="submit" value="<?php _e('Yes', 'mihanpanel')?>"></span>
+                </p>
                 </div>
                 <div class="mw_notice_box notice inline notice-alt"></div>
                 <?php mwpl_admin_user_fields::render_user_fields(); ?>
@@ -89,27 +89,6 @@ if(defined('ABSPATH') && !class_exists('mwpl_admin_menu'))
             if (!empty($_POST)) {
                 global $wpdb;
                 $tablename = $wpdb->prefix . 'mihanpaneltabs';
-                //if save
-                if (isset($_POST['save']) && wp_verify_nonce(sanitize_text_field($_POST['mwpl_nonce']), 'mwpl_update_tab_item_' . sanitize_text_field($_POST['id']))) {
-                    $link = filter_var($_POST['link_or_content'], FILTER_VALIDATE_URL);
-                    $link = $link ? esc_url_raw($link) : "";
-                    $content = $link ? "" : sanitize_text_field($_POST['link_or_content']);
-                    $success = $wpdb->update(
-                        $tablename,
-                        [
-                            'name' => sanitize_text_field($_POST['name']),
-                            'link' => $link,
-                            'content' => $content,
-                            'icon' => sanitize_text_field($_POST['icon'])
-                        ],
-                        array('ID' => sanitize_text_field($_POST['id']))
-                    );
-                    if ($success) {
-                        echo '<p class="alert success">'.__("Successfully updated!", "mihanpanel").'</p>';
-                    } else {
-                        echo '<p class="alert error">'.__("No any data saved!", "mihanpanel").'</p>';
-                    }
-                }
                 // if add
                 if (isset($_POST['add'])) {
                     $count = mwpl_panel::get_tabs_count();
@@ -135,31 +114,17 @@ if(defined('ABSPATH') && !class_exists('mwpl_admin_menu'))
                         }
                     }
                 }
-                // if delete
-                if (isset($_POST['delete']) && wp_verify_nonce(sanitize_text_field($_POST['mwpl_nonce']), 'mwpl_update_tab_item_' . sanitize_text_field($_POST['id']))) {
-                    $success = $wpdb->delete(
-                        $tablename,
-                        array(
-                            'id' => sanitize_text_field($_POST['id']),
-                        )
-                    );
-                    if ($success) {
-                        echo '<p class="alert success">'.__("Successfully deleted!", "mihanpanel").'</p>';
-                    } else {
-                        echo '<p class="alert error">'.__("An error occurred!", "mihanpanel").'</p>';
-                    }
-                }
             }
             ?>
             <div class="mihanpanel-admin">
                 <div class="mw_update_sortable_notice notice inline notice-info notice-alt">
                     <p>
-                        <span><?php _e('Priorities was changed! Save changes?', 'mihanpanel')?></span>
-                        <span><input class="mw_submit mw_update_priority" data-mwpl_nonce="<?php echo esc_attr(wp_create_nonce('mwpl_ajax_update_tabs_priority')); ?>" data-mw_type="tabs" type="submit" name="save_priority" value="<?php _e("yes", "mihanpanel")?>"></span>
+                        <span><?php _e('Do you want to save changes?', 'mihanpanel')?></span>
+                        <span><input class="mw_submit mw_ajax_update_fields_data" data-mwpl_nonce="<?php echo esc_attr(wp_create_nonce('mwpl_ajax_update_tabs_fields_data')); ?>" data-mw_type="tabs" type="submit" value="<?php _e('Yes', 'mihanpanel')?>"></span>
                     </p>
                 </div>
                 <div class="mw_notice_box notice inline notice-alt"></div>
-                <table class="mihanmenustable">
+                <table class="mihanmenustable mw_fields_wrapper" data-mwpl_nonce="<?php echo esc_attr(wp_create_nonce('mwpl_ajax_modify_tabs_record'))?>" data-mw_type="tabs">
                     <thead>
                         <tr>
                         <th></th>
@@ -186,22 +151,18 @@ if(defined('ABSPATH') && !class_exists('mwpl_admin_menu'))
                     global $wpdb;
                     $tablename = $wpdb->prefix . 'mihanpaneltabs';
                     $menus = $wpdb->get_results("SELECT * FROM $tablename ORDER BY priority ASC");
-                    foreach ($menus as $menu) {
+                    foreach ($menus as $menu):
                         $link_or_content = $menu->link ? $menu->link : $menu->content;
                         ?>
-                        <form method="post" id="mpnav-form-<?php echo esc_attr($menu->id); ?>">
-                            <?php wp_nonce_field('mwpl_update_tab_item_' . $menu->id, 'mwpl_nonce')?>
-                            <tr class="mihanpanelmenulist">
+                            <tr class="mihanpanelmenulist mw_field_item">
                                 <td><span class="mw_icon mw_sort_icon dashicons dashicons-menu"></span></td>
                                 <td style="display:none"><input name="id" value="<?php echo esc_attr($menu->id); ?>"/></td>
                                 <td><input name="name" value="<?php echo esc_attr($menu->name); ?>"/></td>
                                 <td><input type="text" name="link_or_content" value="<?php echo esc_attr($link_or_content); ?>"></td>
                                 <td><input class="fontawesomepicker-<?php echo esc_attr($menu->id); ?>" name="icon" value="<?php echo esc_attr($menu->icon); ?>"/></td>
-                                <th><input type="submit" name="save" value="<?php _e("Save", "mihanpanel")?>"/></th>
                                 <th><input class="mihanpanelremove" type="submit" name="delete" value="x"/></th>
                             </tr>
-                        </form>
-                    <?php } ?>
+                    <?php endforeach; ?>
                     </tbody>
                 </table>
                 <h2><?php _e("Create new item", "mihanpanel")?></h2>

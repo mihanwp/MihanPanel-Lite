@@ -31,40 +31,106 @@ jQuery(document).ready(function($){
         handle: ".dashicons-menu"
     });
 
-    function mw_ajax_update_priority(mw_type, fields_data, nonce, mw_this){
+    function mw_ajax_update_fields_data(mw_type, fields_data,mw_nonce, item)
+    {
         $.ajax({
             url: mwp_data.au,
             type: 'post',
             dataType: 'json',
             data: {
-                action: 'update_' + mw_type + '_priority',
+                action: 'mwpl_update_' + mw_type + '_fields_data',
                 fields_data: fields_data,
-                nonce: nonce
+                nonce: mw_nonce
             },
-            success: function(response){
-                let statusClass = response.status === 200 ? 'success' : 'error';
-                mw_show_notice(statusClass, response.msg);
-                mw_this.removeClass('disable');
+            success: function(response)
+            {
+                let msg_type;
+                if(response.status === 200)
+                {
+                    msg_type = 'success';
+                }else{
+                    msg_type = 'error';
+                }
+                mw_show_notice(msg_type, response.msg);
+                item.removeClass('disable');
                 mw_hide_update_confirm_notice();
             }
         });
     }
-
-    $(document).on('click', '.mw_update_priority', function(e){
-        e.preventDefault();
-        let mw_this = $(this);
-        mw_this.addClass('disable');
-        let mw_type = mw_this.data('mw_type'),
-            mwpl_nonce = mw_this.data('mwpl_nonce');
-
-        let field_id = $(document).find(".mw_sortable input[name=id]");
-        let fields_data= [];
-        field_id.each(function(index){
-            let field_id = $(this).val();
-            fields_data.push(field_id);
+    let organize_data_function = [];
+    organize_data_function.tabs = function(field_data){
+        let new_data = [];
+        field_data.each(function(index, value){
+            let item = {},
+                this_value = $(value);
+            item['id'] = this_value.find('input[name=id]').val();
+            item['name'] = this_value.find('input[name=name]').val();
+            item['link_or_content'] = this_value.find('input[name=link_or_content]').val();
+            item['icon'] = this_value.find('input[name=icon]').val();
+            new_data.push(item);
         });
-        mw_ajax_update_priority(mw_type, fields_data, mwpl_nonce, mw_this);
+        return new_data;
+    };
+    organize_data_function.user_field = function(field_data){
+        let new_data = [];
+        field_data.each(function(index, value){
+            let this_value = $(value);
+            let form = this_value.closest('form').serialize();
+            new_data.push(form);
+        });
+        return new_data;
+    };
 
+    $(document).on('click', '.mw_ajax_update_fields_data', function(e){
+        e.preventDefault();
+        let mw_this = $(this),
+            mw_type = mw_this.data('mw_type'),
+            mw_nonce = mw_this.data('mwpl_nonce');
+
+        mw_this.addClass("disable");
+        let field_data = $(document).find('.mw_sortable .mw_field_item');
+        new_data = organize_data_function[mw_type](field_data);
+        mw_ajax_update_fields_data(mw_type, new_data, mw_nonce, mw_this);
+    });
+    $(document).on('click', '.mw_sortable input[name=delete]', function(e){
+        e.preventDefault();
+        let mw_this = $(this),
+            mw_wrapper = mw_this.closest('.mw_fields_wrapper'),
+            mw_type = mw_wrapper.data('mw_type');
+            mw_id = mw_this.closest('.mw_field_item').find('input[name=id]').val(),
+            mw_nonce = mw_wrapper.data('mwpl_nonce');
+        $.ajax({
+            url: mwp_data.au,
+            type: 'post',
+            dataType: 'json',
+            data: {
+                action: 'mw_delete_field_row',
+                type: mw_type,
+                id: mw_id,
+                nonce: mw_nonce
+            },
+            success: function(response){
+                if(response.status == 200)
+                {
+                    mw_this.closest('.mw_field_item').fadeOut('slow');
+                }else{
+                    mw_show_notice('error', response.msg);
+                }
+            },
+        });
+    });
+    $(document).on('input', '.mw_sortable input', function(e){
+        mw_show_update_confirm_notice();
+    });
+    $(document).on('change', '.mw_sortable input[name=icon]', function(e){
+        $(this).trigger('input');
+    })
+    $(document).on('keypress', '.mw_sortable input', function(e){
+        if(e.which == 13)
+        {
+            e.preventDefault();
+            $('.mw_ajax_update_fields_data').trigger('click');
+        }
     });
 });
 
