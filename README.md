@@ -1,7 +1,7 @@
-=== MihanPanel - User Registration And Login ===  
+=== MihanPanel - User Profile, User Registration, Login & Membership Plugin ===  
 Contributors: mihanwp  
 Donate link: https://mihanwp.com/  
-Tags: register,login,profile,registration,user panel,membership  
+Tags: register,login,profile,registration,user panel,membership,signup,panel  
 Requires at least: 4.7  
 Tested up to: 5.5.1  
 Stable tag:   7.2  
@@ -62,6 +62,9 @@ Do you want to report mihanpanel bugs and contribute in plugin development?  Joi
 
 == Changelog ==
 
-= 7.3 =
+= 7.5 =
+Handle modify and delete tabs & user fields with ajax.
+
+= 7.4 =
 
 Lite version released by cloning pro version.
