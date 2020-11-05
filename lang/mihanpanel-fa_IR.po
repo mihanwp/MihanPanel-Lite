@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MihanPanel\n"
-"POT-Creation-Date: 2020-10-05 15:21+0330\n"
-"PO-Revision-Date: 2020-10-05 15:22+0330\n"
+"POT-Creation-Date: 2020-11-05 17:30+0330\n"
+"PO-Revision-Date: 2020-11-05 17:30+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -22,443 +22,435 @@ msgstr ""
 "X-Poedit-SearchPath-1: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
-#: app/emwidg/mwpl_emwidg_mihanpanel.php:27 app/mwpl_hooks.php:147
-msgid "Mihan Panel"
-msgstr "میهن پنل"
+#: app/adapter/woo.php:12
+msgid "Address 2"
+msgstr "آدرس شماره دو"
 
-#: app/form/mwpl_admin_user_fields.php:34 app/form/mwpl_admin_user_fields.php:71
-#: app/form/mwpl_admin_user_fields.php:105 app/form/mwpl_profile.php:37
-#: app/mwpl_ajax.php:22 app/mwpl_ajax.php:37
-msgid "The operation failed due to security issues."
-msgstr "عملیات به دلیل مسائل امنیتی متوقف شد."
-
-#: app/form/mwpl_admin_user_fields.php:51
-msgid "Settings successfully updated!"
-msgstr "تنظیمات با موفقیت به روز شد!"
-
-#: app/form/mwpl_admin_user_fields.php:55 app/form/mwpl_admin_user_fields.php:92
-#: app/form/mwpl_admin_user_fields.php:118 app/form/mwpl_profile.php:63
-#: app/mwpl_admin_menu.php:134 app/mwpl_admin_menu.php:149
-msgid "An error occurred!"
-msgstr "یک خطا رخ داده است!"
-
-#: app/form/mwpl_admin_user_fields.php:61
-msgid "Please fill all the fields"
-msgstr "لطفا تمام زمینه ها را پر کنید"
-
-#: app/form/mwpl_admin_user_fields.php:90
-msgid "Successfully edited!"
-msgstr "با موفقیت ویرایش شد!"
-
-#: app/form/mwpl_admin_user_fields.php:116 app/mwpl_admin_menu.php:147
-msgid "Successfully deleted!"
-msgstr "با موفقیت حذف شد!"
-
-#: app/form/mwpl_admin_user_fields.php:131
-#: app/form/mwpl_admin_user_fields.php:195
-msgid "Field Id"
-msgstr "شناسه فیلد"
-
-#: app/form/mwpl_admin_user_fields.php:132
-#: app/form/mwpl_admin_user_fields.php:196
-msgid "Title"
-msgstr "عنوان"
-
-#: app/form/mwpl_admin_user_fields.php:133
-#: app/form/mwpl_admin_user_fields.php:157
-#: app/form/mwpl_admin_user_fields.php:197
-#: app/form/mwpl_admin_user_fields.php:214 parts/edit-profile.php:82
-msgid "Required"
-msgstr "الزامی"
-
-#: app/form/mwpl_admin_user_fields.php:134
-#: app/form/mwpl_admin_user_fields.php:198
-msgid "Type"
-msgstr "نوع"
-
-#: app/form/mwpl_admin_user_fields.php:158
-#: app/form/mwpl_admin_user_fields.php:215
-msgid "Optional"
-msgstr "اختیاری"
-
-#: app/form/mwpl_admin_user_fields.php:165
-#: app/form/mwpl_admin_user_fields.php:222
-msgid "Pro"
-msgstr "حرفه ای"
-
-#: app/form/mwpl_admin_user_fields.php:172
-#: app/form/mwpl_admin_user_fields.php:229 app/mwpl_admin_menu.php:200
-msgid "Save"
-msgstr "ذخیره"
-
-#: app/form/mwpl_admin_user_fields.php:175
-msgid "Remove"
-msgstr "حذف"
-
-#: app/form/mwpl_profile.php:55
-msgid "Passwords don't match!"
-msgstr "رمزهای عبور یکسان نیست!"
-
-#: app/form/mwpl_profile.php:66 app/mwpl_admin_menu.php:108 app/mwpl_ajax.php:63
-msgid "Successfully updated!"
-msgstr "با موفقیت به روز شد!"
-
-#: app/form/mwpl_profile.php:82
-#, php-format
-msgid "%1$s must not be empty."
-msgstr "%1$s نباید خالی باشد."
-
-#: app/mwpl_admin_menu.php:19
+#: app/admin_menu.php:17
 msgid "MihanPanel"
 msgstr "میهن پنل"
 
-#: app/mwpl_admin_menu.php:27 views/admin/panel-section/general.php:22
+#: app/admin_menu.php:25 views/admin/panel-section/general.php:22
 msgid "Login & Register"
 msgstr "ورود و عضویت"
 
-#: app/mwpl_admin_menu.php:28 app/mwpl_hooks.php:130
+#: app/admin_menu.php:26 app/hooks.php:137
 msgid "User Panel"
 msgstr "پنل کاربری"
 
-#: app/mwpl_admin_menu.php:29
-msgid "Registeration Form"
+#: app/admin_menu.php:27 views/admin/panel-section/register.php:2
+msgid "Register Form"
 msgstr "فرم ثبت نام"
 
-#: app/mwpl_admin_menu.php:30 views/admin/panel-section/notification.php:2
+#: app/admin_menu.php:28 views/admin/panel-section/notification.php:2
 msgid "Notifications"
 msgstr "اطلاعیه ها"
 
-#: app/mwpl_admin_menu.php:31
+#: app/admin_menu.php:29 app/pro_version_detail.php:9
 msgid "Login with SMS"
 msgstr "ورود با SMS"
 
-#: app/mwpl_admin_menu.php:32
+#: app/admin_menu.php:30
 msgid "Emails"
 msgstr "ایمیل‌های ارسالی"
 
-#: app/mwpl_admin_menu.php:39
+#: app/admin_menu.php:37
 msgid "User Fields"
 msgstr "فیلدهای کاربری"
 
-#: app/mwpl_admin_menu.php:53 app/mwpl_admin_menu.php:157
-msgid "Priorities was changed! Save changes?"
-msgstr "اولویت ها تغییر پیدا کرده است! ذخیره شود؟"
+#: app/admin_menu.php:54 app/admin_menu.php:108
+msgid "Do you want to save changes?"
+msgstr "میخواهید تغییرات ذخیره شود؟"
 
-#: app/mwpl_admin_menu.php:54
+#: app/admin_menu.php:55
 msgid "Yes"
 msgstr "بله"
 
-#: app/mwpl_admin_menu.php:59
+#: app/admin_menu.php:62
 msgid "Create new field"
 msgstr "ایجاد فیلد جدید"
 
-#: app/mwpl_admin_menu.php:68
-msgid "Social Login"
-msgstr "ورود با شبکه های اجتماعی"
-
-#: app/mwpl_admin_menu.php:76
-msgid ""
-"For using Social login just use \"Nextend Social Login\" plugin with Mihan "
-"Panel plugin."
-msgstr ""
-"برای استفاده از ورود با شبکه های اجتماعی کافیست از پلاگین \"Nextend Social "
-"Login\" در کنار پلاگین میهن پنل استفاده کنید."
-
-#: app/mwpl_admin_menu.php:77
-msgid "Click for installing"
-msgstr "برای نصب کلیک کنید"
-
-#: app/mwpl_admin_menu.php:83
+#: app/admin_menu.php:73
 msgid "Panel Menus"
-msgstr "مدیریت منوها"
+msgstr "منوهای پنل کاربری"
 
-#: app/mwpl_admin_menu.php:110
-msgid "No any data saved!"
-msgstr "هیچ داده ای ذخیره نشد!"
-
-#: app/mwpl_admin_menu.php:118
-msgid "Pro version"
-msgstr "نسخه‌ی حرفه‌ای"
-
-#: app/mwpl_admin_menu.php:119
-#, php-format
-msgid ""
-"Max item count is 4 in lite version. Upgrade to %s for disable this "
-"restriction."
-msgstr ""
-"در نسخه‌ی لایت حداکثر میتوانید از ۴ آیتم استفاده کنید. برای از بین بردن این "
-"محدودیت میتوانید از %s استفاده نمایید."
-
-#: app/mwpl_admin_menu.php:132
+#: app/admin_menu.php:97
 msgid "Successfully added! Watch user panel"
 msgstr "با موفقیت اضافه شد! میتونید پنل کاربری رو ببینید"
 
-#: app/mwpl_admin_menu.php:158
+#: app/admin_menu.php:99 app/form/admin_user_fields.php:50
+#: app/form/profile.php:62
+msgid "An error occurred!"
+msgstr "یک خطا رخ داده است!"
+
+#: app/admin_menu.php:109
 msgid "yes"
 msgstr "بله"
 
-#: app/mwpl_admin_menu.php:166
+#: app/admin_menu.php:117
 msgid "Menu title"
 msgstr "عنوان منو"
 
-#: app/mwpl_admin_menu.php:167
+#: app/admin_menu.php:118
 msgid "Link / Shortcode"
 msgstr "لینک / کد کوتاه"
 
-#: app/mwpl_admin_menu.php:168 app/mwpl_admin_menu.php:214
-#: app/mwpl_admin_menu.php:252
+#: app/admin_menu.php:119 app/admin_menu.php:161 app/admin_menu.php:199
 msgid "Icon"
 msgstr "آیکون"
 
-#: app/mwpl_admin_menu.php:168 app/mwpl_admin_menu.php:214
-msgid "List"
-msgstr "لیست"
-
-#: app/mwpl_admin_menu.php:207
+#: app/admin_menu.php:154
 msgid "Create new item"
 msgstr "ایجاد مورد جدید"
 
-#: app/mwpl_admin_menu.php:212 app/mwpl_admin_menu.php:218
+#: app/admin_menu.php:159 app/admin_menu.php:165
 msgid "Menu Title"
 msgstr "عنوان منو"
 
-#: app/mwpl_admin_menu.php:213
+#: app/admin_menu.php:160
 msgid "Content"
 msgstr "محتوا"
 
-#: app/mwpl_admin_menu.php:221
+#: app/admin_menu.php:168
 msgid "Choose"
 msgstr "انتخاب"
 
-#: app/mwpl_admin_menu.php:222
+#: app/admin_menu.php:169
 msgid "Link to other page"
 msgstr "پیوند به صفحه دیگر"
 
-#: app/mwpl_admin_menu.php:223
+#: app/admin_menu.php:170
 msgid "Shortcode"
 msgstr "کد کوتاه"
 
-#: app/mwpl_ajax.php:63
-msgid "Nothing updated."
-msgstr "چیزی به روز رسانی نشد."
+#: app/ajax.php:17 app/ajax.php:72 app/ajax.php:99
+msgid "Has error!"
+msgstr "خطا!"
 
-#: app/mwpl_config.php:80
+#: app/ajax.php:22 app/ajax.php:83 app/ajax.php:104
+#: app/form/admin_user_fields.php:24 app/form/profile.php:36
+msgid "The operation failed due to security issues."
+msgstr "عملیات به دلیل مشکلات امنیتی متوقف شد."
+
+#: app/ajax.php:63 app/ajax.php:145 app/form/profile.php:65
+msgid "Successfully updated!"
+msgstr "با موفقیت به روز شد!"
+
+#: app/ajax.php:63 app/ajax.php:145
+msgid "Nothing updated."
+msgstr "چیزی آپدیت نشد."
+
+#: app/ajax.php:92
+msgid "Successfully deleted!"
+msgstr "با موفقیت حذف شد!"
+
+#: app/ajax.php:92
+msgid "Could not be deleted."
+msgstr "حذف نشد."
+
+#: app/config.php:79
 msgid "Woocommerce Download Products"
 msgstr "دانلود محصولات"
 
-#: app/mwpl_config.php:89
-msgid "Download products update"
-msgstr "دانلود آپدیت محصولات"
+#: app/config.php:88
+msgid "My Purchases"
+msgstr "فایل های خریداری شده"
 
-#: app/mwpl_config.php:136
+#: app/config.php:97
+msgid "Support Telegram"
+msgstr "پشتیبانی تلگرامی"
+
+#: app/config.php:145
 msgid "You need to install easy digital downloads plugin for using this section!"
 msgstr ""
 "برای استفاده از این بخش ابتدا باید افزونه ی \"easy digital downloads\" را نصب "
 "کنید!"
 
-#: app/mwpl_config.php:166
+#: app/config.php:208
 msgid "Registration complete. Your account has been activated automatically."
 msgstr "نام نویسی انجام شد. اکانت شما به صورت خودکار فعال شده است."
 
-#: app/mwpl_config.php:169 app/mwpl_email.php:88
+#: app/config.php:211 app/email.php:86
 msgid "Registration complete. Please wait for admin approval."
-msgstr "اکانت شما غیرفعال است. لطفا منتظر تایید مدیریت سایت باشید."
+msgstr "نام نویسی انجام شد. لطفا منتظر تایید مدیریت سایت باشید."
 
-#: app/mwpl_config.php:173
+#: app/config.php:215
 msgid "Login Page"
 msgstr "برگه ورود"
 
-#: app/mwpl_config.php:199
+#: app/config.php:231
 msgid "Your account is disable! Please wait for admin approval."
 msgstr "اکانت شما غیرفعال است. لطفا منتظر تایید مدیریت سایت باشید."
 
-#: app/mwpl_config.php:201
+#: app/config.php:233 views/user/inactive_account.php:8
 msgid "Your account is disable!"
 msgstr "اکانت شما غیرفعال است!"
 
-#: app/mwpl_config.php:209
+#: app/config.php:241
 msgid "Your Account successfully activated!"
 msgstr "اکانت شما با موفقیت فعال شد!"
 
-#: app/mwpl_config.php:212
+#: app/config.php:244
 msgid "Request is invalid!"
 msgstr "درخواست شما نامعتبر است!"
 
-#: app/mwpl_email.php:71
+#: app/email.php:69
 msgid "Account activation"
-msgstr "فعالسازی اکانت"
+msgstr "فعالسازی حساب کاربری"
 
-#: app/mwpl_email.php:73
+#: app/email.php:71
 msgid "Click on below link to activate account"
-msgstr "برای فعالسازی اکانت، روی لینک زیر کلیک کنید"
+msgstr "برای فعاسازی اکانت روی لینک زیر کلیک کنید"
 
-#: app/mwpl_email.php:87 app/mwpl_email.php:112
+#: app/email.php:85 app/email.php:110
 msgid "Registration complete."
-msgstr "ثبت نام انجام شد."
+msgstr "ثبت نام تکمیل شد."
 
-#: app/mwpl_email.php:88 app/mwpl_email.php:112
+#: app/email.php:86 app/email.php:110
 msgid "Thanks!"
-msgstr "سپاسگذاریم!"
+msgstr "ممنون!"
 
 #. translators: Login details notification email subject. %s: Site title
-#: app/mwpl_email.php:94 app/mwpl_email.php:118
+#: app/email.php:92 app/email.php:116
 #, php-format
 msgid "[%s] Login Details"
 msgstr "[%s] اطلاعات ورود"
 
-#: app/mwpl_email.php:140
+#: app/email.php:138
 #, php-format
 msgid "[%s] Change Account Status"
 msgstr "[%s] تغییر وضعیت اکانت"
 
-#: app/mwpl_email.php:144
+#: app/email.php:142
 msgid "Unknown"
 msgstr "ناشناخته"
 
-#: app/mwpl_email.php:149 app/mwpl_users.php:106 app/mwpl_users.php:123
+#: app/email.php:147 app/users.php:104 app/users.php:121
 msgid "Active"
 msgstr "فعال"
 
-#: app/mwpl_email.php:153 app/mwpl_users.php:106 app/mwpl_users.php:123
+#: app/email.php:151 app/users.php:104 app/users.php:121
 msgid "Inactive"
 msgstr "غیرفعال"
 
-#: app/mwpl_options.php:14
+#: app/emwidg/emwidg_mihanpanel.php:26 app/hooks.php:157
+msgid "Mihan Panel"
+msgstr "میهن پنل"
+
+#: app/form/admin_user_fields.php:46
+msgid "Settings successfully updated!"
+msgstr "تنظیمات با موفقیت به روز شد!"
+
+#: app/form/admin_user_fields.php:56
+msgid "Please fill all the fields"
+msgstr "لطفا تمام زمینه ها را پر کنید"
+
+#: app/form/admin_user_fields.php:69 app/form/admin_user_fields.php:121
+msgid "Field Id"
+msgstr "شناسه فیلد"
+
+#: app/form/admin_user_fields.php:70 app/form/admin_user_fields.php:122
+msgid "Title"
+msgstr "عنوان"
+
+#: app/form/admin_user_fields.php:71 app/form/admin_user_fields.php:94
+#: app/form/admin_user_fields.php:123 app/form/admin_user_fields.php:140
+#: parts/edit-profile.php:91
+msgid "Required"
+msgstr "الزامی"
+
+#: app/form/admin_user_fields.php:72 app/form/admin_user_fields.php:124
+msgid "Type"
+msgstr "نوع"
+
+#: app/form/admin_user_fields.php:95 app/form/admin_user_fields.php:141
+msgid "Optional"
+msgstr "اختیاری"
+
+#: app/form/admin_user_fields.php:148
+msgid "Save"
+msgstr "ذخیره"
+
+#: app/form/profile.php:54
+msgid "Passwords don't match!"
+msgstr "رمزهای عبور یکسان نیست!"
+
+#: app/form/profile.php:82
+#, php-format
+msgid "%1$s must not be empty."
+msgstr "%1$s نباید خالی باشد."
+
+#: app/handle_view.php:172
+msgid "You are our user"
+msgstr "سابقه عضویت شما"
+
+#: app/handle_view.php:184
+#, php-format
+msgid "%d Day"
+msgstr "%d روز"
+
+#: app/handle_view.php:200
+msgid "Your Comments"
+msgstr "نظرات شما"
+
+#: app/handle_view.php:224
+msgid "Purchased files"
+msgstr "فایل های خریداری شده"
+
+#: app/handle_view.php:258
+msgid "Your purchase count"
+msgstr "تعداد خرید شما"
+
+#: app/handle_view.php:275
+msgid "Your tickets"
+msgstr "تیکت های شما"
+
+#: app/handle_view.php:308 app/middlewares.php:68
+msgid "Pro Version"
+msgstr "نسخه‌ی حرفه‌ای"
+
+#: app/handle_view.php:456
+msgid "Auto confirm phone number after user register"
+msgstr "فعالسازی شماره تلفن بعد از ثبت نام به صورت اتوماتیک"
+
+#: app/handle_view.php:460
+msgid "User can change phone number"
+msgstr "کاربر میتواند شماره تلفن را تغییر دهد"
+
+#: app/middlewares.php:69
+#, php-format
+msgid ""
+"Max item count is 4 in lite version. Upgrade to %s for disable this "
+"restriction."
+msgstr ""
+"حداکثر تعداد مجاز در نسخه‌ی لایت ۴ است. برای از بین بردن این محدودیت پلاگین را "
+"به %s ارتقا دهید."
+
+#: app/options.php:12
 msgid "Automatic activation"
 msgstr "فعالسازی اتوماتیک"
 
-#: app/mwpl_options.php:15
+#: app/options.php:13
 msgid "Send Activation Link"
 msgstr "ارسال لینک فعالسازی"
 
-#: app/mwpl_options.php:16
+#: app/options.php:14
 msgid "Manual Activation"
 msgstr "فعالسازی دستی"
 
-#: app/mwpl_panel.php:26
+#: app/panel.php:25
 msgid "Order Details"
 msgstr "اطلاعات سفارش"
 
-#: app/mwpl_shortcode.php:22
+#: app/pro_version_detail.php:8
+msgid "Wordpress Password Mode"
+msgstr "پسورد وردپرس"
+
+#: app/pro_version_detail.php:10
+msgid "Both"
+msgstr "هردو"
+
+#: app/shortcode.php:20
 msgid "Please install Woocommerce plugin."
 msgstr "لطفا افزونه Woocommerce را نصب کنید."
 
-#: app/mwpl_shortcode.php:28
+#: app/shortcode.php:27
 msgid "You need to install woocommerce for use this section!"
 msgstr "برای استفاده از این بخش ابتدا باید Woocommerce را نصب کنید!"
 
-#: app/mwpl_shortcode.php:40
+#: app/shortcode.php:39
 msgid "Go shop"
 msgstr "برو به فروشگاه"
 
-#: app/mwpl_shortcode.php:42
+#: app/shortcode.php:41
 msgid "No downloads available yet."
 msgstr "هیچ دانلودی در دسترس نیست."
 
-#: app/mwpl_shortcode.php:54
+#: app/shortcode.php:53
 msgid "Open Menu"
 msgstr "باز کردن منو"
 
-#: app/mwpl_shortcode.php:97
+#: app/shortcode.php:78
 msgid "Please login to your account"
 msgstr "لطفا وارد حساب کاربری خود شوید"
 
-#: app/mwpl_sundry.php:12 views/admin/panel-section/general.php:25
-#: views/admin/panel-section/general.php:54
-#: views/admin/panel-section/login_with_sms.php:5
-#: views/admin/panel-section/login_with_sms.php:11
-#: views/admin/panel-section/login_with_sms.php:15
-#: views/admin/panel-section/login_with_sms.php:21
-#: views/admin/panel-section/login_with_sms.php:25
-#: views/admin/panel-section/login_with_sms.php:29
-#: views/admin/panel-section/login_with_sms.php:40
-#: views/admin/panel-section/panel.php:14 views/admin/panel-section/panel.php:44
-#: views/admin/panel-section/panel.php:60 views/admin/panel-section/panel.php:64
-#: views/admin/panel-section/panel.php:69 views/admin/panel-section/panel.php:73
-#: views/admin/panel-section/panel.php:77 views/admin/panel-section/panel.php:81
-#: views/admin/panel-section/panel.php:85 views/admin/panel-section/panel.php:89
-#: views/admin/panel-section/register.php:9
-#: views/admin/panel-section/register.php:20
-msgid "Pro Version"
-msgstr "نسخه حرفه‌ای"
-
-#: app/mwpl_sundry.php:17 app/widget/mwpl_profile.php:65
+#: app/sundry.php:10 app/widget/profile.php:68
 msgid "Login"
 msgstr "ورود"
 
-#: app/mwpl_sundry.php:49
+#: app/sundry.php:42
 msgid "Password"
 msgstr "رمز عبور"
 
-#: app/mwpl_sundry.php:57
+#: app/sundry.php:50
 msgid "Password must not empty"
 msgstr "کلمه عبور نباید خالی باشد"
 
-#: app/mwpl_sundry.php:138
+#: app/sundry.php:150
 msgid " Should not be empty!"
 msgstr " نباید خالی باشد!"
 
-#: app/mwpl_user_fields.php:10
+#: app/user_fields.php:11
 msgid "Text input"
 msgstr "متن ساده"
 
-#: app/mwpl_user_fields.php:11
+#: app/user_fields.php:15
 msgid "Textarea"
 msgstr "باکس متنی"
 
-#: app/mwpl_user_fields.php:12
+#: app/user_fields.php:19
 msgid "Email"
 msgstr "ایمیل"
 
-#: app/mwpl_user_fields.php:13
+#: app/user_fields.php:23
 msgid "Numeral"
 msgstr "عددی"
 
-#: app/mwpl_user_fields.php:14
+#: app/user_fields.php:27
 msgid "Checkbox"
 msgstr "چک باکس"
 
-#: app/mwpl_user_fields.php:15
+#: app/user_fields.php:31
 msgid "Selectbox"
 msgstr "باکس انتخاب"
 
-#: app/mwpl_user_fields.php:16
+#: app/user_fields.php:35
 msgid "Radio Button"
 msgstr "دکمه رادیویی"
 
-#: app/mwpl_user_fields.php:17
+#: app/user_fields.php:39
 msgid "Date Picker"
 msgstr "گیرنده‌ی تاریخ"
 
-#: app/mwpl_user_fields.php:18
+#: app/user_fields.php:43
 msgid "File Uploader"
 msgstr "آپلود کننده‌ی فایل"
 
-#: app/mwpl_users.php:90
+#: app/users.php:88
 msgid "Status"
 msgstr "وضعیت"
 
-#: app/widget/mwpl_profile.php:10
+#: app/widget/profile.php:8
 msgid "User Profile - Mihanpanel"
 msgstr "پروفایل کاربری - میهن پنل"
 
-#: app/widget/mwpl_profile.php:11
+#: app/widget/profile.php:9
 msgid "Show User Profile"
 msgstr "نمایش پروفایل کاربری"
 
-#: app/widget/mwpl_profile.php:33 parts/sidebar.php:17
+#: app/widget/profile.php:36 parts/sidebar.php:16
 msgid "User Dashboard"
 msgstr "داشبورد کاربری"
 
-#: app/widget/mwpl_profile.php:39 parts/sidebar.php:24
+#: app/widget/profile.php:42 parts/sidebar.php:22
 msgid "Edit Profile"
 msgstr "ویرایش پروفایل"
 
-#: app/widget/mwpl_profile.php:58 parts/sidebar.php:45
+#: app/widget/profile.php:61 parts/sidebar.php:43
 msgid "Logout"
 msgstr "خروج"
 
-#: app/widget/mwpl_profile.php:71
+#: app/widget/profile.php:74
 msgid "Register"
 msgstr "ثبت نام"
 
@@ -471,37 +463,12 @@ msgstr "بازگشت به صفحه اصلی"
 msgid "Howdy, %1$s!"
 msgstr "سلام  %1$s!"
 
-#: parts/dashboard.php:22
-msgid "You are our user"
-msgstr "سابقه عضویت شما"
-
-#: parts/dashboard.php:34
-#, php-format
-msgid "%d Day"
-msgstr "%d روز"
-
-#: parts/dashboard.php:46
-msgid "Your Comments"
-msgstr "نظرات شما"
-
-#: parts/dashboard.php:67
-msgid "Purchased files"
-msgstr "فایل های خریداری شده"
-
-#: parts/dashboard.php:98
-msgid "Your purchase count"
-msgstr "تعداد خرید شما"
-
-#: parts/dashboard.php:112
-msgid "Your tickets"
-msgstr "تیکت های شما"
-
-#: parts/dashboard.php:135
+#: parts/dashboard.php:26
 #, php-format
 msgid "%1$s off code for your next purchase"
 msgstr "کد تخفیف %1$s برای خرید بعدی شما"
 
-#: parts/dashboard.php:138
+#: parts/dashboard.php:29
 #, php-format
 msgid "Off code: %1$s"
 msgstr "کد تخفیف: %1$s"
@@ -510,70 +477,42 @@ msgstr "کد تخفیف: %1$s"
 msgid "Edit User Profile"
 msgstr "ویرایش پروفایل کاربری"
 
-#: parts/edit-profile.php:33 views/admin/panel-section/email.php:41
-#: views/admin/panel-section/email.php:68
+#: parts/edit-profile.php:41 views/admin/panel-section/email.php:40
+#: views/admin/panel-section/email.php:60
 msgid "First Name"
 msgstr "نام"
 
-#: parts/edit-profile.php:41 views/admin/panel-section/email.php:42
-#: views/admin/panel-section/email.php:69
+#: parts/edit-profile.php:49 views/admin/panel-section/email.php:41
+#: views/admin/panel-section/email.php:61
 msgid "Last Name"
 msgstr "نام خانوادگی"
 
-#: parts/edit-profile.php:50
+#: parts/edit-profile.php:58
 msgid "New password"
 msgstr "رمز عبور جدید"
 
-#: parts/edit-profile.php:56
+#: parts/edit-profile.php:64
 msgid "Password repeat"
 msgstr "تکرار رمز عبور"
 
-#: parts/edit-profile.php:64
+#: parts/edit-profile.php:73
 msgid "Bio"
 msgstr "بیوگرافی"
 
-#: parts/edit-profile.php:95
-msgid "Email Address"
-msgstr "آدرس ایمیل"
-
-#: parts/edit-profile.php:105
-msgid "Company Name"
-msgstr "نام شرکت"
-
-#: parts/edit-profile.php:117
-msgid "Address 1"
-msgstr "آدرس شماره یک"
-
-#: parts/edit-profile.php:126
-msgid "Address 2"
-msgstr "آدرس شماره دو"
-
-#: parts/edit-profile.php:137
-msgid "City"
-msgstr "شهر"
-
-#: parts/edit-profile.php:147
-msgid "Zip Code"
-msgstr "کد پستی"
-
-#: parts/edit-profile.php:159
-msgid "Phone"
-msgstr "تلفن"
-
-#: parts/edit-profile.php:170
+#: parts/edit-profile.php:102
 msgid "Save Changes"
 msgstr "ذخیره تغییرات"
 
-#: rename-wp-login.php:79
+#: rename-wp-login.php:319
 #, php-format
 msgid "Please upgrade to the latest version of WordPress to activate %s."
 msgstr "لطفا برای فعالسازی وردپرس خود را به روز رسانی کنید %s."
 
-#: rename-wp-login.php:79 rename-wp-login.php:103
+#: rename-wp-login.php:319 rename-wp-login.php:415
 msgid "Rename wp-login.php"
 msgstr "تغییر نام wp-login.php"
 
-#: rename-wp-login.php:104
+#: rename-wp-login.php:418
 msgid ""
 "This option allows you to set a networkwide default, which can be overridden "
 "by individual sites. Simply go to to the site’s permalink settings to change "
@@ -583,40 +522,40 @@ msgstr ""
 "توسط سایت های مختلف قابل لغو است. برای تغییر آدرس، به سادگی به تنظیمات سایت "
 "بروید."
 
-#: rename-wp-login.php:107
+#: rename-wp-login.php:427
 msgid "Networkwide default"
 msgstr "پیش فرض شبکه گسترده"
 
-#: rename-wp-login.php:126
-msgid "Change login url. (Please set your permalinks to the post name.)"
+#: rename-wp-login.php:496
+msgid "Change login url. Please set the Settings > Permalink to the post name."
 msgstr ""
 "تغییر url صفحه ی ورود. لطفا از بخش تنظیمات > پیوند های یکتا را روی نام نوشته "
 "قرار دهید."
 
-#: rename-wp-login.php:132
+#: rename-wp-login.php:517
 msgid "Login page address"
 msgstr "آدرس صفحه ی ورود"
 
-#: rename-wp-login.php:164
+#: rename-wp-login.php:634
 #, php-format
 msgid "To set a networkwide default, go to %s."
 msgstr "برای تنظیم یک پیش فرض شبکه گسترده ، به %s بروید."
 
-#: rename-wp-login.php:164
+#: rename-wp-login.php:634
 msgid "Network Settings"
 msgstr "تنظیمات شبکه"
 
-#: rename-wp-login.php:178
+#: rename-wp-login.php:688
 #, php-format
 msgid "Your login page is now here: %s. Bookmark this page!"
 msgstr ""
 "صفحه ی ورود شما در اینجاست: %s. میتوانید آن را به بوکمارک خود اضافه کنید!"
 
-#: rename-wp-login.php:183 rename-wp-login.php:185
+#: rename-wp-login.php:706 rename-wp-login.php:712
 msgid "Settings"
 msgstr "تنظیمات"
 
-#: rename-wp-login.php:198
+#: rename-wp-login.php:763
 msgid "This feature is not enabled."
 msgstr "این ویژگی در دسترس نیست."
 
@@ -648,115 +587,109 @@ msgstr "ایمیل خوش آمد گویی"
 msgid "Text of email that send to new user"
 msgstr "متن ایمیلی که به کاربر جدید ارسال می شود"
 
-#: views/admin/panel-section/email.php:10 views/admin/panel-section/email.php:33
-#: views/admin/panel-section/email.php:59
+#: views/admin/panel-section/email.php:10 views/admin/panel-section/email.php:32
+#: views/admin/panel-section/email.php:52
 msgid "Email Content"
 msgstr "متن ایمیل"
 
-#: views/admin/panel-section/email.php:19 views/admin/panel-section/email.php:37
-#: views/admin/panel-section/email.php:64
-#: views/admin/panel-section/login_with_sms.php:30
-#: views/admin/panel-section/login_with_sms.php:41
+#: views/admin/panel-section/email.php:19 views/admin/panel-section/email.php:36
+#: views/admin/panel-section/email.php:56
 msgid "You can use this:"
 msgstr "شما می توانید از این موارد استفاده کنید:"
 
-#: views/admin/panel-section/email.php:21 views/admin/panel-section/email.php:40
-#: views/admin/panel-section/email.php:67
-#: views/admin/panel-section/login_with_sms.php:32
-#: views/admin/panel-section/login_with_sms.php:43
+#: views/admin/panel-section/email.php:21 views/admin/panel-section/email.php:39
+#: views/admin/panel-section/email.php:59
 msgid "Username"
 msgstr "نام کاربری"
 
-#: views/admin/panel-section/email.php:22 views/admin/panel-section/email.php:43
-#: views/admin/panel-section/email.php:70
-#: views/admin/panel-section/login_with_sms.php:33
-#: views/admin/panel-section/login_with_sms.php:44
+#: views/admin/panel-section/email.php:22 views/admin/panel-section/email.php:42
+#: views/admin/panel-section/email.php:62
 msgid "Display Name"
 msgstr "نام نمایشی"
 
-#: views/admin/panel-section/email.php:26
+#: views/admin/panel-section/email.php:25
 msgid "Reset Password Email"
 msgstr "ایمیل بازگردانی رمز عبور"
 
-#: views/admin/panel-section/email.php:27
+#: views/admin/panel-section/email.php:26
 msgid "Subject and Text of reset password email"
 msgstr "موضوع و متن ایمیل بازیابی رمز عبور"
 
-#: views/admin/panel-section/email.php:29
+#: views/admin/panel-section/email.php:28
 msgid "Reset password email subject"
 msgstr "موضوع ایمیل بازیابی رمز عبور"
 
-#: views/admin/panel-section/email.php:39
+#: views/admin/panel-section/email.php:38
 msgid "Activation Link"
 msgstr "لینک فعالسازی"
 
-#: views/admin/panel-section/email.php:47
-msgid "Change Account Status Email"
-msgstr "ایمیل تغییر وضعیت حساب"
+#: views/admin/panel-section/email.php:45
+msgid "Change Accoutn Status Email"
+msgstr "ایمیل تغییر وضعیت اکانت"
 
-#: views/admin/panel-section/email.php:48
+#: views/admin/panel-section/email.php:46
 msgid "Subject and Text of change account status email"
 msgstr "موضوع و متن ایمیل تغییر وضعیت اکانت کاربری"
 
-#: views/admin/panel-section/email.php:52
+#: views/admin/panel-section/email.php:48
 msgid "Change account status email subject"
 msgstr "عنوان ایمیل تغییر وضعیت اکانت کاربری"
 
-#: views/admin/panel-section/email.php:66
+#: views/admin/panel-section/email.php:58
 msgid "Account Status"
 msgstr "وضعیت اکانت"
 
 #: views/admin/panel-section/general.php:8
-msgid "User activation process"
-msgstr "روند فعالسازی حساب کاربری"
+msgid "Activation process"
+msgstr "روند فعالسازی"
 
 #: views/admin/panel-section/general.php:24
 msgid "Login Form Theme"
 msgstr "تم فرم ورود"
 
-#: views/admin/panel-section/general.php:26
+#: views/admin/panel-section/general.php:27
 msgid "Login and Register form theme"
 msgstr "تم فرم ورود و عضویت"
 
-#: views/admin/panel-section/general.php:29
+#: views/admin/panel-section/general.php:30
 msgid "Login Button Color"
 msgstr "رنگ دکمه ورود"
 
-#: views/admin/panel-section/general.php:31
+#: views/admin/panel-section/general.php:32
 msgid "Color of Login and Register button"
 msgstr "پس زمینه دکمه ورود و ثبت‌نام"
 
-#: views/admin/panel-section/general.php:34
+#: views/admin/panel-section/general.php:35
 msgid "Login and Register form Logo"
 msgstr "لوگوی فرم ورود و عضویت"
 
-#: views/admin/panel-section/general.php:36
-#: views/admin/panel-section/general.php:50
+#: views/admin/panel-section/general.php:37
+#: views/admin/panel-section/general.php:51
 msgid "Upload Image"
 msgstr "آپلود تصویر"
 
-#: views/admin/panel-section/general.php:37
+#: views/admin/panel-section/general.php:38
 msgid "We suggest to use 120 * 120 px for logo size."
 msgstr ""
 "ما پیشنهاد می کنیم از سایز ۱۲۰ * ۱۲۰ (پیکسل) برای اندازه لوگو  استفاده کنید."
 
-#: views/admin/panel-section/general.php:40
+#: views/admin/panel-section/general.php:41
 msgid "Logo Width (px)"
 msgstr "پهنای لوگو ( به پیکسل )"
 
-#: views/admin/panel-section/general.php:44
+#: views/admin/panel-section/general.php:45
 msgid "Logo Height (px)"
 msgstr "ارتفاع لوگو ( به پیکسل )"
 
-#: views/admin/panel-section/general.php:48
+#: views/admin/panel-section/general.php:49
 msgid "Login and Register form background"
 msgstr "پس زمینه فرم ورود و ثبت نام"
 
-#: views/admin/panel-section/general.php:53
+#: views/admin/panel-section/general.php:54
 msgid "Redirect non Admin user to"
 msgstr "تغییر مسیر کاربر غیر مدیر به"
 
-#: views/admin/panel-section/general.php:55
+#: views/admin/panel-section/general.php:56
 msgid ""
 "Users who don't have admin or author caps, redirect to this address after "
 "login (with http or https)"
@@ -764,96 +697,83 @@ msgstr ""
 "کاربرانی که دارای دسترسی مدیر یا نویسنده نیستند، پس از ورود ، به این نشانی "
 "هدایت می شوند (با http یا https)"
 
-#: views/admin/panel-section/login_with_sms.php:3
+#: views/admin/panel-section/login_with_sms.php:6
 msgid "Password Type"
 msgstr "نوع پسورد"
 
-#: views/admin/panel-section/login_with_sms.php:7
+#: views/admin/panel-section/login_with_sms.php:8
 msgid "User Phone"
 msgstr "موبایل کاربر"
 
 #: views/admin/panel-section/login_with_sms.php:10
-msgid "Auto confirm phone number after user register"
-msgstr "فعالسازی شماره تلفن بعد از ثبت نام به صورت اتوماتیک"
-
-#: views/admin/panel-section/login_with_sms.php:14
-msgid "User can change phone number"
-msgstr "کاربر میتواند شماره تلفن را تغییر دهد"
-
-#: views/admin/panel-section/login_with_sms.php:18
 msgid "SMS Provider Settings"
 msgstr "تنظیمات ارائه دهنده ی SMS"
 
-#: views/admin/panel-section/login_with_sms.php:20
+#: views/admin/panel-section/login_with_sms.php:12
 msgid "Select Provider"
 msgstr "ارائه دهنده را انتخاب کنید"
 
-#: views/admin/panel-section/login_with_sms.php:22
+#: views/admin/panel-section/login_with_sms.php:14
 msgid ""
-"If your sms service provider not exists in this list, ask them to provide you "
+"If your sms service provider not exists in this list, ask theme to provide you "
 "with the relevant plugin."
 msgstr ""
 "اگر ارائه دهنده ی مورد نظر شما در این لیست موجود نیست، از آن ها بخواهید تا "
 "پلاگین مربوط به این بخش را در اختیار شما قرار دهند."
 
-#: views/admin/panel-section/login_with_sms.php:22
+#: views/admin/panel-section/login_with_sms.php:14
 msgid "According to this documents"
 msgstr "بر اساس این مستندات"
 
-#: views/admin/panel-section/login_with_sms.php:28
+#: views/admin/panel-section/login_with_sms.php:20
 msgid "Mobile validation code sms content"
 msgstr "محتوای SMS فعالسازی موبایل"
 
-#: views/admin/panel-section/login_with_sms.php:34
-#: views/admin/panel-section/login_with_sms.php:45
-msgid "Activation Code"
-msgstr "کد فعالسازی"
-
-#: views/admin/panel-section/login_with_sms.php:39
+#: views/admin/panel-section/login_with_sms.php:24
 msgid "Dynamic login code sms content"
 msgstr "محتوای SMS کد پویا"
 
-#: views/admin/panel-section/notification.php:10
+#: views/admin/panel-section/notification.php:9
 msgid "Notification 1"
 msgstr "اطلاعیه ی شماره 1"
 
-#: views/admin/panel-section/notification.php:14
-#: views/admin/panel-section/notification.php:24
-#: views/admin/panel-section/notification.php:34
-#: views/admin/panel-section/notification.php:44
-#: views/admin/panel-section/notification.php:54
-#: views/admin/panel-section/notification.php:64
-#: views/admin/panel-section/notification.php:74
-#: views/admin/panel-section/notification.php:84
+#: views/admin/panel-section/notification.php:11
+#: views/admin/panel-section/notification.php:16
+#: views/admin/panel-section/notification.php:21
+#: views/admin/panel-section/notification.php:26
+#: views/admin/panel-section/notification.php:31
+#: views/admin/panel-section/notification.php:36
+#: views/admin/panel-section/notification.php:41
+#: views/admin/panel-section/notification.php:46
 msgid "Create a notification to show to your users in their dashboard."
 msgstr ""
 "یک اطلاعیه بنویسید تا در پنل کاربری برای همه ی کاربران سایت به نمایش درآید."
 
-#: views/admin/panel-section/notification.php:20
+#: views/admin/panel-section/notification.php:14
 msgid "Notification 2"
 msgstr "اطلاعیه ی شماره 2"
 
-#: views/admin/panel-section/notification.php:30
+#: views/admin/panel-section/notification.php:19
 msgid "Notification 3"
 msgstr "اطلاعیه ی شماره 3"
 
-#: views/admin/panel-section/notification.php:40
+#: views/admin/panel-section/notification.php:24
 msgid "Notification 4"
 msgstr "اطلاعیه شماره 4"
 
-#: views/admin/panel-section/notification.php:50
+#: views/admin/panel-section/notification.php:29
 msgid "Notification 5"
 msgstr "اطلاعیه شماره 5"
 
-#: views/admin/panel-section/notification.php:60
+#: views/admin/panel-section/notification.php:34
 msgid "Notification 6"
 msgstr "اطلاعیه شماره 6"
 
-#: views/admin/panel-section/notification.php:70
+#: views/admin/panel-section/notification.php:39
 msgid "Notification 7"
 msgstr "اطلاعیه شماره 7"
 
-#: views/admin/panel-section/notification.php:80
+#: views/admin/panel-section/notification.php:44
 msgid "Notification 8"
 msgstr "اطلاعیه شماره 8"
 
@@ -872,12 +792,12 @@ msgstr ""
 "گزینه را فعال کنید"
 
 #: views/admin/panel-section/panel.php:13
-msgid "Use Mihan Avatar"
+msgid "Use mihan avatar"
 msgstr "استفاده از میهن آواتار"
 
 #: views/admin/panel-section/panel.php:15
-msgid "User can upload profile image in Panel."
-msgstr "کاربر میتواند آواتار خود را در پنل کاربری تغییر دهد."
+msgid "User can choose avatar image in panel"
+msgstr "کاربر میتواند آواتار خود را در پنل کاربری تغییر دهد"
 
 #: views/admin/panel-section/panel.php:18
 msgid "User panel page"
@@ -900,7 +820,7 @@ msgid "User Panel Font Family"
 msgstr "فونت استفاده شده برای پنل کاربری و صفحه ورود و عضویت"
 
 #: views/admin/panel-section/panel.php:48
-msgid "Offer Code"
+msgid "Off Code"
 msgstr "کد تخفیف"
 
 #: views/admin/panel-section/panel.php:50
@@ -908,7 +828,7 @@ msgid "Off Code that you want to show in user panel"
 msgstr "کد تخفیفی که میخواید در پنل کاربری نمایش داده شود"
 
 #: views/admin/panel-section/panel.php:53
-msgid "Offer Code percentage"
+msgid "Off Code percentage"
 msgstr "درصد کد تخفیف"
 
 #: views/admin/panel-section/panel.php:55
@@ -940,7 +860,7 @@ msgid "Hide Comment widget"
 msgstr "مخفی کردن ویجت تعداد نظرات"
 
 #: views/admin/panel-section/panel.php:76
-msgid "Hide WooCommerce widget"
+msgid "Hide Woocommerce widget"
 msgstr "مخفی کردن ویجت ووکامرس"
 
 #: views/admin/panel-section/panel.php:80
@@ -955,10 +875,6 @@ msgstr "مخفی کردن ویجت افزونه تیکت"
 msgid "Roles who can't use admin panel"
 msgstr "نقش های کاربری که اجازه ی ورود به پنل مدیریت را ندارند"
 
-#: views/admin/panel-section/register.php:2
-msgid "Register Form"
-msgstr "فرم ثبت نام"
-
 #: views/admin/panel-section/register.php:8
 msgid "Text that shows in top of register form"
 msgstr "متنی که در بالای فرم ثبت نام نمایش داده میشود"
@@ -968,12 +884,12 @@ msgid "Sender Email"
 msgstr "ایمیل فرستنده"
 
 #: views/admin/panel-section/register.php:14
-msgid "Register and other emails will send from this address"
+msgid "Register and other email send from this address"
 msgstr ""
 "از این ایمیل به عنوان فرستنده ی ایمیل ثبت نام و سایر ایمیل ها استفاده میشود"
 
 #: views/admin/panel-section/register.php:16
-msgid "User Roles"
+msgid "User Role"
 msgstr "نقش کاربری"
 
 #: views/admin/panel-section/register.php:17
@@ -992,48 +908,76 @@ msgstr "میهن وردپرس"
 msgid "New Airlines"
 msgstr "خطوط هوایی جدید"
 
-#, fuzzy
-#~| msgid "Successfully updated!"
-#~ msgid "Successfully updated"
-#~ msgstr "با موفقیت به روز شد!"
+#~ msgid "Username not recevied!"
+#~ msgstr "نام کاربری دریافت نشد!"
 
-#~ msgid "Allow upload this types"
-#~ msgstr "اجازه بده این نوع از فایل‌ها آپلود شوند"
+#~ msgid "User not exists!"
+#~ msgstr "کاربر وجود ندارد!"
 
-#~ msgid "Audio"
-#~ msgstr "صوتی"
+#~ msgid "Dynamic code was generated for you!"
+#~ msgstr "کد پویا برای شما ایجاد شد!"
 
-#~ msgid "Image"
-#~ msgstr "عکس"
+#~ msgid "No any valid phone number for this username!"
+#~ msgstr "هیچ شماره ی مجازی برای این کاربر وجود ندارد!"
 
-#~ msgid "Video"
-#~ msgstr "ویدیو"
+#~ msgid "Dynamic code did not create for your account!"
+#~ msgstr "کد پویا برای شما ایجاد نشد!"
 
-#~ msgid "PDF"
-#~ msgstr "پی‌دی‌اف"
+#~ msgid "Has problem in send sms process"
+#~ msgstr "مشکلی در ارسال sms پیش آمد"
 
-#~ msgid "Compressed"
-#~ msgstr "فایل‌فشرده"
-
-#~ msgid "Text"
-#~ msgstr "متنی"
-
-#~ msgid "Maximum file size"
-#~ msgstr "حداکثر حجم فایل"
-
-#~ msgid "MB"
-#~ msgstr "مگابایت"
-
-#~ msgid "Field id"
-#~ msgstr "شناسه فیلد"
+#~ msgid "Dynamic code send for you!"
+#~ msgstr "کد پویا برای شما ارسال شد!"
 
 #~ msgid "Please use valid phone number."
 #~ msgstr "لطفا از یک شماره ی معتبر استفاده کنید."
 
+#~ msgid "This phone number is not available."
+#~ msgstr "این شماره تلفن در دسترس نیست."
+
+#~ msgid "Sory, has problem in send sms"
+#~ msgstr "متأسفیم، مشکلی در ارسال sms پیش آمد"
+
+#~ msgid "Please enter dynamic code"
+#~ msgstr "لطفا کد پویا را وراد کنید"
+
+#~ msgid "Dynamic code was wrong"
+#~ msgstr "کد پویا اشتباه است"
+
+#~ msgid "Sory, has problem in validate your phone."
+#~ msgstr "متأسفیم، مشکلی در تأیید شماره تلفن شما پیش آمد."
+
+#~ msgid "Your phone successfully validate!"
+#~ msgstr "شماره تلفن شما با موفقیت تأیید شد!"
+
+#~ msgid "Provider must send!"
+#~ msgstr "ارائه دهنده باید ارسال شود!"
+
+#~ msgid "Provider is not valid."
+#~ msgstr "ارائه دهنده معتبر نیست."
+
+#~ msgid "Has error in uploading media"
+#~ msgstr "خطایی در آپلود فایل چندرسانه ای وجود دارد"
+
+#~ msgid "Avatar successfully saved!"
+#~ msgstr "آواتار با موفقیت به روز شد!"
+
+#~ msgid "Has error in set avatar data"
+#~ msgstr "در ذخیره سازی اطلاعات آواتار مشکلی پیش آمد"
+
+#~ msgid "Avatar successfully deleted!"
+#~ msgstr "آواتار با موفقیت حذف شد!"
+
+#~ msgid "Has error in deleting avatar."
+#~ msgstr "در پاکسازی آواتار مشکلی پیش آمد."
+
+#~ msgid "MihanPanel Pro"
+#~ msgstr "میهن پنل پرو"
+
 #~ msgid "Role"
 #~ msgstr "نقش کاربری"
 
-#~ msgid "Role must not empty"
+#~ msgid "Role must not be empty"
 #~ msgstr "نقش کاربری نباید خالی باشد"
 
 #~ msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
@@ -1068,133 +1012,38 @@ msgstr "خطوط هوایی جدید"
 #~ msgid "%1$s: Has error in upload file."
 #~ msgstr "%1$s: حطایی در آپلود فایل وجود دارد."
 
-#~ msgid "Username, Email or Phone number"
-#~ msgstr "نام کاربری، ایمیل یا شماره تلفن"
+#~ msgid "Woocommerce Fields"
+#~ msgstr "فیلد‌های ووکامرس"
 
-#~ msgid "Phone Number"
-#~ msgstr "شماره تلفن"
+#~ msgid "Allow upload this types"
+#~ msgstr "اجازه بده این نوع از فایل‌ها آپلود شوند"
 
-#~ msgid "This phone number is used by another user"
-#~ msgstr "این شماره تلفن توسط کاربر دیگری در حال استفاده است"
+#~ msgid "Audio"
+#~ msgstr "صوتی"
 
-#~ msgid "Error"
-#~ msgstr "خطا"
+#~ msgid "Image"
+#~ msgstr "عکس"
 
-#~ msgid "Invalida phone number!"
-#~ msgstr "شماره تلفن معتبر نیست!"
+#~ msgid "Video"
+#~ msgstr "ویدیو"
 
-#~ msgid "Unavailable phone number!"
-#~ msgstr "شماره تلفن در دسترس نیست!"
+#~ msgid "PDF"
+#~ msgstr "پی‌دی‌اف"
 
-#~ msgid "Phone Number field must not be empty!"
-#~ msgstr "فیلد شماره تماس نباید خالی باشد!"
+#~ msgid "Compressed"
+#~ msgstr "فایل‌فشرده"
 
-#~ msgid "Incorrecnt login data"
-#~ msgstr "مشخصات ورود اشتباه است"
+#~ msgid "Text"
+#~ msgstr "متنی"
 
-#~ msgid "This phone is inactive on your account"
-#~ msgstr "این شماره تلفن روی اکانت شما فعال نیست"
+#~ msgid "Maximum file size"
+#~ msgstr "حداکثر حجم فایل"
 
-#~ msgid "Invalid dynamic code!"
-#~ msgstr "کد پویا معتبر نیست!"
+#~ msgid "MB"
+#~ msgstr "مگابایت"
 
-#~ msgid "Dynamic code was wrong!"
-#~ msgstr "کد پویا اشتباه است!"
-
-#~ msgid "Username must not be empty!"
-#~ msgstr "نام کاربری نباید خالی باشد!"
-
-#~ msgid "Wordpress Password Mode"
-#~ msgstr "پسورد وردپرس"
-
-#~ msgid "Both"
-#~ msgstr "هردو"
-
-#~ msgid "Choose an item"
-#~ msgstr "یک مورد را انتخاب کنید"
-
-#~ msgid "Delete File"
-#~ msgstr "حذف فایل"
-
-#~ msgid "Show File"
-#~ msgstr "نمایش فایل"
-
-#~ msgid "Choose File"
-#~ msgstr "انتخاب فایل"
-
-#~ msgid ""
-#~ "<p>Mihan Panel plugin is not active! For using all features enter license "
-#~ "key from <strong>Plugins > Mihan Panel License.</strong> Thanks!</p>"
-#~ msgstr ""
-#~ "<p>افزونه ی میهن پنل فعال نیست! برای استفاده از تمامی امکانات از بخش "
-#~ "<strong> افزونه ها > لایسنس افزونه میهن پنل </strong> کد فعالسازی را وارد "
-#~ "کنید. سپاس</p>"
-
-#~ msgid "Mihan Panel License"
-#~ msgstr "لایسنس میهن پنل"
-
-#~ msgid "Plugin License"
-#~ msgstr "لایسنس افزونه"
-
-#~ msgid "License Key"
-#~ msgstr "لایسنس"
-
-#~ msgid "Get your License from MihanWp in License section"
-#~ msgstr "لایسنس خود را از پنل کاربری میهن وردپرس در بخش لایسنس ها دریافت کنید"
-
-#~ msgid "Activate License"
-#~ msgstr "فعالسازی لایسنس"
-
-#~ msgid "Successfully activated"
-#~ msgstr "با موفقیت فعال شد"
-
-#~ msgid "An error occurred, try again"
-#~ msgstr "خطایی رخ داد ، دوباره امتحان کنید"
-
-#~ msgid "License expiration date: %s"
-#~ msgstr "تاریخ انقضای لایسنس: %s"
-
-#~ msgid "License deactivated"
-#~ msgstr "لایسنس غیر فعال شده است"
-
-#~ msgid "License key is invalid"
-#~ msgstr "لایسنس نامعتبر است"
-
-#~ msgid "Your license is not activated for this domain"
-#~ msgstr "لایسنس شما برای این دامنه فعال نیست"
-
-#~ msgid "License is not for this product: Mihan Panel"
-#~ msgstr "لایسنس برای این محصول نیست: میهن پنل"
-
-#~ msgid "Your license is already used; please purchase another license"
-#~ msgstr "این لایسنس قبلا استفاده شده است؛ لطفا لایسنس جدیدی خریداری کنید"
-
-#~ msgid ""
-#~ "There is a new version of %1$s available. %2$sView version %3$s details%4$s."
-#~ msgstr ""
-#~ "نسخه جدیدی از %1$s در دسترس است. %2$sمشاهده جزئیات %3$s نسخه جدید%4$s."
-
-#~ msgid ""
-#~ "There is a new version of %1$s available. %2$sView version %3$s details%4$s "
-#~ "or %5$supdate now%6$s."
-#~ msgstr ""
-#~ "نسخه جدیدی از%1$s در دسترس است.%2$s مشاهده نسخه %3$s جزئیات %4$s  يا %5$s  "
-#~ "اکنون بروزرسانی کنید %6$s."
-
-#~ msgid "You do not have permission to install plugin updates"
-#~ msgstr "شما دسترسی لازم برای نصب آپدیت های این پلاگین را ندارید"
-
-#~ msgid "My Purchases"
-#~ msgstr "فایل های خریداری شده"
-
-#~ msgid "Send Support Ticket"
-#~ msgstr "ارسال تیکت"
-
-#~ msgid "Support Ticket"
-#~ msgstr "تیکت های پشتیبانی"
-
-#~ msgid "Support Telegram"
-#~ msgstr "پشتیبانی تلگرامی"
+#~ msgid "Field id"
+#~ msgstr "شناسه فیلد"
 
 #~ msgid ""
 #~ "<p>License is not active! Please activate it from <strong>Plugins > Mihan "
@@ -1203,45 +1052,26 @@ msgstr "خطوط هوایی جدید"
 #~ "<p>لایسنس افزونه فعال نیست! لطفا از بخش <strong> افزونه ها > لایسنس افزونه "
 #~ "میهن پنل </strong> فعالش کنید. سپاس</p>"
 
-#~ msgid "Dynamic Password"
-#~ msgstr "کد پویا"
+#~ msgid "Light"
+#~ msgstr "روشن"
 
-#~ msgid "Enter Dynamic Password"
-#~ msgstr "کد پویا را وارد کنید"
+#~ msgid "Dark"
+#~ msgstr "تیره"
 
-#~ msgid "Get Code"
-#~ msgstr "دریافت کد"
+#~ msgid "IRANSans"
+#~ msgstr "ایران سنس"
 
-#~ msgid "Use password"
-#~ msgstr "استفاده از رمز"
+#~ msgid "IRANYekan"
+#~ msgstr "ایران یکان"
 
-#~ msgid "Phone Number Validation"
-#~ msgstr "تأییدیه ی شماره موبایل"
+#~ msgid "Select SMS Provider"
+#~ msgstr "ارائه دهنده ی SMS را انتخاب کنید"
 
-#~ msgid "Validate your phone"
-#~ msgstr "تأیید کردن شماره موبایل"
+#~ msgid "Don't found any SMS provider!"
+#~ msgstr "هیچ ارائه دهنده ی خدمات پیامکی یافت نشد!"
 
-#~ msgid "Dynamic Code"
-#~ msgstr "کد پویا"
-
-#~ msgid "Request Code"
-#~ msgstr "درخواست کد"
-
-#~ msgid "MihanPanel Lite"
-#~ msgstr "میهن پنل"
-
-#~ msgid "https://mihanwp.com/mihanpanel/"
-#~ msgstr "https://mihanwp.com/mihanpanel/"
-
-#~ msgid ""
-#~ "The best way to build user interface in WordPress - <a href=\"https://"
-#~ "mihanwp.com/en/mihanpanel/\">Buy Pro Version</a>"
-#~ msgstr ""
-#~ "بهترین راه برای ساخت پروفایل کاربری در وردپرس - <a href=“https://mihanwp."
-#~ "com/en/mihanpanel/“>خرید نسخه حرفه‌ای</a>"
-
-#~ msgid "https://mihanwp.com"
-#~ msgstr "https://mihanwp.com"
+#~ msgid "Activation Code"
+#~ msgstr "کد فعالسازی"
 
 #~ msgid "%s Rial"
 #~ msgstr "%s ریال"
@@ -1313,65 +1143,109 @@ msgstr "خطوط هوایی جدید"
 #~ msgid "Choose gateway number"
 #~ msgstr "شماره درگاه را انتخاب کنید"
 
-#~ msgid "Username not recevied!"
-#~ msgstr "نام کاربری دریافت نشد!"
+#~ msgid ""
+#~ "<p>Mihan Panel plugin is not active! For using all features enter license "
+#~ "key from <strong>Plugins > Mihan Panel License.</strong> Thanks!</p>"
+#~ msgstr ""
+#~ "<p>افزونه ی میهن پنل فعال نیست! برای استفاده از تمامی امکانات از بخش "
+#~ "<strong> افزونه ها > لایسنس افزونه میهن پنل </strong> کد فعالسازی را وارد "
+#~ "کنید. سپاس</p>"
 
-#~ msgid "User not exists!"
-#~ msgstr "کاربر وجود ندارد!"
+#~ msgid "Mihan Panel License"
+#~ msgstr "لایسنس میهن پنل"
 
-#~ msgid "Dynamic code was generated for you!"
-#~ msgstr "کد پویا برای شما ایجاد شد!"
+#~ msgid "Plugin License"
+#~ msgstr "لایسنس افزونه"
 
-#~ msgid "No any valid phone number for this username!"
-#~ msgstr "هیچ شماره ی مجازی برای این کاربر وجود ندارد!"
+#~ msgid "License Key"
+#~ msgstr "لایسنس"
 
-#~ msgid "Dynamic code did not create for your account!"
-#~ msgstr "کد پویا برای شما ایجاد نشد!"
+#~ msgid "Get your License from MihanWp in License section"
+#~ msgstr "لایسنس خود را از پنل کاربری میهن وردپرس در بخش لایسنس ها دریافت کنید"
 
-#~ msgid "Has problem in send sms process"
-#~ msgstr "مشکلی در ارسال sms پیش آمد"
+#~ msgid "Activate License"
+#~ msgstr "فعالسازی لایسنس"
 
-#~ msgid "Dynamic code send for you!"
-#~ msgstr "کد پویا برای شما ارسال شد!"
+#~ msgid "Successfully activated"
+#~ msgstr "با موفقیت فعال شد"
 
-#~ msgid "This phone number is not available."
-#~ msgstr "این شماره تلفن در دسترس نیست."
+#~ msgid "An error occurred, try again"
+#~ msgstr "خطایی رخ داد ، دوباره امتحان کنید"
 
-#~ msgid "Sory, has problem in send sms"
-#~ msgstr "متأسفیم، مشکلی در ارسال sms پیش آمد"
+#~ msgid "License expiration date: %s"
+#~ msgstr "تاریخ انقضای لایسنس: %s"
 
-#~ msgid "Please enter dynamic code"
-#~ msgstr "لطفا کد پویا را وراد کنید"
+#~ msgid "License deactivated"
+#~ msgstr "لایسنس غیر فعال شده است"
 
-#~ msgid "Dynamic code was wrong"
-#~ msgstr "کد پویا اشتباه است"
+#~ msgid "License key is invalid"
+#~ msgstr "لایسنس نامعتبر است"
 
-#~ msgid "Sory, has problem in validate your phone."
-#~ msgstr "متأسفیم، مشکلی در تأیید شماره تلفن شما پیش آمد."
+#~ msgid "Your license is not activated for this domain"
+#~ msgstr "لایسنس شما برای این دامنه فعال نیست"
 
-#~ msgid "Your phone successfully validate!"
-#~ msgstr "شماره تلفن شما با موفقیت تأیید شد!"
+#~ msgid "License is not for this product: Mihan Panel"
+#~ msgstr "لایسنس برای این محصول نیست: میهن پنل"
 
-#~ msgid "Provider must send!"
-#~ msgstr "ارائه دهنده باید ارسال شود!"
+#~ msgid "Your license is already used; please purchase another license"
+#~ msgstr "این لایسنس قبلا استفاده شده است؛ لطفا لایسنس جدیدی خریداری کنید"
 
-#~ msgid "Provider is not valid."
-#~ msgstr "ارائه دهنده معتبر نیست."
+#~ msgid "Username, Email or Phone number"
+#~ msgstr "نام کاربری، ایمیل یا شماره تلفن"
 
-#~ msgid "Has error in uploading media"
-#~ msgstr "خطایی در آپلود فایل چندرسانه ای وجود دارد"
+#~ msgid "Phone Number"
+#~ msgstr "شماره تلفن"
 
-#~ msgid "Avatar successfully saved!"
-#~ msgstr "آواتار با موفقیت به روز شد!"
+#~ msgid "This phone number is used by another user"
+#~ msgstr "این شماره تلفن توسط کاربر دیگری در حال استفاده است"
 
-#~ msgid "Has error in set avatar data"
-#~ msgstr "در ذخیره سازی اطلاعات آواتار مشکلی پیش آمد"
+#~ msgid "Error"
+#~ msgstr "خطا"
 
-#~ msgid "Avatar successfully deleted!"
-#~ msgstr "آواتار با موفقیت حذف شد!"
+#~ msgid "Invalida phone number!"
+#~ msgstr "شماره تلفن معتبر نیست!"
 
-#~ msgid "Has error in deleting avatar."
-#~ msgstr "در پاکسازی آواتار مشکلی پیش آمد."
+#~ msgid "Unavailable phone number!"
+#~ msgstr "شماره تلفن در دسترس نیست!"
+
+#~ msgid "Phone Number field must not be empty!"
+#~ msgstr "فیلد شماره تماس نباید خالی باشد!"
+
+#~ msgid "Incorrecnt login data"
+#~ msgstr "مشخصات ورود اشتباه است"
+
+#~ msgid "This phone is inactive on your account"
+#~ msgstr "این شماره تلفن روی اکانت شما فعال نیست"
+
+#~ msgid "Invalid dynamic code!"
+#~ msgstr "کد پویا معتبر نیست!"
+
+#~ msgid "Dynamic code was wrong!"
+#~ msgstr "کد پویا اشتباه است!"
+
+#~ msgid "Username must not be empty!"
+#~ msgstr "نام کاربری نباید خالی باشد!"
+
+#~ msgid "Do you want to save this change?"
+#~ msgstr "میخواهید تغییرات ذخیره شود؟"
+
+#~ msgid "Choose Image"
+#~ msgstr "انتخاب تصویر"
+
+#~ msgid "Remove"
+#~ msgstr "حذف"
+
+#~ msgid "Choose an item"
+#~ msgstr "یک مورد را انتخاب کنید"
+
+#~ msgid "Delete File"
+#~ msgstr "حذف فایل"
+
+#~ msgid "Show File"
+#~ msgstr "نمایش فایل"
+
+#~ msgid "Choose File"
+#~ msgstr "انتخاب فایل"
 
 #~ msgid "Your validation code is: [[code]]"
 #~ msgstr "کد فعالسازی شما: [[code]]"
@@ -1391,35 +1265,114 @@ msgstr "خطوط هوایی جدید"
 #~ msgid "Kavenegar"
 #~ msgstr "کاوه نگار"
 
+#~ msgid ""
+#~ "There is a new version of %1$s available. %2$sView version %3$s details%4$s."
+#~ msgstr ""
+#~ "نسخه جدیدی از %1$s در دسترس است. %2$sمشاهده جزئیات %3$s نسخه جدید%4$s."
+
+#~ msgid ""
+#~ "There is a new version of %1$s available. %2$sView version %3$s details%4$s "
+#~ "or %5$supdate now%6$s."
+#~ msgstr ""
+#~ "نسخه جدیدی از%1$s در دسترس است.%2$s مشاهده نسخه %3$s جزئیات %4$s  يا %5$s  "
+#~ "اکنون بروزرسانی کنید %6$s."
+
+#~ msgid "You do not have permission to install plugin updates"
+#~ msgstr "شما دسترسی لازم برای نصب آپدیت های این پلاگین را ندارید"
+
+#~ msgid "Dynamic Password"
+#~ msgstr "کد پویا"
+
+#~ msgid "Enter Dynamic Password"
+#~ msgstr "کد پویا را وارد کنید"
+
+#~ msgid "Get Code"
+#~ msgstr "دریافت کد"
+
+#~ msgid "Use password"
+#~ msgstr "استفاده از رمز"
+
+#~ msgid "Phone Number Validation"
+#~ msgstr "تأییدیه ی شماره موبایل"
+
+#~ msgid "Validate your phone"
+#~ msgstr "تأیید کردن شماره موبایل"
+
+#~ msgid "Dynamic Code"
+#~ msgstr "کد پویا"
+
+#~ msgid "Request Code"
+#~ msgstr "درخواست کد"
+
+#~ msgid "Not deleted."
+#~ msgstr "حذف نشد!"
+
+#~ msgid "Download products update"
+#~ msgstr "دانلود آپدیت محصولات"
+
+#~ msgid "Send Support Ticket"
+#~ msgstr "ارسال تیکت"
+
+#~ msgid "Support Ticket"
+#~ msgstr "تیکت های پشتیبانی"
+
+#~ msgid "https://mihanwp.com/mihanpanel/"
+#~ msgstr "https://mihanwp.com/mihanpanel/"
+
+#~ msgid "The best way to build user interface in WordPress"
+#~ msgstr "یک راه مناسب برای پیاده سازی پروفایل کاربری در وردپرس"
+
+#~ msgid "https://mihanwp.com"
+#~ msgstr "https://mihanwp.com"
+
+#~ msgid "Successfully edited!"
+#~ msgstr "با موفقیت ویرایش شد!"
+
+#~ msgid "Priorities was changed! Save changes?"
+#~ msgstr "اولویت ها تغییر پیدا کرده است! ذخیره شود؟"
+
+#~ msgid "Social Login"
+#~ msgstr "ورود با شبکه های اجتماعی"
+
+#~ msgid ""
+#~ "For using Social login just use \"Nextend Social Login\" plugin with Mihan "
+#~ "Panel plugin."
+#~ msgstr ""
+#~ "برای استفاده از ورود با شبکه های اجتماعی کافیست از پلاگین \"Nextend Social "
+#~ "Login\" در کنار پلاگین میهن پنل استفاده کنید."
+
+#~ msgid "Click for installing"
+#~ msgstr "برای نصب کلیک کنید"
+
 #~ msgid "Menus management"
 #~ msgstr "مدیریت منوها"
 
-#~ msgid "Do you want to save this change?"
-#~ msgstr "میخواهید تغییرات ذخیره شود؟"
+#~ msgid "No any data saved!"
+#~ msgstr "هیچ داده ای ذخیره نشد!"
 
-#~ msgid "Choose Image"
-#~ msgstr "انتخاب تصویر"
-
-#~ msgid "Light"
-#~ msgstr "روشن"
-
-#~ msgid "Dark"
-#~ msgstr "تیره"
-
-#~ msgid "Select SMS Provider"
-#~ msgstr "ارائه دهنده ی SMS را انتخاب کنید"
-
-#~ msgid "Don't found any SMS provider!"
-#~ msgstr "هیچ ارائه دهنده ی خدمات پیامکی یافت نشد!"
-
-#~ msgid "IRANSans"
-#~ msgstr "ایران سنس"
-
-#~ msgid "IRANYekan"
-#~ msgstr "ایران یکان"
+#~ msgid "List"
+#~ msgstr "لیست"
 
 #~ msgid "MihanWp"
 #~ msgstr "میهن وردپرس"
+
+#~ msgid "Email Address"
+#~ msgstr "آدرس ایمیل"
+
+#~ msgid "Company Name"
+#~ msgstr "نام شرکت"
+
+#~ msgid "Address 1"
+#~ msgstr "آدرس شماره یک"
+
+#~ msgid "City"
+#~ msgstr "شهر"
+
+#~ msgid "Zip Code"
+#~ msgstr "کد پستی"
+
+#~ msgid "Phone"
+#~ msgstr "تلفن"
 
 #~ msgid ""
 #~ "If Use this feature, just enter mihanpanel pre-defined variables in new "
@@ -1439,9 +1392,6 @@ msgstr "خطوط هوایی جدید"
 
 #~ msgid "Credit"
 #~ msgstr "اعتبار"
-
-#~ msgid "The best way to build user interface in WordPress"
-#~ msgstr "یک راه مناسب برای پیاده سازی پروفایل کاربری در وردپرس"
 
 #~ msgid "Notification"
 #~ msgstr "اطلاعیه"

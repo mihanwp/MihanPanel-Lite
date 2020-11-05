@@ -1,4 +1,3 @@
-@import "./fonts.css";
 body.login{
   background-size:cover;
 }
@@ -230,8 +229,4 @@ a{color:#222 !important;font-size: 15px;}
 {
   display: inline-block !important;
   width: auto !important;
-}
-
-body,a,h1,h2,h3,h5,h6,h4,span:not(.dashicons),td,tr,input,p{
-  font-family:iranyekan !important
 }

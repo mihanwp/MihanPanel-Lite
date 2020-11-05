@@ -2,18 +2,13 @@
 {
     margin: 10px;
 }
-input[type=button]:active,button:active {
-outline: none;
-border: none;
-}
-input[type=button]:focus,button:focus {outline:0;}
 .mihanpanel-admin *:not(.mw_icon){
   font-family: iranyekan !important;
 	font-size:16px;
 }
 .mihanpanel-admin:not(.mw_admin_panel){
     width:80%;
-    background:url(img/mihan-logo.jpg) no-repeat left -120px top -120px #fff;
+    background:#fff;
     box-shadow:0 0 30px rgba(0,0,0,0.1);
     border-radius:10px;
     margin:100px auto;
@@ -32,12 +27,21 @@ input[type=button]:focus,button:focus {outline:0;}
   width:50%;
   display: inline-block;
   background:#fff;
+  height:52px;
   border-radius:4px;
-  box-shadow:0 0 10px rgba(0,0,0,0.1);
+  box-shadow:0 0 40px rgb(26 78 171 / 10%);
   border:1px solid #ddd;
-  padding:0 20px;
-  height:40px;
-  line-height:40px;
+  padding:15px;
+}
+.mihanpanel-admin select{
+  width:100%;
+  background:#fff;
+  height:52px;
+  border-radius:4px;
+  box-shadow:0 0 40px rgb(26 78 171 / 10%);
+  border:1px solid #ddd;
+  line-height:25px;
+  padding:15px;
 }
 .mihanpanel-admin h2{
 	font-size:26px !important;
@@ -134,8 +138,7 @@ input[type=button]:focus,button:focus {outline:0;}
 	width:100%;
 }
 .mihanmenustable td{
-	border:1px solid #ddd;
-	padding:10px;
+	padding:20px;
 }
 .mihanmenustable textarea{
 	width:100%;
@@ -144,6 +147,8 @@ input[type=button]:focus,button:focus {outline:0;}
 	border-radius:4px;
 	width:100% !important;
 	border:1px solid #ddd;
+  box-shadow:0 0 40px rgb(26 78 171 / 10%);
+  padding:15px;
 }
 .mw_menus_table
 {
@@ -227,6 +232,15 @@ input[type=button]:focus,button:focus {outline:0;}
     top: 10px;
     left: 10px;
 }
+.mw_menus_table .field-meta-wrapper .sub_row_title
+{
+    margin: 20px 100px;
+}
+.mw_menus_table .field-meta-wrapper.file-uploader .field
+{
+    display: inline-block;
+    margin: 0 15px;
+}
 .mw_menus_table .mw_th
 {
     text-align: center;
@@ -303,7 +317,7 @@ input[type=button]:focus,button:focus {outline:0;}
 .mihanpanelmenulist td{
   margin:0;
 }
-input[type=submit].mihanpanelremove{
+.mihanpanel-admin input[type=submit].mihanpanelremove{
   color:#fff;
   border-radius:5px;
   padding:0 10px !important;
@@ -327,7 +341,6 @@ input[type=submit].mihanpanelremove{
 }
 .mihanpanel-admin .mw_submit.disable
 {
-    cursor: no-drop;
     pointer-events: none;
 }
 .mw_admin_panel *:not(.mw_icon)
@@ -432,7 +445,189 @@ font-weight: bold;
     background-color: #0071a1;
     color: white !important;
 }
-
+.mw_file_uploader .type_preview_box
+{
+    display: block;
+    width: 350px;
+    height: 150px;
+    border-radius: 5px;
+    background-color: #fbfbfb;
+    border: 1px solid #eaeaea;
+    position: relative;
+    background-position: center top;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.mw_file_uploader .type_preview_box .type-icon
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: .5;
+}
+.mw_file_uploader .type_preview_box .type-icon i
+{
+    font-size: 5rem;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mw_file_uploader .remove
+{
+    position: absolute;
+    left: 5px;
+    cursor: pointer;
+    display: none;
+    background-color: #292929;
+    top: 5px;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+.mw_file_uploader .remove .text
+{
+    position: absolute;
+    left: 10px;
+    transition: all .3s;
+    width: 0;
+    overflow: hidden;
+    transition: all .5s;
+    visibility: hidden;
+    opacity: 0;
+}
+.mw_file_uploader .remove.has-file:hover .text
+{
+    visibility: visible;
+    opacity: 1;
+    color: white;
+    width: auto;
+}
+.mw_file_uploader .remove .icon
+{
+    color: white;
+    display: flex;
+    font-size: 1.5rem;
+}
+.mw_file_uploader .remove.has-file:hover .icon
+{
+    position: absolute;
+    right: 10px;
+}
+.mw_file_uploader .type_preview_box .remove.has-file
+{
+    opacity: .4;
+    display: flex;
+    transition: width .3s, border-radius .1s;
+    animation-name: unhover_file_uploader_btn;
+    animation-duration: .5s;
+}
+.mw_file_uploader .type_preview_box .remove.has-file:hover
+{
+    width: 120px;
+    border-radius: 10px;
+    animation-name: hover_file_uploader_btn;
+    animation-duration: .3s;
+}
+.mw_file_uploader .show-file
+{
+    position: absolute;
+    text-decoration: none;
+    left: 5px;
+    cursor: pointer;
+    background-color: #292929;
+    top: 40px;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    opacity: .4;
+    display: flex;
+    transition: width .3s, border-radius .1s;
+    animation-name: unhover_file_uploader_btn;
+    animation-duration: .5s;
+}
+.mw_file_uploader .show-file .icon
+{
+    color: white;
+    display: flex;
+    font-size: 1.5rem;
+}
+.mw_file_uploader .show-file .text
+{
+    position: absolute;
+    left: 10px;
+    transition: all .3s;
+    width: 0;
+    overflow: hidden;
+    transition: all .5s;
+    visibility: hidden;
+    opacity: 0;
+}
+.mw_file_uploader .show-file:hover
+{
+    width: 120px;
+    border-radius: 10px;
+    animation-name: hover_file_uploader_btn;
+    animation-duration: .3s;
+}
+.mw_file_uploader .show-file:hover .icon
+{
+    position: absolute;
+    right: 10px;
+}
+.mw_file_uploader .show-file:hover .text
+{
+    visibility: visible;
+    opacity: 1;
+    color: white;
+    width: auto;
+}
+@keyframes unhover_file_uploader_btn
+{
+    0%
+    {
+        border-radius: 10px;
+    }
+    100%
+    {
+        border-radius: 50%;
+    }
+}
+@keyframes hover_file_uploader_btn
+{
+    0%
+    {
+        width: 20px;
+        border-radius: 50%;
+    }
+    100%
+    {
+        width: 120px;
+        border-radius: 10px;
+    }
+}
+.mw_file_uploader label
+{
+    cursor: pointer;
+    position: absolute;
+    margin: 5px 10px;
+    background-color: #673ab7;
+    color: white !important;
+    padding: 3px 10px;
+    border-radius: 5px;
+}
+.mw_file_uploader input[type=file]
+{
+    visibility: hidden;
+}
 @media screen and (max-width: 700px)
 {
     .mw_menu_icons
@@ -608,12 +803,12 @@ font-weight: bold;
   font-family: 'Font Awesome 5 Brands' !important;
 }
 .mpproversion{
-  background:#FFCCBC;
-  padding:3px 10px;
-  vertical-align:middle;
-  border-radius:50px;
+    background:#FFCCBC;
+    padding:3px 10px;
+    vertical-align:middle;
+    border-radius:50px;
 }
 .mpproversion a{
-  color:#F4511E;
-  text-decoration:none;
+    color:#F4511E;
+    text-decoration:none;
 }

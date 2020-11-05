@@ -31,16 +31,16 @@ jQuery(document).ready(function($){
         handle: ".dashicons-menu"
     });
 
-    function mw_ajax_update_fields_data(mw_type, fields_data,mw_nonce, item)
+    function mw_ajax_update_fields_data(mw_type, fields_data, mwpl_nonce, item)
     {
         $.ajax({
             url: mwp_data.au,
             type: 'post',
             dataType: 'json',
             data: {
-                action: 'mwpl_update_' + mw_type + '_fields_data',
+                action: 'update_' + mw_type + '_fields_data',
                 fields_data: fields_data,
-                nonce: mw_nonce
+                mwpl_nonce: mwpl_nonce
             },
             success: function(response)
             {
@@ -85,20 +85,20 @@ jQuery(document).ready(function($){
         e.preventDefault();
         let mw_this = $(this),
             mw_type = mw_this.data('mw_type'),
-            mw_nonce = mw_this.data('mwpl_nonce');
+            mwpl_nonce = mw_this.attr('mwpl_nonce');
 
         mw_this.addClass("disable");
         let field_data = $(document).find('.mw_sortable .mw_field_item');
         new_data = organize_data_function[mw_type](field_data);
-        mw_ajax_update_fields_data(mw_type, new_data, mw_nonce, mw_this);
+        mw_ajax_update_fields_data(mw_type, new_data, mwpl_nonce, mw_this);
     });
     $(document).on('click', '.mw_sortable input[name=delete]', function(e){
         e.preventDefault();
         let mw_this = $(this),
-            mw_wrapper = mw_this.closest('.mw_fields_wrapper'),
-            mw_type = mw_wrapper.data('mw_type');
+            mw_type = mw_this.closest('.mw_fields_wrapper').data('mw_type');
             mw_id = mw_this.closest('.mw_field_item').find('input[name=id]').val(),
-            mw_nonce = mw_wrapper.data('mwpl_nonce');
+            mwpl_nonce = mw_this.closest('.mihanpanel-admin').find('.mw_ajax_update_fields_data').attr('mwpl_nonce');
+        
         $.ajax({
             url: mwp_data.au,
             type: 'post',
@@ -106,8 +106,8 @@ jQuery(document).ready(function($){
             data: {
                 action: 'mw_delete_field_row',
                 type: mw_type,
-                id: mw_id,
-                nonce: mw_nonce
+                mwpl_nonce: mwpl_nonce,
+                id: mw_id
             },
             success: function(response){
                 if(response.status == 200)
@@ -122,8 +122,11 @@ jQuery(document).ready(function($){
     $(document).on('input', '.mw_sortable input', function(e){
         mw_show_update_confirm_notice();
     });
-    $(document).on('change', '.mw_sortable input[name=icon]', function(e){
+    $(document).on('change', '.mw_sortable input', function(e){
         $(this).trigger('input');
+    })
+    $(document).on('change', '.mw_sortable select', function(e){
+        mw_show_update_confirm_notice();
     })
     $(document).on('keypress', '.mw_sortable input', function(e){
         if(e.which == 13)

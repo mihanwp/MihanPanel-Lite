@@ -1,7 +1,3 @@
-@import "./fonts.css";
-.mihanpanel-profile-widget *{
-  font-family:iranyekan !important;
-}
 .mihanpanel-profile-widget{
   padding:20px 15px;
   background-color:#2b2f3e;

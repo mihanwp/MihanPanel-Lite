@@ -10,23 +10,12 @@ Description: The best way to build user interface in WordPress
 //if accessed direct
 defined('ABSPATH') or die('Hello');
 
-if(!defined('MWP_LITE_MAIN_APP'))
+register_activation_hook(__FILE__, function(){
+    update_option('mwpl_handle_activation_hook', true);
+});
+
+if(!defined('WP_MIHANPANEL_MAIN_APP'))
 {
-    define("MWP_LITE_MAIN_APP", __FILE__);
+    define("WP_MIHANPANEL_MAIN_APP", __FILE__);
 }
-
-require_once plugin_dir_path(__FILE__) . DIRECTORY_SEPARATOR . 'main_app.php';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+require_once plugin_dir_path(WP_MIHANPANEL_MAIN_APP) . DIRECTORY_SEPARATOR . 'main_app.php';

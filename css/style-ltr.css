@@ -29,3 +29,12 @@
 .back-to-sitehome{
   float:right !important
 }
+.mihanpanelpanel .mw_avatar_section label#choose_avatar
+{
+    right: unset !important;
+}
+input#remove_user_avatar
+{
+    right: unset !important;
+    left: 120px !important;
+}
