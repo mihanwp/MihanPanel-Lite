@@ -4,7 +4,7 @@ Plugin Name: MihanPanel
 Plugin URI:  https://mihanwp.com/mihanpanel/
 Author:      MihanWP
 Author URI:  https://mihanwp.com
-Version: 	 7.5
+Version:    8.0
 Description: The best way to build user interface in WordPress
 */
 //if accessed direct
