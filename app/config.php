@@ -259,7 +259,9 @@ class config
 
     static function redirect_to_option_panel_handler()
     {
-        wp_redirect(admin_url('admin.php?page=mihanpanel'));
+        $url = admin_url('admin.php?page=mihanpanel');
+        $url = apply_filters('mwpl_before_redirect_to_option_panel_url', $url);
+        wp_redirect($url);
         exit;
     }
 }

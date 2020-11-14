@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MihanPanel\n"
-"POT-Creation-Date: 2020-11-05 17:30+0330\n"
-"PO-Revision-Date: 2020-11-05 17:30+0330\n"
+"POT-Creation-Date: 2020-11-14 16:58+0330\n"
+"PO-Revision-Date: 2020-11-14 16:58+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -503,16 +503,16 @@ msgstr "بیوگرافی"
 msgid "Save Changes"
 msgstr "ذخیره تغییرات"
 
-#: rename-wp-login.php:319
+#: rename-wp-login.php:79
 #, php-format
 msgid "Please upgrade to the latest version of WordPress to activate %s."
 msgstr "لطفا برای فعالسازی وردپرس خود را به روز رسانی کنید %s."
 
-#: rename-wp-login.php:319 rename-wp-login.php:415
+#: rename-wp-login.php:79 rename-wp-login.php:103
 msgid "Rename wp-login.php"
 msgstr "تغییر نام wp-login.php"
 
-#: rename-wp-login.php:418
+#: rename-wp-login.php:104
 msgid ""
 "This option allows you to set a networkwide default, which can be overridden "
 "by individual sites. Simply go to to the site’s permalink settings to change "
@@ -522,40 +522,40 @@ msgstr ""
 "توسط سایت های مختلف قابل لغو است. برای تغییر آدرس، به سادگی به تنظیمات سایت "
 "بروید."
 
-#: rename-wp-login.php:427
+#: rename-wp-login.php:107
 msgid "Networkwide default"
 msgstr "پیش فرض شبکه گسترده"
 
-#: rename-wp-login.php:496
+#: rename-wp-login.php:126
 msgid "Change login url. Please set the Settings > Permalink to the post name."
 msgstr ""
 "تغییر url صفحه ی ورود. لطفا از بخش تنظیمات > پیوند های یکتا را روی نام نوشته "
 "قرار دهید."
 
-#: rename-wp-login.php:517
+#: rename-wp-login.php:132
 msgid "Login page address"
 msgstr "آدرس صفحه ی ورود"
 
-#: rename-wp-login.php:634
+#: rename-wp-login.php:164
 #, php-format
 msgid "To set a networkwide default, go to %s."
 msgstr "برای تنظیم یک پیش فرض شبکه گسترده ، به %s بروید."
 
-#: rename-wp-login.php:634
+#: rename-wp-login.php:164
 msgid "Network Settings"
 msgstr "تنظیمات شبکه"
 
-#: rename-wp-login.php:688
+#: rename-wp-login.php:178
 #, php-format
 msgid "Your login page is now here: %s. Bookmark this page!"
 msgstr ""
 "صفحه ی ورود شما در اینجاست: %s. میتوانید آن را به بوکمارک خود اضافه کنید!"
 
-#: rename-wp-login.php:706 rename-wp-login.php:712
+#: rename-wp-login.php:183 rename-wp-login.php:185
 msgid "Settings"
 msgstr "تنظیمات"
 
-#: rename-wp-login.php:763
+#: rename-wp-login.php:198
 msgid "This feature is not enabled."
 msgstr "این ویژگی در دسترس نیست."
 
@@ -908,6 +908,12 @@ msgstr "میهن وردپرس"
 msgid "New Airlines"
 msgstr "خطوط هوایی جدید"
 
+#~ msgid "Has Error!"
+#~ msgstr "خطا دارد!"
+
+#~ msgid "Invalid license key"
+#~ msgstr "کد لایسنس اشتباه است"
+
 #~ msgid "Username not recevied!"
 #~ msgstr "نام کاربری دریافت نشد!"
 
@@ -1151,32 +1157,14 @@ msgstr "خطوط هوایی جدید"
 #~ "<strong> افزونه ها > لایسنس افزونه میهن پنل </strong> کد فعالسازی را وارد "
 #~ "کنید. سپاس</p>"
 
-#~ msgid "Mihan Panel License"
-#~ msgstr "لایسنس میهن پنل"
-
-#~ msgid "Plugin License"
-#~ msgstr "لایسنس افزونه"
-
-#~ msgid "License Key"
+#~ msgid "License"
 #~ msgstr "لایسنس"
 
-#~ msgid "Get your License from MihanWp in License section"
-#~ msgstr "لایسنس خود را از پنل کاربری میهن وردپرس در بخش لایسنس ها دریافت کنید"
-
-#~ msgid "Activate License"
-#~ msgstr "فعالسازی لایسنس"
-
-#~ msgid "Successfully activated"
-#~ msgstr "با موفقیت فعال شد"
-
-#~ msgid "An error occurred, try again"
-#~ msgstr "خطایی رخ داد ، دوباره امتحان کنید"
-
-#~ msgid "License expiration date: %s"
-#~ msgstr "تاریخ انقضای لایسنس: %s"
-
-#~ msgid "License deactivated"
+#~ msgid "License is deactive"
 #~ msgstr "لایسنس غیر فعال شده است"
+
+#~ msgid "License expired at"
+#~ msgstr "تاریخ انقضای لایسنس: %s"
 
 #~ msgid "License key is invalid"
 #~ msgstr "لایسنس نامعتبر است"
@@ -1189,6 +1177,24 @@ msgstr "خطوط هوایی جدید"
 
 #~ msgid "Your license is already used; please purchase another license"
 #~ msgstr "این لایسنس قبلا استفاده شده است؛ لطفا لایسنس جدیدی خریداری کنید"
+
+#~ msgid "An error occurred, try again"
+#~ msgstr "خطایی رخ داد ، دوباره امتحان کنید"
+
+#~ msgid "Your license is active for lifetime"
+#~ msgstr "لایسنس شما برای مادامالعمر فعال است"
+
+#~ msgid "Your license is active until"
+#~ msgstr "لایسنس شما فعال است تا"
+
+#~ msgid "License is deactive."
+#~ msgstr "لایسنس غیرفعال است."
+
+#~ msgid "MihanPanel is active with this license key"
+#~ msgstr "میهن پنل شما با این لایسنس فعال است"
+
+#~ msgid "Successfully deactivated."
+#~ msgstr "با موفقیت فعال شد."
 
 #~ msgid "Username, Email or Phone number"
 #~ msgstr "نام کاربری، ایمیل یا شماره تلفن"
@@ -1280,6 +1286,18 @@ msgstr "خطوط هوایی جدید"
 #~ msgid "You do not have permission to install plugin updates"
 #~ msgstr "شما دسترسی لازم برای نصب آپدیت های این پلاگین را ندارید"
 
+#~ msgid "License Key"
+#~ msgstr "لایسنس"
+
+#~ msgid "Activate License"
+#~ msgstr "فعالسازی لایسنس"
+
+#~ msgid "Deactivate License"
+#~ msgstr "غیرفعال کردن لایسنس"
+
+#~ msgid "Get License Key"
+#~ msgstr "دریافت کد لایسنس"
+
 #~ msgid "Dynamic Password"
 #~ msgstr "کد پویا"
 
@@ -1304,6 +1322,24 @@ msgstr "خطوط هوایی جدید"
 #~ msgid "Request Code"
 #~ msgstr "درخواست کد"
 
+#~ msgid "https://mihanwp.com/mihanpanel/"
+#~ msgstr "https://mihanwp.com/mihanpanel/"
+
+#~ msgid "The best way to build user interface in WordPress"
+#~ msgstr "یک راه مناسب برای پیاده سازی پروفایل کاربری در وردپرس"
+
+#~ msgid "https://mihanwp.com"
+#~ msgstr "https://mihanwp.com"
+
+#~ msgid "Mihan Panel License"
+#~ msgstr "لایسنس میهن پنل"
+
+#~ msgid "Plugin License"
+#~ msgstr "لایسنس افزونه"
+
+#~ msgid "Get your License from MihanWp in License section"
+#~ msgstr "لایسنس خود را از پنل کاربری میهن وردپرس در بخش لایسنس ها دریافت کنید"
+
 #~ msgid "Not deleted."
 #~ msgstr "حذف نشد!"
 
@@ -1315,15 +1351,6 @@ msgstr "خطوط هوایی جدید"
 
 #~ msgid "Support Ticket"
 #~ msgstr "تیکت های پشتیبانی"
-
-#~ msgid "https://mihanwp.com/mihanpanel/"
-#~ msgstr "https://mihanwp.com/mihanpanel/"
-
-#~ msgid "The best way to build user interface in WordPress"
-#~ msgstr "یک راه مناسب برای پیاده سازی پروفایل کاربری در وردپرس"
-
-#~ msgid "https://mihanwp.com"
-#~ msgstr "https://mihanwp.com"
 
 #~ msgid "Successfully edited!"
 #~ msgstr "با موفقیت ویرایش شد!"

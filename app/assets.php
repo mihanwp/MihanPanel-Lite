@@ -12,6 +12,11 @@ class assets
         $css = MW_MIHANPANEL_URL . 'css/' . $file_name . '.css';
         return $css;
     }
+    static function get_image_url($name, $extension='png')
+    {
+        $file_name = MW_MIHANPANEL_URL . 'img/' . $name . '.' . $extension;
+        return $file_name;
+    }
     static function load_admin_assets()
     {
         $plugin_version = \mihanpanel\app\tools::get_plugin_version();
