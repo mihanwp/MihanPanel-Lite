@@ -1,12 +1,12 @@
-=== MihanPanel - User Profile, User Registration, Login & Membership Plugin ===  
-Contributors: mihanwp  
-Donate link: https://mihanwp.com/  
-Tags: register,login,profile,registration,user panel,membership,signup,panel  
-Requires at least: 4.7  
-Tested up to: 5.5.1  
-Stable tag:   7.2  
-Requires PHP: 7.0  
-License: GPLv2 or later  
+=== MihanPanel - User Profile, User Registration, Login & Membership Plugin ===
+Contributors: mihanwp
+Donate link: https://mihanwp.com/
+Tags: register,login,profile,registration,user panel,membership,signup,panel
+Requires at least: 4.7
+Tested up to: 5.5.1
+Stable tag:   7.2
+Requires PHP: 7.0
+License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 WordPress Login and Registration Plugin Lite Version.
@@ -49,7 +49,7 @@ This plugin is published in 2 versions, Lite and Pro. The [MihanPanel Pro](https
 * Technical support
 * Direct update from your WordPress dashboard
 
-**Report Bugs & Contribution:**  
+**Report Bugs & Contribution:**
 Do you want to report mihanpanel bugs and contribute in plugin development?  Join us at [MihanPanel Github Page](https://github.com/mihanwp/MihanPanel-Lite "MihanPanel on github")
 
 == Screenshots ==
@@ -62,9 +62,17 @@ Do you want to report mihanpanel bugs and contribute in plugin development?  Joi
 
 == Changelog ==
 
+= 8.1 =
+Fixed an HTML error in the iThemes Security plugin
+Solve the problem of sending SMS in some SMS systems (Pro Version)
+New license activation system (Pro Version)
+
+= 8 =
+Optimize and restructure plugin code
+Compatibility with a simple unique WordPress link
+
 = 7.5 =
 Handle modify and delete tabs & user fields with ajax.
 
 = 7.4 =
-
 Lite version released by cloning pro version.

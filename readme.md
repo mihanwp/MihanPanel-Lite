@@ -62,9 +62,17 @@ Do you want to report mihanpanel bugs and contribute in plugin development?  Joi
 
 == Changelog ==
 
+= 8.1 =
+Fixed an HTML error in the iThemes Security plugin
+Solve the problem of sending SMS in some SMS systems (Pro Version)
+New license activation system (Pro Version)
+
+= 8 =
+Optimize and restructure plugin code
+Compatibility with a simple unique WordPress link
+
 = 7.5 =
 Handle modify and delete tabs & user fields with ajax.
 
 = 7.4 =
-
 Lite version released by cloning pro version.
