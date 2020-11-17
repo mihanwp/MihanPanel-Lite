@@ -40,6 +40,11 @@
             <p class="description"><span><?php esc_html_e("Select user panel page", "mihanpanel")?></span></p>
         </div>
         <div class="mp_option_single">
+            <label for="mwpl_panel_theme"><?php esc_html_e("Panel Theme", "mihanpanel"); ?></label>
+            <?php \mihanpanel\app\handle_view::option_panel_field_panel_theme(); ?>
+            <p class="description"><span><?php esc_html_e("Choose User Panel Theme", "mihanpanel")?></span></p>
+        </div>
+        <div class="mp_option_single">
             <label for="mp_panelfont"><?php esc_html_e("Panel Font Family", "mihanpanel"); ?></label>
             <?php \mihanpanel\app\handle_view::option_panel_field_panel_font(); ?>
             <p class="description"><span><?php esc_html_e("User Panel Font Family", "mihanpanel")?></span></p>

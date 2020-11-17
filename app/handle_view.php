@@ -323,6 +323,11 @@ class handle_view
         $render_method = apply_filters('mwpl_option_panel/render_method/use_mihan_avatar', []);
         self::handle_option_panel_render_method($render_method);
     }
+    static function option_panel_field_panel_theme()
+    {
+        $render_method = apply_filters('mwpl_option_panel/render_method/panel_theme', []);
+        self::handle_option_panel_render_method($render_method);
+    }
     static function option_panel_field_panel_font()
     {
         $render_method = apply_filters('mwpl_option_panel/render_method/panel_font', []);
