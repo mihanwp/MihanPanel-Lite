@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MihanPanel\n"
-"POT-Creation-Date: 2020-11-14 16:58+0330\n"
-"PO-Revision-Date: 2020-11-14 16:58+0330\n"
+"POT-Creation-Date: 2020-11-17 22:17+0330\n"
+"PO-Revision-Date: 2020-11-17 22:17+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -309,11 +309,11 @@ msgstr "تیکت های شما"
 msgid "Pro Version"
 msgstr "نسخه‌ی حرفه‌ای"
 
-#: app/handle_view.php:456
+#: app/handle_view.php:461
 msgid "Auto confirm phone number after user register"
 msgstr "فعالسازی شماره تلفن بعد از ثبت نام به صورت اتوماتیک"
 
-#: app/handle_view.php:460
+#: app/handle_view.php:465
 msgid "User can change phone number"
 msgstr "کاربر میتواند شماره تلفن را تغییر دهد"
 
@@ -812,66 +812,74 @@ msgid "Select user panel page"
 msgstr "برگه‌ی پنل کاربری را انتخاب کنید"
 
 #: views/admin/panel-section/panel.php:43
+msgid "Panel Theme"
+msgstr "تم پنل کاربری"
+
+#: views/admin/panel-section/panel.php:45
+msgid "Choose User Panel Theme"
+msgstr "تم پنل کاربری را انتخاب کنید"
+
+#: views/admin/panel-section/panel.php:48
 msgid "Panel Font Family"
 msgstr "فونت پنل کاربری"
 
-#: views/admin/panel-section/panel.php:45
+#: views/admin/panel-section/panel.php:50
 msgid "User Panel Font Family"
 msgstr "فونت استفاده شده برای پنل کاربری و صفحه ورود و عضویت"
 
-#: views/admin/panel-section/panel.php:48
+#: views/admin/panel-section/panel.php:53
 msgid "Off Code"
 msgstr "کد تخفیف"
 
-#: views/admin/panel-section/panel.php:50
+#: views/admin/panel-section/panel.php:55
 msgid "Off Code that you want to show in user panel"
 msgstr "کد تخفیفی که میخواید در پنل کاربری نمایش داده شود"
 
-#: views/admin/panel-section/panel.php:53
+#: views/admin/panel-section/panel.php:58
 msgid "Off Code percentage"
 msgstr "درصد کد تخفیف"
 
-#: views/admin/panel-section/panel.php:55
+#: views/admin/panel-section/panel.php:60
 msgid "Off Code percentage will show in user panel. ex => 25%"
 msgstr "درصد کد تخفیف در پنل کاربری نشان داده خواهد شد. مثلا بنویسید: 25 درصدی"
 
-#: views/admin/panel-section/panel.php:57
+#: views/admin/panel-section/panel.php:62
 msgid "Color scheme"
 msgstr "رنگ بندی"
 
-#: views/admin/panel-section/panel.php:59
+#: views/admin/panel-section/panel.php:64
 msgid "Sidebar background color in panel"
 msgstr "رنگ پس زمینه نوار کناری در پنل کاربری"
 
-#: views/admin/panel-section/panel.php:63
+#: views/admin/panel-section/panel.php:68
 msgid "Sidebar link color that show in panel"
 msgstr "رنگ لینک ها در نوار کناری پنل کاربری"
 
-#: views/admin/panel-section/panel.php:66
+#: views/admin/panel-section/panel.php:71
 msgid "Dashboard Widgets"
 msgstr "ویجت‌های داشبورد"
 
-#: views/admin/panel-section/panel.php:68
+#: views/admin/panel-section/panel.php:73
 msgid "Hide register day count widget"
 msgstr "مخفی کردن ویجت روز‌هایی که عضو هستید"
 
-#: views/admin/panel-section/panel.php:72
+#: views/admin/panel-section/panel.php:77
 msgid "Hide Comment widget"
 msgstr "مخفی کردن ویجت تعداد نظرات"
 
-#: views/admin/panel-section/panel.php:76
+#: views/admin/panel-section/panel.php:81
 msgid "Hide Woocommerce widget"
 msgstr "مخفی کردن ویجت ووکامرس"
 
-#: views/admin/panel-section/panel.php:80
+#: views/admin/panel-section/panel.php:85
 msgid "Hide EDD widget"
 msgstr "مخفی کردن ویجت EDD"
 
-#: views/admin/panel-section/panel.php:84
+#: views/admin/panel-section/panel.php:89
 msgid "Hide Awesome Support widget"
 msgstr "مخفی کردن ویجت افزونه تیکت"
 
-#: views/admin/panel-section/panel.php:87
+#: views/admin/panel-section/panel.php:92
 msgid "Roles who can't use admin panel"
 msgstr "نقش های کاربری که اجازه ی ورود به پنل مدیریت را ندارند"
 
@@ -1063,6 +1071,15 @@ msgstr "خطوط هوایی جدید"
 
 #~ msgid "Dark"
 #~ msgstr "تیره"
+
+#~ msgid "Default"
+#~ msgstr "پیشفرض"
+
+#~ msgid "Modern"
+#~ msgstr "مدرن"
+
+#~ msgid "3D"
+#~ msgstr "سه بعدی"
 
 #~ msgid "IRANSans"
 #~ msgstr "ایران سنس"
