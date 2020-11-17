@@ -229,7 +229,7 @@ if ( defined( 'ABSPATH' ) && ! class_exists( 'Rename_WP_Login' ) ) {
 			) {
 				wp_safe_redirect( $this->user_trailingslashit( $this->new_login_url() ) . ( ! empty( $_SERVER['QUERY_STRING'] ) ? '?' . $_SERVER['QUERY_STRING'] : '' ) );
 				die;
-			} elseif ( $this->wp_login_php ) {
+			} elseif ( $this->wp_login_php && (!isset($_GET['action']) || $_GET['action'] !== 'postpass') ) {
 				if (
 					( $referer = wp_get_referer() ) &&
 					strpos( $referer, 'wp-activate.php' ) !== false &&
@@ -272,7 +272,7 @@ if ( defined( 'ABSPATH' ) && ! class_exists( 'Rename_WP_Login' ) ) {
 			return $this->filter_wp_login_php( $location );
 		}
 		public function filter_wp_login_php( $url, $scheme = null ) {
-			if ( strpos( $url, 'wp-login.php' ) !== false ) {
+			if ( strpos( $url, 'wp-login.php' ) !== false && strpos($url, 'action=postpass') === false) {
 				if ( is_ssl() ) {
 					$scheme = 'https';
 				}
