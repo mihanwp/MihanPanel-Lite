@@ -63,13 +63,13 @@ class profile extends \WP_Widget
                         </li>
                     <?php } else { ?>
                         <li>
-                            <a href="<?php echo wp_login_url();?>?redirect_to='<?php echo \mihanpanel\app\tools::get_current_page_url(); ?>'">
+                            <a href="<?php echo esc_url(add_query_arg(['redirect_to' => \mihanpanel\app\tools::get_current_page_url()], wp_login_url())) ?>">
                                 <i class="fa fa-unlock-alt"></i>
                                 <p><?php _e("Login", "mihanpanel"); ?></p>
                             </a>
                         </li>
                         <li>
-                            <a href="<?php echo wp_login_url(); ?>?action=register">
+                            <a href="<?php echo esc_url(add_query_arg(['action' => 'register'], wp_login_url())); ?>">
                                 <i class="fa fa-user-plus"></i>
                                 <p><?php _e("Register", "mihanpanel"); ?></p>
                             </a>
