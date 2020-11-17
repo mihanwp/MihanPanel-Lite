@@ -13,7 +13,7 @@ class profile
         // set current user id
         self::$_uid = get_current_user_id();
         self::check_nonce($form_data['posts']['mwpl_nonce']);
-        do_action('mwpl_panel/profile/after_submit_form', self::$_uid);
+        do_action('mwpl_panel/profile/after_submit_form', self::$_uid, $form_data);
         if(isset($form_data['posts']['general']))
         {
             self::user_data_handler($form_data['posts']['general']);
@@ -84,7 +84,7 @@ class profile
                 }
             }else {
                 $value = $fields_data[$updatingfield->slug];
-                $value = tools::sanitize_value('value', 'type');
+                $value = tools::sanitize_value($value, $updatingfield->type);
                 update_user_meta(self::$_uid, $updatingfield->slug, $value);
             }
         }
