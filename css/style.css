@@ -1101,6 +1101,10 @@ output {
     .mihanpanelpanel .mpsidebar .mpavatar {
         width: 30% !important;
     }
+    .mihanpanelpanel .main-panel
+    {
+        padding-top: 60px !important;
+    }
     .mihanpanelpanel .mp_menu_bars {
         margin: 5px 20px !important;
         padding: 10px 5px !important;

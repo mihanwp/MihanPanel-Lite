@@ -172,7 +172,7 @@ class assets
             html body .mihanpanelpanel .nocss *,
                 .mihanpanelpanel *
                 {
-                    font-family: {$font_name};
+                    font-family: {$font_name} !important;
                 }
         ";
         $profile_widget_style = "

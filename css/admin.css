@@ -41,7 +41,7 @@
   box-shadow:0 0 40px rgb(26 78 171 / 10%);
   border:1px solid #ddd;
   line-height:25px;
-  padding:15px;
+  box-sizing: content-box;
 }
 .mihanpanel-admin h2{
 	font-size:26px !important;
