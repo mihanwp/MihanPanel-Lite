@@ -62,6 +62,14 @@ Do you want to report mihanpanel bugs and contribute in plugin development?  Joi
 
 == Changelog ==
 
+= 8.2 =
+A new modern theme was added to the user panel. (pro version)
+A new 3D theme has been added to the user panel. (pro version)
+Solve the redirect problem after entering the post password
+Solve the problem of login address and profile in the widget
+Solve the problem of sanitizing fields in saving profiles
+Solve the problem of changing avatars on some websites (pro version)
+
 = 8.1 =
 Fixed an HTML error in the iThemes Security plugin
 Solve the problem of sending SMS in some SMS systems (Pro Version)
