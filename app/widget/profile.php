@@ -46,7 +46,7 @@ class profile extends \WP_Widget
                         $tablename = $wpdb->prefix . 'mihanpaneltabs';
                         $menus = $wpdb->get_results("SELECT * FROM $tablename ORDER BY priority ASC");
                         foreach ($menus as $menu):
-                            $tab_link = $menu->link ? esc_url($menu->link) : esc_url(add_query_arg(['tab' => $menu->id]));
+                            $tab_link = $menu->link ? esc_url($menu->link) : esc_url(add_query_arg(['tab' => $menu->id], $panel_link));
                         ?>
                             <li>
                                 <a class="mwtaba" href="<?php echo $tab_link; ?>">
