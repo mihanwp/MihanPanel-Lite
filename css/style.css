@@ -1123,7 +1123,7 @@ output {
         border-radius: 0  !important;
     }
     .mihanpanelpanel .mpsidebar.mp_rtl {
-        right: -100% !important;
+        right: -110% !important;
     }
     .mihanpanelpanel .mpsidebar.mp_rtl.mp_open {
         right: 0 !important;
@@ -1216,72 +1216,10 @@ html body .mihanpanelpanel .alert {
 {
 	padding: 5px !important;
 }
-.mihanpanelpanel #avatar_field .alert
-{
-    display: none;
-    animation-name: show_alert !important;
-    animation-duration: 1s !important;
-}
-@keyframes show_alert
-{
-    0% {
-        padding: 0 30px !important;
-        opacity: 0 !important;
-    }
-    100%{
-        padding: 15px 30px !important;
-    }
-}
-.mihanpanelpanel .mw_avatar_section
-{
-    position: relative !important;
-}
-.mihanpanelpanel .mw_avatar_section #user_avatar_wrapper
-{
-    display: inline-block !important;
-    width: 100px !important;
-    height: 100px !important;
-    overflow: hidden !important;
-    border-radius: 10px !important;
-    box-shadow: 0 0px 10px 0 #d4d4d4 !important;
-}
-.mihanpanelpanel .mw_avatar_section img#user_avatar_display
-{
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-}
-.mihanpanelpanel .mw_avatar_section label#choose_avatar
-{
-    display: inline-block !important;
-    background-image: radial-gradient(circle 502px at 2.7% 23.7%, rgba(142, 5, 254, 1) 0%, rgba(33, 250, 214, 1) 99.6%) !important;
-    color: white !important;
-    padding: 10px !important;
-    border-radius: 5px !important;
-    cursor: pointer !important;
-    position: absolute !important;
-    margin: 0 20px !important;
-    right:100px !important;
-    width:100% !important;
-    text-align:center !important;
-}
 .mihanpanelpanel input[type=text]:disabled
 {
     background: #e4e4e4  !important;
     color: #717171  !important;
-}
-input#user_avatar{
-  display:none !important;
-}
-input#remove_user_avatar{
-  right: 120px !important;
-  top: 0px !important;
-  position: absolute !important;
-  width: 100% !important;
-  padding:0 !important;
-  text-align: center;
-  background: #fb5353 !important;
-  color: white !important;
 }
 .mihanpanelpanel .row{
   display: block !important;
