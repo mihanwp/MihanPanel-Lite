@@ -52,3 +52,20 @@
 .mihanpanel-profile-widget.mp_ltr_widget .mp-nav-tabs-mpwrapper .mp-nav-tabs li p{
   padding-left: 40px;
 }
+.mihanpanel-profile-widget i.fa-fas
+{
+  font-family: 'Font Awesome 5 Free' !important;
+  font-weight: 900;
+  font-style: normal;
+}
+.mihanpanel-profile-widget i.fa-far
+{
+  font-family: 'Font Awesome 5 Free' !important;
+  font-weight: 900;
+  font-style: normal;
+}
+.mihanpanel-profile-widget i.fa-fab
+{
+  font-family: 'Font Awesome 5 Brands' !important;
+  font-style: normal;
+}

@@ -50,7 +50,7 @@ class profile extends \WP_Widget
                         ?>
                             <li>
                                 <a class="mwtaba" href="<?php echo $tab_link; ?>">
-                                    <i class="<?php echo esc_attr($menu->icon); ?>"></i>
+                                    <?php \mihanpanel\app\presenter\tabs_menu::render_tab_item_icon($menu->icon); ?>
                                     <p><?php echo esc_html($menu->name); ?></p>
                                 </a>
                             </li>
@@ -63,7 +63,7 @@ class profile extends \WP_Widget
                         </li>
                     <?php } else { ?>
                         <li>
-                            <a href="<?php echo esc_url(add_query_arg(['redirect_to' => \mihanpanel\app\tools::get_current_page_url()], wp_login_url())) ?>">
+                            <a href="<?php echo esc_url(wp_login_url(\mihanpanel\app\tools::get_current_page_url())) ?>">
                                 <i class="fa fa-unlock-alt"></i>
                                 <p><?php _e("Login", "mihanpanel"); ?></p>
                             </a>

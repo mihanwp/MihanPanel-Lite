@@ -32,7 +32,7 @@ class sundry
     }
     static function change_reset_pass_url()
     {
-        $reset_pass_url = \mihanpanel\app\options::get_login_url('?action=lostpassword');
+        $reset_pass_url = \mihanpanel\app\options::get_login_url(['action' => 'lostpassword']);
         return $reset_pass_url;
     }
     static function add_pass_field_to_register_form()
@@ -110,7 +110,12 @@ class sundry
         global $wpdb;
         $tablename = $wpdb->prefix . 'mihanpanelfields';
         $fields = $wpdb->get_results("SELECT * From $tablename order by priority");
-        foreach ($fields as $field):?>
+        foreach ($fields as $field):
+            if(!apply_filters('mwpl_user_fields_render_permission', true, $field, 'register-form'))
+            {
+                continue;
+            }
+        ?>
             <p>
                 <label for="<?php echo esc_attr($field->slug)?>"><?php echo esc_html($field->label); ?></label>
                 <?php user_fields::render_field('register-form', $field, null, ['classes' => 'input']); ?>
@@ -147,6 +152,10 @@ class sundry
     {
         if($field->required == 'yes' && empty($_POST['mw_fields'][$field->slug]))
         {
+            if(!apply_filters('mwpl_user_fields_render_permission', true, $field, 'register-form'))
+            {
+                return true;
+            }
             $errors->add($field->slug . '_error', $field->label . __(' Should not be empty!', 'mihanpanel'));
             return false;
         }

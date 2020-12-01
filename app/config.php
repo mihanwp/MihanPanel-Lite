@@ -181,7 +181,7 @@ class config
 
     public static function filter_register_url($url)
     {
-        $login_url = options::get_login_url('?action=register');
+        $login_url = options::get_login_url(['action' => 'register']);
         return $login_url;
     }
     
@@ -193,7 +193,7 @@ class config
 
         $validate_res = users::validate_activation_code($activation_code);
         $state = $validate_res ? 'completed' : 'error';
-        wp_redirect(options::get_login_url('?activation_status=' . $state));
+        wp_redirect(options::get_login_url(['activation_status' => $state]));
         exit();
     }
 
@@ -252,7 +252,7 @@ class config
         if (users::get_activation_code($user->id))
         {
             wp_logout();
-            wp_redirect(options::get_login_url('?action=inactive_account'));
+            wp_redirect(options::get_login_url(['action' => 'inactive_account']));
             exit();
         }
     }

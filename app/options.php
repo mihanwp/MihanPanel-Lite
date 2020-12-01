@@ -45,11 +45,13 @@ class options
         $option = get_option('rwl_page');
         return $option ? $option : 'login';
     }
-    public static function get_login_url($location = false)
+    public static function get_login_url($query_args=[], $redirect=false)
     {
-        $slug = self::get_login_slug();
-        $url = $location ? network_site_url($slug . '/' . $location) : network_site_url($slug);
-        return $url;
+        if(!$query_args || !is_array($query_args))
+        {
+            return esc_url(wp_login_url($redirect));
+        }
+        return esc_url(add_query_arg($query_args, wp_login_url($redirect)));
     }
     public static function get_logo()
     {
@@ -117,6 +119,10 @@ class options
         $option = get_option('mp_change_account_status_email_content');
         return $option;
     }
+    static function disable_mihanpanel_fonts()
+    {
+        return get_option('mwpl_disable_font_family');
+    }
     public static function register_settings()
     {
         register_setting('mihanpanelsettings', 'rwl_page');
@@ -126,6 +132,7 @@ class options
         register_setting('mihanpanelsettings', 'mp_logo_height');
         register_setting('mihanpanelsettings', 'mp_bg_image');
         register_setting('mihanpanelsettings', 'login_button_color');
+        register_setting('mihanpanelsettings-panel', 'mwpl_disable_font_family');
         register_setting('mihanpanelsettings-panel', 'mp_disable_wordpress_bar');
         register_setting('mihanpanelsettings-panel', 'mp_use_mihan_avatar');
         register_setting('mihanpanelsettings-panel', 'mp_panelslug');

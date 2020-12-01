@@ -145,7 +145,12 @@ class admin_menu
                         <td style="display:none"><input name="id" value="<?php echo esc_attr($menu->id); ?>"/></td>
                         <td><input name="name" value="<?php echo esc_attr($menu->name); ?>"/></td>
                         <td><input type="text" name="link_or_content" value="<?php echo esc_attr($link_or_content); ?>"></td>
-                        <td><input class="fontawesomepicker-<?php echo esc_attr($menu->id); ?>" name="icon" value="<?php echo esc_attr($menu->icon); ?>"/></td>
+                        <td class="field-icon-col">
+                            <?php do_action('mwpl_option_panel/tabs_menu/edit_section/before_render_action_buttons'); ?>
+                            <span tooltip="<?php esc_attr_e('FontAwesome', 'mihanpanel')?>" class="mwpl_action_btn fontawesome-handle">FA</span>
+                            <span class="preview_icon"><?php \mihanpanel\app\presenter\tabs_menu::render_tab_item_icon($menu->icon); ?></span>
+                            <input type="hidden" class="field-icon-<?php echo esc_attr($menu->id); ?>" name="icon" value="<?php echo esc_attr($menu->icon); ?>"/>
+                        </td>
                         <th><input class="mihanpanelremove" type="submit" name="delete" value="x"/></th>
                     </tr>
                 <?php endforeach;?>

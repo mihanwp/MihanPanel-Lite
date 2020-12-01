@@ -817,3 +817,83 @@ font-weight: bold;
     color:#F4511E;
     text-decoration:none;
 }
+.mihanpanel-admin .field-icon-col
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.mihanpanel-admin .mwpl_action_btn
+{
+    background-color: rgb(86, 86, 214);
+    position: relative;
+    width: 70px;
+    cursor: pointer;
+    text-align: center;
+    padding: 0 !important;
+    height: 25px;
+    line-height: 25px;
+    border-radius: 5px;
+    color: white;
+}
+.mihanpanel-admin .mwpl_action_btn::after
+{
+    font-family: iranyekan !important;
+    content: attr(tooltip);
+    display: block;
+    background-color: #414141;
+    background-color: rgb(86, 86, 214, .5);
+    color: rgb(21, 21, 88);
+    position: absolute;
+    left:50%;
+    top: 115%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    padding: 0 5px;
+    height: 25px;
+    line-height: 25px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .2s;
+}
+.mihanpanel-admin .mwpl_action_btn:hover::after
+{
+    visibility: visible;
+    opacity: .8;
+}
+.mihanpanel-admin .preview_icon
+{
+    width: 50px;
+    height: 50px;
+    background-color: #eaeaea;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.mihanpanel-admin .preview_icon > i
+{
+    font-style: normal;
+    font-size: 30px;
+}
+.mihanpanel-admin .preview_icon > img
+{
+    max-width: 100%;
+    height: auto;
+}
+.mihanpanel-admin .mw_icon.fa-far
+{
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 400;
+}
+.mihanpanel-admin .mw_icon.fa-fas
+{
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+.mihanpanel-admin .mw_icon.fa-fab
+{
+    font-family: 'Font Awesome 5 Brands';
+    font-weight: 400;
+}

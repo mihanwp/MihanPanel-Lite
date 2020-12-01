@@ -5,7 +5,7 @@
         settings_fields( 'mihanpanelsettings-panel' );
         ?>
         <div class="mp_option_single">
-            <label><?php esc_html_e("Hide topbar", "mihanpanel"); ?></label>
+            <label for="mp_disable_wordpress_bar"><?php esc_html_e("Hide topbar", "mihanpanel"); ?></label>
             <input style="text-align:left;direction:ltr" id="mp_disable_wordpress_bar" type="checkbox" name="mp_disable_wordpress_bar" value="1" <?php checked( '1', get_option( 'mp_disable_wordpress_bar' ) );?> />
             <p class="description"><?php esc_html_e("Activate this if you want to hide wp topbar from your site for users", "mihanpanel"); ?></p>
         </div>
@@ -13,6 +13,11 @@
             <label for="mp_use_mihan_avatar"><?php esc_html_e("Use mihan avatar", "mihanpanel"); ?></label>
             <?php \mihanpanel\app\handle_view::option_panel_field_use_mihan_avatar(); ?>
             <p class="description"><?php esc_html_e("User can choose avatar image in panel", 'mihanpanel');?></p>
+        </div>
+        <div class="mp_option_single">
+            <label for="mwpl_disable_font_family"><?php esc_html_e("Don't use MihanPanel fonts", "mihanpanel"); ?></label>
+            <input style="text-align:left;direction:ltr" id="mwpl_disable_font_family" type="checkbox" name="mwpl_disable_font_family" value="1" <?php checked( '1', \mihanpanel\app\options::disable_mihanpanel_fonts() );?> />
+            <p class="description"><?php esc_html_e("Use theme or other plugins fonts instead of MihanPanel fonts.", "mihanpanel"); ?></p>
         </div>
         <div class="mp_option_single">
             <label><?php esc_html_e("User panel page", "mihanpanel"); ?></label>

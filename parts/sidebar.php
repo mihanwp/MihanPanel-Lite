@@ -26,12 +26,12 @@ else
 $tablename = $wpdb->prefix . 'mihanpaneltabs';
 $menus = $wpdb->get_results("SELECT * FROM $tablename ORDER BY priority ASC");
 foreach ($menus as $menu)
-{ ?>
+{
+  $item_url = $menu->link == null ? esc_url(add_query_arg(['tab' => $menu->id], remove_query_arg(['order_id', 'order_details']))) : esc_url($menu->link);
+  ?>
   <li <?php echo $tab_id == $menu->id ? 'class="active"' : false; ?>>
-      <a class="mwtaba" <?php if ($menu->link == null): ?>href="<?php echo esc_url(add_query_arg(['tab' => $menu->id], remove_query_arg(['order_id', 'order_details']))); ?>"<?php
-    else: ?>href="<?php echo esc_url($menu->link); ?>" target="_blank" <?php
-    endif; ?>>
-          <i class="<?php echo esc_attr($menu->icon); ?>"></i>
+      <a class="mwtaba" href="<?php echo $item_url; ?>" <?php echo $menu->link ? 'target="_blank"' : ''; ?>>
+          <?php \mihanpanel\app\presenter\tabs_menu::render_tab_item_icon($menu->icon); ?>
           <p><?php echo esc_html($menu->name); ?></p>
       </a>
   </li>

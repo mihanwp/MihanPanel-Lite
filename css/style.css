@@ -639,16 +639,25 @@ output {
     text-align: center !important;
     color: #a9afbb
 }
-.mihanpanelpanel .mpsidebar .nav i.fa-fas {
+.mihanpanelpanel .mpsidebar .nav i.fa-fas,
+.mihanpanel-profile-widget i.fa-fas
+{
   font-family: 'Font Awesome 5 Free' !important;
   font-weight: 900;
+  font-style: normal;
 }
-.mihanpanelpanel .mpsidebar .nav i.fa-far {
+.mihanpanelpanel .mpsidebar .nav i.fa-far,
+.mihanpanel-profile-widget i.fa-far
+{
   font-family: 'Font Awesome 5 Free' !important;
   font-weight: 900;
+  font-style: normal;
 }
-.mihanpanelpanel .mpsidebar .nav i.fa-fab {
+.mihanpanelpanel .mpsidebar .nav i.fa-fab,
+.mihanpanel-profile-widget i.fa-fab
+{
   font-family: 'Font Awesome 5 Brands' !important;
+  font-style: normal;
 }
 .mihanpanelpanel .off-canvas-sidebar[data-color=purple] .nav li.active a,
 .mihanpanelpanel .mpsidebar[data-color=purple] .nav li.active a {
@@ -1196,7 +1205,7 @@ html body .mihanpanelpanel .alert {
 .mihanpanelpanel .mp-nav-tabs li a {
     text-decoration: none !important;
     padding:0 !important;
-    display:block !important;
+    display:flex;
 }
 .mihanpanelpanel .mp-nav-tabs li {
     margin:5px 0 0 0 !important;

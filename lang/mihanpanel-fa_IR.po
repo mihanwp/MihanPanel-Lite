@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MihanPanel\n"
-"POT-Creation-Date: 2020-11-23 02:21+0330\n"
-"PO-Revision-Date: 2020-11-23 02:21+0330\n"
+"POT-Creation-Date: 2020-12-01 12:39+0330\n"
+"PO-Revision-Date: 2020-12-01 12:39+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -34,7 +34,7 @@ msgstr "میهن پنل"
 msgid "Login & Register"
 msgstr "ورود و عضویت"
 
-#: app/admin_menu.php:26 app/hooks.php:137
+#: app/admin_menu.php:26 app/hooks.php:136
 msgid "User Panel"
 msgstr "پنل کاربری"
 
@@ -95,31 +95,35 @@ msgstr "عنوان منو"
 msgid "Link / Shortcode"
 msgstr "لینک / کد کوتاه"
 
-#: app/admin_menu.php:119 app/admin_menu.php:161 app/admin_menu.php:199
+#: app/admin_menu.php:119 app/admin_menu.php:166 app/admin_menu.php:204
 msgid "Icon"
 msgstr "آیکون"
 
-#: app/admin_menu.php:154
+#: app/admin_menu.php:150
+msgid "FontAwesome"
+msgstr "FontAwesome"
+
+#: app/admin_menu.php:159
 msgid "Create new item"
 msgstr "ایجاد مورد جدید"
 
-#: app/admin_menu.php:159 app/admin_menu.php:165
+#: app/admin_menu.php:164 app/admin_menu.php:170
 msgid "Menu Title"
 msgstr "عنوان منو"
 
-#: app/admin_menu.php:160
+#: app/admin_menu.php:165
 msgid "Content"
 msgstr "محتوا"
 
-#: app/admin_menu.php:168
+#: app/admin_menu.php:173
 msgid "Choose"
 msgstr "انتخاب"
 
-#: app/admin_menu.php:169
+#: app/admin_menu.php:174
 msgid "Link to other page"
 msgstr "پیوند به صفحه دیگر"
 
-#: app/admin_menu.php:170
+#: app/admin_menu.php:175
 msgid "Shortcode"
 msgstr "کد کوتاه"
 
@@ -233,7 +237,7 @@ msgstr "فعال"
 msgid "Inactive"
 msgstr "غیرفعال"
 
-#: app/emwidg/emwidg_mihanpanel.php:26 app/hooks.php:157
+#: app/emwidg/emwidg_mihanpanel.php:26 app/hooks.php:156
 msgid "Mihan Panel"
 msgstr "میهن پنل"
 
@@ -245,29 +249,29 @@ msgstr "تنظیمات با موفقیت به روز شد!"
 msgid "Please fill all the fields"
 msgstr "لطفا تمام زمینه ها را پر کنید"
 
-#: app/form/admin_user_fields.php:69 app/form/admin_user_fields.php:121
+#: app/form/admin_user_fields.php:65 app/form/admin_user_fields.php:124
 msgid "Field Id"
 msgstr "شناسه فیلد"
 
-#: app/form/admin_user_fields.php:70 app/form/admin_user_fields.php:122
+#: app/form/admin_user_fields.php:66 app/form/admin_user_fields.php:125
 msgid "Title"
 msgstr "عنوان"
 
-#: app/form/admin_user_fields.php:71 app/form/admin_user_fields.php:94
-#: app/form/admin_user_fields.php:123 app/form/admin_user_fields.php:140
+#: app/form/admin_user_fields.php:67 app/form/admin_user_fields.php:100
+#: app/form/admin_user_fields.php:126 app/form/admin_user_fields.php:153
 #: parts/edit-profile.php:91
 msgid "Required"
 msgstr "الزامی"
 
-#: app/form/admin_user_fields.php:72 app/form/admin_user_fields.php:124
+#: app/form/admin_user_fields.php:68 app/form/admin_user_fields.php:127
 msgid "Type"
 msgstr "نوع"
 
-#: app/form/admin_user_fields.php:95 app/form/admin_user_fields.php:141
+#: app/form/admin_user_fields.php:101 app/form/admin_user_fields.php:154
 msgid "Optional"
 msgstr "اختیاری"
 
-#: app/form/admin_user_fields.php:148
+#: app/form/admin_user_fields.php:162
 msgid "Save"
 msgstr "ذخیره"
 
@@ -386,7 +390,7 @@ msgstr "رمز عبور"
 msgid "Password must not empty"
 msgstr "کلمه عبور نباید خالی باشد"
 
-#: app/sundry.php:150
+#: app/sundry.php:159
 msgid " Should not be empty!"
 msgstr " نباید خالی باشد!"
 
@@ -800,86 +804,94 @@ msgid "User can choose avatar image in panel"
 msgstr "کاربر میتواند آواتار خود را در پنل کاربری تغییر دهد"
 
 #: views/admin/panel-section/panel.php:18
+msgid "Don't use MihanPanel fonts"
+msgstr "از فونت‌های میهن پنل استفاده نکن"
+
+#: views/admin/panel-section/panel.php:20
+msgid "Use theme or other plugins fonts instead of MihanPanel fonts."
+msgstr "استفاده از فونت‌های قالب یا پلاگین‌های دیگر به جای فونت‌های میهن پنل."
+
+#: views/admin/panel-section/panel.php:23
 msgid "User panel page"
 msgstr "صفحه پنل کاربری"
 
-#: views/admin/panel-section/panel.php:37
+#: views/admin/panel-section/panel.php:42
 msgid "No any page exists"
 msgstr "هیچ برگه‌ای وجود ندارد"
 
-#: views/admin/panel-section/panel.php:40
+#: views/admin/panel-section/panel.php:45
 msgid "Select user panel page"
 msgstr "برگه‌ی پنل کاربری را انتخاب کنید"
 
-#: views/admin/panel-section/panel.php:43
+#: views/admin/panel-section/panel.php:48
 msgid "Panel Theme"
 msgstr "تم پنل کاربری"
 
-#: views/admin/panel-section/panel.php:45
+#: views/admin/panel-section/panel.php:50
 msgid "Choose User Panel Theme"
 msgstr "تم پنل کاربری را انتخاب کنید"
 
-#: views/admin/panel-section/panel.php:48
+#: views/admin/panel-section/panel.php:53
 msgid "Panel Font Family"
 msgstr "فونت پنل کاربری"
 
-#: views/admin/panel-section/panel.php:50
+#: views/admin/panel-section/panel.php:55
 msgid "User Panel Font Family"
 msgstr "فونت استفاده شده برای پنل کاربری و صفحه ورود و عضویت"
 
-#: views/admin/panel-section/panel.php:53
+#: views/admin/panel-section/panel.php:58
 msgid "Off Code"
 msgstr "کد تخفیف"
 
-#: views/admin/panel-section/panel.php:55
+#: views/admin/panel-section/panel.php:60
 msgid "Off Code that you want to show in user panel"
 msgstr "کد تخفیفی که میخواید در پنل کاربری نمایش داده شود"
 
-#: views/admin/panel-section/panel.php:58
+#: views/admin/panel-section/panel.php:63
 msgid "Off Code percentage"
 msgstr "درصد کد تخفیف"
 
-#: views/admin/panel-section/panel.php:60
+#: views/admin/panel-section/panel.php:65
 msgid "Off Code percentage will show in user panel. ex => 25%"
 msgstr "درصد کد تخفیف در پنل کاربری نشان داده خواهد شد. مثلا بنویسید: 25 درصدی"
 
-#: views/admin/panel-section/panel.php:62
+#: views/admin/panel-section/panel.php:67
 msgid "Color scheme"
 msgstr "رنگ بندی"
 
-#: views/admin/panel-section/panel.php:64
+#: views/admin/panel-section/panel.php:69
 msgid "Sidebar background color in panel"
 msgstr "رنگ پس زمینه نوار کناری در پنل کاربری"
 
-#: views/admin/panel-section/panel.php:68
+#: views/admin/panel-section/panel.php:73
 msgid "Sidebar link color that show in panel"
 msgstr "رنگ لینک ها در نوار کناری پنل کاربری"
 
-#: views/admin/panel-section/panel.php:71
+#: views/admin/panel-section/panel.php:76
 msgid "Dashboard Widgets"
 msgstr "ویجت‌های داشبورد"
 
-#: views/admin/panel-section/panel.php:73
+#: views/admin/panel-section/panel.php:78
 msgid "Hide register day count widget"
 msgstr "مخفی کردن ویجت روز‌هایی که عضو هستید"
 
-#: views/admin/panel-section/panel.php:77
+#: views/admin/panel-section/panel.php:82
 msgid "Hide Comment widget"
 msgstr "مخفی کردن ویجت تعداد نظرات"
 
-#: views/admin/panel-section/panel.php:81
+#: views/admin/panel-section/panel.php:86
 msgid "Hide Woocommerce widget"
 msgstr "مخفی کردن ویجت ووکامرس"
 
-#: views/admin/panel-section/panel.php:85
+#: views/admin/panel-section/panel.php:90
 msgid "Hide EDD widget"
 msgstr "مخفی کردن ویجت EDD"
 
-#: views/admin/panel-section/panel.php:89
+#: views/admin/panel-section/panel.php:94
 msgid "Hide Awesome Support widget"
 msgstr "مخفی کردن ویجت افزونه تیکت"
 
-#: views/admin/panel-section/panel.php:92
+#: views/admin/panel-section/panel.php:97
 msgid "Roles who can't use admin panel"
 msgstr "نقش های کاربری که اجازه ی ورود به پنل مدیریت را ندارند"
 
@@ -1026,6 +1038,9 @@ msgstr "خطوط هوایی جدید"
 #~ msgid "%1$s: Has error in upload file."
 #~ msgstr "%1$s: حطایی در آپلود فایل وجود دارد."
 
+#~ msgid "Upload"
+#~ msgstr "آپلود تصویر"
+
 #~ msgid "Woocommerce Fields"
 #~ msgstr "فیلد‌های ووکامرس"
 
@@ -1058,6 +1073,15 @@ msgstr "خطوط هوایی جدید"
 
 #~ msgid "Field id"
 #~ msgstr "شناسه فیلد"
+
+#~ msgid "Where show field"
+#~ msgstr "کجا نمایش داده شود"
+
+#~ msgid "Profile & Register"
+#~ msgstr "ویرایش پروفایل و ثبت نام"
+
+#~ msgid "Just in profile"
+#~ msgstr "فقط در ویرایش پروفایل"
 
 #~ msgid ""
 #~ "<p>License is not active! Please activate it from <strong>Plugins > Mihan "
@@ -1452,9 +1476,6 @@ msgstr "خطوط هوایی جدید"
 #~ msgstr ""
 #~ "این url و یا نامک باید با صفحه پنل کاربری برابر باشد. توصیه می کنیم آن را "
 #~ "تغییر ندهید!"
-
-#~ msgid "Edit profile"
-#~ msgstr "ویرایش پروفایل"
 
 #~ msgid "Complete your profile"
 #~ msgstr "پروفایل خود را تکمیل کنید"

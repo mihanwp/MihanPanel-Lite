@@ -42,7 +42,7 @@ class users
     public static function get_new_activation_link($user_id)
     {
         $activation_code = self::create_activation_link($user_id);
-        $url = $activation_code ? options::get_login_url('?activation_code=' . $activation_code) : false;
+        $url = $activation_code ? options::get_login_url(['activation_code' => $activation_code]) : false;
         return $url;
     }
 

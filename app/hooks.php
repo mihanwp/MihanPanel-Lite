@@ -14,7 +14,6 @@ class hooks
         add_action('admin_init', ['\mihanpanel\app\options', 'register_settings']);
         add_action('admin_notices', ['\mihanpanel\app\notice', 'show_admin_setting_panel_notices']);
 
-        add_action('admin_enqueue_scripts', ['mihanpanel\app\assets', 'load_media_uploader']);
         add_action('admin_enqueue_scripts', ['mihanpanel\app\assets', 'load_admin_user_profile']);
 
         add_filter('wp_new_user_notification_email', ['\mihanpanel\app\email', 'filter_new_user_email_notify'], 10, 2);

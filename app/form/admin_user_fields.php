@@ -61,15 +61,21 @@ class admin_user_fields
     static function render_user_fields()
     {
         $fields = user_fields::get_fields();
+        $headers = [
+            esc_html__('Field Id', 'mihanpanel'),
+            esc_html__('Title', 'mihanpanel'),
+            esc_html__('Required', 'mihanpanel'),
+            esc_html__('Type', 'mihanpanel'),
+        ];
+        $table_header = apply_filters('mwpl_option_panel/user_fields/filter_table_head', $headers);
         ?>
         <div class="mw_menus_table mw_fields_wrapper" data-mw_type="user_field">
             <div class="mw_head">
                 <div class="mw_row">
                     <div class="mw_th"></div>
-                    <div class="mw_th"><?php _e('Field Id', 'mihanpanel'); ?></div>
-                    <div class="mw_th"><?php _e('Title', 'mihanpanel'); ?></div>
-                    <div class="mw_th"><?php _e('Required', 'mihanpanel'); ?></div>
-                    <div class="mw_th"><?php _e('Type', 'mihanpanel'); ?></div>
+                    <?php if($table_header && is_array($table_header)): foreach($table_header as $header_title): ?>
+                        <div class="mw_th"><?php echo esc_html($header_title) ?></div>
+                    <?php endforeach; endif; ?>
                     <div class="mw_th"></div>
                 </div>
             </div>
@@ -98,6 +104,7 @@ class admin_user_fields
                             <div class="mw_td">
                                 <?php \mihanpanel\app\handle_view::render_user_fields_type_selectbox('type', $field->type); ?>
                             </div>
+                            <?php do_action('mwpl_option_panel/user_fields/edit_form/before_render_submit_button', $field->meta); ?>
                             <div class="mw_th">
                                 <input type="submit" class="mihanpanelremove" name="delete" value="x">
                             </div>
@@ -113,15 +120,21 @@ class admin_user_fields
     static function render_new_record_fields()
     {
         wp_nonce_field('mwpl_create_field_item', 'mwpl_nonce');
+        $headers = [
+            esc_html__('Field Id', 'mihanpanel'),
+            esc_html__('Title', 'mihanpanel'),
+            esc_html__('Required', 'mihanpanel'),
+            esc_html__('Type', 'mihanpanel'),
+        ];
+        $table_header = apply_filters('mwpl_option_panel/user_fields/filter_table_head', $headers);
         ?>
         <div class="mw_menus_table new_record">
             <div class="mw_head">
                 <div class="mw_row">
                     <div class="mw_th"></div>
-                    <div class="mw_th"><?php _e('Field Id', 'mihanpanel'); ?></div>
-                    <div class="mw_th"><?php _e('Title', 'mihanpanel'); ?></div>
-                    <div class="mw_th"><?php _e('Required', 'mihanpanel'); ?></div>
-                    <div class="mw_th"><?php _e('Type', 'mihanpanel'); ?></div>
+                    <?php if($table_header && is_array($table_header)): foreach($table_header as $title): ?>
+                        <div class="mw_th"><?php echo esc_html($title) ?></div>
+                    <?php endforeach; endif; ?>
                     <div class="mw_th"></div>
                 </div>
             </div>
@@ -144,6 +157,7 @@ class admin_user_fields
                     <div class="mw_td">
                         <?php \mihanpanel\app\handle_view::render_user_fields_type_selectbox('type'); ?>
                     </div>
+                    <?php do_action('mwpl_option_panel/user_fields/new_record_form/before_render_submit_button'); ?>
                     <div class="mw_th">
                         <input type="submit" name="save" value="<?php _e('Save', 'mihanpanel')?>">
                     </div>

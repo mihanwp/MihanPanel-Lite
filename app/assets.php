@@ -40,6 +40,7 @@ class assets
     static function load_admin_panel_assets()
     {
         $version = tools::get_plugin_version();
+        self::load_media_uploader();
         self::load_admin_panel_css($version);
         self::load_admin_panel_js($version);
     }
@@ -77,6 +78,16 @@ class assets
     public static function load_menus_management_assets()
     {
         self::load_sortable_script();
+        $version = tools::get_plugin_version();
+        $fontawesome_css = self::get_css_url('fa/css/all');
+        $font_awesome_icon_picker = self::get_js_url('font-awesome-icon-picker');
+        $admin_menu_tabs_js = self::get_js_url('admin-menu-tabs');
+
+        wp_enqueue_style('mw_fontawesome_css', $fontawesome_css, null, $version);
+        wp_enqueue_script('font-awesome-icon-picker', $font_awesome_icon_picker, ['jquery'], $version, true);
+        wp_enqueue_media();
+        wp_enqueue_script('admin-menu-tabs', $admin_menu_tabs_js, ['jquery'], $version, true);
+        do_action('mwpl_load_admin_tabs_menu_assets');
     }
 
     public static function load_sortable_script()
@@ -118,7 +129,7 @@ class assets
             }
             <?php endif;
             $font_name = apply_filters('mwpl_assets/main_font_name', 'iranyekan');
-            if($font_name): ?>
+            if($font_name && !options::disable_mihanpanel_fonts()): ?>
                 body,a,h1,h2,h3,h5,h6,h4,span:not(.dashicons),td,tr,input,p{
                     font-family:<?php echo $font_name; ?> !important;
                 }
@@ -155,6 +166,10 @@ class assets
     }
     static function load_fonts_assets()
     {
+        if(options::disable_mihanpanel_fonts())
+        {
+            return false;
+        }
         $font_name = apply_filters('mwpl_assets/main_font_name', 'iranyekan');
         if(!$font_name)
         {
