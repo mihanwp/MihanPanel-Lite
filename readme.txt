@@ -1,12 +1,12 @@
-=== MihanPanel - User Profile, User Registration, Login & Membership Plugin ===
-Contributors: mihanwp
-Donate link: https://mihanwp.com/
-Tags: register,login,profile,registration,user panel,membership,signup,panel
-Requires at least: 4.7
-Tested up to: 5.5.1
-Stable tag:   7.2
-Requires PHP: 7.0
-License: GPLv2 or later
+=== MihanPanel - User Profile, User Registration, Login & Membership Plugin ===  
+Contributors: mihanwp  
+Donate link: https://mihanwp.com/  
+Tags: register,login,profile,registration,user panel,membership,signup,panel  
+Requires at least: 4.7  
+Tested up to: 5.6
+Stable tag:   8.3  
+Requires PHP: 7.0  
+License: GPLv2 or later  
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 WordPress Login and Registration Plugin Lite Version.
@@ -15,8 +15,8 @@ WordPress Login and Registration Plugin Lite Version.
 
 MihanPanel is a WordPress login and membership plugin by [MihanWP](https://mihanwp.com "Mihan WordPress")
  that makes your WordPress login and registration form a powerful part.
-You can use this plugin to completely change the login, registration and user panel of your website.
-MihanPanel also has the ability to run shortcodes on other plugins on your website.
+You can use this plugin to completely change the login, registration, and user panel of your website.
+MihanPanel also can run shortcodes on other plugins on your website.
 
 [View Live Demo](http://demo.mihanwp.com/mihanpanel-en/login/?action=register "MihanPanel Demo")
 
@@ -40,7 +40,7 @@ This plugin is published in 2 versions, Lite and Pro. The [MihanPanel Pro](https
 
 **MihanPanel Pro features:**
 * Ability to add infinite menus in the user panel
-* Ability to add a variety of user profile fields including date, selection box, radio box and ...
+* Ability to add a variety of user profile fields including date, selection box, radio box, and...
 * Ability to restrict content for specific user roles
 * Change colors and styles
 * Change fonts
@@ -49,8 +49,8 @@ This plugin is published in 2 versions, Lite and Pro. The [MihanPanel Pro](https
 * Technical support
 * Direct update from your WordPress dashboard
 
-**Report Bugs & Contribution:**
-Do you want to report mihanpanel bugs and contribute in plugin development?  Join us at [MihanPanel Github Page](https://github.com/mihanwp/MihanPanel-Lite "MihanPanel on github")
+**Report Bugs & Contribution:**  
+Do you want to report mihanpanel bugs and contribute to plugin development?  Join us at [MihanPanel Github Page](https://github.com/mihanwp/MihanPanel-Lite "MihanPanel on GitHub")
 
 == Screenshots ==
 
@@ -61,6 +61,10 @@ Do you want to report mihanpanel bugs and contribute in plugin development?  Joi
 5. MihanPanel User Profile Edit Page
 
 == Changelog ==
+= 8.4 =
+New Gutenberg block for panel widget
+Add new dashboard widget
+Show gregorian calendar when locale is not persian
 
 = 8.2 =
 A new modern theme was added to the user panel. (pro version)
@@ -73,7 +77,7 @@ Solve the problem of changing avatars on some websites (pro version)
 = 8.1 =
 Fixed an HTML error in the iThemes Security plugin
 Solve the problem of sending SMS in some SMS systems (Pro Version)
-New license activation system (Pro Version)
+The new license activation system (Pro Version)
 
 = 8 =
 Optimize and restructure plugin code
