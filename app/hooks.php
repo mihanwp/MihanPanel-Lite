@@ -115,6 +115,8 @@ class hooks
         add_action('user_register', ['\mihanpanel\app\sundry', 'handle_register_form_extra_fields_save']);
         
         add_filter('mwpl_middlewares/tabs_field/new_record', ['\mihanpanel\app\middlewares', 'handle_tabs_new_record_middleware']);
+        add_action('wp_dashboard_setup', ['\mihanpanel\app\widget', 'dashboard_widget']);
+        add_action('wp_network_dashboard_setup', ['\mihanpanel\app\widget', 'dashboard_widget']);
     }
     public static function activation_hook()
     {

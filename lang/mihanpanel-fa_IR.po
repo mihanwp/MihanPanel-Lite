@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MihanPanel\n"
-"POT-Creation-Date: 2020-12-01 12:39+0330\n"
-"PO-Revision-Date: 2020-12-01 12:39+0330\n"
+"POT-Creation-Date: 2021-01-10 11:06+0330\n"
+"PO-Revision-Date: 2021-01-10 11:06+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -26,7 +26,7 @@ msgstr ""
 msgid "Address 2"
 msgstr "آدرس شماره دو"
 
-#: app/admin_menu.php:17
+#: app/admin_menu.php:17 app/gutenberg.php:17
 msgid "MihanPanel"
 msgstr "میهن پنل"
 
@@ -34,7 +34,7 @@ msgstr "میهن پنل"
 msgid "Login & Register"
 msgstr "ورود و عضویت"
 
-#: app/admin_menu.php:26 app/hooks.php:136
+#: app/admin_menu.php:26 app/admin_menu.php:41 app/hooks.php:138
 msgid "User Panel"
 msgstr "پنل کاربری"
 
@@ -54,76 +54,80 @@ msgstr "ورود با SMS"
 msgid "Emails"
 msgstr "ایمیل‌های ارسالی"
 
-#: app/admin_menu.php:37
+#: app/admin_menu.php:31 app/widget.php:35
+msgid "Tools"
+msgstr "ابزار‌ها"
+
+#: app/admin_menu.php:54
 msgid "User Fields"
 msgstr "فیلدهای کاربری"
 
-#: app/admin_menu.php:54 app/admin_menu.php:108
+#: app/admin_menu.php:71 app/admin_menu.php:125
 msgid "Do you want to save changes?"
 msgstr "میخواهید تغییرات ذخیره شود؟"
 
-#: app/admin_menu.php:55
+#: app/admin_menu.php:72
 msgid "Yes"
 msgstr "بله"
 
-#: app/admin_menu.php:62
+#: app/admin_menu.php:79
 msgid "Create new field"
 msgstr "ایجاد فیلد جدید"
 
-#: app/admin_menu.php:73
+#: app/admin_menu.php:90
 msgid "Panel Menus"
 msgstr "منوهای پنل کاربری"
 
-#: app/admin_menu.php:97
+#: app/admin_menu.php:114
 msgid "Successfully added! Watch user panel"
 msgstr "با موفقیت اضافه شد! میتونید پنل کاربری رو ببینید"
 
-#: app/admin_menu.php:99 app/form/admin_user_fields.php:50
+#: app/admin_menu.php:116 app/form/admin_user_fields.php:50
 #: app/form/profile.php:62
 msgid "An error occurred!"
 msgstr "یک خطا رخ داده است!"
 
-#: app/admin_menu.php:109
+#: app/admin_menu.php:126
 msgid "yes"
 msgstr "بله"
 
-#: app/admin_menu.php:117
+#: app/admin_menu.php:134
 msgid "Menu title"
 msgstr "عنوان منو"
 
-#: app/admin_menu.php:118
+#: app/admin_menu.php:135
 msgid "Link / Shortcode"
 msgstr "لینک / کد کوتاه"
 
-#: app/admin_menu.php:119 app/admin_menu.php:166 app/admin_menu.php:204
+#: app/admin_menu.php:136 app/admin_menu.php:183 app/admin_menu.php:221
 msgid "Icon"
 msgstr "آیکون"
 
-#: app/admin_menu.php:150
+#: app/admin_menu.php:167
 msgid "FontAwesome"
 msgstr "FontAwesome"
 
-#: app/admin_menu.php:159
+#: app/admin_menu.php:176
 msgid "Create new item"
 msgstr "ایجاد مورد جدید"
 
-#: app/admin_menu.php:164 app/admin_menu.php:170
+#: app/admin_menu.php:181 app/admin_menu.php:187
 msgid "Menu Title"
 msgstr "عنوان منو"
 
-#: app/admin_menu.php:165
+#: app/admin_menu.php:182
 msgid "Content"
 msgstr "محتوا"
 
-#: app/admin_menu.php:173
+#: app/admin_menu.php:190
 msgid "Choose"
 msgstr "انتخاب"
 
-#: app/admin_menu.php:174
+#: app/admin_menu.php:191
 msgid "Link to other page"
 msgstr "پیوند به صفحه دیگر"
 
-#: app/admin_menu.php:175
+#: app/admin_menu.php:192
 msgid "Shortcode"
 msgstr "کد کوتاه"
 
@@ -237,7 +241,7 @@ msgstr "فعال"
 msgid "Inactive"
 msgstr "غیرفعال"
 
-#: app/emwidg/emwidg_mihanpanel.php:26 app/hooks.php:156
+#: app/emwidg/emwidg_mihanpanel.php:26 app/hooks.php:158
 msgid "Mihan Panel"
 msgstr "میهن پنل"
 
@@ -433,6 +437,52 @@ msgstr "آپلود کننده‌ی فایل"
 #: app/users.php:88
 msgid "Status"
 msgstr "وضعیت"
+
+#: app/widget.php:11
+msgid "MihanPanel Status"
+msgstr "وضعیت میهن پنل"
+
+#: app/widget.php:24
+msgid "PHP version must be higher than 7.4"
+msgstr "ورژن PHP باید بالاتر از ۷.۴ باشد"
+
+#: app/widget.php:29
+msgid "Wordpress version must be higher than 5.6"
+msgstr "ورژن وردپرس باید بالاتر از ۵.۶ باشد"
+
+#: app/widget.php:36
+#, php-format
+msgid "Panel page not exists. You can create it from this section: %s"
+msgstr "برگه‌ی پنل کاربری وجود ندارد. میتوانید از بخش آن را بسازید: %s"
+
+#: app/widget.php:41
+msgid "Everything on your site is OK."
+msgstr "همه چیز روی سایت شما مرتب است."
+
+#: app/widget.php:44
+msgid "You must check:"
+msgstr "باید بررسی کنید:"
+
+#: app/widget.php:70
+msgid "mihanwp.com"
+msgstr "میهن وردپرس"
+
+#: app/widget.php:71
+#, php-format
+msgid "Latest news in %s"
+msgstr "آخرین اخبار در %s"
+
+#: app/widget.php:79
+msgid "No item"
+msgstr "چیزی پیدا نشد"
+
+#: app/widget.php:82
+msgid "ago"
+msgstr "پیش"
+
+#: app/widget.php:91
+msgid "More Articles"
+msgstr "مقاله‌های بیشتر"
 
 #: app/widget/profile.php:8
 msgid "User Profile - Mihanpanel"
@@ -811,7 +861,7 @@ msgstr "از فونت‌های میهن پنل استفاده نکن"
 msgid "Use theme or other plugins fonts instead of MihanPanel fonts."
 msgstr "استفاده از فونت‌های قالب یا پلاگین‌های دیگر به جای فونت‌های میهن پنل."
 
-#: views/admin/panel-section/panel.php:23
+#: views/admin/panel-section/panel.php:23 views/admin/panel-section/tools.php:3
 msgid "User panel page"
 msgstr "صفحه پنل کاربری"
 
@@ -919,6 +969,18 @@ msgstr "کاربر میتواند این نقش ها را در فرم ثبت ن�
 #: views/admin/panel-section/register.php:18
 msgid "For disable this feature leave this section empty!"
 msgstr "برای غیرفعالسازی این مورد میتوانید این بخش را خالی بگذارید!"
+
+#: views/admin/panel-section/tools.php:6
+msgid "Create user panel page"
+msgstr "ساخت برگه‌ی پنل کاربری"
+
+#: views/admin/panel-section/tools.php:8
+msgid "Create"
+msgstr "بساز"
+
+#: views/admin/panel-section/tools.php:10
+msgid "User panel page already exists."
+msgstr "برگه‌ی پنل کاربری وجود دارد."
 
 #: views/admin/settings.php:22
 msgid "MihanWP"
@@ -1201,41 +1263,25 @@ msgstr "خطوط هوایی جدید"
 #~ msgid "License"
 #~ msgstr "لایسنس"
 
-#~ msgid "License is deactive"
+#~ msgid "License is inactive."
 #~ msgstr "لایسنس غیر فعال شده است"
-
-#~ msgid "License expired at"
-#~ msgstr "تاریخ انقضای لایسنس: %s"
-
-#~ msgid "License key is invalid"
-#~ msgstr "لایسنس نامعتبر است"
-
-#~ msgid "Your license is not activated for this domain"
-#~ msgstr "لایسنس شما برای این دامنه فعال نیست"
-
-#~ msgid "License is not for this product: Mihan Panel"
-#~ msgstr "لایسنس برای این محصول نیست: میهن پنل"
-
-#~ msgid "Your license is already used; please purchase another license"
-#~ msgstr "این لایسنس قبلا استفاده شده است؛ لطفا لایسنس جدیدی خریداری کنید"
-
-#~ msgid "An error occurred, try again"
-#~ msgstr "خطایی رخ داد ، دوباره امتحان کنید"
-
-#~ msgid "Your license is active for lifetime"
-#~ msgstr "لایسنس شما برای مادامالعمر فعال است"
-
-#~ msgid "Your license is active until"
-#~ msgstr "لایسنس شما فعال است تا"
-
-#~ msgid "License is deactive."
-#~ msgstr "لایسنس غیرفعال است."
 
 #~ msgid "MihanPanel is active with this license key"
 #~ msgstr "میهن پنل شما با این لایسنس فعال است"
 
-#~ msgid "Successfully deactivated."
+#~ msgid "Successfully activated."
 #~ msgstr "با موفقیت فعال شد."
+
+#~ msgid ""
+#~ "License key is invalid or the number of activation has exceeded the allowed "
+#~ "limit."
+#~ msgstr "لایسنس نا معتبر است یا تعداد لایسنس‌های فعال، از حد مجاز گذشته است."
+
+#~ msgid "Successfully deactivated."
+#~ msgstr "با موفقیت غیرفعال شد."
+
+#~ msgid "License is inactive"
+#~ msgstr "لایسنس غیر فعال شده است"
 
 #~ msgid "Username, Email or Phone number"
 #~ msgstr "نام کاربری، ایمیل یا شماره تلفن"
@@ -1312,21 +1358,6 @@ msgstr "خطوط هوایی جدید"
 #~ msgid "Kavenegar"
 #~ msgstr "کاوه نگار"
 
-#~ msgid ""
-#~ "There is a new version of %1$s available. %2$sView version %3$s details%4$s."
-#~ msgstr ""
-#~ "نسخه جدیدی از %1$s در دسترس است. %2$sمشاهده جزئیات %3$s نسخه جدید%4$s."
-
-#~ msgid ""
-#~ "There is a new version of %1$s available. %2$sView version %3$s details%4$s "
-#~ "or %5$supdate now%6$s."
-#~ msgstr ""
-#~ "نسخه جدیدی از%1$s در دسترس است.%2$s مشاهده نسخه %3$s جزئیات %4$s  يا %5$s  "
-#~ "اکنون بروزرسانی کنید %6$s."
-
-#~ msgid "You do not have permission to install plugin updates"
-#~ msgstr "شما دسترسی لازم برای نصب آپدیت های این پلاگین را ندارید"
-
 #~ msgid "License Key"
 #~ msgstr "لایسنس"
 
@@ -1363,14 +1394,73 @@ msgstr "خطوط هوایی جدید"
 #~ msgid "Request Code"
 #~ msgstr "درخواست کد"
 
+#, fuzzy
+#~| msgid "User Panel"
+#~ msgid "User Panel devmode"
+#~ msgstr "پنل کاربری"
+
+#~ msgid "Site Status"
+#~ msgstr "وضعیت سایت"
+
+#~ msgid "developermode"
+#~ msgstr "حالت آزمایشی"
+
+#~ msgid "License is active"
+#~ msgstr "لایسنس فعال شده است"
+
+#~ msgid "Invalid License Key"
+#~ msgstr "کد لایسنس اشتباه است"
+
+#~ msgid "Your license is active for lifetime"
+#~ msgstr "لایسنس شما برای مادامالعمر فعال است"
+
+#~ msgid "Your license is active until"
+#~ msgstr "لایسنس شما فعال است تا"
+
+#~ msgid "License is deactive."
+#~ msgstr "لایسنس غیرفعال است."
+
+#~ msgid "License is deactive"
+#~ msgstr "لایسنس غیر فعال شده است"
+
+#~ msgid ""
+#~ "There is a new version of %1$s available. %2$sView version %3$s details%4$s."
+#~ msgstr ""
+#~ "نسخه جدیدی از %1$s در دسترس است. %2$sمشاهده جزئیات %3$s نسخه جدید%4$s."
+
+#~ msgid ""
+#~ "There is a new version of %1$s available. %2$sView version %3$s details%4$s "
+#~ "or %5$supdate now%6$s."
+#~ msgstr ""
+#~ "نسخه جدیدی از%1$s در دسترس است.%2$s مشاهده نسخه %3$s جزئیات %4$s  يا %5$s  "
+#~ "اکنون بروزرسانی کنید %6$s."
+
+#~ msgid "You do not have permission to install plugin updates"
+#~ msgstr "شما دسترسی لازم برای نصب آپدیت های این پلاگین را ندارید"
+
+#~ msgid "License expired at"
+#~ msgstr "تاریخ انقضای لایسنس: %s"
+
+#~ msgid "License key is invalid"
+#~ msgstr "لایسنس نامعتبر است"
+
+#~ msgid "Your license is not activated for this domain"
+#~ msgstr "لایسنس شما برای این دامنه فعال نیست"
+
+#~ msgid "License is not for this product: Mihan Panel"
+#~ msgstr "لایسنس برای این محصول نیست: میهن پنل"
+
+#~ msgid "Your license is already used; please purchase another license"
+#~ msgstr "این لایسنس قبلا استفاده شده است؛ لطفا لایسنس جدیدی خریداری کنید"
+
+#~ msgid "An error occurred, try again"
+#~ msgstr "خطایی رخ داد ، دوباره امتحان کنید"
+
 #~ msgid "https://mihanwp.com/mihanpanel/"
 #~ msgstr "https://mihanwp.com/mihanpanel/"
 
 #~ msgid "The best way to build user interface in WordPress"
 #~ msgstr "یک راه مناسب برای پیاده سازی پروفایل کاربری در وردپرس"
-
-#~ msgid "https://mihanwp.com"
-#~ msgstr "https://mihanwp.com"
 
 #~ msgid "Mihan Panel License"
 #~ msgstr "لایسنس میهن پنل"

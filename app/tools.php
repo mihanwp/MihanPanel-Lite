@@ -2,7 +2,6 @@
 namespace mihanpanel\app;
 class tools
 {
-
     public static function vd($data)
     {
         echo "<pre style='all: revert;'>";
@@ -81,9 +80,37 @@ class tools
                 return sanitize_text_field($value);
         }
     }
+    static function is_persian_locale()
+    {
+        return get_locale() == 'fa_IR';
+    }
     static function get_pro_version_link()
     {
-        $locale = get_locale();
-        return $locale == 'fa_IR' ? 'https://mihanwp.com/mihanpanel' : 'https://mihanwp.com/en/mihanpanel';
+        return self::is_persian_locale() ? 'https://mihanwp.com/mihanpanel' : 'https://mihanwp.com/en/mihanpanel';
+    }
+    static function check_has_minimum_php_version()
+    {
+        $php_version = phpversion();
+        return version_compare($php_version, '7.4') >= 0;
+    }
+    static function check_has_minimum_wordpress_version()
+    {
+        require ABSPATH . WPINC . '/version.php';
+        $current = get_site_transient('update_core');
+        if(is_object($current) && $wp_version != $current->version_checked)
+        {
+            return false;
+        }
+        return version_compare($wp_version, '5.6') >= 0;
+    }
+    static function check_is_panel_page_exists()
+    {
+        $slug = options::get_panel_slug();
+        if(!$slug)
+        {
+            return false;
+        }
+        $page = get_page_by_path($slug);
+        return $page ? true : false;
     }
 }

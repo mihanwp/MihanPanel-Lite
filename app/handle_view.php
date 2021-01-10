@@ -81,7 +81,7 @@ class handle_view
         if($middleware_res)
         {
             $view = views::get('admin.panel-section.' . $active_tab);
-            include $view;
+            $view ? include $view : null;
         }
     }
     static function handle_panel_widgets()

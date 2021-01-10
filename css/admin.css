@@ -897,3 +897,51 @@ font-weight: bold;
     font-family: 'Font Awesome 5 Brands';
     font-weight: 400;
 }
+.mwp_check_site_dashboard_widget
+{
+    margin-bottom: 10px;
+}
+.mwp_check_site_dashboard_widget .check_item > span
+{
+    padding: 8px;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 3px;
+    margin: 5px 0;
+}
+.mwp_check_site_dashboard_widget .check_item > span::before
+{
+    font-family: dashicons;
+    font-size: 22px;
+}
+.mwp_check_site_dashboard_widget .check_item .success
+{
+    background-color: #2aba5f35;
+    color: #2aba5f;
+    color: #18843f;
+}
+.mwp_check_site_dashboard_widget .check_item .error
+{
+    background-color: #ba2a2a35;
+    color: #841818;
+}
+.mwp_check_site_dashboard_widget .check_item .success::before
+{
+    content: "\f147";
+}
+.mwp_check_site_dashboard_widget .check_item .error::before
+{
+    content: "\f158";
+}
+.mwp_mihanwp_feed_dashboard .more_articles
+{
+    margin-top: 10px;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: #0073aa;
+    padding: 5px 10px;
+    border-radius: 3px;
+}

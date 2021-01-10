@@ -199,4 +199,15 @@ class assets
         wp_add_inline_style('mwstyle-css', $panel_style);
         wp_add_inline_style('mw-profile-widget', $profile_widget_style);
     }
+    static function load_gutenberg_block_assets()
+    {
+        // register script
+        $gutenberg_js = self::get_js_url('mwp_gutenberg_blocks');
+        
+        wp_register_script('mwp_gutenberg_blocks', $gutenberg_js, ['wp-blocks']);
+        // register block
+        register_block_type('mihanpanel/panel', [
+            'editor_script' => 'mwp_gutenberg_blocks'
+        ]);
+    }
 }

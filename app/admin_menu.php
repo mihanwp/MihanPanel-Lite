@@ -28,9 +28,26 @@ class admin_menu
             'notification' => __('Notifications', 'mihanpanel'),
             'login_with_sms' =>  __("Login with SMS", "mihanpanel"),
             'email' => __('Emails', 'mihanpanel'),
+            'tools' => esc_html__('Tools', 'mihanpanel'),
         ];
         $settings = views::get('admin.settings');
         include $settings;
+    }
+    static function handle_tools_menu_submission()
+    {
+        if(isset($_POST['create_user_panel_page']))
+        {
+            $user_panel_page = array(
+                'post_title' =>    __('User Panel','mihanpanel'),
+                'post_content' => '[mihanpanel]',
+                'post_status' => 'publish',
+                'post_name' => 'panel',
+                'post_type' => 'page'
+            );
+            $post_id = wp_insert_post($user_panel_page);
+            $slug = get_post_field('post_name', $post_id);
+            update_option('mp_panelslug', $slug);
+        }
     }
     static function user_fields()
     {

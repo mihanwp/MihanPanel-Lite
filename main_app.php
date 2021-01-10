@@ -45,6 +45,7 @@ final class MihanPanelApp
         // include classes
         \mihanpanel\app\ajax::init();
         \mihanpanel\app\hooks::init();
+        \mihanpanel\app\gutenberg::init();
 
         include_once MW_MIHANPANEL_DIR . 'app' . DIRECTORY_SEPARATOR . 'mw_elementor.php';
     }
