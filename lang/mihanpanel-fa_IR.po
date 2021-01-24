@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MihanPanel\n"
-"POT-Creation-Date: 2021-01-10 11:06+0330\n"
-"PO-Revision-Date: 2021-01-10 11:06+0330\n"
+"POT-Creation-Date: 2021-01-24 18:07+0330\n"
+"PO-Revision-Date: 2021-01-24 18:07+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -1263,8 +1263,11 @@ msgstr "خطوط هوایی جدید"
 #~ msgid "License"
 #~ msgstr "لایسنس"
 
+#~ msgid "Missin license key"
+#~ msgstr "کد لایسنس موجود نیست"
+
 #~ msgid "License is inactive."
-#~ msgstr "لایسنس غیر فعال شده است"
+#~ msgstr "لایسنس غیر فعال شده است."
 
 #~ msgid "MihanPanel is active with this license key"
 #~ msgstr "میهن پنل شما با این لایسنس فعال است"

@@ -111,7 +111,7 @@ class assets
     {
         $mp_bg_image = \mihanpanel\app\options::get_login_bg();
         $mp_logo = \mihanpanel\app\options::get_logo();
-        self::load_fonts_assets();
+        self::load_fonts_assets('login');
         ?>
         <style type="text/css">
             body.login {
@@ -129,7 +129,7 @@ class assets
             }
             <?php endif;
             $font_name = apply_filters('mwpl_assets/main_font_name', 'iranyekan');
-            if($font_name && !options::disable_mihanpanel_fonts()): ?>
+            if($font_name): ?>
                 body,a,h1,h2,h3,h5,h6,h4,span:not(.dashicons),td,tr,input,p{
                     font-family:<?php echo $font_name; ?> !important;
                 }
@@ -164,9 +164,9 @@ class assets
         self::load_fonts_assets();
         do_action('mwpl_load_front_assets');
     }
-    static function load_fonts_assets()
+    static function load_fonts_assets($screen="panel")
     {
-        if(options::disable_mihanpanel_fonts())
+        if(options::disable_mihanpanel_fonts() && $screen !== 'login')
         {
             return false;
         }

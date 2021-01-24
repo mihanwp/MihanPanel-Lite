@@ -21,7 +21,7 @@ class session
             KEY session_expiration (session_expiration)
           ) ENGINE=InnoDB $charset_collate;";
         require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
-        dbDelta($command);        
+        dbDelta($command);
     }
     static function clear_expired_session()
     {

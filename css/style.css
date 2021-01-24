@@ -673,7 +673,7 @@ output {
     background: rgba(200, 200, 200, .2)
 }
 .mihanpanelpanel .main-panel {
-    display: table-cell !important;
+    display: table-cell;
     vertical-align: top !important;
     padding-top: 40px !important;
     width: calc(100% - 290px) !important;
@@ -1137,6 +1137,8 @@ output {
     .mihanpanelpanel .mpsidebar.mp_rtl.mp_open {
         right: 0 !important;
         border-radius:10px !important;
+        position: relative !important;
+        float: right;
     }
     .mihanpanelpanel .mpsidebar.mp_ltr {
         left: -100% !important;
