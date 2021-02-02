@@ -5,6 +5,24 @@
         ?>
         <h2><?php esc_html_e("Password Type", "mihanpanel"); ?></h2>
         <?php \mihanpanel\app\handle_view::option_panel_field_password_type(); ?>
+        <h2><?php esc_html_e('Disable register form fields', 'mihanpanel')?></h2>
+        <div class="mp_option_single">
+            <p>
+                <label for="mp_hide_email_field_in_register_form"><?php esc_html_e('Disable email field', 'mihanpanel')?></label>
+                <?php \mihanpanel\app\handle_view::option_panel_hide_email_field_in_register_form();?>
+            </p>
+            <p class="description"><?php esc_html_e('You can disable email field in register form if login with sms dynamic code is active.', 'mihanpanel')?></p>
+            <p>
+                <label for="mp_hide_username_field_in_register_form"><?php esc_html_e('Disable username field', 'mihanpanel')?></label>
+                <?php \mihanpanel\app\handle_view::option_panel_hide_username_field_in_register_form();?>
+            </p>
+            <p class="description"><?php esc_html_e('You can disable username field in register form if login with sms dynamic code is active.', 'mihanpanel')?></p>
+            <p>
+                <label for="mp_hide_password_field_in_register_form"><?php esc_html_e('Disable password field', 'mihanpanel')?></label>
+                <?php \mihanpanel\app\handle_view::option_panel_hide_password_field_in_register_form();?>
+            </p>
+            <p class="description"><?php esc_html_e('You can disable password field in register form if login with sms dynamic code is active.', 'mihanpanel')?></p>
+        </div>
         <h2><?php esc_html_e("User Phone", "mihanpanel"); ?></h2>
         <?php \mihanpanel\app\handle_view::option_panel_user_phone_section(); ?>
         <h2><?php esc_html_e("SMS Provider Settings", "mihanpanel"); ?></h2>

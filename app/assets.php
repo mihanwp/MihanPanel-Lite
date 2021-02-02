@@ -43,6 +43,7 @@ class assets
         self::load_media_uploader();
         self::load_admin_panel_css($version);
         self::load_admin_panel_js($version);
+        do_action('mwpl_load_admin_panel_assets');
     }
     static function load_admin_panel_css($version)
     {
@@ -56,7 +57,6 @@ class assets
         wp_enqueue_script('select2', $select_2, [], $version, true);
         wp_enqueue_script('mw_admin_panel', $panel_js, ['jquery'], $version, true);
         wp_localize_script('mw_admin_panel', 'mwp_data', ['au' => admin_url('admin-ajax.php')]);
-        do_action('mwpl_load_admin_panel_assets');
     }
     static function load_admin_user_profile($page)
     {
@@ -140,10 +140,10 @@ class assets
     static function load_login_theme_assets()
     {
         $plugin_version = \mihanpanel\app\tools::get_plugin_version();
-        wp_enqueue_style('custom-login', MW_MIHANPANEL_URL . 'css/login.css', '', $plugin_version);
+        wp_enqueue_style('mwpl-custom-login', MW_MIHANPANEL_URL . 'css/login.css', '', $plugin_version);
         if (!is_rtl())
         {
-            wp_enqueue_style('mw-custom-login-ltr', MW_MIHANPANEL_URL . 'css/login-ltr.css', '', $plugin_version);
+            wp_enqueue_style('mwpl-custom-login-ltr', MW_MIHANPANEL_URL . 'css/login-ltr.css', '', $plugin_version);
         }
     }
     static function load_front_assets()

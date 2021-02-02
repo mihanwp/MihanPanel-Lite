@@ -37,6 +37,10 @@ class sundry
     }
     static function add_pass_field_to_register_form()
     {
+        if(!apply_filters('mwpl_register_form/show_password_field', true))
+        {
+            return false;
+        }
         ?>
         <p>
             <label for="user_password"><?php esc_html_e("Password", "mihanpanel"); ?></label>
@@ -46,6 +50,10 @@ class sundry
     }
     static function handle_pass_field_error_in_register_form($errors, $sanitized_user_login, $user_email)
     {
+        if(!apply_filters('mwpl_register_form/show_password_field', true))
+        {
+            return $errors;
+        }
         if (empty($_POST['user_password'])) {
             $errors->add('pass_error', __("Password must not empty", "mihanpanel"));
         }
@@ -53,6 +61,10 @@ class sundry
     }
     static function save_pass_field_value_in_register_form($user_id)
     {
+        if(!apply_filters('mwpl_register_form/show_password_field', true))
+        {
+            return false;
+        }
         $password = isset($_POST['user_password']) && $_POST['user_password'] ? sanitize_text_field($_POST['user_password']) : false;
         if ($password)
             wp_set_password($password, $user_id);

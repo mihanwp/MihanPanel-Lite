@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MihanPanel\n"
-"POT-Creation-Date: 2021-01-24 18:07+0330\n"
-"PO-Revision-Date: 2021-01-24 18:07+0330\n"
+"POT-Creation-Date: 2021-02-02 18:35+0330\n"
+"PO-Revision-Date: 2021-02-02 18:35+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -317,11 +317,11 @@ msgstr "تیکت های شما"
 msgid "Pro Version"
 msgstr "نسخه‌ی حرفه‌ای"
 
-#: app/handle_view.php:461
+#: app/handle_view.php:476
 msgid "Auto confirm phone number after user register"
 msgstr "فعالسازی شماره تلفن بعد از ثبت نام به صورت اتوماتیک"
 
-#: app/handle_view.php:465
+#: app/handle_view.php:480
 msgid "User can change phone number"
 msgstr "کاربر میتواند شماره تلفن را تغییر دهد"
 
@@ -386,15 +386,15 @@ msgstr "لطفا وارد حساب کاربری خود شوید"
 msgid "Login"
 msgstr "ورود"
 
-#: app/sundry.php:42
+#: app/sundry.php:46
 msgid "Password"
 msgstr "رمز عبور"
 
-#: app/sundry.php:50
+#: app/sundry.php:58
 msgid "Password must not empty"
 msgstr "کلمه عبور نباید خالی باشد"
 
-#: app/sundry.php:159
+#: app/sundry.php:171
 msgid " Should not be empty!"
 msgstr " نباید خالی باشد!"
 
@@ -701,49 +701,49 @@ msgstr "روند فعالسازی"
 msgid "Login Form Theme"
 msgstr "تم فرم ورود"
 
-#: views/admin/panel-section/general.php:27
+#: views/admin/panel-section/general.php:26
 msgid "Login and Register form theme"
 msgstr "تم فرم ورود و عضویت"
 
-#: views/admin/panel-section/general.php:30
+#: views/admin/panel-section/general.php:29
 msgid "Login Button Color"
 msgstr "رنگ دکمه ورود"
 
-#: views/admin/panel-section/general.php:32
+#: views/admin/panel-section/general.php:31
 msgid "Color of Login and Register button"
 msgstr "پس زمینه دکمه ورود و ثبت‌نام"
 
-#: views/admin/panel-section/general.php:35
+#: views/admin/panel-section/general.php:34
 msgid "Login and Register form Logo"
 msgstr "لوگوی فرم ورود و عضویت"
 
-#: views/admin/panel-section/general.php:37
-#: views/admin/panel-section/general.php:51
+#: views/admin/panel-section/general.php:36
+#: views/admin/panel-section/general.php:50
 msgid "Upload Image"
 msgstr "آپلود تصویر"
 
-#: views/admin/panel-section/general.php:38
+#: views/admin/panel-section/general.php:37
 msgid "We suggest to use 120 * 120 px for logo size."
 msgstr ""
 "ما پیشنهاد می کنیم از سایز ۱۲۰ * ۱۲۰ (پیکسل) برای اندازه لوگو  استفاده کنید."
 
-#: views/admin/panel-section/general.php:41
+#: views/admin/panel-section/general.php:40
 msgid "Logo Width (px)"
 msgstr "پهنای لوگو ( به پیکسل )"
 
-#: views/admin/panel-section/general.php:45
+#: views/admin/panel-section/general.php:44
 msgid "Logo Height (px)"
 msgstr "ارتفاع لوگو ( به پیکسل )"
 
-#: views/admin/panel-section/general.php:49
+#: views/admin/panel-section/general.php:48
 msgid "Login and Register form background"
 msgstr "پس زمینه فرم ورود و ثبت نام"
 
-#: views/admin/panel-section/general.php:54
+#: views/admin/panel-section/general.php:53
 msgid "Redirect non Admin user to"
 msgstr "تغییر مسیر کاربر غیر مدیر به"
 
-#: views/admin/panel-section/general.php:56
+#: views/admin/panel-section/general.php:55
 msgid ""
 "Users who don't have admin or author caps, redirect to this address after "
 "login (with http or https)"
@@ -756,18 +756,58 @@ msgid "Password Type"
 msgstr "نوع پسورد"
 
 #: views/admin/panel-section/login_with_sms.php:8
+msgid "Disable register form fields"
+msgstr "غیر‌فعال کردن فیلد‌های فرم ثبت‌نام"
+
+#: views/admin/panel-section/login_with_sms.php:11
+msgid "Disable email field"
+msgstr "غیر‌فعال کردن فیلد ایمیل"
+
+#: views/admin/panel-section/login_with_sms.php:14
+msgid ""
+"You can disable email field in register form if login with sms dynamic code is "
+"active."
+msgstr ""
+"اگر ورود به کد یکبار مصرف فعال باشد، میتوانید فیلد ایمیل را در صفحه‌ی ثبت نام، "
+"غیر‌فعال کنید."
+
+#: views/admin/panel-section/login_with_sms.php:16
+msgid "Disable username field"
+msgstr "غیر‌فعال کردن فیلد نام‌کاربری"
+
+#: views/admin/panel-section/login_with_sms.php:19
+msgid ""
+"You can disable username field in register form if login with sms dynamic code "
+"is active."
+msgstr ""
+"اگر ورود به کد یکبار مصرف فعال باشد، میتوانید فیلد نام‌کاربری را در صفحه‌ی ثبت "
+"نام، غیر‌فعال کنید."
+
+#: views/admin/panel-section/login_with_sms.php:21
+msgid "Disable password field"
+msgstr "غیر‌فعال کردن فیلد رمز‌عبور"
+
+#: views/admin/panel-section/login_with_sms.php:24
+msgid ""
+"You can disable password field in register form if login with sms dynamic code "
+"is active."
+msgstr ""
+"اگر ورود به کد یکبار مصرف فعال باشد، میتوانید فیلد رمز‌عبور را در صفحه‌ی ثبت "
+"نام، غیر‌فعال کنید."
+
+#: views/admin/panel-section/login_with_sms.php:26
 msgid "User Phone"
 msgstr "موبایل کاربر"
 
-#: views/admin/panel-section/login_with_sms.php:10
+#: views/admin/panel-section/login_with_sms.php:28
 msgid "SMS Provider Settings"
 msgstr "تنظیمات ارائه دهنده ی SMS"
 
-#: views/admin/panel-section/login_with_sms.php:12
+#: views/admin/panel-section/login_with_sms.php:30
 msgid "Select Provider"
 msgstr "ارائه دهنده را انتخاب کنید"
 
-#: views/admin/panel-section/login_with_sms.php:14
+#: views/admin/panel-section/login_with_sms.php:32
 msgid ""
 "If your sms service provider not exists in this list, ask theme to provide you "
 "with the relevant plugin."
@@ -775,15 +815,15 @@ msgstr ""
 "اگر ارائه دهنده ی مورد نظر شما در این لیست موجود نیست، از آن ها بخواهید تا "
 "پلاگین مربوط به این بخش را در اختیار شما قرار دهند."
 
-#: views/admin/panel-section/login_with_sms.php:14
+#: views/admin/panel-section/login_with_sms.php:32
 msgid "According to this documents"
 msgstr "بر اساس این مستندات"
 
-#: views/admin/panel-section/login_with_sms.php:20
+#: views/admin/panel-section/login_with_sms.php:38
 msgid "Mobile validation code sms content"
 msgstr "محتوای SMS فعالسازی موبایل"
 
-#: views/admin/panel-section/login_with_sms.php:24
+#: views/admin/panel-section/login_with_sms.php:42
 msgid "Dynamic login code sms content"
 msgstr "محتوای SMS کد پویا"
 
@@ -1396,6 +1436,9 @@ msgstr "خطوط هوایی جدید"
 
 #~ msgid "Request Code"
 #~ msgstr "درخواست کد"
+
+#~ msgid "Email field"
+#~ msgstr "فیلد ایمیل"
 
 #, fuzzy
 #~| msgid "User Panel"

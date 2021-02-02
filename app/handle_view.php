@@ -291,7 +291,7 @@ class handle_view
     
     static function handle_option_panel_render_method($method, $alternative_method=false)
     {
-        if(!is_array($method) || !$method)
+        if(!$method || !is_array($method))
         {
             return self::show_go_pro_link();
         }
@@ -447,6 +447,21 @@ class handle_view
             <?php endforeach; ?>
         </div>
         <?php
+    }
+    static function option_panel_hide_email_field_in_register_form()
+    {
+        $render_method = apply_filters('mwpl_option_panel/render_method/hide_email_in_register_form', []);
+        self::handle_option_panel_render_method($render_method);
+    }
+    static function option_panel_hide_username_field_in_register_form()
+    {
+        $render_method = apply_filters('mwpl_option_panel/render_method/hide_username_field_in_register_form', []);
+        self::handle_option_panel_render_method($render_method);
+    }
+    static function option_panel_hide_password_field_in_register_form()
+    {
+        $render_method = apply_filters('mwpl_option_panel/render_method/hide_password_field_in_register_form', []);
+        self::handle_option_panel_render_method($render_method);
     }
     static function option_panel_user_phone_section()
     {

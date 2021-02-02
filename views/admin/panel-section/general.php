@@ -23,7 +23,6 @@
             <div class="mp_option_single">
                 <label><?php esc_html_e("Login Form Theme", "mihanpanel");?></label>
                 <?php \mihanpanel\app\handle_view::option_panel_field_login_form_theme(); ?>
-                
                 <p class="description"><?php esc_html_e("Login and Register form theme", "mihanpanel"); ?></p>
             </div>
             <div class="mp_option_single">
