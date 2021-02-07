@@ -1,10 +1,9 @@
-=== MihanPanel - User Profile, User Registration, Login & Membership Plugin ===  
+=== MihanPanel - Registration, Login & User Panel ===  
 Contributors: mihanwp  
 Donate link: https://mihanwp.com/  
 Tags: register,login,profile,registration,user panel,membership,signup,panel  
 Requires at least: 4.7  
-Tested up to: 5.6
-Stable tag:   8.3  
+Tested up to: 5.6.1
 Requires PHP: 7.0  
 License: GPLv2 or later  
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -61,30 +60,4 @@ Do you want to report mihanpanel bugs and contribute to plugin development?  Joi
 5. MihanPanel User Profile Edit Page
 
 == Changelog ==
-= 8.4 =
-New Gutenberg block for panel widget
-Add new dashboard widget
-Show gregorian calendar when locale is not persian
-
-= 8.2 =
-A new modern theme was added to the user panel. (pro version)
-A new 3D theme has been added to the user panel. (pro version)
-Solve the redirect problem after entering the post password
-Solve the problem of login address and profile in the widget
-Solve the problem of sanitizing fields in saving profiles
-Solve the problem of changing avatars on some websites (pro version)
-
-= 8.1 =
-Fixed an HTML error in the iThemes Security plugin
-Solve the problem of sending SMS in some SMS systems (Pro Version)
-The new license activation system (Pro Version)
-
-= 8 =
-Optimize and restructure plugin code
-Compatibility with a simple unique WordPress link
-
-= 7.5 =
-Handle modify and delete tabs & user fields with ajax.
-
-= 7.4 =
-Lite version released by cloning pro version.
+[View MihanPanel Changelog](https://mihanwp.com/mihanpanel/ "MihanPanel Changelog")
