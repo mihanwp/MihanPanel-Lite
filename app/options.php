@@ -123,6 +123,21 @@ class options
     {
         return get_option('mwpl_disable_font_family');
     }
+    static function get_login_button_bg_color()
+    {
+        $color = get_option('login_button_color');
+        return $color ? $color : '#5454ff';
+    }
+    static function get_login_logo_width()
+    {
+        $value = get_option('mp_logo_width', '120');
+        return $value ? $value : '120';
+    }
+    static function get_login_logo_height()
+    {
+        $value = get_option('mp_logo_height', '120');
+        return $value ? $value : '120';
+    }
     public static function register_settings()
     {
         register_setting('mihanpanelsettings', 'rwl_page');

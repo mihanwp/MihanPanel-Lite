@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MihanPanel\n"
-"POT-Creation-Date: 2021-02-02 18:35+0330\n"
-"PO-Revision-Date: 2021-02-02 18:35+0330\n"
+"POT-Creation-Date: 2021-02-14 15:12+0330\n"
+"PO-Revision-Date: 2021-02-14 15:12+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -30,7 +30,7 @@ msgstr "آدرس شماره دو"
 msgid "MihanPanel"
 msgstr "میهن پنل"
 
-#: app/admin_menu.php:25 views/admin/panel-section/general.php:22
+#: app/admin_menu.php:25 views/admin/panel-section/general.php:34
 msgid "Login & Register"
 msgstr "ورود و عضویت"
 
@@ -383,6 +383,7 @@ msgid "Please login to your account"
 msgstr "لطفا وارد حساب کاربری خود شوید"
 
 #: app/sundry.php:10 app/widget/profile.php:68
+#: views/admin/panel-section/general.php:10
 msgid "Login"
 msgstr "ورود"
 
@@ -693,57 +694,61 @@ msgstr "عنوان ایمیل تغییر وضعیت اکانت کاربری"
 msgid "Account Status"
 msgstr "وضعیت اکانت"
 
-#: views/admin/panel-section/general.php:8
+#: views/admin/panel-section/general.php:15
+msgid "Logo"
+msgstr "لوگو"
+
+#: views/admin/panel-section/general.php:20
 msgid "Activation process"
 msgstr "روند فعالسازی"
 
-#: views/admin/panel-section/general.php:24
+#: views/admin/panel-section/general.php:36
 msgid "Login Form Theme"
 msgstr "تم فرم ورود"
 
-#: views/admin/panel-section/general.php:26
+#: views/admin/panel-section/general.php:38
 msgid "Login and Register form theme"
 msgstr "تم فرم ورود و عضویت"
 
-#: views/admin/panel-section/general.php:29
+#: views/admin/panel-section/general.php:41
 msgid "Login Button Color"
 msgstr "رنگ دکمه ورود"
 
-#: views/admin/panel-section/general.php:31
+#: views/admin/panel-section/general.php:43
 msgid "Color of Login and Register button"
 msgstr "پس زمینه دکمه ورود و ثبت‌نام"
 
-#: views/admin/panel-section/general.php:34
+#: views/admin/panel-section/general.php:46
 msgid "Login and Register form Logo"
 msgstr "لوگوی فرم ورود و عضویت"
 
-#: views/admin/panel-section/general.php:36
-#: views/admin/panel-section/general.php:50
+#: views/admin/panel-section/general.php:48
+#: views/admin/panel-section/general.php:62
 msgid "Upload Image"
 msgstr "آپلود تصویر"
 
-#: views/admin/panel-section/general.php:37
+#: views/admin/panel-section/general.php:49
 msgid "We suggest to use 120 * 120 px for logo size."
 msgstr ""
 "ما پیشنهاد می کنیم از سایز ۱۲۰ * ۱۲۰ (پیکسل) برای اندازه لوگو  استفاده کنید."
 
-#: views/admin/panel-section/general.php:40
+#: views/admin/panel-section/general.php:52
 msgid "Logo Width (px)"
 msgstr "پهنای لوگو ( به پیکسل )"
 
-#: views/admin/panel-section/general.php:44
+#: views/admin/panel-section/general.php:56
 msgid "Logo Height (px)"
 msgstr "ارتفاع لوگو ( به پیکسل )"
 
-#: views/admin/panel-section/general.php:48
+#: views/admin/panel-section/general.php:60
 msgid "Login and Register form background"
 msgstr "پس زمینه فرم ورود و ثبت نام"
 
-#: views/admin/panel-section/general.php:53
+#: views/admin/panel-section/general.php:65
 msgid "Redirect non Admin user to"
 msgstr "تغییر مسیر کاربر غیر مدیر به"
 
-#: views/admin/panel-section/general.php:55
+#: views/admin/panel-section/general.php:67
 msgid ""
 "Users who don't have admin or author caps, redirect to this address after "
 "login (with http or https)"
@@ -1207,11 +1212,11 @@ msgstr "خطوط هوایی جدید"
 #~ msgid "3D"
 #~ msgstr "سه بعدی"
 
-#~ msgid "IRANSans"
-#~ msgstr "ایران سنس"
-
 #~ msgid "IRANYekan"
 #~ msgstr "ایران یکان"
+
+#~ msgid "IRANSans"
+#~ msgstr "ایران سنس"
 
 #~ msgid "Select SMS Provider"
 #~ msgstr "ارائه دهنده ی SMS را انتخاب کنید"

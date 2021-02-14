@@ -98,6 +98,64 @@
 .mp_option_single .wp-picker-container{
 	display:inline-block;
 }
+/* start range style */
+.mp_option_single input[type=range].mwpl_range
+{
+    direction: ltr;
+    width: 50%;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+}
+.mp_option_single input[type=range].mwpl_range:focus
+{
+    outline: none;
+}
+/* line background */
+.mp_option_single input[type=range].mwpl_range::-webkit-slider-runnable-track
+{
+    background: linear-gradient(45deg, #435bfb, #4e9dfd);
+    height: 8px;
+    border-radius: 100px;
+}
+/* .mp_option_single input[type=range].mwpl_range:focus::-webkit-slider-runnable-track
+{
+    background: red;
+} */
+.mp_option_single input[type=range].mwpl_range::-moz-range-track
+{
+    background: linear-gradient(45deg, #435bfb, #4e9dfd);
+    height: 8px;
+    border-radius: 100px;
+    border: none;
+}
+
+/* thumb */
+.mp_option_single input[type=range].mwpl_range::-webkit-slider-thumb
+{
+    background-color: #435bfb;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-top: -10px;
+    -webkit-appearance: none;
+}
+.mp_option_single input[type=range].mwpl_range::-webkit-slider-thumb::before
+{
+    content: 'developermode';
+    display: block;
+    position: absolute;
+}
+.mp_option_single input[type=range].mwpl_range::-moz-range-thumb
+{
+    background-color: #435bfb;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-top: -10px;
+    border: none;
+}
+/* end range style */
 #rwl-page-input{
 	direction: ltr;
 	text-align: left;

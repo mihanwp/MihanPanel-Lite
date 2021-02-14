@@ -48,14 +48,18 @@ class assets
     static function load_admin_panel_css($version)
     {
         $select_2 = self::get_css_url('select2.min');
+        $live_view = self::get_css_url('admin-live-view');
         wp_enqueue_style('select2', $select_2, [], $version);
+        wp_enqueue_style('admin-live-view', $live_view, [], $version);
     }
     public static function load_admin_panel_js($version)
     {
         $select_2 = self::get_js_url('select2.min');
         $panel_js = self::get_js_url('admin-panel');
+        $live_view = self::get_js_url('admin-live-view');
         wp_enqueue_script('select2', $select_2, [], $version, true);
         wp_enqueue_script('mw_admin_panel', $panel_js, ['jquery'], $version, true);
+        wp_enqueue_script('admin-live-view', $live_view, ['jquery'], $version, true);
         wp_localize_script('mw_admin_panel', 'mwp_data', ['au' => admin_url('admin-ajax.php')]);
     }
     static function load_admin_user_profile($page)
@@ -119,8 +123,8 @@ class assets
             }
             #login h1 a, .login h1 a {
                 background: url('<?php echo $mp_logo;?>') no-repeat;
-                width: <?php echo get_option('mp_logo_width');?>px;
-                height: <?php echo get_option('mp_logo_height');?>px;
+                width: <?php echo options::get_login_logo_width();?>px;
+                height: <?php echo options::get_login_logo_height();?>px;
             }
             <?php if( get_option('login_button_color') != null ):?>
             .login form input[type=submit]{

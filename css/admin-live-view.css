@@ -1,0 +1,70 @@
+.mwpl_live_view
+{
+    display: none;
+    /* min-width: 300px; */
+    min-width: 350px;
+    min-height: 100px;
+    background-color: #eaeaea;
+    border: 1px solid #d4d4d4a1;
+    border-radius: 5px;
+    z-index: 999;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+}
+.mwpl_live_view.show
+{
+    animation-name: show_live_view_box;
+    animation-duration: .2s;
+}
+.mwpl_live_view .mwpl_login_form_wrapper
+{
+    width: 80% !important;
+    margin: 0 auto;
+    min-height: 100px;
+    box-shadow: 0 0 40px rgba(0,0,0,0.15) !important;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+}
+.mwpl_live_view.light .mwpl_login_form_wrapper
+{
+    background: rgba(255,255,255,0.95);
+}
+.mwpl_live_view.dark .mwpl_login_form_wrapper
+{
+    background: rgba(0,0,0,0.8)
+}
+.mwpl_live_view .mwpl_login_form_wrapper .login-btn
+{
+    width: 65% !important;
+    text-align: center;
+    background-color: #5454ff;
+    box-shadow: 0 5px 10px #5454ff60;
+    padding: 5px 0;
+    border-radius: 25px;
+    color: white;
+}
+#mwpl_live_view_login_logo .mwpl_login_form_wrapper
+{
+    padding-top: 20px;
+}
+#mwpl_live_view_login_logo .logo-box
+{
+    background-color: #d4d4d4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 50px;
+    min-height: 50px;
+}
+#mwpl_live_view_login_logo.dark .logo-box
+{
+    background-color: #040404;
+    color: white;
+}

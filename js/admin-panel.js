@@ -6,4 +6,9 @@ jQuery(document).ready(function ($) {
         mw_sidebar.toggleClass('mw_open');
     });
     $('.mw_select2').select2();
+    $(document).on('input', '.mwpl_range', function(e){
+        let mwpl_this = $(this),
+            valueWrapper = mwpl_this.parent().find('.range_value')
+        valueWrapper.text(mwpl_this.val())
+    })
 });
