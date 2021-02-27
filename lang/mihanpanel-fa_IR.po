@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MihanPanel\n"
-"POT-Creation-Date: 2021-02-14 15:12+0330\n"
-"PO-Revision-Date: 2021-02-14 15:12+0330\n"
+"POT-Creation-Date: 2021-02-27 17:01+0330\n"
+"PO-Revision-Date: 2021-02-27 17:01+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -30,7 +30,7 @@ msgstr "آدرس شماره دو"
 msgid "MihanPanel"
 msgstr "میهن پنل"
 
-#: app/admin_menu.php:25 views/admin/panel-section/general.php:34
+#: app/admin_menu.php:25 views/admin/panel-section/general.php:35
 msgid "Login & Register"
 msgstr "ورود و عضویت"
 
@@ -99,35 +99,35 @@ msgstr "عنوان منو"
 msgid "Link / Shortcode"
 msgstr "لینک / کد کوتاه"
 
-#: app/admin_menu.php:136 app/admin_menu.php:183 app/admin_menu.php:221
+#: app/admin_menu.php:136 app/admin_menu.php:171 app/admin_menu.php:209
 msgid "Icon"
 msgstr "آیکون"
 
-#: app/admin_menu.php:167
+#: app/admin_menu.php:155
 msgid "FontAwesome"
 msgstr "FontAwesome"
 
-#: app/admin_menu.php:176
+#: app/admin_menu.php:164
 msgid "Create new item"
 msgstr "ایجاد مورد جدید"
 
-#: app/admin_menu.php:181 app/admin_menu.php:187
+#: app/admin_menu.php:169 app/admin_menu.php:175
 msgid "Menu Title"
 msgstr "عنوان منو"
 
-#: app/admin_menu.php:182
+#: app/admin_menu.php:170
 msgid "Content"
 msgstr "محتوا"
 
-#: app/admin_menu.php:190
+#: app/admin_menu.php:178
 msgid "Choose"
 msgstr "انتخاب"
 
-#: app/admin_menu.php:191
+#: app/admin_menu.php:179
 msgid "Link to other page"
 msgstr "پیوند به صفحه دیگر"
 
-#: app/admin_menu.php:192
+#: app/admin_menu.php:180
 msgid "Shortcode"
 msgstr "کد کوتاه"
 
@@ -313,15 +313,79 @@ msgstr "تعداد خرید شما"
 msgid "Your tickets"
 msgstr "تیکت های شما"
 
-#: app/handle_view.php:308 app/middlewares.php:68
+#: app/handle_view.php:311 app/middlewares.php:68
 msgid "Pro Version"
 msgstr "نسخه‌ی حرفه‌ای"
 
-#: app/handle_view.php:476
+#: app/handle_view.php:332
+msgid "Login Button Text Color"
+msgstr "رنگ متن دکمه ورود"
+
+#: app/handle_view.php:334
+msgid "Color of Login and Register button text"
+msgstr "رنگ متن دکمه در صفحه ی ورود و ثبت نام"
+
+#: app/handle_view.php:347
+msgid "Login Fields Background Color"
+msgstr "رنگ پس زمینه ی فیلدهای فرم ورود"
+
+#: app/handle_view.php:349
+msgid "Color of Login and Register fields"
+msgstr "رنگ پس زمینه فیلدهای فرم ورود و ثبت‌نام"
+
+#: app/handle_view.php:362
+msgid "Login Field's Label Color"
+msgstr "رنگ لیبل فیلدهای فرم ورود"
+
+#: app/handle_view.php:364
+msgid "Color of Login and Register labels"
+msgstr "رنگ متن لیبل فیلدهای فرم ورود و ثبت نام"
+
+#: app/handle_view.php:377
+msgid "Login Fields Text Color"
+msgstr "رنگ متن فیلدهای فرم ورود"
+
+#: app/handle_view.php:379
+msgid "Color of Login and Register fields text"
+msgstr "رنگ متن فیلدهای فرم ورود و ثبت‌نام"
+
+#: app/handle_view.php:392
+msgid "Login Info Messagebox Background Color"
+msgstr "رنگ پس زمینه ی باکس اطلاع رسانی در فرم ورود"
+
+#: app/handle_view.php:394
+msgid "Background Color of Login and Register Info Messagebox"
+msgstr "رنگ پس زمینه ی باکس اطلاع رسانی در فرم ورود و ثبت نام"
+
+#: app/handle_view.php:407
+msgid "Login Info Messagebox Text Color"
+msgstr "رنگ متن باکس اطلاع رسانی در فرم ورود"
+
+#: app/handle_view.php:409
+msgid "Color of Login and Register Info Messagebox Text"
+msgstr "رنگ متن باکس اطلاع رسانی در فرم ورود و ثبت نام"
+
+#: app/handle_view.php:422
+msgid "Login Error Messagebox Text Color"
+msgstr "رنگ متن باکس ارور در فرم ورود"
+
+#: app/handle_view.php:424
+msgid "Color of Login and Register Error Messagebox Text"
+msgstr "رنگ متن باکس ارور در فرم ورود و ثبت نام"
+
+#: app/handle_view.php:437
+msgid "Login Error Messagebox Background Color"
+msgstr "رنگ پس زمینه ی باکس ارور در فرم ورود"
+
+#: app/handle_view.php:439
+msgid "Background Color of Login and Register Error Messagebox"
+msgstr "رنگ پس زمینه ی باکس ارور در فرم ورود و ثبت نام"
+
+#: app/handle_view.php:603
 msgid "Auto confirm phone number after user register"
 msgstr "فعالسازی شماره تلفن بعد از ثبت نام به صورت اتوماتیک"
 
-#: app/handle_view.php:480
+#: app/handle_view.php:607
 msgid "User can change phone number"
 msgstr "کاربر میتواند شماره تلفن را تغییر دهد"
 
@@ -582,10 +646,8 @@ msgid "Networkwide default"
 msgstr "پیش فرض شبکه گسترده"
 
 #: rename-wp-login.php:126
-msgid "Change login url. Please set the Settings > Permalink to the post name."
-msgstr ""
-"تغییر url صفحه ی ورود. لطفا از بخش تنظیمات > پیوند های یکتا را روی نام نوشته "
-"قرار دهید."
+msgid "Change login url"
+msgstr "تغییر لینک ورود"
 
 #: rename-wp-login.php:132
 msgid "Login page address"
@@ -600,17 +662,21 @@ msgstr "برای تنظیم یک پیش فرض شبکه گسترده ، به %s 
 msgid "Network Settings"
 msgstr "تنظیمات شبکه"
 
-#: rename-wp-login.php:178
+#: rename-wp-login.php:183
+msgid "Your site login url is"
+msgstr "آدرس صفحه ورود سایت شما"
+
+#: rename-wp-login.php:188
 #, php-format
 msgid "Your login page is now here: %s. Bookmark this page!"
 msgstr ""
 "صفحه ی ورود شما در اینجاست: %s. میتوانید آن را به بوکمارک خود اضافه کنید!"
 
-#: rename-wp-login.php:183 rename-wp-login.php:185
+#: rename-wp-login.php:193 rename-wp-login.php:195
 msgid "Settings"
 msgstr "تنظیمات"
 
-#: rename-wp-login.php:198
+#: rename-wp-login.php:208
 msgid "This feature is not enabled."
 msgstr "این ویژگی در دسترس نیست."
 
@@ -698,57 +764,61 @@ msgstr "وضعیت اکانت"
 msgid "Logo"
 msgstr "لوگو"
 
-#: views/admin/panel-section/general.php:20
+#: views/admin/panel-section/general.php:21
 msgid "Activation process"
 msgstr "روند فعالسازی"
 
-#: views/admin/panel-section/general.php:36
+#: views/admin/panel-section/general.php:37
 msgid "Login Form Theme"
 msgstr "تم فرم ورود"
 
-#: views/admin/panel-section/general.php:38
+#: views/admin/panel-section/general.php:39
 msgid "Login and Register form theme"
 msgstr "تم فرم ورود و عضویت"
 
-#: views/admin/panel-section/general.php:41
+#: views/admin/panel-section/general.php:42
+msgid "Form Position"
+msgstr "موقعیت فرم"
+
+#: views/admin/panel-section/general.php:46
 msgid "Login Button Color"
 msgstr "رنگ دکمه ورود"
 
-#: views/admin/panel-section/general.php:43
+#: views/admin/panel-section/general.php:48
 msgid "Color of Login and Register button"
 msgstr "پس زمینه دکمه ورود و ثبت‌نام"
 
-#: views/admin/panel-section/general.php:46
+#: views/admin/panel-section/general.php:61
 msgid "Login and Register form Logo"
 msgstr "لوگوی فرم ورود و عضویت"
 
-#: views/admin/panel-section/general.php:48
-#: views/admin/panel-section/general.php:62
+#: views/admin/panel-section/general.php:63
+#: views/admin/panel-section/general.php:77
 msgid "Upload Image"
 msgstr "آپلود تصویر"
 
-#: views/admin/panel-section/general.php:49
+#: views/admin/panel-section/general.php:64
 msgid "We suggest to use 120 * 120 px for logo size."
 msgstr ""
 "ما پیشنهاد می کنیم از سایز ۱۲۰ * ۱۲۰ (پیکسل) برای اندازه لوگو  استفاده کنید."
 
-#: views/admin/panel-section/general.php:52
+#: views/admin/panel-section/general.php:67
 msgid "Logo Width (px)"
 msgstr "پهنای لوگو ( به پیکسل )"
 
-#: views/admin/panel-section/general.php:56
+#: views/admin/panel-section/general.php:71
 msgid "Logo Height (px)"
 msgstr "ارتفاع لوگو ( به پیکسل )"
 
-#: views/admin/panel-section/general.php:60
+#: views/admin/panel-section/general.php:75
 msgid "Login and Register form background"
 msgstr "پس زمینه فرم ورود و ثبت نام"
 
-#: views/admin/panel-section/general.php:65
+#: views/admin/panel-section/general.php:80
 msgid "Redirect non Admin user to"
 msgstr "تغییر مسیر کاربر غیر مدیر به"
 
-#: views/admin/panel-section/general.php:67
+#: views/admin/panel-section/general.php:82
 msgid ""
 "Users who don't have admin or author caps, redirect to this address after "
 "login (with http or https)"
@@ -1203,6 +1273,21 @@ msgstr "خطوط هوایی جدید"
 #~ msgid "Dark"
 #~ msgstr "تیره"
 
+#~ msgid "Right"
+#~ msgstr "راست"
+
+#~ msgid "Center"
+#~ msgstr "وسط"
+
+#~ msgid "Left"
+#~ msgstr "چپ"
+
+#~ msgid "Background Color of Login and Register Messagebox"
+#~ msgstr "رنگ پس زمینه ی باکس اطلاع رسانی در فرم ورود و ثبت نام"
+
+#~ msgid "Color of Login and Register Messagebox Text"
+#~ msgstr "رنگ متن باکس اطلاع رسانی در فرم ورود و ثبت نام"
+
 #~ msgid "Default"
 #~ msgstr "پیشفرض"
 
@@ -1418,6 +1503,9 @@ msgstr "خطوط هوایی جدید"
 #~ msgid "Get License Key"
 #~ msgstr "دریافت کد لایسنس"
 
+#~ msgid "Message Text..."
+#~ msgstr "متن پیام..."
+
 #~ msgid "Dynamic Password"
 #~ msgstr "کد پویا"
 
@@ -1441,6 +1529,21 @@ msgstr "خطوط هوایی جدید"
 
 #~ msgid "Request Code"
 #~ msgstr "درخواست کد"
+
+#~ msgid "https://mihanwp.com/mihanpanel/"
+#~ msgstr "https://mihanwp.com/mihanpanel/"
+
+#~ msgid "The best way to build user interface in WordPress"
+#~ msgstr "یک راه مناسب برای پیاده سازی پروفایل کاربری در وردپرس"
+
+#~ msgid "https://mihanwp.com"
+#~ msgstr "https://mihanwp.com/"
+
+#~ msgid ""
+#~ "Change login url. Please set the Settings > Permalink to the post name."
+#~ msgstr ""
+#~ "تغییر url صفحه ی ورود. لطفا از بخش تنظیمات > پیوند های یکتا را روی نام "
+#~ "نوشته قرار دهید."
 
 #~ msgid "Email field"
 #~ msgstr "فیلد ایمیل"
@@ -1506,12 +1609,6 @@ msgstr "خطوط هوایی جدید"
 
 #~ msgid "An error occurred, try again"
 #~ msgstr "خطایی رخ داد ، دوباره امتحان کنید"
-
-#~ msgid "https://mihanwp.com/mihanpanel/"
-#~ msgstr "https://mihanwp.com/mihanpanel/"
-
-#~ msgid "The best way to build user interface in WordPress"
-#~ msgstr "یک راه مناسب برای پیاده سازی پروفایل کاربری در وردپرس"
 
 #~ msgid "Mihan Panel License"
 #~ msgstr "لایسنس میهن پنل"

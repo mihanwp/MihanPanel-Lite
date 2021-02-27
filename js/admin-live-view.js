@@ -23,7 +23,7 @@ jQuery(document).ready(function($){
     }
     $(document).on('mouseover', '[live_view_target_id]', show_live_view_field)
     $(document).on('mouseleave', '[live_view_target_id]', hide_live_view_field)
-    $(document).on('mwpl_color_picker_value_changed', function(_e,el, newColor){
+    $('.my-color-field[name=login_button_color]').on('mwpl_color_picker_value_changed', function(_e,el, newColor){
         let element = $(el),
             live_view_target_id = element.closest('[live_view_target_id]').attr('live_view_target_id')
         if(!live_view_target_id)
@@ -44,6 +44,14 @@ jQuery(document).ready(function($){
         }
         live_view.removeClass('dark light')
         live_view.addClass(login_theme)
+        // handle field value
+        let bg_color_value = $('[live_view_target_id=mwpl_live_view_login_button] input[name=login_button_color]').val(),
+            text_color_value = $('[live_view_target_id=mwpl_live_view_login_button] input[name=login_button_text_color]').val()
+        live_view.find('.login-btn').css({
+            'background-color': bg_color_value,
+            'color': text_color_value,
+            'box-shadow': `0 5px 10px ${bg_color_value}60`
+        })
     })
     $(document).on('mwpl_before_show_live_view_field', '[live_view_target_id=mwpl_live_view_login_logo]', function(e, el){
         el = $(el)

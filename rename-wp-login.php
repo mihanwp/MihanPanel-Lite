@@ -123,13 +123,13 @@ if ( defined( 'ABSPATH' ) && ! class_exists( 'Rename_WP_Login' ) ) {
 			global $pagenow;
 			add_settings_section(
 				'rename-wp-login-section',
-				__( 'Change login url. Please set the Settings > Permalink to the post name.', 'mihanpanel' ),
+				__( 'Change login url', 'mihanpanel' ),
 				array( $this, 'rwl_section_desc' ),
 				'mihanpanelsettings'
 			);
 			add_settings_field(
 				'rwl-page',
-				'<label for="rwl-page">'.__("Login page address", "mihanpanel").'</label>',
+				'<label style="width: 100%" for="rwl-page">'.__("Login page address", "mihanpanel").'</label>',
 				array( $this, 'rwl_page_input' ),
 				'mihanpanelsettings',
 				'rename-wp-login-section'
@@ -167,10 +167,20 @@ if ( defined( 'ABSPATH' ) && ! class_exists( 'Rename_WP_Login' ) ) {
 		}
 		public function rwl_page_input() {
 			if ( get_option( 'permalink_structure' ) ) {
-				echo '<code>' . trailingslashit( home_url() ) . '</code> <input id="rwl-page-input" type="text" name="rwl_page" value="' . $this->new_login_slug()  . '">' . ( $this->use_trailing_slashes() ? ' <code>/</code>' : '' );
+				$prefix = trailingslashit(home_url());
 			} else {
-				echo '<code>' . trailingslashit( home_url() ) . '?</code> <input id="rwl-page-input" type="text" name="rwl_page" value="' . $this->new_login_slug()  . '">';
+				$prefix = trailingslashit(home_url()) . '?';
 			}
+			$body = sprintf('<code>%s</code><input id="rwl-page-input" name="rwl_page" type="text" value="%s"/>', $prefix, $this->new_login_slug());
+			if($this->use_trailing_slashes())
+			{
+				$body .=  '<code>/</code>';
+			}
+			echo '<div dir="ltr">';
+			echo $body;
+			echo '</div>';
+			$login_url = $prefix . $this->new_login_slug();
+			echo '<p style="text-align: left" class="description">'.esc_html__('Your site login url is', 'mihanpanel').': <a target="_blank" dir="ltr" href="'.$login_url.'">'.$login_url.'</a></p>';
 		}
 		public function admin_notices() {
 			global $pagenow;

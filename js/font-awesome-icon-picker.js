@@ -44,21 +44,19 @@ jQuery(document).ready(function ($) {
 
 // This function is Heart of this plugin LOL sorry :P
 (function(jQuery) {
-    jQuery.fn.iconpicker = function(selector) {
-        // if user focus on inputbox SHOW iconpicker box
-        jQuery(this).focusin(function() {
-            jQuery('.howl-iconpicker-outer').css('display', 'table');
-            jQuery('.howl-iconpicker .geticonval').removeClass('selectedicon');
-            whichInputClass = jQuery(this).attr('class');
-            whichInputId = jQuery(this).attr('id');
-            jQuery(".howl-iconpicker .geticonval").on('click', function() {
-                var getIconId = jQuery(this).text();
-                jQuery('.howl-iconpicker .geticonval').removeClass('selectedicon');
-                jQuery(this).addClass('selectedicon');
-                // if ( jQuery(selector).attr('class') == whichInputClass && jQuery(selector).attr('id') == whichInputId) {
-                    jQuery(selector).val('fa-'+getIconId).change();
-                // }
-            });
+    jQuery(document).ready(function($){
+        $.fn.mwpl_iconpicker = function(el){
+            $(this).focusin(function(){
+                $('.howl-iconpicker-outer').css('display', 'table');
+                $('.howl-iconpicker .geticonval').removeClass('selectedicon');
+                selector = el
+            })
+        }
+        $('.howl-iconpicker .geticonval').on('click', function() {
+            var getIconId = $(this).text();
+            $('.howl-iconpicker .geticonval').removeClass('selectedicon');
+            $(this).addClass('selectedicon');
+            $(selector).val('fa-'+getIconId).change();
         });
-    }
+    })
 }(jQuery));

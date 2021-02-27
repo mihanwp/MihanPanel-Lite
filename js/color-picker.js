@@ -6,7 +6,7 @@ jQuery(document).ready(function($){
             defaultColor: el.attr('default_value'),
             change: function(e, ui){
                 let newColor = ui.color.toString()
-                $(document).trigger('mwpl_color_picker_value_changed', [this, newColor])
+                el.trigger('mwpl_color_picker_value_changed', [this, newColor])
             }
         });
     })

@@ -137,18 +137,6 @@ class admin_menu
                     <th></th>
                 </tr>
                 </thead>
-                <script>
-                var whichInput = 0;
-                jQuery(document).ready(function ($) {
-                  <?php
-                  global $wpdb;
-                  $tablename = $wpdb->prefix . 'mihanpaneltabs';
-                  $menus = $wpdb->get_results("SELECT * FROM $tablename ORDER BY priority ASC");
-                  foreach ($menus as $menu) { ?>
-                  $('.fontawesomepicker-<?php echo $menu->id; ?>').iconpicker(".fontawesomepicker-<?php echo $menu->id; ?>");
-                  <?php } ?>
-                });
-                </script>
                 <tbody class="mw_sortable">
                 <?php
                 global $wpdb;

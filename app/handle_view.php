@@ -288,18 +288,21 @@ class handle_view
         </div>
         <?php
     }
-    
+    static function run_alternative_method($alternative_method)
+    {
+        return $alternative_method && method_exists(__CLASS__, $alternative_method) ? call_user_func([__CLASS__, $alternative_method]) : self::show_go_pro_link();
+    }
     static function handle_option_panel_render_method($method, $alternative_method=false)
     {
         if(!$method || !is_array($method))
         {
-            return self::show_go_pro_link();
+            return self::run_alternative_method($alternative_method);
         }
         if(class_exists($method[0]) && method_exists($method[0], $method[1]))
         {
             return call_user_func([$method[0], $method[1]]);
-        }        
-        return $alternative_method && method_exists(__CLASS__, $alternative_method) ? call_user_func([__CLASS__, $alternative_method]) : self::show_go_pro_link();
+        }
+        return self::run_alternative_method($alternative_method);
     }
     static function show_go_pro_link()
     {
@@ -312,6 +315,130 @@ class handle_view
     {
         $render_method = apply_filters('mwpl_option_panel/render_method/login_form_theme', []);
         self::handle_option_panel_render_method($render_method);
+    }
+    static function option_panel_field_login_form_position(){
+        $render_method = apply_filters('mwpl_option_panel/render_method/login_form_position', []);
+        self::handle_option_panel_render_method($render_method);
+    }
+    static function option_panel_field_login_button_text_color()
+    {
+        $render_method = apply_filters('mwpl_option_panel/render_method/login_button_text_color', []);
+        self::handle_option_panel_render_method($render_method, 'option_panel_field_login_button_text_color_alternative');
+    }
+    static function option_panel_field_login_button_text_color_alternative()
+    {
+        ?>
+        <div class="mp_option_single">
+            <label><?php esc_html_e("Login Button Text Color", "mihanpanel");?></label>
+            <?php self::show_go_pro_link()?>
+            <p class="description"><?php esc_html_e("Color of Login and Register button text", "mihanpanel"); ?></p>
+        </div>
+        <?php
+    }
+    static function option_panel_field_login_fields_bg_color()
+    {
+        $render_method = apply_filters('mwpl_option_panel/render_method/login_fields_bg_color', []);
+        self::handle_option_panel_render_method($render_method, 'option_panel_field_login_fields_bg_color_alternative');
+    }
+    static function option_panel_field_login_fields_bg_color_alternative()
+    {
+        ?>
+        <div class="mp_option_single">
+            <label><?php esc_html_e("Login Fields Background Color", "mihanpanel");?></label>
+            <?php self::show_go_pro_link()?>
+            <p class="description"><?php esc_html_e("Color of Login and Register fields", "mihanpanel"); ?></p>
+        </div>
+        <?php
+    }
+    static function option_panel_field_login_labels_color()
+    {
+        $render_method = apply_filters('mwpl_option_panel/render_method/login_fields_label_color', []);
+        self::handle_option_panel_render_method($render_method, 'option_panel_field_login_labels_color_alternative');
+    }
+    static function option_panel_field_login_labels_color_alternative()
+    {
+        ?>
+        <div class="mp_option_single">
+            <label><?php esc_html_e("Login Field's Label Color", "mihanpanel");?></label>
+            <?php self::show_go_pro_link()?>
+            <p class="description"><?php esc_html_e("Color of Login and Register labels", "mihanpanel"); ?></p>
+        </div>
+        <?php
+    }
+    static function option_panel_field_login_fields_text_color()
+    {
+        $render_method = apply_filters('mwpl_option_panel/render_method/login_fields_text_color', []);
+        self::handle_option_panel_render_method($render_method, 'option_panel_field_login_fields_text_color_alternative');
+    }
+    static function option_panel_field_login_fields_text_color_alternative()
+    {
+        ?>
+        <div class="mp_option_single">
+            <label><?php esc_html_e("Login Fields Text Color", "mihanpanel");?></label>
+            <?php self::show_go_pro_link()?>
+            <p class="description"><?php esc_html_e("Color of Login and Register fields text", "mihanpanel"); ?></p>
+        </div>
+        <?php
+    }
+    static function option_panel_field_login_info_messagebox_bg_color()
+    {
+        $render_method = apply_filters('mwpl_option_panel/render_method/login_info_messagebox_bg_color', []);
+        self::handle_option_panel_render_method($render_method, 'option_panel_field_login_info_messagebox_bg_color_alternative');
+    }
+    static function option_panel_field_login_info_messagebox_bg_color_alternative()
+    {
+        ?>
+        <div class="mp_option_single">
+            <label><?php esc_html_e("Login Info Messagebox Background Color", "mihanpanel");?></label>
+            <?php self::show_go_pro_link()?>
+            <p class="description"><?php esc_html_e("Background Color of Login and Register Info Messagebox", "mihanpanel"); ?></p>
+        </div>
+        <?php
+    }
+    static function option_panel_field_login_info_messagebox_text_color()
+    {
+        $render_method = apply_filters('mwpl_option_panel/render_method/login_info_messagebox_text_color', []);
+        self::handle_option_panel_render_method($render_method, 'option_panel_field_login_info_messagebox_text_color_alternative');
+    }
+    static function option_panel_field_login_info_messagebox_text_color_alternative()
+    {
+        ?>
+        <div class="mp_option_single">
+            <label><?php esc_html_e("Login Info Messagebox Text Color", "mihanpanel");?></label>
+            <?php self::show_go_pro_link()?>
+            <p class="description"><?php esc_html_e("Color of Login and Register Info Messagebox Text", "mihanpanel"); ?></p>
+        </div>
+        <?php
+    }
+    static function option_panel_field_login_error_messagebox_text_color()
+    {
+        $render_method = apply_filters('mwpl_option_panel/render_method/login_error_messagebox_text_color', []);
+        self::handle_option_panel_render_method($render_method, 'option_panel_field_login_error_messagebox_text_color_alternative');
+    }
+    static function option_panel_field_login_error_messagebox_text_color_alternative()
+    {
+        ?>
+        <div class="mp_option_single">
+            <label><?php esc_html_e("Login Error Messagebox Text Color", "mihanpanel");?></label>
+            <?php self::show_go_pro_link()?>
+            <p class="description"><?php esc_html_e("Color of Login and Register Error Messagebox Text", "mihanpanel"); ?></p>
+        </div>
+        <?php
+    }
+    static function option_panel_field_login_error_messagebox_bg_color()
+    {
+        $render_method = apply_filters('mwpl_option_panel/render_method/login_error_messagebox_bg_color', []);
+        self::handle_option_panel_render_method($render_method, 'option_panel_field_login_error_messagebox_bg_color_alternative');
+    }
+    static function option_panel_field_login_error_messagebox_bg_color_alternative()
+    {
+        ?>
+        <div class="mp_option_single">
+            <label><?php esc_html_e("Login Error Messagebox Background Color", "mihanpanel");?></label>
+            <?php self::show_go_pro_link()?>
+            <p class="description"><?php esc_html_e("Background Color of Login and Register Error Messagebox", "mihanpanel"); ?></p>
+        </div>
+        <?php
     }
     static function option_panel_field_redirect_normal_user()
     {

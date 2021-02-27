@@ -1,7 +1,6 @@
 .mwpl_live_view
 {
     display: none;
-    /* min-width: 300px; */
     min-width: 350px;
     min-height: 100px;
     background-color: #eaeaea;

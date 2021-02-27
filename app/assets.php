@@ -59,7 +59,7 @@ class assets
         $live_view = self::get_js_url('admin-live-view');
         wp_enqueue_script('select2', $select_2, [], $version, true);
         wp_enqueue_script('mw_admin_panel', $panel_js, ['jquery'], $version, true);
-        wp_enqueue_script('admin-live-view', $live_view, ['jquery'], $version, true);
+        wp_enqueue_script('mwpl-admin-live-view', $live_view, ['jquery'], $version, true);
         wp_localize_script('mw_admin_panel', 'mwp_data', ['au' => admin_url('admin-ajax.php')]);
     }
     static function load_admin_user_profile($page)
