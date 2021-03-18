@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MihanPanel\n"
-"POT-Creation-Date: 2021-02-27 17:01+0330\n"
-"PO-Revision-Date: 2021-02-27 17:01+0330\n"
+"POT-Creation-Date: 2021-03-18 10:58+0330\n"
+"PO-Revision-Date: 2021-03-18 10:58+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -99,7 +99,7 @@ msgstr "عنوان منو"
 msgid "Link / Shortcode"
 msgstr "لینک / کد کوتاه"
 
-#: app/admin_menu.php:136 app/admin_menu.php:171 app/admin_menu.php:209
+#: app/admin_menu.php:136 app/admin_menu.php:171 app/admin_menu.php:215
 msgid "Icon"
 msgstr "آیکون"
 
@@ -130,6 +130,10 @@ msgstr "پیوند به صفحه دیگر"
 #: app/admin_menu.php:180
 msgid "Shortcode"
 msgstr "کد کوتاه"
+
+#: app/admin_menu.php:191
+msgid "Custom Shortcode"
+msgstr "کد کوتاه سفارشی"
 
 #: app/ajax.php:17 app/ajax.php:72 app/ajax.php:99
 msgid "Has error!"

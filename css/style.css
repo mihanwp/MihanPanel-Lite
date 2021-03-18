@@ -8,16 +8,16 @@ html body .mihanpanelpanel .dashicons
 {
     font-family: dashicons !important;
 }
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-nav,
-section,
-summary {
+.mihanpanel-page article,
+.mihanpanel-page aside,
+.mihanpanel-page details,
+.mihanpanel-page figcaption,
+.mihanpanel-page figure,
+.mihanpanel-page footer,
+.mihanpanel-page header,
+.mihanpanel-page nav,
+.mihanpanel-page section,
+.mihanpanel-page summary {
     letter-spacing: 0  !important;
     display: block !important;
     margin: 0 !important;

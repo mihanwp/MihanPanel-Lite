@@ -181,16 +181,20 @@ class admin_menu
                             </select>
                             <input class="hiddenoutput" id="islink" style="direction:ltr;text-align:left" name="link"
                                    placeholder="http://"/>
-                            <select class="hiddenoutput" id="iscontent" name="content">
+                            <select class="hiddenoutput" id="iscontent">
                             <?php
                             global $shortcode_tags;
                             $shortcodes = $shortcode_tags;
                             ksort( $shortcodes );
-                            ?>
-                              <?php foreach( $shortcodes as $code => $function ) { ?>
-                                <option value="[<?php echo esc_attr($code); ?>]"><?php echo esc_html($code); ?></option>
-                            <?php } ?>
+                            if($shortcodes):
+                                ?>
+                                <option value="mwp_custom_shortcode"><?php esc_html_e('Custom Shortcode', 'mihanpanel')?></option>
+                                <?php
+                                foreach( $shortcodes as $code => $function ): ?>
+                                    <option value="[<?php echo esc_attr($code); ?>]"><?php echo esc_html($code); ?></option>
+                            <?php endforeach;endif; ?>
                             </select>
+                            <input class="hiddenoutput" name="content" id="custom_shortcode_value" placeholder="[your_shortcode]">
                             <script>
                                 function yesnoCheck() {
                                     if (document.getElementById("linkorcontent").value == "optionlink") {
@@ -200,8 +204,10 @@ class admin_menu
                                     }
                                     if (document.getElementById("linkorcontent").value == "optioncontent") {
                                         document.getElementById("iscontent").style.display = "block";
+                                        document.getElementById("custom_shortcode_value").style.display = "block";
                                     } else {
                                         document.getElementById("iscontent").style.display = "none";
+                                        document.getElementById("custom_shortcode_value").style.display = "none";
                                     }
                                 }
                             </script>
