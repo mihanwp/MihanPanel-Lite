@@ -2,9 +2,9 @@
 Contributors: mihanwp  
 Donate link: https://mihanwp.com/  
 Tags: register,login,profile,registration,user panel,membership,signup,panel  
-Requires at least: 4.7  
-Tested up to: 5.6.1
-Requires PHP: 7.0  
+Requires at least: 4.0  
+Tested up to: 5.7
+Requires PHP: 7.4
 License: GPLv2 or later  
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
