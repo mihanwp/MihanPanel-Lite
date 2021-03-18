@@ -100,7 +100,7 @@ class sundry
         
         foreach ($fields as $field) {
             if (!empty($form_data[$field->slug])) {
-                $value = tools::sanitize_value($form_data[$field->slug], $form_data->type);
+                $value = tools::sanitize_value($form_data[$field->slug], $field->type);
                 update_user_meta($user_id, $field->slug, $value);
             }
         }

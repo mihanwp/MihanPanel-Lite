@@ -150,6 +150,7 @@ class hooks
     {
         // clear scheduled hook
         wp_clear_scheduled_hook('mihanpanel_session');
+        do_action('mwpl_deactiation_hook');
     }
 
     public static function add_elementor_category($elements_manager)
