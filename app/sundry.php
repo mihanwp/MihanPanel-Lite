@@ -79,7 +79,7 @@ class sundry
             $fields = $wpdb->get_results("SELECT * FROM $tablename");
             foreach ($fields as $field):?>
                 <tr>
-                    <th><label for="<?php echo esc_attr($field->slug); ?>"><?php echo esc_html($field->label); ?></label></th>
+                    <th><label for="mw_fields_<?php echo esc_attr($field->slug); ?>"><?php echo esc_html($field->label); ?></label></th>
                     <td>
                         <?php user_fields::render_field('wp-edit-profile', $field, $user, ['classes' => 'regular-text'])?>
                     </td>
@@ -95,11 +95,29 @@ class sundry
         }
         global $wpdb;
         $tablename = $wpdb->prefix . 'mihanpanelfields';
-        $fields = $wpdb->get_results("SELECT * FROM $tablename");
+        $fields = $wpdb->get_results("SELECT * FROM $tablename where type!='file_uploader'");
         $form_data = $_POST['mw_fields'];
-        
         foreach ($fields as $field) {
-            if (!empty($form_data[$field->slug])) {
+            $last_value = get_user_meta($user_id, $field->slug, true);
+            $field_meta = isset($field->meta) ? unserialize($field->meta) : false;
+            $prevent_edit_field = !\mihanpanel\app\users::is_admin_user() && isset($field_meta['data']['prevent_edit_field']);
+            if(!isset($form_data[$field->slug]) || empty($form_data[$field->slug]))
+            {
+                if($prevent_edit_field && $last_value || $field->required == 'yes')
+                {
+                    continue;
+                }
+                if($field->type == 'checkbox')
+                {
+                    update_user_meta($user_id, $field->slug, 'non');
+                }else{
+                    delete_user_meta($user_id, $field->slug);
+                }
+            }else{
+                if($prevent_edit_field && $last_value)
+                {
+                    continue;
+                }
                 $value = tools::sanitize_value($form_data[$field->slug], $field->type);
                 update_user_meta($user_id, $field->slug, $value);
             }

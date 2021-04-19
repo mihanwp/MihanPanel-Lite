@@ -76,12 +76,12 @@ class admin_menu
             <?php
             admin_user_fields::render_user_fields();
             ?>
-            <h2><?php esc_html_e('Create new field', 'mihanpanel'); ?></h2>
-    
-            <form method="post">
-                <?php admin_user_fields::render_new_record_fields()?>
-            </form>
-    
+            <div class="new_record_wrapper" style="display: none;">
+                <h2><?php esc_html_e('Create new field', 'mihanpanel'); ?><span class="close_new_field_section action_btn"><?php esc_html_e('Close', 'mihanpanel')?></span></h2>
+                <form method="post">
+                    <?php admin_user_fields::render_new_record_fields()?>
+                </form>
+            </div>
         </div>
         <?php
     }
@@ -111,7 +111,7 @@ class admin_menu
                         )
                     );
                     if ($success) {
-                        echo '<p class="alert success">'.__("Successfully added! Watch user panel").'</p>';
+                        echo '<p class="alert success">'.__("Successfully added! Watch user panel", 'mihanpanel').'</p>';
                     } else {
                         echo '<p class="alert error">'.__("An error occurred!", "mihanpanel").'</p>';
                     }

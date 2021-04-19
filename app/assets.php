@@ -76,6 +76,9 @@ class assets
     public static function load_user_field_menu_assets()
     {
         self::load_sortable_script();
+        $admin_user_fields = self::get_js_url('admin-user-fields');
+        $version = tools::get_plugin_version();
+        wp_enqueue_script('mw_admin_user_fields', $admin_user_fields, ['jquery'], $version, true);
         do_action('mwpl_load_admin_user_field_menu_assets');
     }
 

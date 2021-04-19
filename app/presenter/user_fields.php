@@ -69,6 +69,7 @@ class user_fields
     {
         $fields_render_method = [
             'textarea' => [__CLASS__, 'render_textarea_field'],
+            'checkbox' => [__CLASS__, 'render_checkbox_field'],
         ];
         $fields_render_method = apply_filters('mwpl_panel/profile/render_fields_method', $fields_render_method, $field_type);
         if(
@@ -78,7 +79,7 @@ class user_fields
             method_exists($fields_render_method[$field_type][0], $fields_render_method[$field_type][1])
             )
         {
-            return $fields_render_method[$field_type];            
+            return $fields_render_method[$field_type];
         }
     }
     public static function render_field($view, $field, $current_user=null, $args=[])
@@ -93,12 +94,18 @@ class user_fields
     }
     public static function render_normal_field($view, $field, $current_user=null, $args=[])
     {
-        $user_field_slug = $field->slug;
         $classes = isset($args['classes']) ? $args['classes'] : '';
-        $value_arg = $current_user ? 'value="'. esc_attr($current_user->{$user_field_slug}) .'"' : '';
+        $current_value = $current_user->{$field->slug};
+        $value_arg = $current_user ? 'value="'. esc_attr($current_value) .'"' : '';
+        // handle prevent edit field
+        $field_meta = isset($field->meta) ? unserialize($field->meta) : false;
+        if($field_meta)
+        {
+            $prevent_edit_field = !\mihanpanel\app\users::is_admin_user() && $current_value && isset($field_meta['data']['prevent_edit_field']);
+        }
         ?>
-        <input class="<?php echo esc_attr($classes); ?>" type="<?php echo esc_attr($field->type); ?>"
-            name="mw_fields[<?php echo esc_attr($field->slug); ?>]"
+        <input <?php echo isset($prevent_edit_field) && $prevent_edit_field ? 'disabled':''?> class="<?php echo esc_attr($classes); ?>" type="<?php echo esc_attr($field->type); ?>"
+            id="mw_fields_<?php echo $field->slug;?>" name="mw_fields[<?php echo esc_attr($field->slug); ?>]"
             <?php echo $value_arg;?>/>
         <?php
     }
@@ -106,8 +113,29 @@ class user_fields
     {
         $value = $current_user ? $current_user->{$field->slug} : '';
         $classes = isset($args['classes']) ? $args['classes'] : '';
+        $field_meta = !\mihanpanel\app\users::is_admin_user() && isset($field->meta) ? unserialize($field->meta) : false;
+        if($field_meta)
+        {
+            $prevent_edit_field = $value && isset($field_meta['data']['prevent_edit_field']);
+        }
         ?>
-        <textarea class="<?php echo esc_attr($classes); ?>" name="mw_fields[<?php echo esc_attr($field->slug); ?>]" id="<?php echo esc_attr($field->slug); ?>" cols="30" rows="10"><?php echo esc_textarea($value); ?></textarea>
+        <textarea <?php echo isset($prevent_edit_field) && $prevent_edit_field ? 'disabled="disabled"':'';?> class="<?php echo esc_attr($classes); ?>" name="mw_fields[<?php echo esc_attr($field->slug); ?>]" id="mw_fields_<?php echo esc_attr($field->slug); ?>" cols="30" rows="10"><?php echo esc_textarea($value); ?></textarea>
+        <?php
+    }
+    static function render_checkbox_field($view, $field, $current_user=null, $args=[])
+    {
+        $classes = isset($args['classes']) ? $args['classes'] : '';
+        $current_value = $current_user->{$field->slug};
+        // handle prevent edit field
+        $field_meta = !\mihanpanel\app\users::is_admin_user() && isset($field->meta) ? unserialize($field->meta) : false;
+        if($field_meta)
+        {
+            $prevent_edit_field = $current_value && isset($field_meta['data']['prevent_edit_field']);
+        }
+        ?>
+        <input <?php echo isset($prevent_edit_field) && $prevent_edit_field ? 'disabled' : '';?> class="<?php echo esc_attr($classes); ?>" type="checkbox"
+            id="mw_fields_<?php echo $field->slug ?>" name="mw_fields[<?php echo esc_attr($field->slug); ?>]"
+            <?php checked($current_value)?> value="1"/>
         <?php
     }
 }

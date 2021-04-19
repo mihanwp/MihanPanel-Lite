@@ -18,6 +18,7 @@
 }
 .mihanpanelpanel .mpsidebar .nav i
 {
+    margin-right: 15px !important;
     float: right;
 }
 .mihanpanelpanel .main-panel>.navbar {

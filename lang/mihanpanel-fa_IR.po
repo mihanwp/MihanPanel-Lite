@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MihanPanel\n"
-"POT-Creation-Date: 2021-03-19 01:22+0330\n"
-"PO-Revision-Date: 2021-03-19 01:23+0330\n"
+"POT-Creation-Date: 2021-04-19 16:13+0430\n"
+"PO-Revision-Date: 2021-04-19 16:13+0430\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.2\n"
+"X-Generator: Poedit 2.3\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n==0 || n==1);\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
@@ -26,7 +26,6 @@ msgstr ""
 msgid "Address 2"
 msgstr "آدرس شماره دو"
 
-#. Plugin Name of the plugin/theme
 #: app/admin_menu.php:17 app/gutenberg.php:17
 msgid "MihanPanel"
 msgstr "میهن پنل"
@@ -71,9 +70,13 @@ msgstr "میخواهید تغییرات ذخیره شود؟"
 msgid "Yes"
 msgstr "بله"
 
-#: app/admin_menu.php:79
+#: app/admin_menu.php:80
 msgid "Create new field"
 msgstr "ایجاد فیلد جدید"
+
+#: app/admin_menu.php:80
+msgid "Close"
+msgstr "بستن"
 
 #: app/admin_menu.php:90
 msgid "Panel Menus"
@@ -83,7 +86,7 @@ msgstr "منوهای پنل کاربری"
 msgid "Successfully added! Watch user panel"
 msgstr "با موفقیت اضافه شد! میتونید پنل کاربری رو ببینید"
 
-#: app/admin_menu.php:116 app/form/admin_user_fields.php:50
+#: app/admin_menu.php:116 app/form/admin_user_fields.php:54
 #: app/form/profile.php:62
 msgid "An error occurred!"
 msgstr "یک خطا رخ داده است!"
@@ -141,7 +144,7 @@ msgid "Has error!"
 msgstr "خطا!"
 
 #: app/ajax.php:22 app/ajax.php:83 app/ajax.php:104
-#: app/form/admin_user_fields.php:24 app/form/profile.php:36
+#: app/form/admin_user_fields.php:28 app/form/profile.php:36
 msgid "The operation failed due to security issues."
 msgstr "عملیات به دلیل مشکلات امنیتی متوقف شد."
 
@@ -250,37 +253,45 @@ msgstr "غیرفعال"
 msgid "Mihan Panel"
 msgstr "میهن پنل"
 
-#: app/form/admin_user_fields.php:46
+#: app/form/admin_user_fields.php:50
 msgid "Settings successfully updated!"
 msgstr "تنظیمات با موفقیت به روز شد!"
 
-#: app/form/admin_user_fields.php:56
+#: app/form/admin_user_fields.php:60
 msgid "Please fill all the fields"
 msgstr "لطفا تمام زمینه ها را پر کنید"
 
-#: app/form/admin_user_fields.php:65 app/form/admin_user_fields.php:124
+#: app/form/admin_user_fields.php:69 app/form/admin_user_fields.php:134
 msgid "Field Id"
 msgstr "شناسه فیلد"
 
-#: app/form/admin_user_fields.php:66 app/form/admin_user_fields.php:125
+#: app/form/admin_user_fields.php:70 app/form/admin_user_fields.php:138
 msgid "Title"
 msgstr "عنوان"
 
-#: app/form/admin_user_fields.php:67 app/form/admin_user_fields.php:100
-#: app/form/admin_user_fields.php:126 app/form/admin_user_fields.php:153
+#: app/form/admin_user_fields.php:71 app/form/admin_user_fields.php:105
+#: app/form/admin_user_fields.php:142 app/form/admin_user_fields.php:144
 #: parts/edit-profile.php:91
 msgid "Required"
 msgstr "الزامی"
 
-#: app/form/admin_user_fields.php:68 app/form/admin_user_fields.php:127
+#: app/form/admin_user_fields.php:72 app/form/admin_user_fields.php:150
 msgid "Type"
 msgstr "نوع"
 
-#: app/form/admin_user_fields.php:101 app/form/admin_user_fields.php:154
+#: app/form/admin_user_fields.php:76
+msgid "Fields"
+msgstr "فیلد‌ها"
+
+#: app/form/admin_user_fields.php:76
+msgid "New Field"
+msgstr "فیلد جدید"
+
+#: app/form/admin_user_fields.php:106 app/form/admin_user_fields.php:145
 msgid "Optional"
 msgstr "اختیاری"
 
-#: app/form/admin_user_fields.php:162
+#: app/form/admin_user_fields.php:154
 msgid "Save"
 msgstr "ذخیره"
 
@@ -288,7 +299,7 @@ msgstr "ذخیره"
 msgid "Passwords don't match!"
 msgstr "رمزهای عبور یکسان نیست!"
 
-#: app/form/profile.php:82
+#: app/form/profile.php:89
 #, php-format
 msgid "%1$s must not be empty."
 msgstr "%1$s نباید خالی باشد."
@@ -464,7 +475,7 @@ msgstr "رمز عبور"
 msgid "Password must not empty"
 msgstr "کلمه عبور نباید خالی باشد"
 
-#: app/sundry.php:171
+#: app/sundry.php:189
 msgid " Should not be empty!"
 msgstr " نباید خالی باشد!"
 
@@ -1102,7 +1113,6 @@ msgstr "بساز"
 msgid "User panel page already exists."
 msgstr "برگه‌ی پنل کاربری وجود دارد."
 
-#. Author of the plugin/theme
 #: views/admin/settings.php:22
 msgid "MihanWP"
 msgstr "میهن وردپرس"
@@ -1110,18 +1120,6 @@ msgstr "میهن وردپرس"
 #: views/admin/settings.php:23
 msgid "New Airlines"
 msgstr "خطوط هوایی جدید"
-
-#. Plugin URI of the plugin/theme
-msgid "https://mihanwp.com/mihanpanel/"
-msgstr "https://mihanwp.com/mihanpanel/"
-
-#. Description of the plugin/theme
-msgid "The best way to build user interface in WordPress"
-msgstr "یک راه مناسب برای پیاده سازی پروفایل کاربری در وردپرس"
-
-#. Author URI of the plugin/theme
-msgid "https://mihanwp.com"
-msgstr "https://mihanwp.com/"
 
 #~ msgid "Has Error!"
 #~ msgstr "خطا دارد!"
@@ -1224,15 +1222,12 @@ msgstr "https://mihanwp.com/"
 #~ msgid "A PHP extension stopped the file upload."
 #~ msgstr "روند آپلود فایل از سمت اکستنشن php متوقف شد."
 
-#, php-format
 #~ msgid "%1$s: Invalid file type"
 #~ msgstr "%1$s: نوع فایل نامعتبر است"
 
-#, php-format
 #~ msgid "%1$s: Invalid file size"
 #~ msgstr "%1$s: سایز فایل نامعتبر است"
 
-#, php-format
 #~ msgid "%1$s: Has error in upload file."
 #~ msgstr "%1$s: حطایی در آپلود فایل وجود دارد."
 
@@ -1280,6 +1275,9 @@ msgstr "https://mihanwp.com/"
 
 #~ msgid "Just in profile"
 #~ msgstr "فقط در ویرایش پروفایل"
+
+#~ msgid "Prevent edit this field"
+#~ msgstr "جلوگیری از ویرایش این فیلد"
 
 #~ msgid ""
 #~ "<p>License is not active! Please activate it from <strong>Plugins > Mihan "
@@ -1333,7 +1331,6 @@ msgstr "https://mihanwp.com/"
 #~ msgid "Activation Code"
 #~ msgstr "کد فعالسازی"
 
-#, php-format
 #~ msgid "%s Rial"
 #~ msgstr "%s ریال"
 
@@ -1372,7 +1369,6 @@ msgstr "https://mihanwp.com/"
 #~ msgid "Template ID"
 #~ msgstr "شناسه قالب"
 
-#, php-format
 #~ msgid "%s Toman"
 #~ msgstr "%s تومان"
 
@@ -1416,7 +1412,7 @@ msgstr "https://mihanwp.com/"
 #~ msgid "License"
 #~ msgstr "لایسنس"
 
-#~ msgid "Missin license key"
+#~ msgid "Missing license key"
 #~ msgstr "کد لایسنس موجود نیست"
 
 #~ msgid "License is inactive."
@@ -1552,6 +1548,18 @@ msgstr "https://mihanwp.com/"
 
 #~ msgid "Request Code"
 #~ msgstr "درخواست کد"
+
+#~ msgid "New"
+#~ msgstr "فیلد جدید"
+
+#~ msgid "https://mihanwp.com/mihanpanel/"
+#~ msgstr "https://mihanwp.com/mihanpanel/"
+
+#~ msgid "The best way to build user interface in WordPress"
+#~ msgstr "یک راه مناسب برای پیاده سازی پروفایل کاربری در وردپرس"
+
+#~ msgid "https://mihanwp.com"
+#~ msgstr "https://mihanwp.com/"
 
 #~ msgid ""
 #~ "Change login url. Please set the Settings > Permalink to the post name."

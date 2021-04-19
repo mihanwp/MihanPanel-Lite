@@ -266,7 +266,6 @@
 {
     display: flex;
     width: 70%;
-    background-color: #fbfbfb;
 }
 .mw_menus_table .mw_sub_row:last-of-type
 {
@@ -688,6 +687,10 @@ font-weight: bold;
     padding: 3px 10px;
     border-radius: 5px;
 }
+.mw_file_uploader .type_preview_box[disabled] label
+{
+    background-color: #d4d2d8;
+}
 .mw_file_uploader input[type=file]
 {
     visibility: hidden;
@@ -1003,4 +1006,64 @@ font-weight: bold;
     background-color: #0073aa;
     padding: 5px 10px;
     border-radius: 3px;
+}
+.mihanpanel-admin h2 .action_btn
+{
+    background-color: #0071a1;
+    cursor: pointer;
+    color: white;
+    margin: 0 10px;
+    padding: 2px 10px;
+    border-radius: 3px;
+}
+.mihanpanel-admin h2 .action_btn.close_new_field_section
+{
+    background-color: #841818;
+}
+.mihanpanel-admin .mwpl_drop_down
+{
+    cursor: pointer;
+}
+.mihanpanel-admin .mwpl_drop_down .mw_icon
+{
+    transition: all .5s;
+}
+.mihanpanel-admin [mwpl_drop_down_content]
+{
+    display: none;
+}
+.mihanpanel-admin .new_record .row
+{
+    margin: 5px 0;
+}
+.mihanpanel-admin .new_record .row > input:not([type=checkbox]):not([type=radio])
+{
+    width: 35% !important;
+}
+.mihanpanel-admin .new_record .row > select
+{
+    max-width: 35%;
+    box-sizing: border-box;
+}
+.mihanpanel-admin .new_record input[type=submit]
+{
+    margin-top: 50px;
+    width: 300px !important;
+}
+.mihanpanel-admin .extra_fields_wrapper
+{
+    padding: 20px 0;
+}
+.mihanpanel-admin .extra_fields_wrapper > .row
+{
+    padding: 0 100px;
+}
+.mihanpanel-admin .extra_fields_wrapper > .row:not(:last-of-type)
+{
+    margin-bottom: 20px;
+}
+.mihanpanel-admin .extra_fields_wrapper > .row label.block
+{
+    display: block;
+    margin-bottom: 10px;
 }

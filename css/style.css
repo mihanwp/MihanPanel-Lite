@@ -4,7 +4,8 @@ html body .mihanpanelpanel .nocss * {
 html body .mihanpanelpanel .mce-ico {
     font-family: dashicons  !important;
 }
-html body .mihanpanelpanel .dashicons
+html body .mihanpanelpanel .dashicons,
+html body .mihanpanelpanel .nocss .dashicons
 {
     font-family: dashicons !important;
 }
@@ -633,11 +634,14 @@ output {
 .mihanpanelpanel .mpsidebar .nav i {
     font-size: 24px !important;
     float: left !important;
-    margin-right: 15px !important;
     line-height: 30px !important;
     width: 30px !important;
     text-align: center !important;
     color: #a9afbb
+}
+.mihanpanelpanel.mp_wrapper_rtl .nav i
+{
+    margin-left: 15px;
 }
 .mihanpanelpanel .mpsidebar .nav i.fa-fas,
 .mihanpanel-profile-widget i.fa-fas
@@ -1227,10 +1231,19 @@ html body .mihanpanelpanel .alert {
 {
 	padding: 5px !important;
 }
-.mihanpanelpanel input[type=text]:disabled
+.mihanpanelpanel input[type=text]:disabled,
+.mihanpanelpanel input[type=email]:disabled,
+.mihanpanelpanel input[type=number]:disabled,
+.mihanpanelpanel select:disabled,
+.mihanpanelpanel textarea:disabled
 {
     background: #e4e4e4  !important;
     color: #717171  !important;
+}
+.mihanpanelpanel form input[type=radio]:disabled:checked,
+.mihanpanelpanel form input[type=checkbox]:disabled:checked
+{
+    background-color: #b9b9b9 !important;
 }
 .mihanpanelpanel .row{
   display: block !important;
@@ -1275,6 +1288,7 @@ html body .mihanpanelpanel .alert {
 }
 .mihanpanelpanel form input[type=checkbox]:after
 {
+    all:unset;
   content: '';
   position: absolute;
   top: 5px;
@@ -1312,6 +1326,7 @@ html body .mihanpanelpanel .alert {
 }
 .mihanpanelpanel form input[type=radio]:after
 {
+    all:unset;
   content: '';
   position: absolute;
   top: 5px;
@@ -1518,6 +1533,11 @@ html body .mihanpanelpanel .alert {
     color: white !important;
     padding: 3px 10px;
     border-radius: 5px;
+}
+.mihanpanelpanel .nocss .mw_file_uploader .type_preview_box[disabled] label,
+.mw_file_uploader .type_preview_box[disabled] label
+{
+    background-color: #d4d2d8;
 }
 .mihanpanelpanel .nocss .mw_file_uploader input[type=file],
 .mw_file_uploader input[type=file]

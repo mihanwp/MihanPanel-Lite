@@ -74,15 +74,33 @@ class profile
         
         $updatingfields = $wpdb->get_results("SELECT * FROM $tablename where type!='file_uploader'");
         foreach ($updatingfields as $updatingfield) {
+            $last_value = get_user_meta(self::$_uid, $updatingfield->slug, true);
+            $field_meta = isset($updatingfield->meta) ? unserialize($updatingfield->meta) : false;
+            $prevent_edit_field = !\mihanpanel\app\users::is_admin_user() && isset($field_meta['data']['prevent_edit_field']);
             if(!isset($fields_data[$updatingfield->slug]) || empty($fields_data[$updatingfield->slug]))
             {
+                if($prevent_edit_field && $last_value)
+                {
+                    continue;
+                }
                 if($updatingfield->required == 'yes')
                 {
                     $type = 'error';
                     $msg = sprintf(__('%1$s must not be empty.', 'mihanpanel'), $updatingfield->label);
                     \mihanpanel\app\notice::add_multiple_notice($type, $msg);
+                }else{
+                    if($updatingfield->type=='checkbox')
+                    {
+                        update_user_meta(self::$_uid, $updatingfield->slug, 'non');
+                    }else{
+                        delete_user_meta(self::$_uid, $updatingfield->slug);
+                    }
                 }
             }else {
+                if($prevent_edit_field && $last_value)
+                {
+                    continue;
+                }
                 $value = $fields_data[$updatingfield->slug];
                 $value = tools::sanitize_value($value, $updatingfield->type);
                 update_user_meta(self::$_uid, $updatingfield->slug, $value);
