@@ -54,8 +54,7 @@ class shortcode
                 <div class="mpsidebar <?php echo is_rtl() ? 'mp_rtl' : 'mp_ltr'; ?>">
                     <div class="mpavatar">
                         <?php
-                        global $current_user;
-                        wp_get_current_user();
+                        $current_user = wp_get_current_user();
                         echo get_avatar($current_user->ID, 250);
                         ?>
                     </div>

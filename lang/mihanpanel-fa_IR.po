@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MihanPanel\n"
-"POT-Creation-Date: 2021-04-19 16:13+0430\n"
-"PO-Revision-Date: 2021-04-19 16:13+0430\n"
+"POT-Creation-Date: 2021-05-27 12:52+0430\n"
+"PO-Revision-Date: 2021-05-27 12:52+0430\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -397,11 +397,11 @@ msgstr "رنگ پس زمینه ی باکس ارور در فرم ورود"
 msgid "Background Color of Login and Register Error Messagebox"
 msgstr "رنگ پس زمینه ی باکس ارور در فرم ورود و ثبت نام"
 
-#: app/handle_view.php:603
+#: app/handle_view.php:608
 msgid "Auto confirm phone number after user register"
 msgstr "فعالسازی شماره تلفن بعد از ثبت نام به صورت اتوماتیک"
 
-#: app/handle_view.php:607
+#: app/handle_view.php:612
 msgid "User can change phone number"
 msgstr "کاربر میتواند شماره تلفن را تغییر دهد"
 
@@ -458,7 +458,7 @@ msgstr "هیچ دانلودی در دسترس نیست."
 msgid "Open Menu"
 msgstr "باز کردن منو"
 
-#: app/shortcode.php:78
+#: app/shortcode.php:77
 msgid "Please login to your account"
 msgstr "لطفا وارد حساب کاربری خود شوید"
 
@@ -843,18 +843,26 @@ msgstr ""
 "هدایت می شوند (با http یا https)"
 
 #: views/admin/panel-section/login_with_sms.php:6
+msgid "Smart Login"
+msgstr "ورود هوشمند"
+
+#: views/admin/panel-section/login_with_sms.php:9
+msgid "Activate smart login"
+msgstr "فعالسازی ورود هوشمند"
+
+#: views/admin/panel-section/login_with_sms.php:13
 msgid "Password Type"
 msgstr "نوع پسورد"
 
-#: views/admin/panel-section/login_with_sms.php:8
+#: views/admin/panel-section/login_with_sms.php:15
 msgid "Disable register form fields"
 msgstr "غیر‌فعال کردن فیلد‌های فرم ثبت‌نام"
 
-#: views/admin/panel-section/login_with_sms.php:11
+#: views/admin/panel-section/login_with_sms.php:18
 msgid "Disable email field"
 msgstr "غیر‌فعال کردن فیلد ایمیل"
 
-#: views/admin/panel-section/login_with_sms.php:14
+#: views/admin/panel-section/login_with_sms.php:21
 msgid ""
 "You can disable email field in register form if login with sms dynamic code is "
 "active."
@@ -862,11 +870,11 @@ msgstr ""
 "اگر ورود به کد یکبار مصرف فعال باشد، میتوانید فیلد ایمیل را در صفحه‌ی ثبت نام، "
 "غیر‌فعال کنید."
 
-#: views/admin/panel-section/login_with_sms.php:16
+#: views/admin/panel-section/login_with_sms.php:23
 msgid "Disable username field"
 msgstr "غیر‌فعال کردن فیلد نام‌کاربری"
 
-#: views/admin/panel-section/login_with_sms.php:19
+#: views/admin/panel-section/login_with_sms.php:26
 msgid ""
 "You can disable username field in register form if login with sms dynamic code "
 "is active."
@@ -874,11 +882,11 @@ msgstr ""
 "اگر ورود به کد یکبار مصرف فعال باشد، میتوانید فیلد نام‌کاربری را در صفحه‌ی ثبت "
 "نام، غیر‌فعال کنید."
 
-#: views/admin/panel-section/login_with_sms.php:21
+#: views/admin/panel-section/login_with_sms.php:28
 msgid "Disable password field"
 msgstr "غیر‌فعال کردن فیلد رمز‌عبور"
 
-#: views/admin/panel-section/login_with_sms.php:24
+#: views/admin/panel-section/login_with_sms.php:31
 msgid ""
 "You can disable password field in register form if login with sms dynamic code "
 "is active."
@@ -886,19 +894,19 @@ msgstr ""
 "اگر ورود به کد یکبار مصرف فعال باشد، میتوانید فیلد رمز‌عبور را در صفحه‌ی ثبت "
 "نام، غیر‌فعال کنید."
 
-#: views/admin/panel-section/login_with_sms.php:26
+#: views/admin/panel-section/login_with_sms.php:33
 msgid "User Phone"
 msgstr "موبایل کاربر"
 
-#: views/admin/panel-section/login_with_sms.php:28
+#: views/admin/panel-section/login_with_sms.php:35
 msgid "SMS Provider Settings"
 msgstr "تنظیمات ارائه دهنده ی SMS"
 
-#: views/admin/panel-section/login_with_sms.php:30
+#: views/admin/panel-section/login_with_sms.php:37
 msgid "Select Provider"
 msgstr "ارائه دهنده را انتخاب کنید"
 
-#: views/admin/panel-section/login_with_sms.php:32
+#: views/admin/panel-section/login_with_sms.php:39
 msgid ""
 "If your sms service provider not exists in this list, ask theme to provide you "
 "with the relevant plugin."
@@ -906,15 +914,15 @@ msgstr ""
 "اگر ارائه دهنده ی مورد نظر شما در این لیست موجود نیست، از آن ها بخواهید تا "
 "پلاگین مربوط به این بخش را در اختیار شما قرار دهند."
 
-#: views/admin/panel-section/login_with_sms.php:32
+#: views/admin/panel-section/login_with_sms.php:39
 msgid "According to this documents"
 msgstr "بر اساس این مستندات"
 
-#: views/admin/panel-section/login_with_sms.php:38
+#: views/admin/panel-section/login_with_sms.php:45
 msgid "Mobile validation code sms content"
 msgstr "محتوای SMS فعالسازی موبایل"
 
-#: views/admin/panel-section/login_with_sms.php:42
+#: views/admin/panel-section/login_with_sms.php:49
 msgid "Dynamic login code sms content"
 msgstr "محتوای SMS کد پویا"
 
@@ -1121,6 +1129,40 @@ msgstr "میهن وردپرس"
 msgid "New Airlines"
 msgstr "خطوط هوایی جدید"
 
+#~ msgid "Username must not be empty!"
+#~ msgstr "نام کاربری نباید خالی باشد!"
+
+#~ msgid ""
+#~ "No any user found by this email. Please register by your phone number first."
+#~ msgstr ""
+#~ "کاربری با این ایمیل پیدا نشد. لطفا ابتدا با استفاده از شماره موبایل خود "
+#~ "ثبت‌نام کنید."
+
+#~ msgid "No any user found. Please register by your phone number first."
+#~ msgstr ""
+#~ "کاربری پیدا نشد. لطفا ابتدا با استفاده از شماره موبایل خود ثبت‌نام کنید."
+
+#~ msgid "User data not found!"
+#~ msgstr "اطلاعات کاربر پیدا نشد!"
+
+#~ msgid "No any phone number found for this user"
+#~ msgstr "هیچ شماره‌ای برای این کاربر پیدا نشد"
+
+#~ msgid "Dynamic code was generated for you!"
+#~ msgstr "کد پویا برای شما ایجاد شده است!"
+
+#~ msgid "Dynamic code did not create for your account!"
+#~ msgstr "کد پویا برای شما ایجاد نشد!"
+
+#~ msgid "User data not found"
+#~ msgstr "اطلاعات کاربر پیدا نشد"
+
+#~ msgid "No any user found by this phone number"
+#~ msgstr "کاربری با این شماره موبایل پیدا نشد"
+
+#~ msgid "Sorry, but you do not have a valid phone."
+#~ msgstr "متأسفیم، اما شما شماره‌ی موبایل قابل استفاده‌ای در اکانت خود ندارید."
+
 #~ msgid "Has Error!"
 #~ msgstr "خطا دارد!"
 
@@ -1133,14 +1175,8 @@ msgstr "خطوط هوایی جدید"
 #~ msgid "User not exists!"
 #~ msgstr "کاربر وجود ندارد!"
 
-#~ msgid "Dynamic code was generated for you!"
-#~ msgstr "کد پویا برای شما ایجاد شد!"
-
 #~ msgid "No any valid phone number for this username!"
 #~ msgstr "هیچ شماره ی مجازی برای این کاربر وجود ندارد!"
-
-#~ msgid "Dynamic code did not create for your account!"
-#~ msgstr "کد پویا برای شما ایجاد نشد!"
 
 #~ msgid "Has problem in send sms process"
 #~ msgstr "مشکلی در ارسال sms پیش آمد"
@@ -1468,9 +1504,6 @@ msgstr "خطوط هوایی جدید"
 #~ msgid "Dynamic code was wrong!"
 #~ msgstr "کد پویا اشتباه است!"
 
-#~ msgid "Username must not be empty!"
-#~ msgstr "نام کاربری نباید خالی باشد!"
-
 #~ msgid "Do you want to save this change?"
 #~ msgstr "میخواهید تغییرات ذخیره شود؟"
 
@@ -1491,6 +1524,24 @@ msgstr "خطوط هوایی جدید"
 
 #~ msgid "Choose File"
 #~ msgstr "انتخاب فایل"
+
+#~ msgid "Dynamic code must not be empty"
+#~ msgstr "کد پویا نباید خالی باشد"
+
+#~ msgid "Invalid dynamic code"
+#~ msgstr "کد پویا معتبر نیست"
+
+#~ msgid "User not found!"
+#~ msgstr "کاربر وجود ندارد!"
+
+#~ msgid "Login with dynamic code"
+#~ msgstr "ورود با کد یکبار مصرف"
+
+#~ msgid "Back"
+#~ msgstr "بازگشت"
+
+#~ msgid "Has error"
+#~ msgstr "خطا"
 
 #~ msgid "Your validation code is: [[code]]"
 #~ msgstr "کد فعالسازی شما: [[code]]"
@@ -1658,9 +1709,6 @@ msgstr "خطوط هوایی جدید"
 
 #~ msgid "Priorities was changed! Save changes?"
 #~ msgstr "اولویت ها تغییر پیدا کرده است! ذخیره شود؟"
-
-#~ msgid "Social Login"
-#~ msgstr "ورود با شبکه های اجتماعی"
 
 #~ msgid ""
 #~ "For using Social login just use \"Nextend Social Login\" plugin with Mihan "

@@ -2,10 +2,13 @@
 namespace mihanpanel\app;
 class tools
 {
-    public static function vd($data)
+    public static function vd(...$args)
     {
         echo "<pre style='all: revert;'>";
-        var_dump($data);
+        foreach($args as $arg)
+        {
+            var_dump($arg);
+        }
         echo "</pre>";
     }
     static function is_empty_array($data)

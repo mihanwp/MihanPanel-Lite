@@ -3,6 +3,13 @@
         <?php
         settings_fields( 'mihanpanelsettings-dynamic_password' );
         ?>
+        <h2><?php esc_html_e('Smart Login', 'mihanpanel')?></h2>
+        <div class="mp_option_single">
+            <p>
+                <label for="mp_smart_login"><?php esc_html_e('Activate smart login', 'mihanpanel')?></label>
+                <?php \mihanpanel\app\handle_view::option_panel_smart_login(); ?>
+            </p>
+        </div>
         <h2><?php esc_html_e("Password Type", "mihanpanel"); ?></h2>
         <?php \mihanpanel\app\handle_view::option_panel_field_password_type(); ?>
         <h2><?php esc_html_e('Disable register form fields', 'mihanpanel')?></h2>

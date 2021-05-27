@@ -150,7 +150,7 @@ class config
     }
     public static function redirect_non_admin_after_login($user_login, $user)
     {
-        if(users::is_admin_user())
+        if(users::is_admin_user($user->ID))
         {
             return false;
         }
