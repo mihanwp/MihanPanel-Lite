@@ -128,7 +128,8 @@ class config
     }
     static function start_depends()
     {
-        if(!ob_get_status()['level'])
+        $ob_status = ob_get_status();
+        if(!isset($ob_status['level']) || !$ob_status['level'])
         {
             ob_start();
         }

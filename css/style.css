@@ -1,4 +1,7 @@
-html body .mihanpanelpanel .nocss * {
+html body .mihanpanelpanel .nocss *,
+html body .mihanpanelpanel .nocss *::before,
+html body .mihanpanelpanel .nocss *::after
+{
     all:unset;
 }
 html body .mihanpanelpanel .mce-ico {

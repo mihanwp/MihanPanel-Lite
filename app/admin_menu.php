@@ -100,7 +100,9 @@ class admin_menu
             if (isset($_POST['add'])) {
                 $middleware = middlewares::handle_middleware('tabs_field/new_record');
                 if ($middleware && isset($_POST['name']) && wp_verify_nonce(sanitize_text_field($_POST['mwpl_nonce']), 'mwpl_create_tab_item')) {
-                    $menucontent = str_replace('"', "'", $_POST['content']);
+                    $needle = ['"', '\\'];
+                    $replacement = ["'", ''];
+                    $menucontent = str_replace($needle, $replacement, $_POST['content']);
                     $success = $wpdb->insert(
                         $tablename,
                         array(

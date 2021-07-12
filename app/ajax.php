@@ -41,7 +41,7 @@ class ajax
             $link_or_content = sanitize_text_field($item['link_or_content']);
             $link = filter_var($link_or_content, FILTER_VALIDATE_URL);
             $link = $link ? $link : false;
-            $content = $link ? "" : $link_or_content;
+            $content = $link ? "" : str_replace('\\', '', $link_or_content);
             $icon = sanitize_text_field($item['icon']);
             $update_res = $wpdb->update(
                 $table_name,
