@@ -1,5 +1,5 @@
 html body .mihanpanelpanel .nocss *,
-html body .mihanpanelpanel .nocss *::before,
+html body .mihanpanelpanel .nocss *:not(i.fas, i.far, i.mw_icon)::before,
 html body .mihanpanelpanel .nocss *::after
 {
     all:unset;
