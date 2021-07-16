@@ -460,6 +460,11 @@ class handle_view
         $render_method = apply_filters('mwpl_option_panel/render_method/panel_font', []);
         self::handle_option_panel_render_method($render_method);
     }
+    static function option_panel_off_code_text()
+    {
+        $render_method = apply_filters('mwpl_option_panel/render_method/off_code_text', []);
+        self::handle_option_panel_render_method($render_method);
+    }
 
     static function option_panel_field_sidebar_bg_color()
     {

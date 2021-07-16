@@ -138,6 +138,16 @@ class options
         $value = get_option('mp_logo_height', '120');
         return $value ? $value : '120';
     }
+    static function get_offer_code_percentage_value()
+    {
+        return get_option('mp_offer_perc');
+    }
+    static function get_offer_code_text()
+    {
+        $percentage = self::get_offer_code_percentage_value();
+        $value = apply_filters('mihanpanel/panel/off_code_text', sprintf(esc_html__('%1$s off code for your next purchase', 'mihanpanel'), $percentage));
+        return $value;
+    }
     public static function register_settings()
     {
         register_setting('mihanpanelsettings', 'rwl_page');

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MihanPanel\n"
-"POT-Creation-Date: 2021-07-12 15:52+0430\n"
-"PO-Revision-Date: 2021-07-12 15:52+0430\n"
+"POT-Creation-Date: 2021-07-16 19:21+0430\n"
+"PO-Revision-Date: 2021-07-16 19:22+0430\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -26,6 +26,7 @@ msgstr ""
 msgid "Address 2"
 msgstr "آدرس شماره دو"
 
+#. Plugin Name of the plugin/theme
 #: app/admin_menu.php:17 app/gutenberg.php:17
 msgid "MihanPanel"
 msgstr "میهن پنل"
@@ -397,11 +398,11 @@ msgstr "رنگ پس زمینه ی باکس ارور در فرم ورود"
 msgid "Background Color of Login and Register Error Messagebox"
 msgstr "رنگ پس زمینه ی باکس ارور در فرم ورود و ثبت نام"
 
-#: app/handle_view.php:608
+#: app/handle_view.php:613
 msgid "Auto confirm phone number after user register"
 msgstr "فعالسازی شماره تلفن بعد از ثبت نام به صورت اتوماتیک"
 
-#: app/handle_view.php:612
+#: app/handle_view.php:617
 msgid "User can change phone number"
 msgstr "کاربر میتواند شماره تلفن را تغییر دهد"
 
@@ -425,6 +426,11 @@ msgstr "ارسال لینک فعالسازی"
 #: app/options.php:14
 msgid "Manual Activation"
 msgstr "فعالسازی دستی"
+
+#: app/options.php:148
+#, php-format
+msgid "%1$s off code for your next purchase"
+msgstr "کد تخفیف %1$s برای خرید بعدی شما"
 
 #: app/panel.php:25
 msgid "Order Details"
@@ -598,12 +604,7 @@ msgstr "بازگشت به صفحه اصلی"
 msgid "Howdy, %1$s!"
 msgstr "سلام  %1$s!"
 
-#: parts/dashboard.php:26
-#, php-format
-msgid "%1$s off code for your next purchase"
-msgstr "کد تخفیف %1$s برای خرید بعدی شما"
-
-#: parts/dashboard.php:29
+#: parts/dashboard.php:28
 #, php-format
 msgid "Off code: %1$s"
 msgstr "کد تخفیف: %1$s"
@@ -1044,43 +1045,55 @@ msgstr "درصد کد تخفیف"
 msgid "Off Code percentage will show in user panel. ex => 25%"
 msgstr "درصد کد تخفیف در پنل کاربری نشان داده خواهد شد. مثلا بنویسید: 25 درصدی"
 
-#: views/admin/panel-section/panel.php:67
+#: views/admin/panel-section/panel.php:68
+msgid "Off Code text"
+msgstr "متن کد تخفیف"
+
+#: views/admin/panel-section/panel.php:70
+msgid "Text that will show in user panel as a Off Code text."
+msgstr "متنی که به عنوان متن کد تخفیف در پنل کاربری نمایش داده میشود."
+
+#: views/admin/panel-section/panel.php:71
+msgid "Use [[number]] to replace with off code percentage."
+msgstr "از [[number]] استفاده کنید تا با مقدار کد تخفیف جایگذاری شود."
+
+#: views/admin/panel-section/panel.php:73
 msgid "Color scheme"
 msgstr "رنگ بندی"
 
-#: views/admin/panel-section/panel.php:69
+#: views/admin/panel-section/panel.php:75
 msgid "Sidebar background color in panel"
 msgstr "رنگ پس زمینه نوار کناری در پنل کاربری"
 
-#: views/admin/panel-section/panel.php:73
+#: views/admin/panel-section/panel.php:79
 msgid "Sidebar link color that show in panel"
 msgstr "رنگ لینک ها در نوار کناری پنل کاربری"
 
-#: views/admin/panel-section/panel.php:76
+#: views/admin/panel-section/panel.php:82
 msgid "Dashboard Widgets"
 msgstr "ویجت‌های داشبورد"
 
-#: views/admin/panel-section/panel.php:78
+#: views/admin/panel-section/panel.php:84
 msgid "Hide register day count widget"
 msgstr "مخفی کردن ویجت روز‌هایی که عضو هستید"
 
-#: views/admin/panel-section/panel.php:82
+#: views/admin/panel-section/panel.php:88
 msgid "Hide Comment widget"
 msgstr "مخفی کردن ویجت تعداد نظرات"
 
-#: views/admin/panel-section/panel.php:86
+#: views/admin/panel-section/panel.php:92
 msgid "Hide Woocommerce widget"
 msgstr "مخفی کردن ویجت ووکامرس"
 
-#: views/admin/panel-section/panel.php:90
+#: views/admin/panel-section/panel.php:96
 msgid "Hide EDD widget"
 msgstr "مخفی کردن ویجت EDD"
 
-#: views/admin/panel-section/panel.php:94
+#: views/admin/panel-section/panel.php:100
 msgid "Hide Awesome Support widget"
 msgstr "مخفی کردن ویجت افزونه تیکت"
 
-#: views/admin/panel-section/panel.php:97
+#: views/admin/panel-section/panel.php:103
 msgid "Roles who can't use admin panel"
 msgstr "نقش های کاربری که اجازه ی ورود به پنل مدیریت را ندارند"
 
@@ -1129,10 +1142,6 @@ msgstr "میهن وردپرس"
 #: views/admin/settings.php:23
 msgid "New Airlines"
 msgstr "خطوط هوایی جدید"
-
-#. Plugin Name of the plugin/theme
-msgid "MihanPanel Pro"
-msgstr "میهن پنل پرو"
 
 #. Plugin URI of the plugin/theme
 msgid "https://mihanwp.com/mihanpanel/"
@@ -1242,6 +1251,9 @@ msgstr "https://mihanwp.com/"
 
 #~ msgid "Has error in deleting avatar."
 #~ msgstr "در پاکسازی آواتار مشکلی پیش آمد."
+
+#~ msgid "MihanPanel Pro"
+#~ msgstr "میهن پنل پرو"
 
 #~ msgid "Role"
 #~ msgstr "نقش کاربری"

@@ -61,8 +61,14 @@
         </div>
         <div class="mp_option_single">
             <label><?php esc_html_e("Off Code percentage",'mihanpanel'); ?></label>
-            <input id="mp_offer_perc" type="text" name="mp_offer_perc" value="<?php echo esc_attr(get_option('mp_offer_perc')); ?>" />
+            <input id="mp_offer_perc" type="text" name="mp_offer_perc" value="<?php echo esc_attr(\mihanpanel\app\options::get_offer_code_percentage_value()); ?>" />
             <p class="description"><?php esc_html_e("Off Code percentage will show in user panel. ex => 25%",'mihanpanel'); ?></p>
+        </div>
+        <div class="mp_option_single">
+            <label for="mp_off_code_text"><?php esc_html_e('Off Code text', 'mihanpanel')?></label>
+            <?php \mihanpanel\app\handle_view::option_panel_off_code_text()?>
+            <p class="description"><?php esc_html_e('Text that will show in user panel as a Off Code text.', 'mihanpanel')?></p>
+            <p class="description"><?php esc_html_e('Use [[number]] to replace with off code percentage.', 'mihanpanel')?></p>
         </div>
         <h2><?php esc_html_e("Color scheme", "mihanpanel")?></h2>
         <div class="mp_option_single">

@@ -15,16 +15,15 @@
             <div class="row">
                 <?php
                 \mihanpanel\app\handle_view::handle_panel_widgets();
-                if (get_option('mp_offer_code') != null): ?>
+                if ($off_code = get_option('mp_offer_code')): ?>
                     <div class="col-md-8">
                         <div class="mihanpanel-card mihanpanel-card-stats">
                             <div class="mihanpanel-card-header" data-background-color="purple">
                                 <i class="fas fa-3x fa-gift"></i>
                             </div>
                             <div class="mihanpanel-card-content">
-                                <?php $off_code_perc = get_option('mp_offer_perc'); ?>
-                                <p class="category"><?php printf(esc_html__('%1$s off code for your next purchase', 'mihanpanel'), $off_code_perc) ?></p>
-                                <?php $off_code = get_option('mp_offer_code'); ?>
+                                <?php $off_code_text = \mihanpanel\app\options::get_offer_code_text();?>
+                                <p class="category"><?php echo $off_code_text; ?></p>
                                 <h3 class="title"
                                     style="text-align:center;line-height:40px;"><?php printf(esc_html__('Off code: %1$s', 'mihanpanel'), $off_code) ?></h3>
                             </div>
