@@ -66,10 +66,22 @@ class admin_user_fields
     {
         $fields = user_fields::get_fields();
         $table_header = [
-            esc_html__('Field Id', 'mihanpanel'),
-            esc_html__('Title', 'mihanpanel'),
-            esc_html__('Required', 'mihanpanel'),
-            esc_html__('Type', 'mihanpanel'),
+            [
+                'title' => esc_html__('Field Id', 'mihanpanel'),
+                'class' => 'mw_large_width',
+            ],
+            [
+                'title' => esc_html__('Title', 'mihanpanel'),
+                'class' => 'mw_large_width',
+            ],
+            [
+                'title' => esc_html__('Required', 'mihanpanel'),
+                'class' => 'mw_medium_width',
+            ],
+            [
+                'title' => esc_html__('Type', 'mihanpanel'),
+                'class' => 'mw_medium_width',
+            ],
         ];
         ?>
         <div class="fields_wrapper">
@@ -77,9 +89,10 @@ class admin_user_fields
             <div class="mw_menus_table mw_fields_wrapper" data-mw_type="user_field">
                 <div class="mw_head">
                     <div class="mw_row">
-                        <div class="mw_th"></div>
-                        <?php if($table_header && is_array($table_header)): foreach($table_header as $header_title): ?>
-                            <div class="mw_th"><?php echo esc_html($header_title) ?></div>
+                        <div class="mw_th mw_small_width"></div>
+                        <?php if($table_header && is_array($table_header)):
+                            foreach($table_header as $header_data):?>
+                            <div class="mw_th <?php echo $header_data['class'] ? $header_data['class'] : '';?>"><?php echo esc_html($header_data['title']) ?></div>
                         <?php endforeach; endif; ?>
                         <div class="mw_th"></div>
                     </div>
@@ -91,22 +104,22 @@ class admin_user_fields
                                 <div style="display: none;" class="mw_td">
                                     <input type="hidden" name="id" value="<?php echo esc_attr($field->id); ?>">
                                 </div>
-                                <div class="mw_td">
+                                <div class="mw_td mw_small_width">
                                     <span class="mw_drag_handle mw_icon mw_sort_icon dashicons dashicons-menu"></span>
                                 </div>
-                                <div class="mw_td">
+                                <div class="mw_td mw_large_width">
                                     <input type="text" name="slug" value="<?php echo esc_attr($field->slug); ?>">
                                 </div>
-                                <div class="mw_td">
+                                <div class="mw_td mw_large_width">
                                     <input type="text" name="label" value="<?php echo esc_attr($field->label);?>">
                                 </div>
-                                <div class="mw_td">
+                                <div class="mw_td mw_medium_width">
                                     <select name="required_field">
                                         <option <?php selected($field->required, 'yes'); ?> value="yes"><?php _e('Required', 'mihanpanel')?></option>
                                         <option <?php selected($field->required, 'no');?> value="no"><?php _e('Optional', 'mihanpanel');?></option>
                                     </select>
                                 </div>
-                                <div class="mw_td">
+                                <div class="mw_td mw_medium_width">
                                     <?php \mihanpanel\app\handle_view::render_user_fields_type_selectbox('type', $field->type); ?>
                                 </div>
                                 <div drop_down_target_id="meta_fields_wrapper_<?php echo $field->id; ?>" class="mw_td mwpl_drop_down">

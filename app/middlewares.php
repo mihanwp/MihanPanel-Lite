@@ -62,8 +62,7 @@ class middlewares
     }
     static function handle_method_tabs_new_record_lite_limit()
     {
-        $tabs_count = panel::get_tabs_count();
-        if(!defined('MIHANPANEL_PRO_DIR_PATH') && $tabs_count > 3)
+        if(!defined('MIHANPANEL_PRO_DIR_PATH') && panel::get_tabs_count() > 3)
         {
             $pro_version = sprintf('<a target="_blank" href="%s">%s</a>',tools::get_pro_version_link(), __('Pro Version', 'mihanpanel'));
             echo '<p class="alert error"><span>'.sprintf(__('Max item count is 4 in lite version. Upgrade to %s for disable this restriction.', 'mihanpanel'), $pro_version) . '</span></p>';

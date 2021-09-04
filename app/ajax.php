@@ -30,28 +30,36 @@ class ajax
         global $wpdb;
         $table_name = $wpdb->prefix . 'mihanpaneltabs';
         $success = false;
-        foreach($fields_data as $index => $item)
+        foreach($fields_data as $index => $field_data)
         {
+            $item = [];
+            parse_str($field_data, $item);
             $item_id = isset($item['id']) ? sanitize_text_field($item['id']) : false;
             if(!$item_id)
             {
                 continue;
             }
+            $meta = apply_filters('mwpl_option_panel/panel_tabs/tabs_field_meta', '', $item);
             $name = sanitize_text_field($item['name']);
             $link_or_content = sanitize_text_field($item['link_or_content']);
             $link = filter_var($link_or_content, FILTER_VALIDATE_URL);
             $link = $link ? $link : false;
             $content = $link ? "" : str_replace('\\', '', $link_or_content);
             $icon = sanitize_text_field($item['icon']);
+            $data = [
+                'name' => $name,
+                'link' => $link,
+                'content' => $content,
+                'icon' => $icon,
+                'priority' => $index
+            ];
+            if($meta)
+            {
+                $data['meta'] = $meta;
+            }
             $update_res = $wpdb->update(
                 $table_name,
-                [
-                    'name' => $name,
-                    'link' => $link,
-                    'content' => $content,
-                    'icon' => $icon,
-                    'priority' => $index
-                ],
+                $data,
                 ['id' => $item['id']]
             );
             if($update_res)

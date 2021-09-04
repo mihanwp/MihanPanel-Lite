@@ -304,6 +304,18 @@ class handle_view
         }
         return self::run_alternative_method($alternative_method);
     }
+    static function handle_fields_render_method($method, $alternative_method=false, ...$args)
+    {
+        if(!$method || !is_array($method))
+        {
+            return self::run_alternative_method($alternative_method);
+        }
+        if(class_exists($method[0]) && method_exists($method[0], $method[1]))
+        {
+            return call_user_func([$method[0], $method[1]], ...$args);
+        }
+        return self::run_alternative_method($alternative_method);
+    }
     static function show_go_pro_link()
     {
         $pro_version_link = tools::get_pro_version_link();
@@ -647,5 +659,24 @@ class handle_view
             <?php endforeach; ?>
         </select>
         <?php
+    }
+    static function render_panel_tabs_fields_field_id($menu)
+    {
+        $render_method = apply_filters('mwpl_admin_tabs_menu/render_method/field_id', []);
+        self::handle_fields_render_method($render_method, 'render_panel_tabs_fields_field_id_alternative', $menu);
+    }
+    static function render_panel_tabs_fields_field_id_alternative()
+    {
+        ?>
+        <div class="pro-input-holder" labels="<?php _e("Pro Version", "mihanpanel")?>">
+            <?php self::show_go_pro_link()?>
+            <input disabled type="text">
+        </div>
+        <?php
+    }
+    static function render_panel_tabs_fields_is_show_by_role($menu)
+    {
+        $render_method = apply_filters('mwpl_admin_tabs_menu/render_method/is_show_by_role', []);
+        self::handle_fields_render_method($render_method, false, $menu);
     }
 }

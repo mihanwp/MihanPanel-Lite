@@ -61,8 +61,7 @@ class shortcode
                     <div class="clear"></div>
                     <div class="mpsidebar-wrapper">
                         <?php
-                        $sidebar = views::get_from_main_app('parts.sidebar');
-                        include $sidebar;
+                        \mihanpanel\app\panel::render_sidebar_items();
                         ?>
                     </div>
                 </div>

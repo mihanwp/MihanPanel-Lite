@@ -76,9 +76,9 @@ class assets
     public static function load_user_field_menu_assets()
     {
         self::load_sortable_script();
-        $admin_user_fields = self::get_js_url('admin-user-fields');
+        $dropdown_handler = self::get_js_url('admin-menus-drop-down-handler');
         $version = tools::get_plugin_version();
-        wp_enqueue_script('mw_admin_user_fields', $admin_user_fields, ['jquery'], $version, true);
+        wp_enqueue_script('mw_admin_dropdown_handler', $dropdown_handler, ['jquery'], $version, true);
         do_action('mwpl_load_admin_user_field_menu_assets');
     }
 
@@ -88,11 +88,13 @@ class assets
         $version = tools::get_plugin_version();
         $fontawesome_css = self::get_css_url('fa/css/all');
         $font_awesome_icon_picker = self::get_js_url('font-awesome-icon-picker');
+        $dropdown_handler = self::get_js_url('admin-menus-drop-down-handler');
         $admin_menu_tabs_js = self::get_js_url('admin-menu-tabs');
 
         wp_enqueue_style('mw_fontawesome_css', $fontawesome_css, null, $version);
         wp_enqueue_script('font-awesome-icon-picker', $font_awesome_icon_picker, ['jquery'], $version, true);
         wp_enqueue_media();
+        wp_enqueue_script('mw_admin_dropdown_handler', $dropdown_handler, ['jquery'], $version, true);
         wp_enqueue_script('admin-menu-tabs', $admin_menu_tabs_js, ['jquery'], $version, true);
         do_action('mwpl_load_admin_tabs_menu_assets');
     }

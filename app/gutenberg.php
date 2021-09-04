@@ -8,9 +8,9 @@ class gutenberg
          add_action('init', ['\mihanpanel\app\assets', 'load_gutenberg_block_assets']);
 
          // add MihanPanel category
-         add_filter('block_categories', [__CLASS__, 'filter_block_categories'], 10, 2);
+         add_filter('block_categories_all', [__CLASS__, 'filter_block_categories'], 10, 2);
     }
-    static function filter_block_categories($categories, $post)
+    static function filter_block_categories($categories, $block_editor_context)
     {
         $mihanpanel = [
             'slug' => 'mihanpanel',

@@ -163,4 +163,34 @@ class users
             
         }
     }
+    static function get_all_roles()
+    {
+        return wp_roles();
+    }
+    static function get_all_roles_name()
+    {
+        return self::get_all_roles()->get_names();
+    }
+    static function get_user($user_id=null)
+    {
+        if(!$user_id)
+        {
+            $user_id = get_current_user_id();
+        }
+        return get_user_by('id', $user_id);
+    }
+    static function get_user_role($user_id=null)
+    {
+        $user = self::get_user($user_id);
+        return $user->roles[0];
+    }
+    static function permision_by_role($roles_white_list, $user_role=null, $except_role=[])
+    {
+        if(!$user_role)
+        {
+            $user_role = self::get_user_role();
+        }
+        $except_role[] = 'administrator';
+        return in_array($user_role, $roles_white_list) || in_array($user_role, $except_role);
+    }
 }

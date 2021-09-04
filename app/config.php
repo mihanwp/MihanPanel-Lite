@@ -41,6 +41,14 @@ class config
                 $command = "ALTER TABLE $tablename ADD meta longtext NOT NULL after priority;";
                 $wpdb->query($command);
             }
+            if($olddbversion < 7)
+            {
+                // add meta data column to mihanpaneltabs table
+                global $wpdb;
+                $tablename = $wpdb->prefix . 'mihanpaneltabs';
+                $command = "ALTER TABLE {$tablename} ADD meta longtext NOT NULL after priority;";
+                $wpdb->query($command);
+            }
             do_action('mwpl_before_update_db_version', $olddbversion);
             self::update_db_version(MW_MIHANPANEL_DB_VERSION);
         }

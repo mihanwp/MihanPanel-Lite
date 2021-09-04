@@ -1,6 +1,7 @@
 <?php
 namespace mihanpanel\app;
 
+use mihanpanel\app\form\admin_tabs;
 use mihanpanel\app\form\admin_user_fields;
 
 class admin_menu
@@ -94,31 +95,7 @@ class admin_menu
     static function tabs_c()
     {
         if (!empty($_POST)) {
-            global $wpdb;
-            $tablename = $wpdb->prefix . 'mihanpaneltabs';
-            // if add
-            if (isset($_POST['add'])) {
-                $middleware = middlewares::handle_middleware('tabs_field/new_record');
-                if ($middleware && isset($_POST['name']) && wp_verify_nonce(sanitize_text_field($_POST['mwpl_nonce']), 'mwpl_create_tab_item')) {
-                    $needle = ['"', '\\'];
-                    $replacement = ["'", ''];
-                    $menucontent = str_replace($needle, $replacement, $_POST['content']);
-                    $success = $wpdb->insert(
-                        $tablename,
-                        array(
-                            'name' => sanitize_text_field($_POST['name']),
-                            'link' => sanitize_text_field($_POST['link']),
-                            'content' => sanitize_text_field($menucontent),
-                            'icon' => sanitize_text_field($_POST['icon']),
-                        )
-                    );
-                    if ($success) {
-                        echo '<p class="alert success">'.__("Successfully added! Watch user panel", 'mihanpanel').'</p>';
-                    } else {
-                        echo '<p class="alert error">'.__("An error occurred!", "mihanpanel").'</p>';
-                    }
-                }
-            }
+            admin_tabs::do($_POST);
         }
         ?>
         <div class="mihanpanel-admin">
@@ -129,96 +106,14 @@ class admin_menu
                 </p>
             </div>
             <div class="mw_notice_box notice inline notice-alt"></div>
-            <table class="mihanmenustable mw_fields_wrapper" data-mw_type="tabs">
-                <thead>
-                    <tr>
-                    <th></th>
-                    <th><?php esc_html_e("Menu title", "mihanpanel")?></th>
-                    <th><?php esc_html_e("Link / Shortcode", "mihanpanel")?></th>
-                    <th><span><?php esc_html_e("Icon", "mihanpanel"); ?> </span></th>
-                    <th></th>
-                </tr>
-                </thead>
-                <tbody class="mw_sortable">
-                <?php
-                global $wpdb;
-                $tablename = $wpdb->prefix . 'mihanpaneltabs';
-                $menus = $wpdb->get_results("SELECT * FROM $tablename ORDER BY priority ASC");
-                foreach ($menus as $menu):
-                    $link_or_content = $menu->link ? $menu->link : $menu->content;
-                    ?>
-                    <tr class="mihanpanelmenulist mw_field_item">
-                        <td><span class="mw_icon mw_sort_icon dashicons dashicons-menu"></span></td>
-                        <td style="display:none"><input name="id" value="<?php echo esc_attr($menu->id); ?>"/></td>
-                        <td><input name="name" value="<?php echo esc_attr($menu->name); ?>"/></td>
-                        <td><input type="text" name="link_or_content" value="<?php echo esc_attr($link_or_content); ?>"></td>
-                        <td class="field-icon-col">
-                            <?php do_action('mwpl_option_panel/tabs_menu/edit_section/before_render_action_buttons'); ?>
-                            <span tooltip="<?php esc_attr_e('FontAwesome', 'mihanpanel')?>" class="mwpl_action_btn fontawesome-handle">FA</span>
-                            <span class="preview_icon"><?php \mihanpanel\app\presenter\tabs_menu::render_tab_item_icon($menu->icon); ?></span>
-                            <input type="hidden" class="field-icon-<?php echo esc_attr($menu->id); ?>" name="icon" value="<?php echo esc_attr($menu->icon); ?>"/>
-                        </td>
-                        <th><input class="mihanpanelremove" type="submit" name="delete" value="x"/></th>
-                    </tr>
-                <?php endforeach;?>
-                </tbody>
-            </table>
-            <h2><?php esc_html_e("Create new item", "mihanpanel")?></h2>
-            <table class="mihanmenustable">
+            <?php admin_tabs::render_fields()?>
+
+            <div class="new_record_wrapper" style="display: none;">
+                <h2><?php esc_html_e('Create new field', 'mihanpanel'); ?><span class="close_new_field_section action_btn"><?php esc_html_e('Close', 'mihanpanel')?></span></h2>
                 <form method="post">
-                    <?php wp_nonce_field('mwpl_create_tab_item', 'mwpl_nonce'); ?>
-                    <tr>
-                        <th><?php esc_html_e("Menu Title", "mihanpanel")?></th>
-                        <th><?php esc_html_e("Content", "mihanpanel")?></th>
-                        <th><span><?php esc_html_e("Icon", "mihanpanel")?> </span></th>
-                        <th></th>
-                    </tr>
-                    <tr>
-                        <td><input name="name" placeholder="<?php esc_attr_e("Menu Title", "mihanpanel")?>"/></td>
-                        <td>
-                            <select id="linkorcontent" onchange="yesnoCheck();">
-                                <option><?php esc_html_e("Choose", "mihanpanel"); ?></option>
-                                <option value="optionlink"><?php esc_html_e("Link to other page", "mihanpanel")?></option>
-                                <option value="optioncontent"><?php _e("Shortcode", "mihanpanel"); ?></option>
-                            </select>
-                            <input class="hiddenoutput" id="islink" style="direction:ltr;text-align:left" name="link"
-                                   placeholder="http://"/>
-                            <select class="hiddenoutput" id="iscontent">
-                            <?php
-                            global $shortcode_tags;
-                            $shortcodes = $shortcode_tags;
-                            ksort( $shortcodes );
-                            if($shortcodes):
-                                ?>
-                                <option value="mwp_custom_shortcode"><?php esc_html_e('Custom Shortcode', 'mihanpanel')?></option>
-                                <?php
-                                foreach( $shortcodes as $code => $function ): ?>
-                                    <option value="[<?php echo esc_attr($code); ?>]"><?php echo esc_html($code); ?></option>
-                            <?php endforeach;endif; ?>
-                            </select>
-                            <input class="hiddenoutput" name="content" id="custom_shortcode_value" placeholder="[your_shortcode]">
-                            <script>
-                                function yesnoCheck() {
-                                    if (document.getElementById("linkorcontent").value == "optionlink") {
-                                        document.getElementById("islink").style.display = "block";
-                                    } else {
-                                        document.getElementById("islink").style.display = "none";
-                                    }
-                                    if (document.getElementById("linkorcontent").value == "optioncontent") {
-                                        document.getElementById("iscontent").style.display = "block";
-                                        document.getElementById("custom_shortcode_value").style.display = "block";
-                                    } else {
-                                        document.getElementById("iscontent").style.display = "none";
-                                        document.getElementById("custom_shortcode_value").style.display = "none";
-                                    }
-                                }
-                            </script>
-                        </td>
-                        <td><input class="mw-new-tab-record-icon" name="icon" placeholder="<?php esc_attr_e("Icon", "mihanpanel"); ?>"/></td>
-                        <td><input type="submit" name="add" value="+"/></td>
-                    </tr>
+                    <?php admin_tabs::render_new_record_fields()?>
                 </form>
-            </table>
+            </div>
         </div>
         <?php
     }

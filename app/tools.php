@@ -116,4 +116,10 @@ class tools
         $page = get_page_by_path($slug);
         return $page ? true : false;
     }
+    static function get_all_shortcodes()
+    {
+        global $shortcode_tags;
+        ksort( $shortcode_tags );
+        return $shortcode_tags;
+    }
 }

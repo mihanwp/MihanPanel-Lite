@@ -5,6 +5,7 @@ use WC_Shortcode_My_Account;
 
 class panel
 {
+    protected static $_current_tab;
     static function change_view_order_url($url, $order)
     {
         $panel_slug = options::get_panel_slug();
@@ -35,7 +36,7 @@ class panel
     static function panel_content()
     {
         // check is show order details
-        $tab_id = isset($_GET['tab']) && $_GET['tab'] ? $_GET['tab'] : false;
+        $tab_id = self::get_current_tab();
         if(isset($_GET['order_details']) && isset($_GET['order_id']) && intval($_GET['order_id']))
         {
             \mihanpanel\app\panel::show_order($_GET['order_id']);
@@ -60,5 +61,77 @@ class panel
         $tbl_name = $wpdb->prefix . 'mihanpaneltabs';
         $sql = "SELECT count(*) from {$tbl_name}";
         return $wpdb->get_var($sql);
+    }
+    static function get_tabs()
+    {
+        global $wpdb;
+        $tablename = $wpdb->prefix . 'mihanpaneltabs';
+        return $wpdb->get_results("SELECT * FROM {$tablename} ORDER BY priority ASC");
+    }
+    static function get_current_tab()
+    {
+        if(!self::$_current_tab)
+        {
+            self::$_current_tab = isset($_GET['tab']) ? sanitize_text_field($_GET['tab']) : false;            
+        }
+        return self::$_current_tab;
+    }
+    static function render_sidebar_items()
+    {
+        $tab_id = self::get_current_tab();
+        $sidebar = views::get_from_main_app('parts.sidebar');
+        include $sidebar;
+    }
+    private static function render_attrs($attrs)
+    {
+        $res = [];
+        foreach($attrs as $attr => $value)
+        {
+            if(is_array($value))
+            {
+                $value = implode(' ', $value);
+            }
+            $res[] = $attr . '="' . $value . '"';
+        }
+        return implode(' ', $res);
+    }
+    static function render_tabs()
+    {
+        $tab_id = self::get_current_tab();
+        $menus = self::get_tabs();
+        foreach ($menus as $menu):
+            $item_url = $menu->link == null ? esc_url(add_query_arg(['tab' => $menu->id], remove_query_arg(['order_id', 'order_details']))) : esc_url($menu->link);
+            $link_attrs = [
+                'class' => ['mwtaba'],
+                'href' => $item_url,
+            ];
+            if($menu->link)
+            {
+                $link_attrs['target'] = '_blank';
+            }
+            $li_attrs = [];
+            if($tab_id == $menu->id)
+            {
+                $li_attrs['class'][] = 'active';
+            }
+            $li_attrs = apply_filters('mwpl_panel/sidebar/item_attrs', $li_attrs, $menu);
+            $link_attrs = apply_filters('mwpl_panel/sidebar/link_attrs', $link_attrs, $menu);
+
+            $li_attrs = self::render_attrs($li_attrs);
+            $link_attrs = self::render_attrs($link_attrs);
+            $permission = apply_filters('mwpl_panel/sidebar/permission', true, $menu);
+            if(!$permission)
+            {
+                continue;
+            }
+            ?>
+            <li <?php echo $li_attrs?>>
+                <a <?php echo $link_attrs?>>
+                    <?php \mihanpanel\app\presenter\tabs_menu::render_tab_item_icon($menu->icon); ?>
+                    <p><?php echo esc_html($menu->name); ?></p>
+                </a>
+            </li>
+        <?php
+        endforeach;
     }
 }

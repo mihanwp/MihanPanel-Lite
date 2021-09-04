@@ -58,19 +58,15 @@ jQuery(document).ready(function($){
         });
     }
     let organize_data_function = [];
-    organize_data_function.tabs = function(field_data){
+    organize_data_function.tabs = field_data => {
         let new_data = [];
-        field_data.each(function(index, value){
-            let item = {},
-                this_value = $(value);
-            item['id'] = this_value.find('input[name=id]').val();
-            item['name'] = this_value.find('input[name=name]').val();
-            item['link_or_content'] = this_value.find('input[name=link_or_content]').val();
-            item['icon'] = this_value.find('input[name=icon]').val();
-            new_data.push(item);
-        });
+        field_data.each((index, value) => {
+            let this_value = $(value),
+                form = this_value.serialize()
+            new_data.push(form)
+        })
         return new_data;
-    };
+    }
     organize_data_function.user_field = function(field_data){
         let new_data = [];
         field_data.each(function(index, value){

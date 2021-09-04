@@ -42,19 +42,9 @@ class profile extends \WP_Widget
                                 <p><?php _e("Edit Profile", "mihanpanel"); ?></p>
                             </a>
                         </li>
-                        <?php global $wpdb;
-                        $tablename = $wpdb->prefix . 'mihanpaneltabs';
-                        $menus = $wpdb->get_results("SELECT * FROM $tablename ORDER BY priority ASC");
-                        foreach ($menus as $menu):
-                            $tab_link = $menu->link ? esc_url($menu->link) : esc_url(add_query_arg(['tab' => $menu->id], $panel_link));
+                        <?php
+                        \mihanpanel\app\panel::render_tabs();
                         ?>
-                            <li>
-                                <a class="mwtaba" href="<?php echo $tab_link; ?>">
-                                    <?php \mihanpanel\app\presenter\tabs_menu::render_tab_item_icon($menu->icon); ?>
-                                    <p><?php echo esc_html($menu->name); ?></p>
-                                </a>
-                            </li>
-                        <?php endforeach; ?>
                         <li>
                             <a href="<?php echo wp_logout_url( home_url() ) ?>">
                                 <i class="fas fa-sign-out-alt"></i>
