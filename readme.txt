@@ -13,8 +13,8 @@ WordPress Login and Registration Plugin Lite Version.
 == Description ==
 
 MihanPanel is a WordPress login and membership plugin by [MihanWP](https://mihanwp.com "Mihan WordPress")
- that makes your WordPress login and registration form a powerful part.
-You can use this plugin to completely change the login, registration, and user panel of your website.
+ that makes your WordPress login and registration form an influential part.
+You can use this plugin to completely change your website's login, registration, and user panel.
 MihanPanel also can run shortcodes on other plugins on your website.
 
 [View Live Demo](http://demo.mihanwp.com/mihanpanel-en/login/?action=register "MihanPanel Demo")
@@ -39,7 +39,7 @@ This plugin is published in 2 versions, Lite and Pro. The [MihanPanel Pro](https
 
 **MihanPanel Pro features:**
 * Ability to add infinite menus in the user panel
-* Ability to add a variety of user profile fields including date, selection box, radio box, and...
+* Ability to add various user profile fields including date, selection box, radio box, and...
 * Ability to restrict content for specific user roles
 * Change colors and styles
 * Change fonts
@@ -49,7 +49,7 @@ This plugin is published in 2 versions, Lite and Pro. The [MihanPanel Pro](https
 * Direct update from your WordPress dashboard
 
 **Report Bugs & Contribution:**  
-Do you want to report mihanpanel bugs and contribute to plugin development?  Join us at [MihanPanel Github Page](https://github.com/mihanwp/MihanPanel-Lite "MihanPanel on GitHub")
+Do you want to report MihanPanel bugs and contribute to plugin development?  Join us at [MihanPanel Github Page](https://github.com/mihanwp/MihanPanel-Lite "MihanPanel on GitHub")
 
 == Screenshots ==
 
