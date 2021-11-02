@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MihanPanel\n"
-"POT-Creation-Date: 2021-09-04 14:13+0430\n"
-"PO-Revision-Date: 2021-09-04 14:13+0430\n"
+"POT-Creation-Date: 2021-11-02 07:50+0330\n"
+"PO-Revision-Date: 2021-11-02 07:50+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -351,7 +351,7 @@ msgstr "تعداد خرید شما"
 msgid "Your tickets"
 msgstr "تیکت های شما"
 
-#: app/handle_view.php:323 app/handle_view.php:671 app/middlewares.php:67
+#: app/handle_view.php:323 app/handle_view.php:676 app/middlewares.php:67
 msgid "Pro Version"
 msgstr "نسخه‌ی حرفه‌ای"
 
@@ -1151,17 +1151,25 @@ msgstr "کاربر میتواند این نقش ها را در فرم ثبت ن�
 msgid "For disable this feature leave this section empty!"
 msgstr "برای غیرفعالسازی این مورد میتوانید این بخش را خالی بگذارید!"
 
-#: views/admin/panel-section/tools.php:6
+#: views/admin/panel-section/tools.php:9
 msgid "Create user panel page"
 msgstr "ساخت برگه‌ی پنل کاربری"
 
-#: views/admin/panel-section/tools.php:8
+#: views/admin/panel-section/tools.php:11
 msgid "Create"
 msgstr "بساز"
 
-#: views/admin/panel-section/tools.php:10
+#: views/admin/panel-section/tools.php:13
 msgid "User panel page already exists."
 msgstr "برگه‌ی پنل کاربری وجود دارد."
+
+#: views/admin/panel-section/tools.php:18
+msgid "Additional Code"
+msgstr "کد اضافه"
+
+#: views/admin/panel-section/tools.php:21
+msgid "This code is render in head tag in Login page"
+msgstr "این کد در تگ هدر صفحه ی ورود اضافه میشود"
 
 #. Author of the plugin/theme
 #: views/admin/settings.php:22
@@ -1185,7 +1193,7 @@ msgid "https://mihanwp.com"
 msgstr "https://mihanwp.com/"
 
 #~ msgid "Invalid phone number"
-#~ msgstr "شماره تلفن معتبر نیست!"
+#~ msgstr "شماره تلفن معتبر نیست"
 
 #~ msgid "Username must not be empty!"
 #~ msgstr "نام کاربری نباید خالی باشد!"
@@ -1379,12 +1387,15 @@ msgstr "https://mihanwp.com/"
 #~ msgid "Prevent edit this field"
 #~ msgstr "جلوگیری از ویرایش این فیلد"
 
-#~ msgid ""
-#~ "<p>License is not active! Please activate it from <strong>Plugins > Mihan "
-#~ "Panel License.</strong> Thanks!</p>"
-#~ msgstr ""
-#~ "<p>لایسنس افزونه فعال نیست! لطفا از بخش <strong> افزونه ها > لایسنس افزونه "
-#~ "میهن پنل </strong> فعالش کنید. سپاس</p>"
+#~ msgid "MihanPanel Pro > License"
+#~ msgstr "میهن پنل پرو > لایسنس"
+
+#, php-format
+#~ msgid "License is not active! Please activate it from %s Thanks!"
+#~ msgstr "لایسنس افزونه فعال نیست! لطفا از بخش %s فعالش کنید. سپاس"
+
+#~ msgid "Get Started"
+#~ msgstr "بزن بریم"
 
 #~ msgid "Light"
 #~ msgstr "روشن"
@@ -1503,13 +1514,13 @@ msgstr "https://mihanwp.com/"
 #~ msgid "Choose gateway number"
 #~ msgstr "شماره درگاه را انتخاب کنید"
 
+#, php-format
 #~ msgid ""
-#~ "<p>Mihan Panel plugin is not active! For using all features enter license "
-#~ "key from <strong>Plugins > Mihan Panel License.</strong> Thanks!</p>"
+#~ "Mihan Panel plugin is not active! For using all features enter license key "
+#~ "from %s Thanks!"
 #~ msgstr ""
-#~ "<p>افزونه ی میهن پنل فعال نیست! برای استفاده از تمامی امکانات از بخش "
-#~ "<strong> افزونه ها > لایسنس افزونه میهن پنل </strong> کد فعالسازی را وارد "
-#~ "کنید. سپاس</p>"
+#~ "افزونه ی میهن پنل فعال نیست! برای استفاده از تمامی امکانات از بخش %s کد "
+#~ "فعالسازی را وارد کنید. سپاس"
 
 #~ msgid "License"
 #~ msgstr "لایسنس"
@@ -1681,6 +1692,17 @@ msgstr "https://mihanwp.com/"
 #~ msgid "Request Code"
 #~ msgstr "درخواست کد"
 
+#~ msgid "Plugins > Mihan Panel License."
+#~ msgstr "افزونه ها > لایسنس میهن پنل"
+
+#~ msgid ""
+#~ "<p>Mihan Panel plugin is not active! For using all features enter license "
+#~ "key from <strong>Plugins > Mihan Panel License.</strong> Thanks!</p>"
+#~ msgstr ""
+#~ "<p>افزونه ی میهن پنل فعال نیست! برای استفاده از تمامی امکانات از بخش "
+#~ "<strong> افزونه ها > لایسنس افزونه میهن پنل </strong> کد فعالسازی را وارد "
+#~ "کنید. سپاس</p>"
+
 #~ msgid "Create new item"
 #~ msgstr "ایجاد مورد جدید"
 
@@ -1757,9 +1779,6 @@ msgstr "https://mihanwp.com/"
 
 #~ msgid "An error occurred, try again"
 #~ msgstr "خطایی رخ داد ، دوباره امتحان کنید"
-
-#~ msgid "Mihan Panel License"
-#~ msgstr "لایسنس میهن پنل"
 
 #~ msgid "Plugin License"
 #~ msgstr "لایسنس افزونه"

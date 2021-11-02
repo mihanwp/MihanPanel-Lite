@@ -102,6 +102,9 @@
 	border-radius:10px;
 	background:rgba(0,0,0,0.03);
 }
+.mp_option_single .field-item{
+    display: flex;
+}
 .mp_option_single textarea{
   width:50%;
   border-radius:4px;

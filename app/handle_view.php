@@ -648,6 +648,11 @@ class handle_view
         $render_method = apply_filters('mwpl_option_panel/render_method/dynamic_code_sms_content', []);
         self::handle_option_panel_render_method($render_method);
     }
+    static function option_panel_login_header_additional_code()
+    {
+        $render_method = apply_filters('mwpl_option_panel/render_method/login_header_additional_code', []);
+        self::handle_option_panel_render_method($render_method);
+    }
 
     static function render_user_fields_type_selectbox($field_name, $selected=false)
     {
