@@ -561,7 +561,7 @@ class handle_view
                     continue;
                 ?>
                 <p>
-                    <label><?php _e($role_name); ?></label>
+                    <label><?php echo translate_user_role($role_name); ?></label>
                     <?php self::show_go_pro_link(); ?>
                 </p>
             <?php endforeach; ?>

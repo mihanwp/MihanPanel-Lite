@@ -438,17 +438,14 @@
     background-color: white;
     border-radius: 10px;
     overflow: hidden;
-    display: table;
+    display: flex;
     box-shadow:0 0 50px rgb(23 87 251 / 12%);
     margin: 50px auto;
 }
 .mw_admin_panel .mw_sidebar
 {
-    height: 100%;
     width: 25%;
-    min-height: 90vh;
     position: relative;
-    float: right;
     background:url(../img/adminbg.jpg) no-repeat center bottom;
     background-size: cover;
 }
@@ -491,13 +488,12 @@
     bottom: 0;
 }
 .mw_admin_panel .mw_sidebar .mw_copyright a {
-text-decoration: none;
+    text-decoration: none;
     color: #fff;
-font-weight: bold;
+    font-weight: bold;
 }
 .mw_admin_panel .mw_content_wrapper
 {
-    float: right;
     width: 75%;
 }
 .mw_admin_panel .mw_content_wrapper .mw_content

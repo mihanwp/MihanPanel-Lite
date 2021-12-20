@@ -84,7 +84,12 @@
             global $wpdb;
             $tablename = $wpdb->prefix . 'mihanpanelfields';
             $fields = $wpdb->get_results("SELECT * FROM $tablename order by priority");
-            foreach ($fields as $field) { ?>
+            foreach ($fields as $field):
+                if(!apply_filters('mwpl_user_fields_render_permission', true, $field, 'profile'))
+                {
+                    continue;
+                }
+            ?>
                 <div class="col-md-6">
                     <div class="form-group">
                         <label><?php echo esc_html($field->label); ?><?php if ($field->required == 'yes') {
@@ -95,7 +100,7 @@
                         </div>
                     </div>
                 </div>
-            <?php } ?>
+            <?php endforeach; ?>
         </div>
         <?php \mihanpanel\app\presenter\user_fields::render_woocommerce_fields('edit-profile'); ?>
         <div class="clear"></div>

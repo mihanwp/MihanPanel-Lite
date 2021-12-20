@@ -79,7 +79,7 @@ class profile
             $prevent_edit_field = !\mihanpanel\app\users::is_admin_user() && isset($field_meta['data']['prevent_edit_field']);
             if(!isset($fields_data[$updatingfield->slug]) || empty($fields_data[$updatingfield->slug]))
             {
-                if($prevent_edit_field && $last_value)
+                if(($prevent_edit_field && $last_value) || !apply_filters('mwpl_user_fields_render_permission', true, $updatingfield, 'profile'))
                 {
                     continue;
                 }
@@ -97,7 +97,7 @@ class profile
                     }
                 }
             }else {
-                if($prevent_edit_field && $last_value)
+                if(($prevent_edit_field && $last_value) || !apply_filters('mwpl_user_fields_render_permission', true, $updatingfield, 'profile'))
                 {
                     continue;
                 }

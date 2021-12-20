@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MihanPanel\n"
-"POT-Creation-Date: 2021-11-02 07:50+0330\n"
-"PO-Revision-Date: 2021-11-02 07:50+0330\n"
+"POT-Creation-Date: 2021-12-20 17:30+0330\n"
+"PO-Revision-Date: 2021-12-20 17:30+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.2\n"
+"X-Generator: Poedit 3.0\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n==0 || n==1);\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
@@ -297,7 +297,7 @@ msgstr "عنوان"
 
 #: app/form/admin_user_fields.php:78 app/form/admin_user_fields.php:118
 #: app/form/admin_user_fields.php:155 app/form/admin_user_fields.php:157
-#: parts/edit-profile.php:91
+#: parts/edit-profile.php:96
 msgid "Required"
 msgstr "الزامی"
 
@@ -502,7 +502,7 @@ msgstr "رمز عبور"
 msgid "Password must not empty"
 msgstr "کلمه عبور نباید خالی باشد"
 
-#: app/sundry.php:189
+#: app/sundry.php:194
 msgid " Should not be empty!"
 msgstr " نباید خالی باشد!"
 
@@ -664,7 +664,7 @@ msgstr "تکرار رمز عبور"
 msgid "Bio"
 msgstr "بیوگرافی"
 
-#: parts/edit-profile.php:102
+#: parts/edit-profile.php:107
 msgid "Save Changes"
 msgstr "ذخیره تغییرات"
 
@@ -1383,6 +1383,9 @@ msgstr "https://mihanwp.com/"
 
 #~ msgid "Just in profile"
 #~ msgstr "فقط در ویرایش پروفایل"
+
+#~ msgid "Just in register form"
+#~ msgstr "فقط در فرم ثبت‌نام"
 
 #~ msgid "Prevent edit this field"
 #~ msgstr "جلوگیری از ویرایش این فیلد"
