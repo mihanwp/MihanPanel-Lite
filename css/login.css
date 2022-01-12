@@ -13,18 +13,20 @@ body{
 	direction: rtl;
 }
 #login{
-	background:rgba(255,255,255,0.95);
-	padding:1.5% 2% !important;
-	width:30% !important;
-	box-shadow:0 0 40px rgba(0,0,0,0.15) !important;
-  border-radius:10px;
-  margin-top:30px;
+	background:rgba(255,255,255,0.9);
+	padding:50px 40px !important;
+	width:520px !important;
+	box-shadow:0 20px 50px rgb(28 76 156 / 50%) !important;
+  border-radius:20px;
+  margin-top:40px;
   margin-bottom:30px;
+  box-sizing: border-box;
 }
 .login form{
 	background:transparent !important;
 	box-shadow: none !important;
 	margin-top:0 !important;
+  padding:0 !important
 }
 .login form input[type=email]:not(.mw_default),
 .login form input[type=text]:not(.mw_default),
@@ -33,7 +35,17 @@ body{
 .login form label:not(.mw_default){
 	width:100%;
 	color:#222;
+  padding-right:20px;
 	display:block !important;
+  box-sizing: border-box;
+}
+.login #mwpl_res_msg
+{
+  font-size: 15px;
+}
+.login #mwpl_res_msg[type=error]
+{
+  color: #e73332;
 }
 .login form input[type=submit]{
   color:white !important
@@ -46,19 +58,25 @@ body{
     font-size:17px;
     line-height:40px;
 }
-.login form input[type=text]:not(.mw_default),
+.login form input:not(.mw_default),
 .login form input[type=email]:not(.mw_default),
 .login form input[type=password]:not(.mw_default),
 .login form input[type=number]:not(.mw_default),
 .login form select:not(.mw_default),
 .login form input[id=mw_use_wp_pass]
 {
-	border:none;
-	font-size:16px !important;
-	padding:15px 20px !important;
-	border-radius:50px;
-	background:rgba(255,255,255,.8) !important;
-  box-shadow:0 5px 30px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e3e3e3 !important;
+  font-size: 16px !important;
+  padding: 15px 25px !important;
+  border-radius: 7px;
+  box-shadow: 0 5px 15px rgb(0 0 0 / 5%) !important;
+  background: #fff !important;
+  transition-duration:0 !important;
+}
+.login form input[type=email],
+.login form input[type=password]{
+  direction: ltr;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif !important;
 }
 .login form textarea
 {
@@ -135,18 +153,20 @@ input[type=checkbox]:checked:before{
 	margin: -7px -6px 0 0 !important;
 }
 .login form input[type=submit]{
-	margin:20px auto 0;
-	text-align: center;
-	background-color:#5454ff;
-	line-height:45px !important;
-  border:none !important;
-  color:#fff !important;
-  box-shadow:0 5px 10px #5454ff60;
-	padding: 0 !important;
-  text-shadow:none;
-  font-size:16px;
-  border-radius:25px;
-	height: auto !important;
+  background-color: #fbb034 !important;
+  border: none!important;
+  border-radius: 7px !important;
+  margin: 20px auto !important;
+  display: block;
+  line-height: 3.2em;
+  font-weight: 300;
+  transition-duration: 0.2s;
+  color: #000;
+  font-size: 18px;
+  padding: 10px 60px !important;
+  box-shadow: 0 7px 15px #fbb03440;
+  float: none;
+  text-align: center;
 }
 .login form .admin-email__actions-primary input[type=submit]
 {
@@ -164,6 +184,8 @@ a{color:#222 !important;font-size: 15px;}
 	margin-top: 10px !important;
 	border-radius:4px;
   border-right:0;
+  font-size:15px;
+  line-height:1.9em;
 }
 .login-action-login .wp_login .dig_otp_block{
   width:100%;
@@ -176,7 +198,10 @@ a{color:#222 !important;font-size: 15px;}
 }
 @media screen and (max-width: 980px) {
   #login{
-    width:90% !important;
+    width:97% !important;
+    padding:20px !important;
+    margin-top:20px;
+    margin-bottom:20px;
   }
 }
 .login form .forgetmenot
@@ -243,4 +268,22 @@ a{color:#222 !important;font-size: 15px;}
 {
   display: inline-block !important;
   width: auto;
+}
+.login #nav{
+  text-align: center;
+  color:transparent;
+}
+.login #nav a{
+  display: inline-block;
+  background: #35495c10;
+  border-radius: 7px;
+  padding: 0 30px;
+  color: #35495c !important;
+  font-size: 15px;
+  outline: none !important;
+  margin: 10px auto;
+  line-height: 50px;
+}
+.login #nav a:hover{
+  background:#fff;
 }

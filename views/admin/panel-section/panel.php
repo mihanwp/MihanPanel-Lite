@@ -100,6 +100,28 @@
             <label><?php esc_html_e("Hide Awesome Support widget", "mihanpanel"); ?></label>
             <?php \mihanpanel\app\handle_view::option_panel_field_hide_awesome_support_widget(); ?>
         </div>
+        <h2><?php esc_html_e('Blog Section', 'mihanpanel')?></h2>
+        <div class="mp_option_single">
+            <label for="mp_is_blog_section_enable"><?php esc_html_e('Is blog section enable?', 'mihanpanel')?></label>
+            <?php \mihanpanel\app\handle_view::option_panel_field_is_blog_section_enable();?>
+        </div>
+        <div class="mp_option_single">
+            <label for="mp_blog_section_title"><?php esc_html_e('Section Title', 'mihanpanel')?></label>
+            <?php \mihanpanel\app\handle_view::option_panel_field_blog_section_title();?>
+        </div>
+        <div class="mp_option_single">
+            <label for="mp_blog_section_title_link"><?php esc_html_e('Title Link', 'mihanpanel')?></label>
+            <?php \mihanpanel\app\handle_view::option_panel_field_blog_section_title_link();?>
+        </div>
+        <div class="mp_option_single">
+            <label for="mp_blog_section_posts_category"><?php esc_html_e('Posts category', 'mihanpanel')?></label>
+            <?php \mihanpanel\app\handle_view::option_panel_field_blog_section_posts_category();?>
+        </div>
+        <div class="mp_option_single">
+            <label for="mp_blog_section_posts_count"><?php esc_html_e('Posts count', 'mihanpanel')?></label>
+            <?php \mihanpanel\app\handle_view::option_panel_field_blog_section_posts_count();?>
+        </div>
+
         <h2><?php esc_html_e("Roles who can't use admin panel", "mihanpanel")?></h2>
         <?php \mihanpanel\app\handle_view::option_panel_field_ban_roles(); ?>        
         <?php submit_button(); ?>

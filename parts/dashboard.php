@@ -72,6 +72,7 @@
                     </div>
                 <?php endif; ?>
             </div>
+            <?php do_action('mihanpanel/panel/dashboard/before_close_widgets_container')?>
         </div>
     </div>
 </div>

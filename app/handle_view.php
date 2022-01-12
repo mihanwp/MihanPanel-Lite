@@ -87,18 +87,47 @@ class handle_view
     static function handle_panel_widgets()
     {
         $widgets = [
-            'register_day',
-            'comment',
-            'edd',
-            'woocommerce',
-            'awesome_support'  
+            'register_day' => [
+                'class' => \mihanpanel\app\handle_view::class,
+                'method' => 'handle_dashboard_widget_register_day',
+            ],
+            'comment' => [
+                'class' => \mihanpanel\app\handle_view::class,
+                'method' => 'handle_dashboard_widget_comment',
+            ],
+            'edd' => [
+                'class' => \mihanpanel\app\handle_view::class,
+                'method' => 'handle_dashboard_widget_edd',
+            ],
+            'woocommerce' => [
+                'class' => \mihanpanel\app\handle_view::class,
+                'method' => 'handle_dashboard_widget_woocommerce',
+            ],
+            'awesome_support' => [
+                'class' => \mihanpanel\app\handle_view::class,
+                'method' => 'handle_dashboard_widget_awesome_support',
+            ],
         ];
-        foreach($widgets as $widget)
+        $widgets = apply_filters('mihanpanel/panel/dashboard/widgets', $widgets);
+        if(!$widgets || !is_array($widgets))
         {
-            $method = 'handle_dashboard_widget_' . $widget;
-            if(method_exists(__CLASS__, $method))
+            return false;
+        }
+        foreach($widgets as $widgetKey => $callBack)
+        {
+            if(isset($callBack['class']))
             {
-                self::{$method}();
+                // handle with class
+                if(method_exists($callBack['class'], $callBack['method']))
+                {
+                    call_user_func([$callBack['class'], $callBack['method']]);
+                }
+            }else{
+                // handle with function
+                if(function_exists($callBack['method']))
+                {
+                    call_user_func($callBack['method']);
+                }
             }
         }
     }
@@ -159,30 +188,30 @@ class handle_view
             self::render_dashboard_widget_awesome_support();
         }
     }
-    
+
     static function render_dashboard_widget_register_day()
     {
         ?>
         <div class="col-md-4">
             <div class="mihanpanel-card mihanpanel-card-stats">
-                <div class="mihanpanel-card-header" data-background-color="blue">
-                    <i class="fas fa-3x fa-trophy"></i>
+                <div class="mihanpanel-card-header" data-background-color="orange">
+                    <img src="<?php echo MW_MIHANPANEL_URL; ?>/img/cup.svg" width="48" height="48"/>
                 </div>
                 <div class="mihanpanel-card-content">
+                  <h3 class="title"><?php
+                      $today_obj      = new \DateTime( date( 'Y-m-d', strtotime( 'today' ) ) );
+                      $register_date  = get_the_author_meta( 'user_registered', get_current_user_id() );
+                      $registered_obj = new \DateTime( date( 'Y-m-d', strtotime( $register_date ) ) );
+                      $interval_obj   = $today_obj->diff( $registered_obj );
+                      $day = '';
+                      if( $interval_obj->days > 0 ) {
+                          $day = $interval_obj->days;
+                      } elseif( 0 == $interval_obj->days ) {
+                          $day = 1;
+                      }
+                      printf(esc_html__('%d Day', 'mihanpanel'), $day);
+                      ?></h3>
                     <p class="category"><?php esc_html_e("You are our user", "mihanpanel") ?></p>
-                    <h3 class="title"><?php
-                        $today_obj      = new \DateTime( date( 'Y-m-d', strtotime( 'today' ) ) );
-                        $register_date  = get_the_author_meta( 'user_registered', get_current_user_id() );
-                        $registered_obj = new \DateTime( date( 'Y-m-d', strtotime( $register_date ) ) );
-                        $interval_obj   = $today_obj->diff( $registered_obj );
-                        $day = '';
-                        if( $interval_obj->days > 0 ) {
-                            $day = $interval_obj->days;
-                        } elseif( 0 == $interval_obj->days ) {
-                            $day = 1;
-                        }
-                        printf(esc_html__('%d Day', 'mihanpanel'), $day);
-                        ?></h3>
                 </div>
             </div>
         </div>
@@ -193,20 +222,20 @@ class handle_view
         ?>
         <div class="col-md-4">
             <div class="mihanpanel-card mihanpanel-card-stats">
-                <div class="mihanpanel-card-header" data-background-color="orange">
-                    <i class="far fa-3x fa-comment"></i>
+                <div class="mihanpanel-card-header" data-background-color="purple">
+                  <img src="<?php echo MW_MIHANPANEL_URL; ?>/img/comments.svg" width="48" height="48"/>
                 </div>
                 <div class="mihanpanel-card-content">
+                  <h3 class="title"><?php
+                      global $wpdb;
+                      $userId = get_current_user_id();
+                      $where = 'WHERE comment_approved = 1 AND user_id = ' . $userId;
+                      $comment_count = $wpdb->get_var("SELECT COUNT( * ) AS total
+                          FROM {$wpdb->comments}
+                          {$where}");
+                      echo $comment_count;
+                      ?></h3>
                     <p class="category"><?php esc_html_e("Your Comments", "mihanpanel") ?></p>
-                    <h3 class="title"><?php
-                        global $wpdb;
-                        $userId = get_current_user_id();
-                        $where = 'WHERE comment_approved = 1 AND user_id = ' . $userId;
-                        $comment_count = $wpdb->get_var("SELECT COUNT( * ) AS total
-                            FROM {$wpdb->comments}
-                            {$where}");
-                        echo $comment_count;
-                        ?></h3>
                 </div>
             </div>
         </div>
@@ -217,30 +246,30 @@ class handle_view
         ?>
             <div class="col-md-4">
                 <div class="mihanpanel-card mihanpanel-card-stats">
-                    <div class="mihanpanel-card-header" data-background-color="blue">
-                        <i class="far fa-3x fa-file"></i>
+                    <div class="mihanpanel-card-header" data-background-color="red">
+                      <img src="<?php echo MW_MIHANPANEL_URL; ?>/img/files.svg" width="48" height="48"/>
                     </div>
                     <div class="mihanpanel-card-content">
+                      <h3 class="title">
+                          <?php $user_id = get_current_user_id();
+                          $mwpr_purchased = edd_get_users_purchases($user_id);
+                          $counter = 0;
+                          if ($mwpr_purchased) {
+                              foreach ($mwpr_purchased as $val) {
+                                  foreach ($val as $k => $v) {
+                                      if ($k == 'ID') {
+                                          $mwpr_name = edd_get_payment_meta_cart_details($v);
+                                          foreach ($mwpr_name as $mwprt_name) {
+                                              $counter++;
+                                          }
+                                      }
+                                  }
+                              }
+                          }
+                          echo $counter;
+                          ?>
+                      </h3>
                         <p class="category"><?php esc_html_e("Purchased files", "mihanpanel"); ?></p>
-                        <h3 class="title">
-                            <?php $user_id = get_current_user_id();
-                            $mwpr_purchased = edd_get_users_purchases($user_id);
-                            $counter = 0;
-                            if ($mwpr_purchased) {
-                                foreach ($mwpr_purchased as $val) {
-                                    foreach ($val as $k => $v) {
-                                        if ($k == 'ID') {
-                                            $mwpr_name = edd_get_payment_meta_cart_details($v);
-                                            foreach ($mwpr_name as $mwprt_name) {
-                                                $counter++;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                            echo $counter;
-                            ?>
-                        </h3>
                     </div>
                 </div>
             </div>
@@ -251,13 +280,13 @@ class handle_view
         ?>
         <div class="col-md-4">
             <div class="mihanpanel-card mihanpanel-card-stats">
-                <div class="mihanpanel-card-header" data-background-color="green">
-                    <i class="fas fa-3x fa-shopping-cart"></i>
+                <div class="mihanpanel-card-header" data-background-color="blue">
+                  <img src="<?php echo MW_MIHANPANEL_URL; ?>/img/boxes.svg" width="48" height="48"/>
                 </div>
                 <div class="mihanpanel-card-content">
-                    <p class="category"><?php esc_html_e("Your purchase count", "mihanpanel"); ?></p>
-                    <h3 class="title"><?php $user_id = get_current_user_id();
-                        echo wc_get_customer_order_count($user_id); ?></h3>
+                  <h3 class="title"><?php $user_id = get_current_user_id();
+                    echo wc_get_customer_order_count($user_id); ?></h3>
+                <p class="category"><?php esc_html_e("Your purchase count", "mihanpanel"); ?></p>
                 </div>
             </div>
         </div>
@@ -268,21 +297,21 @@ class handle_view
         ?>
         <div class="col-md-4">
             <div class="mihanpanel-card mihanpanel-card-stats">
-                <div class="mihanpanel-card-header" data-background-color="red">
-                    <i class="far fa-3x fa-life-ring"></i>
+                <div class="mihanpanel-card-header" data-background-color="green">
+                  <img src="<?php echo MW_MIHANPANEL_URL; ?>/img/tickets.svg" width="48" height="48"/>
                 </div>
                 <div class="mihanpanel-card-content">
+                  <h3 class="title">
+                      <?php
+                      $args = array(
+                          'author' => get_current_user_id(),
+                          'post_type' => 'ticket'
+                      );
+                      $posts = new \WP_Query($args);
+                      echo $posts->found_posts;
+                      ?>
+                  </h3>
                     <p class="category"><?php esc_html_e("Your tickets", 'mihanpanel'); ?></p>
-                    <h3 class="title">
-                        <?php
-                        $args = array(
-                            'author' => get_current_user_id(),
-                            'post_type' => 'ticket'
-                        );
-                        $posts = new \WP_Query($args);
-                        echo $posts->found_posts;
-                        ?>
-                    </h3>
                 </div>
             </div>
         </div>
@@ -538,13 +567,38 @@ class handle_view
         </div>
         <?php
     }
+    static function option_panel_field_is_blog_section_enable()
+    {
+        $render_method = apply_filters('mwpl_option_panel/render_method/is_blog_section_enable', []);
+        self::handle_option_panel_render_method($render_method);
+    }
+    static function option_panel_field_blog_section_title()
+    {
+        $render_method = apply_filters('mwpl_option_panel/render_method/blog_section_title', []);
+        self::handle_option_panel_render_method($render_method);
+    }
+    static function option_panel_field_blog_section_title_link()
+    {
+        $render_method = apply_filters('mwpl_option_panel/render_method/blog_section_title_link', []);
+        self::handle_option_panel_render_method($render_method);
+    }
+    static function option_panel_field_blog_section_posts_category()
+    {
+        $render_method = apply_filters('mwpl_option_panel/render_method/blog_section_posts_category', []);
+        self::handle_option_panel_render_method($render_method);
+    }
+    static function option_panel_field_blog_section_posts_count()
+    {
+        $render_method = apply_filters('mwpl_option_panel/render_method/blog_section_posts_count', []);
+        self::handle_option_panel_render_method($render_method);
+    }
 
     // register tab
     static function option_panel_field_register_text()
     {
         $render_method = apply_filters('mwpl_option_panel/render_method/register_text', []);
         self::handle_option_panel_render_method($render_method);
-    
+
     }
     static function option_panel_field_roles_user_can_select()
     {
@@ -570,7 +624,21 @@ class handle_view
     }
 
     // login with sms tab
-
+    static function option_panel_field_wpml_sms_just_in_persian()
+    {
+        if(!tools::is_wpml_active())
+        {
+            esc_html_e('This plugin is not active on your site', 'mihanpanel');
+            return false;
+        }
+        $render_method = apply_filters('mwpl_option_panel/render_method/wpml_sms_just_in_persian', []);
+        self::handle_option_panel_render_method($render_method);
+    }
+    static function option_panel_field_force_get_phone_number_in_smart_login_mode()
+    {
+        $render_method = apply_filters('mwpl_option_panel/render_method/force_get_phone_number_in_smart_login_mode', []);
+        self::handle_option_panel_render_method($render_method);
+    }
     static function option_panel_smart_login()
     {
         $render_method = apply_filters('mwpl_option_panel/render_method/smart_login', []);

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MihanPanel\n"
-"POT-Creation-Date: 2021-12-20 17:30+0330\n"
-"PO-Revision-Date: 2021-12-20 17:30+0330\n"
+"POT-Creation-Date: 2022-01-12 12:37+0330\n"
+"PO-Revision-Date: 2022-01-12 12:37+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -26,7 +26,6 @@ msgstr ""
 msgid "Address 2"
 msgstr "آدرس شماره دو"
 
-#. Plugin Name of the plugin/theme
 #: app/admin_menu.php:18 app/gutenberg.php:17
 msgid "MihanPanel"
 msgstr "میهن پنل"
@@ -326,106 +325,110 @@ msgstr "رمزهای عبور یکسان نیست!"
 msgid "%1$s must not be empty."
 msgstr "%1$s نباید خالی باشد."
 
-#: app/handle_view.php:172
-msgid "You are our user"
-msgstr "سابقه عضویت شما"
-
-#: app/handle_view.php:184
+#: app/handle_view.php:212
 #, php-format
 msgid "%d Day"
 msgstr "%d روز"
 
-#: app/handle_view.php:200
+#: app/handle_view.php:214
+msgid "You are our user"
+msgstr "سابقه عضویت شما"
+
+#: app/handle_view.php:238
 msgid "Your Comments"
 msgstr "نظرات شما"
 
-#: app/handle_view.php:224
+#: app/handle_view.php:272
 msgid "Purchased files"
 msgstr "فایل های خریداری شده"
 
-#: app/handle_view.php:258
+#: app/handle_view.php:289
 msgid "Your purchase count"
 msgstr "تعداد خرید شما"
 
-#: app/handle_view.php:275
+#: app/handle_view.php:314
 msgid "Your tickets"
 msgstr "تیکت های شما"
 
-#: app/handle_view.php:323 app/handle_view.php:676 app/middlewares.php:67
+#: app/handle_view.php:352 app/handle_view.php:744 app/middlewares.php:67
 msgid "Pro Version"
 msgstr "نسخه‌ی حرفه‌ای"
 
-#: app/handle_view.php:344
+#: app/handle_view.php:373
 msgid "Login Button Text Color"
 msgstr "رنگ متن دکمه ورود"
 
-#: app/handle_view.php:346
+#: app/handle_view.php:375
 msgid "Color of Login and Register button text"
 msgstr "رنگ متن دکمه در صفحه ی ورود و ثبت نام"
 
-#: app/handle_view.php:359
+#: app/handle_view.php:388
 msgid "Login Fields Background Color"
 msgstr "رنگ پس زمینه ی فیلدهای فرم ورود"
 
-#: app/handle_view.php:361
+#: app/handle_view.php:390
 msgid "Color of Login and Register fields"
 msgstr "رنگ پس زمینه فیلدهای فرم ورود و ثبت‌نام"
 
-#: app/handle_view.php:374
+#: app/handle_view.php:403
 msgid "Login Field's Label Color"
 msgstr "رنگ لیبل فیلدهای فرم ورود"
 
-#: app/handle_view.php:376
+#: app/handle_view.php:405
 msgid "Color of Login and Register labels"
 msgstr "رنگ متن لیبل فیلدهای فرم ورود و ثبت نام"
 
-#: app/handle_view.php:389
+#: app/handle_view.php:418
 msgid "Login Fields Text Color"
 msgstr "رنگ متن فیلدهای فرم ورود"
 
-#: app/handle_view.php:391
+#: app/handle_view.php:420
 msgid "Color of Login and Register fields text"
 msgstr "رنگ متن فیلدهای فرم ورود و ثبت‌نام"
 
-#: app/handle_view.php:404
+#: app/handle_view.php:433
 msgid "Login Info Messagebox Background Color"
 msgstr "رنگ پس زمینه ی باکس اطلاع رسانی در فرم ورود"
 
-#: app/handle_view.php:406
+#: app/handle_view.php:435
 msgid "Background Color of Login and Register Info Messagebox"
 msgstr "رنگ پس زمینه ی باکس اطلاع رسانی در فرم ورود و ثبت نام"
 
-#: app/handle_view.php:419
+#: app/handle_view.php:448
 msgid "Login Info Messagebox Text Color"
 msgstr "رنگ متن باکس اطلاع رسانی در فرم ورود"
 
-#: app/handle_view.php:421
+#: app/handle_view.php:450
 msgid "Color of Login and Register Info Messagebox Text"
 msgstr "رنگ متن باکس اطلاع رسانی در فرم ورود و ثبت نام"
 
-#: app/handle_view.php:434
+#: app/handle_view.php:463
 msgid "Login Error Messagebox Text Color"
 msgstr "رنگ متن باکس ارور در فرم ورود"
 
-#: app/handle_view.php:436
+#: app/handle_view.php:465
 msgid "Color of Login and Register Error Messagebox Text"
 msgstr "رنگ متن باکس ارور در فرم ورود و ثبت نام"
 
-#: app/handle_view.php:449
+#: app/handle_view.php:478
 msgid "Login Error Messagebox Background Color"
 msgstr "رنگ پس زمینه ی باکس ارور در فرم ورود"
 
-#: app/handle_view.php:451
+#: app/handle_view.php:480
 msgid "Background Color of Login and Register Error Messagebox"
 msgstr "رنگ پس زمینه ی باکس ارور در فرم ورود و ثبت نام"
 
-#: app/handle_view.php:625
-msgid "Auto confirm phone number after user register"
-msgstr "فعالسازی شماره تلفن بعد از ثبت نام به صورت اتوماتیک"
+#: app/handle_view.php:631
+msgid "This plugin is not active on your site"
+msgstr "این پلاگین بر روی سایت شما فعال نیست"
 
-#: app/handle_view.php:629
+#: app/handle_view.php:693
+msgid "Auto confirm phone number after user register"
+msgstr "فعالسازی شماره موبایل بعد از ثبت نام به صورت اتوماتیک"
+
+#: app/handle_view.php:697
 msgid "User can change phone number"
-msgstr "کاربر میتواند شماره تلفن را تغییر دهد"
+msgstr "کاربر میتواند شماره موبایل را تغییر دهد"
 
 #: app/middlewares.php:68
 #, php-format
@@ -876,23 +879,39 @@ msgstr ""
 msgid "Smart Login"
 msgstr "ورود هوشمند"
 
-#: views/admin/panel-section/login_with_sms.php:9
+#: views/admin/panel-section/login_with_sms.php:7
+msgid "Automatic login by phone number, email or username"
+msgstr "شناسایی خودکار شیوه‌ی ورود از شماره تلفن، ایمیل یا نام کاربری"
+
+#: views/admin/panel-section/login_with_sms.php:10
 msgid "Activate smart login"
 msgstr "فعالسازی ورود هوشمند"
 
-#: views/admin/panel-section/login_with_sms.php:13
+#: views/admin/panel-section/login_with_sms.php:14
+msgid "Obtain phone number in panel"
+msgstr "شماره موبایل را در پنل‌کاربری دریافت کن"
+
+#: views/admin/panel-section/login_with_sms.php:18
 msgid "Password Type"
 msgstr "نوع پسورد"
 
-#: views/admin/panel-section/login_with_sms.php:15
+#: views/admin/panel-section/login_with_sms.php:20
+msgid "WPML Settings"
+msgstr "تنظیمات WPML"
+
+#: views/admin/panel-section/login_with_sms.php:23
+msgid "Active sms settings just in persian language"
+msgstr "فقط زمانی که زبان فارسی فعال است تنظیمات اس‌ام‌اس را فعال نگه‌دار"
+
+#: views/admin/panel-section/login_with_sms.php:27
 msgid "Disable register form fields"
 msgstr "غیر‌فعال کردن فیلد‌های فرم ثبت‌نام"
 
-#: views/admin/panel-section/login_with_sms.php:18
+#: views/admin/panel-section/login_with_sms.php:30
 msgid "Disable email field"
 msgstr "غیر‌فعال کردن فیلد ایمیل"
 
-#: views/admin/panel-section/login_with_sms.php:21
+#: views/admin/panel-section/login_with_sms.php:33
 msgid ""
 "You can disable email field in register form if login with sms dynamic code is "
 "active."
@@ -900,11 +919,11 @@ msgstr ""
 "اگر ورود به کد یکبار مصرف فعال باشد، میتوانید فیلد ایمیل را در صفحه‌ی ثبت نام، "
 "غیر‌فعال کنید."
 
-#: views/admin/panel-section/login_with_sms.php:23
+#: views/admin/panel-section/login_with_sms.php:35
 msgid "Disable username field"
 msgstr "غیر‌فعال کردن فیلد نام‌کاربری"
 
-#: views/admin/panel-section/login_with_sms.php:26
+#: views/admin/panel-section/login_with_sms.php:38
 msgid ""
 "You can disable username field in register form if login with sms dynamic code "
 "is active."
@@ -912,11 +931,11 @@ msgstr ""
 "اگر ورود به کد یکبار مصرف فعال باشد، میتوانید فیلد نام‌کاربری را در صفحه‌ی ثبت "
 "نام، غیر‌فعال کنید."
 
-#: views/admin/panel-section/login_with_sms.php:28
+#: views/admin/panel-section/login_with_sms.php:40
 msgid "Disable password field"
 msgstr "غیر‌فعال کردن فیلد رمز‌عبور"
 
-#: views/admin/panel-section/login_with_sms.php:31
+#: views/admin/panel-section/login_with_sms.php:43
 msgid ""
 "You can disable password field in register form if login with sms dynamic code "
 "is active."
@@ -924,19 +943,19 @@ msgstr ""
 "اگر ورود به کد یکبار مصرف فعال باشد، میتوانید فیلد رمز‌عبور را در صفحه‌ی ثبت "
 "نام، غیر‌فعال کنید."
 
-#: views/admin/panel-section/login_with_sms.php:33
+#: views/admin/panel-section/login_with_sms.php:45
 msgid "User Phone"
 msgstr "موبایل کاربر"
 
-#: views/admin/panel-section/login_with_sms.php:35
+#: views/admin/panel-section/login_with_sms.php:47
 msgid "SMS Provider Settings"
 msgstr "تنظیمات ارائه دهنده ی SMS"
 
-#: views/admin/panel-section/login_with_sms.php:37
+#: views/admin/panel-section/login_with_sms.php:49
 msgid "Select Provider"
 msgstr "ارائه دهنده را انتخاب کنید"
 
-#: views/admin/panel-section/login_with_sms.php:39
+#: views/admin/panel-section/login_with_sms.php:51
 msgid ""
 "If your sms service provider not exists in this list, ask theme to provide you "
 "with the relevant plugin."
@@ -944,15 +963,15 @@ msgstr ""
 "اگر ارائه دهنده ی مورد نظر شما در این لیست موجود نیست، از آن ها بخواهید تا "
 "پلاگین مربوط به این بخش را در اختیار شما قرار دهند."
 
-#: views/admin/panel-section/login_with_sms.php:39
+#: views/admin/panel-section/login_with_sms.php:51
 msgid "According to this documents"
 msgstr "بر اساس این مستندات"
 
-#: views/admin/panel-section/login_with_sms.php:45
+#: views/admin/panel-section/login_with_sms.php:57
 msgid "Mobile validation code sms content"
 msgstr "محتوای SMS فعالسازی موبایل"
 
-#: views/admin/panel-section/login_with_sms.php:49
+#: views/admin/panel-section/login_with_sms.php:61
 msgid "Dynamic login code sms content"
 msgstr "محتوای SMS کد پویا"
 
@@ -1123,6 +1142,30 @@ msgid "Hide Awesome Support widget"
 msgstr "مخفی کردن ویجت افزونه تیکت"
 
 #: views/admin/panel-section/panel.php:103
+msgid "Blog Section"
+msgstr "بخش بلاگ"
+
+#: views/admin/panel-section/panel.php:105
+msgid "Is blog section enable?"
+msgstr "بخش بلاگ فعال باشد؟"
+
+#: views/admin/panel-section/panel.php:109
+msgid "Section Title"
+msgstr "عنوان این بخش"
+
+#: views/admin/panel-section/panel.php:113
+msgid "Title Link"
+msgstr "لینک"
+
+#: views/admin/panel-section/panel.php:117
+msgid "Posts category"
+msgstr "دسته‌بندی نوشته‌ها"
+
+#: views/admin/panel-section/panel.php:121
+msgid "Posts count"
+msgstr "تعداد نوشته‌ها"
+
+#: views/admin/panel-section/panel.php:125
 msgid "Roles who can't use admin panel"
 msgstr "نقش های کاربری که اجازه ی ورود به پنل مدیریت را ندارند"
 
@@ -1180,6 +1223,10 @@ msgstr "میهن وردپرس"
 msgid "New Airlines"
 msgstr "خطوط هوایی جدید"
 
+#. Plugin Name of the plugin/theme
+msgid "MihanPanel Pro"
+msgstr "میهن پنل پرو"
+
 #. Plugin URI of the plugin/theme
 msgid "https://mihanwp.com/mihanpanel/"
 msgstr "https://mihanwp.com/mihanpanel/"
@@ -1193,7 +1240,7 @@ msgid "https://mihanwp.com"
 msgstr "https://mihanwp.com/"
 
 #~ msgid "Invalid phone number"
-#~ msgstr "شماره تلفن معتبر نیست"
+#~ msgstr "شماره موبایل معتبر نیست"
 
 #~ msgid "Username must not be empty!"
 #~ msgstr "نام کاربری نباید خالی باشد!"
@@ -1201,12 +1248,12 @@ msgstr "https://mihanwp.com/"
 #~ msgid ""
 #~ "No any user found by this email. Please register by your phone number first."
 #~ msgstr ""
-#~ "کاربری با این ایمیل پیدا نشد. لطفا ابتدا با استفاده از شماره موبایل خود "
+#~ "کاربری با این ایمیل پیدا نشد. لطفا ابتدا با استفاده از شماره موبایل  خود "
 #~ "ثبت‌نام کنید."
 
 #~ msgid "No any user found. Please register by your phone number first."
 #~ msgstr ""
-#~ "کاربری پیدا نشد. لطفا ابتدا با استفاده از شماره موبایل خود ثبت‌نام کنید."
+#~ "کاربری پیدا نشد. لطفا ابتدا با استفاده از شماره موبایل  خود ثبت‌نام کنید."
 
 #~ msgid "User data not found!"
 #~ msgstr "اطلاعات کاربر پیدا نشد!"
@@ -1227,7 +1274,7 @@ msgstr "https://mihanwp.com/"
 #~ msgstr "اطلاعات کاربر پیدا نشد"
 
 #~ msgid "No any user found by this phone number"
-#~ msgstr "کاربری با این شماره موبایل پیدا نشد"
+#~ msgstr "کاربری با این شماره موبایل  پیدا نشد"
 
 #~ msgid "Sorry, but you do not have a valid phone."
 #~ msgstr "متأسفیم، اما شما شماره‌ی موبایل قابل استفاده‌ای در اکانت خود ندارید."
@@ -1254,7 +1301,7 @@ msgstr "https://mihanwp.com/"
 #~ msgstr "لطفا از یک شماره ی معتبر استفاده کنید."
 
 #~ msgid "This phone number is not available."
-#~ msgstr "این شماره تلفن در دسترس نیست."
+#~ msgstr "این شماره موبایل در دسترس نیست."
 
 #~ msgid "Sory, has problem in send sms"
 #~ msgstr "متأسفیم، مشکلی در ارسال sms پیش آمد"
@@ -1266,10 +1313,10 @@ msgstr "https://mihanwp.com/"
 #~ msgstr "کد پویا اشتباه است"
 
 #~ msgid "Sory, has problem in validate your phone."
-#~ msgstr "متأسفیم، مشکلی در تأیید شماره تلفن شما پیش آمد."
+#~ msgstr "متأسفیم، مشکلی در تأیید شماره موبایل شما پیش آمد."
 
 #~ msgid "Your phone successfully validate!"
-#~ msgstr "شماره تلفن شما با موفقیت تأیید شد!"
+#~ msgstr "شماره موبایل شما با موفقیت تأیید شد!"
 
 #~ msgid "Provider must send!"
 #~ msgstr "ارائه دهنده باید ارسال شود!"
@@ -1291,9 +1338,6 @@ msgstr "https://mihanwp.com/"
 
 #~ msgid "Has error in deleting avatar."
 #~ msgstr "در پاکسازی آواتار مشکلی پیش آمد."
-
-#~ msgid "MihanPanel Pro"
-#~ msgstr "میهن پنل پرو"
 
 #~ msgid "Role"
 #~ msgstr "نقش کاربری"
@@ -1445,6 +1489,12 @@ msgstr "https://mihanwp.com/"
 #~ msgid "Activation Code"
 #~ msgstr "کد فعالسازی"
 
+#~ msgid "Choose an item"
+#~ msgstr "یک مورد را انتخاب کنید"
+
+#~ msgid "No any category find"
+#~ msgstr "هیچ دسته‌بندی پیدا نشد"
+
 #, php-format
 #~ msgid "%s Rial"
 #~ msgstr "%s ریال"
@@ -1555,19 +1605,19 @@ msgstr "https://mihanwp.com/"
 #~ msgstr "نام کاربری، ایمیل یا شماره تلفن"
 
 #~ msgid "Phone Number"
-#~ msgstr "شماره تلفن"
+#~ msgstr "شماره موبایل"
 
 #~ msgid "This phone number is used by another user"
-#~ msgstr "این شماره تلفن توسط کاربر دیگری در حال استفاده است"
+#~ msgstr "این شماره موبایل توسط کاربر دیگری در حال استفاده است"
 
 #~ msgid "Error"
 #~ msgstr "خطا"
 
 #~ msgid "Invalida phone number!"
-#~ msgstr "شماره تلفن معتبر نیست!"
+#~ msgstr "شماره موبایل معتبر نیست!"
 
 #~ msgid "Unavailable phone number!"
-#~ msgstr "شماره تلفن در دسترس نیست!"
+#~ msgstr "شماره موبایل در دسترس نیست!"
 
 #~ msgid "Phone Number field must not be empty!"
 #~ msgstr "فیلد شماره تماس نباید خالی باشد!"
@@ -1576,7 +1626,7 @@ msgstr "https://mihanwp.com/"
 #~ msgstr "مشخصات ورود اشتباه است"
 
 #~ msgid "This phone is inactive on your account"
-#~ msgstr "این شماره تلفن روی اکانت شما فعال نیست"
+#~ msgstr "این شماره موبایل روی اکانت شما فعال نیست"
 
 #~ msgid "Invalid dynamic code!"
 #~ msgstr "کد پویا معتبر نیست!"
@@ -1592,9 +1642,6 @@ msgstr "https://mihanwp.com/"
 
 #~ msgid "Remove"
 #~ msgstr "حذف"
-
-#~ msgid "Choose an item"
-#~ msgstr "یک مورد را انتخاب کنید"
 
 #~ msgid "Delete File"
 #~ msgstr "حذف فایل"
@@ -1645,7 +1692,7 @@ msgstr "https://mihanwp.com/"
 #~ msgstr "تست ارسال"
 
 #~ msgid "Your phone number"
-#~ msgstr "شماره تلفن شما"
+#~ msgstr "شماره موبایل شما"
 
 #~ msgid ""
 #~ "Use this to send Test SMS to be sure your provider settings are correct."
@@ -1672,7 +1719,7 @@ msgstr "https://mihanwp.com/"
 #~ msgstr "متن پیام..."
 
 #~ msgid "Dynamic Password"
-#~ msgstr "کد پویا"
+#~ msgstr "کد ارسال شده به شماره موبایل خود را وارد کنید"
 
 #~ msgid "Enter Dynamic Password"
 #~ msgstr "کد پویا را وارد کنید"
@@ -1684,16 +1731,19 @@ msgstr "https://mihanwp.com/"
 #~ msgstr "استفاده از رمز"
 
 #~ msgid "Phone Number Validation"
-#~ msgstr "تأییدیه ی شماره موبایل"
+#~ msgstr "احراز هویت با شماره موبایل "
 
 #~ msgid "Validate your phone"
-#~ msgstr "تأیید کردن شماره موبایل"
+#~ msgstr "برای احراز هویت، شماره موبایل  خود را تایید کنید."
 
 #~ msgid "Dynamic Code"
 #~ msgstr "کد پویا"
 
 #~ msgid "Request Code"
 #~ msgstr "درخواست کد"
+
+#~ msgid "If not any valid phone set for user"
+#~ msgstr "اگر هیچ شماره ی معتبری برای کاربر وجود نداشت"
 
 #~ msgid "Plugins > Mihan Panel License."
 #~ msgstr "افزونه ها > لایسنس میهن پنل"

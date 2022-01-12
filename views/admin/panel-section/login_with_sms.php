@@ -4,14 +4,26 @@
         settings_fields( 'mihanpanelsettings-dynamic_password' );
         ?>
         <h2><?php esc_html_e('Smart Login', 'mihanpanel')?></h2>
+        <p class="description"><?php esc_html_e('Automatic login by phone number, email or username', 'mihanpanel')?></p>
         <div class="mp_option_single">
             <p>
                 <label for="mp_smart_login"><?php esc_html_e('Activate smart login', 'mihanpanel')?></label>
                 <?php \mihanpanel\app\handle_view::option_panel_smart_login(); ?>
             </p>
+            <p>
+                <label for="mp_force_get_phone_number_in_panel"><?php esc_html_e('Obtain phone number in panel', 'mihanpanel')?></label>
+                <?php \mihanpanel\app\handle_view::option_panel_field_force_get_phone_number_in_smart_login_mode(); ?>
+            </p>
         </div>
         <h2><?php esc_html_e("Password Type", "mihanpanel"); ?></h2>
         <?php \mihanpanel\app\handle_view::option_panel_field_password_type(); ?>
+        <h2><?php esc_html_e('WPML Settings', 'mihanpanel')?></h2>
+        <div class="mp_option_single">
+                <p>
+                    <label for="mp_wpml_sms_just_in_persian"><?php esc_html_e('Active sms settings just in persian language', 'mihanpanel')?></label>
+                    <?php \mihanpanel\app\handle_view::option_panel_field_wpml_sms_just_in_persian(); ?>
+                </p>
+        </div>
         <h2><?php esc_html_e('Disable register form fields', 'mihanpanel')?></h2>
         <div class="mp_option_single">
             <p>

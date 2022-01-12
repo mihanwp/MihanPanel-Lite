@@ -30,12 +30,19 @@ class tools
         $timestamp = $timestamp + ($gmt * 3600);
         return date($format, $timestamp);
     }
-    public static function is_plugin_active($plugin_name)
+    static function is_plugin_active($plugin_name)
     {
-        include_once ABSPATH . 'wp-admin/includes/plugin.php';
-        return is_plugin_active($plugin_name) ? true : false;
+        $all = get_option('active_plugins');
+        return in_array($plugin_name, $all);
     }
-
+    static function is_wpml_active()
+    {
+        return self::is_plugin_active('sitepress-multilingual-cms/sitepress.php');
+    }
+    static function is_wpml_not_in_persian()
+    {
+        return defined('ICL_LANGUAGE_CODE') && ICL_LANGUAGE_CODE !== 'fa';
+    }
     public static function is_woocommerce_active()
     {
         return class_exists('woocommerce');

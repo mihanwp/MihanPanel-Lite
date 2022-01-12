@@ -3,7 +3,7 @@
         <div class="mw_menu_icons mw_icon dashicons dashicons-menu"></div>
         <div class="mw_sidebar">
             <div class="mw_logo_section">
-                <img src="<?php echo MW_MIHANPANEL_URL . 'img/logo.svg'; ?>" alt="Mihan Panel Logo">
+                <img src="<?php echo MW_MIHANPANEL_URL . 'img/logo.png'; ?>" width="100" height="100" alt="Mihan Panel Logo">
             </div>
             <div class="mw_menu_section">
                 <ul>

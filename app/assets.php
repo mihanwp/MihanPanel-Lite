@@ -132,7 +132,7 @@ class assets
                 height: <?php echo options::get_login_logo_height();?>px;
             }
             <?php if( get_option('login_button_color') != null ):?>
-            .login form input[type=submit]{
+            body.login form input[type=submit]{
             background-color:<?php echo get_option( 'login_button_color' );?> !important;
             box-shadow:0 5px 10px <?php echo get_option( 'login_button_color' );?>60 !important
             }
@@ -212,7 +212,7 @@ class assets
     {
         // register script
         $gutenberg_js = self::get_js_url('mwp_gutenberg_blocks');
-        
+
         wp_register_script('mwp_gutenberg_blocks', $gutenberg_js, ['wp-blocks']);
         // register block
         register_block_type('mihanpanel/panel', [
