@@ -19,7 +19,7 @@
                     <div class="col-md-8">
                         <div class="mihanpanel-card mihanpanel-card-stats">
                             <div class="mihanpanel-card-header" data-background-color="purple">
-                                <i class="fas fa-3x fa-gift"></i>
+                                <img src="<?php echo MW_MIHANPANEL_URL; ?>/img/gift.svg" width="48" height="48"/>
                             </div>
                             <div class="mihanpanel-card-content">
                                 <?php $off_code_text = \mihanpanel\app\options::get_offer_code_text();?>
