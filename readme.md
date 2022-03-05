@@ -1,9 +1,9 @@
 === MihanPanel - Registration, Login & User Panel ===  
-Contributors: mihanwp  
-Donate link: https://mihanwp.com/  
+Contributors: mihanwp, ertano
+Donate link: https://ertano.com/  
 Tags: register,login,profile,registration,user panel,membership,signup,panel  
 Requires at least: 4.0  
-Tested up to: 5.8
+Tested up to: 5.9.1
 Requires PHP: 7.4
 License: GPLv2 or later  
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -12,12 +12,12 @@ WordPress Login and Registration Plugin Lite Version.
 
 == Description ==
 
-MihanPanel is a WordPress login and membership plugin by [MihanWP](https://mihanwp.com "Mihan WordPress")
+MihanPanel is a WordPress login and membership plugin by [Ertano](https://ertano.com "Mihan WordPress")
  that makes your WordPress login and registration form an influential part.
 You can use this plugin to completely change your website's login, registration, and user panel.
 MihanPanel also can run shortcodes on other plugins on your website.
 
-[View Live Demo](http://demo.mihanwp.com/mihanpanel-en/login/?action=register "MihanPanel Demo")
+[View Live Demo](http://ertano.com/demo/mihanpanel/ "MihanPanel Demo")
 
 **The main advantages of MihanPanel:**
 * Use the original WordPress login form for security plugins compatibility
@@ -35,7 +35,7 @@ MihanPanel also can run shortcodes on other plugins on your website.
 * Multilingual capability
 * Translated into Persian and English
 
-This plugin is published in 2 versions, Lite and Pro. The [MihanPanel Pro](https://mihanwp.com/en/mihanpanel/ "WordPress Login and Registration Plugin") has a lot of features.
+This plugin is published in 2 versions, Lite and Pro. The [MihanPanel Pro](https://ertano.com/mihanpanel/ "WordPress Login and Registration Plugin") has a lot of features.
 
 **MihanPanel Pro features:**
 * Ability to add infinite menus in the user panel
@@ -60,4 +60,4 @@ Do you want to report MihanPanel bugs and contribute to plugin development?  Joi
 5. MihanPanel User Profile Edit Page
 
 == Changelog ==
-[View MihanPanel Changelog](https://mihanwp.com/mihanpanel/ "MihanPanel Changelog")
+[View MihanPanel Changelog](https://ertano.com/mihanpanel/ "MihanPanel Changelog")
