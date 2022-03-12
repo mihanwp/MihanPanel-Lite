@@ -752,4 +752,15 @@ class handle_view
         $render_method = apply_filters('mwpl_admin_tabs_menu/render_method/is_show_by_role', []);
         self::handle_fields_render_method($render_method, false, $menu);
     }
+
+    static function option_panel_field_dynamic_code_email_subject()
+    {
+        $render_method = apply_filters('mwpl_option_panel/render_method/dynamic_code_email_subject', []);
+        self::handle_option_panel_render_method($render_method);
+    }
+    static function option_panel_field_dynamic_code_email_content()
+    {
+        $render_method = apply_filters('mwpl_option_panel/render_method/dynamic_code_email_content', []);
+        self::handle_option_panel_render_method($render_method);
+    }
 }

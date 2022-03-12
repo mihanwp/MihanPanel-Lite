@@ -19,7 +19,8 @@
             </div>
             <div class="mw_copyright">
                 <?php
-                $mwp_link = sprintf('<a href="https://mihanwp.com">%s</a>', esc_html__("MihanWP", "mihanpanel"));
+                $baseUrl = \mihanpanel\app\tools::getBaseRemoteUrl();
+                $mwp_link = sprintf('<a href="%s">%s</a>', $baseUrl, esc_html__("Ertano", "mihanpanel"));
                 $airline_text = __("New Airlines", "mihanpanel");
                 $text = is_rtl() ? sprintf("<span>%s <span>%s</span></span>", $airline_text, $mwp_link) : sprintf("<span>%s <span>%s</span></span>", $mwp_link, $airline_text);
                 echo $text;

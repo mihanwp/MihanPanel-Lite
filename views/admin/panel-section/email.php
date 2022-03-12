@@ -62,6 +62,17 @@
                     <span><?php esc_html_e("Display Name", "mihanpanel"); ?>: </span><span>[[display_name]]</span>
                 </p>
             </div>
+            <h2><?php esc_html_e("Dynamic code", "mihanpanel"); ?></h2>
+            <span><?php esc_html_e("Subject and Text of dynamic code email", "mihanpanel"); ?></span>
+            <p class="description"><?php esc_html_e('This settings works if Smart Login is active.', 'mihanpanel')?></p>
+            <div class="mp_option_single">
+                <label><?php esc_html_e("Dynamic code email subject", "mihanpanel"); ?></label>
+                <?php \mihanpanel\app\handle_view::option_panel_field_dynamic_code_email_subject()?>
+            </div>
+            <div class="mp_option_single">
+                <label><?php esc_html_e("Email Content", "mihanpanel"); ?></label>
+                <?php \mihanpanel\app\handle_view::option_panel_field_dynamic_code_email_content()?>
+            </div>
         </div>
         <?php submit_button(); ?>
     </form>

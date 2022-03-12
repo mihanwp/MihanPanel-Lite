@@ -68,7 +68,7 @@ class email
         $user = get_user_by('id', $user_id);
         $subject = __("Account activation");
         $activation_link_text = '<a href="'.esc_url($activation_link).'">'. $activation_link.'</a>';
-        $message = '<p>' . __("Click on below link to activate account") . '<br />' . $activation_link_text . '</p>';
+        $message = '<p>' . __("Click on below link to activate account", 'mihanpanel') . '<br />' . $activation_link_text . '</p>';
         $header = 'Content-Type: text/html';
         wp_mail($user->user_email, $subject, $message, $header);
     }
@@ -82,7 +82,7 @@ class email
         $message = self::do_filter_new_user_notification($user);
         $blogname = wp_specialchars_decode( get_option( 'blogname' ), ENT_QUOTES );
         if (!$message){
-            $message = __("Registration complete.");
+            $message = __("Registration complete.", 'mihanpanel');
             $message = sprintf("%s<br>%s<br>%s<br>%s", __("Registration complete. Please wait for admin approval.", 'mihanpanel'), __("Thanks!", 'mihanpanel'), $blogname, network_site_url());
         }
 
@@ -183,5 +183,17 @@ class email
             return;
         }
         wp_send_new_user_notifications($userId, 'user');
+    }
+    static function sendEmail($to, $subject, $message, $useBlogInSubject=false)
+    {
+        if($useBlogInSubject)
+        {
+            $blogname = wp_specialchars_decode( get_option( 'blogname' ), ENT_QUOTES );
+            if($blogname)
+            {
+                $subject = sprintf('[%s] %s', $blogname, $subject);
+            }
+        }
+        return wp_mail($to, $subject, $message, 'Content-Type: text/html') ? ['status' => 200] : false;
     }
 }

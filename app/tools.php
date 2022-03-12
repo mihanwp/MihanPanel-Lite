@@ -94,9 +94,14 @@ class tools
     {
         return get_locale() == 'fa_IR';
     }
+    static function getBaseRemoteUrl()
+    {
+        return self::is_persian_locale() ? 'https://mihanwp.com/' : 'https://ertano.com/';
+    }
     static function get_pro_version_link()
     {
-        return self::is_persian_locale() ? 'https://mihanwp.com/mihanpanel' : 'https://mihanwp.com/en/mihanpanel';
+        $baseRemoteUrl = self::getBaseRemoteUrl();
+        return $baseRemoteUrl . 'mihanpanel';;
     }
     static function check_has_minimum_php_version()
     {

@@ -1159,7 +1159,7 @@ output {
     }
 }
 html body .mihanpanelpanel .alert {
-    width:calc(100% - 85px) !important;
+    width:100%;
     margin: 10px auto !important;
     color: #fff !important;
     padding: 15px 30px !important;
@@ -1167,6 +1167,7 @@ html body .mihanpanelpanel .alert {
     border-radius: 4px !important;
     display: block;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2) !important;
+    box-sizing: border-box;
 }
 .alert-primary,
 .alert-success{
@@ -1228,11 +1229,11 @@ html body .mihanpanelpanel .alert {
 {
 	text-align: right !important;
 	background-color: #f1f1f1 !important;
-	padding: 5px !important;
+	padding: 15px !important;
 }
 .mihanpanelpanel table td
 {
-	padding: 5px !important;
+	padding:15px !important;
 }
 .mihanpanelpanel input[type=text]:disabled,
 .mihanpanelpanel input[type=email]:disabled,

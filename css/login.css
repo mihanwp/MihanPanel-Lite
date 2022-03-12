@@ -11,15 +11,16 @@ body{
 	background-attachment: fixed !important;
 	background-repeat: no-repeat !important;
 	direction: rtl;
+  padding-bottom:40px;
+  height:auto;
 }
-#login{
+.login #login{
 	background:rgba(255,255,255,0.9);
-	padding:50px 40px !important;
+	padding:30px 40px !important;
 	width:520px !important;
 	box-shadow:0 20px 50px rgb(28 76 156 / 50%) !important;
   border-radius:20px;
   margin-top:40px;
-  margin-bottom:30px;
   box-sizing: border-box;
 }
 .login form{
@@ -27,6 +28,16 @@ body{
 	box-shadow: none !important;
 	margin-top:0 !important;
   padding:0 !important
+}
+.login .language-switcher
+{
+  margin-top: 20px;
+}
+.login form#language-switcher
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .login form input[type=email]:not(.mw_default),
 .login form input[type=text]:not(.mw_default),
@@ -42,13 +53,29 @@ body{
 .login #mwpl_res_msg
 {
   font-size: 15px;
+  line-height:3em;
+  border-radius:4px;
 }
 .login #mwpl_res_msg[type=error]
 {
   color: #e73332;
+  background: #e7333230;
+}
+.login #mwpl_res_msg[type=info]
+{
+  color: #3268e7;
+  background: #3268e730;
+}
+.login #mwpl_res_msg[type=succes]
+{
+  color: #00C178;
+  background: #00C17830;
 }
 .login form input[type=submit]{
   color:white !important
+}
+.login #login form input[type=submit]{
+  font-size:18px !important;
 }
 .login form label{
 	font-size:16px !important;
@@ -82,7 +109,7 @@ body{
 {
   box-shadow:0 5px 30px 0px rgba(0, 0, 0, 0.1);
 }
-.login form select:not(.mw_default)
+.login form:not(#language-switcher) select:not(.mw_default)
 {
   font-size: 1rem;
   max-width: 100%;
@@ -164,6 +191,7 @@ input[type=checkbox]:checked:before{
   color: #000;
   font-size: 18px;
   padding: 10px 60px !important;
+  box-sizing: content-box;
   box-shadow: 0 7px 15px #fbb03440;
   float: none;
   text-align: center;
@@ -197,11 +225,24 @@ a{color:#222 !important;font-size: 15px;}
 	background:#ea5151 !important;
 }
 @media screen and (max-width: 980px) {
-  #login{
+  .login #login{
     width:97% !important;
-    padding:20px !important;
+    padding:5% !important;
     margin-top:20px;
     margin-bottom:20px;
+  }
+  #login h1 a, .login h1 a{
+    max-width:90% !important;
+    margin-bottom:0 !important
+  }
+  .login form input[type=email]:not(.mw_default), .login form input[type=text]:not(.mw_default), .login form input[type=password]:not(.mw_default), .login form select:not(.mw_default), .login form label:not(.mw_default){
+    padding-right:0;
+  }
+  .login form #wp-submit, .login form #wp_bb_log_submit{
+    width:90% !important;
+  }
+  .login #backtoblog, .login #nav{
+    padding:0 !important
   }
 }
 .login form .forgetmenot
@@ -252,7 +293,7 @@ a{color:#222 !important;font-size: 15px;}
 }
 #login h1 a, .login h1 a{
   background-size:contain !important;
-  max-width:80%;
+  max-width:70%;
   font-size:90px;
   background-position: center !important;
   background-repeat:no-repeat;
@@ -286,4 +327,10 @@ a{color:#222 !important;font-size: 15px;}
 }
 .login #nav a:hover{
   background:#fff;
+}
+a:focus{
+  box-shadow: none !important
+}
+#backtoblog{
+  display:none
 }

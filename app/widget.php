@@ -57,9 +57,9 @@ class widget
         <?php
         // mihanwp feed
         include_once ABSPATH . WPINC . DIRECTORY_SEPARATOR . 'feed.php';
-        $feed = 'https://mihanwp.com/';
         $is_persian = tools::is_persian_locale();
-        $feed .= $is_persian ? 'feed/' : 'en/feed/';
+        $baseUrl = \mihanpanel\app\tools::getBaseRemoteUrl();
+        $feed = $baseUrl . 'feed/';
         $rss = fetch_feed($feed);
         if(is_wp_error($rss))
         {
@@ -67,9 +67,9 @@ class widget
         }
         $max_item = $rss->get_item_quantity(3);
         $items = $rss->get_items(0, $max_item);
-        $mihanwp = sprintf('<a target="_blank" href="https://mihanwp.com">%s</a>', __('mihanwp.com', 'mihanpanel'));
+        $mihanwp = sprintf('<a target="_blank" href="%s">%s</a>', $baseUrl, __('ertano.com', 'mihanpanel'));
         $header = sprintf(__('Latest news in %s', 'mihanpanel'), $mihanwp);
-        $more_articles_url = $is_persian ? 'https://mihanwp.com/tutorials/' : 'https://mihanwp.com/en/tutorials-en/';
+        $more_articles_url = $is_persian ? 'https://mihanwp.com/tutorials/' : 'https://ertano.com/';
         ?>
         <div class="mwp_mihanwp_feed_dashboard">
             <strong><?php echo $header; ?></strong>
