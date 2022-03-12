@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MihanPanel\n"
-"POT-Creation-Date: 2022-01-12 12:37+0330\n"
-"PO-Revision-Date: 2022-01-12 12:37+0330\n"
+"POT-Creation-Date: 2022-03-12 16:55+0330\n"
+"PO-Revision-Date: 2022-03-12 16:55+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -26,6 +26,7 @@ msgstr ""
 msgid "Address 2"
 msgstr "آدرس شماره دو"
 
+#. Plugin Name of the plugin/theme
 #: app/admin_menu.php:18 app/gutenberg.php:17
 msgid "MihanPanel"
 msgstr "میهن پنل"
@@ -91,11 +92,11 @@ msgid "Has error!"
 msgstr "خطا!"
 
 #: app/ajax.php:22 app/ajax.php:91 app/ajax.php:112
-#: app/form/admin_user_fields.php:28 app/form/profile.php:36
+#: app/form/admin_user_fields.php:28 app/form/profile.php:79
 msgid "The operation failed due to security issues."
 msgstr "عملیات به دلیل مشکلات امنیتی متوقف شد."
 
-#: app/ajax.php:71 app/ajax.php:153 app/form/profile.php:65
+#: app/ajax.php:71 app/ajax.php:153 app/form/profile.php:108
 msgid "Successfully updated!"
 msgstr "با موفقیت به روز شد!"
 
@@ -205,7 +206,7 @@ msgid "Successfully added! Watch user panel"
 msgstr "با موفقیت اضافه شد! میتونید پنل کاربری رو ببینید"
 
 #: app/form/admin_tabs.php:37 app/form/admin_user_fields.php:54
-#: app/form/profile.php:62
+#: app/form/profile.php:54 app/form/profile.php:105
 msgid "An error occurred!"
 msgstr "یک خطا رخ داده است!"
 
@@ -316,11 +317,15 @@ msgstr "اختیاری"
 msgid "Save"
 msgstr "ذخیره"
 
-#: app/form/profile.php:54
+#: app/form/profile.php:45 app/form/profile.php:97
 msgid "Passwords don't match!"
 msgstr "رمزهای عبور یکسان نیست!"
 
-#: app/form/profile.php:89
+#: app/form/profile.php:57
+msgid "Password successfully changed!"
+msgstr "رمز عبور با موفقیت به روز شد!"
+
+#: app/form/profile.php:132
 #, php-format
 msgid "%1$s must not be empty."
 msgstr "%1$s نباید خالی باشد."
@@ -575,8 +580,8 @@ msgid "You must check:"
 msgstr "باید بررسی کنید:"
 
 #: app/widget.php:70
-msgid "mihanwp.com"
-msgstr "میهن وردپرس"
+msgid "ertano.com"
+msgstr "‫mihanwp.com"
 
 #: app/widget.php:71
 #, php-format
@@ -619,6 +624,22 @@ msgstr "خروج"
 msgid "Register"
 msgstr "ثبت نام"
 
+#: parts/change-password.php:2
+msgid "Change password"
+msgstr "تغییر رمز عبور"
+
+#: parts/change-password.php:32 parts/edit-profile.php:58
+msgid "New password"
+msgstr "رمز عبور جدید"
+
+#: parts/change-password.php:38 parts/edit-profile.php:64
+msgid "Password repeat"
+msgstr "تکرار رمز عبور"
+
+#: parts/change-password.php:44 parts/edit-profile.php:107
+msgid "Save Changes"
+msgstr "ذخیره تغییرات"
+
 #: parts/dashboard.php:3
 msgid "Back to Home Page"
 msgstr "بازگشت به صفحه اصلی"
@@ -655,21 +676,9 @@ msgstr "نام"
 msgid "Last Name"
 msgstr "نام خانوادگی"
 
-#: parts/edit-profile.php:58
-msgid "New password"
-msgstr "رمز عبور جدید"
-
-#: parts/edit-profile.php:64
-msgid "Password repeat"
-msgstr "تکرار رمز عبور"
-
 #: parts/edit-profile.php:73
 msgid "Bio"
 msgstr "بیوگرافی"
-
-#: parts/edit-profile.php:107
-msgid "Save Changes"
-msgstr "ذخیره تغییرات"
 
 #: rename-wp-login.php:79
 #, php-format
@@ -758,7 +767,7 @@ msgid "Text of email that send to new user"
 msgstr "متن ایمیلی که به کاربر جدید ارسال می شود"
 
 #: views/admin/panel-section/email.php:10 views/admin/panel-section/email.php:32
-#: views/admin/panel-section/email.php:52
+#: views/admin/panel-section/email.php:52 views/admin/panel-section/email.php:73
 msgid "Email Content"
 msgstr "متن ایمیل"
 
@@ -808,6 +817,22 @@ msgstr "عنوان ایمیل تغییر وضعیت اکانت کاربری"
 #: views/admin/panel-section/email.php:58
 msgid "Account Status"
 msgstr "وضعیت اکانت"
+
+#: views/admin/panel-section/email.php:65
+msgid "Dynamic code"
+msgstr "کد پویا"
+
+#: views/admin/panel-section/email.php:66
+msgid "Subject and Text of dynamic code email"
+msgstr "موضوع و متن ایمیل کد پویا"
+
+#: views/admin/panel-section/email.php:67
+msgid "This settings works if Smart Login is active."
+msgstr "اگر حالت ورود هوشمند فعال باشد، این تنظیمات اعمال میشود."
+
+#: views/admin/panel-section/email.php:69
+msgid "Dynamic code email subject"
+msgstr "عنوان ایمیل کد پویا"
 
 #: views/admin/panel-section/general.php:15
 msgid "Logo"
@@ -1214,18 +1239,13 @@ msgstr "کد اضافه"
 msgid "This code is render in head tag in Login page"
 msgstr "این کد در تگ هدر صفحه ی ورود اضافه میشود"
 
-#. Author of the plugin/theme
-#: views/admin/settings.php:22
-msgid "MihanWP"
-msgstr "میهن وردپرس"
-
 #: views/admin/settings.php:23
+msgid "Ertano"
+msgstr "میهن‌وردپرس"
+
+#: views/admin/settings.php:24
 msgid "New Airlines"
 msgstr "خطوط هوایی جدید"
-
-#. Plugin Name of the plugin/theme
-msgid "MihanPanel Pro"
-msgstr "میهن پنل پرو"
 
 #. Plugin URI of the plugin/theme
 msgid "https://mihanwp.com/mihanpanel/"
@@ -1234,6 +1254,10 @@ msgstr "https://mihanwp.com/mihanpanel/"
 #. Description of the plugin/theme
 msgid "The best way to build user interface in WordPress"
 msgstr "یک راه مناسب برای پیاده سازی پروفایل کاربری در وردپرس"
+
+#. Author of the plugin/theme
+msgid "MihanWP"
+msgstr "میهن وردپرس"
 
 #. Author URI of the plugin/theme
 msgid "https://mihanwp.com"
@@ -1245,12 +1269,6 @@ msgstr "https://mihanwp.com/"
 #~ msgid "Username must not be empty!"
 #~ msgstr "نام کاربری نباید خالی باشد!"
 
-#~ msgid ""
-#~ "No any user found by this email. Please register by your phone number first."
-#~ msgstr ""
-#~ "کاربری با این ایمیل پیدا نشد. لطفا ابتدا با استفاده از شماره موبایل  خود "
-#~ "ثبت‌نام کنید."
-
 #~ msgid "No any user found. Please register by your phone number first."
 #~ msgstr ""
 #~ "کاربری پیدا نشد. لطفا ابتدا با استفاده از شماره موبایل  خود ثبت‌نام کنید."
@@ -1258,17 +1276,23 @@ msgstr "https://mihanwp.com/"
 #~ msgid "User data not found!"
 #~ msgstr "اطلاعات کاربر پیدا نشد!"
 
-#~ msgid "No any phone number found for this user"
-#~ msgstr "هیچ شماره‌ای برای این کاربر پیدا نشد"
-
 #~ msgid "Dynamic code was generated for you!"
 #~ msgstr "کد پویا برای شما ایجاد شده است!"
 
 #~ msgid "Dynamic code did not create for your account!"
 #~ msgstr "کد پویا برای شما ایجاد نشد!"
 
+#~ msgid "Has problem in send dynamic code process"
+#~ msgstr "مشکلی در فرآیند ارسال کدپویا پیش آمد"
+
+#~ msgid "Dynamic code was sent to your email"
+#~ msgstr "کد پویا به ایمیل شما ارسال شد"
+
 #~ msgid "Has problem in send sms process"
 #~ msgstr "مشکلی در ارسال sms پیش آمد"
+
+#~ msgid "Dynamic code was sent to your phone"
+#~ msgstr "کد پویا به شماره موبایل شما ارسال شد"
 
 #~ msgid "User data not found"
 #~ msgstr "اطلاعات کاربر پیدا نشد"
@@ -1338,6 +1362,9 @@ msgstr "https://mihanwp.com/"
 
 #~ msgid "Has error in deleting avatar."
 #~ msgstr "در پاکسازی آواتار مشکلی پیش آمد."
+
+#~ msgid "MihanPanel Pro"
+#~ msgstr "میهن پنل پرو"
 
 #~ msgid "Role"
 #~ msgstr "نقش کاربری"
@@ -1495,6 +1522,9 @@ msgstr "https://mihanwp.com/"
 #~ msgid "No any category find"
 #~ msgstr "هیچ دسته‌بندی پیدا نشد"
 
+#~ msgid "Dynamic Code"
+#~ msgstr "کد پویا"
+
 #, php-format
 #~ msgid "%s Rial"
 #~ msgstr "%s ریال"
@@ -1634,6 +1664,9 @@ msgstr "https://mihanwp.com/"
 #~ msgid "Dynamic code was wrong!"
 #~ msgstr "کد پویا اشتباه است!"
 
+#~ msgid "Your dynamic code is"
+#~ msgstr "کد یکبار مصرف شما"
+
 #~ msgid "Do you want to save this change?"
 #~ msgstr "میخواهید تغییرات ذخیره شود؟"
 
@@ -1661,14 +1694,23 @@ msgstr "https://mihanwp.com/"
 #~ msgid "User not found!"
 #~ msgstr "کاربر وجود ندارد!"
 
+#~ msgid "Please set new password for account"
+#~ msgstr "لطفا یک رمز جدید برای اکانت خود انتخاب کنید"
+
 #~ msgid "Login with dynamic code"
 #~ msgstr "ورود با کد یکبار مصرف"
+
+#~ msgid "Sending dynamic code..."
+#~ msgstr "در حال ارسال کد پویا…"
 
 #~ msgid "Back"
 #~ msgstr "بازگشت"
 
 #~ msgid "Has error"
 #~ msgstr "خطا"
+
+#~ msgid "Login / Register"
+#~ msgstr "ورود یا عضویت"
 
 #~ msgid "Your validation code is: [[code]]"
 #~ msgstr "کد فعالسازی شما: [[code]]"
@@ -1718,6 +1760,7 @@ msgstr "https://mihanwp.com/"
 #~ msgid "Message Text..."
 #~ msgstr "متن پیام..."
 
+#~ msgctxt "sms-login"
 #~ msgid "Dynamic Password"
 #~ msgstr "کد ارسال شده به شماره موبایل خود را وارد کنید"
 
@@ -1730,17 +1773,30 @@ msgstr "https://mihanwp.com/"
 #~ msgid "Use password"
 #~ msgstr "استفاده از رمز"
 
+#~ msgctxt "smart-login"
+#~ msgid "Dynamic Password"
+#~ msgstr "کد پویا"
+
 #~ msgid "Phone Number Validation"
-#~ msgstr "احراز هویت با شماره موبایل "
+#~ msgstr "احراز هویت با شماره موبایل"
 
 #~ msgid "Validate your phone"
-#~ msgstr "برای احراز هویت، شماره موبایل  خود را تایید کنید."
-
-#~ msgid "Dynamic Code"
-#~ msgstr "کد پویا"
+#~ msgstr "برای احراز هویت، شماره موبایل خود را تایید کنید."
 
 #~ msgid "Request Code"
 #~ msgstr "درخواست کد"
+
+#~ msgid "mihanwp.com"
+#~ msgstr "میهن وردپرس"
+
+#~ msgid ""
+#~ "No any user found by this email. Please register by your phone number first."
+#~ msgstr ""
+#~ "کاربری با این ایمیل پیدا نشد. لطفا ابتدا با استفاده از شماره موبایل  خود "
+#~ "ثبت‌نام کنید."
+
+#~ msgid "No any phone number found for this user"
+#~ msgstr "هیچ شماره‌ای برای این کاربر پیدا نشد"
 
 #~ msgid "If not any valid phone set for user"
 #~ msgstr "اگر هیچ شماره ی معتبری برای کاربر وجود نداشت"
