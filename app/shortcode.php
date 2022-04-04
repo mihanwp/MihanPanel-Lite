@@ -1,8 +1,6 @@
 <?php
 namespace mihanpanel\app;
 
-use mihanpanel\pro\app\shortcode as ProShortcode;
-
 class shortcode
 {
     private static function get_not_pro_version_error()
@@ -13,7 +11,7 @@ class shortcode
     {
         if(tools::isProVersion())
         {
-            return ProShortcode::handle_woocommerce_shortcode();
+            return \mihanpanel\pro\app\shortcode::handle_woocommerce_shortcode();
         }else{
             return self::get_not_pro_version_error();
         }
@@ -22,7 +20,7 @@ class shortcode
     {
         if(tools::isProVersion())
         {
-            return ProShortcode::handle_woocommer_downloads_shortcode();
+            return \mihanpanel\pro\app\shortcode::handle_woocommer_downloads_shortcode();
         }else{
             return self::get_not_pro_version_error();
         }
