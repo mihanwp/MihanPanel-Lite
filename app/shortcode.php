@@ -1,47 +1,31 @@
 <?php
 namespace mihanpanel\app;
+
+use mihanpanel\pro\app\shortcode as ProShortcode;
+
 class shortcode
 {
+    private static function get_not_pro_version_error()
+    {
+        return '<div class="alert alert-error"><span>'.esc_html__("This shortcode is active in MihanPanel Pro.", 'mihanpanel').'</span></div>';
+    }
     static function woocommerce_order()
     {
-        if (class_exists('WooCommerce')) {
-            $user_id = get_current_user_id();
-            if ($user_id == 0) {
-                return do_shortcode('[woocommerce_my_account]');
-            } else {
-                ob_start();
-                wc_get_template('myaccount/my-orders.php', array(
-                    'current_user' => get_user_by('id', $user_id),
-                    'order_count' => '-1'
-                ));
-                return ob_get_clean();
-            }
-        } else {
-            echo '<div class="alert alert-error"><span>'.esc_html__("Please install Woocommerce plugin.", 'mihanpanel').'</span></div>';
+        if(tools::isProVersion())
+        {
+            return ProShortcode::handle_woocommerce_shortcode();
+        }else{
+            return self::get_not_pro_version_error();
         }
     }
     static function woocommerce_downloads()
     {
-        if(!\mihanpanel\app\tools::is_woocommerce_active())
+        if(tools::isProVersion())
         {
-            return esc_html__("You need to install woocommerce for use this section!", "mihanpanel");
+            return ProShortcode::handle_woocommer_downloads_shortcode();
+        }else{
+            return self::get_not_pro_version_error();
         }
-        $downloads     = WC()->customer->get_downloadable_products();
-        $has_downloads = (bool) $downloads;
-        do_action( 'woocommerce_before_account_downloads', $has_downloads );
-        if ( $has_downloads ) :
-            do_action( 'woocommerce_before_available_downloads' );
-            do_action( 'woocommerce_available_downloads', $downloads );
-            do_action( 'woocommerce_after_available_downloads' );
-        else : ?>
-          <div class="woocommerce-Message woocommerce-Message--info woocommerce-info">
-              <a class="woocommerce-Button button" href="<?php echo esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', wc_get_page_permalink( 'shop' ) ) ); ?>">
-                  <?php esc_html_e( 'Go shop', 'woocommerce' ); ?>
-              </a>
-              <?php esc_html_e( 'No downloads available yet.', 'woocommerce' ); ?>
-          </div>
-      <?php endif;
-      do_action( 'woocommerce_after_account_downloads', $has_downloads );
     }
     static function panel()
     {

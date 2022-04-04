@@ -94,27 +94,36 @@ class admin_menu
     }
     static function tabs_c()
     {
-        if (!empty($_POST)) {
-            admin_tabs::do($_POST);
+        if(tools::isProVersion())
+        {
+            \mihanpanel\pro\app\admin_menu::handle_tabs_menu_content();
+        }else{
+            $msgStyles = [
+                'position' =>  'absolute',
+                'top' =>  '50%',
+                'left' =>  '50%',
+                'transform' =>  'translate(-50%, -50%)',
+                'background' =>  'white',
+                'padding' =>  '20px 100px',
+                'border-radius' => '10px',
+                'border' =>  '2px solid #df6969',
+                'color' => '#9f4848',
+                'box-shadow' => '0 0 10px #9f4848a1',
+                'width' => '400px',
+                'text-align' => 'center',
+                'font-weight' => 'bold',
+            ];
+            $msgStyle = '';
+            foreach($msgStyles as $key => $value)
+            {
+                $msgStyle .= sprintf('%s: %s;', $key, $value);
+            }
+            ?>
+            <div class="mihanpanel-admin" style="position: relative">
+                <img style="filter: blur(2px) grayscale(100)" width="100%" src="<?php echo \mihanpanel\app\assets::get_image_url('tabs-menu-view')?>" alt="">
+                <div style="<?php echo $msgStyle?>"><?php esc_html_e('This section is active in MihanPanel pro', 'mihanpanel')?></div>
+            </div>
+            <?php
         }
-        ?>
-        <div class="mihanpanel-admin">
-            <div class="mw_update_sortable_notice notice inline notice-info notice-alt">
-                <p>
-                    <span><?php esc_html_e('Do you want to save changes?', 'mihanpanel')?></span>
-                    <span><input mwpl_nonce="<?php echo wp_create_nonce('mwpl_ajax_update_tabs_fields_data')?>" class="mw_submit mw_ajax_update_fields_data" data-mw_type="tabs" type="submit" name="save_priority" value="<?php esc_attr_e("yes", "mihanpanel")?>"></span>
-                </p>
-            </div>
-            <div class="mw_notice_box notice inline notice-alt"></div>
-            <?php admin_tabs::render_fields()?>
-
-            <div class="new_record_wrapper" style="display: none;">
-                <h2><?php esc_html_e('Create new field', 'mihanpanel'); ?><span class="close_new_field_section action_btn"><?php esc_html_e('Close', 'mihanpanel')?></span></h2>
-                <form method="post">
-                    <?php admin_tabs::render_new_record_fields()?>
-                </form>
-            </div>
-        </div>
-        <?php
     }
 }

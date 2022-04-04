@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MihanPanel\n"
-"POT-Creation-Date: 2022-03-12 16:55+0330\n"
-"PO-Revision-Date: 2022-03-12 16:55+0330\n"
+"POT-Creation-Date: 2022-04-04 15:04+0430\n"
+"PO-Revision-Date: 2022-04-04 15:04+0430\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -31,11 +31,11 @@ msgstr "آدرس شماره دو"
 msgid "MihanPanel"
 msgstr "میهن پنل"
 
-#: app/admin_menu.php:26 views/admin/panel-section/general.php:35
+#: app/admin_menu.php:26 views/admin/panel-section/general.php:40
 msgid "Login & Register"
 msgstr "ورود و عضویت"
 
-#: app/admin_menu.php:27 app/admin_menu.php:42 app/hooks.php:138
+#: app/admin_menu.php:27 app/admin_menu.php:42 app/hooks.php:143
 msgid "User Panel"
 msgstr "پنل کاربری"
 
@@ -63,7 +63,7 @@ msgstr "ابزار‌ها"
 msgid "User Fields"
 msgstr "فیلدهای کاربری"
 
-#: app/admin_menu.php:72 app/admin_menu.php:104
+#: app/admin_menu.php:72
 msgid "Do you want to save changes?"
 msgstr "میخواهید تغییرات ذخیره شود؟"
 
@@ -71,11 +71,11 @@ msgstr "میخواهید تغییرات ذخیره شود؟"
 msgid "Yes"
 msgstr "بله"
 
-#: app/admin_menu.php:81 app/admin_menu.php:112
+#: app/admin_menu.php:81
 msgid "Create new field"
 msgstr "ایجاد فیلد جدید"
 
-#: app/admin_menu.php:81 app/admin_menu.php:112
+#: app/admin_menu.php:81
 msgid "Close"
 msgstr "بستن"
 
@@ -83,9 +83,9 @@ msgstr "بستن"
 msgid "Panel Menus"
 msgstr "منوهای پنل کاربری"
 
-#: app/admin_menu.php:105
-msgid "yes"
-msgstr "بله"
+#: app/admin_menu.php:124
+msgid "This section is active in MihanPanel pro"
+msgstr "این بخش در نسخه‌ی حرفه‌ای میهن‌پنل در دسترس است."
 
 #: app/ajax.php:17 app/ajax.php:80 app/ajax.php:107
 msgid "Has error!"
@@ -197,7 +197,7 @@ msgstr "فعال"
 msgid "Inactive"
 msgstr "غیرفعال"
 
-#: app/emwidg/emwidg_mihanpanel.php:26 app/hooks.php:159
+#: app/emwidg/emwidg_mihanpanel.php:26 app/hooks.php:164
 msgid "Mihan Panel"
 msgstr "میهن پنل"
 
@@ -355,7 +355,7 @@ msgstr "تعداد خرید شما"
 msgid "Your tickets"
 msgstr "تیکت های شما"
 
-#: app/handle_view.php:352 app/handle_view.php:744 app/middlewares.php:67
+#: app/handle_view.php:352 app/handle_view.php:747 app/middlewares.php:67
 msgid "Pro Version"
 msgstr "نسخه‌ی حرفه‌ای"
 
@@ -423,15 +423,15 @@ msgstr "رنگ پس زمینه ی باکس ارور در فرم ورود"
 msgid "Background Color of Login and Register Error Messagebox"
 msgstr "رنگ پس زمینه ی باکس ارور در فرم ورود و ثبت نام"
 
-#: app/handle_view.php:631
+#: app/handle_view.php:634
 msgid "This plugin is not active on your site"
 msgstr "این پلاگین بر روی سایت شما فعال نیست"
 
-#: app/handle_view.php:693
+#: app/handle_view.php:696
 msgid "Auto confirm phone number after user register"
 msgstr "فعالسازی شماره موبایل بعد از ثبت نام به صورت اتوماتیک"
 
-#: app/handle_view.php:697
+#: app/handle_view.php:700
 msgid "User can change phone number"
 msgstr "کاربر میتواند شماره موبایل را تغییر دهد"
 
@@ -473,27 +473,15 @@ msgstr "پسورد وردپرس"
 msgid "Both"
 msgstr "هردو"
 
-#: app/shortcode.php:20
-msgid "Please install Woocommerce plugin."
-msgstr "لطفا افزونه Woocommerce را نصب کنید."
+#: app/shortcode.php:10
+msgid "This shortcode is active in MihanPanel Pro."
+msgstr "این شورتکد در نسخه‌ی حرفه‌ای میهن‌پنل در دسترس است."
 
-#: app/shortcode.php:27
-msgid "You need to install woocommerce for use this section!"
-msgstr "برای استفاده از این بخش ابتدا باید Woocommerce را نصب کنید!"
-
-#: app/shortcode.php:39
-msgid "Go shop"
-msgstr "برو به فروشگاه"
-
-#: app/shortcode.php:41
-msgid "No downloads available yet."
-msgstr "هیچ دانلودی در دسترس نیست."
-
-#: app/shortcode.php:53
+#: app/shortcode.php:37
 msgid "Open Menu"
 msgstr "باز کردن منو"
 
-#: app/shortcode.php:76
+#: app/shortcode.php:60
 msgid "Please login to your account"
 msgstr "لطفا وارد حساب کاربری خود شوید"
 
@@ -839,60 +827,68 @@ msgid "Logo"
 msgstr "لوگو"
 
 #: views/admin/panel-section/general.php:21
+msgid "Login form message"
+msgstr "پیام فرم ورود"
+
+#: views/admin/panel-section/general.php:22
+msgid "Text that shows in top of login form"
+msgstr "متنی که در بالای فرم ورود نمایش داده میشود"
+
+#: views/admin/panel-section/general.php:26
 msgid "Activation process"
 msgstr "روند فعالسازی"
 
-#: views/admin/panel-section/general.php:37
+#: views/admin/panel-section/general.php:42
 msgid "Login Form Theme"
 msgstr "تم فرم ورود"
 
-#: views/admin/panel-section/general.php:39
+#: views/admin/panel-section/general.php:44
 msgid "Login and Register form theme"
 msgstr "تم فرم ورود و عضویت"
 
-#: views/admin/panel-section/general.php:42
+#: views/admin/panel-section/general.php:47
 msgid "Form Position"
 msgstr "موقعیت فرم"
 
-#: views/admin/panel-section/general.php:46
+#: views/admin/panel-section/general.php:51
 msgid "Login Button Color"
 msgstr "رنگ دکمه ورود"
 
-#: views/admin/panel-section/general.php:48
+#: views/admin/panel-section/general.php:53
 msgid "Color of Login and Register button"
 msgstr "پس زمینه دکمه ورود و ثبت‌نام"
 
-#: views/admin/panel-section/general.php:61
+#: views/admin/panel-section/general.php:66
 msgid "Login and Register form Logo"
 msgstr "لوگوی فرم ورود و عضویت"
 
-#: views/admin/panel-section/general.php:63
-#: views/admin/panel-section/general.php:77
+#: views/admin/panel-section/general.php:68
+#: views/admin/panel-section/general.php:82
 msgid "Upload Image"
 msgstr "آپلود تصویر"
 
-#: views/admin/panel-section/general.php:64
+#: views/admin/panel-section/general.php:69
 msgid "We suggest to use 120 * 120 px for logo size."
 msgstr ""
 "ما پیشنهاد می کنیم از سایز ۱۲۰ * ۱۲۰ (پیکسل) برای اندازه لوگو  استفاده کنید."
 
-#: views/admin/panel-section/general.php:67
+#: views/admin/panel-section/general.php:72
 msgid "Logo Width (px)"
 msgstr "پهنای لوگو ( به پیکسل )"
 
-#: views/admin/panel-section/general.php:71
+#: views/admin/panel-section/general.php:76
 msgid "Logo Height (px)"
 msgstr "ارتفاع لوگو ( به پیکسل )"
 
-#: views/admin/panel-section/general.php:75
+#: views/admin/panel-section/general.php:80
 msgid "Login and Register form background"
 msgstr "پس زمینه فرم ورود و ثبت نام"
 
-#: views/admin/panel-section/general.php:80
+#: views/admin/panel-section/general.php:85
 msgid "Redirect non Admin user to"
 msgstr "تغییر مسیر کاربر غیر مدیر به"
 
-#: views/admin/panel-section/general.php:82
+#: views/admin/panel-section/general.php:87
 msgid ""
 "Users who don't have admin or author caps, redirect to this address after "
 "login (with http or https)"
@@ -1262,6 +1258,9 @@ msgstr "میهن وردپرس"
 #. Author URI of the plugin/theme
 msgid "https://mihanwp.com"
 msgstr "https://mihanwp.com/"
+
+#~ msgid "yes"
+#~ msgstr "بله"
 
 #~ msgid "Invalid phone number"
 #~ msgstr "شماره موبایل معتبر نیست"
@@ -1684,6 +1683,18 @@ msgstr "https://mihanwp.com/"
 
 #~ msgid "Choose File"
 #~ msgstr "انتخاب فایل"
+
+#~ msgid "Please install Woocommerce plugin."
+#~ msgstr "لطفا افزونه Woocommerce را نصب کنید."
+
+#~ msgid "You need to install woocommerce for use this section!"
+#~ msgstr "برای استفاده از این بخش ابتدا باید Woocommerce را نصب کنید!"
+
+#~ msgid "Go shop"
+#~ msgstr "برو به فروشگاه"
+
+#~ msgid "No downloads available yet."
+#~ msgstr "هیچ دانلودی در دسترس نیست."
 
 #~ msgid "Dynamic code must not be empty"
 #~ msgstr "کد پویا نباید خالی باشد"

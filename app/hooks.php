@@ -1,5 +1,8 @@
 <?php
 namespace mihanpanel\app;
+
+use mihanpanel\pro\app\dynamic_code;
+
 class hooks
 {
     public static function init()
@@ -117,6 +120,8 @@ class hooks
         add_filter('mwpl_middlewares/tabs_field/new_record', ['\mihanpanel\app\middlewares', 'handle_tabs_new_record_middleware']);
         add_action('wp_dashboard_setup', ['\mihanpanel\app\widget', 'dashboard_widget']);
         add_action('wp_network_dashboard_setup', ['\mihanpanel\app\widget', 'dashboard_widget']);
+
+        add_filter( 'login_display_language_dropdown', '__return_false' );
     }
     public static function activation_hook()
     {

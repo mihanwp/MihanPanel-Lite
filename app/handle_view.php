@@ -592,13 +592,16 @@ class handle_view
         $render_method = apply_filters('mwpl_option_panel/render_method/blog_section_posts_count', []);
         self::handle_option_panel_render_method($render_method);
     }
-
+    static function option_panel_field_login_top_message()
+    {
+        $render_method = apply_filters('mwpl_option_panel/render_method/login_form_top_message', []);
+        self::handle_option_panel_render_method($render_method);
+    }
     // register tab
     static function option_panel_field_register_text()
     {
         $render_method = apply_filters('mwpl_option_panel/render_method/register_text', []);
         self::handle_option_panel_render_method($render_method);
-
     }
     static function option_panel_field_roles_user_can_select()
     {

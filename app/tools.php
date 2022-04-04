@@ -98,6 +98,18 @@ class tools
     {
         return self::is_persian_locale() ? 'https://mihanwp.com/' : 'https://ertano.com/';
     }
+    static function getRemoteServerByLicenseKey($licenseKey)
+    {
+        return strpos($licenseKey, 'ertano_') === 0 ? 'https://ertano.com/' : 'https://mihanwp.com/';
+    }
+    static function getRemoteProductId($licenseKey)
+    {
+        return strpos($licenseKey, 'ertano_') === 0 ? '747' : '962358';
+    }
+    static function isProVersion()
+    {
+        return defined('MIHANPANEL_PRO_DIR_PATH');
+    }
     static function get_pro_version_link()
     {
         $baseRemoteUrl = self::getBaseRemoteUrl();
