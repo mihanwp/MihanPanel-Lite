@@ -1,7 +1,7 @@
-=== MihanPanel - Registration, Login & User Panel ===  
+=== MihanPanel - WordPress Login, Registration and User Profile ===  
 Contributors: mihanwp, ertano
 Donate link: https://ertano.com/  
-Tags: register,login,profile,registration,user panel,membership,signup,panel  
+Tags: register,login,profile,registration,user profile,membership,signup,panel  
 Requires at least: 4.0  
 Tested up to: 5.9.1
 Requires PHP: 7.4
@@ -12,7 +12,7 @@ WordPress Login and Registration Plugin Lite Version.
 
 == Description ==
 
-MihanPanel is a WordPress login and membership plugin by [Ertano](https://ertano.com "Mihan WordPress")
+MihanPanel is a WordPress login and membership plugin by [Ertano](https://ertano.com "Ertano")
  that makes your WordPress login and registration form an influential part.
 You can use this plugin to completely change your website's login, registration, and user panel.
 MihanPanel also can run shortcodes on other plugins on your website.
