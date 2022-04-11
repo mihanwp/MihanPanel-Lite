@@ -1,5 +1,5 @@
 === MihanPanel - WordPress Login, Registration and User Profile ===  
-Contributors: mihanwp, ertano
+Contributors: ertano, mihanwp
 Donate link: https://ertano.com/  
 Tags: register,login,profile,registration,user profile,membership,signup,panel  
 Requires at least: 4.0  
