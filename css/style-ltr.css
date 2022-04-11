@@ -33,6 +33,7 @@
 .mihanpanelpanel .mw_avatar_section label#choose_avatar
 {
     right: unset !important;
+    left:100px
 }
 input#remove_user_avatar
 {
