@@ -1227,7 +1227,7 @@ html body .mihanpanelpanel .alert {
 }
 .mihanpanelpanel table th
 {
-	text-align: right !important;
+	text-align: right;
 	background-color: #f1f1f1 !important;
 	padding: 15px !important;
 }

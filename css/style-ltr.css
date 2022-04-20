@@ -40,3 +40,7 @@ input#remove_user_avatar
     right: unset !important;
     left: 120px !important;
 }
+.mihanpanelpanel table th
+{
+	text-align: left;
+}
