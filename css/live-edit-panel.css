@@ -1,0 +1,89 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.live-edit-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+}
+
+.live-edit-wrapper .toolbar {
+    height: 70px;
+    width: 97%;
+    background-color: #2b2f3e;
+    margin: 0 auto;
+    border-radius: 0 0 15px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.live-edit-wrapper .toolbar .title-section {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.live-edit-wrapper .content {
+    flex: auto;
+    position: relative;
+}
+
+.live-edit-wrapper .content iframe {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.live-edit-wrapper .hide {
+    display: none;
+}
+
+.live-edit-wrapper .overlay {
+    background-color: rgba(3, 3, 3, .5);
+    width: 100%;
+    height: 100%;
+}
+
+.live-edit-wrapper .preloader {
+    display: none;
+}
+
+.live-edit-wrapper .preload-mode .preloader {
+    display: block;
+    z-index: 100;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.live-edit-wrapper .preloader img
+{
+    animation-name: logoAnimation;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+.live-edit-wrapper .preload-mode iframe {
+    opacity: .6;
+    pointer-events: none;
+}
+
+@keyframes logoAnimation {
+    0% {
+        transform: scale(1)
+    }
+
+    50% {
+        transform: scale(1.2)
+    }
+    100% {
+        transform: scale(1)
+    }
+}

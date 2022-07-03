@@ -8,9 +8,12 @@ class admin_menu
 {
     public static function init()
     {
-        self::mw_settings();
         self::tabs();
         self::user_fields();
+    }
+    static function add_main_menu_page()
+    {
+        self::mw_settings();
     }
 
     public static function mw_settings()

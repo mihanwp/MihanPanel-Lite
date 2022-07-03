@@ -52,11 +52,17 @@ jQuery(document).ready(function ($) {
                 selector = el
             })
         }
+        $.fn.mwpl_iconpicker2 = function(el){
+            $('.howl-iconpicker-outer').css('display', 'table');
+            $('.howl-iconpicker .geticonval').removeClass('selectedicon');
+            selector = el
+        }
         $('.howl-iconpicker .geticonval').on('click', function() {
             var getIconId = $(this).text();
             $('.howl-iconpicker .geticonval').removeClass('selectedicon');
             $(this).addClass('selectedicon');
-            $(selector).val('fa-'+getIconId).change();
+            $(selector).val(getIconId).change();
+            $('.howl-iconpicker-close').click()
         });
     })
 }(jQuery));

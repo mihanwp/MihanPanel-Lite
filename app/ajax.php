@@ -9,6 +9,53 @@ class ajax
         add_action('wp_ajax_update_tabs_fields_data', [__CLASS__, 'update_tabs_fields_data']);
         add_action('wp_ajax_mw_delete_field_row', [__CLASS__, 'delete_field_row']);
         add_action('wp_ajax_update_user_field_fields_data', [__CLASS__, 'update_user_field_fields_data']);
+
+        // live edit
+        add_action('wp_ajax_mwpl_live_edit_tabs_fields_get_items', [__CLASS__, 'handle_live_edit_tabs_fields_get_items']);
+    }
+    static function checkNonce($action = 'mwpl_ajax_update_live_edit_options', $query = 'mwpl_nonce')
+    {
+        check_ajax_referer($action, $query);
+    }
+    static function handle_live_edit_tabs_fields_get_items()
+    {
+        self::checkNonce();
+        $res = [
+            'status' => 400,
+            'msg' => __('Has error!', 'mihanpanel'),
+        ];
+        $items = \mihanpanel\app\panel::get_tabs();
+        if (!$items) {
+            $res['msg'] = esc_html__('No any items found', 'mihanpanel');
+            self::send_res($res);
+        }
+        ob_start();
+        $base = \mihanpanel\app\options::get_panel_url();
+        foreach ($items as $item) :
+            $item_url = esc_url(add_query_arg(['tab' => $item->id], $base));
+?>
+            <li tab-id="<?php echo $item->id; ?>">
+                <span class="movement-icon <?php echo !tools::isProVersion() ? 'pro-version-notice-emmit' : '';?>"></span>
+                <a class="mwtaba" mwpl-href="<?php echo $item_url ?>">
+                    <?php \mihanpanel\app\presenter\tabs_menu::render_tab_item_icon($item->icon); ?>
+                    <p>
+                        <input type="text" value="<?php echo esc_html($item->name); ?>">
+                    </p>
+                </a>
+                <span class="edit-icon"></span>
+                <span class="remove-icon <?php echo !tools::isProVersion() ? 'pro-version-notice-emmit' : '';?>"></span>
+            </li>
+<?php endforeach;
+        $data = ob_get_clean();
+        $res['msg'] = 'ok';
+        $res['status'] = 200;
+        $res['items'] = $items;
+        $res['data'] = $data;
+        self::send_res($res);
+    }
+    static function send_res($res)
+    {
+        die(json_encode($res));
     }
     static function update_tabs_fields_data()
     {

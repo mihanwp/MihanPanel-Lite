@@ -41,7 +41,7 @@ class tools
     }
     static function is_wpml_not_in_persian()
     {
-        return defined('ICL_LANGUAGE_CODE') && ICL_LANGUAGE_CODE !== 'fa';
+        return defined('ICL_LANGUAGE_CODE') && ICL_LANGUAGE_CODE !== null && ICL_LANGUAGE_CODE !== 'fa';
     }
     public static function is_woocommerce_active()
     {

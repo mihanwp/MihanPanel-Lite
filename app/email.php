@@ -18,6 +18,10 @@ class email
     public static function do_filter_new_user_notification($user)
     {
         $email_content = options::get_email_notify_content();
+        if(!$email_content)
+        {
+            return false;
+        }
         $search = ['[[user_login]]', '[[display_name]]'];
         $replace = [$user->user_login, $user->display_name];
         $email_content = str_replace($search, $replace, $email_content);
@@ -168,7 +172,8 @@ class email
     }
     static function change_wordpress_from_name($original_email_address)
     {
-        return get_option('mp_send_emails_from');
+        $option = get_option('mp_send_emails_from');
+        return $option ? $option : $original_email_address;
     }
     static function disable_default_emails()
     {

@@ -240,6 +240,7 @@ a{color:#222 !important;font-size: 15px;}
   }
   .login form #wp-submit, .login form #wp_bb_log_submit{
     width:90% !important;
+    box-sizing: border-box;
   }
   .login #backtoblog, .login #nav{
     padding:0 !important

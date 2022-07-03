@@ -19,7 +19,7 @@
         </div>
         <div class="mp_option_single">
             <label for="mp_login_form_top_message_text"><?php esc_html_e('Login form message', 'mihanpanel')?></label>
-            <p class="description"><?php esc_html_e('Text that shows in top of login form')?></p>
+            <p class="description"><?php esc_html_e('Text that shows in top of login form', 'mihanpanel')?></p>
             <?php \mihanpanel\app\handle_view::option_panel_field_login_top_message(); ?>
         </div>
         <div class="mp_option_section">

@@ -1,17 +1,17 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MihanPanel\n"
-"POT-Creation-Date: 2022-04-04 15:04+0430\n"
-"PO-Revision-Date: 2022-04-04 15:04+0430\n"
+"POT-Creation-Date: 2022-07-04 04:09+0430\n"
+"PO-Revision-Date: 2022-07-04 04:09+0430\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.0\n"
-"X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n==0 || n==1);\n"
+"X-Generator: Poedit 3.0.1\n"
+"X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: mihanpanel.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -26,89 +26,92 @@ msgstr ""
 msgid "Address 2"
 msgstr "آدرس شماره دو"
 
-#. Plugin Name of the plugin/theme
-#: app/admin_menu.php:18 app/gutenberg.php:17
+#: app/admin_menu.php:21 app/gutenberg.php:17
 msgid "MihanPanel"
 msgstr "میهن پنل"
 
-#: app/admin_menu.php:26 views/admin/panel-section/general.php:40
+#: app/admin_menu.php:29 views/admin/panel-section/general.php:40
 msgid "Login & Register"
 msgstr "ورود و عضویت"
 
-#: app/admin_menu.php:27 app/admin_menu.php:42 app/hooks.php:143
+#: app/admin_menu.php:30 app/admin_menu.php:45 app/hooks.php:142
 msgid "User Panel"
 msgstr "پنل کاربری"
 
-#: app/admin_menu.php:28 views/admin/panel-section/register.php:2
+#: app/admin_menu.php:31 views/admin/panel-section/register.php:2
 msgid "Register Form"
 msgstr "فرم ثبت نام"
 
-#: app/admin_menu.php:29 views/admin/panel-section/notification.php:2
+#: app/admin_menu.php:32 views/admin/panel-section/notification.php:2
 msgid "Notifications"
 msgstr "اطلاعیه ها"
 
-#: app/admin_menu.php:30 app/pro_version_detail.php:9
+#: app/admin_menu.php:33 app/pro_version_detail.php:9
 msgid "Login with SMS"
 msgstr "ورود با SMS"
 
-#: app/admin_menu.php:31
+#: app/admin_menu.php:34
 msgid "Emails"
 msgstr "ایمیل‌های ارسالی"
 
-#: app/admin_menu.php:32 app/widget.php:35
+#: app/admin_menu.php:35 app/widget.php:35
 msgid "Tools"
 msgstr "ابزار‌ها"
 
-#: app/admin_menu.php:55
+#: app/admin_menu.php:58
 msgid "User Fields"
 msgstr "فیلدهای کاربری"
 
-#: app/admin_menu.php:72
+#: app/admin_menu.php:75
 msgid "Do you want to save changes?"
 msgstr "میخواهید تغییرات ذخیره شود؟"
 
-#: app/admin_menu.php:73
+#: app/admin_menu.php:76
 msgid "Yes"
 msgstr "بله"
 
-#: app/admin_menu.php:81
+#: app/admin_menu.php:84
 msgid "Create new field"
 msgstr "ایجاد فیلد جدید"
 
-#: app/admin_menu.php:81
+#: app/admin_menu.php:84
 msgid "Close"
 msgstr "بستن"
 
-#: app/admin_menu.php:91
+#: app/admin_menu.php:94
 msgid "Panel Menus"
 msgstr "منوهای پنل کاربری"
 
-#: app/admin_menu.php:124
+#: app/admin_menu.php:127
 msgid "This section is active in MihanPanel pro"
 msgstr "این بخش در نسخه‌ی حرفه‌ای میهن‌پنل در دسترس است."
 
-#: app/ajax.php:17 app/ajax.php:80 app/ajax.php:107
+#: app/ajax.php:25 app/ajax.php:64 app/ajax.php:127 app/ajax.php:154
 msgid "Has error!"
 msgstr "خطا!"
 
-#: app/ajax.php:22 app/ajax.php:91 app/ajax.php:112
+#: app/ajax.php:29
+msgid "No any items found"
+msgstr "هیچ آیتمی پیدا نشد."
+
+#: app/ajax.php:69 app/ajax.php:138 app/ajax.php:159
 #: app/form/admin_user_fields.php:28 app/form/profile.php:79
 msgid "The operation failed due to security issues."
 msgstr "عملیات به دلیل مشکلات امنیتی متوقف شد."
 
-#: app/ajax.php:71 app/ajax.php:153 app/form/profile.php:108
+#: app/ajax.php:118 app/ajax.php:200 app/form/profile.php:108
 msgid "Successfully updated!"
 msgstr "با موفقیت به روز شد!"
 
-#: app/ajax.php:71 app/ajax.php:153
+#: app/ajax.php:118 app/ajax.php:200
 msgid "Nothing updated."
 msgstr "چیزی آپدیت نشد."
 
-#: app/ajax.php:100
+#: app/ajax.php:147
 msgid "Successfully deleted!"
 msgstr "با موفقیت حذف شد!"
 
-#: app/ajax.php:100
+#: app/ajax.php:147
 msgid "Could not be deleted."
 msgstr "حذف نشد."
 
@@ -134,7 +137,7 @@ msgstr ""
 msgid "Registration complete. Your account has been activated automatically."
 msgstr "نام نویسی انجام شد. اکانت شما به صورت خودکار فعال شده است."
 
-#: app/config.php:220 app/email.php:86
+#: app/config.php:220 app/email.php:90
 msgid "Registration complete. Please wait for admin approval."
 msgstr "نام نویسی انجام شد. لطفا منتظر تایید مدیریت سایت باشید."
 
@@ -158,46 +161,46 @@ msgstr "اکانت شما با موفقیت فعال شد!"
 msgid "Request is invalid!"
 msgstr "درخواست شما نامعتبر است!"
 
-#: app/email.php:69
+#: app/email.php:73
 msgid "Account activation"
 msgstr "فعالسازی حساب کاربری"
 
-#: app/email.php:71
+#: app/email.php:75
 msgid "Click on below link to activate account"
 msgstr "برای فعاسازی اکانت روی لینک زیر کلیک کنید"
 
-#: app/email.php:85 app/email.php:110
+#: app/email.php:89 app/email.php:114
 msgid "Registration complete."
 msgstr "ثبت نام تکمیل شد."
 
-#: app/email.php:86 app/email.php:110
+#: app/email.php:90 app/email.php:114
 msgid "Thanks!"
 msgstr "ممنون!"
 
 #. translators: Login details notification email subject. %s: Site title
-#: app/email.php:92 app/email.php:116
+#: app/email.php:96 app/email.php:120
 #, php-format
 msgid "[%s] Login Details"
 msgstr "[%s] اطلاعات ورود"
 
-#: app/email.php:138
+#: app/email.php:142
 #, php-format
 msgid "[%s] Change Account Status"
 msgstr "[%s] تغییر وضعیت اکانت"
 
-#: app/email.php:142
+#: app/email.php:146
 msgid "Unknown"
 msgstr "ناشناخته"
 
-#: app/email.php:147 app/users.php:104 app/users.php:121
+#: app/email.php:151 app/users.php:104 app/users.php:121
 msgid "Active"
 msgstr "فعال"
 
-#: app/email.php:151 app/users.php:104 app/users.php:121
+#: app/email.php:155 app/users.php:104 app/users.php:121
 msgid "Inactive"
 msgstr "غیرفعال"
 
-#: app/emwidg/emwidg_mihanpanel.php:26 app/hooks.php:164
+#: app/emwidg/emwidg_mihanpanel.php:26 app/hooks.php:163 app/live_edit.php:66
 msgid "Mihan Panel"
 msgstr "میهن پنل"
 
@@ -247,7 +250,7 @@ msgstr "نمایش بر اساس نقش کاربری"
 msgid "Menu Title"
 msgstr "عنوان منو"
 
-#: app/form/admin_tabs.php:136
+#: app/form/admin_tabs.php:136 app/live_edit.php:47
 msgid "Content"
 msgstr "محتوا"
 
@@ -435,6 +438,34 @@ msgstr "فعالسازی شماره موبایل بعد از ثبت نام به 
 msgid "User can change phone number"
 msgstr "کاربر میتواند شماره موبایل را تغییر دهد"
 
+#: app/live_edit.php:45
+msgid "This feature is just accessible in pro version"
+msgstr "این قابلیت فقط در نسخه‌ی حرفه‌ای در دسترس است"
+
+#: app/live_edit.php:49
+msgid "New Item"
+msgstr "آیتم جدید"
+
+#: app/live_edit.php:50
+msgid "Are you sure you want to delete this item?"
+msgstr "آیا از حذف این آیتم مطمئن هستید؟"
+
+#: app/live_edit.php:51
+msgid "Item Name"
+msgstr "نام آیتم"
+
+#: app/live_edit.php:52
+msgid "Edit Content"
+msgstr "ویرایش محتوا"
+
+#: app/live_edit.php:61 app/live_edit.php:66
+msgid "Live Edit"
+msgstr "ویرایش زنده"
+
+#: app/live_edit.php:61
+msgid "Beta"
+msgstr "آزمایشی"
+
 #: app/middlewares.php:68
 #, php-format
 msgid ""
@@ -456,7 +487,7 @@ msgstr "ارسال لینک فعالسازی"
 msgid "Manual Activation"
 msgstr "فعالسازی دستی"
 
-#: app/options.php:148
+#: app/options.php:140
 #, php-format
 msgid "%1$s off code for your next purchase"
 msgstr "کد تخفیف %1$s برای خرید بعدی شما"
@@ -473,15 +504,15 @@ msgstr "پسورد وردپرس"
 msgid "Both"
 msgstr "هردو"
 
-#: app/shortcode.php:10
+#: app/shortcode.php:8
 msgid "This shortcode is active in MihanPanel Pro."
 msgstr "این شورتکد در نسخه‌ی حرفه‌ای میهن‌پنل در دسترس است."
 
-#: app/shortcode.php:37
+#: app/shortcode.php:35
 msgid "Open Menu"
 msgstr "باز کردن منو"
 
-#: app/shortcode.php:60
+#: app/shortcode.php:58
 msgid "Please login to your account"
 msgstr "لطفا وارد حساب کاربری خود شوید"
 
@@ -604,7 +635,7 @@ msgstr "داشبورد کاربری"
 msgid "Edit Profile"
 msgstr "ویرایش پروفایل"
 
-#: app/widget/profile.php:51 parts/sidebar.php:21
+#: app/widget/profile.php:51 parts/sidebar.php:23
 msgid "Logout"
 msgstr "خروج"
 
@@ -1243,6 +1274,10 @@ msgstr "میهن‌وردپرس"
 msgid "New Airlines"
 msgstr "خطوط هوایی جدید"
 
+#. Plugin Name of the plugin/theme
+msgid "MihanPanel Pro"
+msgstr "میهن پنل پرو"
+
 #. Plugin URI of the plugin/theme
 msgid "https://mihanwp.com/mihanpanel/"
 msgstr "https://mihanwp.com/mihanpanel/"
@@ -1347,6 +1382,39 @@ msgstr "https://mihanwp.com/"
 #~ msgid "Provider is not valid."
 #~ msgstr "ارائه دهنده معتبر نیست."
 
+#~ msgid "Invalid data"
+#~ msgstr "اطلاعات نامعتبر است"
+
+#~ msgid "Has error in get content"
+#~ msgstr "مشکلی در دریافت اطلاعات به وجود آمد"
+
+#~ msgid "Successfully get data"
+#~ msgstr "داده‌ها با موفقیت دریافت شد"
+
+#~ msgid "Has error in updating data"
+#~ msgstr "خطایی در به‌روزرسانی داده‌ها وجود دارد"
+
+#~ msgid "Successfully updated"
+#~ msgstr "با موفقیت به روز شد"
+
+#~ msgid "Has error in inserting data"
+#~ msgstr "خطایی در افزودن اطلاعات وجود دارد"
+
+#~ msgid "Successfully inserted"
+#~ msgstr "با موفقیت افزوده شد"
+
+#~ msgid "Missing Data"
+#~ msgstr "اطلاعاتی یافت نشد"
+
+#~ msgid "Missing name data"
+#~ msgstr "اطلاعات نام دریافت نشد"
+
+#~ msgid "Has error in insert data"
+#~ msgstr "خطایی در افزودن اطلاعات وجود دارد"
+
+#~ msgid "Has error in delete"
+#~ msgstr "مشکلی در حذف آیتم به وجود آمد"
+
 #~ msgid "Has error in uploading media"
 #~ msgstr "خطایی در آپلود فایل چندرسانه ای وجود دارد"
 
@@ -1361,9 +1429,6 @@ msgstr "https://mihanwp.com/"
 
 #~ msgid "Has error in deleting avatar."
 #~ msgstr "در پاکسازی آواتار مشکلی پیش آمد."
-
-#~ msgid "MihanPanel Pro"
-#~ msgstr "میهن پنل پرو"
 
 #~ msgid "Role"
 #~ msgstr "نقش کاربری"
@@ -1768,6 +1833,9 @@ msgstr "https://mihanwp.com/"
 #~ msgid "Get License Key"
 #~ msgstr "دریافت کد لایسنس"
 
+#~ msgid "Text content"
+#~ msgstr "محتوای متنی"
+
 #~ msgid "Message Text..."
 #~ msgstr "متن پیام..."
 
@@ -1796,6 +1864,15 @@ msgstr "https://mihanwp.com/"
 
 #~ msgid "Request Code"
 #~ msgstr "درخواست کد"
+
+#~ msgid "Item not found"
+#~ msgstr "چیزی یافت نشد"
+
+#~ msgid "Name"
+#~ msgstr "نام"
+
+#~ msgid "MihanPanel Live Edit"
+#~ msgstr "ویرایش زنده‌ی میهن پنل"
 
 #~ msgid "mihanwp.com"
 #~ msgstr "میهن وردپرس"
@@ -1917,9 +1994,6 @@ msgstr "https://mihanwp.com/"
 
 #~ msgid "Support Ticket"
 #~ msgstr "تیکت های پشتیبانی"
-
-#~ msgid "Successfully edited!"
-#~ msgstr "با موفقیت ویرایش شد!"
 
 #~ msgid "Priorities was changed! Save changes?"
 #~ msgstr "اولویت ها تغییر پیدا کرده است! ذخیره شود؟"

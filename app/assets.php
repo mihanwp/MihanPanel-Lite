@@ -87,12 +87,14 @@ class assets
         self::load_sortable_script();
         $version = tools::get_plugin_version();
         $fontawesome_css = self::get_css_url('fa/css/all');
-        $font_awesome_icon_picker = self::get_js_url('font-awesome-icon-picker');
+        $font_awesome_icon_picker_css = self::get_css_url('font-awesome-icon-picker');
+        $font_awesome_icon_picker_js = self::get_js_url('font-awesome-icon-picker');
         $dropdown_handler = self::get_js_url('admin-menus-drop-down-handler');
         $admin_menu_tabs_js = self::get_js_url('admin-menu-tabs');
 
         wp_enqueue_style('mw_fontawesome_css', $fontawesome_css, null, $version);
-        wp_enqueue_script('font-awesome-icon-picker', $font_awesome_icon_picker, ['jquery'], $version, true);
+        wp_enqueue_style('mw_fontawesome_icon_picker', $font_awesome_icon_picker_css, null, $version);
+        wp_enqueue_script('font-awesome-icon-picker', $font_awesome_icon_picker_js, ['jquery'], $version, true);
         wp_enqueue_media();
         wp_enqueue_script('mw_admin_dropdown_handler', $dropdown_handler, ['jquery'], $version, true);
         wp_enqueue_script('admin-menu-tabs', $admin_menu_tabs_js, ['jquery'], $version, true);

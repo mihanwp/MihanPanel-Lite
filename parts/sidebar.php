@@ -1,5 +1,5 @@
 <div class="mp-nav-tabs-mpwrapper nocss">
-  <ul class="nav mp-nav-tabs">
+  <ul class="nav mp-nav-tabs default-menu">
     <li <?php echo $tab_id == null ? 'class="active"' : false;?> >
       <a class="mwtaba" href="<?php echo \mihanpanel\app\options::get_panel_url(); ?>">
         <i class="fas fa-tachometer-alt"></i>
@@ -12,9 +12,11 @@
               <p><?php esc_html_e("Edit Profile", "mihanpanel"); ?></p>
           </a>
       </li>
+  </ul>
     <?php
     \mihanpanel\app\panel::render_tabs();
     ?>
+    <ul class="nav mp-nav-tabs logout-menu">
       <li>
           <a href="<?php echo wp_logout_url(home_url()) ?>">
             <i class="fas fa-sign-out-alt"></i>

@@ -1,10 +1,10 @@
 <?php
 /*
-Plugin Name: MihanPanel
+Plugin Name: MihanPanel Pro
 Plugin URI:  https://mihanwp.com/mihanpanel/
 Author:      MihanWP
 Author URI:  https://mihanwp.com
-Version:     10.3.1
+Version:     11.0
 Description: The best way to build user interface in WordPress
 */
 //if accessed direct

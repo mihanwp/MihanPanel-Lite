@@ -13,6 +13,7 @@ class hooks
         add_action('mihanpanel_session', ['\mihanpanel\app\session', 'clear_expired_session']);
         add_action('init', ['\mihanpanel\app\config', 'start_depends']);
         add_action('init', ['\mihanpanel\app\config', 'init_shortcode']);
+        add_action('admin_menu', ['\mihanpanel\app\admin_menu', 'add_main_menu_page'], 1);
         add_action('admin_menu', ['\mihanpanel\app\admin_menu', 'init']);
         add_action('admin_init', ['\mihanpanel\app\options', 'register_settings']);
         add_action('admin_notices', ['\mihanpanel\app\notice', 'show_admin_setting_panel_notices']);
@@ -63,10 +64,8 @@ class hooks
         
         // Send WordPress Emails from Website name & Email
         add_filter('wp_mail_from_name', ['\mihanpanel\app\email', 'change_wordpress_email_name']);
+        add_filter('wp_mail_from', ['\mihanpanel\app\email', 'change_wordpress_from_name']);
         
-        if (get_option('mp_wp_mail_from_email') != null) {
-            add_filter('wp_mail_from', ['\mihanpanel\app\email', 'change_wordpress_from_name']);
-        }
         //change WP-login title
         add_filter('login_title', ['\mihanpanel\app\sundry', 'change_login_title'], 99);
         

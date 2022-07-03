@@ -16,18 +16,15 @@ class options
     }
     public static function get_user_can_register()
     {
-        $option = get_option('users_can_register');
-        return $option;
+        return get_option('users_can_register');
     }
     public static function activate_user_can_register()
     {
-        $res = update_option('users_can_register', 1);
-        return $res;
+        return update_option('users_can_register', 1);
     }
     public static function deactivate_user_can_register()
     {
-        $res = update_option('users_can_register', 0);
-        return $res;
+        return update_option('users_can_register', 0);
     }
     public static function get_panel_slug()
     {
@@ -96,28 +93,23 @@ class options
     }
     public static function get_email_notify_content()
     {
-        $option = get_option('mp_new_user_email_notify');
-        return $option;
+        return get_option('mp_new_user_email_notify');
     }
     public static function get_reset_password_email_subject()
     {
-        $option = get_option('mp_reset_password_email_subject');
-        return $option;
+        return get_option('mp_reset_password_email_subject');
     }
     public static function get_reset_password_email_content()
     {
-        $option = get_option('mp_reset_password_email_content');
-        return $option;
+        return get_option('mp_reset_password_email_content');
     }
     public static function get_change_account_status_email_subject()
     {
-        $option = get_option('mp_change_account_status_email_subject');
-        return $option;
+        return get_option('mp_change_account_status_email_subject');
     }
     public static function get_change_account_status_email_content()
     {
-        $option = get_option('mp_change_account_status_email_content');
-        return $option;
+        return get_option('mp_change_account_status_email_content');
     }
     static function disable_mihanpanel_fonts()
     {

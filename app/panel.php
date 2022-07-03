@@ -99,6 +99,7 @@ class panel
     {
         $tab_id = self::get_current_tab();
         $menus = self::get_tabs();
+        echo '<ul class="nav mp-nav-tabs menu-tabs-items">';
         foreach ($menus as $menu):
             $item_url = $menu->link == null ? esc_url(add_query_arg(['tab' => $menu->id], remove_query_arg(['order_id', 'order_details']))) : esc_url($menu->link);
             $link_attrs = [
@@ -109,7 +110,9 @@ class panel
             {
                 $link_attrs['target'] = '_blank';
             }
-            $li_attrs = [];
+            $li_attrs = [
+                'tab-id' => $menu->id
+            ];
             if($tab_id == $menu->id)
             {
                 $li_attrs['class'][] = 'active';
@@ -133,5 +136,6 @@ class panel
             </li>
         <?php
         endforeach;
+        echo '</ul>';
     }
 }

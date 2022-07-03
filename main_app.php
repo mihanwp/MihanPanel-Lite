@@ -1,4 +1,7 @@
 <?php
+
+use mihanpanel\app\live_edit;
+
 final class MihanPanelApp
 {
     private static $_instance;
@@ -16,6 +19,7 @@ final class MihanPanelApp
         $this->autoload();
         $this->includes();
         $this->requires();
+        live_edit::getInstance();
         register_deactivation_hook(WP_MIHANPANEL_MAIN_APP, ['\mihanpanel\app\hooks', 'deactivation_hook']);
     }
     function autoload()

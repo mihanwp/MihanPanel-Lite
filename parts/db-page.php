@@ -1,4 +1,4 @@
-<div class="main-panel mwtabb" id="profile">
+<div class="main-panel mwtabb" id="tab-field-content">
   <?php
   global $wpdb;
   $tablename = $wpdb->prefix . 'mihanpaneltabs';
