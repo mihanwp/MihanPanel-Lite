@@ -146,4 +146,8 @@ class tools
         ksort( $shortcode_tags );
         return $shortcode_tags;
     }
+    static function getOptionPanelUrl()
+    {
+        return admin_url('admin.php?page=mihanpanel');
+    }
 }

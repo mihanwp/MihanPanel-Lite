@@ -268,7 +268,7 @@ class config
 
     static function redirect_to_option_panel_handler()
     {
-        $url = admin_url('admin.php?page=mihanpanel');
+        $url = tools::getOptionPanelUrl();
         $url = apply_filters('mwpl_before_redirect_to_option_panel_url', $url);
         wp_redirect($url);
         exit;

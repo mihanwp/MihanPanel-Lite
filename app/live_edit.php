@@ -100,6 +100,7 @@ class live_edit
             <div class="live-edit-wrapper" mwpl-nonce="<?php echo wp_create_nonce('mwpl_ajax_update_live_edit_options')?>">
                 <div class="toolbar">
                     <div class="title-section"><?php echo $this->getTitle(); ?></div>
+                    <a href="<?php echo \mihanpanel\app\tools::getOptionPanelUrl()?>" class="live-edit-btn"><?php esc_html_e('Exit from live edit', 'mihanpanel')?></a>
                 </div>
                 <div class="content preload-mode">
                     <div class="preloader">

@@ -22,6 +22,16 @@ body {
     padding: 0 10px;
     box-sizing: border-box;
 }
+.live-edit-wrapper .toolbar a
+{
+    text-decoration: none;
+    color: #000;
+}
+.live-edit-wrapper .toolbar .live-edit-btn {
+    padding: 8px 10px;
+    border-radius: 10px;
+    background-color: #fed700;
+}
 
 .live-edit-wrapper .toolbar .title-section {
     color: white;
@@ -36,9 +46,8 @@ body {
 .live-edit-wrapper .content iframe {
     width: 100%;
     height: 100%;
+    position: absolute;
 }
-
-
 
 .live-edit-wrapper .hide {
     display: none;
@@ -63,8 +72,7 @@ body {
     transform: translate(-50%, -50%);
 }
 
-.live-edit-wrapper .preloader img
-{
+.live-edit-wrapper .preloader img {
     animation-name: logoAnimation;
     animation-duration: 1s;
     animation-iteration-count: infinite;
@@ -83,6 +91,7 @@ body {
     50% {
         transform: scale(1.2)
     }
+
     100% {
         transform: scale(1)
     }
