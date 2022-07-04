@@ -1,9 +1,9 @@
 <?php
 /*
-Plugin Name: MihanPanel Pro
-Plugin URI:  https://mihanwp.com/mihanpanel/
-Author:      MihanWP
-Author URI:  https://mihanwp.com
+Plugin Name: MihanPanel Lite
+Plugin URI:  https://ertano.com/mihanpanel/
+Author:      Ertano
+Author URI:  https://ertano.com
 Version:     11.0
 Description: The best way to build user interface in WordPress
 */

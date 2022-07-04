@@ -1,11 +1,11 @@
-=== MihanPanel - WordPress Login, Registration and User Profile ===  
+=== MihanPanel - User Login , Registration and Dashboard ===
 Contributors: ertano, mihanwp
-Donate link: https://ertano.com/  
-Tags: register,login,profile,registration,user profile,membership,signup,panel  
-Requires at least: 4.0  
-Tested up to: 5.9.1
-Requires PHP: 7.4
-License: GPLv2 or later  
+Donate link: https://ertano.com/
+Tags: register,login,profile,registration,user profile,membership,signup,dashboard
+Requires at least: 4.0
+Tested up to: 6.0
+Requires PHP: 7.3
+License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 WordPress Login and Registration Plugin Lite Version.
@@ -48,7 +48,7 @@ This plugin is published in 2 versions, Lite and Pro. The [MihanPanel Pro](https
 * Technical support
 * Direct update from your WordPress dashboard
 
-**Report Bugs & Contribution:**  
+**Report Bugs & Contribution:**
 Do you want to report MihanPanel bugs and contribute to plugin development?  Join us at [MihanPanel Github Page](https://github.com/mihanwp/MihanPanel-Lite "MihanPanel on GitHub")
 
 == Screenshots ==
