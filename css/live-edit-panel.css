@@ -10,6 +10,53 @@ body {
     position: relative;
 }
 
+.live-edit-wrapper .notification-wrapper
+{
+    position: fixed;
+    left: 20px;
+    bottom: 10px;
+    z-index: 100;
+}
+.live-edit-wrapper .notification-wrapper .notice-item
+{
+    padding: 20px 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    width: 350px;
+    animation-name: show_notification;
+    animation-duration: 1s;
+}
+@keyframes show_notification
+{
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+.live-edit-wrapper .notification-wrapper .notice-item[type=success]
+{
+    background-color: #65cc70;
+    color: white;
+}
+.live-edit-wrapper .notification-wrapper .notice-item[type=info]
+{
+    background-color: #658dcc;
+    color: white;
+}
+.live-edit-wrapper .notification-wrapper .notice-item[type=error]
+{
+    background-color: #cc6565;
+    color: white;
+}
+.live-edit-wrapper .notification-wrapper .notice-item[type=warning]
+{
+    background-color: #ccb265;
+    color: white;
+}
 .live-edit-wrapper .toolbar {
     height: 70px;
     width: 97%;

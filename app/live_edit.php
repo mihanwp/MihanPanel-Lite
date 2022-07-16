@@ -34,6 +34,10 @@ class live_edit
     function headerActions()
     {
         wp_enqueue_style('live-edit-panel-lite-version', assets::get_css_url('live-edit-panel'));
+        if(!is_rtl())
+        {
+            wp_enqueue_style('live-edit-panel-lite-ltr-version', assets::get_css_url('live-edit-panel-ltr'));
+        }
     }
     function footerActions()
     {
@@ -41,6 +45,11 @@ class live_edit
         wp_enqueue_script('live-edit-panel-lite-version', assets::get_js_url('admin-live-edit-panel'), ['jquery'], $version, true);
         $data = [
             'au' => admin_url('admin-ajax.php'),
+            'assets' => [
+                'styles' => [
+                    'iframe_style_file' => assets::get_css_url('live-edit-panel-iframe'),
+                ],
+            ],
             'texts' => [
                 'pro_version' => esc_html__('This feature is just accessible in pro version', 'mihanpanel'),
                 'labels' => [
@@ -52,6 +61,10 @@ class live_edit
                 'edit_content_btn_text' => esc_html__('Edit Content', 'mihanpanel'),
             ],
         ];
+        if(!is_rtl())
+        {
+            $data['assets']['styles']['iframe_style_file_ltr'] = assets::get_css_url('live-edit-panel-iframe-ltr');
+        }
         wp_localize_script('live-edit-panel-lite-version', 'mwp_data_lite', $data);
     }
 
@@ -102,6 +115,7 @@ class live_edit
                     <div class="title-section"><?php echo $this->getTitle(); ?></div>
                     <a href="<?php echo \mihanpanel\app\tools::getOptionPanelUrl()?>" class="live-edit-btn"><?php esc_html_e('Exit from live edit', 'mihanpanel')?></a>
                 </div>
+                <div class="notification-wrapper"></div>
                 <div class="content preload-mode">
                     <div class="preloader">
                         <img src="<?php echo MW_MIHANPANEL_URL . 'img/logo.png'; ?>" width="100" height="100" alt="Mihan Panel Logo">

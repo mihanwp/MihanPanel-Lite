@@ -121,9 +121,10 @@ class admin_menu
             {
                 $msgStyle .= sprintf('%s: %s;', $key, $value);
             }
+            $imgUrl = is_rtl() ? \mihanpanel\app\assets::get_image_url('tabs-menu-view') : \mihanpanel\app\assets::get_image_url('tabs-menu-view-ltr');
             ?>
             <div class="mihanpanel-admin" style="position: relative">
-                <img style="filter: blur(2px) grayscale(100)" width="100%" src="<?php echo \mihanpanel\app\assets::get_image_url('tabs-menu-view')?>" alt="">
+                <img style="filter: blur(2px) grayscale(100)" width="100%" src="<?php echo $imgUrl?>" alt="">
                 <div style="<?php echo $msgStyle?>"><?php esc_html_e('This section is active in MihanPanel pro', 'mihanpanel')?></div>
             </div>
             <?php

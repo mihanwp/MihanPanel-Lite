@@ -67,152 +67,30 @@ jQuery(document).ready(function ($) {
     }
 
     function overrideIframeStyle() {
-        let head = frame.contents().find('head')
-        let style = $('<style>')
-        style.text(`
-        .mihanpanel-page .mpsidebar .nav.mp-nav-tabs.logout-menu li.live-edit-sidebar-new-menu-item a
+        let head = frame.contents().find('head'),
+            styles = mwp_data_lite.assets !== undefined && mwp_data_lite.assets.styles !== undefined ? mwp_data_lite.assets.styles : false
+        if(typeof styles !== 'object' || !Object.keys(styles).length)
         {
-            text-align: center;
-            display: block;
-            background: #fed700;
+            return;
         }
-        .mihanpanel-page .mpsidebar .nav.mp-nav-tabs.logout-menu li.live-edit-sidebar-new-menu-item a p
-        {
-            color: black !important;
-            font-weight: bold !important;
-        }
-        .mihanpanel-page .mpsidebar .nav.mp-nav-tabs.logout-menu li.live-edit-sidebar-new-menu-item:hover
-        {
-            background-color: #fed700 !important;
-        }
-        .mihanpanel-page .mpsidebar .nav.mp-nav-tabs.menu-tabs-items li
-        {
-            position: relative;
-        }
-        .mihanpanel-page .mpsidebar .nav.mp-nav-tabs.menu-tabs-items li p input
-        {
-            all: unset !important;
-        }
-        .mihanpanel-page .mpsidebar .nav.mp-nav-tabs.menu-tabs-items li .movement-icon
-        {
-            position: absolute;
-            opacity: 0;
-            right: -10px;
-            color: white;
-            top: 50%;
-            transform: translateY(-50%);
-            background: gray;
-            height: 25px;
-            display: flex;
-            align-items: center;
-        }
-        .mihanpanel-page .mpsidebar .nav.mp-nav-tabs.menu-tabs-items li .movement-icon::before
-        {
-            content: "\\f333";
-            font-family: "dashicons";
-        }
-
-        .mihanpanel-page .mpsidebar .nav.mp-nav-tabs.menu-tabs-items li .remove-icon
-        {
-            position: absolute;
-            left: 5px;
-            opacity: 0;
-            color: white;
-            height: 100%;
-            background: #f72323;
-            top: 0;
-            display: flex;
-            align-items: center;
-            width: 25px;
-            justify-content: center;
-            border-radius: 5px;
-        }
-        .mihanpanel-page .mpsidebar .nav.mp-nav-tabs.menu-tabs-items li .remove-icon::before
-        {
-            content: "\\f158";
-            font-family: "dashicons";
-        }
-
-        .mihanpanel-page .mpsidebar .nav.mp-nav-tabs.menu-tabs-items li .edit-icon
-        {
-            position: absolute;
-            left: 40px;
-            opacity: 0;
-            color: white;
-            height: 100%;
-            background-color: #63a0b3;
-            top: 0;
-            display: flex;
-            align-items: center;
-            width: 25px;
-            justify-content: center;
-            border-radius: 5px;
-        }        
-        .mihanpanel-page .mpsidebar .nav.mp-nav-tabs.menu-tabs-items li .edit-icon::before
-        {
-            content: "\\f464";
-            font-family: "dashicons";
-        }
-        
-        .mihanpanel-page .mpsidebar .nav.mp-nav-tabs.menu-tabs-items li:hover .movement-icon,
-        .mihanpanel-page .mpsidebar .nav.mp-nav-tabs.menu-tabs-items li:hover .edit-icon,
-        .mihanpanel-page .mpsidebar .nav.mp-nav-tabs.menu-tabs-items li:hover .remove-icon
-        {
-            opacity: 1;
-        }
-
-        .mihanpanel-page .main-panel#tab-field-content .mihanpanel-section-title .edit-content-btn
-        {
-            background: #63a0b3;
-            color: white;
-            border-radius: 5px;
-            padding: 5px 15px 3px;
-            font-size: 1rem;
-            margin: 0 10px;
-            cursor: pointer;
-        }
-        .mihanpanel-page #tab-field-content .edit-fields-wrapper
-        {
-            display: flex;
-            flex-direction: column;
-            position: relative;
-        }
-        .mihanpanel-page #tab-field-content .edit-fields-wrapper.hide
-        {
-            display: none;
-        }
-        .mihanpanel-page #tab-field-content .edit-fields-wrapper .row-field
-        {
-            display: flex;
-            flex-direction: column;
-        }
-        .mihanpanel-page #tab-field-content .edit-fields-wrapper .row-field.hide
-        {
-            display: none;
-        }
-        .mihanpanel-page #tab-field-content .edit-fields-wrapper textarea,
-        .mihanpanel-page #tab-field-content .edit-fields-wrapper select,
-        .mihanpanel-page #tab-field-content .edit-fields-wrapper input:not([type=submit])
-        {
-            width: 80%;
-        }
-        .mihanpanel-page #tab-field-content .edit-fields-wrapper #save_edit_field_content
-        {
-            display: block;
-            background: #63a0b3;
-            width: fit-content;
-            padding: 10px 30px;
-            border-radius: 5px;
-            margin-top: 10px;
-            cursor: pointer;
-            color: white;
-        }
-        `)
-        head.append(style)
+        Object.values(styles).forEach((value, index) => {
+            link = $('<link>'),
+            link.attr('rel', 'stylesheet')
+                .attr('href', value)
+            head.append(link)
+        })
     }
     function showNotification(msg, type='error')
     {
-        alert(msg)
+        let notificationWrapper = liveEditWrapper.find('.notification-wrapper'),
+            notificationItem = $('<div>')
+        notificationItem.addClass('notice-item')
+        notificationItem.attr('type', type)
+        notificationItem.text(msg)
+        notificationWrapper.append(notificationItem)
+        setTimeout(() => {
+            notificationItem.remove()
+        }, 3000);
     }
     // events
     frame.on('load', function () {
@@ -226,7 +104,7 @@ jQuery(document).ready(function ($) {
         iContent.on('click', '.mihanpanel-page .pro-version-notice-emmit', function(e){
             e.preventDefault()
             e.stopPropagation()
-            //TODO: use notification
+            //use notification
             showNotification(mwp_data_lite.texts.pro_version)
         })
         

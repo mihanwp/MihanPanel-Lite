@@ -1,0 +1,15 @@
+.mihanpanel-page .mpsidebar .nav.mp-nav-tabs.menu-tabs-items li .movement-icon
+{
+    right: unset;
+    left: -10px;
+}
+.mihanpanel-page .mpsidebar .nav.mp-nav-tabs.menu-tabs-items li .edit-icon
+{
+    left: unset;
+    right: 40px;
+}
+.mihanpanel-page .mpsidebar .nav.mp-nav-tabs.menu-tabs-items li .remove-icon
+{
+    left: unset;
+    right: 5px;
+}

@@ -855,16 +855,19 @@
     max-width: 100%;
     height: auto;
 }
+.mihanpanel-admin .mw_icon.far,
 .mihanpanel-admin .mw_icon.fa-far
 {
     font-family: 'Font Awesome 5 Free';
     font-weight: 400;
 }
+.mihanpanel-admin .mw_icon.fas,
 .mihanpanel-admin .mw_icon.fa-fas
 {
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
 }
+.mihanpanel-admin .mw_icon.fab,
 .mihanpanel-admin .mw_icon.fa-fab
 {
     font-family: 'Font Awesome 5 Brands';
