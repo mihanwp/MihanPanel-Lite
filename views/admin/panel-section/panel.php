@@ -20,6 +20,11 @@
             <p class="description"><?php esc_html_e("Use theme or other plugins fonts instead of MihanPanel fonts.", "mihanpanel"); ?></p>
         </div>
         <div class="mp_option_single">
+            <label for="mwpl_disable_mwpl_fontawesome"><?php esc_html_e("Disable MihanPanel fontawesome", "mihanpanel"); ?></label>
+            <input style="text-align:left;direction:ltr" id="mwpl_disable_mwpl_fontawesome" type="checkbox" name="mwpl_disable_mwpl_fontawesome" value="1" <?php checked( '1', \mihanpanel\app\options::disable_mihanpanel_fontawesome() );?> />
+            <p class="description"><?php esc_html_e("Don't load mihanpanel fontawesome", "mihanpanel"); ?></p>
+        </div>
+        <div class="mp_option_single">
             <label><?php esc_html_e("User panel page", "mihanpanel"); ?></label>
             <?php
             $current_slug_value = \mihanpanel\app\options::get_panel_slug();

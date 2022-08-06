@@ -170,7 +170,10 @@ class assets
             \mihanpanel\app\assets::load_panel_js();
             do_action('mwpl_load_panel_assets');
         }
-        wp_enqueue_style('mw_fontawesome_css', MW_MIHANPANEL_URL . 'css/fa/css/all.css', '', $plugin_version);
+        if(!options::disable_mihanpanel_fontawesome())
+        {
+            wp_enqueue_style('mw_fontawesome_css', MW_MIHANPANEL_URL . 'css/fa/css/all.css', '', $plugin_version);
+        }
         wp_enqueue_style('mw-profile-widget', MW_MIHANPANEL_URL . 'css/profile-widget.css', '', $plugin_version);
         self::load_fonts_assets();
         do_action('mwpl_load_front_assets');

@@ -59,10 +59,9 @@ body {
 }
 .live-edit-wrapper .toolbar {
     height: 70px;
-    width: 97%;
+    width: 100%;
     background-color: #2b2f3e;
     margin: 0 auto;
-    border-radius: 0 0 15px 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;

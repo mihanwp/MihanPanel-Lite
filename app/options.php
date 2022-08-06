@@ -115,6 +115,10 @@ class options
     {
         return get_option('mwpl_disable_font_family');
     }
+    static function disable_mihanpanel_fontawesome()
+    {
+        return get_option('mwpl_disable_mwpl_fontawesome');
+    }
     static function get_login_button_bg_color()
     {
         $color = get_option('login_button_color');
@@ -150,6 +154,7 @@ class options
         register_setting('mihanpanelsettings', 'mp_bg_image');
         register_setting('mihanpanelsettings', 'login_button_color');
         register_setting('mihanpanelsettings-panel', 'mwpl_disable_font_family');
+        register_setting('mihanpanelsettings-panel', 'mwpl_disable_mwpl_fontawesome');
         register_setting('mihanpanelsettings-panel', 'mp_disable_wordpress_bar');
         register_setting('mihanpanelsettings-panel', 'mp_use_mihan_avatar');
         register_setting('mihanpanelsettings-panel', 'mp_panelslug');

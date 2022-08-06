@@ -1,0 +1,1983 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MihanPanel Pro\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-07-07 18:13+0000\n"
+"PO-Revision-Date: 2022-07-07 19:05+0000\n"
+"Last-Translator: gooloo.de Redaktion\n"
+"Language-Team: Deutsch\n"
+"Language: de-DE\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.2; wp-6.0\n"
+"X-Domain: mihanpanel"
+
+#: app/sundry.php:194
+msgid " Should not be empty!"
+msgstr "Sollte nicht leer sein!"
+
+#: pro/app/sundry.php:38 pro/app/file_uploader.php:160 
+#: pro/app/file_uploader.php:172 pro/app/file_uploader.php:261 
+#: app/form/profile.php:132
+#, php-format
+msgid "%1$s must not be empty."
+msgstr "%1$s darf nicht leer sein."
+
+#: app/options.php:148 pro/app/options.php:169
+#, php-format
+msgid "%1$s off code for your next purchase"
+msgstr "%1$s Rabatt auf deine nächste Bestellung"
+
+#: pro/app/file_uploader.php:212
+#, php-format
+msgid "%1$s: Has error in upload file."
+msgstr "%1$s: Hat Fehler in Uploaddatei."
+
+#: pro/app/sundry.php:68 pro/app/file_uploader.php:194
+#, php-format
+msgid "%1$s: Invalid file size"
+msgstr "%1$s: Ungültige Dateigröße"
+
+#: pro/app/sundry.php:60 pro/app/file_uploader.php:186
+#, php-format
+msgid "%1$s: Invalid file type"
+msgstr "%1$s: Ungültiges Dateiformat"
+
+#: app/handle_view.php:212
+#, php-format
+msgid "%d Day"
+msgstr "%d Tage"
+
+#: pro/app/implemented/kavenegar.php:24
+#, php-format
+msgid "%s Rial"
+msgstr "%s Rial"
+
+#: pro/app/implemented/sabanovin.php:32
+#, php-format
+msgid "%s Toman"
+msgstr "%s Toman"
+
+#: pro/app/handle_view.php:399
+msgid "3D"
+msgstr "3D"
+
+#: app/email.php:138
+#, php-format
+msgid "[%s] Change Account Status"
+msgstr "[%s] Account-Status ändern"
+
+#: pro/app/file_uploader.php:33
+msgid "A PHP extension stopped the file upload."
+msgstr "Eine PHP-Erweiterung hat den Datei-Upload gestoppt."
+
+#: views/admin/panel-section/login_with_sms.php:51
+msgid "According to this documents"
+msgstr "Laut diesen Unterlagen"
+
+#: pro/app/implemented/smsir.php:162 pro/app/implemented/sabanovin.php:85 
+#: pro/app/implemented/kavenegar.php:78 pro/app/implemented/melipayamak.php:104
+msgid "Account Credit"
+msgstr "Account Credit"
+
+#: views/admin/panel-section/email.php:58
+msgid "Account Status"
+msgstr "Kontostatus"
+
+#: views/admin/admin-profile/account-status.php:4
+msgid "Account status"
+msgstr "Kontostatus"
+
+#: pro/app/login.php:91 views/admin/admin-profile/account-status.php:10
+msgid "Activate"
+msgstr "Aktivieren"
+
+#: pro/views/admin/license.php:21
+msgid "Activate License"
+msgstr "Lizenz aktivieren"
+
+#: views/admin/panel-section/login_with_sms.php:10
+msgid "Activate smart login"
+msgstr "Smart-Login aktivieren"
+
+#: views/admin/panel-section/panel.php:10
+msgid "Activate this if you want to hide wp topbar from your site for users"
+msgstr ""
+"Aktivieren Sie dies, wenn Sie die wp-Topbar für Benutzer von Ihrer Website "
+"ausblenden möchten"
+
+#: pro/app/handle_view.php:610 pro/app/handle_view.php:622
+msgid "Activation Code"
+msgstr "Aktivierungscode"
+
+#: views/admin/panel-section/email.php:38
+msgid "Activation Link"
+msgstr "Aktivierungslink"
+
+#: views/admin/panel-section/general.php:26
+msgid "Activation process"
+msgstr "Aktivierungsprozess"
+
+#: app/email.php:147 app/users.php:104 app/users.php:121 pro/app/login.php:85
+msgid "Active"
+msgstr "Aktiv"
+
+#: views/admin/panel-section/login_with_sms.php:23
+msgid "Active sms settings just in persian language"
+msgstr "Aktive SMS-Einstellungen nur in persischer Sprache"
+
+#: views/admin/panel-section/tools.php:18
+msgid "Additional Code"
+msgstr "Zusätzlicher Code"
+
+#: app/adapter/woo.php:12 pro/app/form/admin_user_fields.php:26
+msgid "Address 2"
+msgstr "Adresse 2"
+
+#: app/widget.php:82
+msgid "ago"
+msgstr "her"
+
+#: pro/app/form/admin_user_fields.php:152 
+#: pro/app/form/admin_user_fields.php:311
+msgid "Allow upload this types"
+msgstr "Uploads dieser Typen erlauben"
+
+#: pro/app/ajax.php:146 pro/app/license.php:141 pro/app/license.php:215 
+#: pro/app/license.php:245 app/form/admin_tabs.php:37 
+#: app/form/admin_user_fields.php:54 app/form/profile.php:54 
+#: app/form/profile.php:105
+msgid "An error occurred!"
+msgstr "Ein Fehler ist aufgetreten!"
+
+#: pro/app/implemented/smsir.php:170 pro/app/implemented/kavenegar.php:82
+msgid "API Key"
+msgstr "API Key"
+
+#: pro/app/form/admin_user_fields.php:158 
+#: pro/app/form/admin_user_fields.php:317
+msgid "Audio"
+msgstr "Audio"
+
+#: app/handle_view.php:696 pro/app/handle_view.php:575
+msgid "Auto confirm phone number after user register"
+msgstr ""
+"Automatische Bestätigung der Telefonnummer nach der Benutzerregistrierung"
+
+#: app/options.php:12
+msgid "Automatic activation"
+msgstr "Automatische Aktivierung"
+
+#: views/admin/panel-section/login_with_sms.php:7
+msgid "Automatic login by phone number, email or username"
+msgstr "Automatischer Login über Telefonnummer, E-Mailadresse oder Nutzername"
+
+#: pro/app/avatar.php:118
+msgid "Avatar successfully deleted!"
+msgstr "Avater erfolgreich gelöscht!"
+
+#: pro/app/avatar.php:61
+msgid "Avatar successfully saved!"
+msgstr "Avatar erfolgreich gespeichert!"
+
+#: pro/app/smart_login.php:169
+msgid "Back"
+msgstr "Zurück"
+
+#: parts/dashboard.php:3
+msgid "Back to Home Page"
+msgstr "Zurück zur Startseite"
+
+#: app/handle_view.php:480 pro/app/handle_view.php:350
+msgid "Background Color of Login and Register Error Messagebox"
+msgstr "Hintergrundfarbe des Login- und Registrierungs-Fehlermeldungsfelds"
+
+#: app/handle_view.php:435
+msgid "Background Color of Login and Register Info Messagebox"
+msgstr "Hintergrundfarbe des Login- und Registrierungs-Infofelds"
+
+#: pro/app/handle_view.php:320
+msgid "Background Color of Login and Register Messagebox"
+msgstr "Hintergrundfarbe des Login- und Registrierungs-Nachrichtenfelds"
+
+#: parts/edit-profile.php:73
+msgid "Bio"
+msgstr "Bio"
+
+#: views/admin/panel-section/panel.php:103
+msgid "Blog Section"
+msgstr "Blogsektion"
+
+#: app/pro_version_detail.php:10 pro/app/options.php:52
+msgid "Both"
+msgstr "Beide"
+
+#: pro/app/handle_view.php:257
+msgid "Center"
+msgstr "Mittig"
+
+#: views/admin/admin-profile/account-status.php:8
+msgid "Change account status"
+msgstr "Accountstatus ändern"
+
+#: views/admin/panel-section/email.php:48
+msgid "Change account status email subject"
+msgstr "E-Mail-Betreff zum Kontostatus ändern"
+
+#: views/admin/panel-section/email.php:45
+msgid "Change Accoutn Status Email"
+msgstr "E-Mail zum Kontostatus ändern"
+
+#: rename-wp-login.php:126
+msgid "Change login url"
+msgstr "Login-URL ändern"
+
+#: parts/change-password.php:2
+msgid "Change password"
+msgstr "Passwort ändern"
+
+#: app/user_fields.php:27
+msgid "Checkbox"
+msgstr "Checkbox"
+
+#: app/form/admin_tabs.php:138
+msgid "Choose"
+msgstr "Auswählen"
+
+#: pro/app/handle_view.php:728 pro/app/presenter/user_fields.php:104
+msgid "Choose an item"
+msgstr "Element auswählen"
+
+#: pro/app/presenter/user_fields.php:178
+msgid "Choose File"
+msgstr "Datei auswählen"
+
+#: pro/app/implemented/smsir.php:184 pro/app/implemented/smsir.php:186
+msgid "Choose gateway number"
+msgstr "Gatewaynummer auswählen"
+
+#: pro/app/presenter/user_fields.php:31
+msgid "Choose Image"
+msgstr "Bild auswählen"
+
+#: views/admin/panel-section/panel.php:50
+msgid "Choose User Panel Theme"
+msgstr "Panel-Theme auswählen"
+
+#: app/form/admin_tabs.php:152
+msgid "Choose your item"
+msgstr "Wähle dein Artikel"
+
+#: app/email.php:71
+msgid "Click on below link to activate account"
+msgstr "Auf den Link unten klicken, um dein Account zu aktivieren"
+
+#: app/admin_menu.php:81 pro/app/admin_menu.php:25
+msgid "Close"
+msgstr "Schließen"
+
+#: views/admin/panel-section/general.php:53
+msgid "Color of Login and Register button"
+msgstr "Farbe der Anmelde- und Registrierungsschaltfläche"
+
+#: app/handle_view.php:375 pro/app/handle_view.php:280
+msgid "Color of Login and Register button text"
+msgstr "Farbe des Texts bei Registrierung und Anmeldung"
+
+#: app/handle_view.php:465 pro/app/handle_view.php:340
+msgid "Color of Login and Register Error Messagebox Text"
+msgstr "Farbe der Mitteilungsbox bei Registrierung und Anmeldung"
+
+#: app/handle_view.php:390 pro/app/handle_view.php:290
+msgid "Color of Login and Register fields"
+msgstr "Farbe der Login- und Registrierungsfelder"
+
+#: app/handle_view.php:420 pro/app/handle_view.php:310
+msgid "Color of Login and Register fields text"
+msgstr "Farbe der Login- und Registrierungsfeldertexte"
+
+#: app/handle_view.php:450
+msgid "Color of Login and Register Info Messagebox Text"
+msgstr "Farbe der Login- und Registrierungsfelder-Mitteilungsbox"
+
+#: app/handle_view.php:405 pro/app/handle_view.php:300
+msgid "Color of Login and Register labels"
+msgstr "Farbe der Login- und Registrierungsfelderlabel"
+
+#: pro/app/handle_view.php:330
+msgid "Color of Login and Register Messagebox Text"
+msgstr "Farbe der Login- und Registrierungsfeldermitteilungsboxtext"
+
+#: views/admin/panel-section/panel.php:73
+msgid "Color scheme"
+msgstr "Farbthema"
+
+#: pro/app/form/admin_user_fields.php:175 
+#: pro/app/form/admin_user_fields.php:334
+msgid "Compressed"
+msgstr "Komprimiert"
+
+#: app/form/admin_tabs.php:136
+msgid "Content"
+msgstr "Inhalt"
+
+#: app/ajax.php:100
+msgid "Could not be deleted."
+msgstr "Konnte nicht gelöscht werden."
+
+#: views/admin/panel-section/tools.php:11
+msgid "Create"
+msgstr "Erstellen"
+
+#: views/admin/panel-section/notification.php:11 
+#: views/admin/panel-section/notification.php:16 
+#: views/admin/panel-section/notification.php:21 
+#: views/admin/panel-section/notification.php:26 
+#: views/admin/panel-section/notification.php:31 
+#: views/admin/panel-section/notification.php:36 
+#: views/admin/panel-section/notification.php:41 
+#: views/admin/panel-section/notification.php:46
+msgid "Create a notification to show to your users in their dashboard."
+msgstr ""
+"Erstelle eine Benachrichtigung, die Ihren Benutzern in ihrem Dashboard "
+"angezeigt wird."
+
+#: app/admin_menu.php:81 pro/app/admin_menu.php:25
+msgid "Create new field"
+msgstr "Neues Feld erstellen"
+
+#: views/admin/panel-section/tools.php:9
+msgid "Create user panel page"
+msgstr "User-Panelseite erstellen"
+
+#: app/form/admin_tabs.php:153 app/form/admin_tabs.php:163
+msgid "Custom Shortcode"
+msgstr "Eigener Shortcode"
+
+#: pro/app/handle_view.php:230
+msgid "Dark"
+msgstr "Dunkel"
+
+#: views/admin/panel-section/panel.php:82
+msgid "Dashboard Widgets"
+msgstr "Dashboard Widgets"
+
+#: app/user_fields.php:39
+msgid "Date Picker"
+msgstr "Datumsauswahl"
+
+#: pro/app/login.php:91 views/admin/admin-profile/account-status.php:11
+msgid "Deactivate"
+msgstr "Deaktivieren"
+
+#: pro/views/admin/license.php:22
+msgid "Deactivate License"
+msgstr "Lizenz deaktivieren"
+
+#: pro/app/handle_view.php:377
+msgid "Default"
+msgstr "Standard"
+
+#: pro/app/presenter/user_fields.php:165
+msgid "Delete File"
+msgstr "Datei löschen"
+
+#: views/admin/panel-section/login_with_sms.php:30
+msgid "Disable email field"
+msgstr "E-Mailfeld deaktivieren"
+
+#: views/admin/panel-section/login_with_sms.php:40
+msgid "Disable password field"
+msgstr "Passwortfeld deaktivieren"
+
+#: views/admin/panel-section/login_with_sms.php:27
+msgid "Disable register form fields"
+msgstr "Registrierungsfelder deaktivieren"
+
+#: views/admin/panel-section/login_with_sms.php:35
+msgid "Disable username field"
+msgstr "Benutzernamenfeld deaktivieren"
+
+#: pro/app/handle_view.php:609 pro/app/handle_view.php:621 
+#: pro/app/presenter/user_fields.php:74 views/admin/panel-section/email.php:22 
+#: views/admin/panel-section/email.php:42 
+#: views/admin/panel-section/email.php:62
+msgid "Display Name"
+msgstr "Anzeigename"
+
+#: app/admin_menu.php:72 pro/app/admin_menu.php:17
+msgid "Do you want to save changes?"
+msgstr "Möchtest du die Änderungen speichern?"
+
+#: pro/app/presenter/user_fields.php:22
+msgid "Do you want to save this change?"
+msgstr "Möchtest du diese Änderung speichern?"
+
+#: pro/app/handle_view.php:597
+msgid "Don't found any SMS provider!"
+msgstr "Kein SMS Anbieter gefunden!"
+
+#: views/admin/panel-section/panel.php:18
+msgid "Don't use MihanPanel fonts"
+msgstr "MihanPanel Fonts nicht verwenden"
+
+#: pro/app/handle_view.php:801 pro/app/options.php:258 
+#: pro/views/user/validate_phone.php:30
+msgid "Dynamic Code"
+msgstr "Dynamischer Code"
+
+#: views/admin/panel-section/email.php:65
+msgid "Dynamic code"
+msgstr "Dynamischer Code"
+
+#: pro/app/ajax.php:184 pro/app/ajax.php:221 pro/app/ajax.php:358 
+#: pro/app/ajax.php:412
+msgid "Dynamic code did not create for your account!"
+msgstr "Dynamischer Code wurde für dein Konto nicht erstellt"
+
+#: views/admin/panel-section/email.php:69
+msgid "Dynamic code email subject"
+msgstr "Dynamischer Code E-Mail-Betreff"
+
+#: pro/app/smart_login.php:70
+msgid "Dynamic code must not be empty"
+msgstr "Dynamischer Code darf nicht leer sein"
+
+#: pro/app/ajax.php:371 pro/app/ajax.php:426
+msgid "Dynamic code send for you!"
+msgstr "Dynamischer Code wurde dir zugesendet!"
+
+#: pro/app/ajax.php:177 pro/app/ajax.php:213 pro/app/ajax.php:345 
+#: pro/app/ajax.php:405
+msgid "Dynamic code was generated for you!"
+msgstr "Dynamischer Code wurde für dich erstellt!"
+
+#: pro/app/ajax.php:200
+msgid "Dynamic code was sent to your email"
+msgstr "Dynamischer Code wurde dir per E-Mail zugesendet"
+
+#: pro/app/ajax.php:234
+msgid "Dynamic code was sent to your phone"
+msgstr "Dynamischer Code wurde dir an dein Handy gesendet"
+
+#: pro/app/ajax.php:448
+msgid "Dynamic code was wrong"
+msgstr "Dynamischer Code ist falsch"
+
+#: pro/app/login.php:266
+msgid "Dynamic code was wrong!"
+msgstr "Dynamischer Code ist falsch!"
+
+#: views/admin/panel-section/login_with_sms.php:61
+msgid "Dynamic login code sms content"
+msgstr "Dynamischer Code SMS-Inhalt"
+
+#: parts/sidebar.php:12 app/widget/profile.php:42
+msgid "Edit Profile"
+msgstr "Profil bearbeiten"
+
+#: parts/edit-profile.php:2
+msgid "Edit User Profile"
+msgstr "Nutzerprofil bearbeiten"
+
+#: app/user_fields.php:19
+msgid "Email"
+msgstr "E-Mail"
+
+#: views/admin/panel-section/email.php:10 
+#: views/admin/panel-section/email.php:32 
+#: views/admin/panel-section/email.php:52 
+#: views/admin/panel-section/email.php:73
+msgid "Email Content"
+msgstr "E-Mailinhalt"
+
+#: app/admin_menu.php:31
+msgid "Emails"
+msgstr "E-Mails"
+
+#: pro/views/user/smart_login.php:5 pro/views/user/login_dynamic_code.php:5
+msgid "Enter Dynamic Password"
+msgstr "Dynamisches Passwort eingeben"
+
+#: pro/app/smart_login.php:70 pro/app/smart_login.php:92 
+#: pro/app/smart_login.php:110 pro/app/login.php:162 pro/app/login.php:167 
+#: pro/app/login.php:172 pro/app/login.php:221 pro/app/login.php:239
+msgid "Error"
+msgstr "Fehler"
+
+#: views/admin/settings.php:23
+msgid "Ertano"
+msgstr "Ertano"
+
+#: app/widget.php:70
+msgid "ertano.com"
+msgstr "Ertano.com"
+
+#: app/widget.php:41
+msgid "Everything on your site is OK."
+msgstr "Alles OK auf deiner Seite."
+
+#: pro/app/file_uploader.php:32
+msgid "Failed to write file to disk."
+msgstr "Fehler beim schreiben der Datei auf die Disk."
+
+#: app/form/admin_tabs.php:110 pro/app/form/admin_tabs_fields.php:54 
+#: pro/app/form/admin_tabs_fields.php:55
+msgid "Field ID"
+msgstr "Feld ID"
+
+#: app/form/admin_user_fields.php:70 app/form/admin_user_fields.php:147
+msgid "Field Id"
+msgstr "Feld ID"
+
+#: pro/app/form/admin_user_fields.php:224 
+#: pro/app/form/admin_user_fields.php:289
+msgid "Field id"
+msgstr "Feld-ID"
+
+#: app/form/admin_user_fields.php:88
+msgid "Fields"
+msgstr "Felder"
+
+#: app/user_fields.php:43
+msgid "File Uploader"
+msgstr "Dateiuploader"
+
+#: parts/edit-profile.php:41 views/admin/panel-section/email.php:40 
+#: views/admin/panel-section/email.php:60
+msgid "First Name"
+msgstr "Vorname"
+
+#: app/form/admin_tabs.php:97
+msgid "FontAwesome"
+msgstr "Font Awesome"
+
+#: views/admin/panel-section/register.php:18
+msgid "For disable this feature leave this section empty!"
+msgstr "Zum deaktivieren, leer lassen!"
+
+#: views/admin/panel-section/general.php:47
+msgid "Form Position"
+msgstr "Formularposition"
+
+#: pro/app/implemented/sabanovin.php:93
+msgid "Gateway API Key"
+msgstr "Gateway API Key"
+
+#: pro/app/implemented/sabanovin.php:89 pro/app/implemented/kavenegar.php:86 
+#: pro/app/implemented/melipayamak.php:116
+msgid "Gateway Number"
+msgstr "Gateway Nummer"
+
+#: pro/views/user/smart_login.php:7 pro/views/user/login_dynamic_code.php:6
+msgid "Get Code"
+msgstr "Code erhalten"
+
+#: pro/views/admin/license.php:23
+msgid "Get License Key"
+msgstr "Lizenzkey erhalten"
+
+#: pro/app/handle_view.php:19 pro/app/license.php:97
+msgid "Get Started"
+msgstr "Jetzt starten"
+
+#: pro/app/smart_login.php:172
+msgid "Has error"
+msgstr "hat Fehler"
+
+#: pro/app/avatar.php:121
+msgid "Has error in deleting avatar."
+msgstr "hat Fehler bei Avatarlöschung"
+
+#: pro/app/avatar.php:64
+msgid "Has error in set avatar data"
+msgstr "hat Fehler bei setzen der Avatardaten"
+
+#: pro/app/avatar.php:48
+msgid "Has error in uploading media"
+msgstr "hat Fehler beim hochladen von Medien"
+
+#: pro/app/ajax.php:275 pro/app/ajax.php:287 pro/app/ajax.php:300 
+#: pro/app/license.php:201 pro/app/license.php:233
+msgid "Has Error!"
+msgstr "hat Fehler!"
+
+#: app/ajax.php:17 app/ajax.php:80 app/ajax.php:107
+msgid "Has error!"
+msgstr "hat Fehler!"
+
+#: pro/app/ajax.php:195
+msgid "Has problem in send dynamic code process"
+msgstr "hat Fehler beim senden des dynamischen Codes"
+
+#: pro/app/ajax.php:229 pro/app/ajax.php:366
+msgid "Has problem in send sms process"
+msgstr "hat Fehler beim senden der SMS"
+
+#: views/admin/panel-section/panel.php:100
+msgid "Hide Awesome Support widget"
+msgstr "Awesome Support Widget ausschalten"
+
+#: views/admin/panel-section/panel.php:88
+msgid "Hide Comment widget"
+msgstr "Kommentarwidget deaktivieren"
+
+#: views/admin/panel-section/panel.php:96
+msgid "Hide EDD widget"
+msgstr "EDD Widget deaktivieren"
+
+#: views/admin/panel-section/panel.php:84
+msgid "Hide register day count widget"
+msgstr "Deaktiviere Anzahl an Tagen-Widget"
+
+#: views/admin/panel-section/panel.php:8
+msgid "Hide topbar"
+msgstr "Topbar verstecken"
+
+#: views/admin/panel-section/panel.php:92
+msgid "Hide Woocommerce widget"
+msgstr "WooCommerce Widget deaktivieren"
+
+#: parts/dashboard.php:9
+#, php-format
+msgid "Howdy, %1$s!"
+msgstr "Howdy, %1$s!"
+
+#. Author URI of the plugin
+msgid "https://mihanwp.com"
+msgstr "https://mihanwp.com"
+
+#. URI of the plugin
+msgid "https://mihanwp.com/mihanpanel/"
+msgstr "https://mihanwp.com"
+
+#: app/form/admin_tabs.php:54 app/form/admin_tabs.php:167 
+#: app/form/admin_tabs.php:168
+msgid "Icon"
+msgstr "Icon"
+
+#: pro/app/implemented/kavenegar.php:94 pro/app/implemented/melipayamak.php:123
+msgid ""
+"If Use this feature, just enter mihanpanel pre-defined variables in new line "
+"according the variables order defined in sms provider templates for sms "
+"content field value; like this:"
+msgstr ""
+"Wenn Sie diese Funktion verwenden, geben Sie einfach die vordefinierten "
+"mihanpanel-Variablen in eine neue Zeile ein, entsprechend der "
+"Variablenreihenfolge, die in den SMS-Provider-Vorlagen für den Wert des SMS-"
+"Inhaltsfelds definiert ist; in etwa:"
+
+#: pro/app/implemented/smsir.php:177
+msgid ""
+"If Use this feature, sms content field value must be like this (Put each "
+"item in new line):"
+msgstr ""
+"Wenn Sie diese Funktion verwenden, muss der Wert des SMS-Inhaltsfelds wie "
+"folgt sein (Jedes Element in eine neue Zeile einfügen):"
+
+#: views/admin/panel-section/login_with_sms.php:51
+msgid ""
+"If your sms service provider not exists in this list, ask theme to provide "
+"you with the relevant plugin."
+msgstr ""
+"Wenn Ihr SMS-Dienstanbieter nicht in dieser Liste vorhanden ist, bitten Sie "
+"das Thema, Ihnen das relevante Plugin zur Verfügung zu stellen."
+
+#: pro/app/form/admin_user_fields.php:163 
+#: pro/app/form/admin_user_fields.php:322
+msgid "Image"
+msgstr "Bild"
+
+#: app/email.php:151 app/users.php:104 app/users.php:121 pro/app/login.php:85
+msgid "Inactive"
+msgstr "Inaktiv"
+
+#: pro/app/smart_login.php:110 pro/app/login.php:221 pro/app/login.php:239
+msgid "Incorrecnt login data"
+msgstr "Falsche Login-Angaben"
+
+#: pro/app/implemented/smsir.php:180
+msgid ""
+"Instead of \"username\" and \"verification_code\" user your own field_name "
+"that defined in your sms provider account."
+msgstr ""
+"Anstelle von \"Benutzername\" und \"Bestätigungscode\" verwenden Sie Ihren "
+"eigenen Feldnamen, der in Ihrem SMS-Anbieterkonto definiert ist."
+
+#: pro/app/smart_login.php:92
+msgid "Invalid dynamic code"
+msgstr "Falscher dynamischer Code"
+
+#: pro/app/login.php:259
+msgid "Invalid dynamic code!"
+msgstr "Falscher dynamischer Code!"
+
+#: pro/app/ajax.php:291 pro/app/ajax.php:304
+msgid "Invalid license key"
+msgstr "Falscher Lizenzkey"
+
+#: pro/app/ajax.php:38
+msgid "Invalid phone number"
+msgstr "Falsche Telefonnummer"
+
+#: pro/app/login.php:162
+msgid "Invalida phone number!"
+msgstr "Falsche Telefonnummer!"
+
+#: pro/app/handle_view.php:427
+msgid "IRANSans"
+msgstr "IRANSans"
+
+#: pro/app/handle_view.php:416
+msgid "IRANYekan"
+msgstr "IRANYekan"
+
+#: views/admin/panel-section/panel.php:105
+msgid "Is blog section enable?"
+msgstr "Blogsektion aktivieren?"
+
+#: pro/app/implemented/kavenegar.php:88
+msgid "It's can be empty"
+msgstr "Darf nicht leer sein"
+
+#: pro/app/form/admin_user_fields.php:386
+msgid "Just in profile"
+msgstr "Nur in Profil"
+
+#: pro/app/form/admin_user_fields.php:387
+msgid "Just in register form"
+msgstr "Nur im Registrierungsformular"
+
+#: pro/app/sms_provider.php:70
+msgid "Kavenegar"
+msgstr "Kavenegar"
+
+#: parts/edit-profile.php:49 views/admin/panel-section/email.php:41 
+#: views/admin/panel-section/email.php:61
+msgid "Last Name"
+msgstr "Nachname"
+
+#: app/widget.php:71
+#, php-format
+msgid "Latest news in %s"
+msgstr "Letzte Beiträge in %s"
+
+#: pro/app/handle_view.php:268
+msgid "Left"
+msgstr "Links"
+
+#: pro/app/license.php:116
+msgid "License"
+msgstr "Lizenz"
+
+#: pro/app/license.php:253
+msgid "License is inactive"
+msgstr "Lizenz ist inaktiv"
+
+#: pro/app/license.php:187
+msgid "License is inactive."
+msgstr "Lizenz ist inaktiv."
+
+#: pro/app/handle_view.php:16
+#, php-format
+msgid "License is not active! Please activate it from %s Thanks!"
+msgstr "Lizenz ist inaktiv! Bitte aktiviere es von %s, Danke!"
+
+#: pro/views/admin/license.php:11
+msgid "License Key"
+msgstr "Lizenzschlüssel"
+
+#: pro/app/license.php:226
+msgid ""
+"License key is invalid or the number of activation has exceeded the allowed "
+"limit."
+msgstr ""
+"Der Lizenzschlüssel ist ungültig oder die Anzahl der Aktivierungen hat das "
+"zulässige Limit überschritten."
+
+#: pro/app/handle_view.php:219
+msgid "Light"
+msgstr "Hell"
+
+#: app/form/admin_tabs.php:144
+msgid "Link"
+msgstr "Link"
+
+#: app/form/admin_tabs.php:50
+msgid "Link / Shortcode"
+msgstr "Link / Shortcode"
+
+#: app/form/admin_tabs.php:139
+msgid "Link to other page"
+msgstr "Link zu anderer Seite"
+
+#: app/sundry.php:10 app/widget/profile.php:58 
+#: views/admin/panel-section/general.php:10
+msgid "Login"
+msgstr "Login"
+
+#: app/admin_menu.php:26 views/admin/panel-section/general.php:40
+msgid "Login & Register"
+msgstr "Anmelden & Registrieren"
+
+#: pro/app/smart_login.php:183
+msgid "Login / Register"
+msgstr "Anmelden / Registrieren"
+
+#: views/admin/panel-section/general.php:80
+msgid "Login and Register form background"
+msgstr "Login und Registrierung Hintergrund"
+
+#: views/admin/panel-section/general.php:66
+msgid "Login and Register form Logo"
+msgstr "Logo Anmelden und Registrieren-Formular"
+
+#: views/admin/panel-section/general.php:44
+msgid "Login and Register form theme"
+msgstr "Anmelden und Registrieren-Formularthema"
+
+#: views/admin/panel-section/general.php:51
+msgid "Login Button Color"
+msgstr "Login Button Farbe"
+
+#: app/handle_view.php:373 pro/app/handle_view.php:278
+msgid "Login Button Text Color"
+msgstr "Login Button Textfarbe"
+
+#: app/handle_view.php:478 pro/app/handle_view.php:348
+msgid "Login Error Messagebox Background Color"
+msgstr "Login Button Fehlernachricht Hintergrundfarbe"
+
+#: app/handle_view.php:463 pro/app/handle_view.php:338
+msgid "Login Error Messagebox Text Color"
+msgstr "Login Button Nachrichtentextfarbe"
+
+#: app/handle_view.php:403 pro/app/handle_view.php:298
+msgid "Login Field's Label Color"
+msgstr "Loginfeld Labelfarbe"
+
+#: app/handle_view.php:388 pro/app/handle_view.php:288
+msgid "Login Fields Background Color"
+msgstr "Loginfeld Hintergrundfarbe"
+
+#: app/handle_view.php:418 pro/app/handle_view.php:308
+msgid "Login Fields Text Color"
+msgstr "Loginfeld Textfarbe"
+
+#: views/admin/panel-section/general.php:21
+msgid "Login form message"
+msgstr "Loginfeld-Nachricht"
+
+#: views/admin/panel-section/general.php:42
+msgid "Login Form Theme"
+msgstr "Login Formulartheme"
+
+#: app/handle_view.php:433 pro/app/handle_view.php:318
+msgid "Login Info Messagebox Background Color"
+msgstr "Login Info Nachrichtenboxhintergrundfarbe"
+
+#: app/handle_view.php:448 pro/app/handle_view.php:328
+msgid "Login Info Messagebox Text Color"
+msgstr "Login Info Nachrichtenboxtextfarbe"
+
+#: app/config.php:224
+msgid "Login Page"
+msgstr "Loginseite"
+
+#: rename-wp-login.php:132
+msgid "Login page address"
+msgstr "Loginseiten-URL"
+
+#: pro/app/smart_login.php:167
+msgid "Login with dynamic code"
+msgstr "Login mit dynamischen Code"
+
+#: app/admin_menu.php:30 app/pro_version_detail.php:9 pro/app/options.php:51
+msgid "Login with SMS"
+msgstr "Login mit SMS"
+
+#: views/admin/panel-section/general.php:15
+msgid "Logo"
+msgstr "Logo"
+
+#: views/admin/panel-section/general.php:76
+msgid "Logo Height (px)"
+msgstr "Logohöhe (px)"
+
+#: views/admin/panel-section/general.php:72
+msgid "Logo Width (px)"
+msgstr "Logobreite (px)"
+
+#: parts/sidebar.php:21 app/widget/profile.php:51
+msgid "Logout"
+msgstr "Abmelden"
+
+#: app/options.php:14
+msgid "Manual Activation"
+msgstr "Manuelle Aktivierung"
+
+#: app/middlewares.php:68
+#, php-format
+msgid ""
+"Max item count is 4 in lite version. Upgrade to %s for disable this "
+"restriction."
+msgstr ""
+"Die maximale Anzahl von Elementen beträgt 4 in der Lite-Version. Führen Sie "
+"ein Upgrade auf %s durch, um diese Einschränkung zu deaktivieren."
+
+#: pro/app/form/admin_user_fields.php:186 
+#: pro/app/form/admin_user_fields.php:342
+msgid "Maximum file size"
+msgstr "Maximale Dateigröße"
+
+#: pro/app/form/admin_user_fields.php:186 
+#: pro/app/form/admin_user_fields.php:342
+msgid "MB"
+msgstr "MB"
+
+#: pro/app/sms_provider.php:62
+msgid "Meli Payamak"
+msgstr "Nationale SMS"
+
+#: app/form/admin_tabs.php:132 app/form/admin_tabs.php:133
+msgid "Menu Title"
+msgstr "Menütitel"
+
+#: app/form/admin_tabs.php:46
+msgid "Menu title"
+msgstr "Menütitel"
+
+#: pro/views/admin/live-view/panel-general.php:11 
+#: pro/views/admin/live-view/panel-general.php:16
+msgid "Message Text..."
+msgstr "Nachrichtentext..."
+
+#: app/hooks.php:164 app/emwidg/emwidg_mihanpanel.php:26
+msgid "Mihan Panel"
+msgstr "Mihan Panel"
+
+#: pro/app/license.php:92
+#, php-format
+msgid ""
+"Mihan Panel plugin is not active! For using all features enter license key "
+"from %s Thanks!"
+msgstr ""
+"Mihan Panel Plugin ist nicht aktiv! Um alle Funktionen nutzen zu können, "
+"geben Sie den Lizenzschlüssel von %s ein. Danke!"
+
+#: app/gutenberg.php:17 app/admin_menu.php:18
+msgid "MihanPanel"
+msgstr "MihanPanel"
+
+#: pro/app/license.php:193 pro/app/license.php:223
+msgid "MihanPanel is active with this license key"
+msgstr "MihanPanel ist mit diesem Lizenzschlüssel aktiv"
+
+#. Name of the plugin
+#: pro/app/config.php:11
+msgid "MihanPanel Pro"
+msgstr "MihanPanel Pro"
+
+#: pro/app/handle_view.php:15 pro/app/license.php:91
+msgid "MihanPanel Pro > License"
+msgstr "MihanPanel Pro > Lizenz"
+
+#: app/widget.php:11
+msgid "MihanPanel Status"
+msgstr "MihanPanel Status"
+
+#. Author of the plugin
+msgid "MihanWP"
+msgstr "MihanWP"
+
+#: pro/app/file_uploader.php:31
+msgid "Missing a temporary folder"
+msgstr "Temporärer Ordner fehlt"
+
+#: pro/app/license.php:172
+msgid "Missing license key"
+msgstr "Lizenzschlüssel fehlt"
+
+#: views/admin/panel-section/login_with_sms.php:57
+msgid "Mobile validation code sms content"
+msgstr "SMS-Code Validierungsinhalt"
+
+#: pro/app/handle_view.php:388
+msgid "Modern"
+msgstr "Modern"
+
+#: app/widget.php:91
+msgid "More Articles"
+msgstr "Mehr Beiträge"
+
+#: app/config.php:96
+msgid "My Purchases"
+msgstr "Meine Einkäufe"
+
+#: rename-wp-login.php:164
+msgid "Network Settings"
+msgstr "Netzwerkeinstellungen"
+
+#: rename-wp-login.php:107
+msgid "Networkwide default"
+msgstr "Netzwerkweiter Standard"
+
+#: views/admin/settings.php:24
+msgid "New Airlines"
+msgstr "New Airlines"
+
+#: app/form/admin_tabs.php:64 app/form/admin_user_fields.php:88
+msgid "New Field"
+msgstr "Neues Feld"
+
+#: parts/change-password.php:32 parts/edit-profile.php:58
+msgid "New password"
+msgstr "Neues Passwort"
+
+#: parts/db-page.php:27
+msgid "No Access!"
+msgstr "Kein Zugriff!"
+
+#: pro/app/handle_view.php:733
+msgid "No any category find"
+msgstr "Keine Kategorie gefunden"
+
+#: views/admin/panel-section/panel.php:42
+msgid "No any page exists"
+msgstr "Keine Seite vorhanden"
+
+#: app/form/admin_tabs.php:158
+msgid "No any shortcodes found."
+msgstr "Keine Shortcodes gefunden."
+
+#: pro/app/ajax.php:257
+msgid "No any user found by this phone number"
+msgstr "Kein Nutzer mit dieser Telefonnummer gefunden"
+
+#: pro/app/ajax.php:115
+msgid "No any user found. Please register by your phone number first."
+msgstr "Kein Nutzer gefunden. Bitte zunächst mit Telefonnummer registrieren."
+
+#: pro/app/ajax.php:351
+msgid "No any valid phone number for this username!"
+msgstr "Keine valide Telefonnummer für diesen Nutzer gefunden."
+
+#: pro/app/file_uploader.php:30
+msgid "No file was uploaded"
+msgstr "Es wurde keine Datei hochgeladen."
+
+#: app/widget.php:79
+msgid "No item"
+msgstr "Keine Auswahl"
+
+#: pro/app/implemented/smsir.php:163
+msgid "Not connected to sms provider"
+msgstr "Nicht mit SMS-Anbieter verbunden"
+
+#: app/ajax.php:71 app/ajax.php:153
+msgid "Nothing updated."
+msgstr "Nichts aktualisiert."
+
+#: views/admin/panel-section/notification.php:9
+msgid "Notification 1"
+msgstr "Benachrichtigung 1"
+
+#: views/admin/panel-section/notification.php:14
+msgid "Notification 2"
+msgstr "Benachrichtigung 2"
+
+#: views/admin/panel-section/notification.php:19
+msgid "Notification 3"
+msgstr "Benachrichtigung 3"
+
+#: views/admin/panel-section/notification.php:24
+msgid "Notification 4"
+msgstr "Benachrichtigung 4"
+
+#: views/admin/panel-section/notification.php:29
+msgid "Notification 5"
+msgstr "Benachrichtigung 5"
+
+#: views/admin/panel-section/notification.php:34
+msgid "Notification 6"
+msgstr "Benachrichtigung 6"
+
+#: views/admin/panel-section/notification.php:39
+msgid "Notification 7"
+msgstr "Benachrichtigung 7"
+
+#: views/admin/panel-section/notification.php:44
+msgid "Notification 8"
+msgstr "Benachrichtigung 8"
+
+#: app/admin_menu.php:29 views/admin/panel-section/notification.php:2
+msgid "Notifications"
+msgstr "Benachrichtigungen"
+
+#: app/user_fields.php:23
+msgid "Numeral"
+msgstr "Numerisch"
+
+#: views/admin/panel-section/login_with_sms.php:14
+msgid "Obtain phone number in panel"
+msgstr "Telefonnummer im Panel erheben"
+
+#: views/admin/panel-section/panel.php:58
+msgid "Off Code"
+msgstr "Rabattcode"
+
+#: views/admin/panel-section/panel.php:63
+msgid "Off Code percentage"
+msgstr "Rabattcode Prozentsatz"
+
+#: views/admin/panel-section/panel.php:65
+msgid "Off Code percentage will show in user panel. ex => 25%"
+msgstr "Prozentsatz wird im Panel angezeigt, z.B. 25%"
+
+#: views/admin/panel-section/panel.php:68
+msgid "Off Code text"
+msgstr "Rabattcode Text"
+
+#: views/admin/panel-section/panel.php:60
+msgid "Off Code that you want to show in user panel"
+msgstr "Rabattcode, den du im Panel anzeigen möchtest"
+
+#: parts/dashboard.php:28
+#, php-format
+msgid "Off code: %1$s"
+msgstr "Rabattcode: %1$s"
+
+#: app/shortcode.php:35
+msgid "Open Menu"
+msgstr "Menu öffnen"
+
+#: app/form/admin_user_fields.php:119 app/form/admin_user_fields.php:158
+msgid "Optional"
+msgstr "Optional"
+
+#: app/panel.php:26
+msgid "Order Details"
+msgstr "Bestelldetails"
+
+#: views/admin/panel-section/panel.php:53
+msgid "Panel Font Family"
+msgstr "Panel Schriftart"
+
+#: app/admin_menu.php:91
+msgid "Panel Menus"
+msgstr "Panelmenüs"
+
+#: app/widget.php:36
+#, php-format
+msgid "Panel page not exists. You can create it from this section: %s"
+msgstr ""
+"Panel-Seite existiert nicht. Sie können es in diesem Abschnitt erstellen: %s"
+
+#: views/admin/panel-section/panel.php:48
+msgid "Panel Theme"
+msgstr "Panelthema"
+
+#: app/sundry.php:46 pro/app/implemented/melipayamak.php:112
+msgid "Password"
+msgstr "Passwort"
+
+#: app/sundry.php:58
+msgid "Password must not empty"
+msgstr "Passwort darf nicht leer sein"
+
+#: parts/change-password.php:38 parts/edit-profile.php:64
+msgid "Password repeat"
+msgstr "Passwort wiederholen"
+
+#: app/form/profile.php:57
+msgid "Password successfully changed!"
+msgstr "Passwort erfolgreich geändert!"
+
+#: views/admin/panel-section/login_with_sms.php:18
+msgid "Password Type"
+msgstr "Passworttyp"
+
+#: app/form/profile.php:45 app/form/profile.php:97
+msgid "Passwords don't match!"
+msgstr "Passwörter stimmen nicht überein!"
+
+#: pro/app/form/admin_user_fields.php:171 
+#: pro/app/form/admin_user_fields.php:330
+msgid "PDF"
+msgstr "PDF"
+
+#: pro/app/login.php:66 pro/app/login.php:97 
+#: pro/views/user/validate_phone.php:22 pro/app/presenter/user_fields.php:56
+msgid "Phone Number"
+msgstr "Telefonnummer"
+
+#: pro/app/login.php:172
+msgid "Phone Number field must not be empty!"
+msgstr "Telefonnummer-Feld darf nicht leer sein!"
+
+#: pro/views/user/validate_phone.php:12
+msgid "Phone Number Validation"
+msgstr "Telefonnummervalidierung"
+
+#: app/widget.php:24
+msgid "PHP version must be higher than 7.4"
+msgstr "PHP-Version muss höher als 7.4 sein"
+
+#: pro/app/form/admin_user_fields.php:352 
+#: pro/app/form/admin_user_fields.php:436
+msgid "Placeholder"
+msgstr "Platzhalter"
+
+#: pro/app/ajax.php:441
+msgid "Please enter dynamic code"
+msgstr "Dynamischen Code eingeben"
+
+#: app/form/admin_user_fields.php:60
+msgid "Please fill all the fields"
+msgstr "Bitte alle Felder ausfüllen"
+
+#: pro/app/shortcode.php:37
+msgid "Please install Woocommerce plugin."
+msgstr "Bitte WooCommerce Plugin installieren."
+
+#: app/shortcode.php:58
+msgid "Please login to your account"
+msgstr "Bitte melde dich in deinem Account an"
+
+#: pro/app/smart_login.php:154
+msgid "Please set new password for account"
+msgstr "Bitte erstelle ein neues Passwort für diesen Account"
+
+#: rename-wp-login.php:79
+#, php-format
+msgid "Please upgrade to the latest version of WordPress to activate %s."
+msgstr ""
+"Bitte aktualisiere auf die neueste WordPress-Version, um %s zu aktivieren."
+
+#: pro/app/implemented/sabanovin.php:44
+msgid "Please use latin numbers as the gateway number"
+msgstr "Bitte verwende Latin-Nummern für die Gateway-Nummer"
+
+#: pro/app/assets.php:130 pro/app/ajax.php:386
+msgid "Please use valid phone number."
+msgstr "Bitte verwende eine valide Telefonnummer."
+
+#: views/admin/panel-section/panel.php:117
+msgid "Posts category"
+msgstr "Beitragskategorie"
+
+#: views/admin/panel-section/panel.php:121
+msgid "Posts count"
+msgstr "Beitragsanzahl"
+
+#: pro/app/form/admin_user_fields.php:404
+msgid "Prevent edit this field"
+msgstr "Verhindern, dass dieses Feld bearbeitet wird"
+
+#: app/handle_view.php:352 app/handle_view.php:747 app/middlewares.php:67
+msgid "Pro Version"
+msgstr "Pro Version"
+
+#: pro/app/form/admin_user_fields.php:385
+msgid "Profile & Register"
+msgstr "Profil & Registrierung"
+
+#: pro/app/ajax.php:472
+msgid "Provider is not valid."
+msgstr "Anbieter ist nicht korrekt."
+
+#: pro/app/ajax.php:468
+msgid "Provider must send!"
+msgstr "Anbieter muss senden!"
+
+#: app/handle_view.php:272
+msgid "Purchased files"
+msgstr "Gekaufte Inhalte"
+
+#: app/user_fields.php:35
+msgid "Radio Button"
+msgstr "Radio Button"
+
+#: views/admin/panel-section/general.php:85
+msgid "Redirect non Admin user to"
+msgstr "Nicht-Admin-Nutzer weiterleiten zu"
+
+#: app/widget/profile.php:64
+msgid "Register"
+msgstr "Registrieren"
+
+#: views/admin/panel-section/register.php:14
+msgid "Register and other email send from this address"
+msgstr "E-Mails werden von dieser Adresse gesendet"
+
+#: app/admin_menu.php:28 views/admin/panel-section/register.php:2
+msgid "Register Form"
+msgstr "Registrierungsformular"
+
+#: app/email.php:85 app/email.php:110
+msgid "Registration complete."
+msgstr "Registrierung abgeschlossen."
+
+#: app/email.php:86 app/config.php:220
+msgid "Registration complete. Please wait for admin approval."
+msgstr ""
+"Registrierung abgeschlossen. Bitte warte auf die Freischaltung durch einen "
+"Admin."
+
+#: app/config.php:217
+msgid "Registration complete. Your account has been activated automatically."
+msgstr "Registrierung abgeschlossen. Dein Account wurde automatisch aktiviert."
+
+#: pro/app/presenter/user_fields.php:33
+msgid "Remove"
+msgstr "Entfernen"
+
+#: rename-wp-login.php:79 rename-wp-login.php:103
+msgid "Rename wp-login.php"
+msgstr "wp-login.php umbennen"
+
+#: pro/views/user/validate_phone.php:37
+msgid "Request Code"
+msgstr "Code anfordern"
+
+#: app/config.php:253
+msgid "Request is invalid!"
+msgstr "Anfrage ist invalide!"
+
+#: parts/edit-profile.php:96 pro/app/login.php:66 
+#: app/form/admin_user_fields.php:78 app/form/admin_user_fields.php:118 
+#: app/form/admin_user_fields.php:155 app/form/admin_user_fields.php:157
+msgid "Required"
+msgstr "Erforderlich"
+
+#: views/admin/panel-section/email.php:25
+msgid "Reset Password Email"
+msgstr "Passwort-E-Mail zurücksetzen"
+
+#: views/admin/panel-section/email.php:28
+msgid "Reset password email subject"
+msgstr "Passwort zurücksetzen E-Mail-Betreff"
+
+#: pro/app/handle_view.php:246
+msgid "Right"
+msgstr "Rechts"
+
+#: pro/app/config.php:92
+msgid "Role"
+msgstr "Rolle"
+
+#: pro/app/config.php:105
+msgid "Role must not be empty"
+msgstr "Rolle darf nicht leer sein"
+
+#: views/admin/panel-section/panel.php:125
+msgid "Roles who can't use admin panel"
+msgstr "Rollen, die den Admin-Panel nicht sehen"
+
+#: pro/app/sms_provider.php:58
+msgid "Sabanovin"
+msgstr "Sabanovin"
+
+#: app/form/admin_user_fields.php:167 pro/app/form/admin_user_fields.php:34
+msgid "Save"
+msgstr "Speichern"
+
+#: parts/change-password.php:44 parts/edit-profile.php:107
+msgid "Save Changes"
+msgstr "Änderungen speichern"
+
+#: pro/app/implemented/smsir.php:166
+msgid "Secret Key"
+msgstr "Secret Key"
+
+#: views/admin/panel-section/panel.php:109
+msgid "Section Title"
+msgstr "Sektionstitel"
+
+#: views/admin/panel-section/login_with_sms.php:49
+msgid "Select Provider"
+msgstr "Anbieter auswählen"
+
+#: pro/app/handle_view.php:592
+msgid "Select SMS Provider"
+msgstr "SMS-Anbieter auswählen"
+
+#: views/admin/panel-section/panel.php:45
+msgid "Select user panel page"
+msgstr "UserPanel-Seite auswählen"
+
+#: app/user_fields.php:31
+msgid "Selectbox"
+msgstr "Auswahlbox"
+
+#: app/options.php:13
+msgid "Send Activation Link"
+msgstr "Aktivierungslink zusenden"
+
+#: views/admin/panel-section/register.php:12
+msgid "Sender Email"
+msgstr "Sender-E-Mailadresse"
+
+#: pro/app/smart_login.php:168
+msgid "Sending dynamic code..."
+msgstr "Sende dynamischen Code..."
+
+#: rename-wp-login.php:193 rename-wp-login.php:195
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: app/form/admin_user_fields.php:50
+msgid "Settings successfully updated!"
+msgstr "Einstellungen erfolgreich aktualisiert!"
+
+#: app/form/admin_tabs.php:140 app/form/admin_tabs.php:149
+msgid "Shortcode"
+msgstr "Shortcode"
+
+#: app/form/admin_tabs.php:114 pro/app/form/admin_tabs_fields.php:63
+msgid "Show by roles"
+msgstr "Anzeigen nach Rolle"
+
+#: pro/app/presenter/user_fields.php:174
+msgid "Show File"
+msgstr "Datei anzeigen"
+
+#: app/widget/profile.php:9
+msgid "Show User Profile"
+msgstr "Nutzerprofil anzeigen"
+
+#: views/admin/panel-section/panel.php:75
+msgid "Sidebar background color in panel"
+msgstr "Seitenleiste-Hintergrundfarbe im Panel"
+
+#: views/admin/panel-section/panel.php:79
+msgid "Sidebar link color that show in panel"
+msgstr "Seitenleiste-Linkfarbe im Panel"
+
+#: views/admin/panel-section/login_with_sms.php:6
+msgid "Smart Login"
+msgstr "Smart Login"
+
+#: pro/views/user/smart_login.php:3
+msgctxt "smart-login"
+msgid "Dynamic Password"
+msgstr "Dynamisches Passwort"
+
+#: views/admin/panel-section/login_with_sms.php:47
+msgid "SMS Provider Settings"
+msgstr "SMS-Anbieter Einstellungen"
+
+#: pro/views/user/login_dynamic_code.php:3
+msgctxt "sms-login"
+msgid "Dynamic Password"
+msgstr "Dynamisches Passwort"
+
+#: pro/app/sms_provider.php:66
+msgid "SMS.ir"
+msgstr "SMS.ir"
+
+#: pro/app/ajax.php:264
+msgid "Sorry, but you do not have a valid phone."
+msgstr "Entschuldigung, aber du hast kein gültiges Telefon."
+
+#: parts/db-page.php:30
+msgid "Sorry, you don't have access to this section"
+msgstr "Entschuldigung, du hast keinen Zugriff auf diese Sektion."
+
+#: pro/app/ajax.php:421
+msgid "Sory, has problem in send sms"
+msgstr "Entschuldigung, die SMS konnte nicht versendet werden."
+
+#: pro/app/ajax.php:454
+msgid "Sory, has problem in validate your phone."
+msgstr "Entschuldigung, die SMS konnte nicht validiert werden."
+
+#: app/users.php:88
+msgid "Status"
+msgstr "Status"
+
+#: views/admin/panel-section/email.php:46
+msgid "Subject and Text of change account status email"
+msgstr "Betreff und Text der E-Mail zum Ändern des Kontostatus"
+
+#: views/admin/panel-section/email.php:66
+msgid "Subject and Text of dynamic code email"
+msgstr "Betreff und Text der E-Mail für dynamische Codes"
+
+#: views/admin/panel-section/email.php:26
+msgid "Subject and Text of reset password email"
+msgstr "Betreff und Text der E-Mail zum Ändern des Passworts"
+
+#: pro/app/license.php:222
+msgid "Successfully activated."
+msgstr "Erfolgreich aktiviert."
+
+#: app/form/admin_tabs.php:35
+msgid "Successfully added! Watch user panel"
+msgstr "Erfolgreich hinzugefügt. Panel anzeigen"
+
+#: pro/app/license.php:252
+msgid "Successfully deactivated."
+msgstr "Erfolgreich deaktiviert."
+
+#: app/ajax.php:100
+msgid "Successfully deleted!"
+msgstr "Erfolgreich gelöscht!"
+
+#: app/ajax.php:71 app/ajax.php:153 app/form/profile.php:108
+msgid "Successfully updated!"
+msgstr "Erfolgreich aktiviert!"
+
+#: app/config.php:105
+msgid "Support Telegram"
+msgstr "Telegram-Support"
+
+#: app/form/admin_tabs.php:64
+msgid "Tabs"
+msgstr "Tabs"
+
+#: pro/app/implemented/smsir.php:174 pro/app/implemented/melipayamak.php:120
+msgid "Template ID"
+msgstr "Template ID"
+
+#: pro/app/implemented/kavenegar.php:91
+msgid "Template Name"
+msgstr "Template ID"
+
+#: pro/app/sms_provider.php:94 pro/app/sms_provider.php:96
+msgid "Test SMS"
+msgstr "Template ID"
+
+#: pro/app/form/admin_user_fields.php:179 
+#: pro/app/form/admin_user_fields.php:338
+msgid "Text"
+msgstr "Text"
+
+#: app/user_fields.php:11
+msgid "Text input"
+msgstr "Texteingabe"
+
+#: views/admin/panel-section/email.php:4
+msgid "Text of email that send to new user"
+msgstr "Text der E-Mail, die an Nutzer gesendet wird"
+
+#: views/admin/panel-section/register.php:8
+msgid "Text that shows in top of register form"
+msgstr "Text der im Registrierungsformular oben angezeigt wird"
+
+#: views/admin/panel-section/panel.php:70
+msgid "Text that will show in user panel as a Off Code text."
+msgstr "Text der im Rabattcode-Panel angezeigt wird"
+
+#: app/user_fields.php:15
+msgid "Textarea"
+msgstr "Textarea"
+
+#: app/email.php:86 app/email.php:110
+msgid "Thanks!"
+msgstr "Danke!"
+
+#. Description of the plugin
+msgid "The best way to build user interface in WordPress"
+msgstr "Der beste Weg, um eine Benutzeroberfläche in WordPress zu erstellen"
+
+#: pro/app/sms_provider.php:98
+msgid "The cost of this message will be deducted from your account."
+msgstr "Die Kosten für diese Nachricht werden von Ihrem Konto abgebucht."
+
+#: app/ajax.php:22 app/ajax.php:91 app/ajax.php:112 pro/app/ajax.php:322 
+#: pro/app/ajax.php:380 pro/app/ajax.php:435 app/form/admin_user_fields.php:28 
+#: app/form/profile.php:79
+msgid "The operation failed due to security issues."
+msgstr "Der Vorgang ist aufgrund von Sicherheitsproblemen fehlgeschlagen."
+
+#: pro/app/file_uploader.php:28
+msgid ""
+"The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
+"the HTML form"
+msgstr ""
+"Die hochgeladene Datei überschreitet die im HTML-Formular angegebene "
+"MAX_FILE_SIZE-Direktive"
+
+#: pro/app/file_uploader.php:27
+msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
+msgstr ""
+"Die hochgeladene Datei überschreitet die upload_max_filesize-Direktive in "
+"php.ini"
+
+#: pro/app/file_uploader.php:29
+msgid "The uploaded file was only partially uploaded"
+msgstr "Diese Datei wurde nur teilweise hochgeladen"
+
+#: views/admin/panel-section/tools.php:21
+msgid "This code is render in head tag in Login page"
+msgstr "Dieser Code wird im Kopf der Loginseite gerendert"
+
+#: rename-wp-login.php:208
+msgid "This feature is not enabled."
+msgstr "Dieses Feature ist nicht aktiviert."
+
+#: rename-wp-login.php:104
+msgid ""
+"This option allows you to set a networkwide default, which can be overridden "
+"by individual sites. Simply go to to the site’s permalink settings to change "
+"the url."
+msgstr ""
+"Mit dieser Option können Sie einen netzwerkweiten Standard festlegen, der "
+"von einzelnen Sites außer Kraft gesetzt werden kann. Gehen Sie einfach zu "
+"den Permalink-Einstellungen der Website, um die URL zu ändern."
+
+#: pro/app/login.php:228
+msgid "This phone is inactive on your account"
+msgstr "Dieses Telefon ist in Ihrem Konto inaktiv"
+
+#: pro/app/ajax.php:398
+msgid "This phone number is not available."
+msgstr "Diese Telefonnummer ist nicht verfügbar."
+
+#: pro/app/login.php:115
+msgid "This phone number is used by another user"
+msgstr "Diese Telefonnummer wird von einem anderen Benutzer verwendet"
+
+#: app/handle_view.php:634
+msgid "This plugin is not active on your site"
+msgstr "Dieses Plugin ist auf Ihrer Website nicht aktiv"
+
+#: app/admin_menu.php:124
+msgid "This section is active in MihanPanel pro"
+msgstr "Dieser Abschnitt ist in MihanPanel Pro aktiv"
+
+#: views/admin/panel-section/email.php:67
+msgid "This settings works if Smart Login is active."
+msgstr "Diese Einstellung funktioniert, wenn Smart Login aktiv ist."
+
+#: app/shortcode.php:8
+msgid "This shortcode is active in MihanPanel Pro."
+msgstr "Dieser Shortcode ist in MihanPanel Pro aktiv."
+
+#: app/form/admin_user_fields.php:74 app/form/admin_user_fields.php:151 
+#: pro/app/form/admin_user_fields.php:227 
+#: pro/app/form/admin_user_fields.php:292
+msgid "Title"
+msgstr "Titel"
+
+#: views/admin/panel-section/panel.php:113
+msgid "Title Link"
+msgstr "Titellink"
+
+#: rename-wp-login.php:164
+#, php-format
+msgid "To set a networkwide default, go to %s."
+msgstr "Um einen netzwerkweiten Standard festzulegen, gehen Sie zu %s."
+
+#: app/widget.php:35 app/admin_menu.php:32
+msgid "Tools"
+msgstr "Tools"
+
+#: app/form/admin_user_fields.php:82 app/form/admin_user_fields.php:163
+msgid "Type"
+msgstr "Typ"
+
+#: pro/app/login.php:167
+msgid "Unavailable phone number!"
+msgstr "Ungültige Telefonnummer!"
+
+#: app/email.php:142
+msgid "Unknown"
+msgstr "Unbekannt"
+
+#: pro/app/form/admin_tabs_fields.php:8
+msgid "Upload"
+msgstr "Hochladen"
+
+#: views/admin/panel-section/general.php:68 
+#: views/admin/panel-section/general.php:82
+msgid "Upload Image"
+msgstr "Bild hochladen"
+
+#: views/admin/panel-section/panel.php:71
+msgid "Use [[number]] to replace with off code percentage."
+msgstr ""
+"Verwenden Sie [[number]], um sie durch den Off-Code-Prozentsatz zu ersetzen."
+
+#: views/admin/panel-section/panel.php:13
+msgid "Use mihan avatar"
+msgstr "Avatare verwenden"
+
+#: pro/views/user/login_dynamic_code.php:16
+msgid "Use password"
+msgstr "Passwort verwenden"
+
+#: views/admin/panel-section/panel.php:20
+msgid "Use theme or other plugins fonts instead of MihanPanel fonts."
+msgstr ""
+"Themen- oder Pluginschriftarten anstelle von MihanPanel-Fonts verwenden"
+
+#: pro/app/sms_provider.php:97
+msgid ""
+"Use this to send Test SMS to be sure your provider settings are correct."
+msgstr ""
+"Verwenden Sie dies, um Test-SMS zu senden, um sicherzustellen, dass Ihre "
+"Anbietereinstellungen korrekt sind."
+
+#: views/admin/admin-profile/account-status.php:1
+msgid "User Account Status"
+msgstr "Nutzer-Accountstatus"
+
+#: app/handle_view.php:700 pro/app/handle_view.php:579
+msgid "User can change phone number"
+msgstr "Nutzer kann Telefonummer ändern"
+
+#: views/admin/panel-section/panel.php:15
+msgid "User can choose avatar image in panel"
+msgstr "Nutzer kann Avater verwenden"
+
+#: views/admin/panel-section/register.php:17
+msgid "User can select this roles from list in registration form"
+msgstr "Nutzer kann Rolle in der Registrierung selbst auswählen"
+
+#: parts/sidebar.php:6 app/widget/profile.php:36
+msgid "User Dashboard"
+msgstr "Nutzerdashboard"
+
+#: pro/app/ajax.php:250
+msgid "User data not found"
+msgstr "Nutzerdaten nicht gefunden"
+
+#: pro/app/smart_login.php:127 pro/app/ajax.php:156
+msgid "User data not found!"
+msgstr "Nutzerdaten nicht gefunden!"
+
+#: app/admin_menu.php:55
+msgid "User Fields"
+msgstr "Nutzerfelder"
+
+#: pro/app/ajax.php:331
+msgid "User not exists!"
+msgstr "Nutzer existiert nicht!"
+
+#: pro/app/smart_login.php:134
+msgid "User not found!"
+msgstr "Nutzer nicht gefunden!"
+
+#: app/hooks.php:143 app/admin_menu.php:27 app/admin_menu.php:42
+msgid "User Panel"
+msgstr "Nutzerpanel"
+
+#: views/admin/panel-section/panel.php:55
+msgid "User Panel Font Family"
+msgstr "Nutzerpanel Schriftart"
+
+#: views/admin/panel-section/panel.php:23 views/admin/panel-section/tools.php:3
+msgid "User panel page"
+msgstr "Nutzerpanel Seite"
+
+#: views/admin/panel-section/tools.php:13
+msgid "User panel page already exists."
+msgstr "Nutzerpanel-Seite existiert bereits."
+
+#: views/admin/panel-section/panel.php:2
+msgid "User panel settings"
+msgstr "Nutzerpanel-Einstellungen"
+
+#: views/admin/panel-section/login_with_sms.php:45
+msgid "User Phone"
+msgstr "Nutzer-Telefonnummer"
+
+#: app/widget/profile.php:8
+msgid "User Profile - Mihanpanel"
+msgstr "Nutzerprofil - MihanPanel"
+
+#: views/admin/panel-section/register.php:16
+msgid "User Role"
+msgstr "Nutzerrolle"
+
+#: pro/app/handle_view.php:608 pro/app/handle_view.php:620 
+#: pro/app/implemented/melipayamak.php:108 
+#: views/admin/panel-section/email.php:21 
+#: views/admin/panel-section/email.php:39 
+#: views/admin/panel-section/email.php:59 
+#: pro/views/admin/live-view/panel-general.php:4
+msgid "Username"
+msgstr "Nutzername"
+
+#: pro/app/smart_login.php:171 pro/app/login.php:290 pro/app/ajax.php:71
+msgid "Username must not be empty!"
+msgstr "Nutzername darf nicht leer sein"
+
+#: pro/app/ajax.php:316
+msgid "Username not recevied!"
+msgstr "Nutzername nicht empfangen!"
+
+#: pro/app/smart_login.php:193 pro/app/login.php:56
+msgid "Username, Email or Phone number"
+msgstr "Nutzername, E-Mail oder Telefonnummer"
+
+#: views/admin/panel-section/general.php:87
+msgid ""
+"Users who don't have admin or author caps, redirect to this address after "
+"login (with http or https)"
+msgstr ""
+"Benutzer, die keine Admin- oder Autorenkappen haben, leiten nach der "
+"Anmeldung (mit http oder https) auf diese Adresse um"
+
+#: pro/views/user/validate_phone.php:13
+msgid "Validate your phone"
+msgstr "Telefonnummer bestätigen"
+
+#: pro/app/form/admin_user_fields.php:167 
+#: pro/app/form/admin_user_fields.php:326
+msgid "Video"
+msgstr "Video"
+
+#: views/admin/panel-section/general.php:69
+msgid "We suggest to use 120 * 120 px for logo size."
+msgstr "Wir empfehlen 120x120px als Logogröße"
+
+#: views/admin/panel-section/email.php:3
+msgid "Welcome Email"
+msgstr "Willkommens-E-Mail"
+
+#: pro/app/form/admin_user_fields.php:383
+msgid "Where show field"
+msgstr "Wo Feld anzeigen"
+
+#: app/config.php:87
+msgid "Woocommerce Download Products"
+msgstr "WooCommerce Downloadprodukte"
+
+#: pro/app/form/admin_user_fields.php:20
+msgid "Woocommerce Fields"
+msgstr "WooCommerce Felder"
+
+#: app/pro_version_detail.php:8 pro/app/options.php:50
+msgid "Wordpress Password Mode"
+msgstr "WordPress Passwortmodus"
+
+#: app/widget.php:29
+msgid "Wordpress version must be higher than 5.6"
+msgstr "WordPress-Version muss höher als 5.6 sein"
+
+#: views/admin/panel-section/login_with_sms.php:20
+msgid "WPML Settings"
+msgstr "WPML Einstellungen"
+
+#: app/admin_menu.php:73 pro/app/presenter/user_fields.php:23
+msgid "Yes"
+msgstr "JA"
+
+#: pro/app/admin_menu.php:18
+msgid "yes"
+msgstr "ja"
+
+#: app/handle_view.php:214
+msgid "You are our user"
+msgstr "Du bist unser Nutzer"
+
+#: views/admin/panel-section/login_with_sms.php:33
+msgid ""
+"You can disable email field in register form if login with sms dynamic code "
+"is active."
+msgstr ""
+"Sie können das E-Mail-Feld im Registrierungsformular deaktivieren, wenn die "
+"Anmeldung mit dynamischem SMS-Code aktiv ist."
+
+#: views/admin/panel-section/login_with_sms.php:43
+msgid ""
+"You can disable password field in register form if login with sms dynamic "
+"code is active."
+msgstr ""
+"Sie können das Passwortfeld im Registrierungsformular deaktivieren, wenn die "
+"Anmeldung mit dynamischem SMS-Code aktiv ist."
+
+#: views/admin/panel-section/login_with_sms.php:38
+msgid ""
+"You can disable username field in register form if login with sms dynamic "
+"code is active."
+msgstr ""
+"Sie können das Benutzernamenfeld im Registrierungsformular deaktivieren, "
+"wenn die Anmeldung mit dynamischem SMS-Code aktiv ist."
+
+#: pro/app/implemented/smsir.php:176 pro/app/implemented/kavenegar.php:93 
+#: pro/app/implemented/melipayamak.php:122
+msgid ""
+"You can enter template id if this feature is enable in your sms provider "
+"account."
+msgstr ""
+"Sie können die Vorlagen-ID eingeben, wenn diese Funktion in Ihrem SMS-"
+"Anbieterkonto aktiviert ist."
+
+#: pro/app/handle_view.php:606 pro/app/handle_view.php:618 
+#: pro/app/handle_view.php:799 views/admin/panel-section/email.php:19 
+#: views/admin/panel-section/email.php:36 
+#: views/admin/panel-section/email.php:56
+msgid "You can use this:"
+msgstr "Du kannst das verwenden:"
+
+#: app/widget.php:44
+msgid "You must check:"
+msgstr "Du musst überprüfen:"
+
+#: app/config.php:154
+msgid ""
+"You need to install easy digital downloads plugin for using this section!"
+msgstr ""
+"Du musst Easy Digital Downloads installieren, um diese Sektion zu verwenden!"
+
+#: pro/app/shortcode.php:44
+msgid "You need to install woocommerce for use this section!"
+msgstr "Du musst WooCommerce installieren, um diese Sektion zu verwenden!"
+
+#: app/config.php:242 pro/app/ajax.php:82 pro/app/ajax.php:99 
+#: pro/app/ajax.php:126 pro/app/ajax.php:339 views/user/inactive_account.php:8
+msgid "Your account is disable!"
+msgstr "Dein Account ist deaktiviert!"
+
+#: app/config.php:240
+msgid "Your account is disable! Please wait for admin approval."
+msgstr ""
+"Dein Account ist deaktiviert! Bitte warte auf die Administratoren-Freigabe."
+
+#: app/config.php:250
+msgid "Your Account successfully activated!"
+msgstr "Dein Account wurde erfolgreich aktiviert."
+
+#: app/handle_view.php:238
+msgid "Your Comments"
+msgstr "Deine Kommentare"
+
+#: pro/app/options.php:272
+msgid "Your dynamic code is"
+msgstr "Dein Code lautet"
+
+#: pro/app/sms.php:29
+msgid "Your login code is: [[code]]"
+msgstr "Dein Logincode ist [[code]]"
+
+#: rename-wp-login.php:188
+#, php-format
+msgid "Your login page is now here: %s. Bookmark this page!"
+msgstr "Deine Loginseite ist jetzt hier: %s. Füge ein Lesezeichen hierzu!"
+
+#: pro/app/ajax.php:459
+msgid "Your phone successfully validate!"
+msgstr "Deine Telefonnummer wurde erfolgreich bestätigt!"
+
+#: app/handle_view.php:289
+msgid "Your purchase count"
+msgstr "Anzahl Einkäufe"
+
+#: rename-wp-login.php:183
+msgid "Your site login url is"
+msgstr "Seiten-Login-URL ist"
+
+#: app/handle_view.php:314
+msgid "Your tickets"
+msgstr "Deine Tickets"
+
+#: pro/app/sms.php:19
+msgid "Your validation code is: [[code]]"
+msgstr "Dein Bestätigungscode ist [[code]]"

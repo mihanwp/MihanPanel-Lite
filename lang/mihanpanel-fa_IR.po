@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MihanPanel\n"
-"POT-Creation-Date: 2022-07-16 12:32+0430\n"
-"PO-Revision-Date: 2022-07-16 12:33+0430\n"
+"POT-Creation-Date: 2022-08-06 17:27+0430\n"
+"PO-Revision-Date: 2022-08-06 17:28+0430\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -491,7 +491,7 @@ msgstr "ارسال لینک فعالسازی"
 msgid "Manual Activation"
 msgstr "فعالسازی دستی"
 
-#: app/options.php:140
+#: app/options.php:144
 #, php-format
 msgid "%1$s off code for your next purchase"
 msgstr "کد تخفیف %1$s برای خرید بعدی شما"
@@ -1105,123 +1105,131 @@ msgstr "از فونت‌های میهن پنل استفاده نکن"
 msgid "Use theme or other plugins fonts instead of MihanPanel fonts."
 msgstr "استفاده از فونت‌های قالب یا پلاگین‌های دیگر به جای فونت‌های میهن پنل."
 
-#: views/admin/panel-section/panel.php:23 views/admin/panel-section/tools.php:3
+#: views/admin/panel-section/panel.php:23
+msgid "Disable MihanPanel fontawesome"
+msgstr "غیرفعال کردن FontAwesome میهن پنل"
+
+#: views/admin/panel-section/panel.php:25
+msgid "Don't load mihanpanel fontawesome"
+msgstr "از FontAwesome میهن پنل استفاده نکن"
+
+#: views/admin/panel-section/panel.php:28 views/admin/panel-section/tools.php:3
 msgid "User panel page"
 msgstr "صفحه پنل کاربری"
 
-#: views/admin/panel-section/panel.php:42
+#: views/admin/panel-section/panel.php:47
 msgid "No any page exists"
 msgstr "هیچ برگه‌ای وجود ندارد"
 
-#: views/admin/panel-section/panel.php:45
+#: views/admin/panel-section/panel.php:50
 msgid "Select user panel page"
 msgstr "برگه‌ی پنل کاربری را انتخاب کنید"
 
-#: views/admin/panel-section/panel.php:48
+#: views/admin/panel-section/panel.php:53
 msgid "Panel Theme"
 msgstr "تم پنل کاربری"
 
-#: views/admin/panel-section/panel.php:50
+#: views/admin/panel-section/panel.php:55
 msgid "Choose User Panel Theme"
 msgstr "تم پنل کاربری را انتخاب کنید"
 
-#: views/admin/panel-section/panel.php:53
+#: views/admin/panel-section/panel.php:58
 msgid "Panel Font Family"
 msgstr "فونت پنل کاربری"
 
-#: views/admin/panel-section/panel.php:55
+#: views/admin/panel-section/panel.php:60
 msgid "User Panel Font Family"
 msgstr "فونت استفاده شده برای پنل کاربری و صفحه ورود و عضویت"
 
-#: views/admin/panel-section/panel.php:58
+#: views/admin/panel-section/panel.php:63
 msgid "Off Code"
 msgstr "کد تخفیف"
 
-#: views/admin/panel-section/panel.php:60
+#: views/admin/panel-section/panel.php:65
 msgid "Off Code that you want to show in user panel"
 msgstr "کد تخفیفی که میخواید در پنل کاربری نمایش داده شود"
 
-#: views/admin/panel-section/panel.php:63
+#: views/admin/panel-section/panel.php:68
 msgid "Off Code percentage"
 msgstr "درصد کد تخفیف"
 
-#: views/admin/panel-section/panel.php:65
+#: views/admin/panel-section/panel.php:70
 msgid "Off Code percentage will show in user panel. ex => 25%"
 msgstr "درصد کد تخفیف در پنل کاربری نشان داده خواهد شد. مثلا بنویسید: 25 درصدی"
 
-#: views/admin/panel-section/panel.php:68
+#: views/admin/panel-section/panel.php:73
 msgid "Off Code text"
 msgstr "متن کد تخفیف"
 
-#: views/admin/panel-section/panel.php:70
+#: views/admin/panel-section/panel.php:75
 msgid "Text that will show in user panel as a Off Code text."
 msgstr "متنی که به عنوان متن کد تخفیف در پنل کاربری نمایش داده میشود."
 
-#: views/admin/panel-section/panel.php:71
+#: views/admin/panel-section/panel.php:76
 msgid "Use [[number]] to replace with off code percentage."
 msgstr "از [[number]] استفاده کنید تا با مقدار کد تخفیف جایگذاری شود."
 
-#: views/admin/panel-section/panel.php:73
+#: views/admin/panel-section/panel.php:78
 msgid "Color scheme"
 msgstr "رنگ بندی"
 
-#: views/admin/panel-section/panel.php:75
+#: views/admin/panel-section/panel.php:80
 msgid "Sidebar background color in panel"
 msgstr "رنگ پس زمینه نوار کناری در پنل کاربری"
 
-#: views/admin/panel-section/panel.php:79
+#: views/admin/panel-section/panel.php:84
 msgid "Sidebar link color that show in panel"
 msgstr "رنگ لینک ها در نوار کناری پنل کاربری"
 
-#: views/admin/panel-section/panel.php:82
+#: views/admin/panel-section/panel.php:87
 msgid "Dashboard Widgets"
 msgstr "ویجت‌های داشبورد"
 
-#: views/admin/panel-section/panel.php:84
+#: views/admin/panel-section/panel.php:89
 msgid "Hide register day count widget"
 msgstr "مخفی کردن ویجت روز‌هایی که عضو هستید"
 
-#: views/admin/panel-section/panel.php:88
+#: views/admin/panel-section/panel.php:93
 msgid "Hide Comment widget"
 msgstr "مخفی کردن ویجت تعداد نظرات"
 
-#: views/admin/panel-section/panel.php:92
+#: views/admin/panel-section/panel.php:97
 msgid "Hide Woocommerce widget"
 msgstr "مخفی کردن ویجت ووکامرس"
 
-#: views/admin/panel-section/panel.php:96
+#: views/admin/panel-section/panel.php:101
 msgid "Hide EDD widget"
 msgstr "مخفی کردن ویجت EDD"
 
-#: views/admin/panel-section/panel.php:100
+#: views/admin/panel-section/panel.php:105
 msgid "Hide Awesome Support widget"
 msgstr "مخفی کردن ویجت افزونه تیکت"
 
-#: views/admin/panel-section/panel.php:103
+#: views/admin/panel-section/panel.php:108
 msgid "Blog Section"
 msgstr "بخش بلاگ"
 
-#: views/admin/panel-section/panel.php:105
+#: views/admin/panel-section/panel.php:110
 msgid "Is blog section enable?"
 msgstr "بخش بلاگ فعال باشد؟"
 
-#: views/admin/panel-section/panel.php:109
+#: views/admin/panel-section/panel.php:114
 msgid "Section Title"
 msgstr "عنوان این بخش"
 
-#: views/admin/panel-section/panel.php:113
+#: views/admin/panel-section/panel.php:118
 msgid "Title Link"
 msgstr "لینک"
 
-#: views/admin/panel-section/panel.php:117
+#: views/admin/panel-section/panel.php:122
 msgid "Posts category"
 msgstr "دسته‌بندی نوشته‌ها"
 
-#: views/admin/panel-section/panel.php:121
+#: views/admin/panel-section/panel.php:126
 msgid "Posts count"
 msgstr "تعداد نوشته‌ها"
 
-#: views/admin/panel-section/panel.php:125
+#: views/admin/panel-section/panel.php:130
 msgid "Roles who can't use admin panel"
 msgstr "نقش های کاربری که اجازه ی ورود به پنل مدیریت را ندارند"
 
@@ -1281,7 +1289,7 @@ msgstr "خطوط هوایی جدید"
 
 #. Plugin Name of the plugin/theme
 msgid "MihanPanel Lite"
-msgstr "میهن‌پنل لایت"
+msgstr "میهن پنل لایت"
 
 #. Plugin URI of the plugin/theme
 msgid "https://ertano.com/mihanpanel/"
@@ -1698,6 +1706,12 @@ msgstr "https://mihanwp.com/"
 
 #~ msgid "License is inactive"
 #~ msgstr "لایسنس غیر فعال شده است"
+
+#~ msgid "It's Done"
+#~ msgstr "انجام شد"
+
+#~ msgid "Has error in some process"
+#~ msgstr "مشکلی در بخشی از عملیات به وجود آمد"
 
 #~ msgid "Username, Email or Phone number"
 #~ msgstr "نام کاربری، ایمیل یا شماره تلفن"

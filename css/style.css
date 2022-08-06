@@ -1557,3 +1557,21 @@ html body .mihanpanelpanel .alert {
   width:98%;
 }
 }
+
+html body .mihanpanel-profile-widget .fab,
+html body .mpwrapper.mihanpanelpanel .fab {
+  font-family: 'Font Awesome 5 Brands' !important;
+}
+html body .mihanpanel-profile-widget .far,
+html body .mpwrapper.mihanpanelpanel .far
+{
+  font-family: 'Font Awesome 5 Free' !important;
+  font-weight: 400;
+}
+html body .mpwrapper.mihanpanelpanel .fa,
+html body .mpwrapper.mihanpanelpanel .fas,
+html body .mihanpanel-profile-widget .fa,
+html body .mihanpanel-profile-widget .fas {
+  font-family: 'Font Awesome 5 Free' !important;
+  font-weight: 900;
+}
