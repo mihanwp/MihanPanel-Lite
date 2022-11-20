@@ -1156,6 +1156,9 @@ output {
     }
     .mihanpanelpanel .mpsidebar.mp_ltr.mp_open {
         left: 0 !important;
+        border-radius:10px !important;
+        position: relative !important;
+        float: left;
     }
 }
 html body .mihanpanelpanel .alert {
@@ -1450,10 +1453,9 @@ html body .mihanpanelpanel .alert {
 {
     position: absolute;
     text-decoration: none;
-    left: 5px;
     cursor: pointer;
     background-color: #292929;
-    top: 40px;
+    top: 10px;
     width: 30px;
     height: 30px;
     align-items: center;
@@ -1465,6 +1467,14 @@ html body .mihanpanelpanel .alert {
     transition: width .3s, border-radius .1s;
     animation-name: unhover_file_uploader_btn;
     animation-duration: .5s;
+}
+.mihanpanelpanel.mp_wrapper_rtl .mw_file_uploader .show-file
+{
+    left: 5px;
+}
+.mihanpanelpanel:not(.mp_wrapper_rtl) .mw_file_uploader .show-file
+{
+    right: 5px;
 }
 .mihanpanelpanel .nocss .mw_file_uploader .show-file .icon
 {

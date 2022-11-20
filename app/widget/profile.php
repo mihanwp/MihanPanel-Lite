@@ -4,6 +4,10 @@ class profile extends \WP_Widget
 {
     function __construct()
     {
+        add_action('wp_enqueue_scripts', function(){
+            wp_enqueue_style('mw-profile-widget', MW_MIHANPANEL_URL . 'css/profile-widget.css', null, \mihanpanel\app\tools::get_pro_version_link());
+            \mihanpanel\app\assets::load_fonts_assets('profile');
+        });
         parent::__construct(
             'mpp_widget', __('User Profile - Mihanpanel', 'mihanpanel'),
             array('description' => __('Show User Profile', 'mihanpanel'),)

@@ -11,6 +11,10 @@
                 <?php \mihanpanel\app\handle_view::option_panel_smart_login(); ?>
             </p>
             <p>
+                <label for="mp_smart_login_generate_random_username"><?php esc_html_e('Generate random username', 'mihanpanel')?></label>
+                <?php \mihanpanel\app\handle_view::option_panel_smart_login_generate_random_username(); ?>
+            </p>
+            <p>
                 <label for="mp_force_get_phone_number_in_panel"><?php esc_html_e('Obtain phone number in panel', 'mihanpanel')?></label>
                 <?php \mihanpanel\app\handle_view::option_panel_field_force_get_phone_number_in_smart_login_mode(); ?>
             </p>

@@ -647,6 +647,11 @@ class handle_view
         $render_method = apply_filters('mwpl_option_panel/render_method/smart_login', []);
         self::handle_option_panel_render_method($render_method);
     }
+    static function option_panel_smart_login_generate_random_username()
+    {
+        $render_method = apply_filters('mwpl_option_panel/render_method/smart_login_generate_random_username', []);
+        self::handle_option_panel_render_method($render_method);
+    }
     static function option_panel_field_password_type()
     {
         $render_method = apply_filters('mwpl_option_panel/render_method/password_type', []);

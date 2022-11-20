@@ -20,7 +20,7 @@
     cursor: move;
 }
 .mihanpanel-admin label{
-  width:30%;
+  width:45%;
   display: inline-block;
 	font-size:16px;
 }
@@ -100,7 +100,7 @@
 	margin-top:30px;
 	padding:40px 30px;
 	border-radius:10px;
-	background:rgba(0,0,0,0.03);
+	background:rgba(0,0,0,0.01);
 }
 .mp_option_single .description{
   margin-top:20px;
@@ -440,7 +440,7 @@
     width:96%;
     height: 100%;
     background-color: white;
-    border-radius: 10px;
+    border-radius: 20px;
     overflow: hidden;
     display: flex;
     box-shadow:0 0 50px rgb(23 87 251 / 12%);
@@ -462,6 +462,8 @@
     width:120px;
     height:120px;
     margin:40px 0;
+    border-radius:100%;
+    box-shadow:0 7px 20px rgba(255,0,0,0.5)
 }
 .mw_admin_panel .mw_menu_section ul li
 {
@@ -474,7 +476,12 @@
 }
 .mw_admin_panel .mw_menu_section ul li.active
 {
-    background-color: #282b3990;
+    background-color: #fff;
+    color:#000;
+    box-shadow:0 4px 30px #ffffff40;
+}
+.mw_admin_panel .mw_menu_section ul li.active a{
+  color:black
 }
 .mw_admin_panel .mw_menu_section a
 {
@@ -754,6 +761,7 @@
   text-indent: -9999px;
   width: 60px !important;
   height: 30px !important;
+  outline:none !important;
   border-radius: 100px;
   position: relative;
   padding:5px !important;
@@ -787,7 +795,8 @@
 }
 .mpproversion{
     background:#FFCCBC;
-    padding:3px 10px;
+    padding:7px 15px;
+    box-shadow:0 7px 30px #FFCCBC;
     vertical-align:middle;
     border-radius:50px;
 }
@@ -795,6 +804,12 @@
     color:#F4511E;
     text-decoration:none;
     box-shadow: none;
+}
+.mpproversion:hover{
+  background:#F4511E;
+}
+.mpproversion:hover a{
+  color:#fff
 }
 .mihanpanel-admin .mwpl_action_btn
 {
@@ -855,19 +870,16 @@
     max-width: 100%;
     height: auto;
 }
-.mihanpanel-admin .mw_icon.far,
 .mihanpanel-admin .mw_icon.fa-far
 {
     font-family: 'Font Awesome 5 Free';
     font-weight: 400;
 }
-.mihanpanel-admin .mw_icon.fas,
 .mihanpanel-admin .mw_icon.fa-fas
 {
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
 }
-.mihanpanel-admin .mw_icon.fab,
 .mihanpanel-admin .mw_icon.fa-fab
 {
     font-family: 'Font Awesome 5 Brands';

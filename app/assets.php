@@ -174,7 +174,7 @@ class assets
         {
             wp_enqueue_style('mw_fontawesome_css', MW_MIHANPANEL_URL . 'css/fa/css/all.css', '', $plugin_version);
         }
-        wp_enqueue_style('mw-profile-widget', MW_MIHANPANEL_URL . 'css/profile-widget.css', '', $plugin_version);
+        // wp_enqueue_style('mw-profile-widget', MW_MIHANPANEL_URL . 'css/profile-widget.css', '', $plugin_version);
         self::load_fonts_assets();
         do_action('mwpl_load_front_assets');
     }
@@ -197,21 +197,31 @@ class assets
             return false;
         }
         wp_enqueue_style('mwpl_active_font_face', $font_file);
-        $panel_style = "
+        if($screen == 'profile')
+        {
+            $profile_widget_style = "
+            .mihanpanel-profile-widget *
+            {
+                font-family:{$font_name} !important;
+            }
+            .mihanpanel-profile-widget
+            {
+                display: none !important;
+            }
+            ";
+            wp_add_inline_style('mw-profile-widget', $profile_widget_style);
+        }
+        if($screen == 'panel')
+        {
+            $panel_style = "
             html body .mihanpanelpanel .nocss *,
                 .mihanpanelpanel *
                 {
                     font-family: {$font_name} !important;
                 }
-        ";
-        $profile_widget_style = "
-            .mihanpanel-profile-widget *
-            {
-                font-family:{$font_name} !important;
-            }
-        ";
-        wp_add_inline_style('mwstyle-css', $panel_style);
-        wp_add_inline_style('mw-profile-widget', $profile_widget_style);
+            ";
+            wp_add_inline_style('mwstyle-css', $panel_style);
+        }
     }
     static function load_gutenberg_block_assets()
     {

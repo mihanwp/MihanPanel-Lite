@@ -11,6 +11,12 @@ class tools
         }
         echo "</pre>";
     }
+    static function convertNumberLocale($value, $localeToEn=true)
+    {
+        $persian = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
+        $en = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+        return $localeToEn ? str_replace($persian, $en, $value) : str_replace($en, $persian, $value);
+    }
     static function is_empty_array($data)
     {
         if(is_array($data))
