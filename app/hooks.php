@@ -1,8 +1,6 @@
 <?php
 namespace mihanpanel\app;
 
-use mihanpanel\pro\app\dynamic_code;
-
 class hooks
 {
     public static function init()
