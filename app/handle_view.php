@@ -133,8 +133,7 @@ class handle_view
     }
     static function handle_dashboard_widget_register_day()
     {
-        $middlewares = [];
-        $middlewares = apply_filters('mwpl_panel_widgets_middlewares_register_day', $middlewares);
+        $middlewares = apply_filters('mwpl_panel_widgets_middlewares_register_day', []);
         $res = self::handle_middlewares($middlewares);
         if($res)
         {
@@ -143,8 +142,7 @@ class handle_view
     }
     static function handle_dashboard_widget_comment()
     {
-        $middlewares = [];
-        $middlewares = apply_filters('mwpl_panel_widgets_middlewares_comment', $middlewares);
+        $middlewares = apply_filters('mwpl_panel_widgets_middlewares_comment', []);
         $res = self::handle_middlewares($middlewares);
         if($res)
         {
@@ -727,6 +725,11 @@ class handle_view
     static function option_panel_login_header_additional_code()
     {
         $render_method = apply_filters('mwpl_option_panel/render_method/login_header_additional_code', []);
+        self::handle_option_panel_render_method($render_method);
+    }
+    static function option_panel_transfer_digits_phone_numbers()
+    {
+        $render_method = apply_filters('mwpl_option_panel/render_method/transfer_digits_phone_numbers', []);
         self::handle_option_panel_render_method($render_method);
     }
 

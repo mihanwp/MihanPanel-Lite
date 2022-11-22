@@ -101,6 +101,7 @@ body{
   transition-duration:0 !important;
 }
 .login form input[type=email],
+.login form input.password-input,
 .login form input[type=password]{
   direction: ltr;
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif !important;
@@ -165,7 +166,10 @@ input#user_login{
   text-align:left;
 }
 #loginform .wp-hide-pw{
-  display:none !important;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
 }
 .login form input[type=radio]:focus,
 .login form input[type=checkbox]:focus

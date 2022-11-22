@@ -199,15 +199,25 @@
 	color:white;
 	padding:20px 3%;
 	border-radius:5px;
-	box-shadow:0 0 10px rgba(0,0,0,0.2);
 	font-family: iranyekan;
 	font-size: 16px;
 }
 .alert.success{
-	background:#4CAF50;
+	background-color:#4CAF50;
+    box-shadow: 0 0 10px rgba(76, 175, 80,0.2);
+}
+.alert.info{
+    background-color: #4575A0;
+    box-shadow: 0 0 10px rgba(69, 117, 160,0.2);
 }
 .alert.error{
-	background:#e53935;
+    background-color: #d70150;
+    box-shadow: 0 0 10px rgba(215, 1, 80,0.2);
+}
+.alert.warning
+{
+    background-color: #ffa500;
+    box-shadow: 0 0 10px rgba(255, 165, 0,0.2);
 }
 .alert a
 {

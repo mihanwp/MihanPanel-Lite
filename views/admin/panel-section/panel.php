@@ -86,24 +86,26 @@
         </div>
         <h2><?php esc_html_e("Dashboard Widgets", "mihanpanel")?></h2>
         <div class="mp_option_single">
-            <label><?php esc_html_e("Hide register day count widget", "mihanpanel"); ?></label>
-            <?php \mihanpanel\app\handle_view::option_panel_field_hide_register_day_count_widget(); ?>
-        </div>
-        <div class="mp_option_single">
-            <label><?php esc_html_e("Hide Comment widget", "mihanpanel"); ?></label>
-            <?php \mihanpanel\app\handle_view::option_panel_field_hide_comment_widget(); ?>
-        </div>
-        <div class="mp_option_single">
-            <label><?php esc_html_e("Hide Woocommerce widget", "mihanpanel"); ?></label>
-            <?php \mihanpanel\app\handle_view::option_panel_field_hide_woocommerce_widget(); ?>
-        </div>
-        <div class="mp_option_single">
-            <label><?php esc_html_e("Hide EDD widget", "mihanpanel"); ?></label>
-            <?php \mihanpanel\app\handle_view::option_panel_field_hide_edd_widget(); ?>
-        </div>
-        <div class="mp_option_single">
-            <label><?php esc_html_e("Hide Awesome Support widget", "mihanpanel"); ?></label>
-            <?php \mihanpanel\app\handle_view::option_panel_field_hide_awesome_support_widget(); ?>
+            <p>
+                <label><?php esc_html_e("Hide register day count widget", "mihanpanel"); ?></label>
+                <?php \mihanpanel\app\handle_view::option_panel_field_hide_register_day_count_widget(); ?>
+            </p>
+            <p>
+                <label><?php esc_html_e("Hide Comment widget", "mihanpanel"); ?></label>
+                <?php \mihanpanel\app\handle_view::option_panel_field_hide_comment_widget(); ?>
+            </p>
+            <p>
+                <label><?php esc_html_e("Hide Woocommerce widget", "mihanpanel"); ?></label>
+                <?php \mihanpanel\app\handle_view::option_panel_field_hide_woocommerce_widget(); ?>
+            </p>
+            <p>
+                <label><?php esc_html_e("Hide EDD widget", "mihanpanel"); ?></label>
+                <?php \mihanpanel\app\handle_view::option_panel_field_hide_edd_widget(); ?>
+            </p>
+            <p>
+                <label><?php esc_html_e("Hide Awesome Support widget", "mihanpanel"); ?></label>
+                <?php \mihanpanel\app\handle_view::option_panel_field_hide_awesome_support_widget(); ?>
+            </p>
         </div>
         <h2><?php esc_html_e('Blog Section', 'mihanpanel')?></h2>
         <div class="mp_option_single">

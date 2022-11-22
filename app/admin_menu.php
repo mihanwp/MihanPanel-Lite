@@ -52,6 +52,7 @@ class admin_menu
             $slug = get_post_field('post_name', $post_id);
             update_option('mp_panelslug', $slug);
         }
+        do_action('after_submit_tools_menu_form');
     }
     static function user_fields()
     {

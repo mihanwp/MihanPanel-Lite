@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MihanPanel\n"
-"POT-Creation-Date: 2022-11-20 10:11+0330\n"
-"PO-Revision-Date: 2022-11-20 10:11+0330\n"
+"POT-Creation-Date: 2022-11-22 15:49+0330\n"
+"PO-Revision-Date: 2022-11-22 15:49+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -58,31 +58,31 @@ msgstr "ایمیل‌های ارسالی"
 msgid "Tools"
 msgstr "ابزار‌ها"
 
-#: app/admin_menu.php:58
+#: app/admin_menu.php:59
 msgid "User Fields"
 msgstr "فیلدهای کاربری"
 
-#: app/admin_menu.php:75
+#: app/admin_menu.php:76
 msgid "Do you want to save changes?"
 msgstr "میخواهید تغییرات ذخیره شود؟"
 
-#: app/admin_menu.php:76
+#: app/admin_menu.php:77
 msgid "Yes"
 msgstr "بله"
 
-#: app/admin_menu.php:84
+#: app/admin_menu.php:85
 msgid "Create new field"
 msgstr "ایجاد فیلد جدید"
 
-#: app/admin_menu.php:84
+#: app/admin_menu.php:85
 msgid "Close"
 msgstr "بستن"
 
-#: app/admin_menu.php:94
+#: app/admin_menu.php:95
 msgid "Panel Menus"
 msgstr "منوهای پنل کاربری"
 
-#: app/admin_menu.php:128
+#: app/admin_menu.php:129
 msgid "This section is active in MihanPanel pro"
 msgstr "این بخش در نسخه‌ی حرفه‌ای میهن‌پنل در دسترس است."
 
@@ -333,108 +333,108 @@ msgstr "رمز عبور با موفقیت به روز شد!"
 msgid "%1$s must not be empty."
 msgstr "%1$s نباید خالی باشد."
 
-#: app/handle_view.php:212
+#: app/handle_view.php:210
 #, php-format
 msgid "%d Day"
 msgstr "%d روز"
 
-#: app/handle_view.php:214
+#: app/handle_view.php:212
 msgid "You are our user"
 msgstr "سابقه عضویت شما"
 
-#: app/handle_view.php:238
+#: app/handle_view.php:236
 msgid "Your Comments"
 msgstr "نظرات شما"
 
-#: app/handle_view.php:272
+#: app/handle_view.php:270
 msgid "Purchased files"
 msgstr "فایل های خریداری شده"
 
-#: app/handle_view.php:289
+#: app/handle_view.php:287
 msgid "Your purchase count"
 msgstr "تعداد خرید شما"
 
-#: app/handle_view.php:314
+#: app/handle_view.php:312
 msgid "Your tickets"
 msgstr "تیکت های شما"
 
-#: app/handle_view.php:352 app/handle_view.php:752 app/middlewares.php:67
+#: app/handle_view.php:350 app/handle_view.php:755 app/middlewares.php:67
 msgid "Pro Version"
 msgstr "نسخه‌ی حرفه‌ای"
 
-#: app/handle_view.php:373
+#: app/handle_view.php:371
 msgid "Login Button Text Color"
 msgstr "رنگ متن دکمه ورود"
 
-#: app/handle_view.php:375
+#: app/handle_view.php:373
 msgid "Color of Login and Register button text"
 msgstr "رنگ متن دکمه در صفحه ی ورود و ثبت نام"
 
-#: app/handle_view.php:388
+#: app/handle_view.php:386
 msgid "Login Fields Background Color"
 msgstr "رنگ پس زمینه ی فیلدهای فرم ورود"
 
-#: app/handle_view.php:390
+#: app/handle_view.php:388
 msgid "Color of Login and Register fields"
 msgstr "رنگ پس زمینه فیلدهای فرم ورود و ثبت‌نام"
 
-#: app/handle_view.php:403
+#: app/handle_view.php:401
 msgid "Login Field's Label Color"
 msgstr "رنگ لیبل فیلدهای فرم ورود"
 
-#: app/handle_view.php:405
+#: app/handle_view.php:403
 msgid "Color of Login and Register labels"
 msgstr "رنگ متن لیبل فیلدهای فرم ورود و ثبت نام"
 
-#: app/handle_view.php:418
+#: app/handle_view.php:416
 msgid "Login Fields Text Color"
 msgstr "رنگ متن فیلدهای فرم ورود"
 
-#: app/handle_view.php:420
+#: app/handle_view.php:418
 msgid "Color of Login and Register fields text"
 msgstr "رنگ متن فیلدهای فرم ورود و ثبت‌نام"
 
-#: app/handle_view.php:433
+#: app/handle_view.php:431
 msgid "Login Info Messagebox Background Color"
 msgstr "رنگ پس زمینه ی باکس اطلاع رسانی در فرم ورود"
 
-#: app/handle_view.php:435
+#: app/handle_view.php:433
 msgid "Background Color of Login and Register Info Messagebox"
 msgstr "رنگ پس زمینه ی باکس اطلاع رسانی در فرم ورود و ثبت نام"
 
-#: app/handle_view.php:448
+#: app/handle_view.php:446
 msgid "Login Info Messagebox Text Color"
 msgstr "رنگ متن باکس اطلاع رسانی در فرم ورود"
 
-#: app/handle_view.php:450
+#: app/handle_view.php:448
 msgid "Color of Login and Register Info Messagebox Text"
 msgstr "رنگ متن باکس اطلاع رسانی در فرم ورود و ثبت نام"
 
-#: app/handle_view.php:463
+#: app/handle_view.php:461
 msgid "Login Error Messagebox Text Color"
 msgstr "رنگ متن باکس ارور در فرم ورود"
 
-#: app/handle_view.php:465
+#: app/handle_view.php:463
 msgid "Color of Login and Register Error Messagebox Text"
 msgstr "رنگ متن باکس ارور در فرم ورود و ثبت نام"
 
-#: app/handle_view.php:478
+#: app/handle_view.php:476
 msgid "Login Error Messagebox Background Color"
 msgstr "رنگ پس زمینه ی باکس ارور در فرم ورود"
 
-#: app/handle_view.php:480
+#: app/handle_view.php:478
 msgid "Background Color of Login and Register Error Messagebox"
 msgstr "رنگ پس زمینه ی باکس ارور در فرم ورود و ثبت نام"
 
-#: app/handle_view.php:634
+#: app/handle_view.php:632
 msgid "This plugin is not active on your site"
 msgstr "این پلاگین بر روی سایت شما فعال نیست"
 
-#: app/handle_view.php:701
+#: app/handle_view.php:699
 msgid "Auto confirm phone number after user register"
 msgstr "فعالسازی شماره موبایل بعد از ثبت نام به صورت اتوماتیک"
 
-#: app/handle_view.php:705
+#: app/handle_view.php:703
 msgid "User can change phone number"
 msgstr "کاربر میتواند شماره موبایل را تغییر دهد"
 
@@ -1117,7 +1117,7 @@ msgstr "غیرفعال کردن FontAwesome میهن پنل"
 msgid "Don't load mihanpanel fontawesome"
 msgstr "از FontAwesome میهن پنل استفاده نکن"
 
-#: views/admin/panel-section/panel.php:28 views/admin/panel-section/tools.php:3
+#: views/admin/panel-section/panel.php:28 views/admin/panel-section/tools.php:7
 msgid "User panel page"
 msgstr "صفحه پنل کاربری"
 
@@ -1189,51 +1189,51 @@ msgstr "رنگ لینک ها در نوار کناری پنل کاربری"
 msgid "Dashboard Widgets"
 msgstr "ویجت‌های داشبورد"
 
-#: views/admin/panel-section/panel.php:89
+#: views/admin/panel-section/panel.php:90
 msgid "Hide register day count widget"
 msgstr "مخفی کردن ویجت روز‌هایی که عضو هستید"
 
-#: views/admin/panel-section/panel.php:93
+#: views/admin/panel-section/panel.php:94
 msgid "Hide Comment widget"
 msgstr "مخفی کردن ویجت تعداد نظرات"
 
-#: views/admin/panel-section/panel.php:97
+#: views/admin/panel-section/panel.php:98
 msgid "Hide Woocommerce widget"
 msgstr "مخفی کردن ویجت ووکامرس"
 
-#: views/admin/panel-section/panel.php:101
+#: views/admin/panel-section/panel.php:102
 msgid "Hide EDD widget"
 msgstr "مخفی کردن ویجت EDD"
 
-#: views/admin/panel-section/panel.php:105
+#: views/admin/panel-section/panel.php:106
 msgid "Hide Awesome Support widget"
 msgstr "مخفی کردن ویجت افزونه تیکت"
 
-#: views/admin/panel-section/panel.php:108
+#: views/admin/panel-section/panel.php:110
 msgid "Blog Section"
 msgstr "بخش بلاگ"
 
-#: views/admin/panel-section/panel.php:110
+#: views/admin/panel-section/panel.php:112
 msgid "Is blog section enable?"
 msgstr "بخش بلاگ فعال باشد؟"
 
-#: views/admin/panel-section/panel.php:114
+#: views/admin/panel-section/panel.php:116
 msgid "Section Title"
 msgstr "عنوان این بخش"
 
-#: views/admin/panel-section/panel.php:118
+#: views/admin/panel-section/panel.php:120
 msgid "Title Link"
 msgstr "لینک"
 
-#: views/admin/panel-section/panel.php:122
+#: views/admin/panel-section/panel.php:124
 msgid "Posts category"
 msgstr "دسته‌بندی نوشته‌ها"
 
-#: views/admin/panel-section/panel.php:126
+#: views/admin/panel-section/panel.php:128
 msgid "Posts count"
 msgstr "تعداد نوشته‌ها"
 
-#: views/admin/panel-section/panel.php:130
+#: views/admin/panel-section/panel.php:132
 msgid "Roles who can't use admin panel"
 msgstr "نقش های کاربری که اجازه ی ورود به پنل مدیریت را ندارند"
 
@@ -1274,11 +1274,37 @@ msgstr "بساز"
 msgid "User panel page already exists."
 msgstr "برگه‌ی پنل کاربری وجود دارد."
 
-#: views/admin/panel-section/tools.php:18
+#: views/admin/panel-section/tools.php:16
+msgid "Phone numbers"
+msgstr "شماره تلفن‌ها"
+
+#: views/admin/panel-section/tools.php:19
+msgid "Transfer digits phone numbers to Mihan Panel"
+msgstr "انتقال شماره تلفن‌ها از دیجیتس به میهن‌پنل"
+
+#: views/admin/panel-section/tools.php:25
+msgid ""
+"If you're using Digits previously you can use this to transfer phone numbers "
+"to Mihan Panel."
+msgstr ""
+"اگر پیش از این از دیجیتس استفاده میکردید میتوانید شماره تلفن کاربران را به "
+"میهن‌پنل منتقل کنید"
+
+#: views/admin/panel-section/tools.php:28
+msgid ""
+"Only the phone number of the users who do not have a phone number in the Mihan "
+"Panel will be transferred."
+msgstr "فقط شماره تلفن کاربرانی که در میهن‌پنل شماره نداشته باشند منتقل میشود."
+
+#: views/admin/panel-section/tools.php:31
+msgid "Login page"
+msgstr "برگه ورود"
+
+#: views/admin/panel-section/tools.php:34
 msgid "Additional Code"
 msgstr "کد اضافه"
 
-#: views/admin/panel-section/tools.php:21
+#: views/admin/panel-section/tools.php:37
 msgid "This code is render in head tag in Login page"
 msgstr "این کد در تگ هدر صفحه ی ورود اضافه میشود"
 
@@ -1312,6 +1338,10 @@ msgstr "https://mihanwp.com/"
 
 #~ msgid "yes"
 #~ msgstr "بله"
+
+#, php-format
+#~ msgid "%s out of %s items were transferred"
+#~ msgstr "‫%s مورد از %s آیتم منتقل شد"
 
 #~ msgid "Invalid phone number"
 #~ msgstr "شماره موبایل معتبر نیست"
@@ -1595,6 +1625,9 @@ msgstr "https://mihanwp.com/"
 
 #~ msgid "Activation Code"
 #~ msgstr "کد فعالسازی"
+
+#~ msgid "Transfer"
+#~ msgstr "انتقال"
 
 #~ msgid "Choose an item"
 #~ msgstr "یک مورد را انتخاب کنید"
