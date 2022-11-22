@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MihanPanel\n"
-"POT-Creation-Date: 2022-11-22 15:49+0330\n"
-"PO-Revision-Date: 2022-11-22 15:49+0330\n"
+"POT-Creation-Date: 2022-11-22 16:13+0330\n"
+"PO-Revision-Date: 2022-11-22 16:15+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -34,7 +34,7 @@ msgstr "میهن پنل"
 msgid "Login & Register"
 msgstr "ورود و عضویت"
 
-#: app/admin_menu.php:30 app/admin_menu.php:45 app/hooks.php:142
+#: app/admin_menu.php:30 app/admin_menu.php:45 app/hooks.php:140
 msgid "User Panel"
 msgstr "پنل کاربری"
 
@@ -200,7 +200,7 @@ msgstr "فعال"
 msgid "Inactive"
 msgstr "غیرفعال"
 
-#: app/emwidg/emwidg_mihanpanel.php:26 app/hooks.php:163 app/live_edit.php:79
+#: app/emwidg/emwidg_mihanpanel.php:26 app/hooks.php:161 app/live_edit.php:79
 msgid "Mihan Panel"
 msgstr "میهن پنل"
 
@@ -1308,6 +1308,7 @@ msgstr "کد اضافه"
 msgid "This code is render in head tag in Login page"
 msgstr "این کد در تگ هدر صفحه ی ورود اضافه میشود"
 
+#. Author of the plugin/theme
 #: views/admin/settings.php:23
 msgid "Ertano"
 msgstr "میهن‌وردپرس"
@@ -1317,24 +1318,26 @@ msgid "New Airlines"
 msgstr "خطوط هوایی جدید"
 
 #. Plugin Name of the plugin/theme
-msgid "MihanPanel Pro"
-msgstr "میهن پنل پرو"
+msgid "MihanPanel Lite"
+msgstr "میهن پنل لایت"
 
 #. Plugin URI of the plugin/theme
-msgid "https://mihanwp.com/mihanpanel/"
-msgstr "https://mihanwp.com/mihanpanel/"
+msgid "https://ertano.com/mihanpanel/"
+msgstr "‎‫‫https://mihanwp.com/mihanpanel/"
 
 #. Description of the plugin/theme
 msgid "The best way to build user interface in WordPress"
 msgstr "یک راه مناسب برای پیاده سازی پروفایل کاربری در وردپرس"
 
-#. Author of the plugin/theme
-msgid "MihanWP"
-msgstr "میهن وردپرس"
-
 #. Author URI of the plugin/theme
-msgid "https://mihanwp.com"
+msgid "https://ertano.com"
 msgstr "https://mihanwp.com/"
+
+#~ msgid "MihanPanel Pro"
+#~ msgstr "میهن پنل پرو"
+
+#~ msgid "MihanWP"
+#~ msgstr "میهن وردپرس"
 
 #~ msgid "yes"
 #~ msgstr "بله"
@@ -1964,9 +1967,6 @@ msgstr "https://mihanwp.com/"
 
 #~ msgid "Name"
 #~ msgstr "نام"
-
-#~ msgid "MihanPanel Live Edit"
-#~ msgstr "ویرایش زنده‌ی میهن پنل"
 
 #~ msgid "mihanwp.com"
 #~ msgstr "میهن وردپرس"
