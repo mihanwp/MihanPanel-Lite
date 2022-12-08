@@ -160,23 +160,34 @@ class assets
     static function load_front_assets()
     {
         global $post;
-        $plugin_version = \mihanpanel\app\tools::get_plugin_version();
-        if (isset($post->post_content) && is_singular(array('post', 'page')) && has_shortcode($post->post_content, 'mihanpanel')) {
-            wp_enqueue_style('mwstyle-css', MW_MIHANPANEL_URL . 'css/style.css', '', $plugin_version);
-            if(!is_rtl())
-            {
-                wp_enqueue_style('mwstyle-ltr-css', MW_MIHANPANEL_URL . 'css/style-ltr.css', '', $plugin_version);
-            }
-            \mihanpanel\app\assets::load_panel_js();
-            do_action('mwpl_load_panel_assets');
-        }
-        if(!options::disable_mihanpanel_fontawesome())
+        if(
+            !isset($post->post_content)
+            || !is_singular(['post', 'page'])
+            || !has_shortcode($post->post_content, 'mihanpanel')
+            )
         {
-            wp_enqueue_style('mw_fontawesome_css', MW_MIHANPANEL_URL . 'css/fa/css/all.css', '', $plugin_version);
+            return false;
         }
-        // wp_enqueue_style('mw-profile-widget', MW_MIHANPANEL_URL . 'css/profile-widget.css', '', $plugin_version);
+        $plugin_version = \mihanpanel\app\tools::get_plugin_version();
+        wp_enqueue_style('mwstyle-css', MW_MIHANPANEL_URL . 'css/style.css', [], $plugin_version);
+        if(!is_rtl())
+        {
+            wp_enqueue_style('mwstyle-ltr-css', MW_MIHANPANEL_URL . 'css/style-ltr.css', '', $plugin_version);
+        }
+        self::load_panel_js();
+        do_action('mwpl_load_panel_assets');
+
+        self::load_fontawesome_assets();
         self::load_fonts_assets();
         do_action('mwpl_load_front_assets');
+    }
+    static function load_fontawesome_assets()
+    {
+        if(options::disable_mihanpanel_fontawesome())
+        {
+            return false;
+        }
+        wp_enqueue_style('mw_fontawesome_css', MW_MIHANPANEL_URL . 'css/fa/css/all.css', null, \mihanpanel\app\tools::get_plugin_version());
     }
     static function load_fonts_assets($screen="panel")
     {
@@ -204,10 +215,6 @@ class assets
             {
                 font-family:{$font_name} !important;
             }
-            .mihanpanel-profile-widget
-            {
-                display: none !important;
-            }
             ";
             wp_add_inline_style('mw-profile-widget', $profile_widget_style);
         }
@@ -233,5 +240,9 @@ class assets
         register_block_type('mihanpanel/panel', [
             'editor_script' => 'mwp_gutenberg_blocks'
         ]);
+    }
+    public static function loadAdminNotificationMenusAssets()
+    {
+        do_action('mwpl_load_admin_notifications_menu_assets');
     }
 }

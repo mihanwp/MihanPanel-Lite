@@ -10,6 +10,7 @@ class admin_menu
     {
         self::tabs();
         self::user_fields();
+        self::notifications();
     }
     static function add_main_menu_page()
     {
@@ -130,5 +131,43 @@ class admin_menu
             </div>
             <?php
         }
+    }
+    static function notifications()
+    {
+        $menuTitle = __('Notifications', 'mihanpanel');
+        $notificationsSubMenu = add_submenu_page('mihanpanel', $menuTitle, $menuTitle, 'manage_options', 'mihanpanel_notifications', [__CLASS__, 'notifications_c']);
+        add_action("load-{$notificationsSubMenu}", ['mihanpanel\app\assets', 'loadAdminNotificationMenusAssets']);
+    }
+    static function notifications_c()
+    {
+        if(tools::isProVersion())
+        {
+            \mihanpanel\pro\app\admin_menu::handleNotificationsMenuContent();
+            return;
+        }
+        $stylesData = [
+            "background" => "#cdcde8",
+            "width" => "400px",
+            "height" => "160px",
+            "border-radius" => "15px",
+            "margin" => "0 auto",
+            "color" => "black",
+            "display" => "flex",
+            "justify-content" => "center",
+            "align-items" => "center",
+            "font-size" => "16px",
+            "text-align" => "center",
+            "border" => "3px solid #7c7cbd30",
+        ];
+        $styles = '';
+        foreach($stylesData as $key => $value)
+        {
+            $styles .= $key . ': ' . $value . '; ';
+        }
+        ?>
+        <div style="<?php echo $styles?>">
+            <span><?php printf(__('This feature is accessible only in %s.', 'mihanpanel'), sprintf('<a target="_blank" href="%s">%s</a>', \mihanpanel\app\tools::get_pro_version_link(), __('MihanPanel Pro', 'mihanpanel'))); ?></span>
+        </div>
+        <?php
     }
 }

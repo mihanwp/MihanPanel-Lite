@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MihanPanel\n"
-"POT-Creation-Date: 2022-11-22 16:13+0330\n"
-"PO-Revision-Date: 2022-11-22 16:15+0330\n"
+"POT-Creation-Date: 2022-12-08 11:17+0330\n"
+"PO-Revision-Date: 2022-12-08 11:18+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -26,65 +26,75 @@ msgstr ""
 msgid "Address 2"
 msgstr "آدرس شماره دو"
 
-#: app/admin_menu.php:21 app/gutenberg.php:17
+#: app/admin_menu.php:22 app/gutenberg.php:17
 msgid "MihanPanel"
 msgstr "میهن پنل"
 
-#: app/admin_menu.php:29 views/admin/panel-section/general.php:40
+#: app/admin_menu.php:30 views/admin/panel-section/general.php:40
 msgid "Login & Register"
 msgstr "ورود و عضویت"
 
-#: app/admin_menu.php:30 app/admin_menu.php:45 app/hooks.php:140
+#: app/admin_menu.php:31 app/admin_menu.php:46 app/hooks.php:140
 msgid "User Panel"
 msgstr "پنل کاربری"
 
-#: app/admin_menu.php:31 views/admin/panel-section/register.php:2
+#: app/admin_menu.php:32 views/admin/panel-section/register.php:2
 msgid "Register Form"
 msgstr "فرم ثبت نام"
 
-#: app/admin_menu.php:32 views/admin/panel-section/notification.php:2
+#: app/admin_menu.php:33 app/admin_menu.php:137
+#: views/admin/panel-section/notification.php:2
 msgid "Notifications"
 msgstr "اطلاعیه ها"
 
-#: app/admin_menu.php:33 app/pro_version_detail.php:9
+#: app/admin_menu.php:34 app/pro_version_detail.php:9
 msgid "Login with SMS"
 msgstr "ورود با SMS"
 
-#: app/admin_menu.php:34
+#: app/admin_menu.php:35
 msgid "Emails"
 msgstr "ایمیل‌های ارسالی"
 
-#: app/admin_menu.php:35 app/widget.php:35
+#: app/admin_menu.php:36 app/widget.php:35
 msgid "Tools"
 msgstr "ابزار‌ها"
 
-#: app/admin_menu.php:59
+#: app/admin_menu.php:60
 msgid "User Fields"
 msgstr "فیلدهای کاربری"
 
-#: app/admin_menu.php:76
+#: app/admin_menu.php:77
 msgid "Do you want to save changes?"
 msgstr "میخواهید تغییرات ذخیره شود؟"
 
-#: app/admin_menu.php:77
+#: app/admin_menu.php:78
 msgid "Yes"
 msgstr "بله"
 
-#: app/admin_menu.php:85
+#: app/admin_menu.php:86
 msgid "Create new field"
 msgstr "ایجاد فیلد جدید"
 
-#: app/admin_menu.php:85
+#: app/admin_menu.php:86
 msgid "Close"
 msgstr "بستن"
 
-#: app/admin_menu.php:95
+#: app/admin_menu.php:96
 msgid "Panel Menus"
 msgstr "منوهای پنل کاربری"
 
-#: app/admin_menu.php:129
+#: app/admin_menu.php:130
 msgid "This section is active in MihanPanel pro"
 msgstr "این بخش در نسخه‌ی حرفه‌ای میهن‌پنل در دسترس است."
+
+#: app/admin_menu.php:169
+#, php-format
+msgid "This feature is accessible only in %s."
+msgstr "این قابلیت فقط در %s در دسترس است"
+
+#: app/admin_menu.php:169
+msgid "MihanPanel Pro"
+msgstr "میهن پنل پرو"
 
 #: app/ajax.php:25 app/ajax.php:64 app/ajax.php:127 app/ajax.php:154
 msgid "Has error!"
@@ -520,7 +530,7 @@ msgstr "باز کردن منو"
 msgid "Please login to your account"
 msgstr "لطفا وارد حساب کاربری خود شوید"
 
-#: app/sundry.php:10 app/widget/profile.php:62
+#: app/sundry.php:10 app/widget/profile.php:65
 #: views/admin/panel-section/general.php:10
 msgid "Login"
 msgstr "ورود"
@@ -533,7 +543,7 @@ msgstr "رمز عبور"
 msgid "Password must not empty"
 msgstr "کلمه عبور نباید خالی باشد"
 
-#: app/sundry.php:194
+#: app/sundry.php:198
 msgid " Should not be empty!"
 msgstr " نباید خالی باشد!"
 
@@ -623,27 +633,27 @@ msgstr "پیش"
 msgid "More Articles"
 msgstr "مقاله‌های بیشتر"
 
-#: app/widget/profile.php:12
+#: app/widget/profile.php:8
 msgid "User Profile - Mihanpanel"
 msgstr "پروفایل کاربری - میهن پنل"
 
-#: app/widget/profile.php:13
+#: app/widget/profile.php:9
 msgid "Show User Profile"
 msgstr "نمایش پروفایل کاربری"
 
-#: app/widget/profile.php:40 parts/sidebar.php:6
+#: app/widget/profile.php:43 parts/sidebar.php:6
 msgid "User Dashboard"
 msgstr "داشبورد کاربری"
 
-#: app/widget/profile.php:46 parts/sidebar.php:12
+#: app/widget/profile.php:49 parts/sidebar.php:12
 msgid "Edit Profile"
 msgstr "ویرایش پروفایل"
 
-#: app/widget/profile.php:55 parts/sidebar.php:23
+#: app/widget/profile.php:58 parts/sidebar.php:23
 msgid "Logout"
 msgstr "خروج"
 
-#: app/widget/profile.php:68
+#: app/widget/profile.php:71
 msgid "Register"
 msgstr "ثبت نام"
 
@@ -672,7 +682,7 @@ msgstr "بازگشت به صفحه اصلی"
 msgid "Howdy, %1$s!"
 msgstr "سلام  %1$s!"
 
-#: parts/dashboard.php:28
+#: parts/dashboard.php:30
 #, php-format
 msgid "Off code: %1$s"
 msgstr "کد تخفیف: %1$s"
@@ -1319,11 +1329,11 @@ msgstr "خطوط هوایی جدید"
 
 #. Plugin Name of the plugin/theme
 msgid "MihanPanel Lite"
-msgstr "میهن پنل لایت"
+msgstr "میهن‌پنل لایت"
 
 #. Plugin URI of the plugin/theme
 msgid "https://ertano.com/mihanpanel/"
-msgstr "‎‫‫https://mihanwp.com/mihanpanel/"
+msgstr "https://mihanwp.com/mihanpanel/"
 
 #. Description of the plugin/theme
 msgid "The best way to build user interface in WordPress"
@@ -1333,18 +1343,15 @@ msgstr "یک راه مناسب برای پیاده سازی پروفایل کا�
 msgid "https://ertano.com"
 msgstr "https://mihanwp.com/"
 
-#~ msgid "MihanPanel Pro"
-#~ msgstr "میهن پنل پرو"
-
-#~ msgid "MihanWP"
-#~ msgstr "میهن وردپرس"
-
 #~ msgid "yes"
 #~ msgstr "بله"
 
 #, php-format
 #~ msgid "%s out of %s items were transferred"
 #~ msgstr "‫%s مورد از %s آیتم منتقل شد"
+
+#~ msgid "Has error in delete notification"
+#~ msgstr "مشکلی در حذف آیتم به وجود آمد"
 
 #~ msgid "Invalid phone number"
 #~ msgstr "شماره موبایل معتبر نیست"
@@ -1795,6 +1802,30 @@ msgstr "https://mihanwp.com/"
 #~ msgid "Dynamic code was wrong!"
 #~ msgstr "کد پویا اشتباه است!"
 
+#~ msgid "Success"
+#~ msgstr "موفقیت"
+
+#~ msgid "Info"
+#~ msgstr "اطلاعیه"
+
+#~ msgid "Warning"
+#~ msgstr "اخطار"
+
+#~ msgid "Show to all"
+#~ msgstr "نمایش به همه"
+
+#~ msgid "Has error in save notification data"
+#~ msgstr "خطایی در ذخیره‌سازی اطلاعات وجود دارد"
+
+#~ msgid "Successfully save notification data"
+#~ msgstr "داده‌ها با موفقیت ذخیره شد"
+
+#~ msgid "Invalid notification"
+#~ msgstr "اطلاعیه نامعتبر است"
+
+#~ msgid "Has error in edit notification"
+#~ msgstr "مشکلی در ویرایش اطلاعیه به وجود آمد"
+
 #~ msgid "Your dynamic code is"
 #~ msgstr "کد یکبار مصرف شما"
 
@@ -1912,6 +1943,45 @@ msgstr "https://mihanwp.com/"
 #~ msgid "Message Text..."
 #~ msgstr "متن پیام..."
 
+#~ msgid "Notification ID is invalid"
+#~ msgstr "شناسه‌ی اطلاعیه نامعتبر است"
+
+#~ msgid "Edit notification"
+#~ msgstr "ویرایش اطلاعیه"
+
+#~ msgid "Notification title"
+#~ msgstr "عنوان اطلاعیه"
+
+#~ msgid "Show in panel"
+#~ msgstr "نمایش در پنل"
+
+#~ msgid "Condition type"
+#~ msgstr "نوع شرط نمایش"
+
+#~ msgid "Choose who can see this notification"
+#~ msgstr "انتخاب کنید چه کسانی این اطلاعیه را ببینند"
+
+#~ msgid "Roles"
+#~ msgstr "نقش‌های کاربری"
+
+#~ msgid "Notification content"
+#~ msgstr "محتوای اطلاعیه"
+
+#~ msgid "Save notification"
+#~ msgstr "ذخیره اطلاعیه"
+
+#~ msgid "Targeted Notifications"
+#~ msgstr "اطلاعیه‌ی هدفمند"
+
+#~ msgid "New notification"
+#~ msgstr "اطلاعیه‌ی جدید"
+
+#~ msgid "Action"
+#~ msgstr "عملیات"
+
+#~ msgid "Nothing found"
+#~ msgstr "چیزی یافت نشد."
+
 #~ msgctxt "sms-login"
 #~ msgid "Dynamic Password"
 #~ msgstr "کد ارسال شده به شماره موبایل خود را وارد کنید"
@@ -1937,6 +2007,17 @@ msgstr "https://mihanwp.com/"
 
 #~ msgid "Request Code"
 #~ msgstr "درخواست کد"
+
+#~ msgid "MihanWP"
+#~ msgstr "میهن وردپرس"
+
+#~ msgid "Condition Type"
+#~ msgstr "شرط نمایش"
+
+#, fuzzy
+#~| msgid "Successfully deleted!"
+#~ msgid "Successfully deleted"
+#~ msgstr "با موفقیت حذف شد!"
 
 #~ msgid "Sms.ir [new panel]"
 #~ msgstr "پنل جدید"
@@ -2144,9 +2225,6 @@ msgstr "https://mihanwp.com/"
 
 #~ msgid "Credit"
 #~ msgstr "اعتبار"
-
-#~ msgid "Notification"
-#~ msgstr "اطلاعیه"
 
 #~ msgid "ZIP"
 #~ msgstr "فشرده"

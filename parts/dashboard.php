@@ -10,6 +10,8 @@
             </div>
         </div>
     </nav>
+    <div class="clear"></div>
+    <?php do_action('mwpl/panel/after_panel_widgets');?>
     <div class="mp-content">
         <div class="container-fluid">
             <div class="row">

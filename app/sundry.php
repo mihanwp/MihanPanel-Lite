@@ -130,6 +130,10 @@ class sundry
         do_action('mwpl_after_save_profile_extra_fields', $user_id);
     }
     static function update_profile_extra_fields_notice(){
+        if(get_current_screen()->id !== 'profile')
+        {
+            return false;
+        }
         $notices = notice::once_get_multiple_notice();
         if(!$notices)
         {

@@ -4,10 +4,6 @@ class profile extends \WP_Widget
 {
     function __construct()
     {
-        add_action('wp_enqueue_scripts', function(){
-            wp_enqueue_style('mw-profile-widget', MW_MIHANPANEL_URL . 'css/profile-widget.css', null, \mihanpanel\app\tools::get_pro_version_link());
-            \mihanpanel\app\assets::load_fonts_assets('profile');
-        });
         parent::__construct(
             'mpp_widget', __('User Profile - Mihanpanel', 'mihanpanel'),
             array('description' => __('Show User Profile', 'mihanpanel'),)
@@ -16,6 +12,13 @@ class profile extends \WP_Widget
 
     function widget($args, $instance)
     {
+        // load assets
+        add_action('wp_footer', function(){
+            wp_enqueue_style('mw-profile-widget', MW_MIHANPANEL_URL . 'css/profile-widget.css', null, \mihanpanel\app\tools::get_plugin_version());
+            \mihanpanel\app\assets::load_fontawesome_assets();
+            \mihanpanel\app\assets::load_fonts_assets('profile');
+            do_action('load_mihanpanel_profile_widget_assets');
+        });
         //widget showing codes
         ?>
         <div class="mihanpanel-profile-widget <?php echo is_rtl() ? 'mp_rtl_widget' : 'mp_ltr_widget' ; ?>">
@@ -58,13 +61,13 @@ class profile extends \WP_Widget
                     <?php } else { ?>
                         <li>
                             <a href="<?php echo esc_url(wp_login_url(\mihanpanel\app\tools::get_current_page_url())) ?>">
-                                <i class="fa fa-unlock-alt"></i>
+                                <i class="fas fa-unlock-alt"></i>
                                 <p><?php _e("Login", "mihanpanel"); ?></p>
                             </a>
                         </li>
                         <li>
                             <a href="<?php echo esc_url(add_query_arg(['action' => 'register'], wp_login_url())); ?>">
-                                <i class="fa fa-user-plus"></i>
+                                <i class="fas fa-user-plus"></i>
                                 <p><?php _e("Register", "mihanpanel"); ?></p>
                             </a>
                         </li>
