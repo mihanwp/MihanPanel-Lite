@@ -68,7 +68,7 @@ class admin_tabs
                         <div class="mw_th mw_small_width"></div>
                         <?php if($table_header && is_array($table_header)):
                             foreach($table_header as $header_data): ?>
-                            <div class="mw_th <?php echo $header_data['class'] ? $header_data['class'] : '';?>"><?php echo esc_html($header_data['title']) ?></div>
+                            <div class="mw_th <?php echo $header_data['class'] ? esc_attr($header_data['class']) : '';?>"><?php echo esc_html($header_data['title']) ?></div>
                         <?php endforeach; endif; ?>
                         <div class="mw_th"></div>
                     </div>
@@ -98,20 +98,20 @@ class admin_tabs
                                 <span class="preview_icon"><?php \mihanpanel\app\presenter\tabs_menu::render_tab_item_icon($menu->icon); ?></span>
                                 <input type="hidden" class="field-icon-<?php echo esc_attr($menu->id); ?>" name="icon" value="<?php echo esc_attr($menu->icon); ?>"/>
                             </div>
-                            <div drop_down_target_id="mw_field_content_<?php echo $menu->id;?>" class="mw_td mwpl_drop_down">
+                            <div drop_down_target_id="mw_field_content_<?php echo esc_attr($menu->id);?>" class="mw_td mwpl_drop_down">
                                 <span class="mw_drop_down_btn mw_icon dashicons dashicons-arrow-down-alt2"></span>
                             </div>
                             <div class="mw_td">
                                 <input class="mihanpanelremove" type="submit" name="delete" value="x"/>
                             </div>
                         </div>
-                        <div id="mw_field_content_<?php echo $menu->id;?>" mwpl_drop_down_content class="meta_fields_wrapper extra_fields_wrapper">
+                        <div id="mw_field_content_<?php echo esc_attr($menu->id);?>" mwpl_drop_down_content class="meta_fields_wrapper extra_fields_wrapper">
                             <div class="row">
-                                <label class="block" for="field_choosen_id_<?php echo $menu->id;?>"><?php esc_html_e('Field ID', 'mihanpanel')?></label>
+                                <label class="block" for="field_choosen_id_<?php echo esc_attr($menu->id);?>"><?php esc_html_e('Field ID', 'mihanpanel')?></label>
                                 <?php \mihanpanel\app\handle_view::render_panel_tabs_fields_field_id($menu);?>
                             </div>
                             <div class="row">
-                                <label for="is_show_by_roles_<?php echo $menu->id;?>"><?php esc_html_e('Show by roles', 'mihanpanel')?></label>
+                                <label for="is_show_by_roles_<?php echo esc_attr($menu->id);?>"><?php esc_html_e('Show by roles', 'mihanpanel')?></label>
                                 <?php \mihanpanel\app\handle_view::render_panel_tabs_fields_is_show_by_role($menu);?>
                             </div>
                         </div>

@@ -107,6 +107,10 @@ class handle_view
                 'class' => \mihanpanel\app\handle_view::class,
                 'method' => 'handle_dashboard_widget_awesome_support',
             ],
+            'mihanticket' => [
+                'class' => \mihanpanel\app\handle_view::class,
+                'method' => 'handle_dashboard_widget_mihanticket',
+            ]
         ];
         $widgets = apply_filters('mihanpanel/panel/dashboard/widgets', $widgets);
         if(!$widgets || !is_array($widgets))
@@ -186,6 +190,18 @@ class handle_view
             self::render_dashboard_widget_awesome_support();
         }
     }
+    static function handle_dashboard_widget_mihanticket()
+    {
+        $middlewares = [
+            ['\mihanpanel\app\tools', 'is_mihanticket_active']
+        ];
+        $middlewares = apply_filters('mwpl_panel_widgets_middlewares_mihanticket', $middlewares);
+        $res = self::handle_middlewares($middlewares);
+        if($res)
+        {
+            self::render_dashboard_widget_mihanticket();
+        }
+    }
 
     static function render_dashboard_widget_register_day()
     {
@@ -231,7 +247,7 @@ class handle_view
                       $comment_count = $wpdb->get_var("SELECT COUNT( * ) AS total
                           FROM {$wpdb->comments}
                           {$where}");
-                      echo $comment_count;
+                      echo esc_html($comment_count);
                       ?></h3>
                     <p class="category"><?php esc_html_e("Your Comments", "mihanpanel") ?></p>
                 </div>
@@ -264,7 +280,7 @@ class handle_view
                                   }
                               }
                           }
-                          echo $counter;
+                          echo esc_html($counter);
                           ?>
                       </h3>
                         <p class="category"><?php esc_html_e("Purchased files", "mihanpanel"); ?></p>
@@ -283,7 +299,7 @@ class handle_view
                 </div>
                 <div class="mihanpanel-card-content">
                   <h3 class="title"><?php $user_id = get_current_user_id();
-                    echo wc_get_customer_order_count($user_id); ?></h3>
+                    echo esc_html(wc_get_customer_order_count($user_id)); ?></h3>
                 <p class="category"><?php esc_html_e("Your purchase count", "mihanpanel"); ?></p>
                 </div>
             </div>
@@ -306,7 +322,27 @@ class handle_view
                           'post_type' => 'ticket'
                       );
                       $posts = new \WP_Query($args);
-                      echo $posts->found_posts;
+                      echo esc_html($posts->found_posts);
+                      ?>
+                  </h3>
+                    <p class="category"><?php esc_html_e("Your tickets", 'mihanpanel'); ?></p>
+                </div>
+            </div>
+        </div>
+        <?php
+    }
+    static function render_dashboard_widget_mihanticket()
+    {
+        ?>
+        <div class="col-md-4">
+            <div class="mihanpanel-card mihanpanel-card-stats">
+                <div class="mihanpanel-card-header" data-background-color="green">
+                  <img src="<?php echo MW_MIHANPANEL_URL; ?>/img/tickets.svg" width="48" height="48"/>
+                </div>
+                <div class="mihanpanel-card-content">
+                  <h3 class="title">
+                      <?php
+                      echo esc_html(\mihanpanel\app\adapter\mihanticket::get_user_tickets_count(get_current_user_id()));
                       ?>
                   </h3>
                     <p class="category"><?php esc_html_e("Your tickets", 'mihanpanel'); ?></p>
@@ -517,29 +553,34 @@ class handle_view
     }
 
 
-    static function option_panel_field_hide_register_day_count_widget()
+    static function option_panel_field_is_show_register_day_count_widget()
     {
-        $render_method = apply_filters('mwpl_option_panel/render_method/hide_register_day_count_widget', []);
+        $render_method = apply_filters('mwpl_option_panel/render_method/is_show_register_day_count_widget', []);
         self::handle_option_panel_render_method($render_method);
     }
-    static function option_panel_field_hide_comment_widget()
+    static function option_panel_field_is_show_comment_widget()
     {
-        $render_method = apply_filters('mwpl_option_panel/render_method/hide_comment_widget', []);
+        $render_method = apply_filters('mwpl_option_panel/render_method/is_show_comment_widget', []);
         self::handle_option_panel_render_method($render_method);
     }
-    static function option_panel_field_hide_woocommerce_widget()
+    static function option_panel_field_is_show_woocommerce_widget()
     {
-        $render_method = apply_filters('mwpl_option_panel/render_method/hide_woocommerce_widget', []);
+        $render_method = apply_filters('mwpl_option_panel/render_method/is_show_woocommerce_widget', []);
         self::handle_option_panel_render_method($render_method);
     }
-    static function option_panel_field_hide_edd_widget()
+    static function option_panel_field_is_show_edd_widget()
     {
-        $render_method = apply_filters('mwpl_option_panel/render_method/hide_edd_widget', []);
+        $render_method = apply_filters('mwpl_option_panel/render_method/is_show_edd_widget', []);
         self::handle_option_panel_render_method($render_method);
     }
-    static function option_panel_field_hide_awesome_support_widget()
+    static function option_panel_field_is_show_awesome_support_widget()
     {
-        $render_method = apply_filters('mwpl_option_panel/render_method/hide_awesome_support_widget', []);
+        $render_method = apply_filters('mwpl_option_panel/render_method/is_show_awesome_support_widget', []);
+        self::handle_option_panel_render_method($render_method);
+    }
+    static function option_panel_field_is_show_mihanticket_widget()
+    {
+        $render_method = apply_filters('mwpl_option_panel/render_method/is_show_mihanticket_widget', []);
         self::handle_option_panel_render_method($render_method);
     }
     static function option_panel_field_ban_roles()
@@ -558,7 +599,7 @@ class handle_view
                         continue;
             ?>
                 <p>
-                    <label for="<?php echo $role_key ?>"><?php _e($role_name); ?></label>
+                    <label for="<?php echo esc_attr($role_key) ?>"><?php _e($role_name); ?></label>
                     <?php self::show_go_pro_link(); ?>
                 </p>
             <?php endforeach; ?>
@@ -664,7 +705,7 @@ class handle_view
             ?>
             <?php foreach($password_types as $name):?>
             <p>
-                <label><?php echo $name; ?></label>
+                <label><?php echo esc_html($name); ?></label>
                 <?php self::show_go_pro_link(); ?>
             </p>
             <?php endforeach; ?>
@@ -732,6 +773,11 @@ class handle_view
         $render_method = apply_filters('mwpl_option_panel/render_method/transfer_digits_phone_numbers', []);
         self::handle_option_panel_render_method($render_method);
     }
+    static function option_panel_delete_ghost_users()
+    {
+        $render_method = apply_filters('mwpl_option_panel/render_method/delete_ghost_users', []);
+        self::handle_option_panel_render_method($render_method);
+    }
 
     static function render_user_fields_type_selectbox($field_name, $selected=false)
     {
@@ -739,7 +785,7 @@ class handle_view
         ?>
         <select name="<?php echo esc_attr($field_name); ?>">
             <?php foreach($field_types as $type => $item): ?>
-                <option <?php $selected ? selected($type, $selected) : null;?> <?php echo $item['disabled'] ? 'disabled' : false; ?> value="<?php echo $type?>"><?php echo $item['title']?></option>
+                <option <?php $selected ? selected($type, $selected) : null;?> <?php echo $item['disabled'] ? 'disabled' : false; ?> value="<?php echo esc_attr($type)?>"><?php echo esc_html($item['title'])?></option>
             <?php endforeach; ?>
         </select>
         <?php

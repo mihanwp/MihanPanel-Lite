@@ -87,24 +87,28 @@
         <h2><?php esc_html_e("Dashboard Widgets", "mihanpanel")?></h2>
         <div class="mp_option_single">
             <p>
-                <label><?php esc_html_e("Hide register day count widget", "mihanpanel"); ?></label>
-                <?php \mihanpanel\app\handle_view::option_panel_field_hide_register_day_count_widget(); ?>
+                <label><?php esc_html_e("Show register day count widget", "mihanpanel"); ?></label>
+                <?php \mihanpanel\app\handle_view::option_panel_field_is_show_register_day_count_widget(); ?>
             </p>
             <p>
-                <label><?php esc_html_e("Hide Comment widget", "mihanpanel"); ?></label>
-                <?php \mihanpanel\app\handle_view::option_panel_field_hide_comment_widget(); ?>
+                <label><?php esc_html_e("Show Comment widget", "mihanpanel"); ?></label>
+                <?php \mihanpanel\app\handle_view::option_panel_field_is_show_comment_widget(); ?>
             </p>
             <p>
-                <label><?php esc_html_e("Hide Woocommerce widget", "mihanpanel"); ?></label>
-                <?php \mihanpanel\app\handle_view::option_panel_field_hide_woocommerce_widget(); ?>
+                <label><?php esc_html_e("Show Woocommerce widget", "mihanpanel"); ?></label>
+                <?php \mihanpanel\app\handle_view::option_panel_field_is_show_woocommerce_widget(); ?>
             </p>
             <p>
-                <label><?php esc_html_e("Hide EDD widget", "mihanpanel"); ?></label>
-                <?php \mihanpanel\app\handle_view::option_panel_field_hide_edd_widget(); ?>
+                <label><?php esc_html_e("Show EDD widget", "mihanpanel"); ?></label>
+                <?php \mihanpanel\app\handle_view::option_panel_field_is_show_edd_widget(); ?>
             </p>
             <p>
-                <label><?php esc_html_e("Hide Awesome Support widget", "mihanpanel"); ?></label>
-                <?php \mihanpanel\app\handle_view::option_panel_field_hide_awesome_support_widget(); ?>
+                <label><?php esc_html_e("Show Awesome Support widget", "mihanpanel"); ?></label>
+                <?php \mihanpanel\app\handle_view::option_panel_field_is_show_awesome_support_widget(); ?>
+            </p>
+            <p>
+                <label><?php esc_html_e("Show Mihan Ticket widget", "mihanpanel"); ?></label>
+                <?php \mihanpanel\app\handle_view::option_panel_field_is_show_mihanticket_widget(); ?>
             </p>
         </div>
         <h2><?php esc_html_e('Blog Section', 'mihanpanel')?></h2>

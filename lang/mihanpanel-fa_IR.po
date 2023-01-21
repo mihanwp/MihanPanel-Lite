@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MihanPanel\n"
-"POT-Creation-Date: 2022-12-08 11:17+0330\n"
-"PO-Revision-Date: 2022-12-08 11:18+0330\n"
+"POT-Creation-Date: 2023-01-21 14:15+0330\n"
+"PO-Revision-Date: 2023-01-21 14:15+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -34,7 +34,7 @@ msgstr "میهن پنل"
 msgid "Login & Register"
 msgstr "ورود و عضویت"
 
-#: app/admin_menu.php:31 app/admin_menu.php:46 app/hooks.php:140
+#: app/admin_menu.php:31 app/admin_menu.php:46 app/hooks.php:143
 msgid "User Panel"
 msgstr "پنل کاربری"
 
@@ -92,36 +92,37 @@ msgstr "این بخش در نسخه‌ی حرفه‌ای میهن‌پنل در 
 msgid "This feature is accessible only in %s."
 msgstr "این قابلیت فقط در %s در دسترس است"
 
+#. Plugin Name of the plugin/theme
 #: app/admin_menu.php:169
 msgid "MihanPanel Pro"
 msgstr "میهن پنل پرو"
 
-#: app/ajax.php:25 app/ajax.php:64 app/ajax.php:127 app/ajax.php:154
+#: app/ajax.php:28 app/ajax.php:67 app/ajax.php:130 app/ajax.php:157
 msgid "Has error!"
 msgstr "خطا!"
 
-#: app/ajax.php:29
+#: app/ajax.php:32
 msgid "No any items found"
 msgstr "هیچ آیتمی پیدا نشد."
 
-#: app/ajax.php:69 app/ajax.php:138 app/ajax.php:159
+#: app/ajax.php:72 app/ajax.php:141 app/ajax.php:162
 #: app/form/admin_user_fields.php:28 app/form/profile.php:79
 msgid "The operation failed due to security issues."
 msgstr "عملیات به دلیل مشکلات امنیتی متوقف شد."
 
-#: app/ajax.php:118 app/ajax.php:200 app/form/profile.php:108
+#: app/ajax.php:121 app/ajax.php:203 app/form/profile.php:108
 msgid "Successfully updated!"
 msgstr "با موفقیت به روز شد!"
 
-#: app/ajax.php:118 app/ajax.php:200
+#: app/ajax.php:121 app/ajax.php:203
 msgid "Nothing updated."
 msgstr "چیزی آپدیت نشد."
 
-#: app/ajax.php:147
+#: app/ajax.php:150
 msgid "Successfully deleted!"
 msgstr "با موفقیت حذف شد!"
 
-#: app/ajax.php:147
+#: app/ajax.php:150
 msgid "Could not be deleted."
 msgstr "حذف نشد."
 
@@ -202,15 +203,15 @@ msgstr "[%s] تغییر وضعیت اکانت"
 msgid "Unknown"
 msgstr "ناشناخته"
 
-#: app/email.php:151 app/users.php:104 app/users.php:121
+#: app/email.php:151 app/users.php:7 app/users.php:112 app/users.php:129
 msgid "Active"
 msgstr "فعال"
 
-#: app/email.php:155 app/users.php:104 app/users.php:121
+#: app/email.php:155 app/users.php:8 app/users.php:112 app/users.php:129
 msgid "Inactive"
 msgstr "غیرفعال"
 
-#: app/emwidg/emwidg_mihanpanel.php:26 app/hooks.php:161 app/live_edit.php:79
+#: app/emwidg/emwidg_mihanpanel.php:26 app/hooks.php:164 app/live_edit.php:79
 msgid "Mihan Panel"
 msgstr "میهن پنل"
 
@@ -343,108 +344,108 @@ msgstr "رمز عبور با موفقیت به روز شد!"
 msgid "%1$s must not be empty."
 msgstr "%1$s نباید خالی باشد."
 
-#: app/handle_view.php:210
+#: app/handle_view.php:226
 #, php-format
 msgid "%d Day"
 msgstr "%d روز"
 
-#: app/handle_view.php:212
+#: app/handle_view.php:228
 msgid "You are our user"
 msgstr "سابقه عضویت شما"
 
-#: app/handle_view.php:236
+#: app/handle_view.php:252
 msgid "Your Comments"
 msgstr "نظرات شما"
 
-#: app/handle_view.php:270
+#: app/handle_view.php:286
 msgid "Purchased files"
 msgstr "فایل های خریداری شده"
 
-#: app/handle_view.php:287
+#: app/handle_view.php:303
 msgid "Your purchase count"
 msgstr "تعداد خرید شما"
 
-#: app/handle_view.php:312
+#: app/handle_view.php:328 app/handle_view.php:348
 msgid "Your tickets"
 msgstr "تیکت های شما"
 
-#: app/handle_view.php:350 app/handle_view.php:755 app/middlewares.php:67
+#: app/handle_view.php:386 app/handle_view.php:801 app/middlewares.php:67
 msgid "Pro Version"
 msgstr "نسخه‌ی حرفه‌ای"
 
-#: app/handle_view.php:371
+#: app/handle_view.php:407
 msgid "Login Button Text Color"
 msgstr "رنگ متن دکمه ورود"
 
-#: app/handle_view.php:373
+#: app/handle_view.php:409
 msgid "Color of Login and Register button text"
 msgstr "رنگ متن دکمه در صفحه ی ورود و ثبت نام"
 
-#: app/handle_view.php:386
+#: app/handle_view.php:422
 msgid "Login Fields Background Color"
 msgstr "رنگ پس زمینه ی فیلدهای فرم ورود"
 
-#: app/handle_view.php:388
+#: app/handle_view.php:424
 msgid "Color of Login and Register fields"
 msgstr "رنگ پس زمینه فیلدهای فرم ورود و ثبت‌نام"
 
-#: app/handle_view.php:401
+#: app/handle_view.php:437
 msgid "Login Field's Label Color"
 msgstr "رنگ لیبل فیلدهای فرم ورود"
 
-#: app/handle_view.php:403
+#: app/handle_view.php:439
 msgid "Color of Login and Register labels"
 msgstr "رنگ متن لیبل فیلدهای فرم ورود و ثبت نام"
 
-#: app/handle_view.php:416
+#: app/handle_view.php:452
 msgid "Login Fields Text Color"
 msgstr "رنگ متن فیلدهای فرم ورود"
 
-#: app/handle_view.php:418
+#: app/handle_view.php:454
 msgid "Color of Login and Register fields text"
 msgstr "رنگ متن فیلدهای فرم ورود و ثبت‌نام"
 
-#: app/handle_view.php:431
+#: app/handle_view.php:467
 msgid "Login Info Messagebox Background Color"
 msgstr "رنگ پس زمینه ی باکس اطلاع رسانی در فرم ورود"
 
-#: app/handle_view.php:433
+#: app/handle_view.php:469
 msgid "Background Color of Login and Register Info Messagebox"
 msgstr "رنگ پس زمینه ی باکس اطلاع رسانی در فرم ورود و ثبت نام"
 
-#: app/handle_view.php:446
+#: app/handle_view.php:482
 msgid "Login Info Messagebox Text Color"
 msgstr "رنگ متن باکس اطلاع رسانی در فرم ورود"
 
-#: app/handle_view.php:448
+#: app/handle_view.php:484
 msgid "Color of Login and Register Info Messagebox Text"
 msgstr "رنگ متن باکس اطلاع رسانی در فرم ورود و ثبت نام"
 
-#: app/handle_view.php:461
+#: app/handle_view.php:497
 msgid "Login Error Messagebox Text Color"
 msgstr "رنگ متن باکس ارور در فرم ورود"
 
-#: app/handle_view.php:463
+#: app/handle_view.php:499
 msgid "Color of Login and Register Error Messagebox Text"
 msgstr "رنگ متن باکس ارور در فرم ورود و ثبت نام"
 
-#: app/handle_view.php:476
+#: app/handle_view.php:512
 msgid "Login Error Messagebox Background Color"
 msgstr "رنگ پس زمینه ی باکس ارور در فرم ورود"
 
-#: app/handle_view.php:478
+#: app/handle_view.php:514
 msgid "Background Color of Login and Register Error Messagebox"
 msgstr "رنگ پس زمینه ی باکس ارور در فرم ورود و ثبت نام"
 
-#: app/handle_view.php:632
+#: app/handle_view.php:673
 msgid "This plugin is not active on your site"
 msgstr "این پلاگین بر روی سایت شما فعال نیست"
 
-#: app/handle_view.php:699
+#: app/handle_view.php:740
 msgid "Auto confirm phone number after user register"
 msgstr "فعالسازی شماره موبایل بعد از ثبت نام به صورت اتوماتیک"
 
-#: app/handle_view.php:703
+#: app/handle_view.php:744
 msgid "User can change phone number"
 msgstr "کاربر میتواند شماره موبایل را تغییر دهد"
 
@@ -583,7 +584,7 @@ msgstr "گیرنده‌ی تاریخ"
 msgid "File Uploader"
 msgstr "آپلود کننده‌ی فایل"
 
-#: app/users.php:88
+#: app/users.php:96
 msgid "Status"
 msgstr "وضعیت"
 
@@ -771,23 +772,23 @@ msgstr "تنظیمات"
 msgid "This feature is not enabled."
 msgstr "این ویژگی در دسترس نیست."
 
-#: views/admin/admin-profile/account-status.php:1
+#: views/admin/admin-profile/account-status.php:5
 msgid "User Account Status"
 msgstr "وضعیت اکانت کاربری"
 
-#: views/admin/admin-profile/account-status.php:4
+#: views/admin/admin-profile/account-status.php:8
 msgid "Account status"
 msgstr "وضعیت اکانت"
 
-#: views/admin/admin-profile/account-status.php:8
+#: views/admin/admin-profile/account-status.php:12
 msgid "Change account status"
 msgstr "تغییر وضعیت"
 
-#: views/admin/admin-profile/account-status.php:10
+#: views/admin/admin-profile/account-status.php:16
 msgid "Activate"
 msgstr "فعالسازی"
 
-#: views/admin/admin-profile/account-status.php:11
+#: views/admin/admin-profile/account-status.php:20
 msgid "Deactivate"
 msgstr "غیرفعالسازی"
 
@@ -1200,50 +1201,54 @@ msgid "Dashboard Widgets"
 msgstr "ویجت‌های داشبورد"
 
 #: views/admin/panel-section/panel.php:90
-msgid "Hide register day count widget"
-msgstr "مخفی کردن ویجت روز‌هایی که عضو هستید"
+msgid "Show register day count widget"
+msgstr "نمایش ویجت روز‌هایی که عضو هستید"
 
 #: views/admin/panel-section/panel.php:94
-msgid "Hide Comment widget"
-msgstr "مخفی کردن ویجت تعداد نظرات"
+msgid "Show Comment widget"
+msgstr "نمایش ویجت تعداد نظرات"
 
 #: views/admin/panel-section/panel.php:98
-msgid "Hide Woocommerce widget"
-msgstr "مخفی کردن ویجت ووکامرس"
+msgid "Show Woocommerce widget"
+msgstr "نمایش ویجت ووکامرس"
 
 #: views/admin/panel-section/panel.php:102
-msgid "Hide EDD widget"
-msgstr "مخفی کردن ویجت EDD"
+msgid "Show EDD widget"
+msgstr "نمایش ویجت EDD"
 
 #: views/admin/panel-section/panel.php:106
-msgid "Hide Awesome Support widget"
-msgstr "مخفی کردن ویجت افزونه تیکت"
+msgid "Show Awesome Support widget"
+msgstr "نمایش ویجت افزونه Awesome Support"
 
 #: views/admin/panel-section/panel.php:110
+msgid "Show Mihan Ticket widget"
+msgstr "نمایش ویجت افزونه میهن‌تیکت"
+
+#: views/admin/panel-section/panel.php:114
 msgid "Blog Section"
 msgstr "بخش بلاگ"
 
-#: views/admin/panel-section/panel.php:112
+#: views/admin/panel-section/panel.php:116
 msgid "Is blog section enable?"
 msgstr "بخش بلاگ فعال باشد؟"
 
-#: views/admin/panel-section/panel.php:116
+#: views/admin/panel-section/panel.php:120
 msgid "Section Title"
 msgstr "عنوان این بخش"
 
-#: views/admin/panel-section/panel.php:120
+#: views/admin/panel-section/panel.php:124
 msgid "Title Link"
 msgstr "لینک"
 
-#: views/admin/panel-section/panel.php:124
+#: views/admin/panel-section/panel.php:128
 msgid "Posts category"
 msgstr "دسته‌بندی نوشته‌ها"
 
-#: views/admin/panel-section/panel.php:128
+#: views/admin/panel-section/panel.php:132
 msgid "Posts count"
 msgstr "تعداد نوشته‌ها"
 
-#: views/admin/panel-section/panel.php:132
+#: views/admin/panel-section/panel.php:136
 msgid "Roles who can't use admin panel"
 msgstr "نقش های کاربری که اجازه ی ورود به پنل مدیریت را ندارند"
 
@@ -1292,7 +1297,7 @@ msgstr "شماره تلفن‌ها"
 msgid "Transfer digits phone numbers to Mihan Panel"
 msgstr "انتقال شماره تلفن‌ها از دیجیتس به میهن‌پنل"
 
-#: views/admin/panel-section/tools.php:25
+#: views/admin/panel-section/tools.php:23
 msgid ""
 "If you're using Digits previously you can use this to transfer phone numbers "
 "to Mihan Panel."
@@ -1300,25 +1305,44 @@ msgstr ""
 "اگر پیش از این از دیجیتس استفاده میکردید میتوانید شماره تلفن کاربران را به "
 "میهن‌پنل منتقل کنید"
 
-#: views/admin/panel-section/tools.php:28
+#: views/admin/panel-section/tools.php:26
 msgid ""
 "Only the phone number of the users who do not have a phone number in the Mihan "
 "Panel will be transferred."
 msgstr "فقط شماره تلفن کاربرانی که در میهن‌پنل شماره نداشته باشند منتقل میشود."
 
-#: views/admin/panel-section/tools.php:31
+#: views/admin/panel-section/tools.php:29 views/admin/panel-section/tools.php:42
+msgid ""
+"Before using this option, make a backup of your site; changes cannot be "
+"reversed!"
+msgstr ""
+"قبل از استفاده از این گزینه از سایت خود بک‌آپ تهیه کنید؛ تغییرات قابل بازگشت "
+"نیست!"
+
+#: views/admin/panel-section/tools.php:32
+msgid "User management"
+msgstr "مدیریت کاربران"
+
+#: views/admin/panel-section/tools.php:35
+msgid "Delete ghost users"
+msgstr "حذف کاربران روح"
+
+#: views/admin/panel-section/tools.php:39
+msgid "Delete users who have not any comments, woocommerce orders and posts."
+msgstr "حذف کاربرانی که کامنت و پست و سفارش ووکامرسی ندارند."
+
+#: views/admin/panel-section/tools.php:45
 msgid "Login page"
 msgstr "برگه ورود"
 
-#: views/admin/panel-section/tools.php:34
+#: views/admin/panel-section/tools.php:48
 msgid "Additional Code"
 msgstr "کد اضافه"
 
-#: views/admin/panel-section/tools.php:37
+#: views/admin/panel-section/tools.php:51
 msgid "This code is render in head tag in Login page"
 msgstr "این کد در تگ هدر صفحه ی ورود اضافه میشود"
 
-#. Author of the plugin/theme
 #: views/admin/settings.php:23
 msgid "Ertano"
 msgstr "میهن‌وردپرس"
@@ -1327,20 +1351,20 @@ msgstr "میهن‌وردپرس"
 msgid "New Airlines"
 msgstr "خطوط هوایی جدید"
 
-#. Plugin Name of the plugin/theme
-msgid "MihanPanel Lite"
-msgstr "میهن‌پنل لایت"
-
 #. Plugin URI of the plugin/theme
-msgid "https://ertano.com/mihanpanel/"
+msgid "https://mihanwp.com/mihanpanel/"
 msgstr "https://mihanwp.com/mihanpanel/"
 
 #. Description of the plugin/theme
 msgid "The best way to build user interface in WordPress"
 msgstr "یک راه مناسب برای پیاده سازی پروفایل کاربری در وردپرس"
 
+#. Author of the plugin/theme
+msgid "MihanWP"
+msgstr "میهن وردپرس"
+
 #. Author URI of the plugin/theme
-msgid "https://ertano.com"
+msgid "https://mihanwp.com"
 msgstr "https://mihanwp.com/"
 
 #~ msgid "yes"
@@ -1470,6 +1494,31 @@ msgstr "https://mihanwp.com/"
 
 #~ msgid "Has error in delete"
 #~ msgstr "مشکلی در حذف آیتم به وجود آمد"
+
+#~ msgid "Missing user id"
+#~ msgstr "شناسه‌ی کاربری یافت نشد"
+
+#~ msgid "Start of delete process"
+#~ msgstr "شروع فرایند حذف کاربران"
+
+#~ msgid "End of delete process"
+#~ msgstr "پایان فرایند حذف کاربران"
+
+#, php-format
+#~ msgid "User ID %s not exists"
+#~ msgstr "کاربری با شناسه‌ی %s یافت نشد"
+
+#, php-format
+#~ msgid "User ID [ %s ] has not subscriber role"
+#~ msgstr "کاربر با شناسه‌ی %s نقش کاربری مشترک ندارد"
+
+#, php-format
+#~ msgid "Has error in delete user id %s"
+#~ msgstr "مشکلی در حذف شناسه‌ی کاربری %s وجود دارد"
+
+#, php-format
+#~ msgid "User ID %s was deleted!"
+#~ msgstr "کاربر با شناسه‌ی %s حذف شد!"
 
 #~ msgid "Has error in uploading media"
 #~ msgstr "خطایی در آپلود فایل چندرسانه ای وجود دارد"
@@ -1636,8 +1685,17 @@ msgstr "https://mihanwp.com/"
 #~ msgid "Activation Code"
 #~ msgstr "کد فعالسازی"
 
+#~ msgid "Are you sure you have backedup your site?"
+#~ msgstr "از اینکه از سایت خود بک‌آپ تهیه کرده‌اید اطمینان دارید؟"
+
 #~ msgid "Transfer"
 #~ msgstr "انتقال"
+
+#~ msgid "Are you sure you want to delete ghost users?"
+#~ msgstr "آیا از اینکه میخواهید کاربران روح را حذف کنید اطمینان دارید؟"
+
+#~ msgid "Delete"
+#~ msgstr "حذف"
 
 #~ msgid "Choose an item"
 #~ msgstr "یک مورد را انتخاب کنید"
@@ -2008,8 +2066,10 @@ msgstr "https://mihanwp.com/"
 #~ msgid "Request Code"
 #~ msgstr "درخواست کد"
 
-#~ msgid "MihanWP"
-#~ msgstr "میهن وردپرس"
+#~ msgid "Backup your site before using it!"
+#~ msgstr ""
+#~ "قبل از استفاده از این گزینه، از سایت خود بک‌آپ تهیه کنید! تغییرات قابل "
+#~ "بازگشت نیست."
 
 #~ msgid "Condition Type"
 #~ msgstr "شرط نمایش"
@@ -2048,6 +2108,9 @@ msgstr "https://mihanwp.com/"
 
 #~ msgid "Name"
 #~ msgstr "نام"
+
+#~ msgid "MihanPanel Live Edit"
+#~ msgstr "ویرایش زنده‌ی میهن پنل"
 
 #~ msgid "mihanwp.com"
 #~ msgstr "میهن وردپرس"
@@ -2182,9 +2245,6 @@ msgstr "https://mihanwp.com/"
 
 #~ msgid "Click for installing"
 #~ msgstr "برای نصب کلیک کنید"
-
-#~ msgid "Menus management"
-#~ msgstr "مدیریت منوها"
 
 #~ msgid "No any data saved!"
 #~ msgstr "هیچ داده ای ذخیره نشد!"

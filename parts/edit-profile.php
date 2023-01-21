@@ -67,7 +67,7 @@
             </div>
         </div>
         <?php do_action('mwpl_panel/profile/after_password_field'); ?>
-        <div class="row">
+        <div class="row" id="bio-field-row">
             <div class="col-md-12">
                 <div class="form-group">
                     <label><?php esc_html_e("Bio", "mihanpanel"); ?></label>

@@ -1,6 +1,7 @@
 <?php
 namespace mihanpanel\app;
 
+
 class hooks
 {
     public static function init()
@@ -48,11 +49,7 @@ class hooks
         add_filter('manage_users_columns', ['\mihanpanel\app\users', 'add_users_status_column']);
         add_filter('manage_users_custom_column', ['\mihanpanel\app\users', 'users_status_column_data'], 10, 3);
         add_action('edit_user_profile', ['\mihanpanel\app\users', 'activate_btn_in_user_profile']);
-        add_action('edit_user_profile_update', ['\mihanpanel\app\users', 'activate_btn_in_user_profile_handler']);
 
-        
-
-        
         // change view order link url
         add_filter('woocommerce_get_view_order_url', ['\mihanpanel\app\panel', 'change_view_order_url'], 10, 2);
 
@@ -119,6 +116,12 @@ class hooks
         add_action('wp_network_dashboard_setup', ['\mihanpanel\app\widget', 'dashboard_widget']);
 
         add_filter( 'login_display_language_dropdown', '__return_false' );
+		
+		if(\mihanpanel\app\tools::is_dokan_active()){
+			add_action('init', function(){
+				remove_action('login_init', 'dokan_redirect_to_register');
+			});
+		}
     }
     public static function activation_hook()
     {

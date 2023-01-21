@@ -1,3 +1,7 @@
+<?php
+global $user_id;
+$user_id = isset($user_id) ? $user_id : 0;
+?>
 <h3><?php esc_html_e('User Account Status', 'mihanpanel'); ?></h3>
 <table class="form-table">
     <tr>
@@ -7,8 +11,15 @@
     <tr>
         <th><?php esc_html_e("Change account status", 'mihanpanel'); ?></th>
         <td>
-            <button type="button" class="button mw_do_action_btn" value="activate" name="mw_account_status"><?php esc_html_e('Activate', 'mihanpanel'); ?></button>
-            <button type="button" class="button mw_do_action_btn" value="deactivate" name="mw_account_status"><?php esc_html_e('Deactivate', 'mihanpanel'); ?></button>
-        </td>
+			<?php if(!$is_active): ?>
+            <button type="button" class="button mw_do_action_btn mwp-change-account-status" data-uid="<?php echo $user_id; ?>" data-status="activate">
+				<?php esc_html_e('Activate', 'mihanpanel'); ?>
+			</button>
+            <?php else: ?>
+			<button type="button" class="button mw_do_action_btn mwp-change-account-status" data-uid="<?php echo $user_id; ?>" data-status="deactivate">
+				<?php esc_html_e('Deactivate', 'mihanpanel'); ?>
+			</button>
+			<?php endif; ?>
+		</td>
     </tr>
 </table>

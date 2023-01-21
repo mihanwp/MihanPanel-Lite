@@ -92,7 +92,7 @@ class admin_user_fields
                         <div class="mw_th mw_small_width"></div>
                         <?php if($table_header && is_array($table_header)):
                             foreach($table_header as $header_data):?>
-                            <div class="mw_th <?php echo $header_data['class'] ? $header_data['class'] : '';?>"><?php echo esc_html($header_data['title']) ?></div>
+                            <div class="mw_th <?php echo $header_data['class'] ? esc_attr($header_data['class']) : '';?>"><?php echo esc_html($header_data['title']) ?></div>
                         <?php endforeach; endif; ?>
                         <div class="mw_th"></div>
                     </div>
@@ -122,7 +122,7 @@ class admin_user_fields
                                 <div class="mw_td mw_medium_width">
                                     <?php \mihanpanel\app\handle_view::render_user_fields_type_selectbox('type', $field->type); ?>
                                 </div>
-                                <div drop_down_target_id="meta_fields_wrapper_<?php echo $field->id; ?>" class="mw_td mwpl_drop_down">
+                                <div drop_down_target_id="meta_fields_wrapper_<?php echo esc_attr($field->id); ?>" class="mw_td mwpl_drop_down">
                                     <span class="mw_drop_down_btn mw_icon dashicons dashicons-arrow-down-alt2"></span>
                                 </div>
                                 <div class="mw_th">

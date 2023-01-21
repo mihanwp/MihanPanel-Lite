@@ -14,7 +14,7 @@ class notice
         {
             ?>
             <div class="<?php echo esc_attr($error['setting']);?>">
-                <p class="alert <?php echo esc_attr($error['type']);?>" id="<?php echo esc_attr($error['code']); ?>"><?php echo $error['message']; ?></p>
+                <p class="alert <?php echo esc_attr($error['type']);?>" id="<?php echo esc_attr($error['code']); ?>"><?php echo esc_html($error['message']); ?></p>
             </div>
             <?php
         }

@@ -71,6 +71,10 @@ class assets
         $admin_user_profile = self::get_js_url('admin-user-profile');
         $version = tools::get_plugin_version();
         wp_enqueue_script('mw_admin_user_profile', $admin_user_profile, ['jquery'], $version, true);
+		wp_localize_script('mw_admin_user_profile', 'mwp_aup_data', [
+			'ajax_url' => admin_url('admin-ajax.php'),
+			'nonce' => wp_create_nonce('mw_nonce')
+		]);
     }
 
     public static function load_user_field_menu_assets()
@@ -104,10 +108,8 @@ class assets
     public static function load_sortable_script()
     {
         $version = \mihanpanel\app\tools::get_plugin_version();
-        $jquery_ui = self::get_js_url('jquery_ui');
         $mw_drag_and_drop = self::get_js_url('mw_drag_and_drop');
-        wp_enqueue_script('mw_jquery_ui', $jquery_ui, ['jquery'], $version, true);
-        wp_enqueue_script('mw_drag_and_drop', $mw_drag_and_drop, ['jquery', 'mw_jquery_ui'], $version, true);
+        wp_enqueue_script('mw_drag_and_drop', $mw_drag_and_drop, ['jquery', 'jquery-ui-core'], $version, true);
 
         wp_localize_script('mw_drag_and_drop', 'mwp_data', ['au' => admin_url('admin-ajax.php')]);
     }
@@ -126,10 +128,10 @@ class assets
         ?>
         <style type="text/css">
             body.login {
-                background: url('<?php echo $mp_bg_image; ?>') no-repeat center top;
+                background: url('<?php echo esc_url($mp_bg_image); ?>') no-repeat center top;
             }
             #login h1 a, .login h1 a {
-                background: url('<?php echo $mp_logo;?>') no-repeat;
+                background: url('<?php echo esc_url($mp_logo);?>') no-repeat;
                 width: <?php echo options::get_login_logo_width();?>px;
                 height: <?php echo options::get_login_logo_height();?>px;
             }

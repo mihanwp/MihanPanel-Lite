@@ -2,6 +2,14 @@
 namespace mihanpanel\app;
 class users
 {
+	public static function get_user_account_statuses(){
+		$statuses = [
+			'activate' => __('Active', 'mihanpanel'), 
+			'deactivate' => __('Inactive', 'mihanpanel')
+		];
+		$statuses = apply_filters('ahura_get_user_account_statuses', $statuses);
+		return $statuses;
+	}
     static function is_admin_user($uid = false)
     {
         if(!$uid)
@@ -124,44 +132,6 @@ class users
             $status_btn = '<span style="'.$style.'">'.$title.'</span>';
         $view = views::get('admin.admin-profile.account-status');
         include $view;
-    }
-    public static function activate_btn_in_user_profile_handler($user_id)
-    {
-        if(!current_user_can('edit_user', $user_id))
-        {
-            return false;
-        }
-        $change_to = isset($_POST['mw_account_status']) ? $_POST['mw_account_status'] : false;
-        if($change_to)
-        {
-            $is_active = self::is_active_account($user_id);
-            switch($change_to)
-            {
-                case 'activate':
-                    if(!$is_active)
-                    {
-                        // activate account
-                        $res = self::remove_activation_code($user_id);
-                        if($res)
-                        {
-                            do_action('mp_change_user_account_activation_status', $user_id, $change_to);
-                        }
-                    }
-                    break;
-                case'deactivate':
-                    if($is_active)
-                    {
-                        // deactivate account
-                        $res = self::create_activation_link($user_id);
-                        if($res)
-                        {
-                            do_action('mp_change_user_account_activation_status', $user_id, $change_to);
-                        }
-                    }
-                    break;
-            }
-            
-        }
     }
     static function get_all_roles()
     {

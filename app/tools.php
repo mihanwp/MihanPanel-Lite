@@ -61,7 +61,14 @@ class tools
     {
         return class_exists('Awesome_Support');
     }
-
+    static function is_mihanticket_active()
+    {
+        return self::is_plugin_active('mihanticket/mihanticket.php');
+    }
+	static function is_dokan_active()
+    {
+        return self::is_plugin_active('dokan-lite/dokan.php');
+    }
     public static function get_plugin_version()
     {
         $file_data = get_file_data(WP_MIHANPANEL_MAIN_APP, ['version' => 'version']);

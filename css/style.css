@@ -319,6 +319,14 @@ html body .mihanpanelpanel .nocss .dashicons
     .table-responsive > .table-bordered > tfoot > tr:last-child > th {
         border-bottom: 0
     }
+	
+	.mihanpanelpanel div.main-panel {
+		display: block;
+	}
+	
+	.mihanpanelpanel {
+		display: block !important;
+	}
 }
 .mihanpanelpanel fieldset,
 .mihanpanelpanel legend {
@@ -1224,9 +1232,10 @@ html body .mihanpanelpanel .alert {
     padding:0 !important;
     display:flex;
 }
-.mihanpanelpanel table
-{
-	width: 100% !important;
+.mihanpanelpanel table {
+    display: inline-block;
+    width: 100%;
+    overflow: auto;
 }
 .mihanpanelpanel table th
 {

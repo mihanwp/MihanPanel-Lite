@@ -230,7 +230,7 @@ class config
 
     public static function account_activation_message_handler($message)
     {
-        $activation_status = isset($_GET['activation_status']) ? $_GET['activation_status'] : false;
+        $activation_status = isset($_GET['activation_status']) ? sanitize_text_field($_GET['activation_status']) : false;
         $inactive_account_state = isset($_GET['action']) && $_GET['action'] == 'inactive_account' ? true : false;
         if ($inactive_account_state)
         {

@@ -75,7 +75,7 @@ class admin_menu
                 <div class="mw_update_sortable_notice notice inline notice-info notice-alt">
                     <p>
                         <span><?php _e('Do you want to save changes?', 'mihanpanel')?></span>
-                        <span><input mwpl_nonce="<?php echo wp_create_nonce('mwpl_ajax_update_user_fields_data')?>" class="mw_submit mw_ajax_update_fields_data" data-mw_type="user_field" type="submit" name="save_priority" value="<?php esc_attr_e('Yes', 'mihanpanel')?>"></span>
+                        <span><input mwpl_nonce="<?php echo esc_attr(wp_create_nonce('mwpl_ajax_update_user_fields_data'))?>" class="mw_submit mw_ajax_update_fields_data" data-mw_type="user_field" type="submit" name="save_priority" value="<?php esc_attr_e('Yes', 'mihanpanel')?>"></span>
                     </p>
                 </div>
             <div class="mw_notice_box notice inline notice-alt"></div>
@@ -126,8 +126,8 @@ class admin_menu
             $imgUrl = is_rtl() ? \mihanpanel\app\assets::get_image_url('tabs-menu-view') : \mihanpanel\app\assets::get_image_url('tabs-menu-view-ltr');
             ?>
             <div class="mihanpanel-admin" style="position: relative">
-                <img style="filter: blur(2px) grayscale(100)" width="100%" src="<?php echo $imgUrl?>" alt="">
-                <div style="<?php echo $msgStyle?>"><?php esc_html_e('This section is active in MihanPanel pro', 'mihanpanel')?></div>
+                <img style="filter: blur(2px) grayscale(100)" width="100%" src="<?php echo esc_attr($imgUrl)?>" alt="">
+                <div style="<?php echo esc_attr($msgStyle)?>"><?php esc_html_e('This section is active in MihanPanel pro', 'mihanpanel')?></div>
             </div>
             <?php
         }
@@ -165,7 +165,7 @@ class admin_menu
             $styles .= $key . ': ' . $value . '; ';
         }
         ?>
-        <div style="<?php echo $styles?>">
+        <div style="<?php echo esc_attr($styles)?>">
             <span><?php printf(__('This feature is accessible only in %s.', 'mihanpanel'), sprintf('<a target="_blank" href="%s">%s</a>', \mihanpanel\app\tools::get_pro_version_link(), __('MihanPanel Pro', 'mihanpanel'))); ?></span>
         </div>
         <?php

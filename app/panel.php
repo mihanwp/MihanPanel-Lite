@@ -39,7 +39,7 @@ class panel
         $tab_id = self::get_current_tab();
         if(isset($_GET['order_details']) && isset($_GET['order_id']) && intval($_GET['order_id']))
         {
-            \mihanpanel\app\panel::show_order($_GET['order_id']);
+            \mihanpanel\app\panel::show_order(intval($_GET['order_id']));
         }else{
             $tab_file = views::get_from_main_app('parts.' . $tab_id);
             if(file_exists($tab_file))
@@ -101,7 +101,7 @@ class panel
         $menus = self::get_tabs();
         echo '<ul class="nav mp-nav-tabs menu-tabs-items">';
         foreach ($menus as $menu):
-            $item_url = $menu->link == null ? esc_url(add_query_arg(['tab' => $menu->id], remove_query_arg(['order_id', 'order_details']))) : esc_url($menu->link);
+            $item_url = $menu->link == null ? esc_url(add_query_arg(['tab' => $menu->id], \mihanpanel\app\options::get_panel_url())) : esc_url($menu->link);
             $link_attrs = [
                 'class' => ['mwtaba'],
                 'href' => $item_url,

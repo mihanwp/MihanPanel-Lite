@@ -30,8 +30,8 @@
                 $current_activation_type = \mihanpanel\app\options::get_account_activation_type();
                 foreach ($activation_types as $type_key => $type_name): ?>
                 <p>
-                    <label for="mp_activation_type_<?php echo $type_key; ?>"><?php echo $type_name; ?></label>
-                    <input <?php checked($current_activation_type, $type_key); ?> type="radio" name="mp_account_activation_type" value="<?php echo $type_key; ?>" id="mp_activation_type_<?php echo $type_key?>">
+                    <label for="mp_activation_type_<?php echo esc_attr($type_key); ?>"><?php echo esc_html($type_name); ?></label>
+                    <input <?php checked($current_activation_type, $type_key); ?> type="radio" name="mp_account_activation_type" value="<?php echo esc_attr($type_key); ?>" id="mp_activation_type_<?php echo esc_attr($type_key)?>">
                 </p>
                 <?php endforeach; ?>
             </div>

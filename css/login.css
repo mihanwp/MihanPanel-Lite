@@ -339,3 +339,9 @@ a:focus{
 #backtoblog{
   display:none
 }
+
+@media screen and (max-width: 980px){
+	body.login #login {
+		margin: 20px auto 20px auto;
+	}
+}

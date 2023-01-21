@@ -12,7 +12,7 @@
                         $active_tab = isset($_GET['tab']) && in_array($_GET['tab'], $white_list) ? $_GET['tab'] : $white_list[0];
                         ?>
                     <?php foreach ($menu_items as $item => $name): ?>
-                        <li <?php echo $item == $active_tab ? 'class="active"' : ''; ?>><a href="<?php echo esc_url(add_query_arg(['tab' => $item])); ?>"><?php echo $name; ?></a></li>
+                        <li <?php echo $item == $active_tab ? 'class="active"' : ''; ?>><a href="<?php echo esc_url(add_query_arg(['tab' => $item])); ?>"><?php echo esc_html($name); ?></a></li>
                     <?php endforeach; ?>
                     <?php endif; ?>
                 </ul>
@@ -20,7 +20,7 @@
             <div class="mw_copyright">
                 <?php
                 $baseUrl = \mihanpanel\app\tools::getBaseRemoteUrl();
-                $mwp_link = sprintf('<a href="%s">%s</a>', $baseUrl, esc_html__("Ertano", "mihanpanel"));
+                $mwp_link = sprintf('<a href="%s">%s</a>', esc_url($baseUrl), esc_html__("Ertano", "mihanpanel"));
                 $airline_text = __("New Airlines", "mihanpanel");
                 $text = is_rtl() ? sprintf("<span>%s <span>%s</span></span>", $airline_text, $mwp_link) : sprintf("<span>%s <span>%s</span></span>", $mwp_link, $airline_text);
                 echo $text;

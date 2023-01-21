@@ -38,7 +38,7 @@ class profile extends \WP_Widget
                         $panel_link = \mihanpanel\app\options::get_panel_url();
                         $edit_profile_link = esc_url(add_query_arg(['tab' => 'edit-profile'], $panel_link));
                         ?>
-                            <a class="mwtaba" href="<?php echo $panel_link; ?>">
+                            <a class="mwtaba" href="<?php echo esc_url($panel_link); ?>">
                                 <i class="fas fa-tachometer-alt"></i>
                                 <p><?php _e("User Dashboard", "mihanpanel"); ?></p>
                             </a>

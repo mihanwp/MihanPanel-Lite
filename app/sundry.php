@@ -114,9 +114,9 @@ class sundry
                 }
                 if($field->type == 'checkbox')
                 {
-                    update_user_meta($user_id, $field->slug, 'non');
+                    update_user_meta($user_id, tools::sanitize_value($field->slug), 'non');
                 }else{
-                    delete_user_meta($user_id, $field->slug);
+                    delete_user_meta($user_id, tools::sanitize_value($field->slug));
                 }
             }else{
                 if(($prevent_edit_field && $last_value) || (!users::is_admin_user() && !apply_filters('mwpl_user_fields_render_permission', true, $field, 'profile')))
@@ -195,7 +195,7 @@ class sundry
             {
                 return true;
             }
-            $errors->add($field->slug . '_error', $field->label . __(' Should not be empty!', 'mihanpanel'));
+            $errors->add(tools::sanitize_value($field->slug) . '_error', tools::sanitize_value($field->label) . __(' Should not be empty!', 'mihanpanel'));
             return false;
         }
         return true;

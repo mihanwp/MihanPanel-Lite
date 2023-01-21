@@ -1,6 +1,6 @@
 <?php \mihanpanel\app\admin_menu::handle_tools_menu_submission();?>
 <?php if($notice = \mihanpanel\app\notice::once_get_notice()): ?>
-    <p class="alert <?php echo $notice['type']?>"><?php echo $notice['msg']?></p>
+    <p class="alert <?php echo esc_attr($notice['type'])?>"><?php echo esc_html($notice['msg'])?></p>
 <?php endif; ?>
 <div>
     <form class="mp_options_panel" method="post">
@@ -17,15 +17,29 @@
         <div class="mp_option_single">
             <div class="field-item">
                 <label><?php _e('Transfer digits phone numbers to Mihan Panel', 'mihanpanel')?></label>
-                <?php if(\mihanpanel\app\tools::is_plugin_active('digits/digit.php')): ?>
-                    <?php \mihanpanel\app\handle_view::option_panel_transfer_digits_phone_numbers()?>
-                <?php endif; ?>
+                <?php \mihanpanel\app\handle_view::option_panel_transfer_digits_phone_numbers()?>
             </div>
             <div class="field-item">
                 <p class="description"><?php esc_html_e("If you're using Digits previously you can use this to transfer phone numbers to Mihan Panel.", 'mihanpanel')?></p>
             </div>
             <div class="field-item">
                 <p class="description"><?php esc_html_e("Only the phone number of the users who do not have a phone number in the Mihan Panel will be transferred.", 'mihanpanel')?></p>
+            </div>
+            <div class="field-item">
+                <p class="description danger"><?php esc_html_e("Before using this option, make a backup of your site; changes cannot be reversed!", 'mihanpanel')?></p>
+            </div>
+        </div>
+        <h2><?php esc_html_e("User management", "mihanpanel"); ?></h2>
+        <div class="mp_option_single">
+            <div class="field-item">
+                <label><?php _e('Delete ghost users', 'mihanpanel')?></label>
+                <?php \mihanpanel\app\handle_view::option_panel_delete_ghost_users()?>
+            </div>
+            <div class="field-item">
+                <p class="description"><?php esc_html_e("Delete users who have not any comments, woocommerce orders and posts.", 'mihanpanel')?></p>
+            </div>
+            <div class="field-item">
+                <p class="description danger"><?php esc_html_e("Before using this option, make a backup of your site; changes cannot be reversed!", 'mihanpanel')?></p>
             </div>
         </div>
         <h2><?php esc_html_e("Login page", "mihanpanel"); ?></h2>

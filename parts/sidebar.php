@@ -1,7 +1,7 @@
 <div class="mp-nav-tabs-mpwrapper nocss">
   <ul class="nav mp-nav-tabs default-menu">
     <li <?php echo $tab_id == null ? 'class="active"' : false;?> >
-      <a class="mwtaba" href="<?php echo \mihanpanel\app\options::get_panel_url(); ?>">
+      <a class="mwtaba" href="<?php echo esc_url(\mihanpanel\app\options::get_panel_url()); ?>">
         <i class="fas fa-tachometer-alt"></i>
         <p><?php esc_html_e('User Dashboard', 'mihanpanel'); ?></p>
       </a>

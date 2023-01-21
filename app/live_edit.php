@@ -91,7 +91,7 @@ class live_edit
             <meta charset="UTF-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title><?php echo $this->getTitle(); ?></title>
+            <title><?php echo esc_html($this->getTitle()); ?></title>
             <?php
             do_action('mwpl_live_edit_before_header_actions');
             do_action('admin_print_styles');
@@ -110,17 +110,17 @@ class live_edit
         $panelUrl = options::get_panel_url();
         ?>
 
-            <div class="live-edit-wrapper" mwpl-nonce="<?php echo wp_create_nonce('mwpl_ajax_update_live_edit_options')?>">
+            <div class="live-edit-wrapper" mwpl-nonce="<?php echo esc_attr(wp_create_nonce('mwpl_ajax_update_live_edit_options'))?>">
                 <div class="toolbar">
-                    <div class="title-section"><?php echo $this->getTitle(); ?></div>
-                    <a href="<?php echo \mihanpanel\app\tools::getOptionPanelUrl()?>" class="live-edit-btn"><?php esc_html_e('Exit from live edit', 'mihanpanel')?></a>
+                    <div class="title-section"><?php echo esc_html($this->getTitle()); ?></div>
+                    <a href="<?php echo esc_url(\mihanpanel\app\tools::getOptionPanelUrl())?>" class="live-edit-btn"><?php esc_html_e('Exit from live edit', 'mihanpanel')?></a>
                 </div>
                 <div class="notification-wrapper"></div>
                 <div class="content preload-mode">
                     <div class="preloader">
                         <img src="<?php echo MW_MIHANPANEL_URL . 'img/logo.png'; ?>" width="100" height="100" alt="Mihan Panel Logo">
                     </div>
-                    <iframe id="live-edit-content" src="<?php echo $panelUrl; ?>" frameborder="0"></iframe>
+                    <iframe id="live-edit-content" src="<?php echo esc_url($panelUrl); ?>" frameborder="0"></iframe>
                 </div>
             </div>
 

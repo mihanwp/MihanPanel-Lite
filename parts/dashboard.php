@@ -25,7 +25,7 @@
                             </div>
                             <div class="mihanpanel-card-content">
                                 <?php $off_code_text = \mihanpanel\app\options::get_offer_code_text();?>
-                                <p class="category"><?php echo $off_code_text; ?></p>
+                                <p class="category"><?php echo esc_html($off_code_text); ?></p>
                                 <h3 class="title"
                                     style="text-align:center;line-height:40px;"><?php printf(esc_html__('Off code: %1$s', 'mihanpanel'), $off_code) ?></h3>
                             </div>

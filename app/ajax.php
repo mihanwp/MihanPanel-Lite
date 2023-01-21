@@ -1,6 +1,8 @@
 <?php
 namespace mihanpanel\app;
 
+use mihanpanel\app\users;
+
 class ajax
 {
 
@@ -9,6 +11,7 @@ class ajax
         add_action('wp_ajax_update_tabs_fields_data', [__CLASS__, 'update_tabs_fields_data']);
         add_action('wp_ajax_mw_delete_field_row', [__CLASS__, 'delete_field_row']);
         add_action('wp_ajax_update_user_field_fields_data', [__CLASS__, 'update_user_field_fields_data']);
+		add_action('wp_ajax_mw_update_user_account_status', [__CLASS__, 'update_user_account_status_callback']);
 
         // live edit
         add_action('wp_ajax_mwpl_live_edit_tabs_fields_get_items', [__CLASS__, 'handle_live_edit_tabs_fields_get_items']);
@@ -34,12 +37,12 @@ class ajax
         foreach ($items as $item) :
             $item_url = esc_url(add_query_arg(['tab' => $item->id], $base));
 ?>
-            <li tab-id="<?php echo $item->id; ?>">
+            <li tab-id="<?php echo esc_attr($item->id); ?>">
                 <span class="movement-icon <?php echo !tools::isProVersion() ? 'pro-version-notice-emmit' : '';?>"></span>
-                <a class="mwtaba" mwpl-href="<?php echo $item_url ?>">
+                <a class="mwtaba" mwpl-href="<?php echo esc_attr($item_url) ?>">
                     <?php \mihanpanel\app\presenter\tabs_menu::render_tab_item_icon($item->icon); ?>
                     <p>
-                        <input type="text" value="<?php echo esc_html($item->name); ?>">
+                        <input type="text" value="<?php echo esc_attr($item->name); ?>">
                     </p>
                 </a>
                 <span class="edit-icon"></span>
@@ -200,4 +203,42 @@ class ajax
         $res['msg'] = $success ? esc_html__('Successfully updated!', 'mihanpanel') : esc_html__("Nothing updated.", 'mihanpanel');
         die(json_encode($res));
     }
+	
+	public static function update_user_account_status_callback(){
+		check_ajax_referer('mw_nonce', 'nonce');
+		$user_id = $_POST['user_id'];
+		$status = $_POST['status'];
+		$statuses = users::get_user_account_statuses();
+		$user_is_active = users::is_active_account($user_id);
+		$success = false;
+		
+		if(!current_user_can('edit_user', get_current_user_id())){
+            wp_send_json_error();
+        }
+		
+		if(intval($user_id) && in_array($status, array_keys($statuses))){
+			if($status === 'activate' && !$user_is_active){
+				// Activate account
+				$active = users::remove_activation_code($user_id);
+				if($active){
+					$success = true;
+					do_action('mp_change_user_account_activation_status', $user_id, $status);
+				}
+			} elseif($status === 'deactivate' && $user_is_active) {
+				// Deactivate account
+				$deactive = users::create_activation_link($user_id);
+				if($deactive){
+					$success = true;
+					do_action('mp_change_user_account_activation_status', $user_id, $status);
+				}
+			}
+			if($success){
+				wp_send_json_success();
+			} else {
+				wp_send_json_error();
+			}
+		} else {
+			wp_send_json_error();
+		}
+	}
 }

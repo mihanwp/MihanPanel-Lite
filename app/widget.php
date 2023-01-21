@@ -46,11 +46,11 @@ class widget
         ?>
         <div class="mwp_check_site_dashboard_widget">
             <?php if(isset($check_title)): ?>
-                <h3><?php echo $check_title; ?></h3>
+                <h3><?php echo esc_html($check_title); ?></h3>
             <?php endif; ?>
             <?php foreach($check as $check_item):?>
                 <div class="check_item">
-                    <span class="<?php echo $check_item['type'];?>"><span><?php echo $check_item['msg']; ?></span></span>
+                    <span class="<?php echo esc_attr($check_item['type']);?>"><span><?php echo esc_html($check_item['msg']); ?></span></span>
                 </div>
             <?php endforeach; ?>
         </div>
@@ -72,7 +72,7 @@ class widget
         $more_articles_url = $is_persian ? 'https://mihanwp.com/tutorials/' : 'https://ertano.com/';
         ?>
         <div class="mwp_mihanwp_feed_dashboard">
-            <strong><?php echo $header; ?></strong>
+            <strong><?php echo esc_html($header); ?></strong>
             <hr style="border:0; height: 1px; background-color: #dfdfdf">
             <ul>
                 <?php if($max_item == 0): ?>
@@ -83,7 +83,7 @@ class widget
                         ?>
                         <li>
                             <a target="_blank" title="<?php echo esc_attr($item_date)?>" href="<?php echo esc_url($item->get_permalink())?>"><?php echo esc_html($item->get_title())?></a>
-                            <p><?php echo $item->get_description(false)?></p>
+                            <p><?php echo esc_html($item->get_description(false))?></p>
                         </li>
                     <?php endforeach; ?>
                 <?php endif; ?>

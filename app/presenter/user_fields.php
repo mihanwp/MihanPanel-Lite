@@ -106,11 +106,12 @@ class user_fields
         $placeholder = apply_filters('mwpl_user_fields/field/placeholder', '', $field_meta, $field);
         if($placeholder)
         {
+            $placeholder = esc_attr($placeholder);
             $placeholder = "placeholder='{$placeholder}'";
         }
         ?>
         <input <?php echo $placeholder?> <?php echo isset($prevent_edit_field) && $prevent_edit_field ? 'disabled':''?> class="<?php echo esc_attr($classes); ?>" type="<?php echo esc_attr($field->type); ?>"
-            id="mw_fields_<?php echo $field->slug;?>" name="mw_fields[<?php echo esc_attr($field->slug); ?>]"
+            id="mw_fields_<?php echo esc_attr($field->slug);?>" name="mw_fields[<?php echo esc_attr($field->slug); ?>]"
             <?php echo $value_arg;?>/>
         <?php
     }
@@ -126,6 +127,7 @@ class user_fields
         $placeholder = apply_filters('mwpl_user_fields/field/placeholder', '', $field_meta, $field);
         if($placeholder)
         {
+            $placeholder = esc_attr($placeholder);
             $placeholder = "placeholder='{$placeholder}'";
         }
         ?>
@@ -144,7 +146,7 @@ class user_fields
         }
         ?>
         <input <?php echo isset($prevent_edit_field) && $prevent_edit_field ? 'disabled' : '';?> class="<?php echo esc_attr($classes); ?>" type="checkbox"
-            id="mw_fields_<?php echo $field->slug ?>" name="mw_fields[<?php echo esc_attr($field->slug); ?>]"
+            id="mw_fields_<?php echo esc_attr($field->slug) ?>" name="mw_fields[<?php echo esc_attr($field->slug); ?>]"
             <?php checked($current_value)?> value="1"/>
         <?php
     }
