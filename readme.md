@@ -5,6 +5,7 @@ Tags: register,login,profile,registration,user profile,membership,signup,dashboa
 Requires at least: 4.0
 Tested up to: 6.1.1
 Requires PHP: 7.4
+Stable tag: 11.9
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
