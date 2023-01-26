@@ -144,7 +144,7 @@ class assets
             $font_name = apply_filters('mwpl_assets/main_font_name', 'iranyekan');
             if($font_name): ?>
                 body,a,h1,h2,h3,h5,h6,h4,span:not(.dashicons),td,tr,input,p{
-                    font-family:<?php echo $font_name; ?> !important;
+                    font-family:<?php echo esc_attr($font_name); ?> !important;
                 }
             <?php endif; ?>
         </style>

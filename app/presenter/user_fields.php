@@ -96,7 +96,6 @@ class user_fields
     {
         $classes = isset($args['classes']) ? $args['classes'] : '';
         $current_value = $current_user ? $current_user->{$field->slug} : '';
-        $value_arg = $current_user ? 'value="'. esc_attr($current_value) .'"' : '';
         // handle prevent edit field
         $field_meta = isset($field->meta) ? unserialize($field->meta) : false;
         if($field_meta)
@@ -104,15 +103,10 @@ class user_fields
             $prevent_edit_field = !\mihanpanel\app\users::is_admin_user() && $current_value && isset($field_meta['data']['prevent_edit_field']);
         }
         $placeholder = apply_filters('mwpl_user_fields/field/placeholder', '', $field_meta, $field);
-        if($placeholder)
-        {
-            $placeholder = esc_attr($placeholder);
-            $placeholder = "placeholder='{$placeholder}'";
-        }
         ?>
-        <input <?php echo $placeholder?> <?php echo isset($prevent_edit_field) && $prevent_edit_field ? 'disabled':''?> class="<?php echo esc_attr($classes); ?>" type="<?php echo esc_attr($field->type); ?>"
+        <input <?php echo $placeholder ? 'placeholder="'.esc_attr($placeholder).'"' : '';?> <?php echo isset($prevent_edit_field) && $prevent_edit_field ? 'disabled':''?> class="<?php echo esc_attr($classes); ?>" type="<?php echo esc_attr($field->type); ?>"
             id="mw_fields_<?php echo esc_attr($field->slug);?>" name="mw_fields[<?php echo esc_attr($field->slug); ?>]"
-            <?php echo $value_arg;?>/>
+            value="<?php echo esc_attr($current_value);?>"/>
         <?php
     }
     public static function render_textarea_field($view, $field, $current_user=null, $args=[])
@@ -125,13 +119,8 @@ class user_fields
             $prevent_edit_field = $value && isset($field_meta['data']['prevent_edit_field']);
         }
         $placeholder = apply_filters('mwpl_user_fields/field/placeholder', '', $field_meta, $field);
-        if($placeholder)
-        {
-            $placeholder = esc_attr($placeholder);
-            $placeholder = "placeholder='{$placeholder}'";
-        }
         ?>
-        <textarea <?php echo $placeholder?> <?php echo isset($prevent_edit_field) && $prevent_edit_field ? 'disabled="disabled"':'';?> class="<?php echo esc_attr($classes); ?>" name="mw_fields[<?php echo esc_attr($field->slug); ?>]" id="mw_fields_<?php echo esc_attr($field->slug); ?>" cols="30" rows="10"><?php echo esc_textarea($value); ?></textarea>
+        <textarea <?php echo $placeholder ? 'placeholder="'.esc_attr($placeholder).'"' : ''; ?> <?php echo isset($prevent_edit_field) && $prevent_edit_field ? 'disabled="disabled"':'';?> class="<?php echo esc_attr($classes); ?>" name="mw_fields[<?php echo esc_attr($field->slug); ?>]" id="mw_fields_<?php echo esc_attr($field->slug); ?>" cols="30" rows="10"><?php echo esc_textarea($value); ?></textarea>
         <?php
     }
     static function render_checkbox_field($view, $field, $current_user=null, $args=[])

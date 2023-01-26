@@ -206,8 +206,8 @@ class ajax
 	
 	public static function update_user_account_status_callback(){
 		check_ajax_referer('mw_nonce', 'nonce');
-		$user_id = $_POST['user_id'];
-		$status = $_POST['status'];
+		$user_id = sanitize_text_field($_POST['user_id']);
+		$status = sanitize_text_field($_POST['status']);
 		$statuses = users::get_user_account_statuses();
 		$user_is_active = users::is_active_account($user_id);
 		$success = false;

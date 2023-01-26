@@ -91,6 +91,7 @@ class panel
             {
                 $value = implode(' ', $value);
             }
+            $value = $attr == 'href' ? esc_url($value) : esc_attr($value);
             $res[] = $attr . '="' . $value . '"';
         }
         return implode(' ', $res);
@@ -120,16 +121,14 @@ class panel
             $li_attrs = apply_filters('mwpl_panel/sidebar/item_attrs', $li_attrs, $menu);
             $link_attrs = apply_filters('mwpl_panel/sidebar/link_attrs', $link_attrs, $menu);
 
-            $li_attrs = self::render_attrs($li_attrs);
-            $link_attrs = self::render_attrs($link_attrs);
             $permission = apply_filters('mwpl_panel/sidebar/permission', true, $menu);
             if(!$permission)
             {
                 continue;
             }
             ?>
-            <li <?php echo $li_attrs?>>
-                <a <?php echo $link_attrs?>>
+            <li <?php echo self::render_attrs($li_attrs)?>>
+                <a <?php echo self::render_attrs($link_attrs)?>>
                     <?php \mihanpanel\app\presenter\tabs_menu::render_tab_item_icon($menu->icon); ?>
                     <p><?php echo esc_html($menu->name); ?></p>
                 </a>

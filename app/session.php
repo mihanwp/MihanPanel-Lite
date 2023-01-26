@@ -132,7 +132,7 @@ class session
     }
     static function generate_session_key()
     {
-        $key = md5(microtime() . $_SERVER['REMOTE_ADDR']);
+        $key = md5(microtime() . sanitize_text_field($_SERVER['REMOTE_ADDR']));
         return $key;
     }
     static function get_user_session_key()
