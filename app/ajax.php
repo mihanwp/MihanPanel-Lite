@@ -72,30 +72,29 @@ class ajax
             $res['msg'] = __('The operation failed due to security issues.', 'mihanpanel');
             die(json_encode($res));
         }
-        $fields_data = isset($_POST['fields_data']) ? $_POST['fields_data'] : false;
-        if(!$fields_data)
+        if(!isset($_POST['fields_data']))
         {
             die(json_encode($res));
         }
         global $wpdb;
         $table_name = $wpdb->prefix . 'mihanpaneltabs';
         $success = false;
-        foreach($fields_data as $index => $field_data)
+        foreach($_POST['fields_data'] as $index => $field_data)
         {
-            $item = [];
-            parse_str($field_data, $item);
-            $item_id = isset($item['id']) ? sanitize_text_field($item['id']) : false;
+            $parsed_data = [];
+            parse_str($field_data, $parsed_data);
+            $parsed_data = \mihanpanel\app\tools::sanitize_array_values($parsed_data);
+            $item_id = isset($parsed_data['id']) ? sanitize_text_field($parsed_data['id']) : false;
             if(!$item_id)
             {
                 continue;
             }
-            $meta = apply_filters('mwpl_option_panel/panel_tabs/tabs_field_meta', '', $item);
-            $name = sanitize_text_field($item['name']);
-            $link_or_content = sanitize_text_field($item['link_or_content']);
+            $name = sanitize_text_field($parsed_data['name']);
+            $link_or_content = sanitize_text_field($parsed_data['link_or_content']);
             $link = filter_var($link_or_content, FILTER_VALIDATE_URL);
             $link = $link ? $link : false;
             $content = $link ? "" : str_replace('\\', '', $link_or_content);
-            $icon = sanitize_text_field($item['icon']);
+            $icon = sanitize_text_field($parsed_data['icon']);
             $data = [
                 'name' => $name,
                 'link' => $link,
@@ -103,6 +102,7 @@ class ajax
                 'icon' => $icon,
                 'priority' => $index
             ];
+            $meta = apply_filters('mwpl_option_panel/panel_tabs/tabs_field_meta', '', \mihanpanel\app\tools::sanitize_array_values($parsed_data));
             if($meta)
             {
                 $data['meta'] = $meta;
@@ -110,7 +110,7 @@ class ajax
             $update_res = $wpdb->update(
                 $table_name,
                 $data,
-                ['id' => $item['id']]
+                ['id' => $parsed_data['id']]
             );
             if($update_res)
             {
@@ -162,31 +162,30 @@ class ajax
             $res['msg'] = __('The operation failed due to security issues.', 'mihanpanel');
             die(json_encode($res));
         }
-        $fields_data = isset($_POST['fields_data']) ? $_POST['fields_data'] : false;
         global $wpdb;
         $table_name = $wpdb->prefix . 'mihanpanelfields';
         $success = false;
-        foreach($fields_data as $index => $field_data)
+        foreach($_POST['fields_data'] as $index => $field_data)
         {
-            $parse_data = [];
-            parse_str($field_data, $parse_data);
-            $field_id = isset($parse_data['id']) ? sanitize_text_field($parse_data['id']) : false;
+            $parsed_data = [];
+            parse_str($field_data, $parsed_data);
+            $parsed_data = \mihanpanel\app\tools::sanitize_array_values($parsed_data);
+            $field_id = isset($parsed_data['id']) ? sanitize_text_field($parsed_data['id']) : false;
             if(!$field_id)
             {
                 continue;
             }
-            $meta = '';
-            $meta = apply_filters('mwpl_option_panel/user_fields/new_mode/user_fields_meta', $meta, $parse_data);
-            $slug = isset($parse_data['slug']) && $parse_data['slug'] ? sanitize_text_field($parse_data['slug']) : false;
-            $label = isset($parse_data['label']) && $parse_data['label'] ? sanitize_text_field($parse_data['label']) : false;
-            $required_field = isset($parse_data['required_field']) && $parse_data['required_field'] ? sanitize_text_field($parse_data['required_field']) : false;
-            $type = isset($parse_data['type']) && $parse_data['type'] ? sanitize_text_field($parse_data['type']) : false;
+            $slug = isset($parsed_data['slug']) && $parsed_data['slug'] ? sanitize_text_field($parsed_data['slug']) : false;
+            $label = isset($parsed_data['label']) && $parsed_data['label'] ? sanitize_text_field($parsed_data['label']) : false;
+            $required_field = isset($parsed_data['required_field']) && $parsed_data['required_field'] ? sanitize_text_field($parsed_data['required_field']) : false;
+            $type = isset($parsed_data['type']) && $parsed_data['type'] ? sanitize_text_field($parsed_data['type']) : false;
 
             $data = [];
             $slug ? $data['slug'] = $slug : false;
             $label ? $data['label'] = $label : false;
             $required_field ? $data['required'] = $required_field : false;
             $type ? $data['type'] = $type : false;
+            $meta = apply_filters('mwpl_option_panel/user_fields/new_mode/user_fields_meta', '', \mihanpanel\app\tools::sanitize_array_values($parsed_data));
             $data['meta'] = $meta ? $meta : '';
             $data['priority'] = $index;
             $update_res = $wpdb->update(

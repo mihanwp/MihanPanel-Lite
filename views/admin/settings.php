@@ -9,7 +9,7 @@
                 <ul>
                     <?php if($menu_items):
                         $white_list = array_keys($menu_items);
-                        $active_tab = isset($_GET['tab']) && in_array($_GET['tab'], $white_list) ? $_GET['tab'] : $white_list[0];
+                        $active_tab = isset($_GET['tab']) && in_array($_GET['tab'], $white_list) ? sanitize_text_field($_GET['tab']) : $white_list[0];
                         ?>
                     <?php foreach ($menu_items as $item => $name): ?>
                         <li <?php echo $item == $active_tab ? 'class="active"' : ''; ?>><a href="<?php echo esc_url(add_query_arg(['tab' => $item])); ?>"><?php echo esc_html($name); ?></a></li>

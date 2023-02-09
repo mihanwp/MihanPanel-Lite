@@ -163,4 +163,21 @@ class tools
     {
         return admin_url('admin.php?page=mihanpanel');
     }
+
+    static function sanitize_array_values($array)
+    {
+        if(!$array)
+        {
+            return false;
+        }
+        if(!is_array($array))
+        {
+            return sanitize_text_field($array);
+        }
+        foreach($array as $key => $value)
+        {
+            $array[$key] = is_array($value) ? self::sanitize_array_values($value) : sanitize_text_field($value);
+        }
+        return $array;
+    }
 }

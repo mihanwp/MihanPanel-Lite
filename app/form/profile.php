@@ -8,38 +8,38 @@ use mihanpanel\app\tools;
 class profile
 {
     private static $_uid;
-    static function do($form_data)
+    static function do()
     {
         // set current user id
         self::$_uid = get_current_user_id();
-        self::check_nonce($form_data['posts']['mwpl_nonce']);
-        do_action('mwpl_panel/profile/after_submit_form', self::$_uid, $form_data);
-        if(isset($form_data['posts']['general']))
+        self::check_nonce(sanitize_text_field($_POST['mwpl_nonce']));
+        do_action('mwpl_panel/profile/after_submit_form', self::$_uid);
+        if(isset($_POST['general']))
         {
-            self::user_data_handler($form_data['posts']['general']);
+            self::user_data_handler();
         }
         
-        if(isset($form_data['posts']['mw_fields']))
+        if(isset($_POST['mw_fields']))
         {
-            self::user_fields_handler($form_data['posts']['mw_fields']);
+            self::user_fields_handler();
         }
-        if(isset($form_data['posts']['wc']))
+        if(isset($_POST['wc']))
         {
-            self::woocommerce_handler($form_data['posts']['wc']);
+            self::woocommerce_handler();
         }
         \mihanpanel\app\tools::do_redirect();
     }
-    static function handleChangePasswordForm($form_data)
+    static function handleChangePasswordForm()
     {
         self::$_uid = get_current_user_id();
-        self::check_nonce($form_data['posts']['mwpl_nonce'], 'mwpl_change_password');
+        self::check_nonce(sanitize_text_field($_POST['posts']['mwpl_nonce']), 'mwpl_change_password');
         $mwuser_data = [];
         $hasError = true;
-        if(isset($form_data['posts']['general']['pass1']))
+        if(isset($_POST['posts']['general']['pass1']))
         {
-            if ($form_data['posts']['general']['pass1'] == $form_data['posts']['general']['pass2']) {
+            if ($_POST['posts']['general']['pass1'] == $_POST['posts']['general']['pass2']) {
                 $mwuser_data['ID'] = self::$_uid;
-                $mwuser_data['user_pass'] = sanitize_text_field($form_data['posts']['general']['pass1']);
+                $mwuser_data['user_pass'] = sanitize_text_field($_POST['posts']['general']['pass1']);
             } else {
                 $type = 'error';
                 $msg = __("Passwords don't match!", "mihanpanel");
@@ -67,7 +67,7 @@ class profile
             $args = [
                 'tab' => 'edit-profile',
             ];
-            $url = add_query_arg($args, $panelUrl);
+            $url = esc_url(add_query_arg($args, $panelUrl));
             wp_safe_redirect($url);
             exit;
         }
@@ -80,18 +80,18 @@ class profile
                 tools::do_redirect();
             }
         }
-    static function user_data_handler($fields)
+    static function user_data_handler()
     {
         $mwuser_data = array(
             'ID' => wp_get_current_user()->ID,
-            'description' => sanitize_text_field($fields['description']),
-            'first_name' => sanitize_text_field($fields['first_name']),
-            'last_name' => sanitize_text_field($fields['last_name'])
+            'description' => sanitize_text_field($_POST['general']['description']),
+            'first_name' => sanitize_text_field($_POST['general']['first_name']),
+            'last_name' => sanitize_text_field($_POST['general']['last_name'])
         );
 
-        if ($fields['pass1']) {
-            if ($fields['pass1'] == $fields['pass2']) {
-                $mwuser_data['user_pass'] = sanitize_text_field($fields['pass1']);
+        if ($_POST['general']['pass1']) {
+            if ($_POST['general']['pass1'] == $_POST['general']['pass2']) {
+                $mwuser_data['user_pass'] = sanitize_text_field($_POST['general']['pass1']);
             } else {
                 $type = 'error';
                 $msg = __("Passwords don't match!", "mihanpanel");
@@ -110,7 +110,7 @@ class profile
         \mihanpanel\app\notice::add_multiple_notice($type, $msg);
     }
     
-    static function user_fields_handler($fields_data)
+    static function user_fields_handler()
     {
         global $wpdb;
         $tablename = $wpdb->prefix . 'mihanpanelfields';
@@ -120,7 +120,7 @@ class profile
             $last_value = get_user_meta(self::$_uid, $updatingfield->slug, true);
             $field_meta = isset($updatingfield->meta) ? unserialize($updatingfield->meta) : false;
             $prevent_edit_field = !\mihanpanel\app\users::is_admin_user() && isset($field_meta['data']['prevent_edit_field']);
-            if(!isset($fields_data[$updatingfield->slug]) || empty($fields_data[$updatingfield->slug]))
+            if(!isset($_POST['mw_fields'][$updatingfield->slug]) || empty($_POST['mw_fields'][$updatingfield->slug]))
             {
                 if(($prevent_edit_field && $last_value) || !apply_filters('mwpl_user_fields_render_permission', true, $updatingfield, 'profile'))
                 {
@@ -144,17 +144,16 @@ class profile
                 {
                     continue;
                 }
-                $value = $fields_data[$updatingfield->slug];
-                $value = tools::sanitize_value($value, $updatingfield->type);
+                $value = tools::sanitize_value($_POST['mw_fields'][$updatingfield->slug], $updatingfield->type);
                 update_user_meta(self::$_uid, $updatingfield->slug, $value);
             }
         }
     }
-    static function woocommerce_handler($wc_data)
+    static function woocommerce_handler()
     {
-        foreach($wc_data as $field => $field_value)
+        foreach($_POST['wc'] as $key => $value)
         {
-            woo::set_field_value($field, $field_value);
+            woo::set_field_value(sanitize_key($key), sanitize_text_field($value));
         }
     }
 }

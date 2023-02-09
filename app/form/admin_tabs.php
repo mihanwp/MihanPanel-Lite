@@ -15,14 +15,14 @@ class admin_tabs
                 if ($middleware && isset($_POST['name']) && wp_verify_nonce(sanitize_text_field($_POST['mwpl_nonce']), 'mwpl_create_tab_item')) {
                     $needle = ['"', '\\'];
                     $replacement = ["'", ''];
-                    $menucontent = str_replace($needle, $replacement, $_POST['content']);
+                    $menucontent = str_replace($needle, $replacement, sanitize_text_field($_POST['content']));
                     $data = [
                         'name' => sanitize_text_field($_POST['name']),
                         'link' => sanitize_text_field($_POST['link']),
                         'content' => sanitize_text_field($menucontent),
                         'icon' => sanitize_text_field($_POST['icon']),
                     ];
-                    $meta = apply_filters('mwpl_option_panel/panel_tabs/tabs_field_meta', '', $_POST);
+                    $meta = apply_filters('mwpl_option_panel/panel_tabs/tabs_field_meta', '', null);
                     if($meta)
                     {
                         $data['meta'] = $meta;

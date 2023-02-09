@@ -196,7 +196,7 @@ class config
     
     public static function user_account_activation_process()
     {
-        $activation_code = isset($_GET['activation_code']) ? htmlspecialchars($_GET['activation_code']) : false;
+        $activation_code = isset($_GET['activation_code']) ? sanitize_text_field($_GET['activation_code']) : false;
         if (!$activation_code)
             return false;
 

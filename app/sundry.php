@@ -101,7 +101,8 @@ class sundry
         global $wpdb;
         $tablename = $wpdb->prefix . 'mihanpanelfields';
         $fields = $wpdb->get_results("SELECT * FROM $tablename where type!='file_uploader'");
-        $form_data = $_POST['mw_fields'];
+        #HTHIS
+        $form_data = \mihanpanel\app\tools::sanitize_array_values($_POST['mw_fields']);
         foreach ($fields as $field) {
             $last_value = get_user_meta($user_id, $field->slug, true);
             $field_meta = isset($field->meta) ? unserialize($field->meta) : false;

@@ -5,36 +5,35 @@ use mihanpanel\app\user_fields;
 
 class admin_user_fields
 {
-    static function do($form_data)
+    static function do()
     {
         global $wpdb;
         $tabel_name = $wpdb->prefix . 'mihanpanelfields';
-        if(isset($form_data['save']))
+        if(isset($_POST['save']))
         {
             // new mode
-            self::new_mode($wpdb, $tabel_name, $form_data);
+            self::new_mode($wpdb, $tabel_name);
         }
-        do_action('mwpl_option_panel/handle_user_fields_form_submit', $form_data);
+        do_action('mwpl_option_panel/handle_user_fields_form_submit');
     }
-    static function new_mode($wpdb, $tabel_name, $form_data)
+    static function new_mode($wpdb, $tabel_name)
     {
-        $slug = isset($form_data['slug']) && $form_data['slug'] ? sanitize_text_field($form_data['slug']) : false;
-        $label = isset($form_data['label']) && $form_data['label'] ? sanitize_text_field($form_data['label']) : false;
-        $required = isset($form_data['required']) && $form_data['required'] ? sanitize_text_field($form_data['required']) : false;
-        $type = isset($form_data['type']) && $form_data['type'] ? sanitize_text_field($form_data['type']) : false;
+        $slug = isset($_POST['slug']) && $_POST['slug'] ? sanitize_text_field($_POST['slug']) : false;
+        $label = isset($_POST['label']) && $_POST['label'] ? sanitize_text_field($_POST['label']) : false;
+        $required = isset($_POST['required']) && $_POST['required'] ? sanitize_text_field($_POST['required']) : false;
+        $type = isset($_POST['type']) && $_POST['type'] ? sanitize_text_field($_POST['type']) : false;
         if ($slug && $label && $required && $type) {
-            if(!wp_verify_nonce(sanitize_text_field($form_data['mwpl_nonce']), 'mwpl_create_field_item'))
+            if(!wp_verify_nonce(sanitize_text_field($_POST['mwpl_nonce']), 'mwpl_create_field_item'))
             {
                 printf('<p class="alert error">%s</p>', __('The operation failed due to security issues.', 'mihanpanel'));
                 return false;
             }
-            $meta = '';
-            $meta = apply_filters('mwpl_option_panel/user_fields/new_mode/user_fields_meta', $meta, $form_data);
+            $meta = apply_filters('mwpl_option_panel/user_fields/new_mode/user_fields_meta', '', null);
             $data = [
-                'slug' => sanitize_text_field($form_data['slug']),
-                'label' => sanitize_text_field($form_data['label']),
-                'required' => sanitize_text_field($form_data['required']),
-                'type' => sanitize_text_field($form_data['type']),
+                'slug' => sanitize_text_field($slug),
+                'label' => sanitize_text_field($label),
+                'required' => sanitize_text_field($required),
+                'type' => sanitize_text_field($type),
                 'priority' => 0
             ];
             if($meta)
@@ -155,7 +154,7 @@ class admin_user_fields
                 <label for="new_record_is_required"><?php esc_html_e('Required', 'mihanpanel')?></label>
                 <select id="new_record_is_required" name="required">
                     <option value="yes"><?php _e('Required', 'mihanpanel')?></option>
-                    <option alue="no"><?php _e('Optional', 'mihanpanel');?></option>
+                    <option value="no"><?php _e('Optional', 'mihanpanel');?></option>
                 </select>
             </div>
             <?php do_action('mwpl_option_panel/user_fields/new_record_form/before_render_submit_button'); ?>

@@ -16,16 +16,7 @@
     }
     $current_user_id = get_current_user_id();
     if (!empty($_POST)) {
-        $form_data = [];
-        if(isset($_FILES))
-        {
-            $form_data['files'] = $_FILES;
-        }
-        if(isset($_POST))
-        {
-            $form_data['posts'] = $_POST;
-        }
-        \mihanpanel\app\form\profile::do($form_data);
+        \mihanpanel\app\form\profile::do();
     }
     $current_user = wp_get_current_user();
     $profile_form_enctype = apply_filters('mwpl_panel/profile/form_enctype', 'application/x-www-form-urlencoded');

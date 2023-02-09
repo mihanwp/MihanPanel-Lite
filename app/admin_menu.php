@@ -65,7 +65,7 @@ class admin_menu
     {
         if(!empty($_POST))
         {
-            \mihanpanel\app\form\admin_user_fields::do($_POST);
+            \mihanpanel\app\form\admin_user_fields::do();
         }
         ?>
         <div class="mihanpanel-admin">

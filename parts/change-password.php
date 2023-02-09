@@ -15,12 +15,7 @@
         }
     }    
     if (!empty($_POST)) {
-        $form_data = [];
-        if(isset($_POST))
-        {
-            $form_data['posts'] = $_POST;
-        }
-        \mihanpanel\app\form\profile::handleChangePasswordForm($form_data);
+        \mihanpanel\app\form\profile::handleChangePasswordForm();
     }
     $current_user = wp_get_current_user();
     ?>
