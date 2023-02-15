@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MihanPanel\n"
-"POT-Creation-Date: 2023-01-21 14:15+0330\n"
-"PO-Revision-Date: 2023-01-21 14:15+0330\n"
+"POT-Creation-Date: 2023-02-15 17:46+0330\n"
+"PO-Revision-Date: 2023-02-15 17:47+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -92,7 +92,6 @@ msgstr "این بخش در نسخه‌ی حرفه‌ای میهن‌پنل در 
 msgid "This feature is accessible only in %s."
 msgstr "این قابلیت فقط در %s در دسترس است"
 
-#. Plugin Name of the plugin/theme
 #: app/admin_menu.php:169
 msgid "MihanPanel Pro"
 msgstr "میهن پنل پرو"
@@ -110,11 +109,11 @@ msgstr "هیچ آیتمی پیدا نشد."
 msgid "The operation failed due to security issues."
 msgstr "عملیات به دلیل مشکلات امنیتی متوقف شد."
 
-#: app/ajax.php:121 app/ajax.php:203 app/form/profile.php:108
+#: app/ajax.php:121 app/ajax.php:202 app/form/profile.php:108
 msgid "Successfully updated!"
 msgstr "با موفقیت به روز شد!"
 
-#: app/ajax.php:121 app/ajax.php:203
+#: app/ajax.php:121 app/ajax.php:202
 msgid "Nothing updated."
 msgstr "چیزی آپدیت نشد."
 
@@ -219,7 +218,7 @@ msgstr "میهن پنل"
 msgid "Successfully added! Watch user panel"
 msgstr "با موفقیت اضافه شد! میتونید پنل کاربری رو ببینید"
 
-#: app/form/admin_tabs.php:37 app/form/admin_user_fields.php:54
+#: app/form/admin_tabs.php:37 app/form/admin_user_fields.php:53
 #: app/form/profile.php:54 app/form/profile.php:105
 msgid "An error occurred!"
 msgstr "یک خطا رخ داده است!"
@@ -241,7 +240,7 @@ msgstr "آیکون"
 msgid "Tabs"
 msgstr "تب‌ها"
 
-#: app/form/admin_tabs.php:64 app/form/admin_user_fields.php:88
+#: app/form/admin_tabs.php:64 app/form/admin_user_fields.php:87
 msgid "New Field"
 msgstr "فیلد جدید"
 
@@ -293,41 +292,41 @@ msgstr "کد کوتاه سفارشی"
 msgid "No any shortcodes found."
 msgstr "هیچ شورتکدی پیدا نشد."
 
-#: app/form/admin_user_fields.php:50
+#: app/form/admin_user_fields.php:49
 msgid "Settings successfully updated!"
 msgstr "تنظیمات با موفقیت به روز شد!"
 
-#: app/form/admin_user_fields.php:60
+#: app/form/admin_user_fields.php:59
 msgid "Please fill all the fields"
 msgstr "لطفا تمام زمینه ها را پر کنید"
 
-#: app/form/admin_user_fields.php:70 app/form/admin_user_fields.php:147
+#: app/form/admin_user_fields.php:69 app/form/admin_user_fields.php:146
 msgid "Field Id"
 msgstr "شناسه فیلد"
 
-#: app/form/admin_user_fields.php:74 app/form/admin_user_fields.php:151
+#: app/form/admin_user_fields.php:73 app/form/admin_user_fields.php:150
 msgid "Title"
 msgstr "عنوان"
 
-#: app/form/admin_user_fields.php:78 app/form/admin_user_fields.php:118
-#: app/form/admin_user_fields.php:155 app/form/admin_user_fields.php:157
-#: parts/edit-profile.php:96
+#: app/form/admin_user_fields.php:77 app/form/admin_user_fields.php:117
+#: app/form/admin_user_fields.php:154 app/form/admin_user_fields.php:156
+#: parts/edit-profile.php:87
 msgid "Required"
 msgstr "الزامی"
 
-#: app/form/admin_user_fields.php:82 app/form/admin_user_fields.php:163
+#: app/form/admin_user_fields.php:81 app/form/admin_user_fields.php:162
 msgid "Type"
 msgstr "نوع"
 
-#: app/form/admin_user_fields.php:88
+#: app/form/admin_user_fields.php:87
 msgid "Fields"
 msgstr "فیلد‌ها"
 
-#: app/form/admin_user_fields.php:119 app/form/admin_user_fields.php:158
+#: app/form/admin_user_fields.php:118 app/form/admin_user_fields.php:157
 msgid "Optional"
 msgstr "اختیاری"
 
-#: app/form/admin_user_fields.php:167
+#: app/form/admin_user_fields.php:166
 msgid "Save"
 msgstr "ذخیره"
 
@@ -544,7 +543,7 @@ msgstr "رمز عبور"
 msgid "Password must not empty"
 msgstr "کلمه عبور نباید خالی باشد"
 
-#: app/sundry.php:198
+#: app/sundry.php:199
 msgid " Should not be empty!"
 msgstr " نباید خالی باشد!"
 
@@ -662,15 +661,15 @@ msgstr "ثبت نام"
 msgid "Change password"
 msgstr "تغییر رمز عبور"
 
-#: parts/change-password.php:32 parts/edit-profile.php:58
+#: parts/change-password.php:27 parts/edit-profile.php:49
 msgid "New password"
 msgstr "رمز عبور جدید"
 
-#: parts/change-password.php:38 parts/edit-profile.php:64
+#: parts/change-password.php:33 parts/edit-profile.php:55
 msgid "Password repeat"
 msgstr "تکرار رمز عبور"
 
-#: parts/change-password.php:44 parts/edit-profile.php:107
+#: parts/change-password.php:39 parts/edit-profile.php:98
 msgid "Save Changes"
 msgstr "ذخیره تغییرات"
 
@@ -700,17 +699,17 @@ msgstr "متأسفیم، اما شما به این بخش دسترسی ندار�
 msgid "Edit User Profile"
 msgstr "ویرایش پروفایل کاربری"
 
-#: parts/edit-profile.php:41 views/admin/panel-section/email.php:40
+#: parts/edit-profile.php:32 views/admin/panel-section/email.php:40
 #: views/admin/panel-section/email.php:60
 msgid "First Name"
 msgstr "نام"
 
-#: parts/edit-profile.php:49 views/admin/panel-section/email.php:41
+#: parts/edit-profile.php:40 views/admin/panel-section/email.php:41
 #: views/admin/panel-section/email.php:61
 msgid "Last Name"
 msgstr "نام خانوادگی"
 
-#: parts/edit-profile.php:73
+#: parts/edit-profile.php:64
 msgid "Bio"
 msgstr "بیوگرافی"
 
@@ -754,21 +753,21 @@ msgstr "برای تنظیم یک پیش فرض شبکه گسترده ، به %s 
 msgid "Network Settings"
 msgstr "تنظیمات شبکه"
 
-#: rename-wp-login.php:183
+#: rename-wp-login.php:177
 msgid "Your site login url is"
 msgstr "آدرس صفحه ورود سایت شما"
 
-#: rename-wp-login.php:188
+#: rename-wp-login.php:185
 #, php-format
 msgid "Your login page is now here: %s. Bookmark this page!"
 msgstr ""
 "صفحه ی ورود شما در اینجاست: %s. میتوانید آن را به بوکمارک خود اضافه کنید!"
 
-#: rename-wp-login.php:193 rename-wp-login.php:195
+#: rename-wp-login.php:190 rename-wp-login.php:192
 msgid "Settings"
 msgstr "تنظیمات"
 
-#: rename-wp-login.php:208
+#: rename-wp-login.php:205
 msgid "This feature is not enabled."
 msgstr "این ویژگی در دسترس نیست."
 
@@ -1343,6 +1342,7 @@ msgstr "کد اضافه"
 msgid "This code is render in head tag in Login page"
 msgstr "این کد در تگ هدر صفحه ی ورود اضافه میشود"
 
+#. Author of the plugin/theme
 #: views/admin/settings.php:23
 msgid "Ertano"
 msgstr "میهن‌وردپرس"
@@ -1351,20 +1351,20 @@ msgstr "میهن‌وردپرس"
 msgid "New Airlines"
 msgstr "خطوط هوایی جدید"
 
+#. Plugin Name of the plugin/theme
+msgid "MihanPanel Lite"
+msgstr "میهن‌پنل لایت"
+
 #. Plugin URI of the plugin/theme
-msgid "https://mihanwp.com/mihanpanel/"
+msgid "https://ertano.com/mihanpanel/"
 msgstr "https://mihanwp.com/mihanpanel/"
 
 #. Description of the plugin/theme
 msgid "The best way to build user interface in WordPress"
 msgstr "یک راه مناسب برای پیاده سازی پروفایل کاربری در وردپرس"
 
-#. Author of the plugin/theme
-msgid "MihanWP"
-msgstr "میهن وردپرس"
-
 #. Author URI of the plugin/theme
-msgid "https://mihanwp.com"
+msgid "https://ertano.com"
 msgstr "https://mihanwp.com/"
 
 #~ msgid "yes"
@@ -2066,6 +2066,9 @@ msgstr "https://mihanwp.com/"
 #~ msgid "Request Code"
 #~ msgstr "درخواست کد"
 
+#~ msgid "MihanWP"
+#~ msgstr "میهن وردپرس"
+
 #~ msgid "Backup your site before using it!"
 #~ msgstr ""
 #~ "قبل از استفاده از این گزینه، از سایت خود بک‌آپ تهیه کنید! تغییرات قابل "
@@ -2108,9 +2111,6 @@ msgstr "https://mihanwp.com/"
 
 #~ msgid "Name"
 #~ msgstr "نام"
-
-#~ msgid "MihanPanel Live Edit"
-#~ msgstr "ویرایش زنده‌ی میهن پنل"
 
 #~ msgid "mihanwp.com"
 #~ msgstr "میهن وردپرس"

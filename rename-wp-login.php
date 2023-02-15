@@ -99,16 +99,16 @@ if ( defined( 'ABSPATH' ) && ! class_exists( 'Rename_WP_Login' ) ) {
 			}
 		}
 		public function wpmu_options() {
-			$out = '';
-			$out .= '<h3>' . __( 'Rename wp-login.php', 'mihanpanel' ) . '</h3>';
-			$out .= '<p>' . __( 'This option allows you to set a networkwide default, which can be overridden by individual sites. Simply go to to the site’s permalink settings to change the url.', 'mihanpanel' ) . '</p>';
-			$out .= '<table class="form-table">';
-				$out .= '<tr valign="top">';
-					$out .= '<th scope="row">' . __( 'Networkwide default', 'mihanpanel' ) . '</th>';
-					$out .= '<td><input id="rwl-page-input" type="text" name="rwl_page" value="' . get_site_option( 'rwl_page', 'login' )  . '"></td>';
-				$out .= '</tr>';
-			$out .= '</table>';
-			echo $out;
+			?>
+			<h3><?php _e( 'Rename wp-login.php', 'mihanpanel' );?></h3>
+			<p><?php _e( 'This option allows you to set a networkwide default, which can be overridden by individual sites. Simply go to to the site’s permalink settings to change the url.', 'mihanpanel' )?></p>
+			<table class="form-table">
+				<tr valign="top">
+					<th scope="row"><?php _e( 'Networkwide default', 'mihanpanel' )?></th>
+					<td><input id="rwl-page-input" type="text" name="rwl_page" value="<?php echo esc_attr(get_site_option( 'rwl_page', 'login' ))?>"></td>
+				</tr>
+			</table>
+			<?php
 		}
 		public function update_wpmu_options() {
 			if (
@@ -159,33 +159,30 @@ if ( defined( 'ABSPATH' ) && ! class_exists( 'Rename_WP_Login' ) ) {
 			}
 		}
 		public function rwl_section_desc() {
-			$out = '';
 			if ( is_multisite() && is_super_admin() && is_plugin_active_for_network( $this->basename() ) ) {
-				$out .= '<p>' . sprintf( __( 'To set a networkwide default, go to %s.', 'mihanpanel' ), '<a href="' . network_admin_url( 'settings.php#rwl-page-input' ) . '">' . __( 'Network Settings', 'mihanpanel' ) . '</a>') . '</p>';
+				?>
+				<p><?php printf( __( 'To set a networkwide default, go to %s.', 'mihanpanel' ), '<a href="' . esc_url(network_admin_url( 'settings.php#rwl-page-input' )) . '">' . __( 'Network Settings', 'mihanpanel' ) . '</a>')?></p>
+				<?php
 			}
-			echo $out;
 		}
 		public function rwl_page_input() {
-			if ( get_option( 'permalink_structure' ) ) {
-				$prefix = trailingslashit(home_url());
-			} else {
-				$prefix = trailingslashit(home_url()) . '?';
-			}
-			$body = sprintf('<code>%s</code><input id="rwl-page-input" name="rwl_page" type="text" value="%s"/>', $prefix, $this->new_login_slug());
-			if($this->use_trailing_slashes())
-			{
-				$body .=  '<code>/</code>';
-			}
-			echo '<div dir="ltr">';
-			echo $body;
-			echo '</div>';
+			
+			$prefix = get_option('permalink_structure') ? trailingslashit(home_url()) : trailingslashit(home_url()) . '?';
 			$login_url = $prefix . $this->new_login_slug();
-			echo '<p style="text-align: left" class="description">'.esc_html__('Your site login url is', 'mihanpanel').': <a target="_blank" dir="ltr" href="'.$login_url.'">'.$login_url.'</a></p>';
+			?>
+
+			<div class="ltr">
+				<code><?php echo esc_html($prefix)?></code><input type="text" id="rwl-page-input" name="rwl_page" type="text" value="<?php echo esc_attr($this->new_login_slug())?>"><code>/</code>
+			</div>
+			<p style="text-align: left" class="description"><?php _e('Your site login url is', 'mihanpanel')?>
+				<a target="_blank" dir="ltr" href="<?php echo esc_url($login_url)?>"><?php echo esc_url($login_url)?></a>
+			</p>
+			<?php
 		}
 		public function admin_notices() {
 			global $pagenow;
 			if ( ! is_network_admin() && $pagenow === 'admin.php?page=mihanpanel' && isset( $_GET['settings-updated'] ) ) {
-				echo '<div class="updated"><p>' . sprintf( __( 'Your login page is now here: %s. Bookmark this page!', 'mihanpanel' ), '<strong><a href="' . $this->new_login_url() . '">' . $this->new_login_url() . '</a></strong>' ) . '</p></div>';
+				echo '<div class="updated"><p>' . sprintf( __( 'Your login page is now here: %s. Bookmark this page!', 'mihanpanel' ), '<strong><a href="' . esc_url($this->new_login_url()) . '">' . esc_url($this->new_login_url()) . '</a></strong>' ) . '</p></div>';
 			}
 		}
 		public function plugin_action_links( $links ) {
