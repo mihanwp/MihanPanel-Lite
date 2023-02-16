@@ -204,7 +204,7 @@ if ( defined( 'ABSPATH' ) && ! class_exists( 'Rename_WP_Login' ) ) {
 			) {
 				wp_die( __( 'This feature is not enabled.', 'mihanpanel' ) );
 			}
-			$request = parse_url( $_SERVER['REQUEST_URI'] );
+			$request = parse_url( sanitize_url($_SERVER['REQUEST_URI']) );
 			if ( (
 					strpos( $_SERVER['REQUEST_URI'], 'wp-login.php' ) !== false ||
 					untrailingslashit( $request['path'] ) === site_url( 'wp-login', 'relative' )
@@ -228,7 +228,7 @@ if ( defined( 'ABSPATH' ) && ! class_exists( 'Rename_WP_Login' ) ) {
 			// if ( is_admin() && ! is_user_logged_in() && ! defined( 'DOING_AJAX' ) ) {
 			//     wp_redirect(wp_login_url());
 			// }
-			$request = parse_url( $_SERVER['REQUEST_URI'] );
+			$request = parse_url( sanitize_url($_SERVER['REQUEST_URI']) );
 			if (
 				$pagenow === 'wp-login.php' &&
 				$request['path'] !== $this->user_trailingslashit( $request['path'] ) &&
