@@ -1179,6 +1179,7 @@ html body .mihanpanelpanel .alert {
     display: block;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2) !important;
     box-sizing: border-box;
+    overflow: hidden;
 }
 .alert-primary,
 .alert-success{

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MihanPanel\n"
-"POT-Creation-Date: 2023-02-15 17:46+0330\n"
-"PO-Revision-Date: 2023-02-15 17:47+0330\n"
+"POT-Creation-Date: 2023-03-09 13:36+0330\n"
+"PO-Revision-Date: 2023-03-09 13:36+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -30,7 +30,7 @@ msgstr "آدرس شماره دو"
 msgid "MihanPanel"
 msgstr "میهن پنل"
 
-#: app/admin_menu.php:30 views/admin/panel-section/general.php:40
+#: app/admin_menu.php:30 views/admin/panel-section/general.php:49
 msgid "Login & Register"
 msgstr "ورود و عضویت"
 
@@ -96,34 +96,59 @@ msgstr "این قابلیت فقط در %s در دسترس است"
 msgid "MihanPanel Pro"
 msgstr "میهن پنل پرو"
 
-#: app/ajax.php:28 app/ajax.php:67 app/ajax.php:130 app/ajax.php:157
+#: app/ajax.php:30 app/ajax.php:69 app/ajax.php:132 app/ajax.php:159
 msgid "Has error!"
 msgstr "خطا!"
 
-#: app/ajax.php:32
+#: app/ajax.php:34
 msgid "No any items found"
 msgstr "هیچ آیتمی پیدا نشد."
 
-#: app/ajax.php:72 app/ajax.php:141 app/ajax.php:162
+#: app/ajax.php:74 app/ajax.php:143 app/ajax.php:164
 #: app/form/admin_user_fields.php:28 app/form/profile.php:79
 msgid "The operation failed due to security issues."
 msgstr "عملیات به دلیل مشکلات امنیتی متوقف شد."
 
-#: app/ajax.php:121 app/ajax.php:202 app/form/profile.php:108
+#: app/ajax.php:123 app/ajax.php:204 app/form/profile.php:108
 msgid "Successfully updated!"
 msgstr "با موفقیت به روز شد!"
 
-#: app/ajax.php:121 app/ajax.php:202
+#: app/ajax.php:123 app/ajax.php:204
 msgid "Nothing updated."
 msgstr "چیزی آپدیت نشد."
 
-#: app/ajax.php:150
+#: app/ajax.php:152
 msgid "Successfully deleted!"
 msgstr "با موفقیت حذف شد!"
 
-#: app/ajax.php:150
+#: app/ajax.php:152
 msgid "Could not be deleted."
 msgstr "حذف نشد."
+
+#: app/ajax.php:254
+msgid "The account activation link has been sent to the user email."
+msgstr "لینک فعالسازی اکانت برای ایمیل کاربر ارسال شده است."
+
+#: app/ajax.php:258
+msgid "Invalid Username or Email."
+msgstr "نام کاربری یا ایمیل نامعتبر است"
+
+#: app/assets.php:130 app/assets.php:133
+msgid "Send account activation email"
+msgstr "ارسال ایمیل فعالسازی حساب"
+
+#: app/assets.php:131 app/sundry.php:10 app/widget/profile.php:65
+#: views/admin/panel-section/general.php:10
+msgid "Login"
+msgstr "ورود"
+
+#: app/assets.php:132
+msgid "Username or Email"
+msgstr "نام کاربری یا ایمیل"
+
+#: app/assets.php:134 views/admin/panel-section/general.php:43
+msgid "Resend account activation email"
+msgstr "ارسال دوباره‌ی ایمیل فعالسازی حساب"
 
 #: app/config.php:87
 msgid "Woocommerce Download Products"
@@ -530,11 +555,6 @@ msgstr "باز کردن منو"
 msgid "Please login to your account"
 msgstr "لطفا وارد حساب کاربری خود شوید"
 
-#: app/sundry.php:10 app/widget/profile.php:65
-#: views/admin/panel-section/general.php:10
-msgid "Login"
-msgstr "ورود"
-
 #: app/sundry.php:46
 msgid "Password"
 msgstr "رمز عبور"
@@ -832,6 +852,7 @@ msgid "Reset password email subject"
 msgstr "موضوع ایمیل بازیابی رمز عبور"
 
 #: views/admin/panel-section/email.php:38
+#: views/admin/panel-section/general.php:40
 msgid "Activation Link"
 msgstr "لینک فعالسازی"
 
@@ -883,57 +904,57 @@ msgstr "متنی که در بالای فرم ورود نمایش داده میش
 msgid "Activation process"
 msgstr "روند فعالسازی"
 
-#: views/admin/panel-section/general.php:42
+#: views/admin/panel-section/general.php:51
 msgid "Login Form Theme"
 msgstr "تم فرم ورود"
 
-#: views/admin/panel-section/general.php:44
+#: views/admin/panel-section/general.php:53
 msgid "Login and Register form theme"
 msgstr "تم فرم ورود و عضویت"
 
-#: views/admin/panel-section/general.php:47
+#: views/admin/panel-section/general.php:56
 msgid "Form Position"
 msgstr "موقعیت فرم"
 
-#: views/admin/panel-section/general.php:51
+#: views/admin/panel-section/general.php:60
 msgid "Login Button Color"
 msgstr "رنگ دکمه ورود"
 
-#: views/admin/panel-section/general.php:53
+#: views/admin/panel-section/general.php:62
 msgid "Color of Login and Register button"
 msgstr "پس زمینه دکمه ورود و ثبت‌نام"
 
-#: views/admin/panel-section/general.php:66
+#: views/admin/panel-section/general.php:75
 msgid "Login and Register form Logo"
 msgstr "لوگوی فرم ورود و عضویت"
 
-#: views/admin/panel-section/general.php:68
-#: views/admin/panel-section/general.php:82
+#: views/admin/panel-section/general.php:77
+#: views/admin/panel-section/general.php:91
 msgid "Upload Image"
 msgstr "آپلود تصویر"
 
-#: views/admin/panel-section/general.php:69
+#: views/admin/panel-section/general.php:78
 msgid "We suggest to use 120 * 120 px for logo size."
 msgstr ""
 "ما پیشنهاد می کنیم از سایز ۱۲۰ * ۱۲۰ (پیکسل) برای اندازه لوگو  استفاده کنید."
 
-#: views/admin/panel-section/general.php:72
+#: views/admin/panel-section/general.php:81
 msgid "Logo Width (px)"
 msgstr "پهنای لوگو ( به پیکسل )"
 
-#: views/admin/panel-section/general.php:76
+#: views/admin/panel-section/general.php:85
 msgid "Logo Height (px)"
 msgstr "ارتفاع لوگو ( به پیکسل )"
 
-#: views/admin/panel-section/general.php:80
+#: views/admin/panel-section/general.php:89
 msgid "Login and Register form background"
 msgstr "پس زمینه فرم ورود و ثبت نام"
 
-#: views/admin/panel-section/general.php:85
+#: views/admin/panel-section/general.php:94
 msgid "Redirect non Admin user to"
 msgstr "تغییر مسیر کاربر غیر مدیر به"
 
-#: views/admin/panel-section/general.php:87
+#: views/admin/panel-section/general.php:96
 msgid ""
 "Users who don't have admin or author caps, redirect to this address after "
 "login (with http or https)"
@@ -1353,7 +1374,7 @@ msgstr "خطوط هوایی جدید"
 
 #. Plugin Name of the plugin/theme
 msgid "MihanPanel Lite"
-msgstr "میهن‌پنل لایت"
+msgstr "میهن پنل لایت"
 
 #. Plugin URI of the plugin/theme
 msgid "https://ertano.com/mihanpanel/"
@@ -1519,6 +1540,12 @@ msgstr "https://mihanwp.com/"
 #, php-format
 #~ msgid "User ID %s was deleted!"
 #~ msgstr "کاربر با شناسه‌ی %s حذف شد!"
+
+#~ msgid "The mobile number is already used."
+#~ msgstr "این شماره موبایل توسط کاربر دیگری در حال استفاده است."
+
+#~ msgid "Mobile number must start with zero."
+#~ msgstr "شماره موبایل باید با صفر شروع شود."
 
 #~ msgid "Has error in uploading media"
 #~ msgstr "خطایی در آپلود فایل چندرسانه ای وجود دارد"

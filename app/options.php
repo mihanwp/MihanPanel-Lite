@@ -144,10 +144,15 @@ class options
         $value = apply_filters('mihanpanel/panel/off_code_text', sprintf(esc_html__('%1$s off code for your next purchase', 'mihanpanel'), $percentage));
         return $value;
     }
+
+    public static function is_active_resend_account_activation_email(){
+        return get_option('mp_resend_activation_email_link') == true;
+    }
     public static function register_settings()
     {
         register_setting('mihanpanelsettings', 'rwl_page');
         register_setting('mihanpanelsettings', 'mp_account_activation_type');
+        register_setting('mihanpanelsettings', 'mp_resend_activation_email_link');
         register_setting('mihanpanelsettings', 'mp_logo_image');
         register_setting('mihanpanelsettings', 'mp_logo_width');
         register_setting('mihanpanelsettings', 'mp_logo_height');

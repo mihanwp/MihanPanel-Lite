@@ -71,10 +71,7 @@ class assets
         $admin_user_profile = self::get_js_url('admin-user-profile');
         $version = tools::get_plugin_version();
         wp_enqueue_script('mw_admin_user_profile', $admin_user_profile, ['jquery'], $version, true);
-		wp_localize_script('mw_admin_user_profile', 'mwp_aup_data', [
-			'ajax_url' => admin_url('admin-ajax.php'),
-			'nonce' => wp_create_nonce('mw_nonce')
-		]);
+		wp_localize_script('mw_admin_user_profile', 'mwp_aup_data', self::get_localize_data());
     }
 
     public static function load_user_field_menu_assets()
@@ -125,6 +122,19 @@ class assets
         $mp_bg_image = \mihanpanel\app\options::get_login_bg();
         $mp_logo = \mihanpanel\app\options::get_logo();
         self::load_fonts_assets('login');
+        if(\mihanpanel\app\options::is_send_activation_link_active() && \mihanpanel\app\options::is_active_resend_account_activation_email()){
+            wp_enqueue_script('mihanpanel-resend-email-activation', self::get_js_url('register-resend-activation-email'), [], false, true);
+            wp_localize_script('mihanpanel-resend-email-activation', 'mwp_rea', [
+                'au' => admin_url('admin-ajax.php'),
+                'translate' => [
+                    'title' => get_bloginfo('name') . ' - ' . __('Send account activation email', 'mihanpanel'),
+                    'login' => __('Login', 'mihanpanel'),
+                    'username_label' => __('Username or Email', 'mihanpanel'),
+                    'send_activation_link' => __('Send account activation email', 'mihanpanel'),
+                    'resend_activation_link' => __('Resend account activation email', 'mihanpanel')
+                ]
+            ]);
+        }
         ?>
         <style type="text/css">
             body.login {
@@ -246,5 +256,12 @@ class assets
     public static function loadAdminNotificationMenusAssets()
     {
         do_action('mwpl_load_admin_notifications_menu_assets');
+    }
+
+    public static function get_localize_data(){
+        return [
+            'ajax_url' => admin_url('admin-ajax.php'),
+            'nonce' => wp_create_nonce('mw_nonce')
+        ];
     }
 }

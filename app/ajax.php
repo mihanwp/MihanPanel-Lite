@@ -12,6 +12,8 @@ class ajax
         add_action('wp_ajax_mw_delete_field_row', [__CLASS__, 'delete_field_row']);
         add_action('wp_ajax_update_user_field_fields_data', [__CLASS__, 'update_user_field_fields_data']);
 		add_action('wp_ajax_mw_update_user_account_status', [__CLASS__, 'update_user_account_status_callback']);
+		add_action('wp_ajax_mwp_resend_user_account_activation_email', [__CLASS__, 'resend_user_account_activation_email_callback']);
+		add_action('wp_ajax_nopriv_mwp_resend_user_account_activation_email', [__CLASS__, 'resend_user_account_activation_email_callback']);
 
         // live edit
         add_action('wp_ajax_mwpl_live_edit_tabs_fields_get_items', [__CLASS__, 'handle_live_edit_tabs_fields_get_items']);
@@ -240,4 +242,21 @@ class ajax
 			wp_send_json_error();
 		}
 	}
+
+    public static function resend_user_account_activation_email_callback()
+    {
+        $username = sanitize_text_field($_POST['username']);
+        $user = username_exists($username) ? get_user_by('login', $username) : (email_exists($username) ? get_user_by('email', $username) : 0);
+
+        if($user){
+            users::set_activation_process($user->ID);
+            wp_send_json_success([
+                'msg' => __('The account activation link has been sent to the user email.', 'mihanpanel')
+            ]);
+        } else {
+            wp_send_json_error([
+                'msg' => __('Invalid Username or Email.', 'mihanpanel')
+            ]);
+        }
+    }
 }

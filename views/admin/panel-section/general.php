@@ -31,9 +31,18 @@
                 foreach ($activation_types as $type_key => $type_name): ?>
                 <p>
                     <label for="mp_activation_type_<?php echo esc_attr($type_key); ?>"><?php echo esc_html($type_name); ?></label>
-                    <input <?php checked($current_activation_type, $type_key); ?> type="radio" name="mp_account_activation_type" value="<?php echo esc_attr($type_key); ?>" id="mp_activation_type_<?php echo esc_attr($type_key)?>">
+                    <input <?php checked($current_activation_type, $type_key); ?> type="radio" name="mp_account_activation_type" value="<?php echo esc_attr($type_key); ?>" id="mp_activation_type_<?php echo esc_attr($type_key)?>" class="radio-affected-toggle-elements" data-option-targets=".mp-account-activation-type-sub-options" data-elements=".mp-account-activation-type-sub-<?php echo esc_attr($type_key) ?>">
                 </p>
                 <?php endforeach; ?>
+            </div>
+        </div>
+        <div class="mp_option_section mp-account-activation-type-sub-options mp-account-activation-type-sub-link" style="display:<?php echo \mihanpanel\app\options::is_send_activation_link_active() ? 'block' : 'none' ?>">
+            <h2><?php _e("Activation Link", "mihanpanel"); ?></h2>
+            <div class="mp_option_single">
+                <p>
+                    <label for="mp_resend_activation_email_link"><?php esc_html_e("Resend account activation email", "mihanpanel"); ?></label>
+                    <input <?php echo \mihanpanel\app\options::is_active_resend_account_activation_email() ? 'checked' : ''; ?> type="checkbox" name="mp_resend_activation_email_link" value="1" id="mp_resend_activation_email_link">
+                </p>
             </div>
         </div>
         <div class="mp_options_section">
