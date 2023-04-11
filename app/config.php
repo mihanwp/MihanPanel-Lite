@@ -179,8 +179,7 @@ class config
     {
         if (!is_user_logged_in())
         {
-            $panel_slug = options::get_panel_slug();
-            if (is_page($panel_slug))
+            if (is_page(options::get_panel_slug()))
             {
                 wp_redirect(wp_login_url());
             }
@@ -272,5 +271,48 @@ class config
         $url = apply_filters('mwpl_before_redirect_to_option_panel_url', $url);
         wp_redirect($url);
         exit;
+    }
+
+    static function WpmlRegisterSingleStringText()
+    {
+        // get all user fields
+        $userFields = user_fields::get_fields();
+        // registerin strings
+        foreach($userFields as $item)
+        {
+            $labelOptionSlug = 'user_fields_' . $item->slug;
+            do_action('wpml_register_single_string', 'mihanpanel', $labelOptionSlug, $item->label);
+        }
+
+        // get all tabs field
+        $menus = \mihanpanel\app\panel::get_tabs();
+        foreach($menus as $menu)
+        {
+            $menuName = $menu->name;
+            $labelOptionSlug = 'menu_tab_' . $menuName;
+            do_action('wpml_register_single_string', 'mihanpanel', $labelOptionSlug, $menuName);
+        }
+    }
+    static function WpmlTranslateUserFieldsLabel($labelValue, $fieldSlug)
+    {
+        $optionSlug = 'user_fields_' . $fieldSlug;
+
+        $langCode = apply_filters('wpml_current_language', null);
+        $labelValue = apply_filters('wpml_translate_single_string', $labelValue, 'mihanpanel', $optionSlug, $langCode);
+        return $labelValue;
+    }
+    static function WpmlTranslatePanelMenuTabLabel($labelValue)
+    {
+        $optionSlug = 'menu_tab_' . $labelValue;
+
+        $langCode = apply_filters('wpml_current_language', null);
+        $labelValue = apply_filters('wpml_translate_single_string', $labelValue, 'mihanpanel', $optionSlug, $langCode);
+        return $labelValue;
+    }
+    static function WpmlHandlePanelPageUrl($url)
+    {
+        $langCode = apply_filters('wpml_current_language', null);
+        $url = apply_filters('wpml_permalink', $url, $langCode, true);
+        return $url;
     }
 }

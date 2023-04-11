@@ -83,7 +83,7 @@
             ?>
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label><?php echo esc_html($field->label); ?><?php if ($field->required == 'yes') {
+                        <label><?php echo apply_filters('mihanpanel/edit_profile/fields_label_text', esc_html($field->label), $field->slug); ?><?php if ($field->required == 'yes') {
                                 printf('(%1$s)', esc_html__("Required", "mihanpanel"));
                             } ?></label>
                         <div class="form-group label-floating">

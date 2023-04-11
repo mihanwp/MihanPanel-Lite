@@ -106,7 +106,7 @@ class assets
     {
         $version = \mihanpanel\app\tools::get_plugin_version();
         $mw_drag_and_drop = self::get_js_url('mw_drag_and_drop');
-        wp_enqueue_script('mw_drag_and_drop', $mw_drag_and_drop, ['jquery', 'jquery-ui-core'], $version, true);
+        wp_enqueue_script('mw_drag_and_drop', $mw_drag_and_drop, ['jquery', 'jquery-ui-sortable'], $version, true);
 
         wp_localize_script('mw_drag_and_drop', 'mwp_data', ['au' => admin_url('admin-ajax.php')]);
     }

@@ -130,7 +130,7 @@ class panel
             <li <?php echo self::render_attrs($li_attrs)?>>
                 <a <?php echo self::render_attrs($link_attrs)?>>
                     <?php \mihanpanel\app\presenter\tabs_menu::render_tab_item_icon($menu->icon); ?>
-                    <p><?php echo esc_html($menu->name); ?></p>
+                    <p><?php echo apply_filters('mihanpanel/panel/tabs_menu_item_label_text', esc_html($menu->name)); ?></p>
                 </a>
             </li>
         <?php

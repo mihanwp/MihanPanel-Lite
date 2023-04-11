@@ -67,12 +67,10 @@ class widget
         }
         $max_item = $rss->get_item_quantity(3);
         $items = $rss->get_items(0, $max_item);
-        $mihanwp = sprintf('<a target="_blank" href="%s">%s</a>', $baseUrl, __('ertano.com', 'mihanpanel'));
-        $header = sprintf(__('Latest news in %s', 'mihanpanel'), $mihanwp);
         $more_articles_url = $is_persian ? 'https://mihanwp.com/tutorials/' : 'https://ertano.com/';
         ?>
         <div class="mwp_mihanwp_feed_dashboard">
-            <strong><?php echo esc_html($header); ?></strong>
+            <strong><?php printf(__('Latest news in %s', 'mihanpanel'), sprintf('<a target="_blank" href="%s">%s</a>', esc_url($baseUrl), __('ertano.com', 'mihanpanel'))); ?></strong>
             <hr style="border:0; height: 1px; background-color: #dfdfdf">
             <ul>
                 <?php if($max_item == 0): ?>

@@ -122,6 +122,15 @@ class hooks
 				remove_action('login_init', 'dokan_redirect_to_register');
 			});
 		}
+
+        // integrate some options string with wpml
+        if(\mihanpanel\app\tools::is_wpml_active())
+        {
+            add_action('admin_init', ['\mihanpanel\app\config', 'WpmlRegisterSingleStringText']);
+            add_filter('mihanpanel/edit_profile/fields_label_text', ['\mihanpanel\app\config', 'WpmlTranslateUserFieldsLabel'], 10, 2);
+            add_filter('mihanpanel/panel/tabs_menu_item_label_text', ['\mihanpanel\app\config', 'WpmlTranslatePanelMenuTabLabel']);
+            add_filter('mihanpanel/panel_url', ['\mihanpanel\app\config', 'WpmlHandlePanelPageUrl']);
+        }
     }
     public static function activation_hook()
     {

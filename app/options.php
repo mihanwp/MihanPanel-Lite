@@ -35,7 +35,7 @@ class options
     {
         $slug = self::get_panel_slug();
         $panel_page_id = get_page_by_path($slug);
-        return get_page_link($panel_page_id);
+        return apply_filters('mihanpanel/panel_url', get_page_link($panel_page_id));
     }
     public static function get_login_slug()
     {

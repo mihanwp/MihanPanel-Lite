@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MihanPanel\n"
-"POT-Creation-Date: 2023-03-09 13:36+0330\n"
-"PO-Revision-Date: 2023-03-09 13:36+0330\n"
+"POT-Creation-Date: 2023-04-11 16:04+0330\n"
+"PO-Revision-Date: 2023-04-11 16:05+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -34,7 +34,7 @@ msgstr "میهن پنل"
 msgid "Login & Register"
 msgstr "ورود و عضویت"
 
-#: app/admin_menu.php:31 app/admin_menu.php:46 app/hooks.php:143
+#: app/admin_menu.php:31 app/admin_menu.php:46 app/hooks.php:152
 msgid "User Panel"
 msgstr "پنل کاربری"
 
@@ -168,31 +168,31 @@ msgstr ""
 "برای استفاده از این بخش ابتدا باید افزونه ی \"easy digital downloads\" را نصب "
 "کنید!"
 
-#: app/config.php:217
+#: app/config.php:216
 msgid "Registration complete. Your account has been activated automatically."
 msgstr "نام نویسی انجام شد. اکانت شما به صورت خودکار فعال شده است."
 
-#: app/config.php:220 app/email.php:90
+#: app/config.php:219 app/email.php:90
 msgid "Registration complete. Please wait for admin approval."
 msgstr "نام نویسی انجام شد. لطفا منتظر تایید مدیریت سایت باشید."
 
-#: app/config.php:224
+#: app/config.php:223
 msgid "Login Page"
 msgstr "برگه ورود"
 
-#: app/config.php:240
+#: app/config.php:239
 msgid "Your account is disable! Please wait for admin approval."
 msgstr "اکانت شما غیرفعال است. لطفا منتظر تایید مدیریت سایت باشید."
 
-#: app/config.php:242 views/user/inactive_account.php:8
+#: app/config.php:241 views/user/inactive_account.php:8
 msgid "Your account is disable!"
 msgstr "اکانت شما غیرفعال است!"
 
-#: app/config.php:250
+#: app/config.php:249
 msgid "Your Account successfully activated!"
 msgstr "اکانت شما با موفقیت فعال شد!"
 
-#: app/config.php:253
+#: app/config.php:252
 msgid "Request is invalid!"
 msgstr "درخواست شما نامعتبر است!"
 
@@ -235,7 +235,7 @@ msgstr "فعال"
 msgid "Inactive"
 msgstr "غیرفعال"
 
-#: app/emwidg/emwidg_mihanpanel.php:26 app/hooks.php:164 app/live_edit.php:79
+#: app/emwidg/emwidg_mihanpanel.php:26 app/hooks.php:173 app/live_edit.php:79
 msgid "Mihan Panel"
 msgstr "میهن پنل"
 
@@ -632,24 +632,24 @@ msgstr "همه چیز روی سایت شما مرتب است."
 msgid "You must check:"
 msgstr "باید بررسی کنید:"
 
-#: app/widget.php:70
-msgid "ertano.com"
-msgstr "‫mihanwp.com"
-
-#: app/widget.php:71
+#: app/widget.php:73
 #, php-format
 msgid "Latest news in %s"
 msgstr "آخرین اخبار در %s"
 
-#: app/widget.php:79
+#: app/widget.php:73
+msgid "ertano.com"
+msgstr "‫mihanwp.com"
+
+#: app/widget.php:77
 msgid "No item"
 msgstr "چیزی پیدا نشد"
 
-#: app/widget.php:82
+#: app/widget.php:80
 msgid "ago"
 msgstr "پیش"
 
-#: app/widget.php:91
+#: app/widget.php:89
 msgid "More Articles"
 msgstr "مقاله‌های بیشتر"
 
@@ -1378,7 +1378,7 @@ msgstr "میهن پنل لایت"
 
 #. Plugin URI of the plugin/theme
 msgid "https://ertano.com/mihanpanel/"
-msgstr "https://mihanwp.com/mihanpanel/"
+msgstr "‎‫‫https://mihanwp.com/mihanpanel/"
 
 #. Description of the plugin/theme
 msgid "The best way to build user interface in WordPress"
