@@ -1237,6 +1237,7 @@ html body .mihanpanelpanel .alert {
     display: inline-block;
     width: 100%;
     overflow: auto;
+    max-width:830px;
 }
 .mihanpanelpanel table th
 {

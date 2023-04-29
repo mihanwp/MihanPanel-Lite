@@ -13,9 +13,10 @@
     {
       $permission = \mihanpanel\app\users::permision_by_role($show_by_role);
     }
+    $permission = apply_filters('mihanpanel/panel/permission_to_show_menu_content', $menu);
     if($permission):
   ?>
-  <div class="mihanpanel-section-title"><?php echo esc_html($menu->name);?></div>
+  <div class="mihanpanel-section-title"><?php echo esc_html(apply_filters('mihanpanel/panel/tabs_menu_item_label_text', $menu->name));?></div>
   <div class="mp-content mihanpcontent">
     <div class="mihanpanel-card-content">
       <?php

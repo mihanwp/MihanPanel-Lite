@@ -32,14 +32,14 @@ class profile
     static function handleChangePasswordForm()
     {
         self::$_uid = get_current_user_id();
-        self::check_nonce(sanitize_text_field($_POST['posts']['mwpl_nonce']), 'mwpl_change_password');
+        self::check_nonce(sanitize_text_field($_POST['mwpl_nonce']), 'mwpl_change_password');
         $mwuser_data = [];
         $hasError = true;
-        if(isset($_POST['posts']['general']['pass1']))
+        if(isset($_POST['general']['pass1']))
         {
-            if ($_POST['posts']['general']['pass1'] == $_POST['posts']['general']['pass2']) {
+            if ($_POST['general']['pass1'] == $_POST['general']['pass2']) {
                 $mwuser_data['ID'] = self::$_uid;
-                $mwuser_data['user_pass'] = sanitize_text_field($_POST['posts']['general']['pass1']);
+                $mwuser_data['user_pass'] = sanitize_text_field($_POST['general']['pass1']);
             } else {
                 $type = 'error';
                 $msg = __("Passwords don't match!", "mihanpanel");

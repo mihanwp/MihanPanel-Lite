@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MihanPanel\n"
-"POT-Creation-Date: 2023-04-11 16:04+0330\n"
-"PO-Revision-Date: 2023-04-11 16:05+0330\n"
+"POT-Creation-Date: 2023-04-29 09:53+0330\n"
+"PO-Revision-Date: 2023-04-29 09:53+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -707,11 +707,11 @@ msgstr "سلام  %1$s!"
 msgid "Off code: %1$s"
 msgstr "کد تخفیف: %1$s"
 
-#: parts/db-page.php:27
+#: parts/db-page.php:28
 msgid "No Access!"
 msgstr "دسترسی ندارید!"
 
-#: parts/db-page.php:30
+#: parts/db-page.php:31
 msgid "Sorry, you don't have access to this section"
 msgstr "متأسفیم، اما شما به این بخش دسترسی ندارید"
 
@@ -1374,11 +1374,11 @@ msgstr "خطوط هوایی جدید"
 
 #. Plugin Name of the plugin/theme
 msgid "MihanPanel Lite"
-msgstr "میهن پنل لایت"
+msgstr "میهن‌پنل لایت"
 
 #. Plugin URI of the plugin/theme
 msgid "https://ertano.com/mihanpanel/"
-msgstr "‎‫‫https://mihanwp.com/mihanpanel/"
+msgstr "https://mihanwp.com/mihanpanel/"
 
 #. Description of the plugin/theme
 msgid "The best way to build user interface in WordPress"

@@ -100,6 +100,7 @@ class panel
     {
         $tab_id = self::get_current_tab();
         $menus = self::get_tabs();
+        $menus = apply_filters('mihanpanel/panel/menu_items', $menus);
         echo '<ul class="nav mp-nav-tabs menu-tabs-items">';
         foreach ($menus as $menu):
             $item_url = $menu->link == null ? esc_url(add_query_arg(['tab' => $menu->id], \mihanpanel\app\options::get_panel_url())) : esc_url($menu->link);
@@ -130,7 +131,7 @@ class panel
             <li <?php echo self::render_attrs($li_attrs)?>>
                 <a <?php echo self::render_attrs($link_attrs)?>>
                     <?php \mihanpanel\app\presenter\tabs_menu::render_tab_item_icon($menu->icon); ?>
-                    <p><?php echo apply_filters('mihanpanel/panel/tabs_menu_item_label_text', esc_html($menu->name)); ?></p>
+                    <p><?php echo esc_html(apply_filters('mihanpanel/panel/tabs_menu_item_label_text', $menu->name)); ?></p>
                 </a>
             </li>
         <?php
