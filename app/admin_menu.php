@@ -31,7 +31,7 @@ class admin_menu
             'panel' => __('User Panel', 'mihanpanel'),
             'register' => __('Register Form', 'mihanpanel'),
             'notification' => __('Notifications', 'mihanpanel'),
-            'login_with_sms' =>  __("Login with SMS", "mihanpanel"),
+            'professional_login' =>  __("Professional login options", "mihanpanel"),
             'email' => __('Emails', 'mihanpanel'),
             'tools' => esc_html__('Tools', 'mihanpanel'),
         ];

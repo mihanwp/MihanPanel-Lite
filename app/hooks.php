@@ -23,7 +23,7 @@ class hooks
         add_filter('retrieve_password_title', ['\mihanpanel\app\email', 'filter_reset_password_email_title'], 10, 3);
         add_filter('retrieve_password_message', ['\mihanpanel\app\email', 'filter_reset_password_email_message'], 10, 4);
 
-        add_action('wp_login', ['\mihanpanel\app\config', 'redirect_non_admin_after_login'], 10, 2);
+        add_filter('login_redirect', ['\mihanpanel\app\config', 'redirect_non_admin_after_login'], 10, 3);
 
         add_action('wp_login', ['\mihanpanel\app\config', 'logout_non_active_account'], 1, 2);
 

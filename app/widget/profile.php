@@ -33,23 +33,8 @@ class profile extends \WP_Widget
             <div class="mp-nav-tabs-mpwrapper">
                 <ul class="mp-nav-tabs">
                     <?php if (is_user_logged_in()) { ?>
-                        <li>
                         <?php
-                        $panel_link = \mihanpanel\app\options::get_panel_url();
-                        $edit_profile_link = add_query_arg(['tab' => 'edit-profile'], $panel_link);
-                        ?>
-                            <a class="mwtaba" href="<?php echo esc_url($panel_link); ?>">
-                                <i class="fas fa-tachometer-alt"></i>
-                                <p><?php _e("User Dashboard", "mihanpanel"); ?></p>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="mwtaba" href="<?php echo esc_url($edit_profile_link); ?>">
-                                <i class="far fa-user"></i>
-                                <p><?php _e("Edit Profile", "mihanpanel"); ?></p>
-                            </a>
-                        </li>
-                        <?php
+                        \mihanpanel\app\panel::render_default_tabs(false);
                         \mihanpanel\app\panel::render_tabs();
                         ?>
                         <li>

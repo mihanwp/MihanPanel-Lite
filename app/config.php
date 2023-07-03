@@ -59,7 +59,7 @@ class config
         add_option('mp_logo_width', '120');
         add_option('mp_logo_height', '120');
         add_option('mp_bg_image', MW_MIHANPANEL_URL . 'img/bg.jpg' );
-        add_option('mp_logo_image', MW_MIHANPANEL_URL . 'img/logo.png' );
+        add_option('mp_logo_image', MW_MIHANPANEL_URL . 'img/login-logo.svg' );
         add_option('mp_disable_wordpress_bar', 1 );
         add_option('mp_panelslug','panel');
         //Create menu Table in DB
@@ -157,22 +157,21 @@ class config
 
         add_shortcode( 'mihanpanel_woo_downloads', ['\mihanpanel\app\shortcode', 'woocommerce_downloads']);
     }
-    public static function redirect_non_admin_after_login($user_login, $user)
+    public static function redirect_non_admin_after_login($redirectTo, $requested_redirect_to, $user)
     {
-        if(users::is_admin_user($user->ID))
+        if(users::is_admin_user($user->ID) || ($redirectTo && $redirectTo !== admin_url()))
         {
-            return false;
+            return $redirectTo;
         }
         if ( class_exists( 'Easy_Digital_Downloads' ) ){
             $edd_checkout_uri = edd_get_checkout_uri();
             if (wp_get_referer() != $edd_checkout_uri){
-                wp_redirect(options::get_panel_url());				
-                exit();
+                $redirectTo = options::get_panel_url();
             }
         } else {
-            wp_redirect(options::get_panel_url());
-            exit();
+            $redirectTo = options::get_panel_url();
         }
+        return $redirectTo;
     }
 
     public static function redirect_not_logged_in_user_from_panel()

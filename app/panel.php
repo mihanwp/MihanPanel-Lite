@@ -42,6 +42,8 @@ class panel
             \mihanpanel\app\panel::show_order(intval($_GET['order_id']));
         }else{
             $tab_file = views::get_from_main_app('parts.' . $tab_id);
+            $tab_file = apply_filters('mihanpanel/panel/tab_file', $tab_file, $tab_id);
+
             if(file_exists($tab_file))
             {
                 include $tab_file;
@@ -95,6 +97,43 @@ class panel
             $res[] = $attr . '="' . $value . '"';
         }
         return implode(' ', $res);
+    }
+    static function render_default_tabs($renderWrapper=true)
+    {
+        $tab_id = self::get_current_tab();
+        if(!$tab_id)
+        {
+            $tab_id = 'dashboard';
+        }
+        $menus = [
+            'dashboard' => [
+                'name' => esc_html__('User Dashboard', 'mihanpanel'),
+                'url' => \mihanpanel\app\options::get_panel_url(),
+                'icon' => 'fas fa-tachometer-alt',
+            ],
+            'edit-profile' => [
+                'name' => esc_html__("Edit Profile", "mihanpanel"),
+                'url' => esc_url(add_query_arg(['tab' => 'edit-profile'], remove_query_arg(['order_id', 'order_details']))),
+                'icon' => 'far fa-user',
+            ],
+        ];
+        $menus = apply_filters('mihanpanel/panel/menu_default_tabs', $menus);
+        ?>
+        <?php if($renderWrapper): ?>
+            <ul class="nav mp-nav-tabs default-menu">
+        <?php endif; ?>
+            <?php foreach($menus as $itemKey => $itemData): ?>
+                <li <?php echo $tab_id == $itemKey ? 'class="active"' : false;?> >
+                    <a class="mwtaba" href="<?php echo esc_url($itemData['url']); ?>">
+                        <i class="<?php echo $itemData['icon']; ?>"></i>
+                        <p><?php echo esc_html($itemData['name']); ?></p>
+                    </a>
+                </li>
+            <?php endforeach; ?>
+        <?php if($renderWrapper): ?>
+            </ul>
+        <?php endif; ?>
+        <?php
     }
     static function render_tabs()
     {

@@ -440,6 +440,11 @@ class handle_view
         </div>
         <?php
     }
+    static function option_panel_field_is_redirect_wc_checkout_to_login()
+    {
+        $render_method = apply_filters('mwpl_option_panel/render_method/general_is_redirect_wc_checkout_page_to_login_page', []);
+        self::handle_option_panel_render_method($render_method);
+    }
     static function option_panel_field_login_fields_text_color()
     {
         $render_method = apply_filters('mwpl_option_panel/render_method/login_fields_text_color', []);
@@ -684,6 +689,11 @@ class handle_view
     static function option_panel_smart_login()
     {
         $render_method = apply_filters('mwpl_option_panel/render_method/smart_login', []);
+        self::handle_option_panel_render_method($render_method);
+    }
+    static function option_panel_smart_login_2fa()
+    {
+        $render_method = apply_filters('mwpl_option_panel/render_method/smart_login_2fa', []);
         self::handle_option_panel_render_method($render_method);
     }
     static function option_panel_smart_login_generate_random_username()

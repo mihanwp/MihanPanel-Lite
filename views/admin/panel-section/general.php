@@ -23,6 +23,16 @@
             <?php \mihanpanel\app\handle_view::option_panel_field_login_top_message(); ?>
         </div>
         <div class="mp_option_section">
+            <h2><?php _e("Woocommerce", "mihanpanel"); ?></h2>
+            <div class="mp_option_single">
+                <p>
+                    <label for="mp_wc_redirect_from_checkout_is_not_logged_in"><?php esc_html_e('Redirect checkout page to login page', 'mihanpanel')?></label>
+                    <?php \mihanpanel\app\handle_view::option_panel_field_is_redirect_wc_checkout_to_login(); ?>
+                </p>
+                <p class="description"><?php _e('If user is not logged-in', 'mihanpanel')?></p>
+            </div>
+        </div>
+        <div class="mp_option_section">
             <h2><?php _e("Activation process", "mihanpanel"); ?></h2>
             <div class="mp_option_single">
                 <?php

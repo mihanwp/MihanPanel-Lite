@@ -1,7 +1,7 @@
 <div>
     <form class="mp_options_panel" method="post" action="options.php">
         <?php
-        settings_fields( 'mihanpanelsettings-dynamic_password' );
+        settings_fields( 'mihanpanelsettings-professional_login_options' );
         ?>
         <h2><?php esc_html_e('Smart Login', 'mihanpanel')?></h2>
         <p class="description"><?php esc_html_e('Automatic login by phone number, email or username', 'mihanpanel')?></p>
@@ -9,6 +9,11 @@
             <p>
                 <label for="mp_smart_login"><?php esc_html_e('Activate smart login', 'mihanpanel')?></label>
                 <?php \mihanpanel\app\handle_view::option_panel_smart_login(); ?>
+            </p>
+            <p>
+                <label for="mp_smart_login_2fa"><?php esc_html_e('Two factor authentication', 'mihanpanel')?></label>
+                <?php \mihanpanel\app\handle_view::option_panel_smart_login_2fa(); ?>
+                <span class="description"><?php esc_html_e('Use authenticator apps', 'mihanpanel')?></span>
             </p>
             <p>
                 <label for="mp_smart_login_generate_random_username"><?php esc_html_e('Generate random username', 'mihanpanel')?></label>

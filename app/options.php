@@ -53,7 +53,7 @@ class options
     public static function get_logo()
     {
         $option = get_option('mp_logo_image');
-        return $option ? $option : MW_MIHANPANEL_URL . 'img/logo.png';
+        return $option ? $option : MW_MIHANPANEL_URL . 'img/login-logo.svg';
     }
     public static function get_login_bg()
     {
