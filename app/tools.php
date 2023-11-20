@@ -109,7 +109,7 @@ class tools
     }
     static function getBaseRemoteUrl()
     {
-        return self::is_persian_locale() ? 'https://mihanwp.com/' : 'https://ertano.com/';
+        return 'https://mihanwp.com/';
     }
     static function getRemoteServerByLicenseKey($licenseKey)
     {
@@ -126,7 +126,7 @@ class tools
     static function get_pro_version_link()
     {
         $baseRemoteUrl = self::getBaseRemoteUrl();
-        return $baseRemoteUrl . 'mihanpanel';;
+        return $baseRemoteUrl . 'mihanpanel';
     }
     static function check_has_minimum_php_version()
     {
@@ -179,5 +179,31 @@ class tools
             $array[$key] = is_array($value) ? self::sanitize_array_values($value) : sanitize_text_field($value);
         }
         return $array;
+    }
+
+    public static function send_json_response($response){
+        die(json_encode($response));
+    }
+
+    static function is_phone_number($phone)
+    {
+        if(!is_numeric($phone))
+        {
+            return false;
+        }
+        $pattern = '/^(0|98|\+98)?(90|91|92|93|99)([0-9]{1})([0-9]{3})([0-9]{4})$/';
+        $res = preg_match($pattern, $phone, $matches);
+        return $res ? self::clear_phone_number($phone) : false;
+    }
+
+    static function clear_phone_number($phone)
+    {
+        if(!is_numeric($phone))
+        {
+            return false;
+        }
+        $phone = intval($phone);
+        $phone = intval(preg_replace("/^98|\+98/", '', $phone));
+        return $phone;
     }
 }

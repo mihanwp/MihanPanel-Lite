@@ -20,7 +20,7 @@
             <div class="mw_copyright">
                 <?php
                 $baseUrl = \mihanpanel\app\tools::getBaseRemoteUrl();
-                $mwp_link = sprintf('<a href="%s">%s</a>', esc_url($baseUrl), esc_html__("Ertano", "mihanpanel"));
+                $mwp_link = sprintf('<a href="%s">%s</a>', esc_url($baseUrl), esc_html__("MihanWp", "mihanpanel"));
                 $airline_text = __("New Airlines", "mihanpanel");
                 $text = is_rtl() ? sprintf("<span>%s <span>%s</span></span>", $airline_text, $mwp_link) : sprintf("<span>%s <span>%s</span></span>", $mwp_link, $airline_text);
                 echo $text;
@@ -33,7 +33,5 @@
                 <?php \mihanpanel\app\handle_view::handle_option_panel_view($active_tab); ?>
             </div>
         </div>
-
-
     </div>
 </div>

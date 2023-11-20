@@ -57,7 +57,6 @@ class widget
         <?php
         // mihanwp feed
         include_once ABSPATH . WPINC . DIRECTORY_SEPARATOR . 'feed.php';
-        $is_persian = tools::is_persian_locale();
         $baseUrl = \mihanpanel\app\tools::getBaseRemoteUrl();
         $feed = $baseUrl . 'feed/';
         $rss = fetch_feed($feed);
@@ -67,10 +66,9 @@ class widget
         }
         $max_item = $rss->get_item_quantity(3);
         $items = $rss->get_items(0, $max_item);
-        $more_articles_url = $is_persian ? 'https://mihanwp.com/tutorials/' : 'https://ertano.com/';
         ?>
         <div class="mwp_mihanwp_feed_dashboard">
-            <strong><?php printf(__('Latest news in %s', 'mihanpanel'), sprintf('<a target="_blank" href="%s">%s</a>', esc_url($baseUrl), __('ertano.com', 'mihanpanel'))); ?></strong>
+            <strong><?php printf(__('Latest news in %s', 'mihanpanel'), sprintf('<a target="_blank" href="%s">%s</a>', esc_url($baseUrl), __('MihanWp', 'mihanpanel'))); ?></strong>
             <hr style="border:0; height: 1px; background-color: #dfdfdf">
             <ul>
                 <?php if($max_item == 0): ?>
@@ -81,12 +79,12 @@ class widget
                         ?>
                         <li>
                             <a target="_blank" title="<?php echo esc_attr($item_date)?>" href="<?php echo esc_url($item->get_permalink())?>"><?php echo esc_html($item->get_title())?></a>
-                            <p><?php echo esc_html($item->get_description(false))?></p>
+                            <p><?php echo wp_kses_post($item->get_description(false))?></p>
                         </li>
                     <?php endforeach; ?>
                 <?php endif; ?>
             </ul>
-            <a target="_blank" class="more_articles" href="<?php echo esc_url($more_articles_url)?>"><?php esc_html_e('More Articles', 'mihanpanel')?></a>
+            <a target="_blank" class="more_articles" href="<?php echo esc_url('https://mihanwp.com/tutorials/')?>"><?php esc_html_e('More Articles', 'mihanpanel')?></a>
         </div>
         <?php
     }

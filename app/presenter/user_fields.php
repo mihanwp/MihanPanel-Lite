@@ -103,11 +103,31 @@ class user_fields
             $prevent_edit_field = !\mihanpanel\app\users::is_admin_user() && $current_value && isset($field_meta['data']['prevent_edit_field']);
         }
         $placeholder = apply_filters('mwpl_user_fields/field/placeholder', '', $field_meta, $field);
-        ?>
+        $field_icon = isset($field_meta['data']) && isset($field_meta['data']['field_icon']) && !empty($field_meta['data']['field_icon']) ? $field_meta['data']['field_icon'] : null;
+        if($view == 'register-form'):?>
+            <label for="<?php echo esc_attr($field->slug)?>">
+                <span class="mwpl-icon">
+                    <?php if (!empty($field_icon)): ?>
+                        <?php if (filter_var($field_icon, FILTER_VALIDATE_URL)): ?>
+                            <img src="<?php echo $field_icon ?>" alt="field icon">
+                        <?php else: ?>
+                            <i class="<?php echo $field_icon ?>"></i>
+                        <?php endif; ?>
+                    <?php else: ?>
+                        <img src="<?php echo \mihanpanel\app\assets::get_image_url('more-icon', 'svg') ?>" alt="password-icon">
+                    <?php endif; ?>
+                </span>
+                <span class="mwpl-field">
+                    <input type="text" name="mw_fields[<?php echo esc_attr($field->slug)?>]" id="<?php echo esc_attr($field->slug)?>">
+                    <span class="mwpl-label-value"><?php echo esc_html($field->label) ?></span>
+                </span>
+            </label>
+        <?php else: ?>
         <input <?php echo $placeholder ? 'placeholder="'.esc_attr($placeholder).'"' : '';?> <?php echo isset($prevent_edit_field) && $prevent_edit_field ? 'disabled':''?> class="<?php echo esc_attr($classes); ?>" type="<?php echo esc_attr($field->type); ?>"
             id="mw_fields_<?php echo esc_attr($field->slug);?>" name="mw_fields[<?php echo esc_attr($field->slug); ?>]"
             value="<?php echo esc_attr($current_value);?>"/>
         <?php
+        endif;
     }
     public static function render_textarea_field($view, $field, $current_user=null, $args=[])
     {
@@ -119,9 +139,16 @@ class user_fields
             $prevent_edit_field = $value && isset($field_meta['data']['prevent_edit_field']);
         }
         $placeholder = apply_filters('mwpl_user_fields/field/placeholder', '', $field_meta, $field);
-        ?>
+        if($view == 'register-form'):?>
+            <label for="<?php echo esc_attr($field->slug)?>">
+                <span class="mwpl-field">
+                    <span><?php echo esc_html($field->label) ?></span>
+                    <textarea name="mw_fields[<?php echo esc_attr($field->slug)?>]" id="<?php echo esc_attr($field->slug)?>" cols="30" rows="3"></textarea>
+                </span>
+            </label>
+        <?php else: ?>
         <textarea <?php echo $placeholder ? 'placeholder="'.esc_attr($placeholder).'"' : ''; ?> <?php echo isset($prevent_edit_field) && $prevent_edit_field ? 'disabled="disabled"':'';?> class="<?php echo esc_attr($classes); ?>" name="mw_fields[<?php echo esc_attr($field->slug); ?>]" id="mw_fields_<?php echo esc_attr($field->slug); ?>" cols="30" rows="10"><?php echo esc_textarea($value); ?></textarea>
-        <?php
+        <?php endif;
     }
     static function render_checkbox_field($view, $field, $current_user=null, $args=[])
     {
@@ -133,10 +160,17 @@ class user_fields
         {
             $prevent_edit_field = $current_value && isset($field_meta['data']['prevent_edit_field']);
         }
-        ?>
+        if($view == 'register-form'):?>
+            <label for="<?php echo esc_attr($field->slug)?>">
+                <span class="mwpl-field mwpl-checkbox-field">
+                    <span><?php echo esc_html($field->label) ?></span>
+                    <input type="checkbox" value="1" name="mw_fields[<?php echo esc_attr($field->slug)?>]" id="<?php echo esc_attr($field->slug)?>">
+                </span>
+            </label>
+        <?php else: ?>
         <input <?php echo isset($prevent_edit_field) && $prevent_edit_field ? 'disabled' : '';?> class="<?php echo esc_attr($classes); ?>" type="checkbox"
             id="mw_fields_<?php echo esc_attr($field->slug) ?>" name="mw_fields[<?php echo esc_attr($field->slug); ?>]"
             <?php checked($current_value)?> value="1"/>
-        <?php
+        <?php endif;
     }
 }

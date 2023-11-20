@@ -44,3 +44,9 @@ input#remove_user_avatar
 {
 	text-align: left;
 }
+
+html body .mihanpanelpanel .field-icon {
+    float: left;
+    margin-left: 0;
+    margin-right: 7px;
+}

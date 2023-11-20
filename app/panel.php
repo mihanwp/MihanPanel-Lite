@@ -177,4 +177,26 @@ class panel
         endforeach;
         echo '</ul>';
     }
+    static function filter_default_tabs_render_items($items)
+    {
+        $items['2fa_menu'] = [
+            'name' => esc_html__('Two factor authentication', 'mihanpanel'),
+            'url' => esc_url(add_query_arg(['tab' => '2fa_menu'])),
+            'icon' => 'fas fa-lock',
+        ];
+        return $items;
+    }
+    static function handle_2fa_menu_content($tab_file, $tab_id)
+    {
+        if($tab_id == '2fa_menu')
+        {
+            $tab_file = views::get('user.2fa_menu');
+            $_2fa_menu_css = assets::get_css_url('user/2fa_menu');
+            $_2fa_menu_js = assets::get_js_url('user/2fa_menu');
+
+            wp_enqueue_style('2fa_menu', $_2fa_menu_css);
+            wp_enqueue_script('2fa_menu', $_2fa_menu_js);
+        }
+        return $tab_file;
+    }
 }

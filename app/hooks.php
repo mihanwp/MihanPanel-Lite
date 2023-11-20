@@ -16,6 +16,7 @@ class hooks
         add_action('admin_menu', ['\mihanpanel\app\admin_menu', 'init']);
         add_action('admin_init', ['\mihanpanel\app\options', 'register_settings']);
         add_action('admin_notices', ['\mihanpanel\app\notice', 'show_admin_setting_panel_notices']);
+        add_action('admin_bar_menu', ['\mihanpanel\app\config', 'addMihanPanelMenusToAdminBarMenu'], 100);
 
         add_action('admin_enqueue_scripts', ['mihanpanel\app\assets', 'load_admin_user_profile']);
 
@@ -24,8 +25,6 @@ class hooks
         add_filter('retrieve_password_message', ['\mihanpanel\app\email', 'filter_reset_password_email_message'], 10, 4);
 
         add_filter('login_redirect', ['\mihanpanel\app\config', 'redirect_non_admin_after_login'], 10, 3);
-
-        add_action('wp_login', ['\mihanpanel\app\config', 'logout_non_active_account'], 1, 2);
 
 
         add_action('template_redirect', ['\mihanpanel\app\config', 'redirect_not_logged_in_user_from_panel']);
@@ -38,12 +37,9 @@ class hooks
 
         add_action('user_register', ['\mihanpanel\app\users', 'set_activation_process']);
         add_action('login_init', ['\mihanpanel\app\config', 'user_account_activation_process']);
-        add_filter('login_message', ['\mihanpanel\app\config', 'account_activation_message_handler']);
 
         add_action('mp_new_user_notification', ['\mihanpanel\app\email', 'send_new_user_notification']);
         add_action('mp_change_user_account_activation_status', ['\mihanpanel\app\email', 'send_change_account_status_email'], 10, 2);
-
-        add_filter('wp_login_errors', ['\mihanpanel\app\config', 'handle_after_register_message']);
 
         // add users accout status to users list
         add_filter('manage_users_columns', ['\mihanpanel\app\users', 'add_users_status_column']);
@@ -69,15 +65,9 @@ class hooks
 
         // add css to mihanpanel admin
         add_action('admin_enqueue_scripts', ['\mihanpanel\app\assets', 'load_admin_assets']);
-
-        //change login page logo
-        add_action('login_enqueue_scripts', ['\mihanpanel\app\assets', 'login_assets'], '9999999');
         
         //change login logo url to your website home
         add_filter('login_headerurl', ['\mihanpanel\app\sundry', 'change_login_logo_url'], '9999999');
-
-        //add CSS to login page
-        add_action('login_enqueue_scripts', ['\mihanpanel\app\assets', 'load_login_theme_assets']);
 
         //hide wp admin bar for users
         if (get_option('mp_disable_wordpress_bar') == 1) {
@@ -130,6 +120,27 @@ class hooks
             add_filter('mihanpanel/edit_profile/fields_label_text', ['\mihanpanel\app\config', 'WpmlTranslateUserFieldsLabel'], 10, 2);
             add_filter('mihanpanel/panel/tabs_menu_item_label_text', ['\mihanpanel\app\config', 'WpmlTranslatePanelMenuTabLabel']);
             add_filter('mihanpanel/panel_url', ['\mihanpanel\app\config', 'WpmlHandlePanelPageUrl']);
+        }
+
+        // custom login & register form
+        add_action('mwpl_register_form_after_default_fields', ['\mihanpanel\app\register', 'addExtraFields']);
+        add_filter('mwpl_register_form_fields_validation_error', ['\mihanpanel\app\register', 'validateExtraFieldsData']);
+        add_action('mwpl_register_form_after_create_new_user', ['\mihanpanel\app\register', 'saveExtraFieldsData']);
+        add_filter('mwpl_register_form_extra_field_validation_handler_method', ['\mihanpanel\app\register', 'addExtraFieldsTypeValidationMethod']);
+
+        // handle login logo
+        add_action('mwpl_login_form_after_start_form', ['\mihanpanel\app\login', 'addLogoBeforeTitle']);
+        add_action('mwpl_register_form_after_start_form', ['\mihanpanel\app\login', 'addLogoBeforeTitle']);
+
+        add_action('plugins_loaded', ['\mihanpanel\app\reset_password', 'init']);
+
+        // handle 2fa
+        if(\mihanpanel\app\options::get_smart_login_2fa_status())
+        {
+            add_action('mihanpanel/panel/menu_default_tabs', ['\mihanpanel\app\panel', 'filter_default_tabs_render_items']);
+            add_action('mihanpanel/panel/tab_file', ['\mihanpanel\app\panel', 'handle_2fa_menu_content'], 10, 2);
+            
+            add_action('mwpl_login_form_before_submit_button', ['\mihanpanel\app\login', 'addTwoFactorAutenticationFieldToLogin']);
         }
     }
     public static function activation_hook()

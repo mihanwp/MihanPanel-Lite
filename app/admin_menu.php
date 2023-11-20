@@ -1,4 +1,5 @@
 <?php
+
 namespace mihanpanel\app;
 
 use mihanpanel\app\form\admin_tabs;
@@ -11,6 +12,7 @@ class admin_menu
         self::tabs();
         self::user_fields();
         self::notifications();
+        self::blockedIpsMenu();
     }
     static function add_main_menu_page()
     {
@@ -32,18 +34,26 @@ class admin_menu
             'register' => __('Register Form', 'mihanpanel'),
             'notification' => __('Notifications', 'mihanpanel'),
             'professional_login' =>  __("Professional login options", "mihanpanel"),
+            'security' => __('Security', 'mihanpanel'),
             'email' => __('Emails', 'mihanpanel'),
             'tools' => esc_html__('Tools', 'mihanpanel'),
         ];
         $settings = views::get('admin.settings');
         include $settings;
     }
+
+    public static function get_settings_tab_url($tab = 'general'){
+        return add_query_arg([
+            'page' => 'mihanpanel',
+            'tab' => $tab
+        ], admin_url('admin.php'));
+    }
+
     static function handle_tools_menu_submission()
     {
-        if(isset($_POST['create_user_panel_page']))
-        {
+        if (isset($_POST['create_user_panel_page'])) {
             $user_panel_page = array(
-                'post_title' =>    __('User Panel','mihanpanel'),
+                'post_title' =>    __('User Panel', 'mihanpanel'),
                 'post_content' => '[mihanpanel]',
                 'post_status' => 'publish',
                 'post_name' => 'panel',
@@ -52,6 +62,38 @@ class admin_menu
             $post_id = wp_insert_post($user_panel_page);
             $slug = get_post_field('post_name', $post_id);
             update_option('mp_panelslug', $slug);
+        }
+        if (isset($_POST['create_mihanpanel_database_tables'])) {
+            // create tabs table
+            config::create_tabs_table_in_database();
+
+            // add meta data column to mihanpaneltabs table
+            global $wpdb;
+            $tabsTableName = $wpdb->prefix . 'mihanpaneltabs';
+
+            // check if has not meta col
+            $tabsCols = $wpdb->get_col("DESCRIBE {$tabsTableName}");
+            if (!in_array('metas', $tabsCols)) {
+                $command = "ALTER TABLE {$tabsTableName} ADD meta longtext NOT NULL after priority;";
+                $wpdb->query($command);
+            }
+
+            // create fields table
+            config::create_fields_table_in_database();
+
+            // add meta data column to mihanpanelfields table
+            $fieldsTableName = $wpdb->prefix . 'mihanpanelfields';
+            $fieldsCols = $wpdb->get_col("DESCRIBE {$fieldsTableName}");
+            if (!in_array('meta', $fieldsCols)) {
+                $command = "ALTER TABLE {$fieldsTableName} ADD meta longtext NOT NULL after priority;";
+                $wpdb->query($command);
+            }
+
+            // create session table
+            session::create_session_table();
+
+            // do_action to handle pro version tables
+            do_action('after_create_default_database_tables_tools_page');
         }
         do_action('after_submit_tools_menu_form');
     }
@@ -63,29 +105,28 @@ class admin_menu
     }
     static function user_fields_c()
     {
-        if(!empty($_POST))
-        {
+        if (!empty($_POST)) {
             \mihanpanel\app\form\admin_user_fields::do();
         }
-        ?>
+?>
         <div class="mihanpanel-admin">
             <?php
             do_action('mwpl_option_panel/before_render_user_fields_list');
             ?>
-                <div class="mw_update_sortable_notice notice inline notice-info notice-alt">
-                    <p>
-                        <span><?php _e('Do you want to save changes?', 'mihanpanel')?></span>
-                        <span><input mwpl_nonce="<?php echo esc_attr(wp_create_nonce('mwpl_ajax_update_user_fields_data'))?>" class="mw_submit mw_ajax_update_fields_data" data-mw_type="user_field" type="submit" name="save_priority" value="<?php esc_attr_e('Yes', 'mihanpanel')?>"></span>
-                    </p>
-                </div>
+            <div class="mw_update_sortable_notice notice inline notice-info notice-alt">
+                <p>
+                    <span><?php _e('Do you want to save changes?', 'mihanpanel') ?></span>
+                    <span><input mwpl_nonce="<?php echo esc_attr(wp_create_nonce('mwpl_ajax_update_user_fields_data')) ?>" class="mw_submit mw_ajax_update_fields_data" data-mw_type="user_field" type="submit" name="save_priority" value="<?php esc_attr_e('Yes', 'mihanpanel') ?>"></span>
+                </p>
+            </div>
             <div class="mw_notice_box notice inline notice-alt"></div>
             <?php
             admin_user_fields::render_user_fields();
             ?>
             <div class="new_record_wrapper" style="display: none;">
-                <h2><?php esc_html_e('Create new field', 'mihanpanel'); ?><span class="close_new_field_section action_btn"><?php esc_html_e('Close', 'mihanpanel')?></span></h2>
+                <h2><?php esc_html_e('Create new field', 'mihanpanel'); ?><span class="close_new_field_section action_btn"><?php esc_html_e('Close', 'mihanpanel') ?></span></h2>
                 <form method="post">
-                    <?php admin_user_fields::render_new_record_fields()?>
+                    <?php admin_user_fields::render_new_record_fields() ?>
                 </form>
             </div>
         </div>
@@ -99,10 +140,9 @@ class admin_menu
     }
     static function tabs_c()
     {
-        if(tools::isProVersion())
-        {
+        if (tools::isProVersion()) {
             \mihanpanel\pro\app\admin_menu::handle_tabs_menu_content();
-        }else{
+        } else {
             $msgStyles = [
                 'position' =>  'absolute',
                 'top' =>  '50%',
@@ -119,17 +159,16 @@ class admin_menu
                 'font-weight' => 'bold',
             ];
             $msgStyle = '';
-            foreach($msgStyles as $key => $value)
-            {
+            foreach ($msgStyles as $key => $value) {
                 $msgStyle .= sprintf('%s: %s;', $key, $value);
             }
             $imgUrl = is_rtl() ? \mihanpanel\app\assets::get_image_url('tabs-menu-view') : \mihanpanel\app\assets::get_image_url('tabs-menu-view-ltr');
-            ?>
+        ?>
             <div class="mihanpanel-admin" style="position: relative">
-                <img style="filter: blur(2px) grayscale(100)" width="100%" src="<?php echo esc_attr($imgUrl)?>" alt="">
-                <div style="<?php echo esc_attr($msgStyle)?>"><?php esc_html_e('This section is active in MihanPanel pro', 'mihanpanel')?></div>
+                <img style="filter: blur(2px) grayscale(100)" width="100%" src="<?php echo esc_attr($imgUrl) ?>" alt="">
+                <div style="<?php echo esc_attr($msgStyle) ?>"><?php esc_html_e('This section is active in MihanPanel pro', 'mihanpanel') ?></div>
             </div>
-            <?php
+        <?php
         }
     }
     static function notifications()
@@ -140,8 +179,7 @@ class admin_menu
     }
     static function notifications_c()
     {
-        if(tools::isProVersion())
-        {
+        if (tools::isProVersion()) {
             \mihanpanel\pro\app\admin_menu::handleNotificationsMenuContent();
             return;
         }
@@ -160,14 +198,49 @@ class admin_menu
             "border" => "3px solid #7c7cbd30",
         ];
         $styles = '';
-        foreach($stylesData as $key => $value)
-        {
+        foreach ($stylesData as $key => $value) {
             $styles .= $key . ': ' . $value . '; ';
         }
         ?>
-        <div style="<?php echo esc_attr($styles)?>">
+        <div style="<?php echo esc_attr($styles) ?>">
             <span><?php printf(__('This feature is accessible only in %s.', 'mihanpanel'), sprintf('<a target="_blank" href="%s">%s</a>', \mihanpanel\app\tools::get_pro_version_link(), __('MihanPanel Pro', 'mihanpanel'))); ?></span>
         </div>
-        <?php
+<?php
+    }
+
+    static function blockedIpsMenu()
+    {
+        add_submenu_page('mihanpanel', __('Blocked ip', 'mihanpanel'), __('Blocked ip', 'mihanpanel'), 'manage_options', 'mihanpanel_blocked_ips', [__CLASS__, 'blockedIpsMenuContent']);
+    }
+    static function blockedIpsMenuContent()
+    {
+        $blockedIpsList = login_guard::getBlockedIps();
+        $failedAttemptsTelorance = options::getLoginGuardFailedAttemptCount();
+
+        $whiteList = ['list', 'delete', 'delete_all'];
+        $type = isset($_GET['action']) && in_array($_GET['action'], $whiteList) ? $_GET['action'] : $whiteList[0];
+
+        switch ($type) {
+            case 'delete':
+                $itemID = isset($_GET['id']) ? intval($_GET['id']) : false;
+                login_guard::deleteIpItem($itemID);
+                $newLocation = esc_url(add_query_arg(['page' => 'mihanpanel_blocked_ips'], admin_url('admin.php')));
+                wp_safe_redirect($newLocation);
+                exit;
+                break;
+            case 'delete_all':
+                login_guard::truncateIpListTable();
+                $newLocation = esc_url(add_query_arg(['page' => 'mihanpanel_blocked_ips'], admin_url('admin.php')));
+                wp_safe_redirect($newLocation);
+                exit;
+                break;
+            case 'list':
+            default:
+                $allItemsCount = $blockedIpsList ? count($blockedIpsList) : 0;
+                $allItemsCount = sprintf(__('%d item', 'mihanpanel'), $allItemsCount);
+        }
+
+        $view = views::get('admin.blocked_ips_menu');
+        $view ? include_once $view : null;
     }
 }

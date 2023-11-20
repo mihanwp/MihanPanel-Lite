@@ -1,0 +1,256 @@
+:root {
+    --mwpl-primary-color: #573ebf;
+    --mwpl-secondary-color: #d8cfff;
+    --mwpl-white-color: #fff;
+    --mwpl-black-color: #1d2327;
+    --mwpl-font-size: 16px;
+    --mwpl-font-family: inherit;
+    --mwpl-border-radius: 7px;
+}
+
+.mihanpanel-admin .mwpl-field-wrap input:is([type=checkbox], [type=radio]) {
+    display: none;
+}
+
+.mihanpanel-admin .mp-control-item label {
+    display: inline-block;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.mihanpanel-admin .mwpl-checkbox-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mihanpanel-admin .mwpl-checkbox-wrap > label {
+    width: auto;
+    margin: 0;
+}
+
+.mihanpanel-admin label.mwpl-checkbox-label {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+    background-color: #c3c3c3;
+    border-radius: var(--mwpl-border-radius);
+    cursor: pointer;
+    transition: 0.2s ease transform, 0.2s ease background-color, 0.2s ease box-shadow;
+    overflow: hidden;
+}
+
+.mihanpanel-admin label.mwpl-checkbox-label:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    width: 26px;
+    height: 26px;
+    margin: 0 auto;
+    background-color: #fff;
+    transform: translateY(-50%);
+    border-radius: 8px;
+    box-shadow: inset 0 4px 5px #d1d1d1;
+    transition: 0.2s ease width, 0.2s ease height;
+}
+
+.mihanpanel-admin label.mwpl-checkbox-label:hover:before {
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: inset 0 7px 10px #ff9d96;
+}
+
+.mihanpanel-admin label.mwpl-checkbox-label:active {
+    transform: scale(0.7);
+}
+
+.mihanpanel-admin .mwpl-checkbox-label .tick-mark {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 15px;
+    height: 18px;
+    margin: 0 auto;
+    margin-left: 5px;
+    transform: rotateZ(-40deg);
+}
+
+.mihanpanel-admin .mwpl-checkbox-label .tick-mark:before,
+.mihanpanel-admin .mwpl-checkbox-label .tick-mark:after {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    border-radius: 2px;
+    opacity: 0;
+    transition: 0.2s ease transform, 0.2s ease opacity;
+}
+
+.mihanpanel-admin .mwpl-checkbox-label .tick-mark:before {
+    left: 0;
+    bottom: 0;
+    width: 4px;
+    height: 10px;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.23);
+    transform: translateY(-68px)
+}
+
+.mihanpanel-admin .mwpl-checkbox-label .tick-mark:after {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.23);
+    transform: translateX(78px)
+}
+
+.mihanpanel-admin .mwpl-checkbox:checked + label {
+    background-color: #07d410;
+}
+
+.mihanpanel-admin .mwpl-checkbox:checked + label:before {
+    width: 0;
+    height: 0;
+}
+
+.mihanpanel-admin .mwpl-checkbox:checked + .mwpl-checkbox-label .tick-mark:before,
+.mihanpanel-admin .mwpl-checkbox:checked + .mwpl-checkbox-label .tick-mark:after {
+    transform: translate(0);
+    opacity: 1;
+}
+
+.mihanpanel-admin .mwpl-range-slider-wrap,
+.mihanpanel-admin .mwpl-dimensions-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    direction: ltr;
+    width: 310px;
+}
+
+.mihanpanel-admin .mwpl-dimensions-wrap {
+    gap: 5px;
+}
+
+.mihanpanel-admin .mwpl-range-slider-wrap select,
+.mihanpanel-admin .mwpl-dimensions-wrap select {
+    width: auto;
+    border: 1px solid #dfdfdf;
+    border-radius: 50px;
+    direction: ltr;
+    appearance: auto;
+}
+
+.mihanpanel-admin .mwpl-range-slider-wrap input {
+    width: 100%;
+    -webkit-appearance: none;
+    height: 4px;
+    border-radius: 5px;
+    background-color: var(--mwpl-secondary-color);
+    outline: none;
+}
+
+.mihanpanel-admin .mwpl-range-slider-wrap input::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--mwpl-primary-color);
+}
+
+.mihanpanel-admin .mwpl-range-slider-wrap .range-value {
+    position: relative;
+    background-color: #e1e1e1;
+    color: #343434;
+    text-align: center;
+    padding: 3px 8px;
+    border-radius: 50px;
+    width: 150px;
+}
+
+.mihanpanel-admin .mwpl-range-slider-wrap .range-value input {
+    width: 100%;
+    height: 24px;
+    min-height: auto;
+    border: none;
+    background-color: transparent;
+    text-align: center;
+    outline: 0;
+    box-shadow: none;
+}
+
+.mihanpanel-admin .mwpl-range-slider-wrap .range-value:before {
+    content: '';
+    position: absolute;
+    border-right: 9px solid transparent;
+    border-left: 9px solid transparent;
+    border-bottom: 12px solid #e1e1e1;
+    left: -8px;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+}
+
+.mihanpanel-admin .mwpl-range-slider-wrap .range-value input::-webkit-outer-spin-button,
+.mihanpanel-admin .mwpl-range-slider-wrap .range-value input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.mihanpanel-admin .mwpl-range-slider-wrap .range-value input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.mihanpanel-admin .mp-control-item .wp-picker-container {
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.mihanpanel-admin .mp-control-item .wp-picker-container .wp-picker-holder {
+    position: absolute;
+    top: 100%;
+    z-index: 999;
+    box-shadow: 0 16px 15px #00000054;
+    border-radius: 10px;
+}
+
+.mihanpanel-admin .mp-control-item .wp-picker-open + .wp-picker-input-wrap {
+    display: flex;
+    align-items: center;
+}
+
+.mihanpanel-admin .mwpl-style-control select {
+    border: 1px solid #d7d7d7;
+    height: 30px;
+}
+
+.mihanpanel-admin .mwpl-style-control .mwpl-inner-control label {
+    margin-top: 10px;
+}
+
+.mihanpanel-admin .mwpl-image-selector {
+    display: flex;
+    gap: 10px;
+}
+
+.mihanpanel-admin .mwpl-image-selector button {
+    border: none;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: var(--mwpl-secondary-color);
+    color: var(--mwpl-primary-color);
+    cursor: pointer;
+}
+
+.mwpl-inputs-linked-value {
+    color: #ababab;
+    cursor: pointer;
+}
+
+.mwpl-inputs-linked-value.is-linked {
+    color: var(--mwpl-primary-color);
+}

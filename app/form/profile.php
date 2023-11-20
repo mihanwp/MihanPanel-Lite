@@ -3,6 +3,7 @@ namespace mihanpanel\app\form;
 
 use mihanpanel\app\adapter\woo;
 use mihanpanel\app\notice;
+use mihanpanel\app\session;
 use mihanpanel\app\tools;
 
 class profile
@@ -53,6 +54,7 @@ class profile
                 $type = 'error';
                 $msg = __("An error occurred!", "mihanpanel");
             } else {
+                session::unset('required_change_password');
                 $type = 'success';
                 $msg = __("Password successfully changed!", "mihanpanel");
                 $hasError = false;

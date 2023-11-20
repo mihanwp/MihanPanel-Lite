@@ -13,6 +13,12 @@
                 <p class="description"><?php esc_html_e('User panel page already exists.', 'mihanpanel')?></p>
             <?php endif; ?>
         </div>
+        <h2><?php esc_html_e("Create database tables", "mihanpanel"); ?></h2>
+        <div class="mp_option_single">
+            <label><?php esc_html_e("Create MihanPanel default tables in database", "mihanpanel"); ?></label>
+                <input name="create_mihanpanel_database_tables" type="submit" value="<?php esc_html_e('Create', 'mihanpanel')?>">
+                <p class="description"><?php esc_html_e('Just use this when some tables were dropped from database.', 'mihanpanel')?></p>
+        </div>
         <h2><?php esc_html_e("Phone numbers", "mihanpanel"); ?></h2>
         <div class="mp_option_single">
             <div class="field-item">

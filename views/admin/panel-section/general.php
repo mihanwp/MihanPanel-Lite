@@ -17,6 +17,23 @@
             </div>
             <?php do_action('mwpl_live_view_wrapper_content')?>
         </div>
+        <div class="mp_option_section">
+            <?php
+            $prefix = get_option('permalink_structure') ? trailingslashit(home_url()) : trailingslashit(home_url()) . '?';
+            $newLoginSlug = \mihanpanel\app\options::get_login_slug();
+			$login_url = $prefix . $newLoginSlug;
+            ?>
+            <h2><?php _e("Change login url", "mihanpanel"); ?></h2>
+            <div class="mp_option_single">
+                <label for="rwl-page"><?php esc_html_e('Login page address', 'mihanpanel')?></label>
+                <div class="ltr">
+                    <code><?php echo esc_html($prefix)?></code><input type="text" id="rwl-page-input" name="rwl_page" type="text" value="<?php echo esc_attr($newLoginSlug)?>"><code>/</code>
+                </div>
+                <p class="description"><?php _e('Your site login url is', 'mihanpanel')?>
+                    <a target="_blank" dir="ltr" href="<?php echo esc_url($login_url)?>"><?php echo esc_url($login_url)?></a>
+                </p>
+            </div>
+        </div>
         <div class="mp_option_single">
             <label for="mp_login_form_top_message_text"><?php esc_html_e('Login form message', 'mihanpanel')?></label>
             <p class="description"><?php esc_html_e('Text that shows in top of login form', 'mihanpanel')?></p>
@@ -78,8 +95,6 @@
             \mihanpanel\app\handle_view::option_panel_field_login_fields_text_color();
             \mihanpanel\app\handle_view::option_panel_field_login_info_messagebox_text_color();
             \mihanpanel\app\handle_view::option_panel_field_login_info_messagebox_bg_color();
-            \mihanpanel\app\handle_view::option_panel_field_login_error_messagebox_text_color();
-            \mihanpanel\app\handle_view::option_panel_field_login_error_messagebox_bg_color();
             ?>
             <div class="mp_option_single">
                 <label><?php esc_html_e("Login and Register form Logo", "mihanpanel"); ?></label>
@@ -95,11 +110,25 @@
                 <label><?php esc_html_e("Logo Height (px)", "mihanpanel"); ?> <small class="range_value"><?php esc_html_e(\mihanpanel\app\options::get_login_logo_height())?></small></label>
                 <input class="mwpl_range" type="range" value="<?php echo esc_attr(\mihanpanel\app\options::get_login_logo_height())?>" name="mp_logo_height" min="50" max="150">
             </div>
-            <div class="mp_option_single">
-                <label><?php esc_html_e("Login and Register form background", "mihanpanel"); ?></label>
-                <input style="text-align:left;direction:ltr" id="mp_bg_image" type="text" name="mp_bg_image" value="<?php echo esc_attr(get_option('mp_bg_image')); ?>" />
-                <input id="mp_upload_bg_image_button" type="button" class="button-primary" value="<?php esc_attr_e("Upload Image", "mihanpanel"); ?>" />
+            <div class="mp-sub-tab-wrap">
+                <ul class="mp-sub-tabs">
+                    <li>
+                        <a href="#" class="mp-sub-tab-item active" data-target="#mp-tab-content-body-bg"><?php echo __('Login page Background', 'mihanpanel') ?></a>
+                    </li>
+                    <li>
+                        <a href="#" class="mp-sub-tab-item" data-target="#mp-tab-content-form-bg"><?php echo __('Login form Background', 'mihanpanel') ?></a>
+                    </li>
+                </ul>
+                <div class="mp-sub-tabs-content">
+                    <div class="mp-sub-tab-content" id="mp-tab-content-body-bg">
+                        <?php \mihanpanel\app\handle_view::option_panel_login_body_background_fields(); ?>
+                    </div>
+                    <div class="mp-sub-tab-content" id="mp-tab-content-form-bg" style="display:none">
+                        <?php \mihanpanel\app\handle_view::option_panel_login_form_background_fields(); ?>
+                    </div>
+                </div>
             </div>
+
             <div class="mp_option_single">
                 <label><?php esc_html_e("Redirect non Admin user to", "mihanpanel"); ?></label>
                 <?php \mihanpanel\app\handle_view::option_panel_field_redirect_normal_user(); ?>

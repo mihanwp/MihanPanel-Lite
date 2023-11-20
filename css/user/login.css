@@ -1,0 +1,565 @@
+.mwpl-login-body {
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mwpl-login-body .mwpl-notice-box {
+    background-color: #246cfc;
+    width: 70%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    color: white;
+    border-radius: 5px;
+}
+.mwpl-login-body .mwpl-notice-box:first-of-type
+{
+    margin-bottom: 10px;
+}
+.mwpl-login-body .mwpl-notice-box.mwpl-login-notice-success
+{
+    background-color: #26b781;
+    color: #fff;
+}
+.mwpl-login-body .mwpl-notice-box.mwpl-login-notice-error
+{
+    background-color: #c63535;
+    color: #fff;
+}
+
+.mwpl-login-body.mwpl-center
+{
+    box-shadow: 0 0 30px rgba(0,0,0,0.1);
+}
+
+.mwpl-login-body .mwpl-hide {
+    display: none !important;
+}
+
+.mwpl-login-body .mwpl-login-wrapper {
+    position: relative;
+    z-index: 5;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 60%;
+    background-color: white;
+    min-height: 180px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-height: 90%;
+    overflow-y: auto;
+}
+
+.mwpl-login-body .mwpl-login-wrapper .mwpl_login_inactive_mode_content
+{
+    position: absolute;
+}
+.mwpl-login-body .mwpl-form-wrapper.mwpl-inactive-mode
+{
+    position: relative;
+}
+.mwpl-login-body .mwpl-form-wrapper.mwpl-inactive-mode .mwpl-form-fields
+{
+    pointer-events: none;
+    opacity: .5;
+}
+.mwpl-login-body .mwpl-form-wrapper.mwpl-inactive-mode > *:not(.mwpl_login_inactive_mode_content)
+{
+    filter: blur(5px);
+}
+
+.mwpl-login-body .mwpl-form-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+}
+
+.mwpl-login-body .mwpl-login-logo {
+    margin-bottom: 20px;
+}
+
+.mwpl-login-body .mwpl-form-title {
+    color: #000;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.mwpl-login-body .mwpl-form-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 70%;
+}
+
+.mwpl-login-body .mwpl-form-fields .mwpl-input-item:not(.mwpl-field-type-radio) label {
+    direction: ltr;
+    border: 1px solid #ddd;
+    padding: 5px 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.mwpl-login-body .mwpl-form-fields .mwpl-input-item.mwpl-field-type-radio {
+    border: 1px solid #ddd;
+    padding: 5px 20px;
+    border-radius: 10px;
+}
+
+.mwpl-login-body .mwpl-form-fields .mwpl-input-item.mwpl-input-item:not(.mwpl-field-type-checkbox, .mwpl-field-type-radio, .mwpl-field-type-selectbox) label {
+    cursor: text;
+}
+
+.mwpl-login-body .mwpl-form-fields .mwpl-input-item label.disabled {
+    opacity: .5;
+    pointer-events: none;
+}
+
+.mwpl-login-body .mwpl-form-fields .mwpl-input-item label .mwpl-icon {
+    display: flex;
+    width: 25px;
+    justify-content: center;
+    align-items: center;
+}
+
+.mwpl-login-body .mwpl-form-fields .mwpl-input-item label .mwpl-icon img {
+    width: 24px;
+}
+
+.mwpl-login-body .mwpl-form-fields .mwpl-input-item label .mwpl-field {
+    display: flex;
+    flex-direction: column;
+    flex: auto;
+    position: relative;
+    padding: 10px 0;
+}
+
+.mwpl-login-body .mwpl-form-fields .mwpl-input-item.mwpl-field-type-selectbox label .mwpl-field {
+    flex: auto;
+}
+
+.mwpl-login-body .mwpl-form-fields .mwpl-input-item.mwpl-field-type-checkbox label .mwpl-field {
+    flex-direction: row;
+    align-items: center;
+}
+
+.mwpl-login-body .mwpl-form-fields .mwpl-input-item label .mwpl-field .mwpl-label-value {
+    font-size: 16px;
+    margin-bottom: -5px;
+    color: #353535;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-55%);
+    transition: all .3s;
+}
+.mwpl-login-body.mwpl-rtl .mwpl-form-fields .mwpl-input-item label .mwpl-field .mwpl-label-value {
+    right: 0;
+}
+
+.mwpl-login-body .mwpl-form-fields .mwpl-input-item label .mwpl-field textarea,
+.mwpl-login-body .mwpl-form-fields .mwpl-input-item label .mwpl-field select,
+.mwpl-login-body .mwpl-form-fields .mwpl-input-item label .mwpl-field input[type=email],
+.mwpl-login-body .mwpl-form-fields .mwpl-input-item label .mwpl-field input[type=password],
+.mwpl-login-body .mwpl-form-fields .mwpl-input-item label .mwpl-field input[type=text] {
+    outline: none;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    background: transparent;
+    transition: all .3s;
+}
+
+.mwpl-login-body .mwpl-form-fields .mwpl-input-item label .mwpl-field input[type=checkbox],
+.mwpl-login-body .mwpl-form-fields .mwpl-input-item input[type=radio] {
+    -webkit-appearance: auto;
+}
+
+.mwpl-login-body .mwpl-form-fields .mwpl-input-item label .mwpl-field input:focus {
+    pointer-events: inherit;
+    opacity: 1;
+}
+
+.mwpl-login-body .mwpl-form-fields .mwpl-input-item label .mwpl-field input:focus+.mwpl-label-value,
+.mwpl-login-body .mwpl-form-fields .mwpl-input-item label .mwpl-field input.mwpl-has-value+.mwpl-label-value {
+    font-size: 12px;
+    top: 0;
+    transform: none;
+}
+
+.mwpl-login-body .mwpl-form-fields .mwpl-input-item label .mwpl-field input::placeholder {
+    color: transparent;
+}
+
+.mwpl-login-body .mwpl-form-fields .mwpl-input-item label .mwpl-field input:focus::placeholder {
+    color: #8e8e8e;
+}
+
+.mwpl-login-body .mwpl-form-fields .mwpl-input-item input[type=submit] {
+    cursor: pointer;
+    padding: 15px 10px;
+    display: block;
+    width: 100%;
+    background-color: #0d94f7;
+    color: white;
+    border: 1px solid #0d94f7;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.mwpl-login-body .mwpl-form-fields .mwpl-input-item .mwpl-button {
+    cursor: pointer;
+    padding: 15px 10px;
+    display: block;
+    width: 100%;
+    background-color: #0d94f7;
+    color: white;
+    border: 1px solid #0d94f7;
+    border-radius: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: white;
+    color: black;
+    border-color: black;
+    font-size: 16px;
+}
+
+.mwpl-login-body .mwpl-form-fields .mwpl-input-item input[type=submit].hide {
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.mwpl-login-body .mwpl-form-fields .mwpl-input-item input[type=submit]:disabled {
+    opacity: .5;
+    pointer-events: none;
+}
+
+.mwpl-login-body .mwpl-form-fields .mwpl-input-item .mwpl-action-icon {
+    display: flex;
+    cursor: pointer;
+}
+
+.mwpl-login-body .mwpl-form-fields .mwpl-input-item .mwpl-action-icon img[mwpl-action="hide-pass"] {
+    display: none;
+}
+.mwpl-login-body .mwpl-form-fields .mwpl-input-item .mwpl-action-icon[mwpl-password-stregth-text]
+{
+    position: relative;
+}
+.mwpl-login-body .mwpl-form-fields .mwpl-input-item .mwpl-password-strength
+{
+    margin: 5px 10px;
+    display: inline-block;
+}
+.mwpl-login-body .mwpl-form-fields .mwpl-input-item .mwpl-password-strength.mwpl-weak-mode
+{
+    color: #d94f4f;
+}
+.mwpl-login-body .mwpl-form-fields .mwpl-input-item .mwpl-password-strength.mwpl-moderate-mode
+{
+    color: #e6b33c;
+}
+.mwpl-login-body .mwpl-form-fields .mwpl-input-item .mwpl-password-strength.mwpl-strong-mode
+{
+    color: #4ba83e;
+}
+.mwpl-login-body .mwpl-form-fields .mwpl-input-item.mwpl-password-field-wrapper
+{
+    transition: border-color .3s;
+}
+.mwpl-login-body .mwpl-form-fields .mwpl-input-item.mwpl-password-field-wrapper[mwpl-password-strength-mode=weak] label
+{
+    border-color: #d94f4f75;
+}
+.mwpl-login-body .mwpl-form-fields .mwpl-input-item.mwpl-password-field-wrapper[mwpl-password-strength-mode=moderate] label
+{
+    border-color: #e6b33c;
+}
+.mwpl-login-body .mwpl-form-fields .mwpl-input-item.mwpl-password-field-wrapper[mwpl-password-strength-mode=strong] label
+{
+    border-color: #4ba83e82;
+}
+
+.mwpl-login-body .mwpl-spinner {
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+    border: 3px solid #0d94f7;
+    display: block;
+    border-radius: 50%;
+    border-color: #0d94f7 transparent;
+    animation: spinning 1.4s ease infinite;
+}
+
+.mwpl-login-body .mwpl-form-fields .mwpl-input-item.mwpl-spinner-field {
+    position: relative;
+}
+
+.mwpl-login-body .mwpl-form-fields .mwpl-input-item.mwpl-spinner-field .mwpl-spinner-wrapper {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mwpl-login-body .mwpl-form-fields .mwpl-notice-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mwpl-login-body .mwpl-form-fields .mwpl-notice {
+    display: none;
+    font-size: 14px;
+}
+
+.mwpl-login-body .mwpl-form-fields .mwpl-notice-wrapper .mwpl-action-bar>span {
+    cursor: pointer;
+}
+
+.mwpl-login-body .mwpl-form-fields .mwpl-notice-wrapper .mwpl-register-link {
+    cursor: pointer;
+}
+
+.mwpl-login-body .mwpl-form-fields .mwpl-notice.mwpl-success {
+    color: #639b2b;
+}
+
+.mwpl-login-body .mwpl-form-fields .mwpl-notice.mwpl-error {
+    color: #c82a2a;
+}
+
+.mwpl-login-body .mwpl-image-cover-wrapper {
+    position: relative;
+    background-color: #eaeaea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.mwpl-login-body .mwpl-image-cover-wrapper img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes spinning {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.captcha-field-group {
+    display: flex;
+    gap: 0;
+    flex-direction: row-reverse;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.captcha-field-group .mwpl-input-item {
+    width: 84%;
+}
+
+.mwpl-login-body .mwpl-form-fields .captcha-field-group .mwpl-input-item:not(.mwpl-field-type-radio) label {
+    border-radius: 0;
+    border: none;
+}
+
+.captcha-field-group .captcha-code {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.captcha-field-group canvas {
+    height: 45px;
+    max-width: 100%;
+}
+
+.captcha-field-group .mwpl-reload-captcha {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: #ffffffb8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: ease .15s;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.captcha-field-group .mp-show-reload {
+    opacity: 1;
+    pointer-events: none;
+}
+
+.captcha-field-group .mp-show-reload img {
+    animation-name: mpSpinAnimation;
+    animation-duration: 1000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes mpSpinAnimation {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+.captcha-field-group .captcha-code:hover .mwpl-reload-captcha {
+    opacity: 1;
+}
+
+.captcha-field-group .mwpl-reload-captcha img {
+    width: 20px;
+    transition: ease .20s;
+    transform: scale(.8);
+}
+
+.captcha-field-group .captcha-code:hover .mwpl-reload-captcha img {
+    transform: scale(1);
+}
+
+.mwpl-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 100%;
+    height: 50px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-image: url("../../img/arrow-down.svg");
+    background-position: left 26px center;
+    background-size: 17px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.mwpl-login-body .mwpl-form-fields .mwpl-input-item label .mwpl-icon img {
+    width: 25px;
+}
+
+.mwpl-login-body .mwpl-form-fields .mwpl-input-item label .mwpl-icon i {
+    font-size: 17px;
+}
+
+.is-doing {
+    pointer-events: none;
+    filter: grayscale(1) blur(1.5px);
+    user-select: none;
+    transition: ease .4s;
+}
+
+.resetpassword-btn {
+    font-size: 13px;
+    text-decoration: none;
+    margin: 15px 0 5px;
+    display: inline-block;
+}
+
+.mwpl-login-body .mwpl-form-fields .no-pointer {
+    opacity: .4;
+    pointer-events: none;
+    user-select: none;
+    filter: grayscale(1);
+}
+
+.mwpl-login-body .mwpl-image-cover-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 0;
+}
+
+.login-body-video-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.mp-lottie-file-wrap {
+    padding: 20px;
+    position: relative;
+    z-index: 4;
+}
+
+@media only screen and (max-width: 480px)
+{
+    .mwpl-login-body .mwpl-image-cover-wrapper
+    {
+        display: none;
+    }
+    body.mwpl-login-body div.mwpl-login-wrapper
+    {
+        grid-template-columns: 1fr !important;
+        width: 100%;
+    }
+    .mwpl-login-body .mwpl-form-fields,
+    .mwpl-login-body .mwpl-notice-box
+    {
+        width: 90% !important;
+    }
+}
+@media only screen and (min-width: 481px) and (max-width: 768px)
+{
+    .mwpl-login-body .mwpl-image-cover-wrapper
+    {
+        display: none;
+    }
+    body.mwpl-login-body div.mwpl-login-wrapper
+    {
+        grid-template-columns: 1fr !important;
+        width: 90%;
+    }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px)
+{
+    body.mwpl-login-body div.mwpl-login-wrapper
+    {
+        grid-template-columns: 1fr 1fr !important;
+        width: 80%;
+    }
+    .mwpl-login-body .mwpl-form-fields,
+    .mwpl-login-body .mwpl-notice-box
+    {
+        width: 90% !important;
+    }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1224px)
+{
+    .mwpl-login-body .mwpl-form-fields,
+    .mwpl-login-body .mwpl-notice-box
+    {
+        width: 90% !important;
+    }
+}

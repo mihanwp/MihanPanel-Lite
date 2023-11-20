@@ -17,10 +17,178 @@ class ajax
 
         // live edit
         add_action('wp_ajax_mwpl_live_edit_tabs_fields_get_items', [__CLASS__, 'handle_live_edit_tabs_fields_get_items']);
+
+        // custom login form
+        add_action('wp_ajax_nopriv_mwpl_login_form_normal_login', [__CLASS__, 'handle_normal_login_process']);
+
+        add_action('wp_ajax_nopriv_mwpl_register_form', [__CLASS__, 'handle_mwpl_register_form_process']);
     }
     static function checkNonce($action = 'mwpl_ajax_update_live_edit_options', $query = 'mwpl_nonce')
     {
         check_ajax_referer($action, $query);
+    }
+    static function handle_normal_login_process()
+    {
+        self::checkNonce('mwpl_login_nonce', 'nonce');
+        $res['code'] = 409;
+        $username = isset($_POST['username']) && $_POST['username'] ? sanitize_text_field($_POST['username']) : false;
+        $password = isset($_POST['password']) && $_POST['password'] ? sanitize_text_field($_POST['password']) : false;
+
+        do_action('mwpl_login_start_process_response', $res);
+
+        if(!$username)
+        {
+            $res['msg'] = esc_html__('Please fill username field', 'mihanpanel');
+            self::send_res($res);
+        }
+
+        if(!$password)
+        {
+            $res['msg'] = esc_html__('Please fill password field', 'mihanpanel');
+            self::send_res($res);
+        }
+
+        // get user data
+        $user = get_user_by('login', $username);
+        if(!$user)
+        {
+            do_action('mwpl_login/normal_login/wrong_username');
+            $res['msg'] = esc_html__('User not found', 'mihanpanel');
+            self::send_res($res);
+        }
+
+        // check password
+        if(!wp_check_password($password, $user->user_pass, $user->ID))
+        {
+            do_action('mwpl_login/normal_login/wrong_password');
+            $res['msg'] = esc_html__('Invalid username or password', 'mihanpanel');
+            self::send_res($res);
+        }
+
+        // check account status
+        if(!\mihanpanel\app\users::is_active_account($user->ID))
+        {
+            $res['msg'] = esc_html__('Your account is disable!', 'mihanpanel');
+            self::send_res($res);
+        }
+
+        // check is 2fa otp active in options and active for this user
+        if(\mihanpanel\app\options::get_smart_login_2fa_status() && users::isActive2FA($user->ID))
+        {
+            $otpFieldValue = isset($_POST['otp_active']) && intval($_POST['otp_active']);
+            if($otpFieldValue)
+            {
+                // validate otp field value
+                $otpCodeValue = isset($_POST['otp_field']) && $_POST['otp_field'] ? sanitize_text_field($_POST['otp_field']) : false;
+                if(!google_otp::verifyOtpCode($otpCodeValue, $user->ID))
+                {
+                    $res['msg'] = __('2FA code is invalid', 'mihanpanel');
+                    self::send_res($res);
+                }
+            }else{
+
+                // show otp field
+                $res['handle_2fa'] = true;
+                $res['msg'] = __('Please enter authentication code', 'mihanpanel');
+                $res['code'] = 200;
+                self::send_res($res);
+            }
+            
+        }
+
+        do_action('mwpl_login_end_process_response', $res);
+
+        // handle login process
+        login::doLogin($user->ID, true);
+        $res['redirect_to'] = user_admin_url();
+        $res['msg'] = esc_html__('Successfully logged in...', 'mihanpanel');
+        $res['code'] = 200;
+
+        $res = apply_filters('mwpl_login_process_success_response_filter', $res);
+        
+        self::send_res($res);
+    }
+
+    static function handle_mwpl_register_form_process()
+    {
+        self::checkNonce('mwpl_login_nonce', 'nonce');
+        $res['code'] = 409;
+
+        $username = isset($_POST['username']) && $_POST['username'] ? sanitize_text_field($_POST['username']) : false;
+        $email = isset($_POST['email']) && $_POST['email'] ? sanitize_email($_POST['email']) : false;
+        $password = isset($_POST['password']) && $_POST['password'] ? sanitize_text_field($_POST['password']) : false;
+
+        do_action('mwpl_register_start_process_response', $res);
+
+        // check if has username
+        if(register::set_filter_for_register_data_validation('username-exists', username_exists($username)))
+        {
+            $res['msg'] = __('This username has already been chosen by someone else.', 'mihanpanel');
+            self::send_res($res);
+        }
+
+        // validate email address
+        if(register::set_filter_for_register_data_validation('email-check', !filter_var($email, FILTER_VALIDATE_EMAIL)))
+        {
+            $res['msg'] = __('Invalid email address', 'mihanpanel');
+            self::send_res($res);
+        }
+
+        // check account with this email address
+        if(register::set_filter_for_register_data_validation('email-check', email_exists($email)))
+        {
+            $res['msg'] = __('There is another account with this email in the system', 'mihanpanel');
+            self::send_res($res);
+        }
+
+        // check password
+        if(register::set_filter_for_register_data_validation('password-check', empty($password)))
+        {
+            $res['msg'] = __('Enter your password.', 'mihanpanel');
+            self::send_res($res);
+        }
+
+        // validate extra fields
+        do_action('mwpl_register_form_before_create_new_user', $res);
+        $error = apply_filters('mwpl_register_form_fields_validation_error', false);
+        if(is_wp_error($error))
+        {
+            $res['msg'] = $error->get_error_message();
+            self::send_res($res);
+        }
+        
+        // create user
+        $newUserData = [
+            'user_pass' => $password,
+            'user_email' => $email,
+            'user_login' => $username,
+        ];
+        $newUserData = apply_filters('mwpl_register_user_data', $newUserData);
+        $newUserID = wp_insert_user($newUserData);
+        if(is_wp_error($newUserID))
+        {
+            $res['msg'] = __('Has error in create your account', 'mihanpanel');
+            self::send_res($res);
+        }
+        
+        // save extra fields data
+        do_action('mwpl_register_form_after_create_new_user', $newUserID);
+
+        do_action('mwpl_register_end_process_response', $res);
+        
+        $res['msg'] = __('Account successfully created', 'mihanpanel');
+        $res['code'] = 200;
+
+        // check account activation type and handle message for showing in login view
+        $activationAccountType = options::get_account_activation_type();
+        $redirectArgs = [];
+        if($activationAccountType)
+        {
+            $redirectArgs['mwpl_register_status'] = $activationAccountType;
+        }
+        $res['redirect_to'] = \mihanpanel\app\options::get_login_url($redirectArgs);
+        self::send_res($res);
+
     }
     static function handle_live_edit_tabs_fields_get_items()
     {
@@ -258,5 +426,91 @@ class ajax
                 'msg' => __('Invalid Username or Email.', 'mihanpanel')
             ]);
         }
+    }
+
+    public static function reset_password_by_verification_code_callback(){
+        $username = sanitize_text_field($_POST['username']);
+        $formState = sanitize_text_field($_POST['form_state']);
+        $allowedStates = ['normal_login', 'dynamic_login', 'smart_login'];
+        $res = ['code' => 400];
+        $sendBy = apply_filters('mp_reset_password_method', 'email', $username);
+
+        do_action('mwpl_reset_password_start_process_response', $res);
+
+        if (empty($formState) || !in_array($formState, $allowedStates)){
+            $res['msg'] = __('Request is invalid!', 'mihanpanel');
+            self::send_res($res);
+        }
+
+        $user = username_exists($username) ? get_user_by('login', $username) : (email_exists($username) ? get_user_by('email', $username) : 0);
+        $user = apply_filters('mp_reset_password_get_user_data', $user, $username);
+
+        do_action('mwpl_reset_password_between_process_response', $res);
+
+        if($user){
+            do_action('mp_reset_password_before_set_code', $user, $sendBy);
+
+            $setNewCodeData = login::setUserDynamicCode($user->ID);
+            $res['expiration'] = date('Y-m-d H:i:s', $setNewCodeData['expiration']);
+            $res['code'] = 200;
+
+            if ($setNewCodeData){
+                do_action('mp_reset_password_before_send_code', $user, $setNewCodeData['code'], $sendBy);
+
+                $res['msg'] = __('Verification code has been sent to email.', 'mihanpanel');
+                $send = reset_password::send_reset_password_code_by_email($user, $setNewCodeData['code']);
+
+                if (empty($send)){
+                    $res['code'] = 400;
+                    $res['msg'] = __('An error occurred!', 'mihanpanel');
+                }
+            }
+        } else {
+            $res['msg'] = __('User not exists!', 'mihanpanel');
+        }
+
+        do_action('mwpl_reset_password_end_process_response', $res);
+
+        self::send_res($res);
+    }
+
+    public static function verify_code_for_reset_password_callback(){
+        $code = sanitize_text_field($_POST['dynamic_code']);
+        $username = sanitize_text_field($_POST['username']);
+        $formState = sanitize_text_field($_POST['form_state']);
+
+        $res = ['code' => 400];
+
+        do_action('mwpl_reset_password_start_verify_code_process_response', $res);
+
+        if (empty($formState) || $formState != 'code' || empty($code)){
+            $res['msg'] = __('Request is invalid!', 'mihanpanel');
+            self::send_res($res);
+        }
+
+        $user = username_exists($username) ? get_user_by('login', $username) : (email_exists($username) ? get_user_by('email', $username) : 0);
+        $user = apply_filters('mp_reset_password_user_data_for_verify_code', $user, $username);
+
+        if (!$user){
+            $res['msg'] = __('User not exists!', 'mihanpanel');
+            self::send_res($res);
+        }
+
+        session::unset('required_change_password');
+
+        $verifyCode = login::validateDynamicCode($code, $user->ID);
+
+        if (!$verifyCode){
+            $res['msg'] = __('The verification code is invalid.', 'mihanpanel');
+        } else {
+            $res['code'] = 200;
+            $res['msg'] = __('Verification done, transferring...', 'mihanpanel');
+            $res['redirect_to'] = reset_password::get_change_password_url();
+
+            login::doLogin($user->ID, true);
+            session::store('required_change_password', true);
+        }
+
+        self::send_res($res);
     }
 }

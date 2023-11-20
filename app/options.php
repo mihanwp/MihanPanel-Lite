@@ -14,6 +14,12 @@ class options
             self::MANUAL_ACTIVATION_MODE    =>  __('Manual Activation', 'mihanpanel')
         ];
     }
+
+    public static function get_option($key, $default = false)
+    {
+        return get_option($key, $default);
+    }
+
     public static function get_user_can_register()
     {
         return get_option('users_can_register');
@@ -50,7 +56,7 @@ class options
         }
         return esc_url(add_query_arg($query_args, wp_login_url($redirect)));
     }
-    public static function get_logo()
+    public static function getLoginPageLogo()
     {
         $option = get_option('mp_logo_image');
         return $option ? $option : MW_MIHANPANEL_URL . 'img/login-logo.svg';
@@ -58,7 +64,7 @@ class options
     public static function get_login_bg()
     {
         $option = get_option('mp_bg_image');
-        return $option ? $option : MW_MIHANPANEL_URL . 'img/bg.jpg';
+        return $option ? $option : \mihanpanel\app\assets::get_image_url('bg', 'jpg');
     }
     public static function is_automate_activation_account()
     {
@@ -103,6 +109,7 @@ class options
     {
         return get_option('mp_reset_password_email_content');
     }
+
     public static function get_change_account_status_email_subject()
     {
         return get_option('mp_change_account_status_email_subject');
@@ -148,6 +155,36 @@ class options
     public static function is_active_resend_account_activation_email(){
         return get_option('mp_resend_activation_email_link') == true;
     }
+    
+    static function get_smart_login_2fa_status()
+    {
+        return get_option('mp_smart_login_2fa');
+    }
+    static function get_mwpl_redirect_wp_login_tp_mwpl_login_status()
+    {
+        return (bool)get_option('mwpl_redirect_wp_login_tp_mwpl_login', 1);
+    }
+    static function getLoginGuardStatus()
+    {
+        return (bool)get_option('mwpl_login_guard_status');
+    }
+    static function getLoginGuardFailedAttemptCount()
+    {
+        return (int)get_option('mwpl_login_guard_failed_attempt_count_tolerance', 20);
+    }
+    static function getLoginGuardUnblockTimerMinutesValue()
+    {
+        return (int)get_option('mwpl_login_guard_unblock_timer_minutes', 60);
+    }
+
+    public static function get_reset_password_status(){
+        return get_option('mp_disable_reset_password');
+    }
+
+    public static function is_active_reset_password(){
+        return !self::get_reset_password_status();
+    }
+    
     public static function register_settings()
     {
         register_setting('mihanpanelsettings', 'rwl_page');
@@ -179,5 +216,11 @@ class options
         register_setting('mihanpanelsettings-email', 'mp_reset_password_email_content');
         register_setting('mihanpanelsettings-email', 'mp_change_account_status_email_subject');
         register_setting('mihanpanelsettings-email', 'mp_change_account_status_email_content');
+        register_setting('mihanpanelsettings-security', 'mp_smart_login_2fa');
+        register_setting('mihanpanelsettings-security', 'mwpl_redirect_wp_login_tp_mwpl_login');
+        register_setting('mihanpanelsettings-security', 'mwpl_login_guard_status');
+        register_setting('mihanpanelsettings-security', 'mwpl_login_guard_failed_attempt_count_tolerance');
+        register_setting('mihanpanelsettings-security', 'mwpl_login_guard_unblock_timer_minutes');
+        register_setting('mihanpanelsettings-professional_login_options', 'mp_disable_reset_password');
     }
 }

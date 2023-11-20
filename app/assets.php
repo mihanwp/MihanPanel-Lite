@@ -2,6 +2,11 @@
 namespace mihanpanel\app;
 class assets
 {
+    static function get_handle_name($name)
+    {
+        return 'mwpl_' . $name;
+    }
+
     public static function get_js_url($file_name)
     {
         $js = MW_MIHANPANEL_URL . 'js/' . $file_name . '.js';
@@ -20,17 +25,38 @@ class assets
     static function load_admin_assets()
     {
         $plugin_version = \mihanpanel\app\tools::get_plugin_version();
+        wp_enqueue_style('mihanpanel-fields-control-styles', MW_MIHANPANEL_URL . 'css/admin-fields-control.css', '', $plugin_version);
         wp_register_style('mihanpanel-admin-styles', MW_MIHANPANEL_URL . 'css/admin.css', '', $plugin_version);
-        wp_register_style('mihanpanel-admin-fa', MW_MIHANPANEL_URL . 'css/fa/css/all.css', '', $plugin_version);
+        self::enqueue_fontawesome();
         wp_enqueue_style('mihanpanel-admin-styles');
-        wp_enqueue_style('mihanpanel-admin-fa');
         if (!is_rtl())
         {
             wp_enqueue_style('mihanpanel-admin-ltr-style', MW_MIHANPANEL_URL . 'css/admin-ltr.css', '', $plugin_version);
         }
+
+        self::load_media_uploader();
+
+        $font_awesome_icon_picker_css = self::get_css_url('font-awesome-icon-picker');
+        $font_awesome_icon_picker_js = self::get_js_url('font-awesome-icon-picker');
+        wp_enqueue_style('mw_fontawesome_icon_picker', $font_awesome_icon_picker_css, null, $plugin_version);
+        wp_enqueue_script('font-awesome-icon-picker', $font_awesome_icon_picker_js, ['jquery'], $plugin_version, true);
         wp_enqueue_style('wp-color-picker');
         wp_enqueue_script('mwpl_color_picker', MW_MIHANPANEL_URL . 'js/color-picker.js', array('wp-color-picker'), false, true);
+        wp_enqueue_script('mwpl_admin_fields_control', MW_MIHANPANEL_URL . 'js/admin-fields-control.js', null, $plugin_version, true);
+        wp_enqueue_script('mwpl_admin_assets', MW_MIHANPANEL_URL . 'js/admin-assets.js', null, $plugin_version, true);
     }
+
+    public static function enqueue_fontawesome($type = 'all'){
+        $plugin_version = \mihanpanel\app\tools::get_plugin_version();
+        if ($type === 'picker'){
+            $fontawesome_css = self::get_css_url('font-awesome-icon-picker');
+            wp_enqueue_style('mw_fontawesome_picker_css', $fontawesome_css, null, $plugin_version);
+        } else {
+            $fontawesome_css = self::get_css_url('fa/css/all');
+            wp_enqueue_style('mw_fontawesome_css', $fontawesome_css, null, $plugin_version);
+        }
+    }
+
     public static function load_panel_js()
     {
         $panel_js = self::get_js_url('panel');
@@ -87,15 +113,9 @@ class assets
     {
         self::load_sortable_script();
         $version = tools::get_plugin_version();
-        $fontawesome_css = self::get_css_url('fa/css/all');
-        $font_awesome_icon_picker_css = self::get_css_url('font-awesome-icon-picker');
-        $font_awesome_icon_picker_js = self::get_js_url('font-awesome-icon-picker');
         $dropdown_handler = self::get_js_url('admin-menus-drop-down-handler');
         $admin_menu_tabs_js = self::get_js_url('admin-menu-tabs');
 
-        wp_enqueue_style('mw_fontawesome_css', $fontawesome_css, null, $version);
-        wp_enqueue_style('mw_fontawesome_icon_picker', $font_awesome_icon_picker_css, null, $version);
-        wp_enqueue_script('font-awesome-icon-picker', $font_awesome_icon_picker_js, ['jquery'], $version, true);
         wp_enqueue_media();
         wp_enqueue_script('mw_admin_dropdown_handler', $dropdown_handler, ['jquery'], $version, true);
         wp_enqueue_script('admin-menu-tabs', $admin_menu_tabs_js, ['jquery'], $version, true);
@@ -119,38 +139,12 @@ class assets
     }
     static function login_assets()
     {
-        $mp_bg_image = \mihanpanel\app\options::get_login_bg();
-        $mp_logo = \mihanpanel\app\options::get_logo();
         self::load_fonts_assets('login');
-        if(\mihanpanel\app\options::is_send_activation_link_active() && \mihanpanel\app\options::is_active_resend_account_activation_email()){
-            wp_enqueue_script('mihanpanel-resend-email-activation', self::get_js_url('register-resend-activation-email'), [], false, true);
-            wp_localize_script('mihanpanel-resend-email-activation', 'mwp_rea', [
-                'au' => admin_url('admin-ajax.php'),
-                'translate' => [
-                    'title' => get_bloginfo('name') . ' - ' . __('Send account activation email', 'mihanpanel'),
-                    'login' => __('Login', 'mihanpanel'),
-                    'username_label' => __('Username or Email', 'mihanpanel'),
-                    'send_activation_link' => __('Send account activation email', 'mihanpanel'),
-                    'resend_activation_link' => __('Resend account activation email', 'mihanpanel')
-                ]
-            ]);
-        }
+        
         ?>
         <style type="text/css">
-            body.login {
-                background: url('<?php echo esc_url($mp_bg_image); ?>') no-repeat center top;
-            }
-            #login h1 a, .login h1 a {
-                background: url('<?php echo esc_url($mp_logo);?>') no-repeat;
-                width: <?php echo options::get_login_logo_width();?>px;
-                height: <?php echo options::get_login_logo_height();?>px;
-            }
-            <?php if( get_option('login_button_color') != null ):?>
-            body.login form input[type=submit]{
-            background-color:<?php echo get_option( 'login_button_color' );?> !important;
-            box-shadow:0 5px 10px <?php echo get_option( 'login_button_color' );?>60 !important
-            }
-            <?php endif;
+
+            <?php 
             $font_name = apply_filters('mwpl_assets/main_font_name', 'iranyekan');
             if($font_name): ?>
                 body,a,h1,h2,h3,h5,h6,h4,span:not(.dashicons),td,tr,input,p{
@@ -160,15 +154,7 @@ class assets
         </style>
         <?php
     }
-    static function load_login_theme_assets()
-    {
-        $plugin_version = \mihanpanel\app\tools::get_plugin_version();
-        wp_enqueue_style('mwpl-custom-login', MW_MIHANPANEL_URL . 'css/login.css', '', $plugin_version);
-        if (!is_rtl())
-        {
-            wp_enqueue_style('mwpl-custom-login-ltr', MW_MIHANPANEL_URL . 'css/login-ltr.css', '', $plugin_version);
-        }
-    }
+
     static function load_front_assets()
     {
         global $post;
@@ -263,5 +249,23 @@ class assets
             'ajax_url' => admin_url('admin-ajax.php'),
             'nonce' => wp_create_nonce('mw_nonce')
         ];
+    }
+
+    static function enqueue_script($name, $src, $deps = ['jquery'], $version=null, $in_footer=true)
+    {
+        $name = self::get_handle_name($name);
+        $version = $version ? $version : tools::get_plugin_version();
+        wp_enqueue_script($name, $src, $deps, $version, $in_footer);
+    }
+    static function enqueue_style($name, $src, $version=null, $deps=[])
+    {
+        $name = self::get_handle_name($name);
+        $version = $version ? $version : tools::get_plugin_version();
+        wp_enqueue_style($name, $src, $deps, $version);
+    }
+    static function localize_script($name, $object_name, $data)
+    {
+        $name = self::get_handle_name($name);
+        wp_localize_script($name, $object_name, $data);
     }
 }

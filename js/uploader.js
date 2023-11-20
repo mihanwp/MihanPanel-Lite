@@ -35,4 +35,35 @@ jQuery(document).ready(function($){
     });
     mediaUploader.open();
   });
+
+  $(document).on("click", ".mwpl-upload-button", function (e) {
+    e.preventDefault();
+    let button = $(this),
+        valueType = button.data('value-type') || 'id',
+        dataType = button.data('type') || null,
+        field = button.parent().find('input');
+
+    let params = {
+      title: 'Upload file',
+      button: {
+        text: 'Select file'
+      },
+      multiple: false
+    };
+
+    if (dataType){
+      params['library'] = {
+        type: dataType.split(',')
+      };
+    }
+    console.log(params)
+    let custom_uploader = wp.media(params).on('select', function () {
+      let attachment = custom_uploader.state().get('selection').first().toJSON();
+      if (valueType === 'id'){
+        field.val(attachment.id).trigger('change');
+      } else {
+        field.val(attachment.url).trigger('change');
+      }
+    }).open();
+  });
 });

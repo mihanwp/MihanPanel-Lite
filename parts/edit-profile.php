@@ -80,12 +80,26 @@
                 {
                     continue;
                 }
+                $meta = unserialize($field->meta);
+                $field_icon = isset($meta['data']) && isset($meta['data']['field_icon']) ? $meta['data']['field_icon'] : null;
             ?>
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label><?php echo apply_filters('mihanpanel/edit_profile/fields_label_text', esc_html($field->label), $field->slug); ?><?php if ($field->required == 'yes') {
+                        <label>
+                            <?php if (!empty($field_icon)): ?>
+                                <?php if (filter_var($field_icon, FILTER_VALIDATE_URL)): ?>
+                                    <img src="<?php echo esc_attr($field_icon) ?>" alt="field icon" class="field-icon mw_icon">
+                                <?php else: ?>
+                                    <i class="field-icon mw_icon <?php echo esc_attr($field_icon) ?>"></i>
+                                <?php endif; ?>
+                            <?php endif; ?>
+                            <?php echo apply_filters('mihanpanel/edit_profile/fields_label_text', esc_html($field->label), $field->slug); ?>
+                            <?php
+                            if ($field->required == 'yes') {
                                 printf('(%1$s)', esc_html__("Required", "mihanpanel"));
-                            } ?></label>
+                            }
+                            ?>
+                        </label>
                         <div class="form-group label-floating">
                             <?php \mihanpanel\app\presenter\user_fields::render_field('edit-profile', $field, $current_user, ['classes' => 'form-control']); ?>
                         </div>

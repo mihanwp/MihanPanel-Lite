@@ -11,11 +11,6 @@
                 <?php \mihanpanel\app\handle_view::option_panel_smart_login(); ?>
             </p>
             <p>
-                <label for="mp_smart_login_2fa"><?php esc_html_e('Two factor authentication', 'mihanpanel')?></label>
-                <?php \mihanpanel\app\handle_view::option_panel_smart_login_2fa(); ?>
-                <span class="description"><?php esc_html_e('Use authenticator apps', 'mihanpanel')?></span>
-            </p>
-            <p>
                 <label for="mp_smart_login_generate_random_username"><?php esc_html_e('Generate random username', 'mihanpanel')?></label>
                 <?php \mihanpanel\app\handle_view::option_panel_smart_login_generate_random_username(); ?>
             </p>
@@ -26,6 +21,8 @@
         </div>
         <h2><?php esc_html_e("Password Type", "mihanpanel"); ?></h2>
         <?php \mihanpanel\app\handle_view::option_panel_field_password_type(); ?>
+        <h2><?php esc_html_e("Reset Password", "mihanpanel"); ?></h2>
+        <?php \mihanpanel\app\handle_view::option_panel_reset_password(); ?>
         <h2><?php esc_html_e('WPML Settings', 'mihanpanel')?></h2>
         <div class="mp_option_single">
                 <p>

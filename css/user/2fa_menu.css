@@ -1,0 +1,19 @@
+html body .mihanpanelpanel .main-panel.mwtabb .two-factor-user-panel-wrapper form,
+html body .mihanpanelpanel .main-panel.mwtabb .two-factor-user-panel-wrapper .qr-code-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+html body .mihanpanelpanel .main-panel.mwtabb .two-factor-user-panel-wrapper form .input-item
+{
+    width: 150px;
+    margin-bottom: 20px;
+}
+html body .mihanpanelpanel .main-panel.mwtabb .two-factor-user-panel-wrapper ._2fa-active-mode
+{
+    color: green;
+}
+html body .mihanpanelpanel .main-panel.mwtabb .two-factor-user-panel-wrapper input#otp_code_field
+{
+    text-align: center;
+}

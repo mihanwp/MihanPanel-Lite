@@ -236,7 +236,7 @@ class handle_view
         ?>
         <div class="col-md-4">
             <div class="mihanpanel-card mihanpanel-card-stats">
-                <div class="mihanpanel-card-header" data-background-color="purple">
+                <div class="mihanpanel-card-header" data-background-color="pink">
                   <img src="<?php echo MW_MIHANPANEL_URL; ?>/img/comments.svg" width="48" height="48"/>
                 </div>
                 <div class="mihanpanel-card-content">
@@ -490,36 +490,7 @@ class handle_view
         </div>
         <?php
     }
-    static function option_panel_field_login_error_messagebox_text_color()
-    {
-        $render_method = apply_filters('mwpl_option_panel/render_method/login_error_messagebox_text_color', []);
-        self::handle_option_panel_render_method($render_method, 'option_panel_field_login_error_messagebox_text_color_alternative');
-    }
-    static function option_panel_field_login_error_messagebox_text_color_alternative()
-    {
-        ?>
-        <div class="mp_option_single">
-            <label><?php esc_html_e("Login Error Messagebox Text Color", "mihanpanel");?></label>
-            <?php self::show_go_pro_link()?>
-            <p class="description"><?php esc_html_e("Color of Login and Register Error Messagebox Text", "mihanpanel"); ?></p>
-        </div>
-        <?php
-    }
-    static function option_panel_field_login_error_messagebox_bg_color()
-    {
-        $render_method = apply_filters('mwpl_option_panel/render_method/login_error_messagebox_bg_color', []);
-        self::handle_option_panel_render_method($render_method, 'option_panel_field_login_error_messagebox_bg_color_alternative');
-    }
-    static function option_panel_field_login_error_messagebox_bg_color_alternative()
-    {
-        ?>
-        <div class="mp_option_single">
-            <label><?php esc_html_e("Login Error Messagebox Background Color", "mihanpanel");?></label>
-            <?php self::show_go_pro_link()?>
-            <p class="description"><?php esc_html_e("Background Color of Login and Register Error Messagebox", "mihanpanel"); ?></p>
-        </div>
-        <?php
-    }
+
     static function option_panel_field_redirect_normal_user()
     {
         $render_method = apply_filters('mwpl_option_panel/render_method/redirect_normal_user', []);
@@ -691,11 +662,6 @@ class handle_view
         $render_method = apply_filters('mwpl_option_panel/render_method/smart_login', []);
         self::handle_option_panel_render_method($render_method);
     }
-    static function option_panel_smart_login_2fa()
-    {
-        $render_method = apply_filters('mwpl_option_panel/render_method/smart_login_2fa', []);
-        self::handle_option_panel_render_method($render_method);
-    }
     static function option_panel_smart_login_generate_random_username()
     {
         $render_method = apply_filters('mwpl_option_panel/render_method/smart_login_generate_random_username', []);
@@ -706,6 +672,7 @@ class handle_view
         $render_method = apply_filters('mwpl_option_panel/render_method/password_type', []);
         self::handle_option_panel_render_method($render_method, 'option_panel_field_password_type_alternative');
     }
+
     static function option_panel_field_password_type_alternative()
     {
         ?>
@@ -828,6 +795,65 @@ class handle_view
     static function option_panel_field_dynamic_code_email_content()
     {
         $render_method = apply_filters('mwpl_option_panel/render_method/dynamic_code_email_content', []);
+        self::handle_option_panel_render_method($render_method);
+    }
+
+    static function option_panel_custom_captcha()
+    {
+        $render_method = apply_filters('mwpl_option_panel/render_method/custom_captcha', []);
+        self::handle_option_panel_render_method($render_method);
+    }
+
+    static function option_panel_google_recaptcha()
+    {
+        $render_method = apply_filters('mwpl_option_panel/render_method/google_recaptcha', []);
+        self::handle_option_panel_render_method($render_method);
+    }
+
+    static function option_panel_reset_password()
+    {
+        $render_method = apply_filters('mwpl_option_panel/render_method/reset_password', []);
+        self::handle_option_panel_render_method($render_method, 'render_option_panel_field_reset_password_alternative');
+    }
+
+    public static function render_option_panel_field_reset_password_alternative()
+    {
+        $is_active = options::get_reset_password_status();
+        ?>
+        <div class="mp_option_single">
+            <div>
+                <label for="mp_disable_reset_password"><?php echo esc_html__('Disable reset password', 'mihanpanel') ?></label>
+                <input type="checkbox" name="mp_disable_reset_password" id="mp_disable_reset_password" value="1" <?php echo apply_filters('mp_disable_reset_password_checked', checked('1', $is_active, false)) ?>>
+            </div>
+        </div>
+        <?php
+    }
+
+    static function option_panel_login_body_background_fields()
+    {
+        $render_method = apply_filters('mwpl_option_panel/render_method/login_page_background', []);
+        self::handle_option_panel_render_method($render_method);
+    }
+
+    static function option_panel_login_form_background_fields()
+    {
+        $render_method = apply_filters('mwpl_option_panel/render_method/login_form_background', []);
+        self::handle_option_panel_render_method($render_method, 'handle_option_panel_login_form_background_fields_alternative');
+    }
+
+    public static function handle_option_panel_login_form_background_fields_alternative()
+    { ?>
+        <div class="mp_option_single">
+            <label><?php esc_html_e("Login and Register form background", "mihanpanel"); ?></label>
+            <input style="text-align:left;direction:ltr" id="mp_bg_image" type="text" name="mp_bg_image" value="<?php echo esc_attr(get_option('mp_bg_image')); ?>" />
+            <input id="mp_upload_bg_image_button" type="button" class="button-primary" value="<?php esc_attr_e('Upload Image', 'mihanpanel'); ?>" />
+        </div>
+    <?php
+    }
+
+    static function option_panel_files_allowed_upload()
+    {
+        $render_method = apply_filters('mwpl_option_panel/render_method/files_allowed_upload', []);
         self::handle_option_panel_render_method($render_method);
     }
 }

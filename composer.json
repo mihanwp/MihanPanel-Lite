@@ -1,0 +1,8 @@
+{
+    "name": "mihanwp/mihanpanel",
+    "description": "Create user panel and customize user login form",
+    "require": {
+        "pragmarx/google2fa": "^8.0",
+        "google/recaptcha": "^1.2"
+    }
+}

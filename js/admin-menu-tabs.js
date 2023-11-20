@@ -1,15 +1,4 @@
 jQuery(document).ready(function($){
-    $('.mw-new-tab-record-icon').mwpl_iconpicker(".mw-new-tab-record-icon");
-    $('.fontawesome-handle').on('click', function(e){
-        let mwpl_this = $(this),
-            icon_field = mwpl_this.parent().find('input[name=icon]')
-        mwpl_this.mwpl_iconpicker(icon_field)
-        mwpl_this.focusin()
-        icon_field.on('change', function(e){
-            let previewIcon = $(this).parent().find('.preview_icon')
-            previewIcon.html('<i class="mw_icon '+ e.target.value +'"></i>')
-        })
-    })
     $(document).on('change', '.mihanpanel-admin #iscontent', function(e){
         let mwpl_this = $(this),
             value = mwpl_this.val()

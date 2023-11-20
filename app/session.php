@@ -13,7 +13,7 @@ class session
         // create table
         $db = self::get_db($table_name);
         $charset_collate = $db->get_charset_collate();
-        $command = "CREATE TABLE $table_name (
+        $command = "CREATE TABLE IF NOT EXISTS $table_name (
             `session_key` varchar(32) NOT NULL,
             `session_value` longtext NOT NULL,
             `session_expiration` datetime NOT NULL DEFAULT current_timestamp(),

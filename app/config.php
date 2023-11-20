@@ -62,11 +62,17 @@ class config
         add_option('mp_logo_image', MW_MIHANPANEL_URL . 'img/login-logo.svg' );
         add_option('mp_disable_wordpress_bar', 1 );
         add_option('mp_panelslug','panel');
+
+        self::create_tabs_table_in_database();
+        self::create_fields_table_in_database();
+    }
+    static function create_tabs_table_in_database()
+    {
         //Create menu Table in DB
         global $wpdb;
         $charset_collate = $wpdb->get_charset_collate();
         $tablename = $wpdb->prefix . 'mihanpaneltabs';
-        $sql = "CREATE TABLE $tablename (
+        $sql = "CREATE TABLE IF NOT EXISTS $tablename (
                 id mediumint(9) NOT NULL AUTO_INCREMENT,
                 name TINYTEXT NOT NULL,
                 content TEXT NOT NULL,
@@ -109,9 +115,14 @@ class config
                 )
             );
         }
+    }
+    static function create_fields_table_in_database()
+    {
+        global $wpdb;
+        $charset_collate = $wpdb->get_charset_collate();
         //Create fields Table in DB
         $tablenamef = $wpdb->prefix . 'mihanpanelfields';
-        $sqlf = "CREATE TABLE $tablenamef (
+        $sqlf = "CREATE TABLE IF NOT EXISTS $tablenamef (
                 id mediumint(9) NOT NULL AUTO_INCREMENT,
                 slug TINYTEXT NOT NULL,
                 label TINYTEXT NOT NULL,
@@ -204,65 +215,6 @@ class config
         exit();
     }
 
-    static function handle_after_register_message($errors)
-    {
-        $activation_account_mode = options::get_account_activation_type();
-        if(isset($errors->errors['registered']) && ($activation_account_mode == options::AUTO_ACTIVATION_MODE || $activation_account_mode == options::MANUAL_ACTIVATION_MODE))
-        {
-            switch($activation_account_mode)
-            {
-                case options::AUTO_ACTIVATION_MODE:
-                    $new_message = esc_html__("Registration complete. Your account has been activated automatically.", 'mihanpanel');
-                break;
-                case options::MANUAL_ACTIVATION_MODE:
-                    $new_message = esc_html__("Registration complete. Please wait for admin approval.", 'mihanpanel');
-                break;
-            }
-            $login_url = wp_login_url();
-            $append = sprintf(' <a href="%s">%s</a>', $login_url, esc_html__("Login Page", "mihanpanel"));
-            $new_message .= $append;
-            $errors->errors['registered'][0] = $new_message;
-        }
-        return $errors;
-    }
-
-    public static function account_activation_message_handler($message)
-    {
-        $activation_status = isset($_GET['activation_status']) ? sanitize_text_field($_GET['activation_status']) : false;
-        $inactive_account_state = isset($_GET['action']) && $_GET['action'] == 'inactive_account' ? true : false;
-        if ($inactive_account_state)
-        {
-            $activation_account_mode = options::get_account_activation_type();
-            if ($activation_account_mode === options::MANUAL_ACTIVATION_MODE)
-            {
-                $message = esc_html__('Your account is disable! Please wait for admin approval.', 'mihanpanel');
-            }else{
-                $message = esc_html__('Your account is disable!', 'mihanpanel');
-            }
-            return '<p id="login_error">'.$message.'</p>';
-        }
-        if (!$activation_status)
-            return $message;
-        if ($activation_status == 'completed')
-        {
-            $res['message'] = esc_html__('Your Account successfully activated!', 'mihanpanel');
-            $res['state'] = 'class="message"';
-        }else{
-            $res['message'] = esc_html__('Request is invalid!', 'mihanpanel');
-            $res['state'] = 'id="login_error"';
-        }
-        return '<p '.$res['state'].'>'.$res['message'].'</p>';
-    }
-
-    public static function logout_non_active_account($user_login, $user)
-    {
-        if (users::get_activation_code($user->id))
-        {
-            wp_logout();
-            wp_redirect(options::get_login_url(['action' => 'inactive_account']));
-            exit();
-        }
-    }
 
     static function redirect_to_option_panel_handler()
     {
@@ -313,5 +265,39 @@ class config
         $langCode = apply_filters('wpml_current_language', null);
         $url = apply_filters('wpml_permalink', $url, $langCode, true);
         return $url;
+    }
+    static function addMihanPanelMenusToAdminBarMenu($wpAdminBar)
+    {
+        if(is_admin())
+        {
+            $styles = [
+                'width: 20px',
+                'vertical-align: middle',
+                'border-radius: 50%',
+            ];
+            $styles = implode('; ', $styles);
+
+            $panelPageNode = [
+                'title' => sprintf('<img src="%s" style="%s" /> %s',MW_MIHANPANEL_URL . 'img/mp-menu.png', $styles, __('Show user panel', 'mihanpanel')),
+                'href' => options::get_panel_url(),
+                'id' => 'mihanpanel_page',
+                'parent' => 'site-name',
+            ];
+            $wpAdminBar->add_node($panelPageNode);
+        }elseif(is_page( options::get_panel_slug()))
+        {
+            $styles = [
+                'width: 20px',
+                'vertical-align: middle',
+                'border-radius: 50%',
+            ];
+            $styles = implode('; ', $styles);
+            $optionPanelNode = [
+                'title' => sprintf('<img src="%s" style="%s" /> %s',MW_MIHANPANEL_URL . 'img/mp-menu.png', $styles, __('MihanPanel options', 'mihanpanel')),
+                'href' => tools::getOptionPanelUrl(),
+                'id' => 'mihanpanel_option_panel_page',
+            ];
+            $wpAdminBar->add_node($optionPanelNode);
+        }
     }
 }

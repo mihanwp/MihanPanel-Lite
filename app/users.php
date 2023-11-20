@@ -2,6 +2,67 @@
 namespace mihanpanel\app;
 class users
 {
+    private const _2FA_IS_ACTIVE_OPTION_NAME = 'mw_user_2fa_is_active';
+    private const _2FA_SECRET_KEY_OPTION_NAME = 'mw_user_2fa_is_secret_key';
+
+    static function isActive2FA($user_id = null)
+    {
+        $user_id = $user_id ? $user_id : get_current_user_id();
+        if(!$user_id)
+        {
+            return false;
+        }
+        return (int)get_user_meta($user_id, self::_2FA_IS_ACTIVE_OPTION_NAME, true);
+    }
+    static function activate2FA($user_id=null)
+    {
+        $user_id = $user_id ? $user_id : get_current_user_id();
+        if(!$user_id)
+        {
+            return false;
+        }
+        return update_user_meta($user_id, self::_2FA_IS_ACTIVE_OPTION_NAME, 1);
+    }
+    static function deactivate2FA($user_id=null)
+    {
+        $user_id = $user_id ? $user_id : get_current_user_id();
+        if(!$user_id)
+        {
+            return false;
+        }
+        self::delete2faSecretKey($user_id);
+        return delete_user_meta($user_id, self::_2FA_IS_ACTIVE_OPTION_NAME);
+    }
+
+    static function get2faSecretKey($user_id = null)
+    {
+        $user_id = $user_id ? $user_id : get_current_user_id();
+
+        if(!$user_id)
+        {
+            return false;
+        }
+        $currentSecretKey = get_user_meta($user_id, self::_2FA_SECRET_KEY_OPTION_NAME, true);
+        if($currentSecretKey)
+        {
+            return $currentSecretKey;
+        }
+
+        $secretKey = google_otp::generateSecretKey();
+        // update user secret
+        update_user_meta($user_id, self::_2FA_SECRET_KEY_OPTION_NAME, $secretKey);
+
+        return $secretKey;
+    }
+    static function delete2faSecretKey($user_id=null)
+    {
+        $user_id = $user_id ? $user_id : get_current_user_id();
+        if(!$user_id)
+        {
+            return false;
+        }
+        return delete_user_meta($user_id, self::_2FA_SECRET_KEY_OPTION_NAME);
+    }
 	public static function get_user_account_statuses(){
 		$statuses = [
 			'activate' => __('Active', 'mihanpanel'), 
@@ -162,5 +223,10 @@ class users
         }
         $except_role[] = 'administrator';
         return in_array($user_role, $roles_white_list) || in_array($user_role, $except_role);
+    }
+
+    public static function role_exists($role){
+        $roles = self::get_all_roles();
+        return !empty($roles) && $roles->is_role($role);
     }
 }
