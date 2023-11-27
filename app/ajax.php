@@ -175,9 +175,6 @@ class ajax
         do_action('mwpl_register_form_after_create_new_user', $newUserID);
 
         do_action('mwpl_register_end_process_response', $res);
-        
-        $res['msg'] = __('Account successfully created', 'mihanpanel');
-        $res['code'] = 200;
 
         // check account activation type and handle message for showing in login view
         $activationAccountType = options::get_account_activation_type();
@@ -186,9 +183,26 @@ class ajax
         {
             $redirectArgs['mwpl_register_status'] = $activationAccountType;
         }
-        $res['redirect_to'] = \mihanpanel\app\options::get_login_url($redirectArgs);
-        self::send_res($res);
 
+        // handle current redirect_to value in query string
+        $redirectTo = isset($_POST['redirect_to_value']) && $_POST['redirect_to_value'] ? sanitize_url($_POST['redirect_to_value']) : false;
+        if($redirectTo)
+        {
+            $redirectArgs['redirect_to'] = $redirectTo;
+        }
+        
+        // check account activation type and handle message for showing in login view
+        $res['redirect_data'] = [
+            'redirect_to_url' => \mihanpanel\app\options::getMihanPanelLoginUrl(),
+        ];
+        if($redirectArgs)
+        {
+            $res['redirect_data']['params'] = $redirectArgs;
+        }
+        
+        $res['msg'] = __('Account successfully created', 'mihanpanel');
+        $res['code'] = 200;
+        self::send_res($res);
     }
     static function handle_live_edit_tabs_fields_get_items()
     {

@@ -43,6 +43,7 @@ function startTimer(form, expirationTime) {
         if (distance <= 0) {
             clearInterval(timer)
             timerEl.text('00:00')
+            form.trigger('mwpl_login_timer_end')
         }
     }, 1000);
 }

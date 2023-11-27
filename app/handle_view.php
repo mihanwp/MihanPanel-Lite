@@ -410,6 +410,38 @@ class handle_view
         </div>
         <?php
     }
+    static function option_panel_field_register_button_bg_color()
+    {
+        $render_method = apply_filters('mwpl_option_panel/render_method/register_button_bg_color', []);
+        self::handle_option_panel_render_method($render_method, 'option_panel_field_register_button_bg_color_alternative');
+    }
+    static function option_panel_field_register_button_bg_color_alternative()
+    {
+        ?>
+        <div class="mp_option_single">
+            <label><?php esc_html_e("Register button background color", "mihanpanel");?></label>
+            <?php self::show_go_pro_link()?>
+            <p class="description"><?php esc_html_e("You can change background color of register button.", "mihanpanel"); ?></p>
+        </div>
+        <?php
+    }
+
+    static function option_panel_field_register_button_text_color()
+    {
+        $render_method = apply_filters('mwpl_option_panel/render_method/register_button_text_color', []);
+        self::handle_option_panel_render_method($render_method, 'option_panel_field_register_button_text_color_alternative');
+    }
+    static function option_panel_field_register_button_text_color_alternative()
+    {
+        ?>
+        <div class="mp_option_single">
+            <label><?php esc_html_e("Register button text color", "mihanpanel");?></label>
+            <?php self::show_go_pro_link()?>
+            <p class="description"><?php esc_html_e("By changing text color, the border color will also change.", "mihanpanel"); ?></p>
+        </div>
+        <?php
+    }
+    
     static function option_panel_field_login_fields_bg_color()
     {
         $render_method = apply_filters('mwpl_option_panel/render_method/login_fields_bg_color', []);

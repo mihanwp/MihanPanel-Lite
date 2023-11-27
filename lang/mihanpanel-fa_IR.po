@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MihanPanel\n"
-"POT-Creation-Date: 2023-11-20 04:03+0330\n"
-"PO-Revision-Date: 2023-11-20 04:03+0330\n"
+"POT-Creation-Date: 2023-11-27 04:31+0330\n"
+"PO-Revision-Date: 2023-11-27 04:31+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -162,70 +162,70 @@ msgstr "پسورد خود را وارد کنید."
 msgid "Has error in create your account"
 msgstr "مشکلی در ساخت اکانت شما وجود دارد"
 
-#: app/ajax.php:179
+#: app/ajax.php:203
 msgid "Account successfully created"
 msgstr "اکانت شما با موفقیت ساخته شد"
 
-#: app/ajax.php:198 app/ajax.php:237 app/ajax.php:300 app/ajax.php:327
+#: app/ajax.php:212 app/ajax.php:251 app/ajax.php:314 app/ajax.php:341
 msgid "Has error!"
 msgstr "خطا!"
 
-#: app/ajax.php:202
+#: app/ajax.php:216
 msgid "No any items found"
 msgstr "هیچ آیتمی پیدا نشد."
 
-#: app/ajax.php:242 app/ajax.php:311 app/ajax.php:332
+#: app/ajax.php:256 app/ajax.php:325 app/ajax.php:346
 #: app/form/admin_user_fields.php:28 app/form/profile.php:81
 #: views/user/2fa_menu.php:45
 msgid "The operation failed due to security issues."
 msgstr "عملیات به دلیل مشکلات امنیتی متوقف شد."
 
-#: app/ajax.php:291 app/ajax.php:372 app/form/profile.php:110
+#: app/ajax.php:305 app/ajax.php:386 app/form/profile.php:110
 msgid "Successfully updated!"
 msgstr "با موفقیت به روز شد!"
 
-#: app/ajax.php:291 app/ajax.php:372
+#: app/ajax.php:305 app/ajax.php:386
 msgid "Nothing updated."
 msgstr "چیزی آپدیت نشد."
 
-#: app/ajax.php:320
+#: app/ajax.php:334
 msgid "Successfully deleted!"
 msgstr "با موفقیت حذف شد!"
 
-#: app/ajax.php:320
+#: app/ajax.php:334
 msgid "Could not be deleted."
 msgstr "حذف نشد."
 
-#: app/ajax.php:422
+#: app/ajax.php:436
 msgid "The account activation link has been sent to the user email."
 msgstr "لینک فعالسازی اکانت برای ایمیل کاربر ارسال شده است."
 
-#: app/ajax.php:426
+#: app/ajax.php:440
 msgid "Invalid Username or Email."
 msgstr "نام کاربری یا ایمیل نامعتبر است"
 
-#: app/ajax.php:441 app/ajax.php:487
+#: app/ajax.php:455 app/ajax.php:501
 msgid "Request is invalid!"
 msgstr "درخواست شما نامعتبر است!"
 
-#: app/ajax.php:460
+#: app/ajax.php:474
 msgid "Verification code has been sent to email."
 msgstr "کد پویا به آدرس ایمیل ارسال شده است."
 
-#: app/ajax.php:465 app/form/admin_tabs.php:37 app/form/admin_user_fields.php:53
+#: app/ajax.php:479 app/form/admin_tabs.php:37 app/form/admin_user_fields.php:53
 #: app/form/profile.php:55 app/form/profile.php:107
 msgid "An error occurred!"
 msgstr "یک خطا رخ داده است!"
 
-#: app/ajax.php:469 app/ajax.php:495
+#: app/ajax.php:483 app/ajax.php:509
 msgid "User not exists!"
 msgstr "کاربر وجود ندارد!"
 
-#: app/ajax.php:504
+#: app/ajax.php:518
 msgid "The verification code is invalid."
 msgstr "کد پویا نامعتبر است."
 
-#: app/ajax.php:507
+#: app/ajax.php:521
 msgid "Verification done, transferring..."
 msgstr "احراز هویت با موفقیت انجام شد، در حال انتقال…"
 
@@ -584,7 +584,7 @@ msgstr "تعداد خرید شما"
 msgid "Your tickets"
 msgstr "تیکت های شما"
 
-#: app/handle_view.php:386 app/handle_view.php:778 app/middlewares.php:67
+#: app/handle_view.php:386 app/handle_view.php:810 app/middlewares.php:67
 msgid "Pro Version"
 msgstr "نسخه‌ی حرفه‌ای"
 
@@ -597,66 +597,82 @@ msgid "Color of Login and Register button text"
 msgstr "رنگ متن دکمه در صفحه ی ورود و ثبت نام"
 
 #: app/handle_view.php:422
+msgid "Register button background color"
+msgstr "رنگ پس‌زمینه دکمه ثبت‌نام"
+
+#: app/handle_view.php:424
+msgid "You can change background color of register button."
+msgstr "میتوانید رنگ پس‌زمینه دکمه ثبت‌نام را تغییر دهید."
+
+#: app/handle_view.php:438
+msgid "Register button text color"
+msgstr "رنگ متن دکمه ثبت‌نام"
+
+#: app/handle_view.php:440
+msgid "By changing text color, the border color will also change."
+msgstr "با تغییر رنگ متن دکمه، رنگ کادر دور دکمه هم تغییر میکند."
+
+#: app/handle_view.php:454
 msgid "Login Fields Background Color"
 msgstr "رنگ پس زمینه ی فیلدهای فرم ورود"
 
-#: app/handle_view.php:424
+#: app/handle_view.php:456
 msgid "Color of Login and Register fields"
 msgstr "رنگ پس زمینه فیلدهای فرم ورود و ثبت‌نام"
 
-#: app/handle_view.php:437
+#: app/handle_view.php:469
 msgid "Login Field's Label Color"
 msgstr "رنگ لیبل فیلدهای فرم ورود"
 
-#: app/handle_view.php:439
+#: app/handle_view.php:471
 msgid "Color of Login and Register labels"
 msgstr "رنگ متن لیبل فیلدهای فرم ورود و ثبت نام"
 
-#: app/handle_view.php:457
+#: app/handle_view.php:489
 msgid "Login Fields Text Color"
 msgstr "رنگ متن فیلدهای فرم ورود"
 
-#: app/handle_view.php:459
+#: app/handle_view.php:491
 msgid "Color of Login and Register fields text"
 msgstr "رنگ متن فیلدهای فرم ورود و ثبت‌نام"
 
-#: app/handle_view.php:472
+#: app/handle_view.php:504
 msgid "Login Info Messagebox Background Color"
 msgstr "رنگ پس زمینه ی باکس اطلاع رسانی در فرم ورود"
 
-#: app/handle_view.php:474
+#: app/handle_view.php:506
 msgid "Background Color of Login and Register Info Messagebox"
 msgstr "رنگ پس زمینه ی باکس اطلاع رسانی در فرم ورود و ثبت نام"
 
-#: app/handle_view.php:487
+#: app/handle_view.php:519
 msgid "Login Info Messagebox Text Color"
 msgstr "رنگ متن باکس اطلاع رسانی در فرم ورود"
 
-#: app/handle_view.php:489
+#: app/handle_view.php:521
 msgid "Color of Login and Register Info Messagebox Text"
 msgstr "رنگ متن باکس اطلاع رسانی در فرم ورود و ثبت نام"
 
-#: app/handle_view.php:649
+#: app/handle_view.php:681
 msgid "This plugin is not active on your site"
 msgstr "این پلاگین بر روی سایت شما فعال نیست"
 
-#: app/handle_view.php:717
+#: app/handle_view.php:749
 msgid "Auto confirm phone number after user register"
 msgstr "فعالسازی شماره موبایل بعد از ثبت نام به صورت اتوماتیک"
 
-#: app/handle_view.php:721
+#: app/handle_view.php:753
 msgid "User can change phone number"
 msgstr "کاربر میتواند شماره موبایل را تغییر دهد"
 
-#: app/handle_view.php:825
+#: app/handle_view.php:857
 msgid "Disable reset password"
 msgstr "غیر‌فعال کردن فیلد بازیابی رمز عبور"
 
-#: app/handle_view.php:847
+#: app/handle_view.php:879
 msgid "Login and Register form background"
 msgstr "پس زمینه فرم ورود و ثبت نام"
 
-#: app/handle_view.php:849 views/admin/panel-section/general.php:102
+#: app/handle_view.php:881 views/admin/panel-section/general.php:104
 msgid "Upload Image"
 msgstr "آپلود تصویر"
 
@@ -745,7 +761,7 @@ msgstr "ارسال لینک فعالسازی"
 msgid "Manual Activation"
 msgstr "فعالسازی دستی"
 
-#: app/options.php:151
+#: app/options.php:160
 #, php-format
 msgid "%1$s off code for your next purchase"
 msgstr "کد تخفیف %1$s برای خرید بعدی شما"
@@ -1223,36 +1239,36 @@ msgstr "رنگ دکمه ورود"
 msgid "Color of Login and Register button"
 msgstr "پس زمینه دکمه ورود و ثبت‌نام"
 
-#: views/admin/panel-section/general.php:100
+#: views/admin/panel-section/general.php:102
 msgid "Login and Register form Logo"
 msgstr "لوگوی فرم ورود و عضویت"
 
-#: views/admin/panel-section/general.php:103
+#: views/admin/panel-section/general.php:105
 msgid "We suggest to use 120 * 120 px for logo size."
 msgstr ""
 "ما پیشنهاد می کنیم از سایز ۱۲۰ * ۱۲۰ (پیکسل) برای اندازه لوگو  استفاده کنید."
 
-#: views/admin/panel-section/general.php:106
+#: views/admin/panel-section/general.php:108
 msgid "Logo Width (px)"
 msgstr "پهنای لوگو ( به پیکسل )"
 
-#: views/admin/panel-section/general.php:110
+#: views/admin/panel-section/general.php:112
 msgid "Logo Height (px)"
 msgstr "ارتفاع لوگو ( به پیکسل )"
 
-#: views/admin/panel-section/general.php:116
+#: views/admin/panel-section/general.php:118
 msgid "Login page Background"
 msgstr "پس‌زمینه‌ی صفحه‌ی ورود"
 
-#: views/admin/panel-section/general.php:119
+#: views/admin/panel-section/general.php:121
 msgid "Login form Background"
 msgstr "پس‌زمینه‌ی فرم ورود"
 
-#: views/admin/panel-section/general.php:133
+#: views/admin/panel-section/general.php:135
 msgid "Redirect non Admin user to"
 msgstr "تغییر مسیر کاربر غیر مدیر به"
 
-#: views/admin/panel-section/general.php:135
+#: views/admin/panel-section/general.php:137
 msgid ""
 "Users who don't have admin or author caps, redirect to this address after "
 "login (with http or https)"
@@ -2411,6 +2427,9 @@ msgstr "https://mihanwp.com/"
 #~ msgid "Login via dynamic code"
 #~ msgstr "ورود با کد یکبار مصرف"
 
+#~ msgid "Resend code"
+#~ msgstr "ارسال دوباره کد"
+
 #~ msgid "Success"
 #~ msgstr "موفقیت"
 
@@ -2628,6 +2647,12 @@ msgstr "https://mihanwp.com/"
 
 #~ msgid "Request Code"
 #~ msgstr "درخواست کد"
+
+#~ msgid "Color of Register button"
+#~ msgstr "رنگ متن دکمه ثبت‌نام"
+
+#~ msgid "Color of Register button text"
+#~ msgstr "رنگ متن دکمه ثبت‌نام"
 
 #~ msgid "Registration complete. Your account has been activated automatically."
 #~ msgstr "نام نویسی انجام شد. اکانت شما به صورت خودکار فعال شده است."

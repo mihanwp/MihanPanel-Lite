@@ -184,26 +184,4 @@ class tools
     public static function send_json_response($response){
         die(json_encode($response));
     }
-
-    static function is_phone_number($phone)
-    {
-        if(!is_numeric($phone))
-        {
-            return false;
-        }
-        $pattern = '/^(0|98|\+98)?(90|91|92|93|99)([0-9]{1})([0-9]{3})([0-9]{4})$/';
-        $res = preg_match($pattern, $phone, $matches);
-        return $res ? self::clear_phone_number($phone) : false;
-    }
-
-    static function clear_phone_number($phone)
-    {
-        if(!is_numeric($phone))
-        {
-            return false;
-        }
-        $phone = intval($phone);
-        $phone = intval(preg_replace("/^98|\+98/", '', $phone));
-        return $phone;
-    }
 }

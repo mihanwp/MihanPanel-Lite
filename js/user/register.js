@@ -117,6 +117,15 @@ jQuery(document).ready(function ($) {
         formData.append('action', 'mwpl_register_form')
         formData.append('nonce', mwpl_data_register.nonce)
 
+        // get current redirect to from query string
+        let queryString = window.location.search,
+                params = new URLSearchParams(queryString),
+                redirect_to = params.get('redirect_to')
+        if(redirect_to)
+        {
+            formData.append('redirect_to_value', redirect_to)
+        }
+
         $.ajax({
             url: mwpl_data_register.au,
             type: 'post',
@@ -129,9 +138,20 @@ jQuery(document).ready(function ($) {
                     // redirect user
                     showNotice(response.msg, 'success')
                     $('.agr-recaptcha-wrapper').slideUp();
-                    if (response.redirect_to) {
+                    if(response.redirect_data)
+                    {
+                        let newUrlData = new URLSearchParams()
+                        let newUrl = response.redirect_data.redirect_to_url
+                        if(response.redirect_data.params)
+                        {
+                            for(let index in response.redirect_data.params)
+                            {
+                                newUrlData.append(index, response.redirect_data.params[index])
+                            }
+                            newUrl = newUrl + '?' + newUrlData.toString()
+                        }
                         setTimeout(() => {
-                            window.location.href = response.redirect_to
+                            window.location.href = newUrl
                         }, 200);
                     }
                 } else {

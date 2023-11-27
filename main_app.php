@@ -18,7 +18,6 @@ final class MihanPanelApp
         $this->do_define();
         $this->autoload();
         $this->includes();
-        \mihanpanel\pro\mihanpanelProApp::init();
         live_edit::getInstance();
         register_deactivation_hook(WP_MIHANPANEL_MAIN_APP, ['\mihanpanel\app\hooks', 'deactivation_hook']);
     }

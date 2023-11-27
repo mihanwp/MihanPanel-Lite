@@ -218,8 +218,6 @@
     padding: 15px 10px;
     display: block;
     width: 100%;
-    background-color: #0d94f7;
-    color: white;
     border: 1px solid #0d94f7;
     border-radius: 10px;
     box-sizing: border-box;
@@ -326,9 +324,6 @@
     cursor: pointer;
 }
 
-.mwpl-login-body .mwpl-form-fields .mwpl-notice-wrapper .mwpl-register-link {
-    cursor: pointer;
-}
 
 .mwpl-login-body .mwpl-form-fields .mwpl-notice.mwpl-success {
     color: #639b2b;
@@ -515,13 +510,17 @@
 
 @media only screen and (max-width: 480px)
 {
+    .mwpl-login-body .mwpl-login-logo img
+    {
+        max-width: 100%;
+    }
     .mwpl-login-body .mwpl-image-cover-wrapper
     {
         display: none;
     }
     body.mwpl-login-body div.mwpl-login-wrapper
     {
-        grid-template-columns: 1fr !important;
+        display: block;
         width: 100%;
     }
     .mwpl-login-body .mwpl-form-fields,

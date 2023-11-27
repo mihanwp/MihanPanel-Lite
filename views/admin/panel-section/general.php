@@ -90,6 +90,8 @@
             </div>
             <?php
             \mihanpanel\app\handle_view::option_panel_field_login_button_text_color();
+            \mihanpanel\app\handle_view::option_panel_field_register_button_bg_color();
+            \mihanpanel\app\handle_view::option_panel_field_register_button_text_color();
             \mihanpanel\app\handle_view::option_panel_field_login_labels_color();
             \mihanpanel\app\handle_view::option_panel_field_login_fields_bg_color();
             \mihanpanel\app\handle_view::option_panel_field_login_fields_text_color();

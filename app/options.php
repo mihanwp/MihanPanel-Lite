@@ -56,6 +56,15 @@ class options
         }
         return esc_url(add_query_arg($query_args, wp_login_url($redirect)));
     }
+    static function getMihanPanelLoginUrl($args=[])
+    {
+        $loginSlug = self::get_login_slug();
+        if(!$args || !is_array($args))
+        {
+            return esc_url(site_url($loginSlug));
+        }
+        return esc_url(add_query_arg($args, site_url($loginSlug)));
+    }
     public static function getLoginPageLogo()
     {
         $option = get_option('mp_logo_image');
