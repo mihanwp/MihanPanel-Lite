@@ -56,7 +56,6 @@ jQuery(document).ready(function($){
         type: dataType.split(',')
       };
     }
-    console.log(params)
     let custom_uploader = wp.media(params).on('select', function () {
       let attachment = custom_uploader.state().get('selection').first().toJSON();
       if (valueType === 'id'){

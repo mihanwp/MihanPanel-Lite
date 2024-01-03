@@ -21,6 +21,9 @@ jQuery(document).ready(function ($) {
         valueWrapper.text(mwpl_this.val())
     });
 
+    setTimeout(() => {
+        $(document).find('.checkbox-affected-toggle-elements').change()
+    }, 300);
     $(document).on("change", ".checkbox-affected-toggle-elements", function (e) {
         e.preventDefault();
         let $this = $(this),

@@ -86,18 +86,21 @@ function mwplLoginFooter()
 
 function mwplLoginContent()
 {
+    $isActiveCover = apply_filters('mwpl_is_active_cover_form_section', true);
 ?>
-    <div class="mwpl-login-wrapper">
+    <div class="mwpl-login-wrapper <?php echo $isActiveCover ? 'mwpl-has-cover' : 'mwpl-no-cover'; ?>">
         <?php \mihanpanel\app\login::renderLoginForm();?>
-        <div class="mwpl-image-cover-wrapper">
-            <?php
-            if (\mihanpanel\app\tools::isProVersion()){
-                do_action('mp_login_cover_wrapper');
-            } else {
-                echo '<img src="'. \mihanpanel\app\options::get_login_bg() .'" alt="login-bg">';
-            }
-            ?>
-        </div>
+        <?php if($isActiveCover): ?>
+            <div class="mwpl-image-cover-wrapper">
+                <?php
+                if (\mihanpanel\app\tools::isProVersion()){
+                    do_action('mp_login_cover_wrapper');
+                } else {
+                    echo '<img src="'. \mihanpanel\app\options::get_login_bg() .'" alt="login-bg">';
+                }
+                ?>
+            </div>
+        <?php endif; ?>
     </div>
 <?php
 }

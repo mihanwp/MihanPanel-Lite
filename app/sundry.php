@@ -71,6 +71,7 @@ class sundry
     }
     static function add_extra_fields_to_profile($user)
     {
+        do_action('mihanpanel/admin/user_profile/before_start_extra_fields', $user);
         ?>
         <table class="form-table">
             <?php
@@ -92,12 +93,15 @@ class sundry
             <?php endforeach; ?>
         </table>
         <?php
+        do_action('mihanpanel/admin/user_profile/after_end_extra_fields');
     }
     static function handle_update_profile_extra_fields($user_id)
     {
         if (!current_user_can('edit_user', $user_id)) {
             return false;
         }
+        do_action('mihanpanel/admin/user_profile/before_save_extra_fields', $user_id);
+
         global $wpdb;
         $tablename = $wpdb->prefix . 'mihanpanelfields';
         $fields = $wpdb->get_results("SELECT * FROM $tablename where type!='file_uploader'");
@@ -230,5 +234,36 @@ class sundry
             $value = tools::sanitize_value($_POST['mw_fields'][$field->slug], $field->type);
             update_user_meta($user_id, $field->slug, $value);
         }       
+    }
+    static function addUserGoogleOtpStatusInAdminProfile($user)
+    {
+        if(!users::isActive2FA($user->ID))
+        {
+            return false;
+        }
+        ?>
+        <table class="form-table">
+            <tbody>
+                <tr>
+                    <th><?php esc_html_e("User 2FA status", "mihanpanel"); ?></th>
+                    <td>
+                        <label for="mw_is_active_2fa">
+                            <input <?php checked(1, \mihanpanel\app\users::isActive2FA($user->ID))?> id="mw_is_active_2fa" class="regular-text" name="mw_is_active_2fa" type="checkbox">                            
+                            <?php _e('Activate', 'mihanpanel')?>
+                        </label>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <?php
+    }
+    static function handleUpdateUserGoogleOtpStatusInAdminProfile($userID)
+    {
+        if(!users::isActive2FA($userID))
+        {
+            return false;
+        }
+        $_2faStatus = isset($_POST['mw_is_active_2fa']);
+        $_2faStatus ? users::activate2FA($userID) : users::deactivate2FA($userID);
     }
 }

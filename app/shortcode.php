@@ -11,7 +11,7 @@ class shortcode
     {
         if(tools::isProVersion())
         {
-            return \mihanpanel\pro\app\shortcode::handle_woocommerce_shortcode();
+            return \mihanpanel\pro\app\shortcode::handle_woocommerce_orders_shortcode();
         }else{
             return self::get_not_pro_version_error();
         }

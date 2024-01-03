@@ -689,6 +689,67 @@ class handle_view
         $render_method = apply_filters('mwpl_option_panel/render_method/force_get_phone_number_in_smart_login_mode', []);
         self::handle_option_panel_render_method($render_method);
     }
+    static function option_panel_field_edit_username_field_label_in_login_form()
+    {
+        $render_method = apply_filters('mwpl_option_panel/render_method/edit_login_fields_labels/username', []);
+        self::handle_option_panel_render_method($render_method);
+    }
+    static function option_panel_field_username_field_label_value_in_login_form()
+    {
+        $render_method = apply_filters('mwpl_option_panel/render_method/edit_login_fields_labels/username_value', []);
+        self::handle_option_panel_render_method($render_method);
+    }
+    static function option_panel_field_edit_phone_field_label_in_login_form()
+    {
+        $render_method = apply_filters('mwpl_option_panel/render_method/edit_login_fields_labels/phone', []);
+        self::handle_option_panel_render_method($render_method);
+    }
+    static function option_panel_field_phone_field_label_value_in_login_form()
+    {
+        $render_method = apply_filters('mwpl_option_panel/render_method/edit_login_fields_labels/phone_value', []);
+        self::handle_option_panel_render_method($render_method);
+    }
+    static function option_panel_field_edit_password_field_label_in_login_form()
+    {
+        $render_method = apply_filters('mwpl_option_panel/render_method/edit_login_fields_labels/password', []);
+        self::handle_option_panel_render_method($render_method);
+    }
+    static function option_panel_field_password_field_label_value_in_login_form()
+    {
+        $render_method = apply_filters('mwpl_option_panel/render_method/edit_login_fields_labels/password_value', []);
+        self::handle_option_panel_render_method($render_method);
+    }
+    static function option_panel_field_edit_dynamic_code_field_label_in_login_form()
+    {
+        $render_method = apply_filters('mwpl_option_panel/render_method/edit_login_fields_labels/dynamic_code', []);
+        self::handle_option_panel_render_method($render_method);
+    }
+    static function option_panel_field_dynamic_code_field_label_value_in_login_form()
+    {
+        $render_method = apply_filters('mwpl_option_panel/render_method/edit_login_fields_labels/dynamic_code_value', []);
+        self::handle_option_panel_render_method($render_method);
+    }
+    static function option_panel_field_edit_login_button_text_in_login_form()
+    {
+        $render_method = apply_filters('mwpl_option_panel/render_method/edit_login_fields_labels/login_button', []);
+        self::handle_option_panel_render_method($render_method);
+    }
+    static function option_panel_field_login_button_text_value_in_login_form()
+    {
+        $render_method = apply_filters('mwpl_option_panel/render_method/edit_login_fields_labels/login_button_text_value', []);
+        self::handle_option_panel_render_method($render_method);
+    }
+    static function option_panel_field_edit_register_button_text_in_login_form()
+    {
+        $render_method = apply_filters('mwpl_option_panel/render_method/edit_login_fields_labels/register_button', []);
+        self::handle_option_panel_render_method($render_method);
+    }
+    static function option_panel_field_register_button_text_value_in_login_form()
+    {
+        $render_method = apply_filters('mwpl_option_panel/render_method/edit_login_fields_labels/register_button_text_value', []);
+        self::handle_option_panel_render_method($render_method);
+    }
+    
     static function option_panel_smart_login()
     {
         $render_method = apply_filters('mwpl_option_panel/render_method/smart_login', []);
@@ -887,5 +948,26 @@ class handle_view
     {
         $render_method = apply_filters('mwpl_option_panel/render_method/files_allowed_upload', []);
         self::handle_option_panel_render_method($render_method);
+    }
+
+    static function optionPanelContentMiddlewares($middlewares)
+    {
+        // check lciense
+        $middlewares[] = [__CLASS__, 'handleAdminNoticesInOptionPanel'];
+        return $middlewares;
+    }
+    static function handleAdminNoticesInOptionPanel()
+    {
+        $notices = notice::once_get_multiple_notice();
+        if($notices)
+        {
+            foreach($notices as $noticeItem)
+            {
+                $notice = sprintf('<p class="alert %s">%s</p>', $noticeItem['type'], $noticeItem['msg']);
+                echo $notice;
+            }
+            
+        }
+        return true;
     }
 }

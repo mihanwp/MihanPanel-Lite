@@ -9,6 +9,11 @@ class login
         add_action('init', [__CLASS__, 'initRoute']);
         add_action('mwpl_before_update_db_version', [__CLASS__, 'handleFlushRewriteRulesAfterPluginUpdated']);
         add_action('mwpl_login_form_after_start_form', [__CLASS__, 'handleQueryStringStateMessages']);
+
+        // create Login Guard database tables
+        add_action('mwpl_before_update_db_version', ['\mihanpanel\app\login_guard', 'beforeUpdateDbVersion']);
+        add_action('after_create_default_database_tables_tools_page', ['\mihanpanel\app\login_guard', 'createDatabaseTables']);
+        
         if (\mihanpanel\app\options::getLoginGuardStatus()) {
             \mihanpanel\app\login_guard::init();
         }
@@ -34,6 +39,9 @@ class login
         add_action('init', [__CLASS__, 'handleFlushRewriteRulesAfterUpdateLoginSlugOption']);
 
         add_action('before_render_login_page_content', [__CLASS__, 'redirectIfUserIsLoggedIn']);
+
+        // filter redirect_to url after login
+        add_filter('mwpl_after_login_redirect_url', [__CLASS__, 'filterAfterLoginUrl'], 10, 2);
     }
     static function getLoginSlug()
     {
@@ -53,7 +61,7 @@ class login
         if (strpos($pagenow, 'wp-login.php') !== false) {
             $newLocation = options::get_login_url();
             if (isset($_GET) && $_GET) {
-                if (isset($_GET['action']) && $_GET['action'] == 'logout') {
+                if (isset($_GET['action']) && ($_GET['action'] == 'logout' || $_GET['action'] == 'postpass')) {
                     return;
                 }
                 $newLocation = esc_url(add_query_arg($_GET, $newLocation));
@@ -158,6 +166,10 @@ class login
         $additionalStyle = '';
         if ($loginButtonBgColor = \mihanpanel\app\options::get_login_button_bg_color()) {
             $additionalStyle .= '.mwpl-login-body .mwpl-form-fields .mwpl-input-item input[type="submit"]{ background-color: ' . $loginButtonBgColor . '; border-color: ' . $loginButtonBgColor . '}';
+        }
+        if($loginLogoWidth = \mihanpanel\app\options::get_login_logo_width())
+        {
+            $additionalStyle .= '.mwpl-login-body .mwpl-login-logo img {width: '.$loginLogoWidth.'px; }';
         }
 
         if ($additionalStyle) {
@@ -373,5 +385,14 @@ class login
                 <?php
             }
         }
+    }
+    static function filterAfterLoginUrl($url, $userID)
+    {
+        // redirect to wp-admin is user is admin
+        if(is_super_admin($userID))
+        {
+            return admin_url();
+        }
+        return $url;
     }
 }

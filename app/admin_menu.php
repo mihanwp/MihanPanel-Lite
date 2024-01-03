@@ -73,7 +73,7 @@ class admin_menu
 
             // check if has not meta col
             $tabsCols = $wpdb->get_col("DESCRIBE {$tabsTableName}");
-            if (!in_array('metas', $tabsCols)) {
+            if (!in_array('meta', $tabsCols)) {
                 $command = "ALTER TABLE {$tabsTableName} ADD meta longtext NOT NULL after priority;";
                 $wpdb->query($command);
             }

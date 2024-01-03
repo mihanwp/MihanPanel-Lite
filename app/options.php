@@ -145,11 +145,6 @@ class options
         $value = get_option('mp_logo_width', '120');
         return $value ? $value : '120';
     }
-    static function get_login_logo_height()
-    {
-        $value = get_option('mp_logo_height', '120');
-        return $value ? $value : '120';
-    }
     static function get_offer_code_percentage_value()
     {
         return get_option('mp_offer_perc');
@@ -201,7 +196,6 @@ class options
         register_setting('mihanpanelsettings', 'mp_resend_activation_email_link');
         register_setting('mihanpanelsettings', 'mp_logo_image');
         register_setting('mihanpanelsettings', 'mp_logo_width');
-        register_setting('mihanpanelsettings', 'mp_logo_height');
         register_setting('mihanpanelsettings', 'mp_bg_image');
         register_setting('mihanpanelsettings', 'login_button_color');
         register_setting('mihanpanelsettings-panel', 'mwpl_disable_font_family');

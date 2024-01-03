@@ -23,6 +23,59 @@
         <?php \mihanpanel\app\handle_view::option_panel_field_password_type(); ?>
         <h2><?php esc_html_e("Reset Password", "mihanpanel"); ?></h2>
         <?php \mihanpanel\app\handle_view::option_panel_reset_password(); ?>
+        <h2><?php _e('Texts', 'mihanpanel')?></h2>
+        <div class="mp_option_single">
+            <p>
+                <label for="mp_edit_username_field_label_in_login_form"><?php _e('Change username label in login form', 'mihanpanel')?></label>
+                <?php \mihanpanel\app\handle_view::option_panel_field_edit_username_field_label_in_login_form(); ?>
+            </p>
+            <p>
+                <label for="mp_username_field_label_value_in_login_form"><?php _e('Username label', 'mihanpanel')?></label>
+                <?php \mihanpanel\app\handle_view::option_panel_field_username_field_label_value_in_login_form(); ?>
+            </p>
+            <p>
+                <label for="mp_edit_phone_field_label_in_login_form"><?php _e('Change phone label in login form', 'mihanpanel')?></label>
+                <?php \mihanpanel\app\handle_view::option_panel_field_edit_phone_field_label_in_login_form(); ?>
+            </p>
+            <p>
+                <label for="mp_phone_field_label_value_in_login_form"><?php _e('Phone label', 'mihanpanel')?></label>
+                <?php \mihanpanel\app\handle_view::option_panel_field_phone_field_label_value_in_login_form(); ?>
+            </p>
+            <p>
+                <label for="mp_edit_password_field_label_in_login_form"><?php _e('Change password label in login form', 'mihanpanel')?></label>
+                <?php \mihanpanel\app\handle_view::option_panel_field_edit_password_field_label_in_login_form(); ?>
+            </p>
+            <p>
+                <label for="mp_password_field_label_value_in_login_form"><?php _e('Password label', 'mihanpanel')?></label>
+                <?php \mihanpanel\app\handle_view::option_panel_field_password_field_label_value_in_login_form() ?>
+            </p>
+            <p>
+                <label for="mp_edit_dynamic_code_field_label_in_login_form"><?php _e('Change dynamic code label in login form', 'mihanpanel')?></label>
+                <?php \mihanpanel\app\handle_view::option_panel_field_edit_dynamic_code_field_label_in_login_form(); ?>
+            </p>
+            <p>
+                <label for="mp_dynamic_code_field_label_value_in_login_form"><?php _e('Dynamic code label', 'mihanpanel')?></label>
+                <?php \mihanpanel\app\handle_view::option_panel_field_dynamic_code_field_label_value_in_login_form() ?>
+            </p>
+
+            <p>
+                <label for="mp_edit_login_button_text_in_login_form"><?php _e('Change Login button text in login form', 'mihanpanel')?></label>
+                <?php \mihanpanel\app\handle_view::option_panel_field_edit_login_button_text_in_login_form(); ?>
+            </p>
+            <p>
+                <label for="mp_login_button_text_value_in_login_form"><?php _e('Login button text', 'mihanpanel')?></label>
+                <?php \mihanpanel\app\handle_view::option_panel_field_login_button_text_value_in_login_form() ?>
+            </p>
+
+            <p>
+                <label for="mp_edit_register_button_text_in_login_form"><?php _e('Change register button text in login form', 'mihanpanel')?></label>
+                <?php \mihanpanel\app\handle_view::option_panel_field_edit_register_button_text_in_login_form(); ?>
+            </p>
+            <p>
+                <label for="mp_register_button_text_value_in_login_form"><?php _e('Register button text', 'mihanpanel')?></label>
+                <?php \mihanpanel\app\handle_view::option_panel_field_register_button_text_value_in_login_form() ?>
+            </p>
+        </div>
         <h2><?php esc_html_e('WPML Settings', 'mihanpanel')?></h2>
         <div class="mp_option_single">
                 <p>

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MihanPanel\n"
-"POT-Creation-Date: 2023-11-27 04:31+0330\n"
-"PO-Revision-Date: 2023-11-27 04:31+0330\n"
+"POT-Creation-Date: 2024-01-04 03:11+0330\n"
+"PO-Revision-Date: 2024-01-04 03:12+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -34,7 +34,7 @@ msgstr "میهن پنل"
 msgid "Login & Register"
 msgstr "ورود و عضویت"
 
-#: app/admin_menu.php:33 app/admin_menu.php:56 app/hooks.php:163
+#: app/admin_menu.php:33 app/admin_menu.php:56 app/hooks.php:171
 msgid "User Panel"
 msgstr "پنل کاربری"
 
@@ -96,7 +96,6 @@ msgstr "این بخش در نسخه‌ی حرفه‌ای میهن‌پنل در 
 msgid "This feature is accessible only in %s."
 msgstr "این قابلیت فقط در %s در دسترس است"
 
-#. Plugin Name of the plugin/theme
 #: app/admin_menu.php:206
 msgid "MihanPanel Pro"
 msgstr "میهن پنل پرو"
@@ -110,11 +109,11 @@ msgstr "آی‌پی‌های بلاک شده"
 msgid "%d item"
 msgstr "‫%d مورد"
 
-#: app/ajax.php:41 app/login.php:178 app/login.php:197
+#: app/ajax.php:41 app/login.php:190 app/login.php:209
 msgid "Please fill username field"
 msgstr "لطفا نام کاربری را وارد کنید"
 
-#: app/ajax.php:47 app/login.php:179 app/login.php:198
+#: app/ajax.php:47 app/login.php:191 app/login.php:210
 msgid "Please fill password field"
 msgstr "لطفا رمز عبور را وارد کنید"
 
@@ -126,7 +125,7 @@ msgstr "کاربر وجود ندارد!"
 msgid "Invalid username or password"
 msgstr "نام کاربری یا پسورد اشتباه است"
 
-#: app/ajax.php:71 app/login.php:335 views/user/inactive_account.php:8
+#: app/ajax.php:71 app/login.php:347 views/user/inactive_account.php:8
 msgid "Your account is disable!"
 msgstr "اکانت شما غیرفعال است!"
 
@@ -229,31 +228,44 @@ msgstr "کد پویا نامعتبر است."
 msgid "Verification done, transferring..."
 msgstr "احراز هویت با موفقیت انجام شد، در حال انتقال…"
 
-#: app/config.php:93
+#: app/config.php:92
 msgid "Woocommerce Download Products"
 msgstr "دانلود محصولات"
 
-#: app/config.php:102
+#: app/config.php:101
 msgid "My Purchases"
 msgstr "فایل های خریداری شده"
 
-#: app/config.php:111
+#: app/config.php:110
 msgid "Support Telegram"
 msgstr "پشتیبانی تلگرامی"
 
-#: app/config.php:165
+#: app/config.php:164
 msgid "You need to install easy digital downloads plugin for using this section!"
 msgstr ""
 "برای استفاده از این بخش ابتدا باید افزونه ی \"easy digital downloads\" را نصب "
 "کنید!"
 
-#: app/config.php:281
+#: app/config.php:280
 msgid "Show user panel"
 msgstr "نمایش پنل کاربری"
 
-#: app/config.php:296
+#: app/config.php:295
 msgid "MihanPanel options"
 msgstr "تنظیمات میهن پنل"
+
+#: app/config.php:309
+msgid ""
+"Login slug must not equal with panel slug, please choose another slug value."
+msgstr ""
+"آدرس صفحه ورود نباید با آدرس صفحه پنل کاربری یکی باشد؛ لطفا آدرس دیگری را "
+"انتخاب کنید."
+
+#: app/config.php:322
+msgid "Panel slug must not equal with login slug, please choose another page."
+msgstr ""
+"آدرس برگه پنل کاربری نباید با آدرس صفحه ورود یکی باشد؛ لطفا برگه‌ی دیگری را "
+"انتخاب کنید."
 
 #: app/email.php:73
 msgid "Account activation"
@@ -298,7 +310,7 @@ msgstr "فعال"
 msgid "Inactive"
 msgstr "غیرفعال"
 
-#: app/emwidg/emwidg_mihanpanel.php:26 app/hooks.php:184 app/live_edit.php:79
+#: app/emwidg/emwidg_mihanpanel.php:26 app/hooks.php:192 app/live_edit.php:79
 msgid "Mihan Panel"
 msgstr "میهن پنل"
 
@@ -584,7 +596,7 @@ msgstr "تعداد خرید شما"
 msgid "Your tickets"
 msgstr "تیکت های شما"
 
-#: app/handle_view.php:386 app/handle_view.php:810 app/middlewares.php:67
+#: app/handle_view.php:386 app/handle_view.php:871 app/middlewares.php:67
 msgid "Pro Version"
 msgstr "نسخه‌ی حرفه‌ای"
 
@@ -656,23 +668,23 @@ msgstr "رنگ متن باکس اطلاع رسانی در فرم ورود و ث�
 msgid "This plugin is not active on your site"
 msgstr "این پلاگین بر روی سایت شما فعال نیست"
 
-#: app/handle_view.php:749
+#: app/handle_view.php:810
 msgid "Auto confirm phone number after user register"
 msgstr "فعالسازی شماره موبایل بعد از ثبت نام به صورت اتوماتیک"
 
-#: app/handle_view.php:753
+#: app/handle_view.php:814
 msgid "User can change phone number"
 msgstr "کاربر میتواند شماره موبایل را تغییر دهد"
 
-#: app/handle_view.php:857
+#: app/handle_view.php:918
 msgid "Disable reset password"
 msgstr "غیر‌فعال کردن فیلد بازیابی رمز عبور"
 
-#: app/handle_view.php:879
+#: app/handle_view.php:940
 msgid "Login and Register form background"
 msgstr "پس زمینه فرم ورود و ثبت نام"
 
-#: app/handle_view.php:881 views/admin/panel-section/general.php:104
+#: app/handle_view.php:942 views/admin/panel-section/general.php:104
 msgid "Upload Image"
 msgstr "آپلود تصویر"
 
@@ -708,35 +720,35 @@ msgstr "آزمایشی"
 msgid "Exit from live edit"
 msgstr "خروج از ویرایشگر"
 
-#: app/login.php:180 app/login.php:199
+#: app/login.php:192 app/login.php:211
 msgid "Has error in request"
 msgstr "خطایی در درخواست وجود دارد"
 
-#: app/login.php:240
+#: app/login.php:252
 msgid "OTP Code"
 msgstr "کد OTP"
 
-#: app/login.php:316
+#: app/login.php:328
 msgid "Your Account successfully activated! You can login with your account"
 msgstr "اکانت شما با موفقیت فعال شد! میتوانید وارد اکانت خود شوید"
 
-#: app/login.php:330
+#: app/login.php:342
 msgid "Your account is disable! Please wait for admin approval."
 msgstr "اکانت شما غیرفعال است. لطفا منتظر تایید مدیریت سایت باشید."
 
-#: app/login.php:348
+#: app/login.php:360
 msgid "Registration completed, You can login with your account."
 msgstr "ثبت نام شما انجام شد! میتوانید وارد اکانت خود شوید."
 
-#: app/login.php:354
+#: app/login.php:366
 msgid "Registration completed, Please wait for admin approval."
 msgstr "نام نویسی انجام شد؛ لطفا منتظر تایید مدیریت سایت باشید."
 
-#: app/login.php:360
+#: app/login.php:372
 msgid "Please check your email for activation link."
 msgstr "لطفا ایمیل خود را برای دیدن لینک فعالسازی بررسی کنید."
 
-#: app/login_guard.php:222 app/login_guard.php:246
+#: app/login_guard.php:218 app/login_guard.php:242
 msgid "You are unable to log in due to too many incorrect attempts"
 msgstr "دسترسی شما به علت تلاش‌های زیاد ناموفق برای ورود به سیستم، محدود شده است."
 
@@ -761,7 +773,7 @@ msgstr "ارسال لینک فعالسازی"
 msgid "Manual Activation"
 msgstr "فعالسازی دستی"
 
-#: app/options.php:160
+#: app/options.php:155
 #, php-format
 msgid "%1$s off code for your next purchase"
 msgstr "کد تخفیف %1$s برای خرید بعدی شما"
@@ -892,9 +904,18 @@ msgstr "ورود"
 msgid "Password must not empty"
 msgstr "کلمه عبور نباید خالی باشد"
 
-#: app/sundry.php:199
+#: app/sundry.php:203
 msgid " Should not be empty!"
 msgstr " نباید خالی باشد!"
+
+#: app/sundry.php:248
+msgid "User 2FA status"
+msgstr "وضعیت احراز هویت دوعاملی"
+
+#: app/sundry.php:252 views/admin/admin-profile/account-status.php:16
+#: views/user/2fa_menu.php:67
+msgid "Activate"
+msgstr "فعالسازی"
 
 #: app/user_fields.php:11
 msgid "Text input"
@@ -1062,10 +1083,6 @@ msgstr "وضعیت اکانت"
 #: views/admin/admin-profile/account-status.php:12
 msgid "Change account status"
 msgstr "تغییر وضعیت"
-
-#: views/admin/admin-profile/account-status.php:16 views/user/2fa_menu.php:67
-msgid "Activate"
-msgstr "فعالسازی"
 
 #: views/admin/admin-profile/account-status.php:20
 msgid "Deactivate"
@@ -1252,23 +1269,19 @@ msgstr ""
 msgid "Logo Width (px)"
 msgstr "پهنای لوگو ( به پیکسل )"
 
-#: views/admin/panel-section/general.php:112
-msgid "Logo Height (px)"
-msgstr "ارتفاع لوگو ( به پیکسل )"
-
-#: views/admin/panel-section/general.php:118
+#: views/admin/panel-section/general.php:114
 msgid "Login page Background"
 msgstr "پس‌زمینه‌ی صفحه‌ی ورود"
 
-#: views/admin/panel-section/general.php:121
+#: views/admin/panel-section/general.php:117
 msgid "Login form Background"
 msgstr "پس‌زمینه‌ی فرم ورود"
 
-#: views/admin/panel-section/general.php:135
+#: views/admin/panel-section/general.php:131
 msgid "Redirect non Admin user to"
 msgstr "تغییر مسیر کاربر غیر مدیر به"
 
-#: views/admin/panel-section/general.php:137
+#: views/admin/panel-section/general.php:133
 msgid ""
 "Users who don't have admin or author caps, redirect to this address after "
 "login (with http or https)"
@@ -1507,22 +1520,74 @@ msgid "Password Type"
 msgstr "نوع پسورد"
 
 #: views/admin/panel-section/professional_login.php:26
+msgid "Texts"
+msgstr "نوشته‌ها"
+
+#: views/admin/panel-section/professional_login.php:29
+msgid "Change username label in login form"
+msgstr "تغییر برچسب نام کاربری در فرم ورود"
+
+#: views/admin/panel-section/professional_login.php:33
+msgid "Username label"
+msgstr "برچسب نام کاربری"
+
+#: views/admin/panel-section/professional_login.php:37
+msgid "Change phone label in login form"
+msgstr "تغییر برچسب فیلد شماره تلفن در فرم ورود"
+
+#: views/admin/panel-section/professional_login.php:41
+msgid "Phone label"
+msgstr "برچسب شماره تلفن"
+
+#: views/admin/panel-section/professional_login.php:45
+msgid "Change password label in login form"
+msgstr "تغییر برچسب پسورد در فرم ورود"
+
+#: views/admin/panel-section/professional_login.php:49
+msgid "Password label"
+msgstr "برچسب پسورد"
+
+#: views/admin/panel-section/professional_login.php:53
+msgid "Change dynamic code label in login form"
+msgstr "تغییر برچسب فیلد کد پویا در فرم ورود"
+
+#: views/admin/panel-section/professional_login.php:57
+msgid "Dynamic code label"
+msgstr "برچسب فیلد کد پویا"
+
+#: views/admin/panel-section/professional_login.php:62
+msgid "Change Login button text in login form"
+msgstr "تغییر متن دکمه ورود در فرم لاگین"
+
+#: views/admin/panel-section/professional_login.php:66
+msgid "Login button text"
+msgstr "متن دکمه ورود"
+
+#: views/admin/panel-section/professional_login.php:71
+msgid "Change register button text in login form"
+msgstr "تغییر متن دکمه ثبت‌نام در فرم لاگین"
+
+#: views/admin/panel-section/professional_login.php:75
+msgid "Register button text"
+msgstr "متن دکمه ثبت‌نام"
+
+#: views/admin/panel-section/professional_login.php:79
 msgid "WPML Settings"
 msgstr "تنظیمات WPML"
 
-#: views/admin/panel-section/professional_login.php:29
+#: views/admin/panel-section/professional_login.php:82
 msgid "Active sms settings just in persian language"
 msgstr "فقط زمانی که زبان فارسی فعال است تنظیمات اس‌ام‌اس را فعال نگه‌دار"
 
-#: views/admin/panel-section/professional_login.php:33
+#: views/admin/panel-section/professional_login.php:86
 msgid "Disable register form fields"
 msgstr "غیر‌فعال کردن فیلد‌های فرم ثبت‌نام"
 
-#: views/admin/panel-section/professional_login.php:36
+#: views/admin/panel-section/professional_login.php:89
 msgid "Disable email field"
 msgstr "غیر‌فعال کردن فیلد ایمیل"
 
-#: views/admin/panel-section/professional_login.php:39
+#: views/admin/panel-section/professional_login.php:92
 msgid ""
 "You can disable email field in register form if login with sms dynamic code is "
 "active."
@@ -1530,11 +1595,11 @@ msgstr ""
 "اگر ورود به کد یکبار مصرف فعال باشد، میتوانید فیلد ایمیل را در صفحه‌ی ثبت نام، "
 "غیر‌فعال کنید."
 
-#: views/admin/panel-section/professional_login.php:41
+#: views/admin/panel-section/professional_login.php:94
 msgid "Disable username field"
 msgstr "غیر‌فعال کردن فیلد نام‌کاربری"
 
-#: views/admin/panel-section/professional_login.php:44
+#: views/admin/panel-section/professional_login.php:97
 msgid ""
 "You can disable username field in register form if login with sms dynamic code "
 "is active."
@@ -1542,11 +1607,11 @@ msgstr ""
 "اگر ورود به کد یکبار مصرف فعال باشد، میتوانید فیلد نام‌کاربری را در صفحه‌ی ثبت "
 "نام، غیر‌فعال کنید."
 
-#: views/admin/panel-section/professional_login.php:46
+#: views/admin/panel-section/professional_login.php:99
 msgid "Disable password field"
 msgstr "غیر‌فعال کردن فیلد رمز‌عبور"
 
-#: views/admin/panel-section/professional_login.php:49
+#: views/admin/panel-section/professional_login.php:102
 msgid ""
 "You can disable password field in register form if login with sms dynamic code "
 "is active."
@@ -1554,19 +1619,19 @@ msgstr ""
 "اگر ورود به کد یکبار مصرف فعال باشد، میتوانید فیلد رمز‌عبور را در صفحه‌ی ثبت "
 "نام، غیر‌فعال کنید."
 
-#: views/admin/panel-section/professional_login.php:51
+#: views/admin/panel-section/professional_login.php:104
 msgid "User Phone"
 msgstr "موبایل کاربر"
 
-#: views/admin/panel-section/professional_login.php:53
+#: views/admin/panel-section/professional_login.php:106
 msgid "SMS Provider Settings"
 msgstr "تنظیمات ارائه دهنده ی SMS"
 
-#: views/admin/panel-section/professional_login.php:55
+#: views/admin/panel-section/professional_login.php:108
 msgid "Select Provider"
 msgstr "ارائه دهنده را انتخاب کنید"
 
-#: views/admin/panel-section/professional_login.php:57
+#: views/admin/panel-section/professional_login.php:110
 msgid ""
 "If your sms service provider not exists in this list, ask theme to provide you "
 "with the relevant plugin."
@@ -1574,15 +1639,15 @@ msgstr ""
 "اگر ارائه دهنده ی مورد نظر شما در این لیست موجود نیست، از آن ها بخواهید تا "
 "پلاگین مربوط به این بخش را در اختیار شما قرار دهند."
 
-#: views/admin/panel-section/professional_login.php:57
+#: views/admin/panel-section/professional_login.php:110
 msgid "According to this documents"
 msgstr "بر اساس این مستندات"
 
-#: views/admin/panel-section/professional_login.php:63
+#: views/admin/panel-section/professional_login.php:116
 msgid "Mobile validation code sms content"
 msgstr "محتوای SMS فعالسازی موبایل"
 
-#: views/admin/panel-section/professional_login.php:67
+#: views/admin/panel-section/professional_login.php:120
 msgid "Dynamic login code sms content"
 msgstr "محتوای SMS کد پویا"
 
@@ -1807,20 +1872,24 @@ msgstr "ورود به حساب"
 msgid "Send Code"
 msgstr "ارسال کد"
 
+#. Plugin Name of the plugin/theme
+msgid "MihanPanel Lite"
+msgstr "میهن پنل لایت"
+
 #. Plugin URI of the plugin/theme
-msgid "https://mihanwp.com/mihanpanel/"
-msgstr "https://mihanwp.com/mihanpanel/"
+msgid "https://ertano.com/mihanpanel/"
+msgstr "‎‫‫https://mihanwp.com/mihanpanel/"
 
 #. Description of the plugin/theme
 msgid "The best way to build user interface in WordPress"
 msgstr "یک راه مناسب برای پیاده سازی پروفایل کاربری در وردپرس"
 
 #. Author of the plugin/theme
-msgid "MihanWP"
-msgstr "میهن وردپرس"
+msgid "Ertano"
+msgstr "میهن‌وردپرس"
 
 #. Author URI of the plugin/theme
-msgid "https://mihanwp.com"
+msgid "https://ertano.com"
 msgstr "https://mihanwp.com/"
 
 #~ msgid "yes"
@@ -1836,54 +1905,11 @@ msgstr "https://mihanwp.com/"
 #~ msgid "Invalid phone number"
 #~ msgstr "شماره موبایل معتبر نیست"
 
-#~ msgid "No any user found. Please register by your phone number first."
-#~ msgstr ""
-#~ "کاربری پیدا نشد. لطفا ابتدا با استفاده از شماره موبایل  خود ثبت‌نام کنید."
-
-#~ msgid "User data not found!"
-#~ msgstr "اطلاعات کاربر پیدا نشد!"
-
-#~ msgid "Dynamic code was generated for you!"
-#~ msgstr "کد پویا برای شما ایجاد شده است!"
-
-#~ msgid "Dynamic code did not create for your account!"
-#~ msgstr "کد پویا برای شما ایجاد نشد!"
-
-#~ msgid "Has problem in send dynamic code process"
-#~ msgstr "مشکلی در فرآیند ارسال کدپویا پیش آمد"
-
-#~ msgid "Dynamic code was sent to your email"
-#~ msgstr "کد پویا به ایمیل شما ارسال شد"
-
-#~ msgid "Has problem in send sms process"
-#~ msgstr "مشکلی در ارسال sms پیش آمد"
-
-#~ msgid "Dynamic code was sent to your phone"
-#~ msgstr "کد پویا به شماره موبایل شما ارسال شد"
-
-#~ msgid "User data not found"
-#~ msgstr "اطلاعات کاربر پیدا نشد"
-
-#~ msgid "No any user found by this phone number"
-#~ msgstr "کاربری با این شماره موبایل  پیدا نشد"
-
-#~ msgid "Sorry, but you do not have a valid phone."
-#~ msgstr "متأسفیم، اما شما شماره‌ی موبایل تایید شده‌ای در اکانت خود ندارید."
-
 #~ msgid "Has Error!"
 #~ msgstr "خطا دارد!"
 
 #~ msgid "Invalid license key"
 #~ msgstr "کد لایسنس اشتباه است"
-
-#~ msgid "Username not recevied!"
-#~ msgstr "نام کاربری دریافت نشد!"
-
-#~ msgid "No any valid phone number for this username!"
-#~ msgstr "هیچ شماره ی مجازی برای این کاربر وجود ندارد!"
-
-#~ msgid "Dynamic code send for you!"
-#~ msgstr "کد پویا برای شما ارسال شد!"
 
 #~ msgid "Please use valid phone number."
 #~ msgstr "لطفا از یک شماره ی معتبر استفاده کنید."
@@ -1891,8 +1917,17 @@ msgstr "https://mihanwp.com/"
 #~ msgid "This phone number is used in another account."
 #~ msgstr "این شماره موبایل توسط کاربر دیگری در حال استفاده است"
 
+#~ msgid "Dynamic code was generated for you!"
+#~ msgstr "کد پویا برای شما ایجاد شده است!"
+
+#~ msgid "Dynamic code did not create for your account!"
+#~ msgstr "کد پویا برای شما ایجاد نشد!"
+
 #~ msgid "Sory, has problem in send sms"
 #~ msgstr "متأسفیم، مشکلی در ارسال sms پیش آمد"
+
+#~ msgid "Dynamic code send for you!"
+#~ msgstr "کد پویا برای شما ارسال شد!"
 
 #~ msgid "Please enter dynamic code"
 #~ msgstr "لطفا کد پویا را وراد کنید"
@@ -1927,12 +1962,6 @@ msgstr "https://mihanwp.com/"
 #~ msgid "Successfully updated"
 #~ msgstr "با موفقیت به روز شد"
 
-#~ msgid "Has error in inserting data"
-#~ msgstr "خطایی در افزودن اطلاعات وجود دارد"
-
-#~ msgid "Successfully inserted"
-#~ msgstr "با موفقیت افزوده شد"
-
 #~ msgid "Missing Data"
 #~ msgstr "اطلاعاتی یافت نشد"
 
@@ -1941,6 +1970,9 @@ msgstr "https://mihanwp.com/"
 
 #~ msgid "Has error in insert data"
 #~ msgstr "خطایی در افزودن اطلاعات وجود دارد"
+
+#~ msgid "Successfully inserted"
+#~ msgstr "با موفقیت افزوده شد"
 
 #~ msgid "Has error in delete"
 #~ msgstr "مشکلی در حذف آیتم به وجود آمد"
@@ -1995,6 +2027,12 @@ msgstr "https://mihanwp.com/"
 #~ msgid "This is not my phone %s, Change phone"
 #~ msgstr "شماره %s برای من نیست، میخوام تغییرش بدم"
 
+#~ msgid "Has problem in send sms process"
+#~ msgstr "مشکلی در ارسال sms پیش آمد"
+
+#~ msgid "Dynamic code was sent to your phone"
+#~ msgstr "کد پویا به شماره موبایل شما ارسال شد"
+
 #~ msgid "Please fill code field"
 #~ msgstr "لطفا کدپویا را وارد کنید"
 
@@ -2003,6 +2041,13 @@ msgstr "https://mihanwp.com/"
 
 #~ msgid "Has problem in send dynamic code to your email"
 #~ msgstr "مشکلی در ارسال کد پویا به ایمیل شما وجود دارد"
+
+#~ msgid "Dynamic code was sent to your email"
+#~ msgstr "کد پویا به ایمیل شما ارسال شد"
+
+#~ msgid "No any user found. Please register by your phone number first."
+#~ msgstr ""
+#~ "کاربری پیدا نشد. لطفا ابتدا با استفاده از شماره موبایل  خود ثبت‌نام کنید."
 
 #~ msgid "Missing password value"
 #~ msgstr "پسورد دریافت نشد"
@@ -2024,6 +2069,9 @@ msgstr "https://mihanwp.com/"
 
 #~ msgid "Please set new password for account"
 #~ msgstr "لطفا یک رمز جدید برای اکانت خود انتخاب کنید"
+
+#~ msgid "User data not found"
+#~ msgstr "اطلاعات کاربر پیدا نشد"
 
 #~ msgid "You are have not valid phone number or email address"
 #~ msgstr "شما شماره تلفن یا آدرس ایمیل فعال روی حساب خود ندارید"
@@ -2272,6 +2320,9 @@ msgstr "https://mihanwp.com/"
 #~ msgid "Form Cover"
 #~ msgstr "کاور فرم"
 
+#~ msgid "Activate cover"
+#~ msgstr "فعالسازی کاور"
+
 #~ msgid ""
 #~ "You can enter the file address or select a file from the website media, "
 #~ "note that the file format of lottie must be JSON."
@@ -2424,11 +2475,11 @@ msgstr "https://mihanwp.com/"
 #~ msgid "Has error in some process"
 #~ msgstr "مشکلی در بخشی از عملیات به وجود آمد"
 
-#~ msgid "Login via dynamic code"
-#~ msgstr "ورود با کد یکبار مصرف"
-
 #~ msgid "Resend code"
 #~ msgstr "ارسال دوباره کد"
+
+#~ msgid "Login via dynamic code"
+#~ msgstr "ورود با کد یکبار مصرف"
 
 #~ msgid "Success"
 #~ msgstr "موفقیت"
@@ -2459,6 +2510,9 @@ msgstr "https://mihanwp.com/"
 
 #~ msgid "Has error in edit notification"
 #~ msgstr "مشکلی در ویرایش اطلاعیه به وجود آمد"
+
+#~ msgid "Phone"
+#~ msgstr "تلفن"
 
 #~ msgid "Your dynamic code is"
 #~ msgstr "کد یکبار مصرف شما"
@@ -2501,6 +2555,9 @@ msgstr "https://mihanwp.com/"
 
 #~ msgid "Verification code has been sent to mobile."
 #~ msgstr "کد پویا به شماره موبایل ارسال شده است."
+
+#~ msgid "Sorry, but you do not have a valid phone."
+#~ msgstr "متأسفیم، اما شما شماره‌ی موبایل تایید شده‌ای در اکانت خود ندارید."
 
 #~ msgid "Unfortunately, you do not have access to this part of the content"
 #~ msgstr "متأسفیم، اما شما به این بخش از محتوا دسترسی ندارید"
@@ -2562,6 +2619,9 @@ msgstr "https://mihanwp.com/"
 #, php-format
 #~ msgid "Google Recaptcha verification failed %s"
 #~ msgstr "احراز هویت کپچای گوگل با مشکل مواجه شد %s"
+
+#~ msgid "reload the page"
+#~ msgstr "صفحه را دوباره بارگزاری کنید"
 
 #, php-format
 #~ msgid "Please Check Google Recaptcha %s"
@@ -2647,6 +2707,30 @@ msgstr "https://mihanwp.com/"
 
 #~ msgid "Request Code"
 #~ msgstr "درخواست کد"
+
+#~ msgid "MihanWP"
+#~ msgstr "میهن وردپرس"
+
+#~ msgid "Logo Height (px)"
+#~ msgstr "ارتفاع لوگو ( به پیکسل )"
+
+#~ msgid "User data not found!"
+#~ msgstr "اطلاعات کاربر پیدا نشد!"
+
+#~ msgid "Has problem in send dynamic code process"
+#~ msgstr "مشکلی در فرآیند ارسال کدپویا پیش آمد"
+
+#~ msgid "No any user found by this phone number"
+#~ msgstr "کاربری با این شماره موبایل  پیدا نشد"
+
+#~ msgid "Username not recevied!"
+#~ msgstr "نام کاربری دریافت نشد!"
+
+#~ msgid "No any valid phone number for this username!"
+#~ msgstr "هیچ شماره ی مجازی برای این کاربر وجود ندارد!"
+
+#~ msgid "Has error in inserting data"
+#~ msgstr "خطایی در افزودن اطلاعات وجود دارد"
 
 #~ msgid "Color of Register button"
 #~ msgstr "رنگ متن دکمه ثبت‌نام"
@@ -2774,9 +2858,6 @@ msgstr "https://mihanwp.com/"
 #~ msgid "ertano.com"
 #~ msgstr "‫mihanwp.com"
 
-#~ msgid "Ertano"
-#~ msgstr "میهن‌وردپرس"
-
 #~ msgid "Backup your site before using it!"
 #~ msgstr ""
 #~ "قبل از استفاده از این گزینه، از سایت خود بک‌آپ تهیه کنید! تغییرات قابل "
@@ -2790,9 +2871,6 @@ msgstr "https://mihanwp.com/"
 
 #~ msgid "This phone number is not available."
 #~ msgstr "این شماره موبایل در دسترس نیست."
-
-#~ msgid "Phone"
-#~ msgstr "تلفن"
 
 #, fuzzy
 #~| msgid "Required"
@@ -2809,9 +2887,6 @@ msgstr "https://mihanwp.com/"
 
 #~ msgid "Name"
 #~ msgstr "نام"
-
-#~ msgid "MihanPanel Live Edit"
-#~ msgstr "ویرایش زنده‌ی میهن پنل"
 
 #~ msgid "mihanwp.com"
 #~ msgstr "میهن وردپرس"
@@ -2990,9 +3065,6 @@ msgstr "https://mihanwp.com/"
 
 #~ msgid "1"
 #~ msgstr "1"
-
-#~ msgid "Username: "
-#~ msgstr "نام کاربری: "
 
 #~ msgid "Display Name: "
 #~ msgstr "نام نمایشی: "

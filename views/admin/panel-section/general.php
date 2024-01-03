@@ -108,10 +108,6 @@
                 <label><?php esc_html_e("Logo Width (px)", "mihanpanel"); ?> <small class="range_value"><?php esc_html_e(\mihanpanel\app\options::get_login_logo_width())?></small></label>
                 <input min="50" max="250" name="mp_logo_width" value="<?php echo esc_attr(\mihanpanel\app\options::get_login_logo_width())?>" class="mwpl_range" type="range">
             </div>
-            <div live_view_target_id="mwpl_live_view_login_logo" class="mp_option_single">
-                <label><?php esc_html_e("Logo Height (px)", "mihanpanel"); ?> <small class="range_value"><?php esc_html_e(\mihanpanel\app\options::get_login_logo_height())?></small></label>
-                <input class="mwpl_range" type="range" value="<?php echo esc_attr(\mihanpanel\app\options::get_login_logo_height())?>" name="mp_logo_height" min="50" max="150">
-            </div>
             <div class="mp-sub-tab-wrap">
                 <ul class="mp-sub-tabs">
                     <li>

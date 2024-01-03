@@ -11,10 +11,6 @@ class login_guard
         // add inactive login mode content
         add_action('mwpl_login_form_after_start_form', [__CLASS__, 'addInactiveFormContent']);
 
-        // create database tables
-        add_action('mwpl_before_update_db_version', [__CLASS__, 'beforeUpdateDbVersion']);
-        add_action('after_create_default_database_tables_tools_page', [__CLASS__, 'createDatabaseTables']);
-
         // filter login form classes
         add_filter('mwpl_login_form/form_classes', [__CLASS__, 'filterLoginFormClasses']);
         

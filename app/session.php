@@ -7,6 +7,7 @@ class session
     private const SESSION_VALUE_NAME = 'session_value';
     private const SESSION_EXPIRATION_NAME = 'session_expiration';
     private const SESSION_ID_NAME = 'mw_sessid';
+    private static $_sessionKeyValue;
     
     static function create_session_table()
     {
@@ -137,7 +138,11 @@ class session
     }
     static function get_user_session_key()
     {
-        return isset($_COOKIE[self::SESSION_ID_NAME]) && $_COOKIE[self::SESSION_ID_NAME] ? $_COOKIE[self::SESSION_ID_NAME] : false;
+        if(!self::$_sessionKeyValue)
+        {
+            self::$_sessionKeyValue = isset($_COOKIE[self::SESSION_ID_NAME]) && $_COOKIE[self::SESSION_ID_NAME] ? $_COOKIE[self::SESSION_ID_NAME] : false;
+        }
+        return self::$_sessionKeyValue;
     }
     static function get_session_key()
     {
@@ -155,6 +160,7 @@ class session
             $exprie_time = strtotime('+1 day'); // time() + (24*60*60); // 24 hours
             $domain = parse_url(get_option('siteurl'), PHP_URL_HOST);
             setcookie(self::SESSION_ID_NAME, $session_key, $exprie_time, '/', $domain, false, true);
+            self::$_sessionKeyValue = $session_key;
         }
         return $session_key;
     }

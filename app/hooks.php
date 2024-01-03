@@ -15,6 +15,11 @@ class hooks
         add_action('admin_menu', ['\mihanpanel\app\admin_menu', 'add_main_menu_page'], 1);
         add_action('admin_menu', ['\mihanpanel\app\admin_menu', 'init']);
         add_action('admin_init', ['\mihanpanel\app\options', 'register_settings']);
+
+        add_filter('mwpl_middleware/option_panel', ['\mihanpanel\app\handle_view', 'optionPanelContentMiddlewares']);
+        add_action('pre_update_option_rwl_page', ['\mihanpanel\app\config', 'handleBeforeUpdateLoginUrlOptionProcess'], 10, 3);
+        add_action('pre_update_option_mp_panelslug', ['\mihanpanel\app\config', 'handleBeforeUpdatePanelSlugOptionProcess'], 10, 3);
+
         add_action('admin_notices', ['\mihanpanel\app\notice', 'show_admin_setting_panel_notices']);
         add_action('admin_bar_menu', ['\mihanpanel\app\config', 'addMihanPanelMenusToAdminBarMenu'], 100);
 
@@ -141,6 +146,9 @@ class hooks
             add_action('mihanpanel/panel/tab_file', ['\mihanpanel\app\panel', 'handle_2fa_menu_content'], 10, 2);
             
             add_action('mwpl_login_form_before_submit_button', ['\mihanpanel\app\login', 'addTwoFactorAutenticationFieldToLogin']);
+
+            add_action('mihanpanel/admin/user_profile/before_start_extra_fields', ['\mihanpanel\app\sundry', 'addUserGoogleOtpStatusInAdminProfile']);
+            add_action('mihanpanel/admin/user_profile/before_save_extra_fields', ['\mihanpanel\app\sundry', 'handleUpdateUserGoogleOtpStatusInAdminProfile']);
         }
     }
     public static function activation_hook()

@@ -100,7 +100,7 @@ class ajax
 
         // handle login process
         login::doLogin($user->ID, true);
-        $res['redirect_to'] = user_admin_url();
+        $res['redirect_to'] = apply_filters('mwpl_after_login_redirect_url', \mihanpanel\app\options::get_panel_url(), $user->ID);
         $res['msg'] = esc_html__('Successfully logged in...', 'mihanpanel');
         $res['code'] = 200;
 

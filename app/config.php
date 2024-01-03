@@ -57,7 +57,6 @@ class config
     {
         //add default values to mihanpanel options when installing plugin
         add_option('mp_logo_width', '120');
-        add_option('mp_logo_height', '120');
         add_option('mp_bg_image', MW_MIHANPANEL_URL . 'img/bg.jpg' );
         add_option('mp_logo_image', MW_MIHANPANEL_URL . 'img/login-logo.svg' );
         add_option('mp_disable_wordpress_bar', 1 );
@@ -299,5 +298,31 @@ class config
             ];
             $wpAdminBar->add_node($optionPanelNode);
         }
+    }
+
+    // fired in pre_update_option_rwl_page hook
+    static function handleBeforeUpdateLoginUrlOptionProcess($value, $oldValue, $option)
+    {
+        if($value == options::get_panel_slug())
+        {
+            // add error message to notice system
+            notice::add_multiple_notice('error', __('Login slug must not equal with panel slug, please choose another slug value.', 'mihanpanel'));
+
+            return $oldValue;
+        }
+        return $value;
+    }
+
+    // fired in pre_update_option_mp_panelslug hook
+    static function handleBeforeUpdatePanelSlugOptionProcess($value, $oldValue, $option)
+    {
+        if($value == options::get_login_slug())
+        {
+            // add error message to notice system
+            notice::add_multiple_notice('error', __('Panel slug must not equal with login slug, please choose another page.', 'mihanpanel'));
+
+            return $oldValue;
+        }
+        return $value;
     }
 }
