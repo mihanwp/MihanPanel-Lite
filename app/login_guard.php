@@ -24,7 +24,7 @@ class login_guard
     }
     static function beforeUpdateDbVersion($oldVersion)
     {
-        if($oldVersion < 10)
+        if($oldVersion < 12)
         {
             self::createDatabaseTables();
         }
