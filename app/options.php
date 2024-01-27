@@ -164,7 +164,7 @@ class options
     {
         return get_option('mp_smart_login_2fa');
     }
-    static function get_mwpl_redirect_wp_login_tp_mwpl_login_status()
+    static function get_mwpl_redirect_wp_login_to_mwpl_login_status()
     {
         return (bool)get_option('mwpl_redirect_wp_login_tp_mwpl_login', 1);
     }

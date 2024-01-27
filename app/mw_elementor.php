@@ -1,8 +1,10 @@
 <?php
 namespace mihanpanel\app;
+
 use Elementor\Plugin;
 
 defined('ABSPATH') || die("No Access");
+
 final class MW_Elementor
 {
     const VERSION = 1;
@@ -44,6 +46,7 @@ final class MW_Elementor
             return;
         }
 
+        add_action('elementor/elements/categories_registered', [$this, 'register_categories']);
         add_action('elementor/widgets/widgets_registered', [$this, 'init_widgets']);
     }
 
@@ -62,9 +65,32 @@ final class MW_Elementor
 
     }
 
+    public function register_categories($elements_manager)
+    {
+        $elements_manager->add_category(
+            'mpanel_elements',
+            [
+                'title' => __('Mihan Panel Elements', 'ahura'),
+                'icon' => 'fa fa-plug',
+            ]
+        );
+    }
+
     public function init_widgets()
     {
-        Plugin::instance()->widgets_manager->register_widget_type(new \mihanpanel\app\emwidg\emwidg_mihanpanel());
+        $widgets = [
+            '\mihanpanel\app\emwidg\emwidg_mihanpanel'
+        ];
+        $widgets = apply_filters('mwpl_register_elementor_widgets', $widgets);
+
+        if (!is_array($widgets) || empty($widgets)) return false;
+
+        foreach ($widgets as $widget){
+            if (!class_exists($widget))
+                continue;
+
+            Plugin::instance()->widgets_manager->register_widget_type(new $widget());
+        }
     }
 }
 MW_Elementor::instance();

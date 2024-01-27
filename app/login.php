@@ -17,7 +17,7 @@ class login
         if (\mihanpanel\app\options::getLoginGuardStatus()) {
             \mihanpanel\app\login_guard::init();
         }
-        if (options::get_mwpl_redirect_wp_login_tp_mwpl_login_status()) {
+        if (options::get_mwpl_redirect_wp_login_to_mwpl_login_status()) {
             add_action('init', [__CLASS__, 'redirectWpLoginToMihanPanelLoginUrl']);
             add_filter('login_url', [__CLASS__, 'filterLoginUrlValue'], 10, 3);
             

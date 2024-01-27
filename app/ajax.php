@@ -8,6 +8,7 @@ class ajax
 
     public static function init()
     {
+        add_action('wp_ajax_mwpl_get_mihanwp_rss_feed_content', [__CLASS__, 'getMihanWpRssFeedData']);
         add_action('wp_ajax_update_tabs_fields_data', [__CLASS__, 'update_tabs_fields_data']);
         add_action('wp_ajax_mw_delete_field_row', [__CLASS__, 'delete_field_row']);
         add_action('wp_ajax_update_user_field_fields_data', [__CLASS__, 'update_user_field_fields_data']);
@@ -525,6 +526,39 @@ class ajax
             session::store('required_change_password', true);
         }
 
+        self::send_res($res);
+    }
+    static function getMihanWpRssFeedData()
+    {
+        $res['code'] = 400;
+
+        // mihanwp feed
+        include_once ABSPATH . WPINC . '/class-simplepie.php';
+        $feedUrl = \mihanpanel\app\tools::getBaseRemoteUrl() . 'feed/';
+        $feed = new \SimplePie();
+        $feed->set_feed_url($feedUrl);
+        $feed->init();
+
+        $maxItems = $feed->get_item_quantity(3);
+        $itemsList = $feed->get_items(0, $maxItems);
+        
+        if($maxItems == 0)
+        {
+            $res['msg'] = __('No item', 'mihanpanel');
+            $res['code'] = 200;
+            self::send_res($res);
+        }
+        foreach($itemsList as $item )
+        {
+            $itemDate = human_time_diff($item->get_date('U'), current_time('timestamp')) . ' ' . esc_html__('ago', 'mihanpanel');
+            $res['items'][] = [
+                'title' => $item->get_title(),
+                'date' => $itemDate,
+                'link' => $item->get_permalink(),
+                'description' => wp_kses_post($item->get_description(false)),
+            ];
+        }
+        $res['code'] = 200;
         self::send_res($res);
     }
 }

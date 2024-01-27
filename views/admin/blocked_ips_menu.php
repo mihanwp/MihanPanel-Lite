@@ -2,7 +2,7 @@
     <h2><?php _e('Blocked IPs List', 'mihanpanel') ?></h2>
     <div class="tablenav top">
         <div class="alignleft actions bulkactions">
-            <a href="<?php echo esc_url(add_query_arg(['action' => 'delete_all']))?>" class="button action"><?php _e('Delete all', 'mihanpanel')?></a>
+            <a href="<?php echo esc_url(add_query_arg(['action' => 'delete_all', 'mwpl_nonce' => wp_create_nonce('mwpl_delete_blocked_ip_all_items')]))?>" class="button action"><?php _e('Delete all', 'mihanpanel')?></a>
         </div>
         
         <div class="tablenav-pages one-page">
@@ -30,7 +30,7 @@
 
                             <div class="row-actions">
                                 <span class="trash">
-                                    <a href="<?php echo esc_url(add_query_arg(['action' => 'delete', 'id' => $item->id])) ?>"><?php _e('Delete', 'mihanpanel') ?></a>
+                                    <a href="<?php echo esc_url(add_query_arg(['action' => 'delete', 'id' => $item->id, 'mwpl_nonce' => wp_create_nonce('mwpl_delete_blocked_ip_item')])) ?>"><?php _e('Delete', 'mihanpanel') ?></a>
                                 </span>
                             </div>
                         </td>

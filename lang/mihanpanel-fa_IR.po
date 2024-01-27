@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MihanPanel\n"
-"POT-Creation-Date: 2024-01-04 03:11+0330\n"
-"PO-Revision-Date: 2024-01-04 03:12+0330\n"
+"POT-Creation-Date: 2024-01-28 02:08+0330\n"
+"PO-Revision-Date: 2024-01-28 02:08+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -30,7 +30,7 @@ msgstr "آدرس شماره دو"
 msgid "MihanPanel"
 msgstr "میهن پنل"
 
-#: app/admin_menu.php:32 views/admin/panel-section/general.php:76
+#: app/admin_menu.php:32 views/admin/panel-section/general.php:92
 msgid "Login & Register"
 msgstr "ورود و عضویت"
 
@@ -104,129 +104,137 @@ msgstr "میهن پنل پرو"
 msgid "Blocked ip"
 msgstr "آی‌پی‌های بلاک شده"
 
-#: app/admin_menu.php:240
+#: app/admin_menu.php:248
 #, php-format
 msgid "%d item"
 msgstr "‫%d مورد"
 
-#: app/ajax.php:41 app/login.php:190 app/login.php:209
+#: app/ajax.php:42 app/login.php:190 app/login.php:209
 msgid "Please fill username field"
 msgstr "لطفا نام کاربری را وارد کنید"
 
-#: app/ajax.php:47 app/login.php:191 app/login.php:210
+#: app/ajax.php:48 app/login.php:191 app/login.php:210
 msgid "Please fill password field"
 msgstr "لطفا رمز عبور را وارد کنید"
 
-#: app/ajax.php:56
+#: app/ajax.php:57
 msgid "User not found"
 msgstr "کاربر وجود ندارد!"
 
-#: app/ajax.php:64
+#: app/ajax.php:65
 msgid "Invalid username or password"
 msgstr "نام کاربری یا پسورد اشتباه است"
 
-#: app/ajax.php:71 app/login.php:347 views/user/inactive_account.php:8
+#: app/ajax.php:72 app/login.php:347 views/user/inactive_account.php:8
 msgid "Your account is disable!"
 msgstr "اکانت شما غیرفعال است!"
 
-#: app/ajax.php:85
+#: app/ajax.php:86
 msgid "2FA code is invalid"
 msgstr "کد احراز هویت نامعتبر است"
 
-#: app/ajax.php:92
+#: app/ajax.php:93
 msgid "Please enter authentication code"
 msgstr "لطفا کد احراز هویت را وارد کنید"
 
-#: app/ajax.php:104
+#: app/ajax.php:105
 msgid "Successfully logged in..."
 msgstr "با موفقیت وارد شدید…"
 
-#: app/ajax.php:126
+#: app/ajax.php:127
 msgid "This username has already been chosen by someone else."
 msgstr "این نام کاربری توسط شخص دیگری استفاده شده است."
 
-#: app/ajax.php:133 app/register.php:166
+#: app/ajax.php:134 app/register.php:174
 msgid "Invalid email address"
 msgstr "آدرس ایمیل نامعتبر است"
 
-#: app/ajax.php:140
+#: app/ajax.php:141
 msgid "There is another account with this email in the system"
 msgstr "اکانت دیگری با این ایمیل در سایت ساخته شده است"
 
-#: app/ajax.php:147
+#: app/ajax.php:148
 msgid "Enter your password."
 msgstr "پسورد خود را وارد کنید."
 
-#: app/ajax.php:170
+#: app/ajax.php:171
 msgid "Has error in create your account"
 msgstr "مشکلی در ساخت اکانت شما وجود دارد"
 
-#: app/ajax.php:203
+#: app/ajax.php:204
 msgid "Account successfully created"
 msgstr "اکانت شما با موفقیت ساخته شد"
 
-#: app/ajax.php:212 app/ajax.php:251 app/ajax.php:314 app/ajax.php:341
+#: app/ajax.php:213 app/ajax.php:252 app/ajax.php:315 app/ajax.php:342
 msgid "Has error!"
 msgstr "خطا!"
 
-#: app/ajax.php:216
+#: app/ajax.php:217
 msgid "No any items found"
 msgstr "هیچ آیتمی پیدا نشد."
 
-#: app/ajax.php:256 app/ajax.php:325 app/ajax.php:346
+#: app/ajax.php:257 app/ajax.php:326 app/ajax.php:347
 #: app/form/admin_user_fields.php:28 app/form/profile.php:81
 #: views/user/2fa_menu.php:45
 msgid "The operation failed due to security issues."
 msgstr "عملیات به دلیل مشکلات امنیتی متوقف شد."
 
-#: app/ajax.php:305 app/ajax.php:386 app/form/profile.php:110
+#: app/ajax.php:306 app/ajax.php:387 app/form/profile.php:110
 msgid "Successfully updated!"
 msgstr "با موفقیت به روز شد!"
 
-#: app/ajax.php:305 app/ajax.php:386
+#: app/ajax.php:306 app/ajax.php:387
 msgid "Nothing updated."
 msgstr "چیزی آپدیت نشد."
 
-#: app/ajax.php:334
+#: app/ajax.php:335
 msgid "Successfully deleted!"
 msgstr "با موفقیت حذف شد!"
 
-#: app/ajax.php:334
+#: app/ajax.php:335
 msgid "Could not be deleted."
 msgstr "حذف نشد."
 
-#: app/ajax.php:436
+#: app/ajax.php:437
 msgid "The account activation link has been sent to the user email."
 msgstr "لینک فعالسازی اکانت برای ایمیل کاربر ارسال شده است."
 
-#: app/ajax.php:440
+#: app/ajax.php:441
 msgid "Invalid Username or Email."
 msgstr "نام کاربری یا ایمیل نامعتبر است"
 
-#: app/ajax.php:455 app/ajax.php:501
+#: app/ajax.php:456 app/ajax.php:502
 msgid "Request is invalid!"
 msgstr "درخواست شما نامعتبر است!"
 
-#: app/ajax.php:474
+#: app/ajax.php:475
 msgid "Verification code has been sent to email."
 msgstr "کد پویا به آدرس ایمیل ارسال شده است."
 
-#: app/ajax.php:479 app/form/admin_tabs.php:37 app/form/admin_user_fields.php:53
+#: app/ajax.php:480 app/form/admin_tabs.php:37 app/form/admin_user_fields.php:53
 #: app/form/profile.php:55 app/form/profile.php:107
 msgid "An error occurred!"
 msgstr "یک خطا رخ داده است!"
 
-#: app/ajax.php:483 app/ajax.php:509
+#: app/ajax.php:484 app/ajax.php:510
 msgid "User not exists!"
 msgstr "کاربر وجود ندارد!"
 
-#: app/ajax.php:518
+#: app/ajax.php:519
 msgid "The verification code is invalid."
 msgstr "کد پویا نامعتبر است."
 
-#: app/ajax.php:521
+#: app/ajax.php:522
 msgid "Verification done, transferring..."
 msgstr "احراز هویت با موفقیت انجام شد، در حال انتقال…"
+
+#: app/ajax.php:547
+msgid "No item"
+msgstr "چیزی پیدا نشد"
+
+#: app/ajax.php:553
+msgid "ago"
+msgstr "پیش"
 
 #: app/config.php:92
 msgid "Woocommerce Download Products"
@@ -596,7 +604,7 @@ msgstr "تعداد خرید شما"
 msgid "Your tickets"
 msgstr "تیکت های شما"
 
-#: app/handle_view.php:386 app/handle_view.php:871 app/middlewares.php:67
+#: app/handle_view.php:386 app/handle_view.php:886 app/middlewares.php:67
 msgid "Pro Version"
 msgstr "نسخه‌ی حرفه‌ای"
 
@@ -640,51 +648,51 @@ msgstr "رنگ لیبل فیلدهای فرم ورود"
 msgid "Color of Login and Register labels"
 msgstr "رنگ متن لیبل فیلدهای فرم ورود و ثبت نام"
 
-#: app/handle_view.php:489
+#: app/handle_view.php:499
 msgid "Login Fields Text Color"
 msgstr "رنگ متن فیلدهای فرم ورود"
 
-#: app/handle_view.php:491
+#: app/handle_view.php:501
 msgid "Color of Login and Register fields text"
 msgstr "رنگ متن فیلدهای فرم ورود و ثبت‌نام"
 
-#: app/handle_view.php:504
+#: app/handle_view.php:514
 msgid "Login Info Messagebox Background Color"
 msgstr "رنگ پس زمینه ی باکس اطلاع رسانی در فرم ورود"
 
-#: app/handle_view.php:506
+#: app/handle_view.php:516
 msgid "Background Color of Login and Register Info Messagebox"
 msgstr "رنگ پس زمینه ی باکس اطلاع رسانی در فرم ورود و ثبت نام"
 
-#: app/handle_view.php:519
+#: app/handle_view.php:529
 msgid "Login Info Messagebox Text Color"
 msgstr "رنگ متن باکس اطلاع رسانی در فرم ورود"
 
-#: app/handle_view.php:521
+#: app/handle_view.php:531
 msgid "Color of Login and Register Info Messagebox Text"
 msgstr "رنگ متن باکس اطلاع رسانی در فرم ورود و ثبت نام"
 
-#: app/handle_view.php:681
+#: app/handle_view.php:696
 msgid "This plugin is not active on your site"
 msgstr "این پلاگین بر روی سایت شما فعال نیست"
 
-#: app/handle_view.php:810
+#: app/handle_view.php:825
 msgid "Auto confirm phone number after user register"
 msgstr "فعالسازی شماره موبایل بعد از ثبت نام به صورت اتوماتیک"
 
-#: app/handle_view.php:814
+#: app/handle_view.php:829
 msgid "User can change phone number"
 msgstr "کاربر میتواند شماره موبایل را تغییر دهد"
 
-#: app/handle_view.php:918
+#: app/handle_view.php:933
 msgid "Disable reset password"
 msgstr "غیر‌فعال کردن فیلد بازیابی رمز عبور"
 
-#: app/handle_view.php:940
+#: app/handle_view.php:955
 msgid "Login and Register form background"
 msgstr "پس زمینه فرم ورود و ثبت نام"
 
-#: app/handle_view.php:942 views/admin/panel-section/general.php:104
+#: app/handle_view.php:957 views/admin/panel-section/general.php:120
 msgid "Upload Image"
 msgstr "آپلود تصویر"
 
@@ -761,6 +769,10 @@ msgstr ""
 "حداکثر تعداد مجاز در نسخه‌ی لایت ۴ است. برای از بین بردن این محدودیت پلاگین را "
 "به %s ارتقا دهید."
 
+#: app/mw_elementor.php:73
+msgid "Mihan Panel Elements"
+msgstr "المان‌های میهن‌پنل"
+
 #: app/options.php:12
 msgid "Automatic activation"
 msgstr "فعالسازی اتوماتیک"
@@ -782,15 +794,15 @@ msgstr "کد تخفیف %1$s برای خرید بعدی شما"
 msgid "Order Details"
 msgstr "اطلاعات سفارش"
 
-#: app/panel.php:110
+#: app/panel.php:116
 msgid "User Dashboard"
 msgstr "داشبورد کاربری"
 
-#: app/panel.php:115
+#: app/panel.php:121
 msgid "Edit Profile"
 msgstr "ویرایش پروفایل"
 
-#: app/panel.php:183 views/admin/panel-section/security.php:10
+#: app/panel.php:196 views/admin/panel-section/security.php:10
 #: views/user/2fa_menu.php:2
 msgid "Two factor authentication"
 msgstr "احراز هویت دو مرحله‌ای"
@@ -834,7 +846,7 @@ msgstr "متوسط"
 msgid "Strong"
 msgstr "قوی"
 
-#: app/register.php:119
+#: app/register.php:127
 msgid "Missing required fields data"
 msgstr "فیلدهای اجباری را پر کنید"
 
@@ -978,24 +990,16 @@ msgstr "همه چیز روی سایت شما مرتب است."
 msgid "You must check:"
 msgstr "باید بررسی کنید:"
 
-#: app/widget.php:71
+#: app/widget.php:65
 #, php-format
 msgid "Latest news in %s"
 msgstr "آخرین اخبار در %s"
 
-#: app/widget.php:71 views/admin/settings.php:23
+#: app/widget.php:65 views/admin/settings.php:23
 msgid "MihanWp"
 msgstr "میهن وردپرس"
 
-#: app/widget.php:75
-msgid "No item"
-msgstr "چیزی پیدا نشد"
-
-#: app/widget.php:78
-msgid "ago"
-msgstr "پیش"
-
-#: app/widget.php:87
+#: app/widget.php:71
 msgid "More Articles"
 msgstr "مقاله‌های بیشتر"
 
@@ -1160,7 +1164,7 @@ msgid "Reset password email subject"
 msgstr "موضوع ایمیل بازیابی رمز عبور"
 
 #: views/admin/panel-section/email.php:38
-#: views/admin/panel-section/general.php:67
+#: views/admin/panel-section/general.php:83
 msgid "Activation Link"
 msgstr "لینک فعالسازی"
 
@@ -1229,65 +1233,98 @@ msgid "If user is not logged-in"
 msgstr "در صورتی که کاربر وارد حساب خود نشده باشد"
 
 #: views/admin/panel-section/general.php:53
+#: views/admin/panel-section/general.php:62
+msgid "Menus"
+msgstr "منو‌ها"
+
+#: views/admin/panel-section/general.php:56
+msgid "Add MihanPanel item in menu"
+msgstr "اضافه کردن آیتم میهن‌پنل به منو"
+
+#: views/admin/panel-section/general.php:59
+msgid ""
+"Add Login button ( if user not logged-in ) and Panel button ( if user is "
+"logged-in ) in menu"
+msgstr ""
+"اضافه کردن دکمه ورود ( در صورت لاگین نبودن کاربر ) و دکمه پنل‌کاربری ( در صورت "
+"لاگین بودن کاربر ) به منو"
+
+#: views/admin/panel-section/general.php:65
+msgid "Choose menu location that you want to add MihanPanel item to it."
+msgstr "موقعیت منویی که میخواهید آیتم میهن‌پنل به آن اضافه شود را انتخاب کنید."
+
+#: views/admin/panel-section/general.php:69
 msgid "Activation process"
 msgstr "روند فعالسازی"
 
-#: views/admin/panel-section/general.php:70
+#: views/admin/panel-section/general.php:86
 msgid "Resend account activation email"
 msgstr "ارسال دوباره‌ی ایمیل فعالسازی حساب"
 
-#: views/admin/panel-section/general.php:78
+#: views/admin/panel-section/general.php:94
 msgid "Login Form Theme"
 msgstr "تم فرم ورود"
 
-#: views/admin/panel-section/general.php:80
+#: views/admin/panel-section/general.php:96
 msgid "Login and Register form theme"
 msgstr "تم فرم ورود و عضویت"
 
-#: views/admin/panel-section/general.php:83
+#: views/admin/panel-section/general.php:99
 msgid "Form Position"
 msgstr "موقعیت فرم"
 
-#: views/admin/panel-section/general.php:87
+#: views/admin/panel-section/general.php:103
 msgid "Login Button Color"
 msgstr "رنگ دکمه ورود"
 
-#: views/admin/panel-section/general.php:89
+#: views/admin/panel-section/general.php:105
 msgid "Color of Login and Register button"
 msgstr "پس زمینه دکمه ورود و ثبت‌نام"
 
-#: views/admin/panel-section/general.php:102
+#: views/admin/panel-section/general.php:118
 msgid "Login and Register form Logo"
 msgstr "لوگوی فرم ورود و عضویت"
 
-#: views/admin/panel-section/general.php:105
+#: views/admin/panel-section/general.php:121
 msgid "We suggest to use 120 * 120 px for logo size."
 msgstr ""
 "ما پیشنهاد می کنیم از سایز ۱۲۰ * ۱۲۰ (پیکسل) برای اندازه لوگو  استفاده کنید."
 
-#: views/admin/panel-section/general.php:108
+#: views/admin/panel-section/general.php:124
 msgid "Logo Width (px)"
 msgstr "پهنای لوگو ( به پیکسل )"
 
-#: views/admin/panel-section/general.php:114
+#: views/admin/panel-section/general.php:130
 msgid "Login page Background"
 msgstr "پس‌زمینه‌ی صفحه‌ی ورود"
 
-#: views/admin/panel-section/general.php:117
+#: views/admin/panel-section/general.php:133
 msgid "Login form Background"
 msgstr "پس‌زمینه‌ی فرم ورود"
 
-#: views/admin/panel-section/general.php:131
+#: views/admin/panel-section/general.php:147
 msgid "Redirect non Admin user to"
 msgstr "تغییر مسیر کاربر غیر مدیر به"
 
-#: views/admin/panel-section/general.php:133
+#: views/admin/panel-section/general.php:149
 msgid ""
-"Users who don't have admin or author caps, redirect to this address after "
-"login (with http or https)"
+"Users who don't have admin or author caps, redirect to this address after login"
 msgstr ""
 "کاربرانی که دارای دسترسی مدیر یا نویسنده نیستند، پس از ورود ، به این نشانی "
-"هدایت می شوند (با http یا https)"
+"هدایت می شوند"
+
+#: views/admin/panel-section/general.php:149
+#: views/admin/panel-section/general.php:155
+msgid "With http or https"
+msgstr "با http یا https"
+
+#: views/admin/panel-section/general.php:153
+msgid "Redirect after logout to"
+msgstr "انتقال کاربر بعد از خروج از حساب به"
+
+#: views/admin/panel-section/general.php:155
+msgid "Users after logout redirect to this url"
+msgstr "کاربر بعد از خروج از حساب کاربری خود به این آدرس منتقل میشود"
 
 #: views/admin/panel-section/notification.php:9
 msgid "Notification 1"
@@ -1874,11 +1911,11 @@ msgstr "ارسال کد"
 
 #. Plugin Name of the plugin/theme
 msgid "MihanPanel Lite"
-msgstr "میهن پنل لایت"
+msgstr "میهن‌پنل لایت"
 
 #. Plugin URI of the plugin/theme
 msgid "https://ertano.com/mihanpanel/"
-msgstr "‎‫‫https://mihanwp.com/mihanpanel/"
+msgstr "https://mihanwp.com/mihanpanel/"
 
 #. Description of the plugin/theme
 msgid "The best way to build user interface in WordPress"
@@ -2101,6 +2138,123 @@ msgstr "https://mihanwp.com/"
 #~ msgid "Role must not be empty"
 #~ msgstr "نقش کاربری نباید خالی باشد"
 
+#~ msgid "Before Login"
+#~ msgstr "قبل از لاگین"
+
+#~ msgid "Preview"
+#~ msgstr "پیشنمایش"
+
+#~ msgid "No"
+#~ msgstr "نه"
+
+#~ msgid "Show Text"
+#~ msgstr "نمایش متن"
+
+#~ msgid "Show"
+#~ msgstr "نمایش"
+
+#~ msgid "Hide"
+#~ msgstr "مخفی"
+
+#~ msgid "Button Text"
+#~ msgstr "متن دکمه"
+
+#~ msgid "Login / Register"
+#~ msgstr "ورود یا عضویت"
+
+#~ msgid "Title in Mobile"
+#~ msgstr "عنوان در موبایل"
+
+#~ msgid "After Login"
+#~ msgstr "بعد از لاگین"
+
+#~ msgid "Login button preview is enabled."
+#~ msgstr "پیشنمایش دکمه لاگین فعال شده است."
+
+#~ msgid "User Avatar"
+#~ msgstr "آواتار کاربر"
+
+#~ msgid "User Display Name"
+#~ msgstr "نام نمایشی کاربر"
+
+#~ msgid "Menu"
+#~ msgstr "منو"
+
+#~ msgid "Custom Tab"
+#~ msgstr "تب سفارشی"
+
+#~ msgid "Tab"
+#~ msgstr "تب"
+
+#~ msgid "Profile"
+#~ msgstr "پروفایل"
+
+#~ msgid "Orders"
+#~ msgstr "سفارشات"
+
+#~ msgid "Space Between"
+#~ msgstr "فاصله‌ی میانی"
+
+#~ msgid "Left"
+#~ msgstr "چپ"
+
+#~ msgid "Center"
+#~ msgstr "وسط"
+
+#~ msgid "Right"
+#~ msgstr "راست"
+
+#~ msgid "Login Button"
+#~ msgstr "دکمه ورود"
+
+#~ msgid "Normal"
+#~ msgstr "نرمال"
+
+#~ msgid "Text alignment"
+#~ msgstr "چینش متن"
+
+#~ msgid "Icon Size"
+#~ msgstr "اندازه آیکون"
+
+#~ msgid "Icon Color"
+#~ msgstr "رنگ آیکون"
+
+#~ msgid "Text Color"
+#~ msgstr "رنگ متن"
+
+#~ msgid "Border Radius"
+#~ msgstr "انحنا"
+
+#~ msgid "Padding"
+#~ msgstr "فاصله بیرونی"
+
+#~ msgid "Hover"
+#~ msgstr "هاور"
+
+#~ msgid "Hover Animation"
+#~ msgstr "انیمیشن هاور"
+
+#~ msgid "Profile Button"
+#~ msgstr "دکمه پروفایل"
+
+#~ msgid "Avatar Size"
+#~ msgstr "اندازه آواتار"
+
+#~ msgid "Profile Menu"
+#~ msgstr "منوی پروفایل"
+
+#~ msgid "Position"
+#~ msgstr "موقعیت"
+
+#~ msgid "Items"
+#~ msgstr "آیتم‌ها"
+
+#~ msgid "Border Color"
+#~ msgstr "رنگ کادر"
+
+#~ msgid "Logout from account"
+#~ msgstr "خروج از اکانت"
+
 #~ msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 #~ msgstr "حجم فایل بارگذاری شده بیش از حد مشخص شده در تنظیمات سمت سرور است"
 
@@ -2208,15 +2362,6 @@ msgstr "https://mihanwp.com/"
 
 #~ msgid "Dark"
 #~ msgstr "تیره"
-
-#~ msgid "Right"
-#~ msgstr "راست"
-
-#~ msgid "Center"
-#~ msgstr "وسط"
-
-#~ msgid "Left"
-#~ msgstr "چپ"
 
 #~ msgid "Background Color of Login and Register Messagebox"
 #~ msgstr "رنگ پس زمینه ی باکس اطلاع رسانی در فرم ورود و ثبت نام"
@@ -2354,6 +2499,12 @@ msgstr "https://mihanwp.com/"
 #~ msgid "Upload %s File"
 #~ msgstr "آپلود فایل %s"
 
+#~ msgid "Choose menu"
+#~ msgstr "انتخاب منو"
+
+#~ msgid "No any menus exists."
+#~ msgstr "هیچ منویی وجود ندارد."
+
 #, php-format
 #~ msgid "%s Rial"
 #~ msgstr "%s ریال"
@@ -2435,13 +2586,11 @@ msgstr "https://mihanwp.com/"
 #~ msgid "Sms send successfully"
 #~ msgstr "پیامک با موفقیت ارسال شد"
 
-#, php-format
-#~ msgid ""
-#~ "Mihan Panel plugin is not active! For using all features enter license key "
-#~ "from %s Thanks!"
-#~ msgstr ""
-#~ "افزونه ی میهن پنل فعال نیست! برای استفاده از تمامی امکانات از بخش %s کد "
-#~ "فعالسازی را وارد کنید. سپاس"
+#~ msgid "MihanPanel license has been deactivated, please activate it"
+#~ msgstr "لایسنس میهن‌پنل غیرفعال شده است؛ لطفا آن را فعال کنید"
+
+#~ msgid "Remind later"
+#~ msgstr "بعدا یادآوری کن"
 
 #~ msgid "License"
 #~ msgstr "لایسنس"
@@ -2616,6 +2765,9 @@ msgstr "https://mihanwp.com/"
 #~ msgid "This phone number is used by another user"
 #~ msgstr "این شماره موبایل توسط کاربر دیگری در حال استفاده است"
 
+#~ msgid "Panel"
+#~ msgstr "پنل کاربری"
+
 #, php-format
 #~ msgid "Google Recaptcha verification failed %s"
 #~ msgstr "احراز هویت کپچای گوگل با مشکل مواجه شد %s"
@@ -2626,6 +2778,14 @@ msgstr "https://mihanwp.com/"
 #, php-format
 #~ msgid "Please Check Google Recaptcha %s"
 #~ msgstr "لطفا کپچای گوگل را بررسی کنید %s"
+
+#~ msgid "New version available"
+#~ msgstr "نسخه‌ی جدید در دسترس است"
+
+#~ msgid "Please activate MihanPanel License first, then you can update plugin."
+#~ msgstr ""
+#~ "لطفا ابتدا لایسنس میهن‌پنل را فعال کنید؛ سپس میتوانید بروزرسانی را انجام "
+#~ "دهید."
 
 #~ msgid "License Key"
 #~ msgstr "لایسنس"
@@ -2710,6 +2870,18 @@ msgstr "https://mihanwp.com/"
 
 #~ msgid "MihanWP"
 #~ msgstr "میهن وردپرس"
+
+#~ msgctxt "mihanpanel_license_notice"
+#~ msgid "Dismiss"
+#~ msgstr "تمایلی ندارم"
+
+#, php-format
+#~ msgid ""
+#~ "Mihan Panel plugin is not active! For using all features enter license key "
+#~ "from %s Thanks!"
+#~ msgstr ""
+#~ "افزونه ی میهن پنل فعال نیست! برای استفاده از تمامی امکانات از بخش %s کد "
+#~ "فعالسازی را وارد کنید. سپاس"
 
 #~ msgid "Logo Height (px)"
 #~ msgstr "ارتفاع لوگو ( به پیکسل )"
@@ -2797,9 +2969,6 @@ msgstr "https://mihanwp.com/"
 
 #~ msgid "User not found!"
 #~ msgstr "کاربر وجود ندارد!"
-
-#~ msgid "Login / Register"
-#~ msgstr "ورود یا عضویت"
 
 #~ msgctxt "sms-login"
 #~ msgid "Dynamic Password"

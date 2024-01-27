@@ -152,4 +152,23 @@ jQuery(document).ready(function ($) {
             el.closest('form').find('[mwpl_depends_on=mwpl_login_guard_status]').attr('disabled', true)
         }
     })
+
+    let mwplDependsOnFields = $(document).find('input[mwpl_has_depends]')
+    setTimeout(() => {
+        $.each(mwplDependsOnFields, (index, value) => {
+            $(value).change()
+        })
+    }, 300);
+    $(document).on('change', 'input[mwpl_has_depends]', function(e){
+        let el = $(this),
+            isChecked = e.target.checked,
+            elID = el.attr('id')
+
+        if(isChecked)
+        {
+            $(document).find('[mwpl_depends_on='+elID+']').attr('disabled', false)
+        }else{
+            $(document).find('[mwpl_depends_on='+elID+']').attr('disabled', true)
+        }
+    })
 });

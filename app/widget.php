@@ -55,35 +55,19 @@ class widget
             <?php endforeach; ?>
         </div>
         <?php
-        // mihanwp feed
-        include_once ABSPATH . WPINC . DIRECTORY_SEPARATOR . 'feed.php';
+        \mihanpanel\app\assets::enqueue_style('admin-dashboard-widget', \mihanpanel\app\assets::get_css_url('admin/dashboard-widget'));
+        \mihanpanel\app\assets::enqueue_script('admin-dashboard-widget', \mihanpanel\app\assets::get_js_url('admin/dashboard-widget'));
+        
         $baseUrl = \mihanpanel\app\tools::getBaseRemoteUrl();
-        $feed = $baseUrl . 'feed/';
-        $rss = fetch_feed($feed);
-        if(is_wp_error($rss))
-        {
-            return false;
-        }
-        $max_item = $rss->get_item_quantity(3);
-        $items = $rss->get_items(0, $max_item);
         ?>
+
         <div class="mwp_mihanwp_feed_dashboard">
             <strong><?php printf(__('Latest news in %s', 'mihanpanel'), sprintf('<a target="_blank" href="%s">%s</a>', esc_url($baseUrl), __('MihanWp', 'mihanpanel'))); ?></strong>
             <hr style="border:0; height: 1px; background-color: #dfdfdf">
-            <ul>
-                <?php if($max_item == 0): ?>
-                    <li><?php esc_html_e('No item', 'mihanpanel')?></li>
-                <?php else:
-                    foreach($items as $item):
-                        $item_date = human_time_diff($item->get_date('U'), current_time('timestamp')) . ' ' . esc_html__('ago', 'mihanpanel');
-                        ?>
-                        <li>
-                            <a target="_blank" title="<?php echo esc_attr($item_date)?>" href="<?php echo esc_url($item->get_permalink())?>"><?php echo esc_html($item->get_title())?></a>
-                            <p><?php echo wp_kses_post($item->get_description(false))?></p>
-                        </li>
-                    <?php endforeach; ?>
-                <?php endif; ?>
-            </ul>
+            <div class="mwpl-loading-spinner-wrapper show">
+                <span class="dashicons dashicons-update"></span>
+            </div>
+            <ul class="mwpl-rss-items"></ul>
             <a target="_blank" class="more_articles" href="<?php echo esc_url('https://mihanwp.com/tutorials/')?>"><?php esc_html_e('More Articles', 'mihanpanel')?></a>
         </div>
         <?php

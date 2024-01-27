@@ -1,0 +1,40 @@
+.mwp_mihanwp_feed_dashboard .mwpl-loading-spinner-wrapper:not(.show) {
+    display: none;
+}
+
+.mwp_mihanwp_feed_dashboard .mwpl-loading-spinner-wrapper.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mwp_mihanwp_feed_dashboard .mwpl-loading-spinner-wrapper.show>span {
+    font-size: 40px;
+    height: auto;
+    width: auto;
+    animation-name: mwpl_loading_spinner;
+    animation-duration: .7s;
+    animation-iteration-count: infinite;
+}
+
+.mwp_mihanwp_feed_dashboard .mwpl-rss-items
+{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.mwp_mihanwp_feed_dashboard .mwpl-rss-items li
+{
+    padding: 10px;
+}
+.mwp_mihanwp_feed_dashboard .mwpl-rss-items li:not(.empty-item) {
+    border: 1px solid #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px 0px #0000000d;
+}
+
+@keyframes mwpl_loading_spinner {
+    100% {
+        transform: rotate(180deg);
+    }
+}

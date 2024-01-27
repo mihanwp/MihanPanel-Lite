@@ -477,6 +477,16 @@ class handle_view
         $render_method = apply_filters('mwpl_option_panel/render_method/general_is_redirect_wc_checkout_page_to_login_page', []);
         self::handle_option_panel_render_method($render_method);
     }
+    static function option_panel_field_is_add_mihanpanel_to_wp_nav_menu()
+    {
+        $render_method = apply_filters('mwpl_option_panel/render_method/general_is_add_mihanpanel_to_wp_nav_menu', []);
+        self::handle_option_panel_render_method($render_method);
+    }
+    static function option_panel_field_mihanpanel_wp_nav_menu()
+    {
+        $render_method = apply_filters('mwpl_option_panel/render_method/general_mihanpanel_wp_nav_menu', []);
+        self::handle_option_panel_render_method($render_method);
+    }
     static function option_panel_field_login_fields_text_color()
     {
         $render_method = apply_filters('mwpl_option_panel/render_method/login_fields_text_color', []);
@@ -526,6 +536,11 @@ class handle_view
     static function option_panel_field_redirect_normal_user()
     {
         $render_method = apply_filters('mwpl_option_panel/render_method/redirect_normal_user', []);
+        self::handle_option_panel_render_method($render_method);
+    }
+    static function option_panel_field_redirect_url_after_logout()
+    {
+        $render_method = apply_filters('mwpl_option_panel/render_method/redirect_url_after_logout', []);
         self::handle_option_panel_render_method($render_method);
     }
     static function option_panel_field_use_mihan_avatar()

@@ -223,13 +223,21 @@ class admin_menu
         switch ($type) {
             case 'delete':
                 $itemID = isset($_GET['id']) ? intval($_GET['id']) : false;
-                login_guard::deleteIpItem($itemID);
+                $nonce = isset($_GET['mwpl_nonce']) && $_GET['mwpl_nonce'] ? sanitize_text_field($_GET['mwpl_nonce']) : false;
+                if($nonce && wp_verify_nonce($nonce, 'mwpl_delete_blocked_ip_item'))
+                {
+                    login_guard::deleteIpItem($itemID);
+                }
                 $newLocation = esc_url(add_query_arg(['page' => 'mihanpanel_blocked_ips'], admin_url('admin.php')));
                 wp_safe_redirect($newLocation);
                 exit;
                 break;
             case 'delete_all':
-                login_guard::truncateIpListTable();
+                $nonce = isset($_GET['mwpl_nonce']) && $_GET['mwpl_nonce'] ? sanitize_text_field($_GET['mwpl_nonce']) : false;
+                if($nonce && wp_verify_nonce($nonce, 'mwpl_delete_blocked_ip_all_items'))
+                {
+                    login_guard::truncateIpListTable();
+                }
                 $newLocation = esc_url(add_query_arg(['page' => 'mihanpanel_blocked_ips'], admin_url('admin.php')));
                 wp_safe_redirect($newLocation);
                 exit;

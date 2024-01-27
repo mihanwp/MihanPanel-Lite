@@ -70,6 +70,12 @@ class panel
         $tablename = $wpdb->prefix . 'mihanpaneltabs';
         return $wpdb->get_results("SELECT * FROM {$tablename} ORDER BY priority ASC");
     }
+    public static function get_tab($tab_id)
+    {
+        global $wpdb;
+        $tablename = $wpdb->prefix . 'mihanpaneltabs';
+        return $wpdb->get_row($wpdb->prepare("SELECT id,name,content,icon,link FROM {$tablename} WHERE id = %d", $tab_id));
+    }
     static function get_current_tab()
     {
         if(!self::$_current_tab)
@@ -135,6 +141,13 @@ class panel
         <?php endif; ?>
         <?php
     }
+
+    public static function get_tab_link($tab){
+        if (!is_object($tab)) return false;
+
+        return empty($tab->link) ? esc_url(add_query_arg(['tab' => $tab->id], \mihanpanel\app\options::get_panel_url())) : esc_url($tab->link);
+    }
+
     static function render_tabs()
     {
         $tab_id = self::get_current_tab();

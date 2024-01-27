@@ -32,7 +32,7 @@ class emwidg_mihanpanel extends Widget_Base
     }
     public function get_categories()
     {
-        return ['general'];
+        return ['mpanel_elements'];
     }
 
     protected function render()

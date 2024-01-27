@@ -115,7 +115,15 @@ class register
                     }
                 }
             } else {
-                if (isset($field->required) && $field->required == 'yes' && (!isset($_POST['mw_fields'][$field->slug]) || !$_POST['mw_fields'][$field->slug])) {
+                $metaData = isset($field->meta) && $field->meta ? unserialize($field->meta) : null;
+                if (
+                    isset($field->required)
+                    && $field->required == 'yes'
+                    && (!isset($_POST['mw_fields'][$field->slug]) || !$_POST['mw_fields'][$field->slug])
+                    && !isset($metaData['data']['just_in_profile'])
+                    )
+                    
+                {
                     return new \WP_Error('mwpl_register_form_fields_validation', __('Missing required fields data', 'mihanpanel'));
                 }
             }

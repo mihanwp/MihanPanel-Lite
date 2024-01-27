@@ -16,7 +16,7 @@
         <div class="mp_option_single">
             <p>
                 <label for="mwpl_redirect_wp_login_tp_mwpl_login"><?php _e('Redirect wordpress default login to MihanPanel login', 'mihanpanel')?></label>
-                <input type="checkbox" value="1" <?php checked(1, \mihanpanel\app\options::get_mwpl_redirect_wp_login_tp_mwpl_login_status()); ?> name="mwpl_redirect_wp_login_tp_mwpl_login" id="mwpl_redirect_wp_login_tp_mwpl_login">
+                <input type="checkbox" value="1" <?php checked(1, \mihanpanel\app\options::get_mwpl_redirect_wp_login_to_mwpl_login_status()); ?> name="mwpl_redirect_wp_login_tp_mwpl_login" id="mwpl_redirect_wp_login_tp_mwpl_login">
             </p>
         </div>
         <h2><?php _e('Login Guard', 'mihanpanel')?></h2>
