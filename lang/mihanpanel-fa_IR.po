@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MihanPanel\n"
-"POT-Creation-Date: 2024-01-28 02:08+0330\n"
-"PO-Revision-Date: 2024-01-28 02:08+0330\n"
+"POT-Creation-Date: 2024-03-12 13:50+0330\n"
+"PO-Revision-Date: 2024-03-12 13:50+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -26,85 +26,85 @@ msgstr ""
 msgid "Address 2"
 msgstr "آدرس شماره دو"
 
-#: app/admin_menu.php:24 app/gutenberg.php:17
+#: app/admin_menu.php:23 app/gutenberg.php:17
 msgid "MihanPanel"
 msgstr "میهن پنل"
 
-#: app/admin_menu.php:32 views/admin/panel-section/general.php:92
+#: app/admin_menu.php:32 views/admin/panel-section/general.php:97
 msgid "Login & Register"
 msgstr "ورود و عضویت"
 
-#: app/admin_menu.php:33 app/admin_menu.php:56 app/hooks.php:171
+#: app/admin_menu.php:36 app/admin_menu.php:79 app/hooks.php:173
 msgid "User Panel"
 msgstr "پنل کاربری"
 
-#: app/admin_menu.php:34 views/admin/panel-section/register.php:2
+#: app/admin_menu.php:40
 msgid "Register Form"
 msgstr "فرم ثبت نام"
 
-#: app/admin_menu.php:35 app/admin_menu.php:176
-#: views/admin/panel-section/notification.php:2
+#: app/admin_menu.php:44 app/admin_menu.php:199
+#: views/admin/panel-section/notification.php:3
 msgid "Notifications"
 msgstr "اطلاعیه ها"
 
-#: app/admin_menu.php:36
+#: app/admin_menu.php:48
 msgid "Professional login options"
 msgstr "تنظیمات ورود پیشرفته"
 
-#: app/admin_menu.php:37
+#: app/admin_menu.php:52
 msgid "Security"
 msgstr "امنیت"
 
-#: app/admin_menu.php:38
+#: app/admin_menu.php:56
 msgid "Emails"
 msgstr "ایمیل‌های ارسالی"
 
-#: app/admin_menu.php:39 app/widget.php:35
+#: app/admin_menu.php:60 app/widget.php:35
 msgid "Tools"
 msgstr "ابزار‌ها"
 
-#: app/admin_menu.php:102
+#: app/admin_menu.php:125
 msgid "User Fields"
 msgstr "فیلدهای کاربری"
 
-#: app/admin_menu.php:118
+#: app/admin_menu.php:141
 msgid "Do you want to save changes?"
 msgstr "میخواهید تغییرات ذخیره شود؟"
 
-#: app/admin_menu.php:119
+#: app/admin_menu.php:142
 msgid "Yes"
 msgstr "بله"
 
-#: app/admin_menu.php:127
+#: app/admin_menu.php:150
 msgid "Create new field"
 msgstr "ایجاد فیلد جدید"
 
-#: app/admin_menu.php:127
+#: app/admin_menu.php:150
 msgid "Close"
 msgstr "بستن"
 
-#: app/admin_menu.php:137
+#: app/admin_menu.php:160
 msgid "Panel Menus"
 msgstr "منوهای پنل کاربری"
 
-#: app/admin_menu.php:169
+#: app/admin_menu.php:192
 msgid "This section is active in MihanPanel pro"
 msgstr "این بخش در نسخه‌ی حرفه‌ای میهن‌پنل در دسترس است."
 
-#: app/admin_menu.php:206
+#: app/admin_menu.php:229
 #, php-format
 msgid "This feature is accessible only in %s."
 msgstr "این قابلیت فقط در %s در دسترس است"
 
-#: app/admin_menu.php:206
+#: app/admin_menu.php:229
 msgid "MihanPanel Pro"
 msgstr "میهن پنل پرو"
 
-#: app/admin_menu.php:213
+#: app/admin_menu.php:236
 msgid "Blocked ip"
 msgstr "آی‌پی‌های بلاک شده"
 
-#: app/admin_menu.php:248
+#: app/admin_menu.php:271
 #, php-format
 msgid "%d item"
 msgstr "‫%d مورد"
@@ -179,7 +179,7 @@ msgstr "هیچ آیتمی پیدا نشد."
 msgid "The operation failed due to security issues."
 msgstr "عملیات به دلیل مشکلات امنیتی متوقف شد."
 
-#: app/ajax.php:306 app/ajax.php:387 app/form/profile.php:110
+#: app/ajax.php:306 app/ajax.php:387 app/form/profile.php:122
 msgid "Successfully updated!"
 msgstr "با موفقیت به روز شد!"
 
@@ -212,7 +212,7 @@ msgid "Verification code has been sent to email."
 msgstr "کد پویا به آدرس ایمیل ارسال شده است."
 
 #: app/ajax.php:480 app/form/admin_tabs.php:37 app/form/admin_user_fields.php:53
-#: app/form/profile.php:55 app/form/profile.php:107
+#: app/form/profile.php:55 app/form/profile.php:119
 msgid "An error occurred!"
 msgstr "یک خطا رخ داده است!"
 
@@ -318,7 +318,7 @@ msgstr "فعال"
 msgid "Inactive"
 msgstr "غیرفعال"
 
-#: app/emwidg/emwidg_mihanpanel.php:26 app/hooks.php:192 app/live_edit.php:79
+#: app/emwidg/emwidg_mihanpanel.php:26 app/hooks.php:194 app/live_edit.php:79
 msgid "Mihan Panel"
 msgstr "میهن پنل"
 
@@ -542,7 +542,7 @@ msgstr "عنوان"
 
 #: app/form/admin_user_fields.php:77 app/form/admin_user_fields.php:117
 #: app/form/admin_user_fields.php:154 app/form/admin_user_fields.php:156
-#: parts/edit-profile.php:99
+#: parts/edit-profile.php:65
 msgid "Required"
 msgstr "الزامی"
 
@@ -562,7 +562,7 @@ msgstr "اختیاری"
 msgid "Save"
 msgstr "ذخیره"
 
-#: app/form/profile.php:46 app/form/profile.php:99
+#: app/form/profile.php:46 app/form/profile.php:110
 msgid "Passwords don't match!"
 msgstr "رمزهای عبور یکسان نیست!"
 
@@ -570,7 +570,7 @@ msgstr "رمزهای عبور یکسان نیست!"
 msgid "Password successfully changed!"
 msgstr "رمز عبور با موفقیت به روز شد!"
 
-#: app/form/profile.php:134
+#: app/form/profile.php:146
 #, php-format
 msgid "%1$s must not be empty."
 msgstr "%1$s نباید خالی باشد."
@@ -604,9 +604,9 @@ msgstr "تعداد خرید شما"
 msgid "Your tickets"
 msgstr "تیکت های شما"
 
-#: app/handle_view.php:386 app/handle_view.php:886 app/middlewares.php:67
-msgid "Pro Version"
-msgstr "نسخه‌ی حرفه‌ای"
+#: app/handle_view.php:386
+msgid "Required Pro Version"
+msgstr "نیازمند نسخه‌ی حرفه‌ای"
 
 #: app/handle_view.php:407
 msgid "Login Button Text Color"
@@ -684,17 +684,33 @@ msgstr "فعالسازی شماره موبایل بعد از ثبت نام به 
 msgid "User can change phone number"
 msgstr "کاربر میتواند شماره موبایل را تغییر دهد"
 
+#: app/handle_view.php:886 app/middlewares.php:67
+msgid "Pro Version"
+msgstr "نسخه‌ی حرفه‌ای"
+
+#: app/handle_view.php:918
+msgid "Active Captcha"
+msgstr "کپچای فعال"
+
 #: app/handle_view.php:933
+msgid "Active Recaptcha"
+msgstr "فعالسازی کپچا"
+
+#: app/handle_view.php:951
 msgid "Disable reset password"
 msgstr "غیر‌فعال کردن فیلد بازیابی رمز عبور"
 
-#: app/handle_view.php:955
+#: app/handle_view.php:973
 msgid "Login and Register form background"
 msgstr "پس زمینه فرم ورود و ثبت نام"
 
-#: app/handle_view.php:957 views/admin/panel-section/general.php:120
+#: app/handle_view.php:975 views/admin/panel-section/general.php:144
 msgid "Upload Image"
 msgstr "آپلود تصویر"
+
+#: app/handle_view.php:989
+msgid "Upload File"
+msgstr "آپلود فایل"
 
 #: app/live_edit.php:54
 msgid "This feature is just accessible in pro version"
@@ -802,7 +818,7 @@ msgstr "داشبورد کاربری"
 msgid "Edit Profile"
 msgstr "ویرایش پروفایل"
 
-#: app/panel.php:196 views/admin/panel-section/security.php:10
+#: app/panel.php:196 views/admin/panel-section/security.php:12
 #: views/user/2fa_menu.php:2
 msgid "Two factor authentication"
 msgstr "احراز هویت دو مرحله‌ای"
@@ -819,8 +835,10 @@ msgstr "ورود با SMS"
 msgid "Both"
 msgstr "هردو"
 
-#: app/register.php:34 views/admin/panel-section/email.php:21
-#: views/admin/panel-section/email.php:39 views/admin/panel-section/email.php:59
+#: app/register.php:34 views/admin/panel-section/email.php:19
+#: views/admin/panel-section/email.php:41 views/admin/panel-section/email.php:64
+#: views/admin/panel-section/professional_login.php:148
+#: views/admin/panel-section/professional_login.php:163
 #: views/user/normal_login_form.php:12
 msgid "Username"
 msgstr "نام کاربری"
@@ -854,7 +872,7 @@ msgstr "فیلدهای اجباری را پر کنید"
 msgid "Send code"
 msgstr "ارسال کد"
 
-#: app/reset_password.php:33 views/admin/panel-section/professional_login.php:24
+#: app/reset_password.php:33 views/admin/panel-section/professional_login.php:33
 msgid "Reset Password"
 msgstr "بازیابی رمز عبور"
 
@@ -878,7 +896,7 @@ msgstr "خطا"
 msgid "Username or Email"
 msgstr "نام کاربری یا ایمیل"
 
-#: app/reset_password.php:84 views/admin/panel-section/email.php:65
+#: app/reset_password.php:84 views/admin/panel-section/email.php:73
 msgid "Dynamic code"
 msgstr "کد پویا"
 
@@ -889,7 +907,7 @@ msgstr "پسورد خود را فراموش کرده‌اید؟"
 #: app/reset_password.php:106
 #, php-format
 msgid "Verification code for reset password: %s"
-msgstr "کد احراز هوبت برای بازیابی رمز عبور: %s"
+msgstr "کد احراز هویت برای بازیابی رمز عبور: %s"
 
 #: app/reset_password.php:107
 msgid "Verification Code"
@@ -929,6 +947,19 @@ msgstr "وضعیت احراز هویت دوعاملی"
 msgid "Activate"
 msgstr "فعالسازی"
 
+#: app/tools.php:149
+msgid "20% Off in first purchase"
+msgstr "۲۰٪ تخفیف اولین خرید"
+
+#: app/tools.php:150
+msgid "OFF code"
+msgstr "کد تخفیف"
+
+#: app/tools.php:152
+msgctxt "pro_version_link"
+msgid "Buy"
+msgstr "خرید کنید"
+
 #: app/user_fields.php:11
 msgid "Text input"
 msgstr "متن ساده"
@@ -960,6 +991,28 @@ msgstr "گیرنده‌ی تاریخ"
 #: app/user_fields.php:43
 msgid "File Uploader"
 msgstr "آپلود کننده‌ی فایل"
+
+#: app/user_fields.php:69 views/admin/panel-section/email.php:42
+#: views/admin/panel-section/email.php:65
+msgid "First Name"
+msgstr "نام"
+
+#: app/user_fields.php:86 views/admin/panel-section/email.php:43
+#: views/admin/panel-section/email.php:66
+msgid "Last Name"
+msgstr "نام خانوادگی"
+
+#: app/user_fields.php:103 parts/change-password.php:27
+msgid "New password"
+msgstr "رمز عبور جدید"
+
+#: app/user_fields.php:109 parts/change-password.php:33
+msgid "Password repeat"
+msgstr "تکرار رمز عبور"
+
+#: app/user_fields.php:126
+msgid "Bio"
+msgstr "بیوگرافی"
 
 #: app/users.php:157 views/admin/blocked_ips_menu.php:18
 msgid "Status"
@@ -995,7 +1048,7 @@ msgstr "باید بررسی کنید:"
 msgid "Latest news in %s"
 msgstr "آخرین اخبار در %s"
 
-#: app/widget.php:65 views/admin/settings.php:23
+#: app/widget.php:65 views/admin/settings.php:34
 msgid "MihanWp"
 msgstr "میهن وردپرس"
 
@@ -1023,16 +1076,8 @@ msgstr "ثبت نام"
 msgid "Change password"
 msgstr "تغییر رمز عبور"
 
-#: parts/change-password.php:27 parts/edit-profile.php:49
-msgid "New password"
-msgstr "رمز عبور جدید"
-
-#: parts/change-password.php:33 parts/edit-profile.php:55
-msgid "Password repeat"
-msgstr "تکرار رمز عبور"
-
-#: parts/change-password.php:39 parts/edit-profile.php:112
-#: views/user/2fa_menu.php:83
+#: parts/change-password.php:39 parts/edit-profile.php:78
+#: views/admin/settings.php:48 views/user/2fa_menu.php:83
 msgid "Save Changes"
 msgstr "ذخیره تغییرات"
 
@@ -1061,20 +1106,6 @@ msgstr "متأسفیم، اما شما به این بخش دسترسی ندار�
 #: parts/edit-profile.php:2
 msgid "Edit User Profile"
 msgstr "ویرایش پروفایل کاربری"
-
-#: parts/edit-profile.php:32 views/admin/panel-section/email.php:40
-#: views/admin/panel-section/email.php:60
-msgid "First Name"
-msgstr "نام"
-
-#: parts/edit-profile.php:40 views/admin/panel-section/email.php:41
-#: views/admin/panel-section/email.php:61
-msgid "Last Name"
-msgstr "نام خانوادگی"
-
-#: parts/edit-profile.php:64
-msgid "Bio"
-msgstr "بیوگرافی"
 
 #: views/admin/admin-profile/account-status.php:5
 msgid "User Account Status"
@@ -1128,71 +1159,75 @@ msgstr "بلاک شده"
 msgid "No any ip records found"
 msgstr "هیچ رکورد آی‌پی پیدا نشد"
 
-#: views/admin/panel-section/email.php:3
+#: views/admin/panel-section/email.php:5
 msgid "Welcome Email"
 msgstr "ایمیل خوش آمد گویی"
 
-#: views/admin/panel-section/email.php:4
+#: views/admin/panel-section/email.php:6
 msgid "Text of email that send to new user"
 msgstr "متن ایمیلی که به کاربر جدید ارسال می شود"
 
-#: views/admin/panel-section/email.php:10 views/admin/panel-section/email.php:32
-#: views/admin/panel-section/email.php:52 views/admin/panel-section/email.php:73
+#: views/admin/panel-section/email.php:8 views/admin/panel-section/email.php:34
+#: views/admin/panel-section/email.php:57 views/admin/panel-section/email.php:81
 msgid "Email Content"
 msgstr "متن ایمیل"
 
-#: views/admin/panel-section/email.php:19 views/admin/panel-section/email.php:36
-#: views/admin/panel-section/email.php:56
+#: views/admin/panel-section/email.php:17 views/admin/panel-section/email.php:38
+#: views/admin/panel-section/email.php:61
+#: views/admin/panel-section/professional_login.php:146
+#: views/admin/panel-section/professional_login.php:161
 msgid "You can use this:"
 msgstr "شما می توانید از این موارد استفاده کنید:"
 
-#: views/admin/panel-section/email.php:22 views/admin/panel-section/email.php:42
-#: views/admin/panel-section/email.php:62
+#: views/admin/panel-section/email.php:20 views/admin/panel-section/email.php:44
+#: views/admin/panel-section/email.php:67
+#: views/admin/panel-section/professional_login.php:149
+#: views/admin/panel-section/professional_login.php:164
 msgid "Display Name"
 msgstr "نام نمایشی"
 
-#: views/admin/panel-section/email.php:25
+#: views/admin/panel-section/email.php:27
 msgid "Reset Password Email"
 msgstr "ایمیل بازگردانی رمز عبور"
 
-#: views/admin/panel-section/email.php:26
+#: views/admin/panel-section/email.php:28
 msgid "Subject and Text of reset password email"
 msgstr "موضوع و متن ایمیل بازیابی رمز عبور"
 
-#: views/admin/panel-section/email.php:28
+#: views/admin/panel-section/email.php:30
 msgid "Reset password email subject"
 msgstr "موضوع ایمیل بازیابی رمز عبور"
 
-#: views/admin/panel-section/email.php:38
-#: views/admin/panel-section/general.php:83
+#: views/admin/panel-section/email.php:40
+#: views/admin/panel-section/general.php:88
 msgid "Activation Link"
 msgstr "لینک فعالسازی"
 
-#: views/admin/panel-section/email.php:45
+#: views/admin/panel-section/email.php:50
 msgid "Change Accoutn Status Email"
 msgstr "ایمیل تغییر وضعیت اکانت"
 
-#: views/admin/panel-section/email.php:46
+#: views/admin/panel-section/email.php:51
 msgid "Subject and Text of change account status email"
 msgstr "موضوع و متن ایمیل تغییر وضعیت اکانت کاربری"
 
-#: views/admin/panel-section/email.php:48
+#: views/admin/panel-section/email.php:53
 msgid "Change account status email subject"
 msgstr "عنوان ایمیل تغییر وضعیت اکانت کاربری"
 
-#: views/admin/panel-section/email.php:58
+#: views/admin/panel-section/email.php:63
 msgid "Account Status"
 msgstr "وضعیت اکانت"
 
-#: views/admin/panel-section/email.php:66
+#: views/admin/panel-section/email.php:74
 msgid "Subject and Text of dynamic code email"
 msgstr "موضوع و متن ایمیل کد پویا"
 
-#: views/admin/panel-section/email.php:67
+#: views/admin/panel-section/email.php:75
 msgid "This settings works if Smart Login is active."
 msgstr "اگر حالت ورود هوشمند فعال باشد، این تنظیمات اعمال میشود."
 
-#: views/admin/panel-section/email.php:69
+#: views/admin/panel-section/email.php:77
 msgid "Dynamic code email subject"
 msgstr "عنوان ایمیل کد پویا"
 
@@ -1216,32 +1251,32 @@ msgstr "آدرس صفحه ورود سایت شما"
 msgid "Login form message"
 msgstr "پیام فرم ورود"
 
-#: views/admin/panel-section/general.php:39
+#: views/admin/panel-section/general.php:40
 msgid "Text that shows in top of login form"
 msgstr "متنی که در بالای فرم ورود نمایش داده میشود"
 
-#: views/admin/panel-section/general.php:43
+#: views/admin/panel-section/general.php:46
 msgid "Woocommerce"
 msgstr "ووکامرس"
 
-#: views/admin/panel-section/general.php:46
+#: views/admin/panel-section/general.php:49
 msgid "Redirect checkout page to login page"
 msgstr "انتقال از صفحه‌ی بازبینی سفارش به صفحه‌ی ورود"
 
-#: views/admin/panel-section/general.php:49
+#: views/admin/panel-section/general.php:52
 msgid "If user is not logged-in"
 msgstr "در صورتی که کاربر وارد حساب خود نشده باشد"
 
-#: views/admin/panel-section/general.php:53
-#: views/admin/panel-section/general.php:62
+#: views/admin/panel-section/general.php:57
+#: views/admin/panel-section/general.php:67
 msgid "Menus"
 msgstr "منو‌ها"
 
-#: views/admin/panel-section/general.php:56
+#: views/admin/panel-section/general.php:61
 msgid "Add MihanPanel item in menu"
 msgstr "اضافه کردن آیتم میهن‌پنل به منو"
 
-#: views/admin/panel-section/general.php:59
+#: views/admin/panel-section/general.php:64
 msgid ""
 "Add Login button ( if user not logged-in ) and Panel button ( if user is "
 "logged-in ) in menu"
@@ -1249,382 +1284,450 @@ msgstr ""
 "اضافه کردن دکمه ورود ( در صورت لاگین نبودن کاربر ) و دکمه پنل‌کاربری ( در صورت "
 "لاگین بودن کاربر ) به منو"
 
-#: views/admin/panel-section/general.php:65
+#: views/admin/panel-section/general.php:70
 msgid "Choose menu location that you want to add MihanPanel item to it."
 msgstr "موقعیت منویی که میخواهید آیتم میهن‌پنل به آن اضافه شود را انتخاب کنید."
 
-#: views/admin/panel-section/general.php:69
+#: views/admin/panel-section/general.php:74
 msgid "Activation process"
 msgstr "روند فعالسازی"
 
-#: views/admin/panel-section/general.php:86
+#: views/admin/panel-section/general.php:91
 msgid "Resend account activation email"
 msgstr "ارسال دوباره‌ی ایمیل فعالسازی حساب"
 
-#: views/admin/panel-section/general.php:94
-msgid "Login Form Theme"
-msgstr "تم فرم ورود"
-
-#: views/admin/panel-section/general.php:96
+#: views/admin/panel-section/general.php:99
 msgid "Login and Register form theme"
 msgstr "تم فرم ورود و عضویت"
 
-#: views/admin/panel-section/general.php:99
+#: views/admin/panel-section/general.php:101
+msgid "Login Form Theme"
+msgstr "تم فرم ورود"
+
+#: views/admin/panel-section/general.php:106
+#: views/admin/panel-section/general.php:110
 msgid "Form Position"
 msgstr "موقعیت فرم"
 
-#: views/admin/panel-section/general.php:103
+#: views/admin/panel-section/general.php:108
+msgid "Choose Login & Register form position"
+msgstr "موقعیت فرم ورود و ثبت‌نام را انتخاب کنید"
+
+#: views/admin/panel-section/general.php:115
+msgid "Color Options"
+msgstr "تنظیمات رنگبندی"
+
+#: views/admin/panel-section/general.php:118
 msgid "Login Button Color"
 msgstr "رنگ دکمه ورود"
 
-#: views/admin/panel-section/general.php:105
+#: views/admin/panel-section/general.php:120
 msgid "Color of Login and Register button"
 msgstr "پس زمینه دکمه ورود و ثبت‌نام"
 
-#: views/admin/panel-section/general.php:118
-msgid "Login and Register form Logo"
-msgstr "لوگوی فرم ورود و عضویت"
+#: views/admin/panel-section/general.php:134
+msgid "Upload Login & Register form logo"
+msgstr "آپلود لوگوی فرم ورود و عضویت"
 
-#: views/admin/panel-section/general.php:121
+#: views/admin/panel-section/general.php:135
+msgid "Upload the login and registration form logo file"
+msgstr "فایل لوگوی فرم ورود و عضویت را آپلود کنید"
+
+#: views/admin/panel-section/general.php:141
+msgid "Click here and choose your logo file"
+msgstr "با کلیک روی این قسمت، فایل لوگو را انتخاب کنید"
+
+#: views/admin/panel-section/general.php:142
 msgid "We suggest to use 120 * 120 px for logo size."
 msgstr ""
 "ما پیشنهاد می کنیم از سایز ۱۲۰ * ۱۲۰ (پیکسل) برای اندازه لوگو  استفاده کنید."
 
-#: views/admin/panel-section/general.php:124
+#: views/admin/panel-section/general.php:148
+msgid "Logo Width"
+msgstr "پهنای لوگو"
+
+#: views/admin/panel-section/general.php:151
 msgid "Logo Width (px)"
 msgstr "پهنای لوگو ( به پیکسل )"
 
-#: views/admin/panel-section/general.php:130
+#: views/admin/panel-section/general.php:156
+msgid "Background options"
+msgstr "تنظیمات پس‌زمینه"
+
+#: views/admin/panel-section/general.php:160
 msgid "Login page Background"
 msgstr "پس‌زمینه‌ی صفحه‌ی ورود"
 
-#: views/admin/panel-section/general.php:133
+#: views/admin/panel-section/general.php:163
 msgid "Login form Background"
 msgstr "پس‌زمینه‌ی فرم ورود"
 
-#: views/admin/panel-section/general.php:147
-msgid "Redirect non Admin user to"
-msgstr "تغییر مسیر کاربر غیر مدیر به"
+#: views/admin/panel-section/general.php:178
+msgid "Redirect non admin users"
+msgstr "تغییر مسیر کاربران غیر مدیر"
 
-#: views/admin/panel-section/general.php:149
+#: views/admin/panel-section/general.php:180
 msgid ""
 "Users who don't have admin or author caps, redirect to this address after login"
 msgstr ""
 "کاربرانی که دارای دسترسی مدیر یا نویسنده نیستند، پس از ورود ، به این نشانی "
 "هدایت می شوند"
 
-#: views/admin/panel-section/general.php:149
-#: views/admin/panel-section/general.php:155
+#: views/admin/panel-section/general.php:180
+#: views/admin/panel-section/general.php:189
 msgid "With http or https"
 msgstr "با http یا https"
 
-#: views/admin/panel-section/general.php:153
-msgid "Redirect after logout to"
-msgstr "انتقال کاربر بعد از خروج از حساب به"
+#: views/admin/panel-section/general.php:182
+msgid "Redirect non Admin user to"
+msgstr "تغییر مسیر کاربر غیر مدیر به"
 
-#: views/admin/panel-section/general.php:155
+#: views/admin/panel-section/general.php:187
+msgid "Location after logout"
+msgstr "مسیر بعد از خروج از حساب کاربری"
+
+#: views/admin/panel-section/general.php:189
 msgid "Users after logout redirect to this url"
 msgstr "کاربر بعد از خروج از حساب کاربری خود به این آدرس منتقل میشود"
 
-#: views/admin/panel-section/notification.php:9
+#: views/admin/panel-section/general.php:191
+msgid "Redirect after logout to"
+msgstr "انتقال کاربر بعد از خروج از حساب به"
+
+#: views/admin/panel-section/notification.php:8
 msgid "Notification 1"
 msgstr "اطلاعیه ی شماره 1"
 
-#: views/admin/panel-section/notification.php:11
-#: views/admin/panel-section/notification.php:16
-#: views/admin/panel-section/notification.php:21
-#: views/admin/panel-section/notification.php:26
-#: views/admin/panel-section/notification.php:31
-#: views/admin/panel-section/notification.php:36
+#: views/admin/panel-section/notification.php:9
+#: views/admin/panel-section/notification.php:17
+#: views/admin/panel-section/notification.php:25
+#: views/admin/panel-section/notification.php:33
 #: views/admin/panel-section/notification.php:41
-#: views/admin/panel-section/notification.php:46
+#: views/admin/panel-section/notification.php:49
+#: views/admin/panel-section/notification.php:57
+#: views/admin/panel-section/notification.php:65
 msgid "Create a notification to show to your users in their dashboard."
 msgstr ""
 "یک اطلاعیه بنویسید تا در پنل کاربری برای همه ی کاربران سایت به نمایش درآید."
 
-#: views/admin/panel-section/notification.php:14
+#: views/admin/panel-section/notification.php:11
+#: views/admin/panel-section/notification.php:19
+#: views/admin/panel-section/notification.php:27
+#: views/admin/panel-section/notification.php:35
+#: views/admin/panel-section/notification.php:43
+#: views/admin/panel-section/notification.php:51
+#: views/admin/panel-section/notification.php:59
+#: views/admin/panel-section/notification.php:67
+msgid "Notification text"
+msgstr "متن اطلاعیه"
+
+#: views/admin/panel-section/notification.php:16
 msgid "Notification 2"
 msgstr "اطلاعیه ی شماره 2"
 
-#: views/admin/panel-section/notification.php:19
+#: views/admin/panel-section/notification.php:24
 msgid "Notification 3"
 msgstr "اطلاعیه ی شماره 3"
 
-#: views/admin/panel-section/notification.php:24
+#: views/admin/panel-section/notification.php:32
 msgid "Notification 4"
 msgstr "اطلاعیه شماره 4"
 
-#: views/admin/panel-section/notification.php:29
+#: views/admin/panel-section/notification.php:40
 msgid "Notification 5"
 msgstr "اطلاعیه شماره 5"
 
-#: views/admin/panel-section/notification.php:34
+#: views/admin/panel-section/notification.php:48
 msgid "Notification 6"
 msgstr "اطلاعیه شماره 6"
 
-#: views/admin/panel-section/notification.php:39
+#: views/admin/panel-section/notification.php:56
 msgid "Notification 7"
 msgstr "اطلاعیه شماره 7"
 
-#: views/admin/panel-section/notification.php:44
+#: views/admin/panel-section/notification.php:64
 msgid "Notification 8"
 msgstr "اطلاعیه شماره 8"
 
-#: views/admin/panel-section/panel.php:2
+#: views/admin/panel-section/panel.php:3
 msgid "User panel settings"
 msgstr "تنظیمات پنل کاربری"
 
 #: views/admin/panel-section/panel.php:8
+msgid "Topbar"
+msgstr "نوار بالایی"
+
+#: views/admin/panel-section/panel.php:10
 msgid "Hide topbar"
 msgstr "مخفی کردن نوار بالای سایت"
 
-#: views/admin/panel-section/panel.php:10
+#: views/admin/panel-section/panel.php:13
 msgid "Activate this if you want to hide wp topbar from your site for users"
 msgstr ""
 "اگر میخواهید نوار سیاه وردپرس از بالای سایت برای کاربران معمولی حذف شود این "
 "گزینه را فعال کنید"
 
-#: views/admin/panel-section/panel.php:13
+#: views/admin/panel-section/panel.php:16
+msgid "Mihan avatar"
+msgstr "میهن آواتار"
+
+#: views/admin/panel-section/panel.php:19
 msgid "Use mihan avatar"
 msgstr "استفاده از میهن آواتار"
 
-#: views/admin/panel-section/panel.php:15
+#: views/admin/panel-section/panel.php:22
 msgid "User can choose avatar image in panel"
 msgstr "کاربر میتواند آواتار خود را در پنل کاربری تغییر دهد"
 
-#: views/admin/panel-section/panel.php:18
+#: views/admin/panel-section/panel.php:26
+msgid "Fonts"
+msgstr "فونت‌ها"
+
+#: views/admin/panel-section/panel.php:28
 msgid "Don't use MihanPanel fonts"
 msgstr "از فونت‌های میهن پنل استفاده نکن"
 
-#: views/admin/panel-section/panel.php:20
+#: views/admin/panel-section/panel.php:31
 msgid "Use theme or other plugins fonts instead of MihanPanel fonts."
 msgstr "استفاده از فونت‌های قالب یا پلاگین‌های دیگر به جای فونت‌های میهن پنل."
 
-#: views/admin/panel-section/panel.php:23
+#: views/admin/panel-section/panel.php:33
 msgid "Disable MihanPanel fontawesome"
 msgstr "غیرفعال کردن FontAwesome میهن پنل"
 
-#: views/admin/panel-section/panel.php:25
+#: views/admin/panel-section/panel.php:36
 msgid "Don't load mihanpanel fontawesome"
 msgstr "از FontAwesome میهن پنل استفاده نکن"
 
-#: views/admin/panel-section/panel.php:28 views/admin/panel-section/tools.php:7
+#: views/admin/panel-section/panel.php:39 views/admin/panel-section/tools.php:8
 msgid "User panel page"
 msgstr "صفحه پنل کاربری"
 
-#: views/admin/panel-section/panel.php:47
-msgid "No any page exists"
-msgstr "هیچ برگه‌ای وجود ندارد"
-
-#: views/admin/panel-section/panel.php:50
+#: views/admin/panel-section/panel.php:40
 msgid "Select user panel page"
 msgstr "برگه‌ی پنل کاربری را انتخاب کنید"
 
-#: views/admin/panel-section/panel.php:53
+#: views/admin/panel-section/panel.php:42
+msgid "Pages"
+msgstr "برگه‌ها"
+
+#: views/admin/panel-section/panel.php:61
+msgid "No any page exists"
+msgstr "هیچ برگه‌ای وجود ندارد"
+
+#: views/admin/panel-section/panel.php:67 views/admin/panel-section/panel.php:71
 msgid "Panel Theme"
 msgstr "تم پنل کاربری"
 
-#: views/admin/panel-section/panel.php:55
+#: views/admin/panel-section/panel.php:69
 msgid "Choose User Panel Theme"
 msgstr "تم پنل کاربری را انتخاب کنید"
 
-#: views/admin/panel-section/panel.php:58
-msgid "Panel Font Family"
-msgstr "فونت پنل کاربری"
+#: views/admin/panel-section/panel.php:77
+msgid "User panel font"
+msgstr "فونت پنل‌کاربری"
 
-#: views/admin/panel-section/panel.php:60
+#: views/admin/panel-section/panel.php:79
 msgid "User Panel Font Family"
 msgstr "فونت استفاده شده برای پنل کاربری و صفحه ورود و عضویت"
 
-#: views/admin/panel-section/panel.php:63
+#: views/admin/panel-section/panel.php:81
+msgid "Panel Font Family"
+msgstr "فونت پنل کاربری"
+
+#: views/admin/panel-section/panel.php:87 views/admin/panel-section/panel.php:90
 msgid "Off Code"
 msgstr "کد تخفیف"
 
-#: views/admin/panel-section/panel.php:65
+#: views/admin/panel-section/panel.php:88
 msgid "Off Code that you want to show in user panel"
 msgstr "کد تخفیفی که میخواید در پنل کاربری نمایش داده شود"
 
-#: views/admin/panel-section/panel.php:68
+#: views/admin/panel-section/panel.php:94
 msgid "Off Code percentage"
 msgstr "درصد کد تخفیف"
 
-#: views/admin/panel-section/panel.php:70
+#: views/admin/panel-section/panel.php:97
 msgid "Off Code percentage will show in user panel. ex => 25%"
 msgstr "درصد کد تخفیف در پنل کاربری نشان داده خواهد شد. مثلا بنویسید: 25 درصدی"
 
-#: views/admin/panel-section/panel.php:73
+#: views/admin/panel-section/panel.php:99
 msgid "Off Code text"
 msgstr "متن کد تخفیف"
 
-#: views/admin/panel-section/panel.php:75
+#: views/admin/panel-section/panel.php:102
 msgid "Text that will show in user panel as a Off Code text."
 msgstr "متنی که به عنوان متن کد تخفیف در پنل کاربری نمایش داده میشود."
 
-#: views/admin/panel-section/panel.php:76
+#: views/admin/panel-section/panel.php:103
 msgid "Use [[number]] to replace with off code percentage."
 msgstr "از [[number]] استفاده کنید تا با مقدار کد تخفیف جایگذاری شود."
 
-#: views/admin/panel-section/panel.php:78
+#: views/admin/panel-section/panel.php:108
 msgid "Color scheme"
 msgstr "رنگ بندی"
 
-#: views/admin/panel-section/panel.php:80
+#: views/admin/panel-section/panel.php:111
 msgid "Sidebar background color in panel"
 msgstr "رنگ پس زمینه نوار کناری در پنل کاربری"
 
-#: views/admin/panel-section/panel.php:84
+#: views/admin/panel-section/panel.php:115
 msgid "Sidebar link color that show in panel"
 msgstr "رنگ لینک ها در نوار کناری پنل کاربری"
 
-#: views/admin/panel-section/panel.php:87
+#: views/admin/panel-section/panel.php:122
 msgid "Dashboard Widgets"
 msgstr "ویجت‌های داشبورد"
 
-#: views/admin/panel-section/panel.php:90
+#: views/admin/panel-section/panel.php:126
 msgid "Show register day count widget"
 msgstr "نمایش ویجت روز‌هایی که عضو هستید"
 
-#: views/admin/panel-section/panel.php:94
+#: views/admin/panel-section/panel.php:130
 msgid "Show Comment widget"
 msgstr "نمایش ویجت تعداد نظرات"
 
-#: views/admin/panel-section/panel.php:98
+#: views/admin/panel-section/panel.php:134
 msgid "Show Woocommerce widget"
 msgstr "نمایش ویجت ووکامرس"
 
-#: views/admin/panel-section/panel.php:102
+#: views/admin/panel-section/panel.php:138
 msgid "Show EDD widget"
 msgstr "نمایش ویجت EDD"
 
-#: views/admin/panel-section/panel.php:106
+#: views/admin/panel-section/panel.php:142
 msgid "Show Awesome Support widget"
 msgstr "نمایش ویجت افزونه Awesome Support"
 
-#: views/admin/panel-section/panel.php:110
+#: views/admin/panel-section/panel.php:146
 msgid "Show Mihan Ticket widget"
 msgstr "نمایش ویجت افزونه میهن‌تیکت"
 
-#: views/admin/panel-section/panel.php:114
+#: views/admin/panel-section/panel.php:153
 msgid "Blog Section"
 msgstr "بخش بلاگ"
 
-#: views/admin/panel-section/panel.php:116
+#: views/admin/panel-section/panel.php:156
 msgid "Is blog section enable?"
 msgstr "بخش بلاگ فعال باشد؟"
 
-#: views/admin/panel-section/panel.php:120
+#: views/admin/panel-section/panel.php:160
 msgid "Section Title"
 msgstr "عنوان این بخش"
 
-#: views/admin/panel-section/panel.php:124
+#: views/admin/panel-section/panel.php:164
 msgid "Title Link"
 msgstr "لینک"
 
-#: views/admin/panel-section/panel.php:128
+#: views/admin/panel-section/panel.php:168
 msgid "Posts category"
 msgstr "دسته‌بندی نوشته‌ها"
 
-#: views/admin/panel-section/panel.php:132
+#: views/admin/panel-section/panel.php:172
 msgid "Posts count"
 msgstr "تعداد نوشته‌ها"
 
-#: views/admin/panel-section/panel.php:136
+#: views/admin/panel-section/panel.php:177
+msgid "User roles"
+msgstr "نقش‌های کاربری"
+
+#: views/admin/panel-section/panel.php:179
 msgid "Roles who can't use admin panel"
 msgstr "نقش های کاربری که اجازه ی ورود به پنل مدیریت را ندارند"
 
-#: views/admin/panel-section/professional_login.php:6
+#: views/admin/panel-section/professional_login.php:7
 msgid "Smart Login"
 msgstr "ورود هوشمند"
 
-#: views/admin/panel-section/professional_login.php:7
+#: views/admin/panel-section/professional_login.php:9
 msgid "Automatic login by phone number, email or username"
 msgstr "شناسایی خودکار شیوه‌ی ورود از شماره تلفن، ایمیل یا نام کاربری"
 
-#: views/admin/panel-section/professional_login.php:10
+#: views/admin/panel-section/professional_login.php:12
 msgid "Activate smart login"
 msgstr "فعالسازی ورود هوشمند"
 
-#: views/admin/panel-section/professional_login.php:14
+#: views/admin/panel-section/professional_login.php:16
 msgid "Generate random username"
 msgstr "ساخت نام کاربری تصادفی"
 
-#: views/admin/panel-section/professional_login.php:18
+#: views/admin/panel-section/professional_login.php:20
 msgid "Obtain phone number in panel"
 msgstr "شماره موبایل را در پنل‌کاربری دریافت کن"
 
-#: views/admin/panel-section/professional_login.php:22
+#: views/admin/panel-section/professional_login.php:28
 msgid "Password Type"
 msgstr "نوع پسورد"
 
-#: views/admin/panel-section/professional_login.php:26
+#: views/admin/panel-section/professional_login.php:38
 msgid "Texts"
 msgstr "نوشته‌ها"
 
-#: views/admin/panel-section/professional_login.php:29
+#: views/admin/panel-section/professional_login.php:41
 msgid "Change username label in login form"
 msgstr "تغییر برچسب نام کاربری در فرم ورود"
 
-#: views/admin/panel-section/professional_login.php:33
+#: views/admin/panel-section/professional_login.php:45
 msgid "Username label"
 msgstr "برچسب نام کاربری"
 
-#: views/admin/panel-section/professional_login.php:37
+#: views/admin/panel-section/professional_login.php:49
 msgid "Change phone label in login form"
 msgstr "تغییر برچسب فیلد شماره تلفن در فرم ورود"
 
-#: views/admin/panel-section/professional_login.php:41
+#: views/admin/panel-section/professional_login.php:53
 msgid "Phone label"
 msgstr "برچسب شماره تلفن"
 
-#: views/admin/panel-section/professional_login.php:45
+#: views/admin/panel-section/professional_login.php:57
 msgid "Change password label in login form"
 msgstr "تغییر برچسب پسورد در فرم ورود"
 
-#: views/admin/panel-section/professional_login.php:49
+#: views/admin/panel-section/professional_login.php:61
 msgid "Password label"
 msgstr "برچسب پسورد"
 
-#: views/admin/panel-section/professional_login.php:53
+#: views/admin/panel-section/professional_login.php:65
 msgid "Change dynamic code label in login form"
 msgstr "تغییر برچسب فیلد کد پویا در فرم ورود"
 
-#: views/admin/panel-section/professional_login.php:57
+#: views/admin/panel-section/professional_login.php:69
 msgid "Dynamic code label"
 msgstr "برچسب فیلد کد پویا"
 
-#: views/admin/panel-section/professional_login.php:62
+#: views/admin/panel-section/professional_login.php:74
 msgid "Change Login button text in login form"
 msgstr "تغییر متن دکمه ورود در فرم لاگین"
 
-#: views/admin/panel-section/professional_login.php:66
+#: views/admin/panel-section/professional_login.php:78
 msgid "Login button text"
 msgstr "متن دکمه ورود"
 
-#: views/admin/panel-section/professional_login.php:71
+#: views/admin/panel-section/professional_login.php:83
 msgid "Change register button text in login form"
 msgstr "تغییر متن دکمه ثبت‌نام در فرم لاگین"
 
-#: views/admin/panel-section/professional_login.php:75
+#: views/admin/panel-section/professional_login.php:87
 msgid "Register button text"
 msgstr "متن دکمه ثبت‌نام"
 
-#: views/admin/panel-section/professional_login.php:79
+#: views/admin/panel-section/professional_login.php:93
 msgid "WPML Settings"
 msgstr "تنظیمات WPML"
 
-#: views/admin/panel-section/professional_login.php:82
+#: views/admin/panel-section/professional_login.php:95
 msgid "Active sms settings just in persian language"
 msgstr "فقط زمانی که زبان فارسی فعال است تنظیمات اس‌ام‌اس را فعال نگه‌دار"
 
-#: views/admin/panel-section/professional_login.php:86
+#: views/admin/panel-section/professional_login.php:102
 msgid "Disable register form fields"
 msgstr "غیر‌فعال کردن فیلد‌های فرم ثبت‌نام"
 
-#: views/admin/panel-section/professional_login.php:89
+#: views/admin/panel-section/professional_login.php:105
 msgid "Disable email field"
 msgstr "غیر‌فعال کردن فیلد ایمیل"
 
-#: views/admin/panel-section/professional_login.php:92
+#: views/admin/panel-section/professional_login.php:108
 msgid ""
 "You can disable email field in register form if login with sms dynamic code is "
 "active."
@@ -1632,11 +1735,11 @@ msgstr ""
 "اگر ورود به کد یکبار مصرف فعال باشد، میتوانید فیلد ایمیل را در صفحه‌ی ثبت نام، "
 "غیر‌فعال کنید."
 
-#: views/admin/panel-section/professional_login.php:94
+#: views/admin/panel-section/professional_login.php:110
 msgid "Disable username field"
 msgstr "غیر‌فعال کردن فیلد نام‌کاربری"
 
-#: views/admin/panel-section/professional_login.php:97
+#: views/admin/panel-section/professional_login.php:113
 msgid ""
 "You can disable username field in register form if login with sms dynamic code "
 "is active."
@@ -1644,11 +1747,11 @@ msgstr ""
 "اگر ورود به کد یکبار مصرف فعال باشد، میتوانید فیلد نام‌کاربری را در صفحه‌ی ثبت "
 "نام، غیر‌فعال کنید."
 
-#: views/admin/panel-section/professional_login.php:99
+#: views/admin/panel-section/professional_login.php:115
 msgid "Disable password field"
 msgstr "غیر‌فعال کردن فیلد رمز‌عبور"
 
-#: views/admin/panel-section/professional_login.php:102
+#: views/admin/panel-section/professional_login.php:118
 msgid ""
 "You can disable password field in register form if login with sms dynamic code "
 "is active."
@@ -1656,19 +1759,15 @@ msgstr ""
 "اگر ورود به کد یکبار مصرف فعال باشد، میتوانید فیلد رمز‌عبور را در صفحه‌ی ثبت "
 "نام، غیر‌فعال کنید."
 
-#: views/admin/panel-section/professional_login.php:104
+#: views/admin/panel-section/professional_login.php:123
 msgid "User Phone"
 msgstr "موبایل کاربر"
 
-#: views/admin/panel-section/professional_login.php:106
+#: views/admin/panel-section/professional_login.php:129
 msgid "SMS Provider Settings"
 msgstr "تنظیمات ارائه دهنده ی SMS"
 
-#: views/admin/panel-section/professional_login.php:108
-msgid "Select Provider"
-msgstr "ارائه دهنده را انتخاب کنید"
-
-#: views/admin/panel-section/professional_login.php:110
+#: views/admin/panel-section/professional_login.php:130
 msgid ""
 "If your sms service provider not exists in this list, ask theme to provide you "
 "with the relevant plugin."
@@ -1676,136 +1775,172 @@ msgstr ""
 "اگر ارائه دهنده ی مورد نظر شما در این لیست موجود نیست، از آن ها بخواهید تا "
 "پلاگین مربوط به این بخش را در اختیار شما قرار دهند."
 
-#: views/admin/panel-section/professional_login.php:110
+#: views/admin/panel-section/professional_login.php:130
 msgid "According to this documents"
 msgstr "بر اساس این مستندات"
 
-#: views/admin/panel-section/professional_login.php:116
+#: views/admin/panel-section/professional_login.php:132
+msgid "Select Provider"
+msgstr "ارائه دهنده را انتخاب کنید"
+
+#: views/admin/panel-section/professional_login.php:141
+msgid "Mobile validation sms"
+msgstr "‫SMS احراز هویت موبایل"
+
+#: views/admin/panel-section/professional_login.php:143
 msgid "Mobile validation code sms content"
 msgstr "محتوای SMS فعالسازی موبایل"
 
-#: views/admin/panel-section/professional_login.php:120
+#: views/admin/panel-section/professional_login.php:150
+#: views/admin/panel-section/professional_login.php:165
+msgid "Activation Code"
+msgstr "کد فعالسازی"
+
+#: views/admin/panel-section/professional_login.php:152
+#: views/admin/panel-section/professional_login.php:167
+msgid "In some case of sms provider system you shoud put Laghv11 in sms content"
+msgstr ""
+"در برخی از سامانه‌های پیامکی شما باید از کلمه‌ی لغو11 در متن پیامک خود استفاده "
+"کنید"
+
+#: views/admin/panel-section/professional_login.php:156
+msgid "Dynamic code sms"
+msgstr "‫SMS کد پویا"
+
+#: views/admin/panel-section/professional_login.php:158
 msgid "Dynamic login code sms content"
 msgstr "محتوای SMS کد پویا"
 
+#: views/admin/panel-section/register.php:3
+msgid "Register Form Options"
+msgstr "تنظیمات فرم ثبت‌نام"
+
 #: views/admin/panel-section/register.php:8
+msgid "Top form message text"
+msgstr "متن پیام بالای فرم"
+
+#: views/admin/panel-section/register.php:11
 msgid "Text that shows in top of register form"
 msgstr "متنی که در بالای فرم ثبت نام نمایش داده میشود"
 
-#: views/admin/panel-section/register.php:12
-msgid "Sender Email"
+#: views/admin/panel-section/register.php:16
+msgid "Sender email"
 msgstr "ایمیل فرستنده"
 
-#: views/admin/panel-section/register.php:14
+#: views/admin/panel-section/register.php:17
 msgid "Register and other email send from this address"
 msgstr ""
 "از این ایمیل به عنوان فرستنده ی ایمیل ثبت نام و سایر ایمیل ها استفاده میشود"
 
-#: views/admin/panel-section/register.php:16
+#: views/admin/panel-section/register.php:19
+msgid "Sender Email"
+msgstr "ایمیل فرستنده"
+
+#: views/admin/panel-section/register.php:24
 msgid "User Role"
 msgstr "نقش کاربری"
 
-#: views/admin/panel-section/register.php:17
+#: views/admin/panel-section/register.php:26
 msgid "User can select this roles from list in registration form"
 msgstr "کاربر میتواند این نقش ها را در فرم ثبت نام انتخاب کند"
 
-#: views/admin/panel-section/register.php:18
+#: views/admin/panel-section/register.php:27
 msgid "For disable this feature leave this section empty!"
 msgstr "برای غیرفعالسازی این مورد میتوانید این بخش را خالی بگذارید!"
 
-#: views/admin/panel-section/security.php:6
+#: views/admin/panel-section/security.php:7
 msgid "Two Factor Authentication"
 msgstr "احراز هویت دو مرحله‌ای"
 
-#: views/admin/panel-section/security.php:7
-#: views/admin/panel-section/security.php:12
+#: views/admin/panel-section/security.php:8
+#: views/admin/panel-section/security.php:14
 msgid "Use authenticator apps"
 msgstr "استفاده از برنامه‌های Authenticator"
 
-#: views/admin/panel-section/security.php:15
+#: views/admin/panel-section/security.php:20
 msgid "Wordpress login form"
 msgstr "فرم ورود وردپرس"
 
-#: views/admin/panel-section/security.php:18
+#: views/admin/panel-section/security.php:23
 msgid "Redirect wordpress default login to MihanPanel login"
 msgstr "انتقال از صفحه‌ی ورود پیشفرض وردپرس به صفحه‌ی ورود میهن‌پنل"
 
-#: views/admin/panel-section/security.php:22
+#: views/admin/panel-section/security.php:30
 msgid "Login Guard"
 msgstr "سیستم گارد ورود"
 
-#: views/admin/panel-section/security.php:23
+#: views/admin/panel-section/security.php:31
 msgid "Strong shield for login system"
 msgstr "سپر امنیتی سیستم ورود به سایت شما"
 
-#: views/admin/panel-section/security.php:26
+#: views/admin/panel-section/security.php:34
 msgid "Guard status"
 msgstr "وضعیت گارد"
 
-#: views/admin/panel-section/security.php:30
+#: views/admin/panel-section/security.php:38
 msgid "Number of wrong try"
 msgstr "تعداد مجاز اشتباه"
 
-#: views/admin/panel-section/security.php:32
+#: views/admin/panel-section/security.php:40
 msgid "Block the user after making this number of mistakes"
 msgstr "کاربر بعد از این تعداد تلاش ناموفق توسط سیستم گارد بلاک میشوند"
 
-#: views/admin/panel-section/security.php:35
+#: views/admin/panel-section/security.php:43
 msgid "Unblock user after this time"
 msgstr "کاربر را بعد از این تایم از حالت بلاک خارج کن"
 
-#: views/admin/panel-section/security.php:37
+#: views/admin/panel-section/security.php:45
 msgid "The user will be unblocked after this period ( enter minutes value )"
 msgstr ""
 "کاربر بعد از این مدت زمانی از حالت بلاک خارج میشود ( مقدار دقیقه را وارد کنید )"
 
-#: views/admin/panel-section/security.php:40
+#: views/admin/panel-section/security.php:52
 msgid "Captcha"
 msgstr "کپچا"
 
-#: views/admin/panel-section/security.php:42
+#: views/admin/panel-section/security.php:57
 msgid "Google Recaptcha"
 msgstr "کپچای گوگل"
 
-#: views/admin/panel-section/security.php:44
+#: views/admin/panel-section/security.php:63
 msgid "Files allowed to upload"
 msgstr "فرمت‌های مجاز آپلود"
 
-#: views/admin/panel-section/tools.php:9
+#: views/admin/panel-section/tools.php:10
 msgid "Create user panel page"
 msgstr "ساخت برگه‌ی پنل کاربری"
 
-#: views/admin/panel-section/tools.php:11 views/admin/panel-section/tools.php:19
+#: views/admin/panel-section/tools.php:12 views/admin/panel-section/tools.php:22
 msgid "Create"
 msgstr "بساز"
 
-#: views/admin/panel-section/tools.php:13
+#: views/admin/panel-section/tools.php:14
 msgid "User panel page already exists."
 msgstr "برگه‌ی پنل کاربری وجود دارد."
 
-#: views/admin/panel-section/tools.php:16
+#: views/admin/panel-section/tools.php:19
 msgid "Create database tables"
 msgstr "ساخت جدول‌های دیتابیس"
 
-#: views/admin/panel-section/tools.php:18
+#: views/admin/panel-section/tools.php:21
 msgid "Create MihanPanel default tables in database"
 msgstr "ساخت جدول‌های پیشفرض میهن‌پنل در دیتابیس"
 
-#: views/admin/panel-section/tools.php:20
+#: views/admin/panel-section/tools.php:24
 msgid "Just use this when some tables were dropped from database."
 msgstr ""
 "فقط زمانی که برخی از جدول‌های میهن‌پنل از دیتابیس حذف شده‌اند از این گزینه "
 "استفاده کنید."
 
-#: views/admin/panel-section/tools.php:22
+#: views/admin/panel-section/tools.php:28
 msgid "Phone numbers"
 msgstr "شماره تلفن‌ها"
 
-#: views/admin/panel-section/tools.php:25
+#: views/admin/panel-section/tools.php:31
 msgid "Transfer digits phone numbers to Mihan Panel"
 msgstr "انتقال شماره تلفن‌ها از دیجیتس به میهن‌پنل"
 
-#: views/admin/panel-section/tools.php:29
+#: views/admin/panel-section/tools.php:35
 msgid ""
 "If you're using Digits previously you can use this to transfer phone numbers "
 "to Mihan Panel."
@@ -1813,13 +1948,13 @@ msgstr ""
 "اگر پیش از این از دیجیتس استفاده میکردید میتوانید شماره تلفن کاربران را به "
 "میهن‌پنل منتقل کنید"
 
-#: views/admin/panel-section/tools.php:32
+#: views/admin/panel-section/tools.php:38
 msgid ""
 "Only the phone number of the users who do not have a phone number in the Mihan "
 "Panel will be transferred."
 msgstr "فقط شماره تلفن کاربرانی که در میهن‌پنل شماره نداشته باشند منتقل میشود."
 
-#: views/admin/panel-section/tools.php:35 views/admin/panel-section/tools.php:48
+#: views/admin/panel-section/tools.php:41 views/admin/panel-section/tools.php:57
 msgid ""
 "Before using this option, make a backup of your site; changes cannot be "
 "reversed!"
@@ -1827,31 +1962,35 @@ msgstr ""
 "قبل از استفاده از این گزینه از سایت خود بک‌آپ تهیه کنید؛ تغییرات قابل بازگشت "
 "نیست!"
 
-#: views/admin/panel-section/tools.php:38
+#: views/admin/panel-section/tools.php:47
 msgid "User management"
 msgstr "مدیریت کاربران"
 
-#: views/admin/panel-section/tools.php:41
+#: views/admin/panel-section/tools.php:50
 msgid "Delete ghost users"
 msgstr "حذف کاربران روح"
 
-#: views/admin/panel-section/tools.php:45
+#: views/admin/panel-section/tools.php:54
 msgid "Delete users who have not any comments, woocommerce orders and posts."
 msgstr "حذف کاربرانی که کامنت و پست و سفارش ووکامرسی ندارند."
 
-#: views/admin/panel-section/tools.php:51
+#: views/admin/panel-section/tools.php:63
 msgid "Login page"
 msgstr "برگه ورود"
 
-#: views/admin/panel-section/tools.php:54
-msgid "Additional Code"
-msgstr "کد اضافه"
-
-#: views/admin/panel-section/tools.php:57
+#: views/admin/panel-section/tools.php:64
 msgid "This code is render in head tag in Login page"
 msgstr "این کد در تگ هدر صفحه ی ورود اضافه میشود"
 
-#: views/admin/settings.php:24
+#: views/admin/panel-section/tools.php:66
+msgid "Additional Code"
+msgstr "کد اضافه"
+
+#: views/admin/settings.php:11
+msgid "Welcome to MihanPanel"
+msgstr "به میهن‌پنل خوش‌آمدید"
+
+#: views/admin/settings.php:35
 msgid "New Airlines"
 msgstr "خطوط هوایی جدید"
 
@@ -1915,7 +2054,7 @@ msgstr "میهن‌پنل لایت"
 
 #. Plugin URI of the plugin/theme
 msgid "https://ertano.com/mihanpanel/"
-msgstr "https://mihanwp.com/mihanpanel/"
+msgstr "‪https://mihanwp.com/mihanpanel/"
 
 #. Description of the plugin/theme
 msgid "The best way to build user interface in WordPress"
@@ -2293,6 +2432,9 @@ msgstr "https://mihanwp.com/"
 #~ msgid "Upload"
 #~ msgstr "آپلود تصویر"
 
+#~ msgid "Wordpress Fields"
+#~ msgstr "فیلد‌های وردپرس"
+
 #~ msgid "Woocommerce Fields"
 #~ msgstr "فیلد‌های ووکامرس"
 
@@ -2387,15 +2529,6 @@ msgstr "https://mihanwp.com/"
 #~ msgid "Don't found any SMS provider!"
 #~ msgstr "هیچ ارائه دهنده ی خدمات پیامکی یافت نشد!"
 
-#~ msgid "Activation Code"
-#~ msgstr "کد فعالسازی"
-
-#~ msgid ""
-#~ "In some case of sms provider system you shoud put Laghv11 in sms content"
-#~ msgstr ""
-#~ "در برخی از سامانه‌های پیامکی شما باید از کلمه‌ی لغو11 در متن پیامک خود "
-#~ "استفاده کنید"
-
 #~ msgid "Are you sure you have backedup your site?"
 #~ msgstr "از اینکه از سایت خود بک‌آپ تهیه کرده‌اید اطمینان دارید؟"
 
@@ -2414,9 +2547,6 @@ msgstr "https://mihanwp.com/"
 #~ msgid "Dynamic Code"
 #~ msgstr "کد پویا"
 
-#~ msgid "Active Captcha"
-#~ msgstr "کپچای فعال"
-
 #~ msgid "Captcha Type"
 #~ msgstr "نوع کپچا"
 
@@ -2434,9 +2564,6 @@ msgstr "https://mihanwp.com/"
 
 #~ msgid "Reset Password Form"
 #~ msgstr "فرم بازیابی رمز عبور"
-
-#~ msgid "Active Recaptcha"
-#~ msgstr "فعالسازی کپچا"
 
 #~ msgid "Recaptcha Type"
 #~ msgstr "نوع کپچا"
@@ -2495,10 +2622,6 @@ msgstr "https://mihanwp.com/"
 #~ msgid "View lottie files"
 #~ msgstr "نمایش فایل‌های Lottie"
 
-#, php-format
-#~ msgid "Upload %s File"
-#~ msgstr "آپلود فایل %s"
-
 #~ msgid "Choose menu"
 #~ msgstr "انتخاب منو"
 
@@ -2508,6 +2631,9 @@ msgstr "https://mihanwp.com/"
 #, php-format
 #~ msgid "%s Rial"
 #~ msgstr "%s ریال"
+
+#~ msgid "Sms.ir settings"
+#~ msgstr "تنظیمات SMS.ir"
 
 #~ msgid "Account Credit"
 #~ msgstr "اعتبار حساب"
@@ -2541,6 +2667,9 @@ msgstr "https://mihanwp.com/"
 #~ "الگویی که در سامانه ی پیامکی خود ثبت کرده اید، در خط جدید وارد کنید. مانند "
 #~ "نمونه ی پایین:"
 
+#~ msgid "Mellipayamak settings"
+#~ msgstr "تنظیمات ملی‌پیامک"
+
 #~ msgid "Template ID"
 #~ msgstr "شناسه قالب"
 
@@ -2550,6 +2679,9 @@ msgstr "https://mihanwp.com/"
 
 #~ msgid "Please use latin numbers as the gateway number"
 #~ msgstr "لطفا از اعداد لاتین برای شماره ی درگاه استفاده کنید"
+
+#~ msgid "Sabanovin settings"
+#~ msgstr "تنظیمات صبانوین"
 
 #~ msgid "Gateway API Key"
 #~ msgstr "API درگاه"
@@ -2750,9 +2882,6 @@ msgstr "https://mihanwp.com/"
 #~ msgid "Test SMS"
 #~ msgstr "تست ارسال"
 
-#~ msgid "Your phone number"
-#~ msgstr "شماره موبایل شما"
-
 #~ msgid ""
 #~ "Use this to send Test SMS to be sure your provider settings are correct."
 #~ msgstr ""
@@ -2761,6 +2890,12 @@ msgstr "https://mihanwp.com/"
 
 #~ msgid "The cost of this message will be deducted from your account."
 #~ msgstr "هزینه‌ی این پیام از اعتبار حساب شما در سامانه پیامکی کسر خواهد شد."
+
+#~ msgid "Enter phone number"
+#~ msgstr "شماره موبایل را وارد کنید"
+
+#~ msgid "Your phone number"
+#~ msgstr "شماره موبایل شما"
 
 #~ msgid "This phone number is used by another user"
 #~ msgstr "این شماره موبایل توسط کاربر دیگری در حال استفاده است"
@@ -2778,6 +2913,15 @@ msgstr "https://mihanwp.com/"
 #, php-format
 #~ msgid "Please Check Google Recaptcha %s"
 #~ msgstr "لطفا کپچای گوگل را بررسی کنید %s"
+
+#~ msgid "Users cannot change its value"
+#~ msgstr "کابران نمیتوانند مقدار آن را تغییر دهند"
+
+#~ msgid "First name"
+#~ msgstr "نام"
+
+#~ msgid "Last name"
+#~ msgstr "نام خانوادگی"
 
 #~ msgid "New version available"
 #~ msgstr "نسخه‌ی جدید در دسترس است"
@@ -2870,6 +3014,12 @@ msgstr "https://mihanwp.com/"
 
 #~ msgid "MihanWP"
 #~ msgstr "میهن وردپرس"
+
+#~ msgid "Login and Register form Logo"
+#~ msgstr "لوگوی فرم ورود و عضویت"
+
+#~ msgid "Uneditable"
+#~ msgstr "غیرقابل ویرایش"
 
 #~ msgctxt "mihanpanel_license_notice"
 #~ msgid "Dismiss"
@@ -3017,9 +3167,6 @@ msgstr "https://mihanwp.com/"
 #~ msgid "Your login page is now here: %s. Bookmark this page!"
 #~ msgstr ""
 #~ "صفحه ی ورود شما در اینجاست: %s. میتوانید آن را به بوکمارک خود اضافه کنید!"
-
-#~ msgid "Settings"
-#~ msgstr "تنظیمات"
 
 #~ msgid "This feature is not enabled."
 #~ msgstr "این ویژگی در دسترس نیست."

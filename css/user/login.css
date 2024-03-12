@@ -517,6 +517,42 @@
     position: relative;
     z-index: 4;
 }
+.mwpl-login-body .mwpl-wpml-language-switcher
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.mwpl-login-body .mwpl-wpml-language-switcher.item-cols-1,
+.mwpl-login-body .mwpl-wpml-language-switcher.item-cols-2,
+.mwpl-login-body .mwpl-wpml-language-switcher.item-cols-3
+{
+    display: flex;
+}
+.mwpl-login-body .mwpl-wpml-language-switcher a
+{
+    text-decoration: none;
+}
+.mwpl-login-body .mwpl-wpml-language-switcher .language-item
+{
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
+    padding: 5px 10px;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    transition: border-color .4s;
+}
+.mwpl-login-body .mwpl-wpml-language-switcher .language-item:hover
+{
+    border-color: #bbbbbb;
+}
+.mwpl-login-body .mwpl-wpml-language-switcher .language-item .language-item-flag
+{
+    display: flex;
+}
 
 @media only screen and (max-width: 480px) {
 

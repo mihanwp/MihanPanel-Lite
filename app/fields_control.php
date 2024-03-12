@@ -224,7 +224,7 @@ class fields_control
             <?php if (isset($params['label']) && !empty($params['label'])): ?>
                 <label for="<?php echo esc_attr($field_name) ?>"><?php echo $params['label'] ?></label>
             <?php endif; ?>
-            <input type="text" class="mp_color_picker" name="<?php echo esc_attr($field_name) ?>" value="<?php echo isset($params['value']) ? esc_attr($params['value']) : '' ?>">
+            <?php \mihanpanel\app\presenter\admin_fields::renderColorPickerField(isset($params['value']) ? $params['value'] : '', $field_name)?>
         </div>
     <?php }
 

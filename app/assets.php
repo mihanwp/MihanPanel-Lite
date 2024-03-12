@@ -40,8 +40,6 @@ class assets
         $font_awesome_icon_picker_js = self::get_js_url('font-awesome-icon-picker');
         wp_enqueue_style('mw_fontawesome_icon_picker', $font_awesome_icon_picker_css, null, $plugin_version);
         wp_enqueue_script('font-awesome-icon-picker', $font_awesome_icon_picker_js, ['jquery'], $plugin_version, true);
-        wp_enqueue_style('wp-color-picker');
-        wp_enqueue_script('mwpl_color_picker', MW_MIHANPANEL_URL . 'js/color-picker.js', array('wp-color-picker'), false, true);
         wp_enqueue_script('mwpl_admin_fields_control', MW_MIHANPANEL_URL . 'js/admin-fields-control.js', null, $plugin_version, true);
         wp_enqueue_script('mwpl_admin_assets', MW_MIHANPANEL_URL . 'js/admin-assets.js', null, $plugin_version, true);
     }
@@ -77,6 +75,7 @@ class assets
         $live_view = self::get_css_url('admin-live-view');
         wp_enqueue_style('select2', $select_2, [], $version);
         wp_enqueue_style('admin-live-view', $live_view, [], $version);
+        wp_enqueue_style('coloris', \mihanpanel\app\assets::get_css_url('admin/coloris'));
     }
     public static function load_admin_panel_js($version)
     {
@@ -86,6 +85,8 @@ class assets
         wp_enqueue_script('select2', $select_2, [], $version, true);
         wp_enqueue_script('mw_admin_panel', $panel_js, ['jquery'], $version, true);
         wp_enqueue_script('mwpl-admin-live-view', $live_view, ['jquery'], $version, true);
+        wp_enqueue_script('coloris', \mihanpanel\app\assets::get_js_url('admin/coloris'));
+        wp_enqueue_script('mwpl_color_picker', MW_MIHANPANEL_URL . 'js/color-picker.js', ['coloris'], false, true);
         wp_localize_script('mw_admin_panel', 'mwp_data', ['au' => admin_url('admin-ajax.php')]);
     }
     static function load_admin_user_profile($page)

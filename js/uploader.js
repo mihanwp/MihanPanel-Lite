@@ -1,24 +1,28 @@
-jQuery(document).ready(function($){
+jQuery(document).ready(function ($) {
   var mediaUploaderbg;
-  $('#mp_upload_bg_image_button').click(function(e) {
+  $('#mp_upload_bg_image_button').click(function (e) {
     e.preventDefault();
-      if (mediaUploaderbg) {
-        mediaUploaderbg.open();
-        return;
+    if (mediaUploaderbg) {
+      mediaUploaderbg.open();
+      return;
     }
     mediaUploaderbg = wp.media.frames.file_frame = wp.media({
       title: 'یک تصویر انتخاب کنید',
       button: {
-      text: 'یک تصویر انتخاب کنید'
-    }, multiple: false });
-    mediaUploaderbg.on('select', function() {
+        text: 'یک تصویر انتخاب کنید'
+      }, multiple: false
+    });
+    mediaUploaderbg.on('select', function () {
       var attachmentbg = mediaUploaderbg.state().get('selection').first().toJSON();
       $('#mp_bg_image').val(attachmentbg.url);
     });
     mediaUploaderbg.open();
   });
   var mediaUploader;
-  $('#mp_upload_image_button').click(function(e) {
+  $(document).on('click', '.mw_admin_panel .mw_content_wrapper .mw_content form.mp_options_panel .mp_option_section .mp_upload_field', function(e){
+    $(this).find('#mp_upload_image_button').click()
+  })
+  $('#mp_upload_image_button').click(function (e) {
     e.preventDefault();
     if (mediaUploader) {
       mediaUploader.open();
@@ -27,9 +31,10 @@ jQuery(document).ready(function($){
     mediaUploader = wp.media.frames.file_frame = wp.media({
       title: 'یک تصویر انتخاب کنید',
       button: {
-      text: 'یک تصویر انتخاب کنید'
-    }, multiple: false });
-    mediaUploader.on('select', function() {
+        text: 'یک تصویر انتخاب کنید'
+      }, multiple: false
+    });
+    mediaUploader.on('select', function () {
       var attachment = mediaUploader.state().get('selection').first().toJSON();
       $('#mp_logo_image').val(attachment.url);
     });
@@ -39,9 +44,9 @@ jQuery(document).ready(function($){
   $(document).on("click", ".mwpl-upload-button", function (e) {
     e.preventDefault();
     let button = $(this),
-        valueType = button.data('value-type') || 'id',
-        dataType = button.data('type') || null,
-        field = button.parent().find('input');
+      valueType = button.data('value-type') || 'id',
+      dataType = button.data('type') || null,
+      field = button.parent().find('input');
 
     let params = {
       title: 'Upload file',
@@ -51,14 +56,14 @@ jQuery(document).ready(function($){
       multiple: false
     };
 
-    if (dataType){
+    if (dataType) {
       params['library'] = {
         type: dataType.split(',')
       };
     }
     let custom_uploader = wp.media(params).on('select', function () {
       let attachment = custom_uploader.state().get('selection').first().toJSON();
-      if (valueType === 'id'){
+      if (valueType === 'id') {
         field.val(attachment.id).trigger('change');
       } else {
         field.val(attachment.url).trigger('change');

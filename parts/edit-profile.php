@@ -27,49 +27,15 @@
             do_action('mwpl_panel/profile/before_render_fields');
         ?>
         <div class="row">
-            <div class="col-md-6">
-                <div class="form-group label-floating">
-                    <label><?php esc_html_e("First Name", "mihanpanel"); ?></label>
-                    <input name="general[first_name]" type="text" id="first_name"
-                           value="<?php echo esc_attr($current_user->first_name); ?>"
-                           class="form-control">
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group label-floating">
-                    <label><?php esc_html_e("Last Name", "mihanpanel")?></label>
-                    <input name="general[last_name]" type="text" id="last_name"
-                           value="<?php echo esc_attr($current_user->last_name); ?>" class="form-control">
-                </div>
-            </div>
+            <?php
+            \mihanpanel\app\user_fields::renderFirstNameField($current_user);
+            \mihanpanel\app\user_fields::renderLastNameField($current_user);
+            ?>
         </div>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="form-group label-floating">
-                    <label><?php esc_html_e("New password", "mihanpanel"); ?></label>
-                    <input name="general[pass1]" type="password" id="pass1" class="form-control">
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group label-floating">
-                    <label><?php esc_html_e("Password repeat", "mihanpanel"); ?></label>
-                    <input name="general[pass2]" type="password" id="pass2" class="form-control">
-                </div>
-            </div>
-        </div>
-        <?php do_action('mwpl_panel/profile/after_password_field'); ?>
-        <div class="row" id="bio-field-row">
-            <div class="col-md-12">
-                <div class="form-group">
-                    <label><?php esc_html_e("Bio", "mihanpanel"); ?></label>
-                    <div class="form-group label-floating">
-                        <textarea class="form-control" name="general[description]" id="description"
-                                  rows="4"
-                                  cols="50"><?php echo esc_textarea($current_user->description); ?></textarea>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <?php
+        \mihanpanel\app\user_fields::renderPasswordField();
+        do_action('mwpl_panel/profile/after_password_field'); ?>
+        <?php \mihanpanel\app\user_fields::renderBioField($current_user); ?>
         <div class="row">
             <?php
             global $wpdb;

@@ -395,4 +395,48 @@ class login
         }
         return $url;
     }
+
+    static function renderWpmlSwitcherButton()
+    {
+        $languages = apply_filters('wpml_active_languages', []);
+        if ( ! empty( $languages ) ) {
+            ?>
+                <div class="mwpl-wpml-language-switcher <?php echo esc_attr(sprintf('item-cols-%d', count($languages) - 1))?>">
+                    <?php foreach ( $languages as $language ):?>
+                        <?php
+                            if($language['active'])
+                            {
+                                continue;
+                            }
+                            // Get the translated URL for the current page in this language
+                            $translated_url = apply_filters( 'wpml_permalink', \mihanpanel\app\options::getMihanPanelLoginUrl(), $language['language_code'] );
+                            ?>
+                            <a class="language-item" href="<?php echo esc_url( $translated_url )?>">
+                                <span class="language-item-flag"><img src="<?php echo esc_attr($language['country_flag_url'])?>" alt="<?php echo esc_attr(sprintf('%s-flag', $language['default_locale']))?>"></span>
+                                <span class="language-item-name"><?php echo esc_html( $language['native_name'] )?></span>
+                            </a>
+                    <?php endforeach; ?>
+                </div>
+            <?php
+        }
+
+        return false;
+        if ( ! empty( $languages ) ) {
+            echo '<div class="wpml-language-switcher">';
+            foreach ( $languages as $language ) {
+                if ( $language['active'] ) {
+                    echo '<span class="active">' . esc_html( $language['native_name'] ) . '</span>';
+                } else {
+                    echo '<a href="' . esc_url( $language['url'] ) . '">' . esc_html( $language['native_name'] ) . '</a>';
+                }
+            }
+            echo '</div>';
+        }
+        
+        return false;
+        echo '<div class="wpml-floating-language-switcher">';
+            //PHP action to display the language switcher (see https://wpml.org/documentation/getting-started-guide/language-setup/language-switcher-options/#using-php-actions)
+            do_action('wpml_add_language_selector');
+        echo '</div>';
+    }
 }

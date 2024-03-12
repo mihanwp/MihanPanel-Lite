@@ -222,11 +222,6 @@
     align-items: center;
 }
 
-.mihanpanel-admin .mwpl-style-control select {
-    border: 1px solid #d7d7d7;
-    height: 30px;
-}
-
 .mihanpanel-admin .mwpl-style-control .mwpl-inner-control label {
     margin-top: 10px;
 }

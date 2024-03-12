@@ -383,7 +383,7 @@ class handle_view
     {
         $pro_version_link = tools::get_pro_version_link();
         ?>
-        <span class="mpproversion"><a target="blank" href="<?php echo esc_url($pro_version_link); ?>"><?php _e("Pro Version", "mihanpanel");?></a></span>
+        <span class="mpproversion"><a target="blank" href="<?php echo esc_url($pro_version_link); ?>"><?php _e("Required Pro Version", "mihanpanel");?></a></span>
         <?php
     }
     static function option_panel_field_login_form_theme()
@@ -403,7 +403,7 @@ class handle_view
     static function option_panel_field_login_button_text_color_alternative()
     {
         ?>
-        <div class="mp_option_single">
+        <div class="mp_option_field">
             <label><?php esc_html_e("Login Button Text Color", "mihanpanel");?></label>
             <?php self::show_go_pro_link()?>
             <p class="description"><?php esc_html_e("Color of Login and Register button text", "mihanpanel"); ?></p>
@@ -418,7 +418,7 @@ class handle_view
     static function option_panel_field_register_button_bg_color_alternative()
     {
         ?>
-        <div class="mp_option_single">
+        <div class="mp_option_field">
             <label><?php esc_html_e("Register button background color", "mihanpanel");?></label>
             <?php self::show_go_pro_link()?>
             <p class="description"><?php esc_html_e("You can change background color of register button.", "mihanpanel"); ?></p>
@@ -434,7 +434,7 @@ class handle_view
     static function option_panel_field_register_button_text_color_alternative()
     {
         ?>
-        <div class="mp_option_single">
+        <div class="mp_option_field">
             <label><?php esc_html_e("Register button text color", "mihanpanel");?></label>
             <?php self::show_go_pro_link()?>
             <p class="description"><?php esc_html_e("By changing text color, the border color will also change.", "mihanpanel"); ?></p>
@@ -450,7 +450,7 @@ class handle_view
     static function option_panel_field_login_fields_bg_color_alternative()
     {
         ?>
-        <div class="mp_option_single">
+        <div class="mp_option_field">
             <label><?php esc_html_e("Login Fields Background Color", "mihanpanel");?></label>
             <?php self::show_go_pro_link()?>
             <p class="description"><?php esc_html_e("Color of Login and Register fields", "mihanpanel"); ?></p>
@@ -465,7 +465,7 @@ class handle_view
     static function option_panel_field_login_labels_color_alternative()
     {
         ?>
-        <div class="mp_option_single">
+        <div class="mp_option_field">
             <label><?php esc_html_e("Login Field's Label Color", "mihanpanel");?></label>
             <?php self::show_go_pro_link()?>
             <p class="description"><?php esc_html_e("Color of Login and Register labels", "mihanpanel"); ?></p>
@@ -495,7 +495,7 @@ class handle_view
     static function option_panel_field_login_fields_text_color_alternative()
     {
         ?>
-        <div class="mp_option_single">
+        <div class="mp_option_field">
             <label><?php esc_html_e("Login Fields Text Color", "mihanpanel");?></label>
             <?php self::show_go_pro_link()?>
             <p class="description"><?php esc_html_e("Color of Login and Register fields text", "mihanpanel"); ?></p>
@@ -510,7 +510,7 @@ class handle_view
     static function option_panel_field_login_info_messagebox_bg_color_alternative()
     {
         ?>
-        <div class="mp_option_single">
+        <div class="mp_option_field">
             <label><?php esc_html_e("Login Info Messagebox Background Color", "mihanpanel");?></label>
             <?php self::show_go_pro_link()?>
             <p class="description"><?php esc_html_e("Background Color of Login and Register Info Messagebox", "mihanpanel"); ?></p>
@@ -525,7 +525,7 @@ class handle_view
     static function option_panel_field_login_info_messagebox_text_color_alternative()
     {
         ?>
-        <div class="mp_option_single">
+        <div class="mp_option_field">
             <label><?php esc_html_e("Login Info Messagebox Text Color", "mihanpanel");?></label>
             <?php self::show_go_pro_link()?>
             <p class="description"><?php esc_html_e("Color of Login and Register Info Messagebox Text", "mihanpanel"); ?></p>
@@ -673,7 +673,7 @@ class handle_view
     static function option_panel_field_roles_user_can_select_alternative()
     {
         ?>
-        <div class="mp_option_single">
+        <div class="mp_option_field">
             <?php $roles_name = wp_roles()->get_names();
             foreach ($roles_name as $role_key => $role_name):
                 if ($role_key == 'administrator')
@@ -784,7 +784,7 @@ class handle_view
     static function option_panel_field_password_type_alternative()
     {
         ?>
-        <div class="mp_option_single">
+        <div class="mp_option_field">
             <?php
             $password_types = pro_version_detail::get_password_type_title();
             ?>
@@ -820,7 +820,7 @@ class handle_view
     static function option_panel_user_phone_section_alternative()
     {
         ?>
-        <div class="mp_option_single">
+        <div class="mp_option_field">
             <p>
                 <label><?php _e('Auto confirm phone number after user register', 'mihanpanel'); ?></label>
                 <?php self::show_go_pro_link(); ?>
@@ -909,13 +909,31 @@ class handle_view
     static function option_panel_custom_captcha()
     {
         $render_method = apply_filters('mwpl_option_panel/render_method/custom_captcha', []);
-        self::handle_option_panel_render_method($render_method);
+        self::handle_option_panel_render_method($render_method, 'option_panel_custom_captcha_alternative');
+    }
+    static function option_panel_custom_captcha_alternative()
+    {
+        ?>
+        <div class="mp_option_field">
+            <label><?php echo esc_html__('Active Captcha', 'mihanpanel') ?></label>
+            <?php self::show_go_pro_link()?>
+        </div>
+        <?php
     }
 
     static function option_panel_google_recaptcha()
     {
         $render_method = apply_filters('mwpl_option_panel/render_method/google_recaptcha', []);
-        self::handle_option_panel_render_method($render_method);
+        self::handle_option_panel_render_method($render_method, 'option_panel_google_recaptcha_alternative');
+    }
+    static function option_panel_google_recaptcha_alternative()
+    {
+        ?>
+        <div class="mp_option_field">
+            <label><?php echo esc_html__('Active Recaptcha', 'mihanpanel') ?></label>
+            <?php self::show_go_pro_link()?>
+        </div>
+        <?php
     }
 
     static function option_panel_reset_password()
@@ -928,7 +946,7 @@ class handle_view
     {
         $is_active = options::get_reset_password_status();
         ?>
-        <div class="mp_option_single">
+        <div class="mp_option_field">
             <div>
                 <label for="mp_disable_reset_password"><?php echo esc_html__('Disable reset password', 'mihanpanel') ?></label>
                 <input type="checkbox" name="mp_disable_reset_password" id="mp_disable_reset_password" value="1" <?php echo apply_filters('mp_disable_reset_password_checked', checked('1', $is_active, false)) ?>>
@@ -962,7 +980,16 @@ class handle_view
     static function option_panel_files_allowed_upload()
     {
         $render_method = apply_filters('mwpl_option_panel/render_method/files_allowed_upload', []);
-        self::handle_option_panel_render_method($render_method);
+        self::handle_option_panel_render_method($render_method, 'option_panel_files_allowed_upload_alternative');
+    }
+    static function option_panel_files_allowed_upload_alternative()
+    {
+        ?>
+        <div class="mp_option_field">
+            <label><?php _e('Upload File', 'mihanpanel'); ?></label>
+            <?php self::show_go_pro_link()?>
+        </div>
+        <?php
     }
 
     static function optionPanelContentMiddlewares($middlewares)

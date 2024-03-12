@@ -58,7 +58,7 @@ final class MihanPanelApp
     }
     function do_define()
     {
-        $this->define("MW_MIHANPANEL_DB_VERSION", 12);
+        $this->define("MW_MIHANPANEL_DB_VERSION", 13);
         $this->define('MW_MIHANPANEL_DIR', plugin_dir_path(WP_MIHANPANEL_MAIN_APP));
         $this->define('MW_MIHANPANEL_URL', plugin_dir_url(WP_MIHANPANEL_MAIN_APP));
         $this->define('MW_MIHANPANEL_LANG', basename(MW_MIHANPANEL_DIR) . '/lang');

@@ -84,20 +84,32 @@ class profile
         }
     static function user_data_handler()
     {
-        $mwuser_data = array(
+        $mwuser_data = [
             'ID' => wp_get_current_user()->ID,
-            'description' => sanitize_text_field($_POST['general']['description']),
-            'first_name' => sanitize_text_field($_POST['general']['first_name']),
-            'last_name' => sanitize_text_field($_POST['general']['last_name'])
-        );
+        ];
+        if(apply_filters('mihanpanel/edit_profile/show_first_name_field_permission', true))
+        {
+            $mwuser_data['first_name'] = sanitize_text_field($_POST['general']['first_name']);
+        }
+        if(apply_filters('mihanpanel/edit_profile/show_last_name_field_permission', true))
+        {
+            $mwuser_data['last_name'] = sanitize_text_field($_POST['general']['last_name']);
+        }
+        if(apply_filters('mihanpanel/edit_profile/show_bio_field_permission', true))
+        {
+            $mwuser_data['description'] = sanitize_text_field($_POST['general']['description']);
+        }
 
-        if ($_POST['general']['pass1']) {
-            if ($_POST['general']['pass1'] == $_POST['general']['pass2']) {
-                $mwuser_data['user_pass'] = sanitize_text_field($_POST['general']['pass1']);
-            } else {
-                $type = 'error';
-                $msg = __("Passwords don't match!", "mihanpanel");
-                \mihanpanel\app\notice::add_multiple_notice($type, $msg);
+        if(apply_filters('mihanpanel/edit_profile/show_password_field_permission', true))
+        {
+            if ($_POST['general']['pass1']) {
+                if ($_POST['general']['pass1'] == $_POST['general']['pass2']) {
+                    $mwuser_data['user_pass'] = sanitize_text_field($_POST['general']['pass1']);
+                } else {
+                    $type = 'error';
+                    $msg = __("Passwords don't match!", "mihanpanel");
+                    \mihanpanel\app\notice::add_multiple_notice($type, $msg);
+                }
             }
         }
 

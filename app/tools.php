@@ -69,6 +69,10 @@ class tools
     {
         return self::is_plugin_active('dokan-lite/dokan.php');
     }
+    public static function is_elementor_active()
+    {
+        return did_action('elementor/loaded');
+    }
     public static function get_plugin_version()
     {
         $file_data = get_file_data(WP_MIHANPANEL_MAIN_APP, ['version' => 'version']);
@@ -127,6 +131,27 @@ class tools
     {
         $baseRemoteUrl = self::getBaseRemoteUrl();
         return $baseRemoteUrl . 'mihanpanel';
+    }
+    static function handleOptionPanelSectionVersionStateClass()
+    {
+        echo self::isProVersion() ? 'pro-version' : 'lite-version';
+    }
+    static function handleProVersionBoxInOptionPanel()
+    {
+        if(self::isProVersion())
+        {
+            return false;
+        }
+        ?>
+        <span class="pro-version-preview-wrapper">
+            <div class="pro-version-text">
+                <img class="mwpl-tooltip-icon" src="<?php echo \mihanpanel\app\assets::get_image_url('tag-icon', 'svg')?>" alt="tag-icon">
+                <span class="mwpl-tooltip-text"><?php _e('20% Off in first purchase', 'mihanpanel')?></span>
+                <span class="mwpl-tooltip-off-code"><?php printf('%s: %s', __('OFF code', 'mihanpanel'), 'Moshtari')?></span>
+            </div>
+            <a class="pro-version-btn" target="blank" href="<?php echo esc_url(\mihanpanel\app\tools::get_pro_version_link()); ?>"><?php _ex("Buy", 'pro_version_link', "mihanpanel");?></a>
+        </span>
+        <?php
     }
     static function check_has_minimum_php_version()
     {

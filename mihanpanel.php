@@ -4,7 +4,7 @@ Plugin Name: MihanPanel Lite
 Plugin URI:  https://ertano.com/mihanpanel/
 Author:      Ertano
 Author URI:  https://ertano.com
-Version:     12.7
+Version:     12.9
 Description: The best way to build user interface in WordPress
 */
 //if accessed direct

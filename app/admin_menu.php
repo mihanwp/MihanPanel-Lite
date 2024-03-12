@@ -2,7 +2,6 @@
 
 namespace mihanpanel\app;
 
-use mihanpanel\app\form\admin_tabs;
 use mihanpanel\app\form\admin_user_fields;
 
 class admin_menu
@@ -29,14 +28,38 @@ class admin_menu
     public static function settings_c()
     {
         $menu_items = [
-            'general' => __('Login & Register', 'mihanpanel'),
-            'panel' => __('User Panel', 'mihanpanel'),
-            'register' => __('Register Form', 'mihanpanel'),
-            'notification' => __('Notifications', 'mihanpanel'),
-            'professional_login' =>  __("Professional login options", "mihanpanel"),
-            'security' => __('Security', 'mihanpanel'),
-            'email' => __('Emails', 'mihanpanel'),
-            'tools' => esc_html__('Tools', 'mihanpanel'),
+            'general' => [
+                'title' => __('Login & Register', 'mihanpanel'),
+                'icon' => 'login',
+            ],
+            'panel' => [
+                'title' => __('User Panel', 'mihanpanel'),
+                'icon' => 'user',
+            ],
+            'register' => [
+                'title' => __('Register Form', 'mihanpanel'),
+                'icon' => 'clipboard',
+            ],
+            'notification' => [
+                'title' => __('Notifications', 'mihanpanel'),
+                'icon' => 'bell',
+            ],
+            'professional_login' => [
+                'title' =>  __("Professional login options", "mihanpanel"),
+                'icon' => 'setting-2',
+            ],
+            'security' => [
+                'title' => __('Security', 'mihanpanel'),
+                'icon' => 'lock',
+            ],
+            'email' => [
+                'title' => __('Emails', 'mihanpanel'),
+                'icon' => 'mail',
+            ],
+            'tools' => [
+                'title' => esc_html__('Tools', 'mihanpanel'),
+                'icon' => 'setting-4',
+            ],
         ];
         $settings = views::get('admin.settings');
         include $settings;

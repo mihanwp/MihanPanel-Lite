@@ -125,6 +125,8 @@ class hooks
             add_filter('mihanpanel/edit_profile/fields_label_text', ['\mihanpanel\app\config', 'WpmlTranslateUserFieldsLabel'], 10, 2);
             add_filter('mihanpanel/panel/tabs_menu_item_label_text', ['\mihanpanel\app\config', 'WpmlTranslatePanelMenuTabLabel']);
             add_filter('mihanpanel/panel_url', ['\mihanpanel\app\config', 'WpmlHandlePanelPageUrl']);
+            add_action('mwpl_login_form_after_start_form', ['\mihanpanel\app\login', 'renderWpmlSwitcherButton'], 1);
+            add_action('mwpl_register_form_after_start_form', ['\mihanpanel\app\login', 'renderWpmlSwitcherButton'], 1);
         }
 
         // custom login & register form
