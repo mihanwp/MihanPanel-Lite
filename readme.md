@@ -3,7 +3,7 @@ Contributors: ertano, mihanwp
 Donate link: https://ertano.com/
 Tags: register,login,profile,registration,user profile,membership,signup,dashboard
 Requires at least: 4.0
-Tested up to: 6.2
+Tested up to: 6.5
 Requires PHP: 7.4
 Stable tag: 11.10
 License: GPLv2 or later
