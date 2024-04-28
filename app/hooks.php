@@ -21,6 +21,7 @@ class hooks
         add_action('pre_update_option_mp_panelslug', ['\mihanpanel\app\config', 'handleBeforeUpdatePanelSlugOptionProcess'], 10, 3);
 
         add_action('admin_notices', ['\mihanpanel\app\notice', 'show_admin_setting_panel_notices']);
+        add_action('admin_notices', ['\mihanpanel\app\sundry', 'showMihanPanelHealthNotices']);
         add_action('admin_bar_menu', ['\mihanpanel\app\config', 'addMihanPanelMenusToAdminBarMenu'], 100);
 
         add_action('admin_enqueue_scripts', ['mihanpanel\app\assets', 'load_admin_user_profile']);

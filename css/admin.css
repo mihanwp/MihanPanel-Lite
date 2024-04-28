@@ -61,6 +61,7 @@ body
     border-radius: 5px;
     border: none;
     padding: 7px 15px;
+    border: 1px solid #efefef;
 }
 
 .mihanpanel-admin input[type=text]:disabled,
@@ -188,6 +189,10 @@ body
     color: #646970;
     font-size: 16px;
     padding: 20px 20px 0;
+}
+.mw_admin_panel .mw_content_wrapper .mw_content form.mp_options_panel .mp_option_section .mp_option_notice_wrapper
+{
+    margin-bottom: 20px;
 }
 .mw_admin_panel .mw_content_wrapper .mw_content form.mp_options_panel .mp_option_section .mp_description_box
 {
@@ -419,10 +424,6 @@ body
 .mp_option_single .wp-picker-clear {
     color: #fff;
     float: left;
-}
-
-.mp_option_single .wp-picker-container input[type=text].wp-color-picker {
-    width: 100px;
 }
 
 .mp_option_single .wp-picker-container {

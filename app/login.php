@@ -42,6 +42,13 @@ class login
 
         // filter redirect_to url after login
         add_filter('mwpl_after_login_redirect_url', [__CLASS__, 'filterAfterLoginUrl'], 10, 2);
+
+        add_action('user_register', [__CLASS__, 'sendNewUserNotification'], 10, 2);
+    }
+    static function sendNewUserNotification($userID, $userData)
+    {
+        // send email to user
+        wp_send_new_user_notifications($userID, 'user');
     }
     static function getLoginSlug()
     {

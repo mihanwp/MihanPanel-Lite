@@ -1,10 +1,4 @@
 jQuery(document).ready(function ($) {
-    $('.mp_color_picker').wpColorPicker({
-        change: function (e, ui) {
-            $(e.target).val(ui.color.toString());
-            $(e.target).trigger('change');
-        }
-    });
 
     $(document).on('click', '.mw_menu_icons', function(e){
         let mw_this = $(this),
@@ -153,12 +147,17 @@ jQuery(document).ready(function ($) {
         }
     })
 
-    let mwplDependsOnFields = $(document).find('input[mwpl_has_depends]')
+    let mwplDependsOnFields = $(document).find('input[mwpl_has_depends]'),
+        mwplShowModeDependsOnFields = $(document).find('input[mwpl_has_show_depends]')
     setTimeout(() => {
         $.each(mwplDependsOnFields, (index, value) => {
             $(value).change()
         })
+        $.each(mwplShowModeDependsOnFields, (index, value) => {
+            $(value).change()
+        })
     }, 300);
+    
     $(document).on('change', 'input[mwpl_has_depends]', function(e){
         let el = $(this),
             isChecked = e.target.checked,
@@ -169,6 +168,19 @@ jQuery(document).ready(function ($) {
             $(document).find('[mwpl_depends_on='+elID+']').attr('disabled', false)
         }else{
             $(document).find('[mwpl_depends_on='+elID+']').attr('disabled', true)
+        }
+    })
+    
+    $(document).on('change', 'input[mwpl_has_show_depends]', function(e){
+        let el = $(this),
+            isChecked = e.target.checked,
+            elID = el.attr('id')
+
+        if(isChecked)
+        {
+            $(document).find(`[mwpl_show_depends_on=${elID}]`).slideDown()
+        }else{
+            $(document).find(`[mwpl_show_depends_on=${elID}]`).slideUp()
         }
     })
 });

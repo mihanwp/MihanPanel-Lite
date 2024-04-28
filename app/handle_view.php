@@ -548,6 +548,11 @@ class handle_view
         $render_method = apply_filters('mwpl_option_panel/render_method/use_mihan_avatar', []);
         self::handle_option_panel_render_method($render_method);
     }
+    static function option_panel_field_exclude_login_route_in_litespeed_cache()
+    {
+        $render_method = apply_filters('mwpl_option_panel/render_method/exclude_login_route_in_litespeed_cache', []);
+        self::handle_option_panel_render_method($render_method);
+    }
     static function option_panel_field_panel_theme()
     {
         $render_method = apply_filters('mwpl_option_panel/render_method/panel_theme', []);
@@ -659,6 +664,34 @@ class handle_view
         $render_method = apply_filters('mwpl_option_panel/render_method/login_form_top_message', []);
         self::handle_option_panel_render_method($render_method);
     }
+    // start recent products
+    static function option_panel_field_is_wc_recent_products_enable()
+    {
+        $render_method = apply_filters('mwpl_option_panel/render_method/is_wc_recent_products_enable', []);
+        self::handle_option_panel_render_method($render_method);
+    }
+    static function option_panel_field_wc_recent_products_section_title()
+    {
+        $render_method = apply_filters('mwpl_option_panel/render_method/wc_recent_products_section_title', []);
+        self::handle_option_panel_render_method($render_method);
+    }
+    static function option_panel_field_wc_recent_products_section_link()
+    {
+        $render_method = apply_filters('mwpl_option_panel/render_method/wc_recent_products_section_link', []);
+        self::handle_option_panel_render_method($render_method);
+    }
+    static function option_panel_field_wc_recent_products_section_items_category()
+    {
+        $render_method = apply_filters('mwpl_option_panel/render_method/wc_recent_products_section_items_category', []);
+        self::handle_option_panel_render_method($render_method);
+    }
+    static function option_panel_field_wc_products_section_items_count()
+    {
+        $render_method = apply_filters('mwpl_option_panel/render_method/wc_products_section_items_count', []);
+        self::handle_option_panel_render_method($render_method);
+    }
+    // end recent products
+
     // register tab
     static function option_panel_field_register_text()
     {
@@ -915,7 +948,7 @@ class handle_view
     {
         ?>
         <div class="mp_option_field">
-            <label><?php echo esc_html__('Active Captcha', 'mihanpanel') ?></label>
+            <label><?php echo esc_html__('Activate Captcha', 'mihanpanel') ?></label>
             <?php self::show_go_pro_link()?>
         </div>
         <?php
@@ -930,7 +963,7 @@ class handle_view
     {
         ?>
         <div class="mp_option_field">
-            <label><?php echo esc_html__('Active Recaptcha', 'mihanpanel') ?></label>
+            <label><?php echo esc_html__('Activate Recaptcha', 'mihanpanel') ?></label>
             <?php self::show_go_pro_link()?>
         </div>
         <?php

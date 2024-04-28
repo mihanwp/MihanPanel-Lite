@@ -1142,10 +1142,11 @@ output {
         padding: 10px 5px !important;
         position: absolute !important;
         z-index: 11 !important;
-        display: block !important;
+        display: flex !important;
+        align-items: center;
         cursor: pointer !important;
     }
-    .mihanpanelpanel .mp_menu_bars.fa-times {
+    .mihanpanelpanel .mp_menu_bars .mw_icon.fa-times {
         color: white !important;
     }
     .mihanpanelpanel .mpsidebar {

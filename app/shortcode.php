@@ -32,7 +32,10 @@ class shortcode
             if (is_singular(['page', 'post'])):
             ?>
             <div class="mpwrapper mihanpanelpanel <?php echo is_rtl() ? 'mp_wrapper_rtl' : 'mp_wrapper_ltr'; ?>">
-                <div class="mp_menu_bars fa fa-bars fa-lg"><small style="padding: 0 5px;"><?php esc_html_e("Open Menu", "mihanpanel"); ?></small></div>
+                <div class="mp_menu_bars">
+                    <i class="mw_icon fa fa-bars fa-lg"></i>
+                    <small style="padding: 0 5px;"><?php esc_html_e("Open Menu", "mihanpanel"); ?></small>
+                </div>
                 <div class="mpsidebar <?php echo is_rtl() ? 'mp_rtl' : 'mp_ltr'; ?>">
                     <div class="mpavatar">
                         <?php

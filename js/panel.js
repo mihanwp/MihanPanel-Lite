@@ -6,8 +6,8 @@ jQuery(document).ready(function($){
             main_panel = mp_sidebar.next('.main-panel');
         main_panel.toggleClass('mp_display_none');
         mp_title.toggleClass('mp_display_none');
-        mp_this.toggleClass('fa-times');
-        mp_this.toggleClass('fa-bars');
+        mp_this.find('.mw_icon').toggleClass('fa-times');
+        mp_this.find('.mw_icon').toggleClass('fa-bars');
         mp_sidebar.toggleClass('mp_open');
     });
 });

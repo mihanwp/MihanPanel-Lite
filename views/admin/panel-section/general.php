@@ -33,6 +33,7 @@
                     <a target="_blank" dir="ltr" href="<?php echo esc_url($login_url) ?>"><?php echo esc_url($login_url) ?></a>
                 </p>
             </div>
+            <?php \mihanpanel\app\handle_view::option_panel_field_exclude_login_route_in_litespeed_cache(); ?>
         </div>
         <div class="mp_option_section <?php \mihanpanel\app\tools::handleOptionPanelSectionVersionStateClass();?>">
             <h2><?php esc_html_e('Login form message', 'mihanpanel') ?></h2>

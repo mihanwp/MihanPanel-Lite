@@ -173,6 +173,39 @@
                 <?php \mihanpanel\app\handle_view::option_panel_field_blog_section_posts_count();?>
             </div>
         </div>
+
+        <div class="mp_option_section <?php \mihanpanel\app\tools::handleOptionPanelSectionVersionStateClass()?>">
+            <h3 class="mp_option_section_title"><?php _e('Recent products', 'mihanpanel')?></h3>
+            <?php \mihanpanel\app\tools::handleProVersionBoxInOptionPanel()?>
+            <div class="mp_option_field">
+                <?php if(\mihanpanel\app\tools::isProVersion() && !\mihanpanel\app\tools::is_woocommerce_active()): ?>
+                    <div class="mp_option_notice_wrapper">
+                        <p class="alert error"><?php _e('If the WooCommerce plugin is not active, the settings in this section will not be applied to the user panel.', 'mihanpanel')?></p>
+                    </div>
+                <?php endif; ?>
+            </div>
+            <div class="mp_option_field mp_row_field">
+                <label for="mp_is_wc_recent_products_section_enable"><?php _e('Show recent products', 'mihanpanel')?></label>
+                <?php \mihanpanel\app\handle_view::option_panel_field_is_wc_recent_products_enable(); ?>
+            </div>
+            <div class="mp_option_field mp_row_field" mwpl_show_depends_on="mp_is_wc_recent_products_section_enable">
+                <label for="mp_wc_recent_products_section_title"><?php esc_html_e('Section Title', 'mihanpanel')?></label>
+                <?php \mihanpanel\app\handle_view::option_panel_field_wc_recent_products_section_title();?>
+            </div>
+            <div class="mp_option_field mp_row_field" mwpl_show_depends_on="mp_is_wc_recent_products_section_enable">
+                <label for="mp_wc_recent_products_section_link"><?php esc_html_e('Section Link', 'mihanpanel')?></label>
+                <?php \mihanpanel\app\handle_view::option_panel_field_wc_recent_products_section_link();?>
+            </div>
+            <div class="mp_option_field mp_row_field" mwpl_show_depends_on="mp_is_wc_recent_products_section_enable">
+                <label for="mp_wc_recent_products_section_items_categories"><?php esc_html_e('Products Category', 'mihanpanel')?></label>
+                <?php \mihanpanel\app\handle_view::option_panel_field_wc_recent_products_section_items_category();?>
+            </div>
+            <div class="mp_option_field mp_row_field" mwpl_show_depends_on="mp_is_wc_recent_products_section_enable">
+                <label for="mp_wc_recent_products_section_items_count"><?php esc_html_e('Products count', 'mihanpanel')?></label>
+                <?php \mihanpanel\app\handle_view::option_panel_field_wc_products_section_items_count();?>
+            </div>
+        </div>
+        
         <div class="mp_option_section <?php \mihanpanel\app\tools::handleOptionPanelSectionVersionStateClass()?>">
             <h3 class="mp_option_section_title"><?php _e('User roles', "mihanpanel")?></h3>
             <?php \mihanpanel\app\tools::handleProVersionBoxInOptionPanel();?>

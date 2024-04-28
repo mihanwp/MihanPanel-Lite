@@ -53,6 +53,10 @@ class tools
     {
         return class_exists('woocommerce');
     }
+    static function isLiteSpeedCacheActive()
+    {
+        return self::is_plugin_active('litespeed-cache/litespeed-cache.php');
+    }
     static function is_edd_active()
     {
         return self::is_plugin_active('easy-digital-downloads/easy-digital-downloads.php');
