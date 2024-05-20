@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MihanPanel\n"
-"POT-Creation-Date: 2024-04-29 01:00+0330\n"
-"PO-Revision-Date: 2024-04-29 01:00+0330\n"
+"POT-Creation-Date: 2024-05-20 14:02+0330\n"
+"PO-Revision-Date: 2024-05-20 14:03+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -42,7 +42,7 @@ msgstr "پنل کاربری"
 msgid "Register Form"
 msgstr "فرم ثبت نام"
 
-#: app/admin_menu.php:44 app/admin_menu.php:199
+#: app/admin_menu.php:44 app/admin_menu.php:202
 #: views/admin/panel-section/notification.php:3
 msgid "Notifications"
 msgstr "اطلاعیه ها"
@@ -67,44 +67,44 @@ msgstr "ابزار‌ها"
 msgid "User Fields"
 msgstr "فیلدهای کاربری"
 
-#: app/admin_menu.php:141
+#: app/admin_menu.php:144
 msgid "Do you want to save changes?"
 msgstr "میخواهید تغییرات ذخیره شود؟"
 
-#: app/admin_menu.php:142
+#: app/admin_menu.php:145
 msgid "Yes"
 msgstr "بله"
 
-#: app/admin_menu.php:150
+#: app/admin_menu.php:153
 msgid "Create new field"
 msgstr "ایجاد فیلد جدید"
 
-#: app/admin_menu.php:150
+#: app/admin_menu.php:153
 msgid "Close"
 msgstr "بستن"
 
-#: app/admin_menu.php:160
+#: app/admin_menu.php:163
 msgid "Panel Menus"
 msgstr "منوهای پنل کاربری"
 
-#: app/admin_menu.php:192
+#: app/admin_menu.php:195
 msgid "This section is active in MihanPanel pro"
 msgstr "این بخش در نسخه‌ی حرفه‌ای میهن‌پنل در دسترس است."
 
-#: app/admin_menu.php:229
+#: app/admin_menu.php:232
 #, php-format
 msgid "This feature is accessible only in %s."
 msgstr "این قابلیت فقط در %s در دسترس است"
 
-#: app/admin_menu.php:229
+#: app/admin_menu.php:232
 msgid "MihanPanel Pro"
 msgstr "میهن پنل پرو"
 
-#: app/admin_menu.php:236
+#: app/admin_menu.php:239
 msgid "Blocked ip"
 msgstr "آی‌پی‌های بلاک شده"
 
-#: app/admin_menu.php:271
+#: app/admin_menu.php:274
 #, php-format
 msgid "%d item"
 msgstr "‫%d مورد"
@@ -174,7 +174,7 @@ msgid "No any items found"
 msgstr "هیچ آیتمی پیدا نشد."
 
 #: app/ajax.php:257 app/ajax.php:326 app/ajax.php:347
-#: app/form/admin_user_fields.php:28 app/form/profile.php:81
+#: app/form/admin_user_fields.php:29 app/form/profile.php:81
 #: views/user/2fa_menu.php:45
 msgid "The operation failed due to security issues."
 msgstr "عملیات به دلیل مشکلات امنیتی متوقف شد."
@@ -211,7 +211,7 @@ msgstr "درخواست شما نامعتبر است!"
 msgid "Verification code has been sent to email."
 msgstr "کد پویا به آدرس ایمیل ارسال شده است."
 
-#: app/ajax.php:480 app/form/admin_tabs.php:37 app/form/admin_user_fields.php:53
+#: app/ajax.php:480 app/form/admin_tabs.php:38 app/form/admin_user_fields.php:51
 #: app/form/profile.php:55 app/form/profile.php:119
 msgid "An error occurred!"
 msgstr "یک خطا رخ داده است!"
@@ -322,8 +322,8 @@ msgstr "غیرفعال"
 msgid "Mihan Panel"
 msgstr "میهن پنل"
 
-#: app/fields_control.php:60 app/form/admin_tabs.php:54
-#: app/form/admin_tabs.php:167 app/form/admin_tabs.php:168
+#: app/fields_control.php:60 app/form/admin_tabs.php:55
+#: app/form/admin_tabs.php:168 app/form/admin_tabs.php:169
 msgid "Icon"
 msgstr "آیکون"
 
@@ -455,71 +455,71 @@ msgstr "پایین چپ"
 msgid "Bottom Right"
 msgstr "پایین راست"
 
-#: app/form/admin_tabs.php:35
+#: app/form/admin_tabs.php:36
 msgid "Successfully added! Watch user panel"
 msgstr "با موفقیت اضافه شد! میتونید پنل کاربری رو ببینید"
 
-#: app/form/admin_tabs.php:46
+#: app/form/admin_tabs.php:47
 msgid "Menu title"
 msgstr "عنوان منو"
 
-#: app/form/admin_tabs.php:50
+#: app/form/admin_tabs.php:51
 msgid "Link / Shortcode"
 msgstr "لینک / کد کوتاه"
 
-#: app/form/admin_tabs.php:64
+#: app/form/admin_tabs.php:65
 msgid "Tabs"
 msgstr "تب‌ها"
 
-#: app/form/admin_tabs.php:64 app/form/admin_user_fields.php:87
+#: app/form/admin_tabs.php:65 app/form/admin_user_fields.php:84
 msgid "New Field"
 msgstr "فیلد جدید"
 
-#: app/form/admin_tabs.php:97
+#: app/form/admin_tabs.php:98
 msgid "FontAwesome"
 msgstr "FontAwesome"
 
-#: app/form/admin_tabs.php:110
+#: app/form/admin_tabs.php:111
 msgid "Field ID"
 msgstr "شناسه فیلد"
 
-#: app/form/admin_tabs.php:114
+#: app/form/admin_tabs.php:115
 msgid "Show by roles"
 msgstr "نمایش بر اساس نقش کاربری"
 
-#: app/form/admin_tabs.php:132 app/form/admin_tabs.php:133
+#: app/form/admin_tabs.php:133 app/form/admin_tabs.php:134
 msgid "Menu Title"
 msgstr "عنوان منو"
 
-#: app/form/admin_tabs.php:136 app/live_edit.php:56
+#: app/form/admin_tabs.php:137 app/live_edit.php:56
 msgid "Content"
 msgstr "محتوا"
 
-#: app/form/admin_tabs.php:138
+#: app/form/admin_tabs.php:139
 msgid "Choose"
 msgstr "انتخاب"
 
-#: app/form/admin_tabs.php:139
+#: app/form/admin_tabs.php:140
 msgid "Link to other page"
 msgstr "پیوند به صفحه دیگر"
 
-#: app/form/admin_tabs.php:140 app/form/admin_tabs.php:149
+#: app/form/admin_tabs.php:141 app/form/admin_tabs.php:150
 msgid "Shortcode"
 msgstr "کد کوتاه"
 
-#: app/form/admin_tabs.php:144
+#: app/form/admin_tabs.php:145
 msgid "Link"
 msgstr "لینک"
 
-#: app/form/admin_tabs.php:152
+#: app/form/admin_tabs.php:153
 msgid "Choose your item"
 msgstr "آیتم مورد نظر را انتخاب کنید"
 
-#: app/form/admin_tabs.php:153 app/form/admin_tabs.php:163
+#: app/form/admin_tabs.php:154 app/form/admin_tabs.php:164
 msgid "Custom Shortcode"
 msgstr "کد کوتاه سفارشی"
 
-#: app/form/admin_tabs.php:158
+#: app/form/admin_tabs.php:159
 msgid "No any shortcodes found."
 msgstr "هیچ شورتکدی پیدا نشد."
 
@@ -527,37 +527,37 @@ msgstr "هیچ شورتکدی پیدا نشد."
 msgid "Settings successfully updated!"
 msgstr "تنظیمات با موفقیت به روز شد!"
 
-#: app/form/admin_user_fields.php:59
+#: app/form/admin_user_fields.php:56
 msgid "Please fill all the fields"
 msgstr "لطفا تمام زمینه ها را پر کنید"
 
-#: app/form/admin_user_fields.php:69 app/form/admin_user_fields.php:146
+#: app/form/admin_user_fields.php:66 app/form/admin_user_fields.php:143
 msgid "Field Id"
 msgstr "شناسه فیلد"
 
-#: app/form/admin_user_fields.php:73 app/form/admin_user_fields.php:150
+#: app/form/admin_user_fields.php:70 app/form/admin_user_fields.php:147
 msgid "Title"
 msgstr "عنوان"
 
-#: app/form/admin_user_fields.php:77 app/form/admin_user_fields.php:117
-#: app/form/admin_user_fields.php:154 app/form/admin_user_fields.php:156
+#: app/form/admin_user_fields.php:74 app/form/admin_user_fields.php:114
+#: app/form/admin_user_fields.php:151 app/form/admin_user_fields.php:153
 #: parts/edit-profile.php:65
 msgid "Required"
 msgstr "الزامی"
 
-#: app/form/admin_user_fields.php:81 app/form/admin_user_fields.php:162
+#: app/form/admin_user_fields.php:78 app/form/admin_user_fields.php:159
 msgid "Type"
 msgstr "نوع"
 
-#: app/form/admin_user_fields.php:87
+#: app/form/admin_user_fields.php:84
 msgid "Fields"
 msgstr "فیلد‌ها"
 
-#: app/form/admin_user_fields.php:118 app/form/admin_user_fields.php:157
+#: app/form/admin_user_fields.php:115 app/form/admin_user_fields.php:154
 msgid "Optional"
 msgstr "اختیاری"
 
-#: app/form/admin_user_fields.php:166
+#: app/form/admin_user_fields.php:163
 msgid "Save"
 msgstr "ذخیره"
 
@@ -578,136 +578,136 @@ msgstr "%1$s نباید خالی باشد."
 msgid "Invalid OTP code"
 msgstr "کد OTP معتبر نیست"
 
-#: app/handle_view.php:226
+#: app/handle_view.php:227
 #, php-format
 msgid "%d Day"
 msgstr "%d روز"
 
-#: app/handle_view.php:228
+#: app/handle_view.php:229
 msgid "You are our user"
 msgstr "سابقه عضویت شما"
 
-#: app/handle_view.php:252
+#: app/handle_view.php:253
 msgid "Your Comments"
 msgstr "نظرات شما"
 
-#: app/handle_view.php:286
+#: app/handle_view.php:287
 msgid "Purchased files"
 msgstr "فایل های خریداری شده"
 
-#: app/handle_view.php:303
+#: app/handle_view.php:304
 msgid "Your purchase count"
 msgstr "تعداد خرید شما"
 
-#: app/handle_view.php:328 app/handle_view.php:348
+#: app/handle_view.php:329 app/handle_view.php:349
 msgid "Your tickets"
 msgstr "تیکت های شما"
 
-#: app/handle_view.php:386
+#: app/handle_view.php:387
 msgid "Required Pro Version"
 msgstr "نیازمند نسخه‌ی حرفه‌ای"
 
-#: app/handle_view.php:407
+#: app/handle_view.php:408
 msgid "Login Button Text Color"
 msgstr "رنگ متن دکمه ورود"
 
-#: app/handle_view.php:409
+#: app/handle_view.php:410
 msgid "Color of Login and Register button text"
 msgstr "رنگ متن دکمه در صفحه ی ورود و ثبت نام"
 
-#: app/handle_view.php:422
+#: app/handle_view.php:423
 msgid "Register button background color"
 msgstr "رنگ پس‌زمینه دکمه ثبت‌نام"
 
-#: app/handle_view.php:424
+#: app/handle_view.php:425
 msgid "You can change background color of register button."
 msgstr "میتوانید رنگ پس‌زمینه دکمه ثبت‌نام را تغییر دهید."
 
-#: app/handle_view.php:438
+#: app/handle_view.php:439
 msgid "Register button text color"
 msgstr "رنگ متن دکمه ثبت‌نام"
 
-#: app/handle_view.php:440
+#: app/handle_view.php:441
 msgid "By changing text color, the border color will also change."
 msgstr "با تغییر رنگ متن دکمه، رنگ کادر دور دکمه هم تغییر میکند."
 
-#: app/handle_view.php:454
+#: app/handle_view.php:455
 msgid "Login Fields Background Color"
 msgstr "رنگ پس زمینه ی فیلدهای فرم ورود"
 
-#: app/handle_view.php:456
+#: app/handle_view.php:457
 msgid "Color of Login and Register fields"
 msgstr "رنگ پس زمینه فیلدهای فرم ورود و ثبت‌نام"
 
-#: app/handle_view.php:469
+#: app/handle_view.php:470
 msgid "Login Field's Label Color"
 msgstr "رنگ لیبل فیلدهای فرم ورود"
 
-#: app/handle_view.php:471
+#: app/handle_view.php:472
 msgid "Color of Login and Register labels"
 msgstr "رنگ متن لیبل فیلدهای فرم ورود و ثبت نام"
 
-#: app/handle_view.php:499
+#: app/handle_view.php:500
 msgid "Login Fields Text Color"
 msgstr "رنگ متن فیلدهای فرم ورود"
 
-#: app/handle_view.php:501
+#: app/handle_view.php:502
 msgid "Color of Login and Register fields text"
 msgstr "رنگ متن فیلدهای فرم ورود و ثبت‌نام"
 
-#: app/handle_view.php:514
+#: app/handle_view.php:515
 msgid "Login Info Messagebox Background Color"
 msgstr "رنگ پس زمینه ی باکس اطلاع رسانی در فرم ورود"
 
-#: app/handle_view.php:516
+#: app/handle_view.php:517
 msgid "Background Color of Login and Register Info Messagebox"
 msgstr "رنگ پس زمینه ی باکس اطلاع رسانی در فرم ورود و ثبت نام"
 
-#: app/handle_view.php:529
+#: app/handle_view.php:530
 msgid "Login Info Messagebox Text Color"
 msgstr "رنگ متن باکس اطلاع رسانی در فرم ورود"
 
-#: app/handle_view.php:531
+#: app/handle_view.php:532
 msgid "Color of Login and Register Info Messagebox Text"
 msgstr "رنگ متن باکس اطلاع رسانی در فرم ورود و ثبت نام"
 
-#: app/handle_view.php:729
+#: app/handle_view.php:730
 msgid "This plugin is not active on your site"
 msgstr "این پلاگین بر روی سایت شما فعال نیست"
 
-#: app/handle_view.php:858
+#: app/handle_view.php:859
 msgid "Auto confirm phone number after user register"
 msgstr "فعالسازی شماره موبایل بعد از ثبت نام به صورت اتوماتیک"
 
-#: app/handle_view.php:862
+#: app/handle_view.php:863
 msgid "User can change phone number"
 msgstr "کاربر میتواند شماره موبایل را تغییر دهد"
 
-#: app/handle_view.php:919 app/middlewares.php:67
+#: app/handle_view.php:920 app/middlewares.php:67
 msgid "Pro Version"
 msgstr "نسخه‌ی حرفه‌ای"
 
-#: app/handle_view.php:951
+#: app/handle_view.php:952
 msgid "Activate Captcha"
 msgstr "فعالسازی کپچا"
 
-#: app/handle_view.php:966
+#: app/handle_view.php:967
 msgid "Activate Recaptcha"
 msgstr "فعالسازی کپچا"
 
-#: app/handle_view.php:984
+#: app/handle_view.php:985
 msgid "Disable reset password"
 msgstr "غیر‌فعال کردن فیلد بازیابی رمز عبور"
 
-#: app/handle_view.php:1006
+#: app/handle_view.php:1007
 msgid "Login and Register form background"
 msgstr "پس زمینه فرم ورود و ثبت نام"
 
-#: app/handle_view.php:1008 views/admin/panel-section/general.php:145
+#: app/handle_view.php:1009 views/admin/panel-section/general.php:145
 msgid "Upload Image"
 msgstr "آپلود تصویر"
 
-#: app/handle_view.php:1022
+#: app/handle_view.php:1023
 msgid "Upload File"
 msgstr "آپلود فایل"
 
@@ -775,7 +775,7 @@ msgstr "لطفا ایمیل خود را برای دیدن لینک فعالسا�
 msgid "You are unable to log in due to too many incorrect attempts"
 msgstr "دسترسی شما به علت تلاش‌های زیاد ناموفق برای ورود به سیستم، محدود شده است."
 
-#: app/middlewares.php:68
+#: app/middlewares.php:69
 #, php-format
 msgid ""
 "Max item count is 4 in lite version. Upgrade to %s for disable this restriction."
@@ -1611,8 +1611,8 @@ msgid "Show Awesome Support widget"
 msgstr "نمایش ویجت افزونه Awesome Support"
 
 #: views/admin/panel-section/panel.php:146
-msgid "Show Mihan Ticket widget"
-msgstr "نمایش ویجت افزونه میهن‌تیکت"
+msgid "Show Poshtvan widget"
+msgstr "نمایش ویجت افزونه پشتوان"
 
 #: views/admin/panel-section/panel.php:153
 msgid "Blog Section"
@@ -3077,6 +3077,9 @@ msgstr "https://mihanwp.com/"
 
 #~ msgid "MihanWP"
 #~ msgstr "میهن وردپرس"
+
+#~ msgid "Show Mihan Ticket widget"
+#~ msgstr "نمایش ویجت افزونه میهن‌تیکت"
 
 #~ msgid "Category"
 #~ msgstr "دسته‌بندی"

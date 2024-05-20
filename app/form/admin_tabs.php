@@ -2,6 +2,7 @@
 namespace mihanpanel\app\form;
 
 use mihanpanel\app\middlewares;
+use mihanpanel\app\notice;
 
 class admin_tabs
 {
@@ -32,9 +33,9 @@ class admin_tabs
                         $data
                     );
                     if ($success) {
-                        echo '<p class="alert success">'.__("Successfully added! Watch user panel", 'mihanpanel').'</p>';
+                        notice::add_notice('success', __("Successfully added! Watch user panel", 'mihanpanel'));
                     } else {
-                        echo '<p class="alert error">'.__("An error occurred!", "mihanpanel").'</p>';
+                        notice::add_notice('error', __("An error occurred!", "mihanpanel"));
                     }
                 }
             }

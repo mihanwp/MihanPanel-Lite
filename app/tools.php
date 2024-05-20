@@ -65,9 +65,9 @@ class tools
     {
         return class_exists('Awesome_Support');
     }
-    static function is_mihanticket_active()
+    static function is_poshtvan_active()
     {
-        return self::is_plugin_active('mihanticket/mihanticket.php');
+        return self::is_plugin_active('poshtvan/poshtvan.php');
     }
 	static function is_dokan_active()
     {

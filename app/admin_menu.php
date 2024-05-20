@@ -133,6 +133,9 @@ class admin_menu
         }
 ?>
         <div class="mihanpanel-admin">
+            <?php if($notice = \mihanpanel\app\notice::once_get_notice()): ?>
+                <p class="alert <?php echo esc_attr($notice['type'])?>"><?php echo esc_html($notice['msg'])?></p>
+            <?php endif; ?>
             <?php
             do_action('mwpl_option_panel/before_render_user_fields_list');
             ?>

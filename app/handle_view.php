@@ -107,9 +107,9 @@ class handle_view
                 'class' => \mihanpanel\app\handle_view::class,
                 'method' => 'handle_dashboard_widget_awesome_support',
             ],
-            'mihanticket' => [
+            'poshtvan' => [
                 'class' => \mihanpanel\app\handle_view::class,
-                'method' => 'handle_dashboard_widget_mihanticket',
+                'method' => 'handle_dashboard_widget_poshtvan',
             ]
         ];
         $widgets = apply_filters('mihanpanel/panel/dashboard/widgets', $widgets);
@@ -190,16 +190,17 @@ class handle_view
             self::render_dashboard_widget_awesome_support();
         }
     }
-    static function handle_dashboard_widget_mihanticket()
+    static function handle_dashboard_widget_poshtvan()
     {
         $middlewares = [
-            ['\mihanpanel\app\tools', 'is_mihanticket_active']
+            ['\mihanpanel\app\tools', 'is_poshtvan_active']
         ];
         $middlewares = apply_filters('mwpl_panel_widgets_middlewares_mihanticket', $middlewares);
+        $middlewares = apply_filters('mwpl_panel_widgets_middlewares_poshtvan', $middlewares);
         $res = self::handle_middlewares($middlewares);
         if($res)
         {
-            self::render_dashboard_widget_mihanticket();
+            self::render_dashboard_widget_poshtvan();
         }
     }
 
@@ -331,7 +332,7 @@ class handle_view
         </div>
         <?php
     }
-    static function render_dashboard_widget_mihanticket()
+    static function render_dashboard_widget_poshtvan()
     {
         ?>
         <div class="col-md-4">
@@ -606,9 +607,9 @@ class handle_view
         $render_method = apply_filters('mwpl_option_panel/render_method/is_show_awesome_support_widget', []);
         self::handle_option_panel_render_method($render_method);
     }
-    static function option_panel_field_is_show_mihanticket_widget()
+    static function option_panel_field_is_show_poshtvan_widget()
     {
-        $render_method = apply_filters('mwpl_option_panel/render_method/is_show_mihanticket_widget', []);
+        $render_method = apply_filters('mwpl_option_panel/render_method/is_show_poshtvan_widget', []);
         self::handle_option_panel_render_method($render_method);
     }
     static function option_panel_field_ban_roles()

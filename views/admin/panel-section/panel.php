@@ -143,8 +143,8 @@
                     <?php \mihanpanel\app\handle_view::option_panel_field_is_show_awesome_support_widget(); ?>
                 </p>
                 <p>
-                    <label><?php esc_html_e("Show Mihan Ticket widget", "mihanpanel"); ?></label>
-                    <?php \mihanpanel\app\handle_view::option_panel_field_is_show_mihanticket_widget(); ?>
+                    <label><?php esc_html_e("Show Poshtvan widget", "mihanpanel"); ?></label>
+                    <?php \mihanpanel\app\handle_view::option_panel_field_is_show_poshtvan_widget(); ?>
                 </p>
             </div>
         </div>

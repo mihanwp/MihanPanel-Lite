@@ -482,6 +482,7 @@ body
 
 /* end range style */
 
+.mihanpanel-admin .alert,
 .mw_admin_panel .alert {
     width: 90%;
     display: block;
@@ -491,24 +492,28 @@ body
     font-size: 16px;
 }
 
+.mihanpanel-admin .alert.success,
 .mw_admin_panel .alert.success {
     background-color: #eefaf2;
     border: 1px solid #79d57d;
     color: #4CAF50;
 }
 
+.mihanpanel-admin .alert.info,
 .mw_admin_panel .alert.info {
     background-color: #f0f8ff;
     border: 1px solid #8ebae1;
     color: #4575A0;
 }
 
+.mihanpanel-admin .alert.error,
 .mw_admin_panel .alert.error {
     background-color: #faeef2;
     border: 1px solid #ffc9dd;
     color: #d70150;
 }
 
+.mihanpanel-admin .alert.warning,
 .mw_admin_panel .alert.warning {
     background-color: #fffaf0;
     border: 1px solid #ffe8bc;

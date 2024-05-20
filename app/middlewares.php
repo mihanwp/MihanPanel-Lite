@@ -65,7 +65,9 @@ class middlewares
         if(!defined('MIHANPANEL_PRO_DIR_PATH') && panel::get_tabs_count() > 3)
         {
             $pro_version = sprintf('<a target="_blank" href="%s">%s</a>',tools::get_pro_version_link(), __('Pro Version', 'mihanpanel'));
+            echo '<div class="mw_content_wrapper mw_admin_panel">';
             echo '<p class="alert error"><span>'.sprintf(__('Max item count is 4 in lite version. Upgrade to %s for disable this restriction.', 'mihanpanel'), $pro_version) . '</span></p>';
+            echo '</div>';
             return false;
         }
         return true;

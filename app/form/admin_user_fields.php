@@ -1,6 +1,7 @@
 <?php
 namespace mihanpanel\app\form;
 
+use mihanpanel\app\notice;
 use mihanpanel\app\user_fields;
 
 class admin_user_fields
@@ -25,7 +26,7 @@ class admin_user_fields
         if ($slug && $label && $required && $type) {
             if(!wp_verify_nonce(sanitize_text_field($_POST['mwpl_nonce']), 'mwpl_create_field_item'))
             {
-                printf('<p class="alert error">%s</p>', __('The operation failed due to security issues.', 'mihanpanel'));
+                notice::add_notice('error', __('The operation failed due to security issues.', 'mihanpanel'));
                 return false;
             }
             $meta = apply_filters('mwpl_option_panel/user_fields/new_mode/user_fields_meta', '', null);
@@ -45,18 +46,14 @@ class admin_user_fields
                 $data
             );
             if ($success) {
-
-                echo '<p class="alert success">'.__("Settings successfully updated!", 'mihanpanel').'</p>';
-
+                notice::add_notice('success', __("Settings successfully updated!", 'mihanpanel'));
             } else {
-
-                echo '<p class="alert error">'.__('An error occurred!', 'mihanpanel').'</p>';
-
+                notice::add_notice('error', __('An error occurred!', 'mihanpanel'));
             }
 
         } else {
 
-            echo '<p class="alert error">'.__('Please fill all the fields', 'mihanpanel').'</p>';
+            notice::add_notice('error', __('Please fill all the fields', 'mihanpanel'));
 
         }
     }

@@ -1239,7 +1239,6 @@ html body .mihanpanelpanel .alert {
     display:flex;
 }
 .mihanpanelpanel table {
-    display: inline-block;
     width: 100%;
     overflow: auto;
     max-width:830px;

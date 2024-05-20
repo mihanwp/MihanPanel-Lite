@@ -24,7 +24,7 @@ class google_otp
         
         $urlData = urlencode("otpauth://totp/{$companyName}:{$userEmail}?secret={$secretKey}&issuer={$companyName}");
         // Generate the QR code URL
-        $qrCodeUrl = 'https://chart.googleapis.com/chart?chs=200x200&chld=M|0&cht=qr&chl=' . $urlData;
+        $qrCodeUrl = 'https://quickchart.io/qr?text=' . $urlData;
         ?>
 
         <img src="<?php echo $qrCodeUrl; ?> "/>
