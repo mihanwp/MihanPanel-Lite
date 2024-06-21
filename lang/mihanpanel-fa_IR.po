@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MihanPanel\n"
-"POT-Creation-Date: 2024-05-20 14:02+0330\n"
-"PO-Revision-Date: 2024-05-20 14:03+0330\n"
+"POT-Creation-Date: 2024-06-22 02:53+0330\n"
+"PO-Revision-Date: 2024-06-22 02:54+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -145,7 +145,7 @@ msgstr "با موفقیت وارد شدید…"
 msgid "This username has already been chosen by someone else."
 msgstr "این نام کاربری توسط شخص دیگری استفاده شده است."
 
-#: app/ajax.php:134 app/register.php:174
+#: app/ajax.php:134 app/register.php:175
 msgid "Invalid email address"
 msgstr "آدرس ایمیل نامعتبر است"
 
@@ -578,7 +578,13 @@ msgstr "%1$s نباید خالی باشد."
 msgid "Invalid OTP code"
 msgstr "کد OTP معتبر نیست"
 
-#: app/handle_view.php:227
+#: app/handle_view.php:223
+#, php-format
+msgctxt "dashboard-widget-card"
+msgid "%d Days"
+msgstr "‫%d روز"
+
+#: app/handle_view.php:225
 #, php-format
 msgid "%d Day"
 msgstr "%d روز"

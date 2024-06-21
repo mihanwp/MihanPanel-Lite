@@ -39,7 +39,9 @@ html body .mihanpanelpanel .nocss .dashicons
 .mihanpanelpanel a:focus {
     outline: 0  !important;
 }
-.mihanpanelpanel input, .mihanpanelpanel textarea,.mihanpanelpanel select {
+.mihanpanelpanel input:not(.default_input_style),
+.mihanpanelpanel textarea:not(.default_input_style),
+.mihanpanelpanel select:not(.default_input_style) {
     border-radius: 5px !important;
     padding: 5px 10px !important;
     box-sizing: border-box;
@@ -273,6 +275,45 @@ html body .mihanpanelpanel .nocss .dashicons
     overflow-x: auto
 }
 @media screen and (max-width: 767px) {
+
+    .mihanpanelpanel .responsive_table_wrapper table
+    {
+        border: none;
+    }
+    .mihanpanelpanel .responsive_table_wrapper table thead
+    {
+        display: none;
+    }
+    .mihanpanelpanel .responsive_table_wrapper table tbody
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .mihanpanelpanel .responsive_table_wrapper table tr
+    {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #eaeaea;
+        background: #fafafa;
+        border-radius: 10px;
+    }
+    .mihanpanelpanel .responsive_table_wrapper table td
+    {
+        border-bottom: 1px solid #eeeeee;
+    }
+    .mihanpanelpanel .responsive_table_wrapper table td:last-child
+    {
+        border: none;
+    }
+    .mihanpanelpanel .responsive_table_wrapper table td:before
+    {
+        content: attr(data-title);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    
     .table-responsive {
         width: 100% !important;
         margin-bottom: 15px !important;
@@ -1109,6 +1150,7 @@ output {
     float: left !important;
     padding:0 30px !important;
     cursor: pointer !important;
+    color: #000 !important;
 }
 .back-to-sitehome span,.back-to-sitehome i{
   font-size:15px !important;
@@ -1117,6 +1159,7 @@ output {
     font-size:1.2em !important;
     font-weight:bold !important;
     padding: 10px 30px !important;
+    color: #000 !important;
 }
 .mp_display_none{
     display: none  !important;
@@ -1145,6 +1188,7 @@ output {
         display: flex !important;
         align-items: center;
         cursor: pointer !important;
+        color: #000 !important;
     }
     .mihanpanelpanel .mp_menu_bars .mw_icon.fa-times {
         color: white !important;
@@ -1252,6 +1296,10 @@ html body .mihanpanelpanel .alert {
 .mihanpanelpanel table td
 {
 	padding:15px !important;
+}
+.mihanpanelpanel table tbody tr td a
+{
+    display: inline-block;
 }
 .mihanpanelpanel input[type=text]:disabled,
 .mihanpanelpanel input[type=email]:disabled,

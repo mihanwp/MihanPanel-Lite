@@ -167,7 +167,8 @@ class register
     static function handleEmailFieldValidation($field)
     {
         $fieldValue = sanitize_email($_POST['mw_fields'][$field->slug]);
-        if(!$fieldValue && (!isset($field->required) || $field->required != 'yes'))
+        $metaData = isset($field->meta) && $field->meta ? unserialize($field->meta) : null;
+        if(!$fieldValue && (!isset($field->required) || $field->required != 'yes' || isset($metaData['data']['just_in_profile'])))
         {
             return true;
         }

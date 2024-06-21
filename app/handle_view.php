@@ -218,13 +218,13 @@ class handle_view
                       $register_date  = get_the_author_meta( 'user_registered', get_current_user_id() );
                       $registered_obj = new \DateTime( date( 'Y-m-d', strtotime( $register_date ) ) );
                       $interval_obj   = $today_obj->diff( $registered_obj );
-                      $day = '';
+                      $days = '';                      
                       if( $interval_obj->days > 0 ) {
-                          $day = $interval_obj->days;
+                        $days = sprintf(_x('%d Days', 'dashboard-widget-card', 'mihanpanel'), $interval_obj->days);
                       } elseif( 0 == $interval_obj->days ) {
-                          $day = 1;
+                        $days = sprintf(__('%d Day', 'mihanpanel'), 1);
                       }
-                      printf(esc_html__('%d Day', 'mihanpanel'), $day);
+                      echo $days;
                       ?></h3>
                     <p class="category"><?php esc_html_e("You are our user", "mihanpanel") ?></p>
                 </div>
